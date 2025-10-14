@@ -1,0 +1,1384 @@
+2025-05-29 14:38:36 - LaserLockController - INFO - LaserLockController initialized successfully.
+2025-05-29 15:07:01 - LaserLockController - INFO - LaserLockController initialized successfully.
+2025-05-29 15:22:34 - LaserLockController - INFO - LaserLockController initialized successfully.
+2025-05-29 15:26:08 - LaserLockController - INFO - LaserLockController initialized successfully.
+2025-05-29 15:28:24 - LaserLockController - INFO - LaserLockController initialized successfully.
+2025-05-29 15:42:44 - LaserLockController - INFO - LaserLockController initialized successfully.
+2025-05-29 15:43:20 - LaserLockController - INFO - LaserLockController initialized successfully.
+2025-05-29 16:30:06 - LaserLockController - INFO - LaserLockController initialized successfully.
+2025-05-29 16:31:22 - LaserLockController - INFO - LaserLockController initialized successfully.
+2025-05-29 16:37:25 - LaserLockController - INFO - LaserLockController initialized successfully.
+2025-07-08 18:03:17 - LaserLockController - INFO - LaserLockController initialized successfully.
+2025-07-08 18:03:20 - LaserLockController - INFO - Starting scan from 0.05V to 1.75V with 30 points.
+2025-07-08 18:04:52 - LaserLockController - INFO - Starting scan from 0.05V to 1.75V with 30 points.
+2025-07-08 18:06:19 - LaserLockController - INFO - LaserLockController initialized successfully.
+2025-07-08 18:06:19 - LaserLockController - INFO - Starting scan from 0.05V to 1.75V with 30 points.
+2025-07-08 18:07:15 - LaserLockController - INFO - Scan completed successfully.
+2025-07-08 18:07:38 - LaserLockController - INFO - Saving reference line with key feature_1.
+2025-07-08 18:07:39 - LaserLockController - INFO - Reference line feature_1 saved successfully.
+2025-07-08 18:07:39 - LaserLockController - INFO - Saving reference line with key feature_2.
+2025-07-08 18:07:39 - LaserLockController - INFO - Reference line feature_2 saved successfully.
+2025-07-08 18:07:39 - LaserLockController - INFO - Saving reference line with key feature_3.
+2025-07-08 18:07:39 - LaserLockController - INFO - Reference line feature_3 saved successfully.
+2025-07-08 18:07:44 - LaserLockController - INFO - Finding reference lines.
+2025-07-08 18:08:36 - LaserLockController - INFO - Reference lines found successfully.
+2025-07-25 14:12:39 - LaserLockController - INFO - LaserLockController initialized successfully.
+2025-07-25 14:13:00 - LaserLockController - INFO - LaserLockController initialized successfully.
+2025-07-25 14:13:04 - LaserLockController - INFO - Starting scan from 0.05V to 1.75V with 30 points.
+2025-07-25 14:13:34 - LaserLockController - INFO - Starting scan from 0.05V to 1.75V with 10 points.
+2025-07-25 14:13:51 - LaserLockController - INFO - Scan completed successfully.
+2025-07-25 14:14:03 - LaserLockController - INFO - Resetting reference lines.
+2025-07-25 14:14:03 - LaserLockController - INFO - Reference lines reset successfully.
+2025-07-25 14:14:03 - LaserLockController - INFO - Saving reference line with key feature_1.
+2025-07-25 14:14:03 - LaserLockController - ERROR - Start voltage 0.0 is out of bounds for the sweep signal.
+2025-07-25 14:14:03 - LaserLockController - INFO - Saving reference line with key feature_2.
+2025-07-25 14:14:03 - LaserLockController - ERROR - Start voltage 0.0 is out of bounds for the sweep signal.
+2025-07-25 14:14:03 - LaserLockController - INFO - Saving reference line with key feature_3.
+2025-07-25 14:14:03 - LaserLockController - ERROR - Start voltage 0.0 is out of bounds for the sweep signal.
+2025-07-25 14:16:28 - LaserLockController - INFO - Resetting reference lines.
+2025-07-25 14:16:28 - LaserLockController - INFO - Reference lines reset successfully.
+2025-07-25 14:16:28 - LaserLockController - INFO - Saving reference line with key feature_1.
+2025-07-25 14:16:28 - LaserLockController - ERROR - Start voltage 0.0 is out of bounds for the sweep signal.
+2025-07-25 14:16:28 - LaserLockController - INFO - Saving reference line with key feature_2.
+2025-07-25 14:16:28 - LaserLockController - ERROR - Start voltage 0.0 is out of bounds for the sweep signal.
+2025-07-25 14:16:28 - LaserLockController - INFO - Saving reference line with key feature_3.
+2025-07-25 14:16:28 - LaserLockController - ERROR - Start voltage 0.0 is out of bounds for the sweep signal.
+2025-07-25 14:18:25 - LaserLockController - INFO - Resetting reference lines.
+2025-07-25 14:18:25 - LaserLockController - INFO - Reference lines reset successfully.
+2025-07-25 14:18:25 - LaserLockController - INFO - Saving reference line with key feature_1.
+2025-07-25 14:18:25 - LaserLockController - INFO - Reference line feature_1 saved successfully.
+2025-07-25 14:18:25 - LaserLockController - INFO - Saving reference line with key feature_2.
+2025-07-25 14:18:25 - LaserLockController - INFO - Reference line feature_2 saved successfully.
+2025-07-25 14:18:25 - LaserLockController - INFO - Saving reference line with key feature_3.
+2025-07-25 14:18:26 - LaserLockController - INFO - Reference line feature_3 saved successfully.
+2025-07-25 14:18:49 - LaserLockController - INFO - Resetting reference lines.
+2025-07-25 14:18:49 - LaserLockController - INFO - Reference lines reset successfully.
+2025-07-25 14:18:49 - LaserLockController - INFO - Saving reference line with key feature_1.
+2025-07-25 14:18:50 - LaserLockController - INFO - Reference line feature_1 saved successfully.
+2025-07-25 14:18:50 - LaserLockController - INFO - Saving reference line with key feature_2.
+2025-07-25 14:18:50 - LaserLockController - INFO - Reference line feature_2 saved successfully.
+2025-07-25 14:18:50 - LaserLockController - INFO - Saving reference line with key feature_3.
+2025-07-25 14:18:50 - LaserLockController - INFO - Reference line feature_3 saved successfully.
+2025-07-25 14:19:24 - LaserLockController - INFO - Finding reference lines.
+2025-07-25 14:19:30 - LaserLockController - INFO - Finding reference lines.
+2025-07-25 14:20:04 - LaserLockController - INFO - Finding reference lines.
+2025-07-25 14:20:32 - LaserLockController - INFO - Starting scan from 0.05V to 1.75V with 10 points.
+2025-07-25 14:21:36 - LaserLockController - INFO - LaserLockController initialized successfully.
+2025-07-25 14:21:39 - LaserLockController - INFO - Starting scan from 0.05V to 1.75V with 10 points.
+2025-07-25 14:21:58 - LaserLockController - INFO - Scan completed successfully.
+2025-07-25 14:22:05 - LaserLockController - INFO - Resetting reference lines.
+2025-07-25 14:22:05 - LaserLockController - INFO - Reference lines reset successfully.
+2025-07-25 14:22:05 - LaserLockController - INFO - Saving reference line with key feature_1.
+2025-07-25 14:22:05 - LaserLockController - INFO - Reference line feature_1 saved successfully.
+2025-07-25 14:22:05 - LaserLockController - INFO - Saving reference line with key feature_2.
+2025-07-25 14:22:06 - LaserLockController - INFO - Reference line feature_2 saved successfully.
+2025-07-25 14:22:06 - LaserLockController - INFO - Saving reference line with key feature_3.
+2025-07-25 14:22:06 - LaserLockController - INFO - Reference line feature_3 saved successfully.
+2025-07-25 14:22:12 - LaserLockController - INFO - Finding reference lines.
+2025-07-25 14:22:29 - LaserLockController - INFO - Reference lines found successfully.
+2025-07-25 15:09:24 - LaserLockController - INFO - LaserLockController initialized successfully.
+2025-07-25 15:09:44 - LaserLockController - INFO - Finding reference lines.
+2025-07-25 15:12:05 - LaserLockController - INFO - Finding reference lines.
+2025-07-25 15:12:46 - LaserLockController - INFO - LaserLockController initialized successfully.
+2025-07-25 15:12:46 - LaserLockController - INFO - Finding reference lines.
+2025-07-25 15:14:40 - LaserLockController - INFO - LaserLockController initialized successfully.
+2025-07-25 15:14:40 - LaserLockController - INFO - Finding reference lines.
+2025-07-25 15:20:12 - LaserLockController - INFO - Finding reference lines.
+2025-07-25 15:20:49 - LaserLockController - INFO - LaserLockController initialized successfully.
+2025-07-25 15:20:49 - LaserLockController - INFO - Finding reference lines.
+2025-07-25 15:23:17 - LaserLockController - INFO - Finding reference lines.
+2025-07-25 16:06:04 - LaserLockController - INFO - LaserLockController initialized successfully.
+2025-07-25 16:06:11 - LaserLockController - INFO - Finding reference lines.
+2025-07-25 16:06:37 - LaserLockController - INFO - Starting scan from 0.05V to 1.75V with 10 points.
+2025-07-25 16:07:42 - LaserLockController - INFO - Starting scan from 0.05V to 1.75V with 10 points.
+2025-07-25 16:08:52 - LaserLockController - INFO - Starting scan from 0.05V to 1.75V with 10 points.
+2025-07-25 16:12:12 - LaserLockController - INFO - Starting scan from 0.05V to 1.75V with 10 points.
+2025-07-25 16:13:54 - LaserLockController - INFO - Starting scan from 0.05V to 1.75V with 10 points.
+2025-07-25 16:13:55 - LaserLockController - INFO - Setting voltage to 0.05V
+2025-07-25 16:18:41 - LaserLockController - INFO - LaserLockController initialized successfully.
+2025-07-25 16:18:43 - LaserLockController - INFO - Starting scan from 0.05V to 1.75V with 10 points.
+2025-07-25 16:18:44 - LaserLockController - INFO - Setting voltage to 0.05V
+2025-07-25 16:18:45 - LaserLockController - INFO - getting sweep signal
+2025-07-25 16:18:46 - LaserLockController - INFO - Setting voltage to 0.23888888888888887V
+2025-07-25 16:18:47 - LaserLockController - INFO - getting sweep signal
+2025-07-25 16:18:48 - LaserLockController - INFO - Setting voltage to 0.42777777777777776V
+2025-07-25 16:18:48 - LaserLockController - INFO - getting sweep signal
+2025-07-25 16:18:49 - LaserLockController - INFO - Setting voltage to 0.6166666666666667V
+2025-07-25 16:18:50 - LaserLockController - INFO - getting sweep signal
+2025-07-25 16:18:51 - LaserLockController - INFO - Setting voltage to 0.8055555555555556V
+2025-07-25 16:18:52 - LaserLockController - INFO - getting sweep signal
+2025-07-25 16:18:53 - LaserLockController - INFO - Setting voltage to 0.9944444444444445V
+2025-07-25 16:18:54 - LaserLockController - INFO - getting sweep signal
+2025-07-25 16:18:55 - LaserLockController - INFO - Setting voltage to 1.1833333333333333V
+2025-07-25 16:18:55 - LaserLockController - INFO - getting sweep signal
+2025-07-25 16:18:56 - LaserLockController - INFO - Setting voltage to 1.3722222222222222V
+2025-07-25 16:18:57 - LaserLockController - INFO - getting sweep signal
+2025-07-25 16:18:58 - LaserLockController - INFO - Setting voltage to 1.5611111111111111V
+2025-07-25 16:18:59 - LaserLockController - INFO - getting sweep signal
+2025-07-25 16:19:00 - LaserLockController - INFO - Setting voltage to 1.75V
+2025-07-25 16:19:01 - LaserLockController - INFO - getting sweep signal
+2025-07-25 16:19:02 - LaserLockController - INFO - Scan completed successfully.
+2025-07-25 16:24:52 - LaserLockController - INFO - Starting scan from 0.05V to 1.75V with 10 points.
+2025-07-25 16:24:52 - LaserLockController - INFO - Setting voltage to 0.05V
+2025-07-25 16:24:53 - LaserLockController - INFO - getting sweep signal
+2025-07-25 16:24:54 - LaserLockController - INFO - Setting voltage to 0.23888888888888887V
+2025-07-25 16:24:55 - LaserLockController - INFO - getting sweep signal
+2025-07-25 16:24:56 - LaserLockController - INFO - Setting voltage to 0.42777777777777776V
+2025-07-25 16:24:57 - LaserLockController - INFO - getting sweep signal
+2025-07-25 16:24:57 - LaserLockController - INFO - Setting voltage to 0.6166666666666667V
+2025-07-25 16:24:59 - LaserLockController - INFO - getting sweep signal
+2025-07-25 16:24:59 - LaserLockController - INFO - Setting voltage to 0.8055555555555556V
+2025-07-25 16:25:00 - LaserLockController - INFO - getting sweep signal
+2025-07-25 16:25:01 - LaserLockController - INFO - Setting voltage to 0.9944444444444445V
+2025-07-25 16:25:02 - LaserLockController - INFO - getting sweep signal
+2025-07-25 16:25:03 - LaserLockController - INFO - Setting voltage to 1.1833333333333333V
+2025-07-25 16:25:04 - LaserLockController - INFO - getting sweep signal
+2025-07-25 16:25:04 - LaserLockController - INFO - Setting voltage to 1.3722222222222222V
+2025-07-25 16:25:05 - LaserLockController - INFO - getting sweep signal
+2025-07-25 16:25:06 - LaserLockController - INFO - Setting voltage to 1.5611111111111111V
+2025-07-25 16:25:07 - LaserLockController - INFO - getting sweep signal
+2025-07-25 16:25:08 - LaserLockController - INFO - Setting voltage to 1.75V
+2025-07-25 16:25:09 - LaserLockController - INFO - getting sweep signal
+2025-07-25 16:25:10 - LaserLockController - INFO - Scan completed successfully.
+2025-07-25 16:26:00 - LaserLockController - INFO - Starting scan from 0.05V to 1.75V with 10 points.
+2025-07-25 16:26:01 - LaserLockController - INFO - Setting voltage to 0.05V
+2025-07-25 16:26:02 - LaserLockController - INFO - getting sweep signal
+2025-07-25 16:26:03 - LaserLockController - INFO - Setting voltage to 0.23888888888888887V
+2025-07-25 16:26:03 - LaserLockController - INFO - getting sweep signal
+2025-07-25 16:26:04 - LaserLockController - INFO - Setting voltage to 0.42777777777777776V
+2025-07-25 16:26:05 - LaserLockController - INFO - getting sweep signal
+2025-07-25 16:26:06 - LaserLockController - INFO - Setting voltage to 0.6166666666666667V
+2025-07-25 16:26:07 - LaserLockController - INFO - getting sweep signal
+2025-07-25 16:26:08 - LaserLockController - INFO - Setting voltage to 0.8055555555555556V
+2025-07-25 16:26:09 - LaserLockController - INFO - getting sweep signal
+2025-07-25 16:26:10 - LaserLockController - INFO - Setting voltage to 0.9944444444444445V
+2025-07-25 16:26:10 - LaserLockController - INFO - getting sweep signal
+2025-07-25 16:26:11 - LaserLockController - INFO - Setting voltage to 1.1833333333333333V
+2025-07-25 16:26:12 - LaserLockController - INFO - getting sweep signal
+2025-07-25 16:26:13 - LaserLockController - INFO - Setting voltage to 1.3722222222222222V
+2025-07-25 16:26:14 - LaserLockController - INFO - getting sweep signal
+2025-07-25 16:26:15 - LaserLockController - INFO - Setting voltage to 1.5611111111111111V
+2025-07-25 16:26:16 - LaserLockController - INFO - getting sweep signal
+2025-07-25 16:26:17 - LaserLockController - INFO - Setting voltage to 1.75V
+2025-07-25 16:26:18 - LaserLockController - INFO - getting sweep signal
+2025-07-25 16:26:18 - LaserLockController - INFO - Scan completed successfully.
+2025-07-25 16:26:41 - LaserLockController - INFO - Starting scan from 0.05V to 1.75V with 10 points.
+2025-07-25 16:26:41 - LaserLockController - INFO - Setting voltage to 0.05V
+2025-07-25 16:26:42 - LaserLockController - INFO - getting sweep signal
+2025-07-25 16:26:43 - LaserLockController - INFO - Setting voltage to 0.23888888888888887V
+2025-07-25 16:26:44 - LaserLockController - INFO - getting sweep signal
+2025-07-25 16:26:45 - LaserLockController - INFO - Setting voltage to 0.42777777777777776V
+2025-07-25 16:26:45 - LaserLockController - INFO - getting sweep signal
+2025-07-25 16:26:46 - LaserLockController - INFO - Setting voltage to 0.6166666666666667V
+2025-07-25 16:26:47 - LaserLockController - INFO - getting sweep signal
+2025-07-25 16:26:48 - LaserLockController - INFO - Setting voltage to 0.8055555555555556V
+2025-07-25 16:26:49 - LaserLockController - INFO - getting sweep signal
+2025-07-25 16:26:50 - LaserLockController - INFO - Setting voltage to 0.9944444444444445V
+2025-07-25 16:26:51 - LaserLockController - INFO - getting sweep signal
+2025-07-25 16:26:52 - LaserLockController - INFO - Setting voltage to 1.1833333333333333V
+2025-07-25 16:26:53 - LaserLockController - INFO - getting sweep signal
+2025-07-25 16:26:54 - LaserLockController - INFO - Setting voltage to 1.3722222222222222V
+2025-07-25 16:26:55 - LaserLockController - INFO - getting sweep signal
+2025-07-25 16:26:56 - LaserLockController - INFO - Setting voltage to 1.5611111111111111V
+2025-07-25 16:26:57 - LaserLockController - INFO - getting sweep signal
+2025-07-25 16:26:58 - LaserLockController - INFO - Setting voltage to 1.75V
+2025-07-25 16:26:59 - LaserLockController - INFO - getting sweep signal
+2025-07-25 16:26:59 - LaserLockController - INFO - Scan completed successfully.
+2025-07-25 16:27:47 - LaserLockController - INFO - Starting scan from 0.05V to 1.75V with 10 points.
+2025-07-25 16:27:47 - LaserLockController - INFO - Setting voltage to 0.05V
+2025-07-25 16:27:48 - LaserLockController - INFO - getting sweep signal
+2025-07-25 16:27:49 - LaserLockController - INFO - Setting voltage to 0.23888888888888887V
+2025-07-25 16:27:50 - LaserLockController - INFO - getting sweep signal
+2025-07-25 16:27:51 - LaserLockController - INFO - Setting voltage to 0.42777777777777776V
+2025-07-25 16:27:52 - LaserLockController - INFO - getting sweep signal
+2025-07-25 16:27:53 - LaserLockController - INFO - Setting voltage to 0.6166666666666667V
+2025-07-25 16:27:54 - LaserLockController - INFO - getting sweep signal
+2025-07-25 16:27:55 - LaserLockController - INFO - Setting voltage to 0.8055555555555556V
+2025-07-25 16:27:56 - LaserLockController - INFO - getting sweep signal
+2025-07-25 16:27:56 - LaserLockController - INFO - Setting voltage to 0.9944444444444445V
+2025-07-25 16:27:57 - LaserLockController - INFO - getting sweep signal
+2025-07-25 16:27:58 - LaserLockController - INFO - Setting voltage to 1.1833333333333333V
+2025-07-25 16:27:59 - LaserLockController - INFO - getting sweep signal
+2025-07-25 16:28:00 - LaserLockController - INFO - Setting voltage to 1.3722222222222222V
+2025-07-25 16:28:01 - LaserLockController - INFO - getting sweep signal
+2025-07-25 16:28:02 - LaserLockController - INFO - Setting voltage to 1.5611111111111111V
+2025-07-25 16:28:03 - LaserLockController - INFO - getting sweep signal
+2025-07-25 16:28:04 - LaserLockController - INFO - Setting voltage to 1.75V
+2025-07-25 16:28:05 - LaserLockController - INFO - getting sweep signal
+2025-07-25 16:28:06 - LaserLockController - INFO - Scan completed successfully.
+2025-07-25 16:28:45 - LaserLockController - INFO - Starting scan from 0.05V to 1.75V with 10 points.
+2025-07-25 16:28:45 - LaserLockController - INFO - Setting voltage to 0.05V
+2025-07-25 16:28:46 - LaserLockController - INFO - getting sweep signal
+2025-07-25 16:28:47 - LaserLockController - INFO - Setting voltage to 0.23888888888888887V
+2025-07-25 16:28:48 - LaserLockController - INFO - getting sweep signal
+2025-07-25 16:28:49 - LaserLockController - INFO - Setting voltage to 0.42777777777777776V
+2025-07-25 16:28:49 - LaserLockController - INFO - getting sweep signal
+2025-07-25 16:28:50 - LaserLockController - INFO - Setting voltage to 0.6166666666666667V
+2025-07-25 16:28:51 - LaserLockController - INFO - getting sweep signal
+2025-07-25 16:28:52 - LaserLockController - INFO - Setting voltage to 0.8055555555555556V
+2025-07-25 16:28:53 - LaserLockController - INFO - getting sweep signal
+2025-07-25 16:28:54 - LaserLockController - INFO - Setting voltage to 0.9944444444444445V
+2025-07-25 16:28:55 - LaserLockController - INFO - getting sweep signal
+2025-07-25 16:28:55 - LaserLockController - INFO - Setting voltage to 1.1833333333333333V
+2025-07-25 16:28:56 - LaserLockController - INFO - getting sweep signal
+2025-07-25 16:28:57 - LaserLockController - INFO - Setting voltage to 1.3722222222222222V
+2025-07-25 16:28:58 - LaserLockController - INFO - getting sweep signal
+2025-07-25 16:28:59 - LaserLockController - INFO - Setting voltage to 1.5611111111111111V
+2025-07-25 16:29:00 - LaserLockController - INFO - getting sweep signal
+2025-07-25 16:29:01 - LaserLockController - INFO - Setting voltage to 1.75V
+2025-07-25 16:29:02 - LaserLockController - INFO - getting sweep signal
+2025-07-25 16:29:02 - LaserLockController - INFO - Scan completed successfully.
+2025-07-25 16:29:08 - LaserLockController - INFO - Starting scan from 0.05V to 1.75V with 10 points.
+2025-07-25 16:29:09 - LaserLockController - INFO - Setting voltage to 0.05V
+2025-07-25 16:29:10 - LaserLockController - INFO - getting sweep signal
+2025-07-25 16:29:10 - LaserLockController - INFO - Setting voltage to 0.23888888888888887V
+2025-07-25 16:29:11 - LaserLockController - INFO - getting sweep signal
+2025-07-25 16:29:12 - LaserLockController - INFO - Setting voltage to 0.42777777777777776V
+2025-07-25 16:29:13 - LaserLockController - INFO - getting sweep signal
+2025-07-25 16:29:14 - LaserLockController - INFO - Setting voltage to 0.6166666666666667V
+2025-07-25 16:29:15 - LaserLockController - INFO - getting sweep signal
+2025-07-25 16:29:16 - LaserLockController - INFO - Setting voltage to 0.8055555555555556V
+2025-07-25 16:29:17 - LaserLockController - INFO - getting sweep signal
+2025-07-25 16:29:18 - LaserLockController - INFO - Setting voltage to 0.9944444444444445V
+2025-07-25 16:29:19 - LaserLockController - INFO - getting sweep signal
+2025-07-25 16:29:20 - LaserLockController - INFO - Setting voltage to 1.1833333333333333V
+2025-07-25 16:29:21 - LaserLockController - INFO - getting sweep signal
+2025-07-25 16:29:21 - LaserLockController - INFO - Setting voltage to 1.3722222222222222V
+2025-07-25 16:29:22 - LaserLockController - INFO - getting sweep signal
+2025-07-25 16:29:23 - LaserLockController - INFO - Setting voltage to 1.5611111111111111V
+2025-07-25 16:29:24 - LaserLockController - INFO - getting sweep signal
+2025-07-25 16:29:25 - LaserLockController - INFO - Setting voltage to 1.75V
+2025-07-25 16:29:26 - LaserLockController - INFO - getting sweep signal
+2025-07-25 16:29:26 - LaserLockController - INFO - Scan completed successfully.
+2025-07-25 16:40:36 - LaserLockController - INFO - Starting scan from 0.05V to 1.75V with 10 points.
+2025-07-25 16:40:36 - LaserLockController - INFO - Setting voltage to 0.05V
+2025-07-25 16:40:38 - LaserLockController - INFO - getting sweep signal
+2025-07-25 16:40:38 - LaserLockController - INFO - Setting voltage to 0.23888888888888887V
+2025-07-25 16:40:39 - LaserLockController - INFO - getting sweep signal
+2025-07-25 16:40:40 - LaserLockController - INFO - Setting voltage to 0.42777777777777776V
+2025-07-25 16:40:41 - LaserLockController - INFO - getting sweep signal
+2025-07-25 16:40:42 - LaserLockController - INFO - Setting voltage to 0.6166666666666667V
+2025-07-25 16:40:43 - LaserLockController - INFO - getting sweep signal
+2025-07-25 16:40:44 - LaserLockController - INFO - Setting voltage to 0.8055555555555556V
+2025-07-25 16:40:45 - LaserLockController - INFO - getting sweep signal
+2025-07-25 16:40:45 - LaserLockController - INFO - Setting voltage to 0.9944444444444445V
+2025-07-25 16:40:46 - LaserLockController - INFO - getting sweep signal
+2025-07-25 16:40:47 - LaserLockController - INFO - Setting voltage to 1.1833333333333333V
+2025-07-25 16:44:49 - LaserLockController - INFO - LaserLockController initialized successfully.
+2025-07-25 16:44:51 - LaserLockController - INFO - Starting scan from 0.05V to 1.75V with 10 points.
+2025-07-25 16:44:52 - LaserLockController - INFO - Setting voltage to 0.05V
+2025-07-25 16:44:53 - LaserLockController - INFO - getting sweep signal
+2025-07-25 16:44:54 - LaserLockController - INFO - Setting voltage to 0.23888888888888887V
+2025-07-25 16:44:55 - LaserLockController - INFO - getting sweep signal
+2025-07-25 16:44:56 - LaserLockController - INFO - Setting voltage to 0.42777777777777776V
+2025-07-25 16:44:57 - LaserLockController - INFO - getting sweep signal
+2025-07-25 16:44:58 - LaserLockController - INFO - Setting voltage to 0.6166666666666667V
+2025-07-25 16:44:59 - LaserLockController - INFO - getting sweep signal
+2025-07-25 16:45:00 - LaserLockController - INFO - Setting voltage to 0.8055555555555556V
+2025-07-25 16:45:01 - LaserLockController - INFO - getting sweep signal
+2025-07-25 16:45:01 - LaserLockController - INFO - Setting voltage to 0.9944444444444445V
+2025-07-25 16:45:02 - LaserLockController - INFO - getting sweep signal
+2025-07-25 16:45:03 - LaserLockController - INFO - Setting voltage to 1.1833333333333333V
+2025-07-25 16:45:04 - LaserLockController - INFO - getting sweep signal
+2025-07-25 16:45:05 - LaserLockController - INFO - Setting voltage to 1.3722222222222222V
+2025-07-25 16:45:06 - LaserLockController - INFO - getting sweep signal
+2025-07-25 16:45:07 - LaserLockController - INFO - Setting voltage to 1.5611111111111111V
+2025-07-25 16:45:08 - LaserLockController - INFO - getting sweep signal
+2025-07-25 16:45:09 - LaserLockController - INFO - Setting voltage to 1.75V
+2025-07-25 16:45:09 - LaserLockController - INFO - getting sweep signal
+2025-07-25 16:45:10 - LaserLockController - INFO - Scan completed successfully.
+2025-07-25 16:45:22 - LaserLockController - INFO - Finding reference lines.
+2025-07-25 16:50:28 - LaserLockController - INFO - Finding reference lines.
+2025-07-25 16:51:52 - LaserLockController - INFO - Finding reference lines.
+2025-07-25 16:53:04 - LaserLockController - INFO - Finding reference lines.
+2025-07-25 16:56:28 - LaserLockController - INFO - Finding reference lines.
+2025-07-25 16:58:49 - LaserLockController - INFO - Finding reference lines.
+2025-07-25 16:59:52 - LaserLockController - INFO - LaserLockController initialized successfully.
+2025-07-25 16:59:52 - LaserLockController - INFO - Starting scan from 0.05V to 1.75V with 10 points.
+2025-07-25 16:59:52 - LaserLockController - INFO - Setting voltage to 0.05V
+2025-07-25 16:59:53 - LaserLockController - INFO - getting sweep signal
+2025-07-25 16:59:54 - LaserLockController - INFO - Setting voltage to 0.23888888888888887V
+2025-07-25 17:03:31 - LaserLockController - INFO - LaserLockController initialized successfully.
+2025-07-25 17:03:33 - LaserLockController - INFO - Starting scan from 0.05V to 1.75V with 10 points.
+2025-07-25 17:03:34 - LaserLockController - INFO - Setting voltage to 0.05V
+2025-07-25 17:06:02 - LaserLockController - INFO - Starting scan from 0.05V to 1.75V with 10 points.
+2025-07-25 17:06:02 - LaserLockController - INFO - Setting voltage to 0.05V
+2025-07-25 17:06:54 - LaserLockController - INFO - Starting scan from 0.05V to 1.75V with 10 points.
+2025-07-25 17:06:54 - LaserLockController - INFO - Setting voltage to 0.05V
+2025-07-25 17:07:19 - LaserLockController - INFO - Starting scan from 0.05V to 1.75V with 10 points.
+2025-07-25 17:07:20 - LaserLockController - INFO - Setting voltage to 0.05V
+2025-07-25 17:08:40 - LaserLockController - INFO - Starting scan from 0.05V to 1.75V with 10 points.
+2025-07-25 17:08:40 - LaserLockController - INFO - Setting voltage to 0.05V
+2025-07-25 17:09:34 - LaserLockController - INFO - Starting scan from 0.05V to 1.75V with 10 points.
+2025-07-25 17:09:34 - LaserLockController - INFO - Setting voltage to 0.05V
+2025-07-25 17:14:48 - LaserLockController - INFO - LaserLockController initialized successfully.
+2025-07-25 17:14:50 - LaserLockController - INFO - Starting scan from 0.05V to 1.75V with 10 points.
+2025-07-25 17:14:50 - LaserLockController - INFO - Setting voltage to 0.05V
+2025-07-25 17:14:51 - LaserLockController - INFO - getting sweep signal
+2025-07-25 17:14:52 - LaserLockController - INFO - Setting voltage to 0.23888888888888887V
+2025-07-25 17:14:53 - LaserLockController - INFO - getting sweep signal
+2025-07-25 17:14:54 - LaserLockController - INFO - Setting voltage to 0.42777777777777776V
+2025-07-25 17:14:55 - LaserLockController - INFO - getting sweep signal
+2025-07-25 17:14:55 - LaserLockController - INFO - Setting voltage to 0.6166666666666667V
+2025-07-25 17:14:56 - LaserLockController - INFO - getting sweep signal
+2025-07-25 17:14:57 - LaserLockController - INFO - Setting voltage to 0.8055555555555556V
+2025-07-25 17:14:58 - LaserLockController - INFO - getting sweep signal
+2025-07-25 17:14:59 - LaserLockController - INFO - Setting voltage to 0.9944444444444445V
+2025-07-25 17:15:00 - LaserLockController - INFO - getting sweep signal
+2025-07-25 17:15:01 - LaserLockController - INFO - Setting voltage to 1.1833333333333333V
+2025-07-25 17:15:02 - LaserLockController - INFO - getting sweep signal
+2025-07-25 17:15:02 - LaserLockController - INFO - Setting voltage to 1.3722222222222222V
+2025-07-25 17:15:03 - LaserLockController - INFO - getting sweep signal
+2025-07-25 17:15:04 - LaserLockController - INFO - Setting voltage to 1.5611111111111111V
+2025-07-25 17:15:05 - LaserLockController - INFO - getting sweep signal
+2025-07-25 17:15:06 - LaserLockController - INFO - Setting voltage to 1.75V
+2025-07-25 17:15:06 - LaserLockController - INFO - getting sweep signal
+2025-07-25 17:15:07 - LaserLockController - INFO - Scan completed successfully.
+2025-07-25 17:15:13 - LaserLockController - INFO - Finding reference lines.
+2025-07-25 17:29:25 - LaserLockController - INFO - Finding reference lines.
+2025-07-25 17:37:08 - LaserLockController - INFO - Finding reference lines.
+2025-07-25 17:37:26 - LaserLockController - INFO - Reference lines found successfully.
+2025-07-25 17:57:30 - LaserLockController - INFO - LaserLockController initialized successfully.
+2025-07-25 17:57:30 - LaserLockController - INFO - Finding reference lines.
+2025-07-25 17:57:48 - LaserLockController - INFO - Reference lines found successfully.
+2025-07-25 18:03:34 - LaserLockController - INFO - LaserLockController initialized successfully.
+2025-07-25 18:03:38 - LaserLockController - INFO - Starting scan from 0.05V to 1.75V with 10 points.
+2025-07-25 18:03:38 - LaserLockController - INFO - Setting voltage to 0.05V
+2025-07-25 18:03:39 - LaserLockController - INFO - getting sweep signal
+2025-07-25 18:03:40 - LaserLockController - INFO - Setting voltage to 0.23888888888888887V
+2025-07-25 18:03:41 - LaserLockController - INFO - getting sweep signal
+2025-07-25 18:03:42 - LaserLockController - INFO - Setting voltage to 0.42777777777777776V
+2025-07-25 18:03:43 - LaserLockController - INFO - getting sweep signal
+2025-07-25 18:03:44 - LaserLockController - INFO - Setting voltage to 0.6166666666666667V
+2025-07-25 18:03:44 - LaserLockController - INFO - getting sweep signal
+2025-07-25 18:03:45 - LaserLockController - INFO - Setting voltage to 0.8055555555555556V
+2025-07-25 18:03:46 - LaserLockController - INFO - getting sweep signal
+2025-07-25 18:03:47 - LaserLockController - INFO - Setting voltage to 0.9944444444444445V
+2025-07-25 18:03:48 - LaserLockController - INFO - getting sweep signal
+2025-07-25 18:03:48 - LaserLockController - INFO - Setting voltage to 1.1833333333333333V
+2025-07-25 18:03:49 - LaserLockController - INFO - getting sweep signal
+2025-07-25 18:03:50 - LaserLockController - INFO - Setting voltage to 1.3722222222222222V
+2025-07-25 18:03:51 - LaserLockController - INFO - getting sweep signal
+2025-07-25 18:03:52 - LaserLockController - INFO - Setting voltage to 1.5611111111111111V
+2025-07-25 18:03:53 - LaserLockController - INFO - getting sweep signal
+2025-07-25 18:03:54 - LaserLockController - INFO - Setting voltage to 1.75V
+2025-07-25 18:03:55 - LaserLockController - INFO - getting sweep signal
+2025-07-25 18:03:55 - LaserLockController - INFO - Scan completed successfully.
+2025-07-25 18:04:04 - LaserLockController - INFO - Finding reference lines.
+2025-07-25 18:04:22 - LaserLockController - INFO - Reference lines found successfully.
+2025-07-25 18:22:28 - LaserLockController - INFO - LaserLockController initialized successfully.
+2025-07-25 18:22:28 - LaserLockController - INFO - Finding reference lines.
+2025-07-25 18:22:47 - LaserLockController - INFO - Reference lines found successfully.
+2025-07-31 09:19:24 - LaserLockController - INFO - LaserLockController initialized successfully.
+2025-07-31 09:19:28 - LaserLockController - INFO - Starting scan from 0.05V to 1.75V with 10 points.
+2025-07-31 09:19:28 - LaserLockController - INFO - Setting voltage to 0.05V
+2025-07-31 09:19:30 - LaserLockController - INFO - getting sweep signal
+2025-07-31 09:19:31 - LaserLockController - INFO - Setting voltage to 0.23888888888888887V
+2025-07-31 09:19:32 - LaserLockController - INFO - getting sweep signal
+2025-07-31 09:19:33 - LaserLockController - INFO - Setting voltage to 0.42777777777777776V
+2025-07-31 09:19:34 - LaserLockController - INFO - getting sweep signal
+2025-07-31 09:19:35 - LaserLockController - INFO - Setting voltage to 0.6166666666666667V
+2025-07-31 09:19:36 - LaserLockController - INFO - getting sweep signal
+2025-07-31 09:19:36 - LaserLockController - INFO - Setting voltage to 0.8055555555555556V
+2025-07-31 09:19:37 - LaserLockController - INFO - getting sweep signal
+2025-07-31 09:19:38 - LaserLockController - INFO - Setting voltage to 0.9944444444444445V
+2025-07-31 09:19:39 - LaserLockController - INFO - getting sweep signal
+2025-07-31 09:19:40 - LaserLockController - INFO - Setting voltage to 1.1833333333333333V
+2025-07-31 09:19:41 - LaserLockController - INFO - getting sweep signal
+2025-07-31 09:19:42 - LaserLockController - INFO - Setting voltage to 1.3722222222222222V
+2025-07-31 09:19:43 - LaserLockController - INFO - getting sweep signal
+2025-07-31 09:19:44 - LaserLockController - INFO - Setting voltage to 1.5611111111111111V
+2025-07-31 09:19:44 - LaserLockController - INFO - getting sweep signal
+2025-07-31 09:19:45 - LaserLockController - INFO - Setting voltage to 1.75V
+2025-07-31 09:19:46 - LaserLockController - INFO - getting sweep signal
+2025-07-31 09:19:47 - LaserLockController - INFO - Scan completed successfully.
+2025-07-31 09:19:58 - LaserLockController - INFO - Resetting reference lines.
+2025-07-31 09:19:58 - LaserLockController - INFO - Reference lines reset successfully.
+2025-07-31 09:20:45 - LaserLockController - INFO - Resetting reference lines.
+2025-07-31 09:20:45 - LaserLockController - INFO - Reference lines reset successfully.
+2025-07-31 09:20:45 - LaserLockController - INFO - Saving reference line with key feature_1.
+2025-07-31 09:20:46 - LaserLockController - INFO - Reference line feature_1 saved successfully.
+2025-07-31 09:20:46 - LaserLockController - INFO - Saving reference line with key feature_2.
+2025-07-31 09:20:46 - LaserLockController - INFO - Reference line feature_2 saved successfully.
+2025-07-31 09:20:46 - LaserLockController - INFO - Saving reference line with key feature_3.
+2025-07-31 09:20:47 - LaserLockController - INFO - Reference line feature_3 saved successfully.
+2025-07-31 09:21:33 - LaserLockController - INFO - Resetting reference lines.
+2025-07-31 09:21:33 - LaserLockController - INFO - Reference lines reset successfully.
+2025-07-31 09:21:33 - LaserLockController - INFO - Saving reference line with key feature_1.
+2025-07-31 09:21:33 - LaserLockController - INFO - Reference line feature_1 saved successfully.
+2025-07-31 09:21:33 - LaserLockController - INFO - Saving reference line with key feature_2.
+2025-07-31 09:21:34 - LaserLockController - INFO - Reference line feature_2 saved successfully.
+2025-07-31 09:21:34 - LaserLockController - INFO - Saving reference line with key feature_3.
+2025-07-31 09:21:35 - LaserLockController - INFO - Reference line feature_3 saved successfully.
+2025-07-31 09:26:15 - LaserLockController - INFO - Resetting reference lines.
+2025-07-31 09:26:15 - LaserLockController - INFO - Reference lines reset successfully.
+2025-07-31 09:26:15 - LaserLockController - INFO - Saving reference line with key feature_1.
+2025-07-31 09:26:16 - LaserLockController - INFO - Reference line feature_1 saved successfully.
+2025-07-31 09:26:16 - LaserLockController - INFO - Saving reference line with key feature_2.
+2025-07-31 09:26:16 - LaserLockController - INFO - Reference line feature_2 saved successfully.
+2025-07-31 09:26:16 - LaserLockController - INFO - Saving reference line with key feature_3.
+2025-07-31 09:26:16 - LaserLockController - WARNING - Locking region [1.15V, 1.25V] is outside the scan range [-0.90V to 0.90V].
+2025-07-31 09:26:17 - LaserLockController - INFO - Reference line feature_3 saved successfully.
+2025-07-31 09:32:16 - LaserLockController - INFO - Resetting reference lines.
+2025-07-31 09:32:16 - LaserLockController - INFO - Reference lines reset successfully.
+2025-07-31 09:32:16 - LaserLockController - INFO - Saving reference line with key feature_1.
+2025-07-31 09:32:16 - LaserLockController - INFO - Reference line feature_1 saved successfully.
+2025-07-31 09:32:16 - LaserLockController - INFO - Saving reference line with key feature_2.
+2025-07-31 09:32:17 - LaserLockController - INFO - Reference line feature_2 saved successfully.
+2025-07-31 09:32:17 - LaserLockController - INFO - Saving reference line with key feature_3.
+2025-07-31 09:32:17 - LaserLockController - WARNING - Locking region [1.15V, 1.25V] is outside the scan range [-0.90V to 0.90V].
+2025-07-31 09:32:17 - LaserLockController - INFO - Reference line feature_3 saved successfully.
+2025-07-31 09:32:41 - LaserLockController - INFO - Resetting reference lines.
+2025-07-31 09:32:41 - LaserLockController - INFO - Reference lines reset successfully.
+2025-07-31 09:32:41 - LaserLockController - INFO - Saving reference line with key feature_1.
+2025-07-31 09:32:41 - LaserLockController - INFO - Reference line feature_1 saved successfully.
+2025-07-31 09:32:41 - LaserLockController - INFO - Saving reference line with key feature_2.
+2025-07-31 09:32:42 - LaserLockController - INFO - Reference line feature_2 saved successfully.
+2025-07-31 09:32:42 - LaserLockController - INFO - Saving reference line with key feature_3.
+2025-07-31 09:32:42 - LaserLockController - INFO - Reference line feature_3 saved successfully.
+2025-07-31 09:32:47 - LaserLockController - INFO - Finding reference lines.
+2025-07-31 09:33:06 - LaserLockController - INFO - Reference lines found successfully.
+2025-08-04 10:01:20 - LaserLockController - INFO - LaserLockController initialized successfully.
+2025-08-04 10:01:24 - LaserLockController - INFO - Starting scan from 0.05V to 1.75V with 10 points.
+2025-08-04 10:01:24 - LaserLockController - INFO - Setting voltage to 0.05V
+2025-08-04 10:01:27 - LaserLockController - INFO - getting sweep signal
+2025-08-04 10:01:28 - LaserLockController - INFO - Setting voltage to 0.23888888888888887V
+2025-08-04 10:01:31 - LaserLockController - INFO - getting sweep signal
+2025-08-04 10:01:32 - LaserLockController - INFO - Setting voltage to 0.42777777777777776V
+2025-08-04 10:01:35 - LaserLockController - INFO - getting sweep signal
+2025-08-04 10:01:36 - LaserLockController - INFO - Setting voltage to 0.6166666666666667V
+2025-08-04 10:01:39 - LaserLockController - INFO - getting sweep signal
+2025-08-04 10:01:40 - LaserLockController - INFO - Setting voltage to 0.8055555555555556V
+2025-08-04 10:01:43 - LaserLockController - INFO - getting sweep signal
+2025-08-04 10:01:44 - LaserLockController - INFO - Setting voltage to 0.9944444444444445V
+2025-08-04 10:01:47 - LaserLockController - INFO - getting sweep signal
+2025-08-04 10:01:48 - LaserLockController - INFO - Setting voltage to 1.1833333333333333V
+2025-08-04 10:01:51 - LaserLockController - INFO - getting sweep signal
+2025-08-04 10:01:52 - LaserLockController - INFO - Setting voltage to 1.3722222222222222V
+2025-08-04 10:01:55 - LaserLockController - INFO - getting sweep signal
+2025-08-04 10:01:56 - LaserLockController - INFO - Setting voltage to 1.5611111111111111V
+2025-08-04 10:01:59 - LaserLockController - INFO - getting sweep signal
+2025-08-04 10:02:00 - LaserLockController - INFO - Setting voltage to 1.75V
+2025-08-04 10:02:03 - LaserLockController - INFO - getting sweep signal
+2025-08-04 10:02:04 - LaserLockController - INFO - Scan completed successfully.
+2025-08-04 10:02:21 - LaserLockController - INFO - Resetting reference lines.
+2025-08-04 10:02:21 - LaserLockController - INFO - Reference lines reset successfully.
+2025-08-04 10:02:21 - LaserLockController - INFO - Saving reference line with key feature_1.
+2025-08-04 10:02:21 - LaserLockController - INFO - Reference line feature_1 saved successfully.
+2025-08-04 10:02:21 - LaserLockController - INFO - Saving reference line with key feature_2.
+2025-08-04 10:02:21 - LaserLockController - INFO - Reference line feature_2 saved successfully.
+2025-08-04 10:02:21 - LaserLockController - INFO - Saving reference line with key feature_3.
+2025-08-04 10:02:22 - LaserLockController - INFO - Reference line feature_3 saved successfully.
+2025-08-04 10:03:05 - LaserLockController - INFO - Finding reference lines.
+2025-08-04 10:03:46 - LaserLockController - INFO - Reference lines found successfully.
+2025-08-04 10:04:16 - LaserLockController - INFO - Starting scan from 0.05V to 1.75V with 10 points.
+2025-08-04 10:04:16 - LaserLockController - INFO - Setting voltage to 0.05V
+2025-08-04 10:04:19 - LaserLockController - INFO - getting sweep signal
+2025-08-04 10:04:20 - LaserLockController - INFO - Setting voltage to 0.23888888888888887V
+2025-08-04 10:04:23 - LaserLockController - INFO - getting sweep signal
+2025-08-04 10:04:24 - LaserLockController - INFO - Setting voltage to 0.42777777777777776V
+2025-08-04 10:04:27 - LaserLockController - INFO - getting sweep signal
+2025-08-04 10:04:28 - LaserLockController - INFO - Setting voltage to 0.6166666666666667V
+2025-08-04 10:04:31 - LaserLockController - INFO - getting sweep signal
+2025-08-04 10:04:32 - LaserLockController - INFO - Setting voltage to 0.8055555555555556V
+2025-08-04 10:04:35 - LaserLockController - INFO - getting sweep signal
+2025-08-04 10:04:36 - LaserLockController - INFO - Setting voltage to 0.9944444444444445V
+2025-08-04 10:04:40 - LaserLockController - INFO - getting sweep signal
+2025-08-04 10:04:42 - LaserLockController - INFO - Setting voltage to 1.1833333333333333V
+2025-08-04 10:04:45 - LaserLockController - INFO - getting sweep signal
+2025-08-04 10:04:46 - LaserLockController - INFO - Setting voltage to 1.3722222222222222V
+2025-08-04 10:04:49 - LaserLockController - INFO - getting sweep signal
+2025-08-04 10:04:50 - LaserLockController - INFO - Setting voltage to 1.5611111111111111V
+2025-08-04 10:04:53 - LaserLockController - INFO - getting sweep signal
+2025-08-04 10:04:54 - LaserLockController - INFO - Setting voltage to 1.75V
+2025-08-04 10:04:57 - LaserLockController - INFO - getting sweep signal
+2025-08-04 10:04:58 - LaserLockController - INFO - Scan completed successfully.
+2025-08-04 10:06:29 - LaserLockController - INFO - Starting scan from 0.05V to 1.75V with 10 points.
+2025-08-04 10:06:29 - LaserLockController - INFO - Setting voltage to 0.05V
+2025-08-04 10:06:32 - LaserLockController - INFO - getting sweep signal
+2025-08-04 10:06:33 - LaserLockController - INFO - Setting voltage to 0.23888888888888887V
+2025-08-04 10:06:37 - LaserLockController - INFO - getting sweep signal
+2025-08-04 10:06:38 - LaserLockController - INFO - Setting voltage to 0.42777777777777776V
+2025-08-04 10:06:41 - LaserLockController - INFO - getting sweep signal
+2025-08-04 10:06:42 - LaserLockController - INFO - Setting voltage to 0.6166666666666667V
+2025-08-04 10:06:45 - LaserLockController - INFO - getting sweep signal
+2025-08-04 10:06:46 - LaserLockController - INFO - Setting voltage to 0.8055555555555556V
+2025-08-04 10:06:49 - LaserLockController - INFO - getting sweep signal
+2025-08-04 10:06:50 - LaserLockController - INFO - Setting voltage to 0.9944444444444445V
+2025-08-04 10:06:53 - LaserLockController - INFO - getting sweep signal
+2025-08-04 10:06:54 - LaserLockController - INFO - Setting voltage to 1.1833333333333333V
+2025-08-04 10:06:58 - LaserLockController - INFO - getting sweep signal
+2025-08-04 10:06:59 - LaserLockController - INFO - Setting voltage to 1.3722222222222222V
+2025-08-04 10:07:02 - LaserLockController - INFO - getting sweep signal
+2025-08-04 10:07:03 - LaserLockController - INFO - Setting voltage to 1.5611111111111111V
+2025-08-04 10:07:06 - LaserLockController - INFO - getting sweep signal
+2025-08-04 10:07:07 - LaserLockController - INFO - Setting voltage to 1.75V
+2025-08-04 10:07:11 - LaserLockController - INFO - getting sweep signal
+2025-08-04 10:07:12 - LaserLockController - INFO - Scan completed successfully.
+2025-08-04 12:42:07 - LaserLockController - INFO - LaserLockController initialized successfully.
+2025-08-04 12:43:27 - LaserLockController - INFO - Resetting reference lines.
+2025-08-04 12:43:27 - LaserLockController - INFO - Reference lines reset successfully.
+2025-08-04 12:43:27 - LaserLockController - INFO - Saving reference line with key feature_1.
+2025-08-04 12:43:28 - LaserLockController - ERROR - No scan results available. Please run scan_lines first.
+2025-08-04 12:43:44 - LaserLockController - INFO - Starting scan from 0.05V to 1.75V with 5 points.
+2025-08-04 12:43:44 - LaserLockController - INFO - Setting voltage to 0.05V
+2025-08-04 12:43:48 - LaserLockController - INFO - getting sweep signal
+2025-08-04 12:43:49 - LaserLockController - INFO - Setting voltage to 0.475V
+2025-08-04 12:43:52 - LaserLockController - INFO - getting sweep signal
+2025-08-04 12:43:53 - LaserLockController - INFO - Setting voltage to 0.9V
+2025-08-04 12:43:56 - LaserLockController - INFO - getting sweep signal
+2025-08-04 12:43:57 - LaserLockController - INFO - Setting voltage to 1.325V
+2025-08-04 12:44:00 - LaserLockController - INFO - getting sweep signal
+2025-08-04 12:44:01 - LaserLockController - INFO - Setting voltage to 1.75V
+2025-08-04 12:44:04 - LaserLockController - INFO - getting sweep signal
+2025-08-04 12:44:05 - LaserLockController - INFO - Scan completed successfully.
+2025-08-04 12:44:38 - LaserLockController - INFO - Resetting reference lines.
+2025-08-04 12:44:38 - LaserLockController - INFO - Reference lines reset successfully.
+2025-08-04 12:44:38 - LaserLockController - INFO - Saving reference line with key feature_1.
+2025-08-04 12:44:39 - LaserLockController - INFO - Reference line feature_1 saved successfully.
+2025-08-04 12:44:39 - LaserLockController - INFO - Saving reference line with key feature_2.
+2025-08-04 12:44:39 - LaserLockController - INFO - Reference line feature_2 saved successfully.
+2025-08-04 12:44:39 - LaserLockController - INFO - Saving reference line with key feature_3.
+2025-08-04 12:44:40 - LaserLockController - INFO - Reference line feature_3 saved successfully.
+2025-08-04 12:44:40 - LaserLockController - INFO - Finding reference lines.
+2025-08-04 12:45:03 - LaserLockController - INFO - Reference lines found successfully.
+2025-08-04 12:59:42 - LaserLockController - INFO - LaserLockController initialized successfully.
+2025-08-04 12:59:42 - LaserLockController - INFO - Starting scan from 0.05V to 1.75V with 5 points.
+2025-08-04 12:59:43 - LaserLockController - INFO - Setting voltage to 0.05V
+2025-08-04 12:59:46 - LaserLockController - INFO - getting sweep signal
+2025-08-04 12:59:47 - LaserLockController - INFO - Setting voltage to 0.475V
+2025-08-04 12:59:50 - LaserLockController - INFO - getting sweep signal
+2025-08-04 12:59:51 - LaserLockController - INFO - Setting voltage to 0.9V
+2025-08-04 12:59:54 - LaserLockController - INFO - getting sweep signal
+2025-08-04 12:59:55 - LaserLockController - INFO - Setting voltage to 1.325V
+2025-08-04 12:59:58 - LaserLockController - INFO - getting sweep signal
+2025-08-04 12:59:59 - LaserLockController - INFO - Setting voltage to 1.75V
+2025-08-04 13:00:02 - LaserLockController - INFO - getting sweep signal
+2025-08-04 13:00:03 - LaserLockController - INFO - Scan completed successfully.
+2025-08-04 13:00:07 - LaserLockController - INFO - Resetting reference lines.
+2025-08-04 13:00:07 - LaserLockController - INFO - Reference lines reset successfully.
+2025-08-04 13:00:07 - LaserLockController - INFO - Saving reference line with key feature_1.
+2025-08-04 13:00:08 - LaserLockController - INFO - Reference line feature_1 saved successfully.
+2025-08-04 13:00:08 - LaserLockController - INFO - Saving reference line with key feature_2.
+2025-08-04 13:00:09 - LaserLockController - INFO - Reference line feature_2 saved successfully.
+2025-08-04 13:00:09 - LaserLockController - INFO - Saving reference line with key feature_3.
+2025-08-04 13:00:10 - LaserLockController - INFO - Reference line feature_3 saved successfully.
+2025-08-04 13:00:12 - LaserLockController - INFO - Finding reference lines.
+2025-08-04 13:00:34 - LaserLockController - INFO - Reference lines found successfully.
+2025-08-04 13:09:16 - LaserLockController - INFO - LaserLockController initialized successfully.
+2025-08-04 13:09:18 - LaserLockController - INFO - Starting scan from 0.05V to 1.75V with 5 points.
+2025-08-04 13:09:18 - LaserLockController - INFO - Setting voltage to 0.05V
+2025-08-04 13:09:22 - LaserLockController - INFO - getting sweep signal
+2025-08-04 13:09:23 - LaserLockController - INFO - Setting voltage to 0.475V
+2025-08-04 13:09:26 - LaserLockController - INFO - getting sweep signal
+2025-08-04 13:09:27 - LaserLockController - INFO - Setting voltage to 0.9V
+2025-08-04 13:09:30 - LaserLockController - INFO - getting sweep signal
+2025-08-04 13:09:31 - LaserLockController - INFO - Setting voltage to 1.325V
+2025-08-04 13:09:33 - LaserLockController - INFO - getting sweep signal
+2025-08-04 13:09:34 - LaserLockController - INFO - Setting voltage to 1.75V
+2025-08-04 13:09:37 - LaserLockController - INFO - getting sweep signal
+2025-08-04 13:09:38 - LaserLockController - INFO - Scan completed successfully.
+2025-08-04 13:09:46 - LaserLockController - INFO - Resetting reference lines.
+2025-08-04 13:09:46 - LaserLockController - INFO - Reference lines reset successfully.
+2025-08-04 13:09:46 - LaserLockController - INFO - Saving reference line with key feature_1.
+2025-08-04 13:09:46 - LaserLockController - INFO - Reference line feature_1 saved successfully.
+2025-08-04 13:09:46 - LaserLockController - INFO - Saving reference line with key feature_2.
+2025-08-04 13:09:47 - LaserLockController - INFO - Reference line feature_2 saved successfully.
+2025-08-04 13:09:47 - LaserLockController - INFO - Saving reference line with key feature_3.
+2025-08-04 13:09:48 - LaserLockController - INFO - Reference line feature_3 saved successfully.
+2025-08-04 13:09:54 - LaserLockController - INFO - Finding reference lines.
+2025-08-04 13:10:16 - LaserLockController - INFO - Reference lines found successfully.
+2025-08-04 13:25:55 - LaserLockController - INFO - LaserLockController initialized successfully.
+2025-08-04 13:25:59 - LaserLockController - INFO - Starting scan from 0.05V to 1.75V with 2 points.
+2025-08-04 13:25:59 - LaserLockController - INFO - Setting voltage to 0.05V
+2025-08-04 13:26:02 - LaserLockController - INFO - getting sweep signal
+2025-08-04 13:26:03 - LaserLockController - INFO - Setting voltage to 1.75V
+2025-08-04 13:26:06 - LaserLockController - INFO - getting sweep signal
+2025-08-04 13:26:07 - LaserLockController - INFO - Scan completed successfully.
+2025-08-04 13:26:12 - LaserLockController - INFO - Resetting reference lines.
+2025-08-04 13:26:12 - LaserLockController - INFO - Reference lines reset successfully.
+2025-08-04 13:26:12 - LaserLockController - INFO - Saving reference line with key feature_1.
+2025-08-04 13:26:12 - LaserLockController - INFO - Reference line feature_1 saved successfully.
+2025-08-04 13:26:12 - LaserLockController - INFO - Saving reference line with key feature_2.
+2025-08-04 13:26:13 - LaserLockController - INFO - Reference line feature_2 saved successfully.
+2025-08-04 13:26:13 - LaserLockController - INFO - Saving reference line with key feature_3.
+2025-08-04 13:26:13 - LaserLockController - INFO - Reference line feature_3 saved successfully.
+2025-08-04 13:26:20 - LaserLockController - INFO - Finding reference lines.
+2025-08-04 13:26:33 - LaserLockController - INFO - Reference lines found successfully.
+2025-08-06 14:49:43 - LaserLockController - INFO - LaserLockController initialized successfully.
+2025-08-06 14:49:47 - LaserLockController - INFO - Starting scan from 0.05V to 1.75V with 2 points.
+2025-08-06 14:49:47 - LaserLockController - INFO - Setting voltage to 0.05V
+2025-08-06 14:49:49 - LaserLockController - INFO - getting sweep signal
+2025-08-06 14:49:49 - LaserLockController - INFO - Setting voltage to 1.75V
+2025-08-06 14:49:50 - LaserLockController - INFO - getting sweep signal
+2025-08-06 14:49:51 - LaserLockController - INFO - Scan completed successfully.
+2025-08-06 14:49:56 - LaserLockController - INFO - Starting scan from 0.05V to 1.75V with 20 points.
+2025-08-06 14:49:56 - LaserLockController - INFO - Setting voltage to 0.05V
+2025-08-06 14:49:57 - LaserLockController - INFO - getting sweep signal
+2025-08-06 14:49:58 - LaserLockController - INFO - Setting voltage to 0.1394736842105263V
+2025-08-06 14:49:59 - LaserLockController - INFO - getting sweep signal
+2025-08-06 14:50:00 - LaserLockController - INFO - Setting voltage to 0.22894736842105262V
+2025-08-06 14:50:00 - LaserLockController - INFO - getting sweep signal
+2025-08-06 14:50:03 - LaserLockController - INFO - Setting voltage to 0.31842105263157894V
+2025-08-06 14:50:04 - LaserLockController - INFO - getting sweep signal
+2025-08-06 14:50:04 - LaserLockController - INFO - Setting voltage to 0.40789473684210525V
+2025-08-06 14:50:05 - LaserLockController - INFO - getting sweep signal
+2025-08-06 14:50:06 - LaserLockController - INFO - Setting voltage to 0.49736842105263157V
+2025-08-06 14:50:07 - LaserLockController - INFO - getting sweep signal
+2025-08-06 14:50:08 - LaserLockController - INFO - Setting voltage to 0.5868421052631579V
+2025-08-06 14:50:09 - LaserLockController - INFO - getting sweep signal
+2025-08-06 14:50:09 - LaserLockController - INFO - Setting voltage to 0.6763157894736842V
+2025-08-06 14:50:10 - LaserLockController - INFO - getting sweep signal
+2025-08-06 14:50:11 - LaserLockController - INFO - Setting voltage to 0.7657894736842106V
+2025-08-06 14:50:12 - LaserLockController - INFO - getting sweep signal
+2025-08-06 14:50:13 - LaserLockController - INFO - Setting voltage to 0.855263157894737V
+2025-08-06 14:50:14 - LaserLockController - INFO - getting sweep signal
+2025-08-06 14:50:14 - LaserLockController - INFO - Setting voltage to 0.9447368421052632V
+2025-08-06 14:50:15 - LaserLockController - INFO - getting sweep signal
+2025-08-06 14:50:16 - LaserLockController - INFO - Setting voltage to 1.0342105263157895V
+2025-08-06 14:50:17 - LaserLockController - INFO - getting sweep signal
+2025-08-06 14:50:18 - LaserLockController - INFO - Setting voltage to 1.1236842105263158V
+2025-08-06 14:50:18 - LaserLockController - INFO - getting sweep signal
+2025-08-06 14:50:19 - LaserLockController - INFO - Setting voltage to 1.2131578947368422V
+2025-08-06 14:50:20 - LaserLockController - INFO - getting sweep signal
+2025-08-06 14:50:21 - LaserLockController - INFO - Setting voltage to 1.3026315789473684V
+2025-08-06 14:50:22 - LaserLockController - INFO - getting sweep signal
+2025-08-06 14:50:23 - LaserLockController - INFO - Setting voltage to 1.3921052631578947V
+2025-08-06 14:50:24 - LaserLockController - INFO - getting sweep signal
+2025-08-06 14:50:25 - LaserLockController - INFO - Setting voltage to 1.481578947368421V
+2025-08-06 14:50:26 - LaserLockController - INFO - getting sweep signal
+2025-08-06 14:50:26 - LaserLockController - INFO - Setting voltage to 1.5710526315789475V
+2025-08-06 14:50:27 - LaserLockController - INFO - getting sweep signal
+2025-08-06 14:50:28 - LaserLockController - INFO - Setting voltage to 1.6605263157894739V
+2025-08-06 14:50:29 - LaserLockController - INFO - getting sweep signal
+2025-08-06 14:50:30 - LaserLockController - INFO - Setting voltage to 1.75V
+2025-08-06 14:50:31 - LaserLockController - INFO - getting sweep signal
+2025-08-06 14:50:31 - LaserLockController - INFO - Scan completed successfully.
+2025-08-06 14:52:15 - LaserLockController - INFO - Starting scan from 0.05V to 1.75V with 20 points.
+2025-08-06 14:52:15 - LaserLockController - INFO - Setting voltage to 0.05V
+2025-08-06 14:52:16 - LaserLockController - INFO - getting sweep signal
+2025-08-06 14:52:17 - LaserLockController - INFO - Setting voltage to 0.1394736842105263V
+2025-08-06 14:52:18 - LaserLockController - INFO - getting sweep signal
+2025-08-06 14:52:19 - LaserLockController - INFO - Setting voltage to 0.22894736842105262V
+2025-08-06 14:52:19 - LaserLockController - INFO - getting sweep signal
+2025-08-06 14:52:20 - LaserLockController - INFO - Setting voltage to 0.31842105263157894V
+2025-08-06 14:52:21 - LaserLockController - INFO - getting sweep signal
+2025-08-06 14:52:22 - LaserLockController - INFO - Setting voltage to 0.40789473684210525V
+2025-08-06 14:52:23 - LaserLockController - INFO - getting sweep signal
+2025-08-06 14:52:24 - LaserLockController - INFO - Setting voltage to 0.49736842105263157V
+2025-08-06 14:52:25 - LaserLockController - INFO - getting sweep signal
+2025-08-06 14:52:25 - LaserLockController - INFO - Setting voltage to 0.5868421052631579V
+2025-08-06 14:52:26 - LaserLockController - INFO - getting sweep signal
+2025-08-06 14:52:27 - LaserLockController - INFO - Setting voltage to 0.6763157894736842V
+2025-08-06 14:52:28 - LaserLockController - INFO - getting sweep signal
+2025-08-06 14:52:29 - LaserLockController - INFO - Setting voltage to 0.7657894736842106V
+2025-08-06 14:52:30 - LaserLockController - INFO - getting sweep signal
+2025-08-06 14:52:31 - LaserLockController - INFO - Setting voltage to 0.855263157894737V
+2025-08-06 14:52:32 - LaserLockController - INFO - getting sweep signal
+2025-08-06 14:52:33 - LaserLockController - INFO - Setting voltage to 0.9447368421052632V
+2025-08-06 14:52:34 - LaserLockController - INFO - getting sweep signal
+2025-08-06 14:52:34 - LaserLockController - INFO - Setting voltage to 1.0342105263157895V
+2025-08-06 14:52:35 - LaserLockController - INFO - getting sweep signal
+2025-08-06 14:52:36 - LaserLockController - INFO - Setting voltage to 1.1236842105263158V
+2025-08-06 14:52:37 - LaserLockController - INFO - getting sweep signal
+2025-08-06 14:52:38 - LaserLockController - INFO - Setting voltage to 1.2131578947368422V
+2025-08-06 14:52:39 - LaserLockController - INFO - getting sweep signal
+2025-08-06 14:52:40 - LaserLockController - INFO - Setting voltage to 1.3026315789473684V
+2025-08-06 14:52:41 - LaserLockController - INFO - getting sweep signal
+2025-08-06 14:52:41 - LaserLockController - INFO - Setting voltage to 1.3921052631578947V
+2025-08-06 14:52:42 - LaserLockController - INFO - getting sweep signal
+2025-08-06 14:52:43 - LaserLockController - INFO - Setting voltage to 1.481578947368421V
+2025-08-06 14:52:44 - LaserLockController - INFO - getting sweep signal
+2025-08-06 14:52:45 - LaserLockController - INFO - Setting voltage to 1.5710526315789475V
+2025-08-06 14:52:46 - LaserLockController - INFO - getting sweep signal
+2025-08-06 14:52:47 - LaserLockController - INFO - Setting voltage to 1.6605263157894739V
+2025-08-06 14:52:48 - LaserLockController - INFO - getting sweep signal
+2025-08-06 14:52:49 - LaserLockController - INFO - Setting voltage to 1.75V
+2025-08-06 14:52:49 - LaserLockController - INFO - getting sweep signal
+2025-08-06 14:52:50 - LaserLockController - INFO - Scan completed successfully.
+2025-08-06 14:53:53 - LaserLockController - INFO - Starting scan from 0.05V to 1.75V with 20 points.
+2025-08-06 14:53:54 - LaserLockController - INFO - Setting voltage to 0.05V
+2025-08-06 14:53:55 - LaserLockController - INFO - getting sweep signal
+2025-08-06 14:53:56 - LaserLockController - INFO - Setting voltage to 0.1394736842105263V
+2025-08-06 14:53:58 - LaserLockController - INFO - getting sweep signal
+2025-08-06 14:53:59 - LaserLockController - INFO - Setting voltage to 0.22894736842105262V
+2025-08-06 14:54:00 - LaserLockController - INFO - getting sweep signal
+2025-08-06 14:54:01 - LaserLockController - INFO - Setting voltage to 0.31842105263157894V
+2025-08-06 14:54:01 - LaserLockController - INFO - getting sweep signal
+2025-08-06 14:54:02 - LaserLockController - INFO - Setting voltage to 0.40789473684210525V
+2025-08-06 14:54:03 - LaserLockController - INFO - getting sweep signal
+2025-08-06 14:54:04 - LaserLockController - INFO - Setting voltage to 0.49736842105263157V
+2025-08-06 14:54:05 - LaserLockController - INFO - getting sweep signal
+2025-08-06 14:54:06 - LaserLockController - INFO - Setting voltage to 0.5868421052631579V
+2025-08-06 14:54:06 - LaserLockController - INFO - getting sweep signal
+2025-08-06 14:54:07 - LaserLockController - INFO - Setting voltage to 0.6763157894736842V
+2025-08-06 14:54:08 - LaserLockController - INFO - getting sweep signal
+2025-08-06 14:54:09 - LaserLockController - INFO - Setting voltage to 0.7657894736842106V
+2025-08-06 14:54:10 - LaserLockController - INFO - getting sweep signal
+2025-08-06 14:54:10 - LaserLockController - INFO - Setting voltage to 0.855263157894737V
+2025-08-06 14:54:11 - LaserLockController - INFO - getting sweep signal
+2025-08-06 14:54:12 - LaserLockController - INFO - Setting voltage to 0.9447368421052632V
+2025-08-06 14:54:13 - LaserLockController - INFO - getting sweep signal
+2025-08-06 14:54:14 - LaserLockController - INFO - Setting voltage to 1.0342105263157895V
+2025-08-06 14:54:15 - LaserLockController - INFO - getting sweep signal
+2025-08-06 14:54:16 - LaserLockController - INFO - Setting voltage to 1.1236842105263158V
+2025-08-06 14:54:17 - LaserLockController - INFO - getting sweep signal
+2025-08-06 14:54:18 - LaserLockController - INFO - Setting voltage to 1.2131578947368422V
+2025-08-06 14:54:18 - LaserLockController - INFO - getting sweep signal
+2025-08-06 14:54:19 - LaserLockController - INFO - Setting voltage to 1.3026315789473684V
+2025-08-06 14:54:20 - LaserLockController - INFO - getting sweep signal
+2025-08-06 14:54:21 - LaserLockController - INFO - Setting voltage to 1.3921052631578947V
+2025-08-06 14:54:22 - LaserLockController - INFO - getting sweep signal
+2025-08-06 14:54:23 - LaserLockController - INFO - Setting voltage to 1.481578947368421V
+2025-08-06 14:54:24 - LaserLockController - INFO - getting sweep signal
+2025-08-06 14:54:25 - LaserLockController - INFO - Setting voltage to 1.5710526315789475V
+2025-08-06 14:54:25 - LaserLockController - INFO - getting sweep signal
+2025-08-06 14:54:26 - LaserLockController - INFO - Setting voltage to 1.6605263157894739V
+2025-08-06 14:54:27 - LaserLockController - INFO - getting sweep signal
+2025-08-06 14:54:28 - LaserLockController - INFO - Setting voltage to 1.75V
+2025-08-06 14:54:29 - LaserLockController - INFO - getting sweep signal
+2025-08-06 14:54:30 - LaserLockController - INFO - Scan completed successfully.
+2025-08-06 14:54:44 - LaserLockController - INFO - Starting scan from 0.05V to 1.75V with 20 points.
+2025-08-06 14:54:44 - LaserLockController - INFO - Setting voltage to 0.05V
+2025-08-06 14:54:45 - LaserLockController - INFO - getting sweep signal
+2025-08-06 14:54:46 - LaserLockController - INFO - Setting voltage to 0.1394736842105263V
+2025-08-06 14:54:47 - LaserLockController - INFO - getting sweep signal
+2025-08-06 14:54:47 - LaserLockController - INFO - Setting voltage to 0.22894736842105262V
+2025-08-06 14:54:48 - LaserLockController - INFO - getting sweep signal
+2025-08-06 14:54:49 - LaserLockController - INFO - Setting voltage to 0.31842105263157894V
+2025-08-06 14:54:50 - LaserLockController - INFO - getting sweep signal
+2025-08-06 14:54:51 - LaserLockController - INFO - Setting voltage to 0.40789473684210525V
+2025-08-06 14:54:52 - LaserLockController - INFO - getting sweep signal
+2025-08-06 14:54:53 - LaserLockController - INFO - Setting voltage to 0.49736842105263157V
+2025-08-06 14:54:53 - LaserLockController - INFO - getting sweep signal
+2025-08-06 14:54:54 - LaserLockController - INFO - Setting voltage to 0.5868421052631579V
+2025-08-06 14:54:55 - LaserLockController - INFO - getting sweep signal
+2025-08-06 14:54:56 - LaserLockController - INFO - Setting voltage to 0.6763157894736842V
+2025-08-06 14:54:57 - LaserLockController - INFO - getting sweep signal
+2025-08-06 14:54:57 - LaserLockController - INFO - Setting voltage to 0.7657894736842106V
+2025-08-06 14:54:58 - LaserLockController - INFO - getting sweep signal
+2025-08-06 14:54:59 - LaserLockController - INFO - Setting voltage to 0.855263157894737V
+2025-08-06 14:55:00 - LaserLockController - INFO - getting sweep signal
+2025-08-06 14:55:01 - LaserLockController - INFO - Setting voltage to 0.9447368421052632V
+2025-08-06 14:55:02 - LaserLockController - INFO - getting sweep signal
+2025-08-06 14:55:02 - LaserLockController - INFO - Setting voltage to 1.0342105263157895V
+2025-08-06 14:55:03 - LaserLockController - INFO - getting sweep signal
+2025-08-06 14:55:04 - LaserLockController - INFO - Setting voltage to 1.1236842105263158V
+2025-08-06 14:55:05 - LaserLockController - INFO - getting sweep signal
+2025-08-06 14:55:06 - LaserLockController - INFO - Setting voltage to 1.2131578947368422V
+2025-08-06 14:55:06 - LaserLockController - INFO - getting sweep signal
+2025-08-06 14:55:07 - LaserLockController - INFO - Setting voltage to 1.3026315789473684V
+2025-08-06 14:55:08 - LaserLockController - INFO - getting sweep signal
+2025-08-06 14:55:09 - LaserLockController - INFO - Setting voltage to 1.3921052631578947V
+2025-08-06 14:55:10 - LaserLockController - INFO - getting sweep signal
+2025-08-06 14:55:11 - LaserLockController - INFO - Setting voltage to 1.481578947368421V
+2025-08-06 14:55:11 - LaserLockController - INFO - getting sweep signal
+2025-08-06 14:55:12 - LaserLockController - INFO - Setting voltage to 1.5710526315789475V
+2025-08-06 14:55:13 - LaserLockController - INFO - getting sweep signal
+2025-08-06 14:55:14 - LaserLockController - INFO - Setting voltage to 1.6605263157894739V
+2025-08-06 14:55:15 - LaserLockController - INFO - getting sweep signal
+2025-08-06 14:55:15 - LaserLockController - INFO - Setting voltage to 1.75V
+2025-08-06 14:55:16 - LaserLockController - INFO - getting sweep signal
+2025-08-06 14:55:17 - LaserLockController - INFO - Scan completed successfully.
+2025-08-06 15:11:55 - LaserLockController - INFO - Starting scan from 0.05V to 1.75V with 20 points.
+2025-08-06 15:11:56 - LaserLockController - INFO - Setting voltage to 0.05V
+2025-08-06 15:11:57 - LaserLockController - INFO - getting sweep signal
+2025-08-06 15:12:27 - LaserLockController - INFO - Starting scan from 0.05V to 1.75V with 20 points.
+2025-08-06 15:12:27 - LaserLockController - INFO - Setting voltage to 0.05V
+2025-08-06 15:12:27 - LaserLockController - INFO - getting sweep signal
+2025-08-06 15:12:28 - LaserLockController - INFO - Setting voltage to 0.1394736842105263V
+2025-08-06 15:12:30 - LaserLockController - INFO - getting sweep signal
+2025-08-06 15:13:45 - LaserLockController - INFO - Starting scan from 0.05V to 1.75V with 20 points.
+2025-08-06 15:13:46 - LaserLockController - INFO - Setting voltage to 0.05V
+2025-08-06 15:13:46 - LaserLockController - INFO - getting sweep signal
+2025-08-06 15:13:47 - LaserLockController - INFO - Setting voltage to 0.1394736842105263V
+2025-08-06 15:13:48 - LaserLockController - INFO - getting sweep signal
+2025-08-06 15:13:49 - LaserLockController - INFO - Setting voltage to 0.22894736842105262V
+2025-08-06 15:13:50 - LaserLockController - INFO - getting sweep signal
+2025-08-06 15:13:51 - LaserLockController - INFO - Setting voltage to 0.31842105263157894V
+2025-08-06 15:13:52 - LaserLockController - INFO - getting sweep signal
+2025-08-06 15:13:52 - LaserLockController - INFO - Setting voltage to 0.40789473684210525V
+2025-08-06 15:13:53 - LaserLockController - INFO - getting sweep signal
+2025-08-06 15:13:54 - LaserLockController - INFO - Setting voltage to 0.49736842105263157V
+2025-08-06 15:13:55 - LaserLockController - INFO - getting sweep signal
+2025-08-06 15:13:56 - LaserLockController - INFO - Setting voltage to 0.5868421052631579V
+2025-08-06 15:13:57 - LaserLockController - INFO - getting sweep signal
+2025-08-06 15:13:58 - LaserLockController - INFO - Setting voltage to 0.6763157894736842V
+2025-08-06 15:13:59 - LaserLockController - INFO - getting sweep signal
+2025-08-06 15:13:59 - LaserLockController - INFO - Setting voltage to 0.7657894736842106V
+2025-08-06 15:14:01 - LaserLockController - INFO - getting sweep signal
+2025-08-06 15:14:02 - LaserLockController - INFO - Setting voltage to 0.855263157894737V
+2025-08-06 15:14:02 - LaserLockController - INFO - getting sweep signal
+2025-08-06 15:14:03 - LaserLockController - INFO - Setting voltage to 0.9447368421052632V
+2025-08-06 15:14:04 - LaserLockController - INFO - getting sweep signal
+2025-08-06 15:14:05 - LaserLockController - INFO - Setting voltage to 1.0342105263157895V
+2025-08-06 15:14:06 - LaserLockController - INFO - getting sweep signal
+2025-08-06 15:14:07 - LaserLockController - INFO - Setting voltage to 1.1236842105263158V
+2025-08-06 15:14:07 - LaserLockController - INFO - getting sweep signal
+2025-08-06 15:14:08 - LaserLockController - INFO - Setting voltage to 1.2131578947368422V
+2025-08-06 15:14:09 - LaserLockController - INFO - getting sweep signal
+2025-08-06 15:14:10 - LaserLockController - INFO - Setting voltage to 1.3026315789473684V
+2025-08-06 15:14:11 - LaserLockController - INFO - getting sweep signal
+2025-08-06 15:14:12 - LaserLockController - INFO - Setting voltage to 1.3921052631578947V
+2025-08-06 15:14:13 - LaserLockController - INFO - getting sweep signal
+2025-08-06 15:14:13 - LaserLockController - INFO - Setting voltage to 1.481578947368421V
+2025-08-06 15:14:14 - LaserLockController - INFO - getting sweep signal
+2025-08-06 15:14:15 - LaserLockController - INFO - Setting voltage to 1.5710526315789475V
+2025-08-06 15:14:16 - LaserLockController - INFO - getting sweep signal
+2025-08-06 15:14:17 - LaserLockController - INFO - Setting voltage to 1.6605263157894739V
+2025-08-06 15:14:18 - LaserLockController - INFO - getting sweep signal
+2025-08-06 15:14:19 - LaserLockController - INFO - Setting voltage to 1.75V
+2025-08-06 15:14:19 - LaserLockController - INFO - getting sweep signal
+2025-08-06 15:14:20 - LaserLockController - INFO - Scan completed successfully.
+2025-08-06 15:25:56 - LaserLockController - INFO - Starting scan from 0.05V to 1.75V with 20 points.
+2025-08-06 15:25:56 - LaserLockController - INFO - Setting voltage to 0.05V
+2025-08-06 15:25:57 - LaserLockController - INFO - getting sweep signal
+2025-08-06 15:25:58 - LaserLockController - INFO - Setting voltage to 0.1394736842105263V
+2025-08-06 15:25:59 - LaserLockController - INFO - getting sweep signal
+2025-08-06 15:25:59 - LaserLockController - INFO - Setting voltage to 0.22894736842105262V
+2025-08-06 15:26:00 - LaserLockController - INFO - getting sweep signal
+2025-08-06 15:26:01 - LaserLockController - INFO - Setting voltage to 0.31842105263157894V
+2025-08-06 15:26:02 - LaserLockController - INFO - getting sweep signal
+2025-08-06 15:26:03 - LaserLockController - INFO - Setting voltage to 0.40789473684210525V
+2025-08-06 15:26:04 - LaserLockController - INFO - getting sweep signal
+2025-08-06 15:26:04 - LaserLockController - INFO - Setting voltage to 0.49736842105263157V
+2025-08-06 15:26:05 - LaserLockController - INFO - getting sweep signal
+2025-08-06 15:26:06 - LaserLockController - INFO - Setting voltage to 0.5868421052631579V
+2025-08-06 15:26:07 - LaserLockController - INFO - getting sweep signal
+2025-08-06 15:26:08 - LaserLockController - INFO - Setting voltage to 0.6763157894736842V
+2025-08-06 15:26:09 - LaserLockController - INFO - getting sweep signal
+2025-08-06 15:26:09 - LaserLockController - INFO - Setting voltage to 0.7657894736842106V
+2025-08-06 15:26:10 - LaserLockController - INFO - getting sweep signal
+2025-08-06 15:26:11 - LaserLockController - INFO - Setting voltage to 0.855263157894737V
+2025-08-06 15:26:12 - LaserLockController - INFO - getting sweep signal
+2025-08-06 15:26:13 - LaserLockController - INFO - Setting voltage to 0.9447368421052632V
+2025-08-06 15:26:14 - LaserLockController - INFO - getting sweep signal
+2025-08-06 15:26:15 - LaserLockController - INFO - Setting voltage to 1.0342105263157895V
+2025-08-06 15:26:15 - LaserLockController - INFO - getting sweep signal
+2025-08-06 15:26:16 - LaserLockController - INFO - Setting voltage to 1.1236842105263158V
+2025-08-06 15:26:17 - LaserLockController - INFO - getting sweep signal
+2025-08-06 15:26:18 - LaserLockController - INFO - Setting voltage to 1.2131578947368422V
+2025-08-06 15:26:19 - LaserLockController - INFO - getting sweep signal
+2025-08-06 15:26:20 - LaserLockController - INFO - Setting voltage to 1.3026315789473684V
+2025-08-06 15:26:20 - LaserLockController - INFO - getting sweep signal
+2025-08-06 15:26:21 - LaserLockController - INFO - Setting voltage to 1.3921052631578947V
+2025-08-06 15:26:22 - LaserLockController - INFO - getting sweep signal
+2025-08-06 15:26:23 - LaserLockController - INFO - Setting voltage to 1.481578947368421V
+2025-08-06 15:26:24 - LaserLockController - INFO - getting sweep signal
+2025-08-06 15:26:25 - LaserLockController - INFO - Setting voltage to 1.5710526315789475V
+2025-08-06 15:26:25 - LaserLockController - INFO - getting sweep signal
+2025-08-06 15:26:26 - LaserLockController - INFO - Setting voltage to 1.6605263157894739V
+2025-08-06 15:26:27 - LaserLockController - INFO - getting sweep signal
+2025-08-06 15:26:28 - LaserLockController - INFO - Setting voltage to 1.75V
+2025-08-06 15:26:29 - LaserLockController - INFO - getting sweep signal
+2025-08-06 15:26:30 - LaserLockController - INFO - Scan completed successfully.
+2025-08-06 15:26:47 - LaserLockController - INFO - Starting scan from 0.05V to 1.75V with 20 points.
+2025-08-06 15:26:47 - LaserLockController - INFO - Setting voltage to 0.05V
+2025-08-06 15:26:49 - LaserLockController - INFO - getting sweep signal
+2025-08-06 15:26:49 - LaserLockController - INFO - Setting voltage to 0.1394736842105263V
+2025-08-06 15:26:50 - LaserLockController - INFO - getting sweep signal
+2025-08-06 15:26:51 - LaserLockController - INFO - Setting voltage to 0.22894736842105262V
+2025-08-06 15:26:52 - LaserLockController - INFO - getting sweep signal
+2025-08-06 15:26:53 - LaserLockController - INFO - Setting voltage to 0.31842105263157894V
+2025-08-06 15:26:53 - LaserLockController - INFO - getting sweep signal
+2025-08-06 15:26:54 - LaserLockController - INFO - Setting voltage to 0.40789473684210525V
+2025-08-06 15:26:55 - LaserLockController - INFO - getting sweep signal
+2025-08-06 15:26:56 - LaserLockController - INFO - Setting voltage to 0.49736842105263157V
+2025-08-06 15:26:57 - LaserLockController - INFO - getting sweep signal
+2025-08-06 15:26:58 - LaserLockController - INFO - Setting voltage to 0.5868421052631579V
+2025-08-06 15:26:59 - LaserLockController - INFO - getting sweep signal
+2025-08-06 15:27:00 - LaserLockController - INFO - Setting voltage to 0.6763157894736842V
+2025-08-06 15:27:01 - LaserLockController - INFO - getting sweep signal
+2025-08-06 15:27:01 - LaserLockController - INFO - Setting voltage to 0.7657894736842106V
+2025-08-06 15:27:02 - LaserLockController - INFO - getting sweep signal
+2025-08-06 15:27:03 - LaserLockController - INFO - Setting voltage to 0.855263157894737V
+2025-08-06 15:27:04 - LaserLockController - INFO - getting sweep signal
+2025-08-06 15:27:05 - LaserLockController - INFO - Setting voltage to 0.9447368421052632V
+2025-08-06 15:27:06 - LaserLockController - INFO - getting sweep signal
+2025-08-06 15:27:06 - LaserLockController - INFO - Setting voltage to 1.0342105263157895V
+2025-08-06 15:27:07 - LaserLockController - INFO - getting sweep signal
+2025-08-06 15:27:08 - LaserLockController - INFO - Setting voltage to 1.1236842105263158V
+2025-08-06 15:27:09 - LaserLockController - INFO - getting sweep signal
+2025-08-06 15:27:10 - LaserLockController - INFO - Setting voltage to 1.2131578947368422V
+2025-08-06 15:27:11 - LaserLockController - INFO - getting sweep signal
+2025-08-06 15:27:12 - LaserLockController - INFO - Setting voltage to 1.3026315789473684V
+2025-08-06 15:27:12 - LaserLockController - INFO - getting sweep signal
+2025-08-06 15:27:13 - LaserLockController - INFO - Setting voltage to 1.3921052631578947V
+2025-08-06 15:27:14 - LaserLockController - INFO - getting sweep signal
+2025-08-06 15:27:15 - LaserLockController - INFO - Setting voltage to 1.481578947368421V
+2025-08-06 15:27:16 - LaserLockController - INFO - getting sweep signal
+2025-08-06 15:27:17 - LaserLockController - INFO - Setting voltage to 1.5710526315789475V
+2025-08-06 15:27:18 - LaserLockController - INFO - getting sweep signal
+2025-08-06 15:27:19 - LaserLockController - INFO - Setting voltage to 1.6605263157894739V
+2025-08-06 15:27:20 - LaserLockController - INFO - getting sweep signal
+2025-08-06 15:27:20 - LaserLockController - INFO - Setting voltage to 1.75V
+2025-08-06 15:27:21 - LaserLockController - INFO - getting sweep signal
+2025-08-06 15:27:22 - LaserLockController - INFO - Scan completed successfully.
+2025-08-06 15:27:57 - LaserLockController - INFO - Starting scan from 0.9V to 1.0V with 2 points.
+2025-08-06 15:27:57 - LaserLockController - INFO - Setting voltage to 0.9V
+2025-08-06 15:27:58 - LaserLockController - INFO - getting sweep signal
+2025-08-06 15:27:59 - LaserLockController - INFO - Setting voltage to 1.0V
+2025-08-06 15:28:00 - LaserLockController - INFO - getting sweep signal
+2025-08-06 15:28:01 - LaserLockController - INFO - Scan completed successfully.
+2025-08-06 15:29:16 - LaserLockController - INFO - Starting scan from 0.05V to 1.75V with 20 points.
+2025-08-06 15:29:16 - LaserLockController - INFO - Setting voltage to 0.05V
+2025-08-06 15:29:17 - LaserLockController - INFO - getting sweep signal
+2025-08-06 15:29:18 - LaserLockController - INFO - Setting voltage to 0.1394736842105263V
+2025-08-06 15:29:19 - LaserLockController - INFO - getting sweep signal
+2025-08-06 15:29:19 - LaserLockController - INFO - Setting voltage to 0.22894736842105262V
+2025-08-06 15:29:20 - LaserLockController - INFO - getting sweep signal
+2025-08-06 15:29:21 - LaserLockController - INFO - Setting voltage to 0.31842105263157894V
+2025-08-06 15:29:22 - LaserLockController - INFO - getting sweep signal
+2025-08-06 15:29:23 - LaserLockController - INFO - Setting voltage to 0.40789473684210525V
+2025-08-06 15:29:24 - LaserLockController - INFO - getting sweep signal
+2025-08-06 15:29:24 - LaserLockController - INFO - Setting voltage to 0.49736842105263157V
+2025-08-06 15:29:25 - LaserLockController - INFO - getting sweep signal
+2025-08-06 15:29:26 - LaserLockController - INFO - Setting voltage to 0.5868421052631579V
+2025-08-06 15:29:27 - LaserLockController - INFO - getting sweep signal
+2025-08-06 15:29:28 - LaserLockController - INFO - Setting voltage to 0.6763157894736842V
+2025-08-06 15:29:28 - LaserLockController - INFO - getting sweep signal
+2025-08-06 15:29:29 - LaserLockController - INFO - Setting voltage to 0.7657894736842106V
+2025-08-06 15:29:30 - LaserLockController - INFO - getting sweep signal
+2025-08-06 15:29:31 - LaserLockController - INFO - Setting voltage to 0.855263157894737V
+2025-08-06 15:29:32 - LaserLockController - INFO - getting sweep signal
+2025-08-06 15:29:33 - LaserLockController - INFO - Setting voltage to 0.9447368421052632V
+2025-08-06 15:29:33 - LaserLockController - INFO - getting sweep signal
+2025-08-06 15:29:34 - LaserLockController - INFO - Setting voltage to 1.0342105263157895V
+2025-08-06 15:29:35 - LaserLockController - INFO - getting sweep signal
+2025-08-06 15:29:36 - LaserLockController - INFO - Setting voltage to 1.1236842105263158V
+2025-08-06 15:29:37 - LaserLockController - INFO - getting sweep signal
+2025-08-06 15:29:38 - LaserLockController - INFO - Setting voltage to 1.2131578947368422V
+2025-08-06 15:29:38 - LaserLockController - INFO - getting sweep signal
+2025-08-06 15:29:39 - LaserLockController - INFO - Setting voltage to 1.3026315789473684V
+2025-08-06 15:29:40 - LaserLockController - INFO - getting sweep signal
+2025-08-06 15:29:41 - LaserLockController - INFO - Setting voltage to 1.3921052631578947V
+2025-08-06 15:29:42 - LaserLockController - INFO - getting sweep signal
+2025-08-06 15:29:43 - LaserLockController - INFO - Setting voltage to 1.481578947368421V
+2025-08-06 15:29:44 - LaserLockController - INFO - getting sweep signal
+2025-08-06 15:29:45 - LaserLockController - INFO - Setting voltage to 1.5710526315789475V
+2025-08-06 15:29:46 - LaserLockController - INFO - getting sweep signal
+2025-08-06 15:29:46 - LaserLockController - INFO - Setting voltage to 1.6605263157894739V
+2025-08-06 15:29:47 - LaserLockController - INFO - getting sweep signal
+2025-08-06 15:29:48 - LaserLockController - INFO - Setting voltage to 1.75V
+2025-08-06 15:29:49 - LaserLockController - INFO - getting sweep signal
+2025-08-06 15:29:50 - LaserLockController - INFO - Scan completed successfully.
+2025-08-06 15:30:07 - LaserLockController - INFO - Starting scan from 0.05V to 1.75V with 20 points.
+2025-08-06 15:30:07 - LaserLockController - INFO - Setting voltage to 0.05V
+2025-08-06 15:30:08 - LaserLockController - INFO - getting sweep signal
+2025-08-06 15:30:09 - LaserLockController - INFO - Setting voltage to 0.1394736842105263V
+2025-08-06 15:30:10 - LaserLockController - INFO - getting sweep signal
+2025-08-06 15:30:11 - LaserLockController - INFO - Setting voltage to 0.22894736842105262V
+2025-08-06 15:30:12 - LaserLockController - INFO - getting sweep signal
+2025-08-06 15:30:13 - LaserLockController - INFO - Setting voltage to 0.31842105263157894V
+2025-08-06 15:30:14 - LaserLockController - INFO - getting sweep signal
+2025-08-06 15:30:14 - LaserLockController - INFO - Setting voltage to 0.40789473684210525V
+2025-08-06 15:30:15 - LaserLockController - INFO - getting sweep signal
+2025-08-06 15:30:16 - LaserLockController - INFO - Setting voltage to 0.49736842105263157V
+2025-08-06 15:30:17 - LaserLockController - INFO - getting sweep signal
+2025-08-06 15:30:18 - LaserLockController - INFO - Setting voltage to 0.5868421052631579V
+2025-08-06 15:30:19 - LaserLockController - INFO - getting sweep signal
+2025-08-06 15:30:19 - LaserLockController - INFO - Setting voltage to 0.6763157894736842V
+2025-08-06 15:30:21 - LaserLockController - INFO - getting sweep signal
+2025-08-06 15:30:21 - LaserLockController - INFO - Setting voltage to 0.7657894736842106V
+2025-08-06 15:30:22 - LaserLockController - INFO - getting sweep signal
+2025-08-06 15:30:23 - LaserLockController - INFO - Setting voltage to 0.855263157894737V
+2025-08-06 15:30:24 - LaserLockController - INFO - getting sweep signal
+2025-08-06 15:30:25 - LaserLockController - INFO - Setting voltage to 0.9447368421052632V
+2025-08-06 15:30:26 - LaserLockController - INFO - getting sweep signal
+2025-08-06 15:30:26 - LaserLockController - INFO - Setting voltage to 1.0342105263157895V
+2025-08-06 15:30:27 - LaserLockController - INFO - getting sweep signal
+2025-08-06 15:30:28 - LaserLockController - INFO - Setting voltage to 1.1236842105263158V
+2025-08-06 15:30:29 - LaserLockController - INFO - getting sweep signal
+2025-08-06 15:30:30 - LaserLockController - INFO - Setting voltage to 1.2131578947368422V
+2025-08-06 15:30:31 - LaserLockController - INFO - getting sweep signal
+2025-08-06 15:30:31 - LaserLockController - INFO - Setting voltage to 1.3026315789473684V
+2025-08-06 15:30:32 - LaserLockController - INFO - getting sweep signal
+2025-08-06 15:30:33 - LaserLockController - INFO - Setting voltage to 1.3921052631578947V
+2025-08-06 15:30:34 - LaserLockController - INFO - getting sweep signal
+2025-08-06 15:30:35 - LaserLockController - INFO - Setting voltage to 1.481578947368421V
+2025-08-06 15:30:36 - LaserLockController - INFO - getting sweep signal
+2025-08-06 15:30:37 - LaserLockController - INFO - Setting voltage to 1.5710526315789475V
+2025-08-06 15:30:38 - LaserLockController - INFO - getting sweep signal
+2025-08-06 15:30:39 - LaserLockController - INFO - Setting voltage to 1.6605263157894739V
+2025-08-06 15:30:40 - LaserLockController - INFO - getting sweep signal
+2025-08-06 15:30:40 - LaserLockController - INFO - Setting voltage to 1.75V
+2025-08-06 15:30:41 - LaserLockController - INFO - getting sweep signal
+2025-08-06 15:30:42 - LaserLockController - INFO - Scan completed successfully.
+2025-08-06 15:36:55 - LaserLockController - INFO - LaserLockController initialized successfully.
+2025-08-06 15:36:59 - LaserLockController - INFO - Starting scan from 0.05V to 1.75V with 20 points.
+2025-08-06 15:36:59 - LaserLockController - INFO - Setting voltage to 0.05V
+2025-08-06 15:37:00 - LaserLockController - INFO - getting sweep signal
+2025-08-06 15:37:25 - LaserLockController - INFO - Starting scan from 0.05V to 1.75V with 20 points.
+2025-08-06 15:37:25 - LaserLockController - INFO - Setting voltage to 0.05V
+2025-08-06 15:37:25 - LaserLockController - INFO - getting sweep signal
+2025-08-06 15:37:26 - LaserLockController - INFO - Setting voltage to 0.1394736842105263V
+2025-08-06 15:37:27 - LaserLockController - INFO - getting sweep signal
+2025-08-06 15:37:58 - LaserLockController - INFO - LaserLockController initialized successfully.
+2025-08-06 15:38:00 - LaserLockController - INFO - Starting scan from 0.05V to 1.75V with 20 points.
+2025-08-06 15:38:01 - LaserLockController - INFO - Setting voltage to 0.05V
+2025-08-06 15:38:02 - LaserLockController - INFO - getting sweep signal
+2025-08-06 15:38:22 - LaserLockController - INFO - Starting scan from 0.9V to 1.0V with 2 points.
+2025-08-06 15:38:22 - LaserLockController - INFO - Setting voltage to 0.9V
+2025-08-06 15:38:23 - LaserLockController - INFO - getting sweep signal
+2025-08-06 15:38:24 - LaserLockController - INFO - Setting voltage to 1.0V
+2025-08-06 15:38:25 - LaserLockController - INFO - getting sweep signal
+2025-08-06 15:40:28 - LaserLockController - INFO - LaserLockController initialized successfully.
+2025-08-06 15:40:35 - LaserLockController - INFO - Starting scan from 0.05V to 1.75V with 2 points.
+2025-08-06 15:40:35 - LaserLockController - INFO - Setting voltage to 0.05V
+2025-08-06 15:40:36 - LaserLockController - INFO - getting sweep signal
+2025-08-06 15:40:36 - LaserLockController - INFO - Setting voltage to 1.75V
+2025-08-06 15:40:37 - LaserLockController - INFO - getting sweep signal
+2025-08-06 15:41:04 - LaserLockController - INFO - Starting scan from 0.05V to 1.75V with 20 points.
+2025-08-06 15:41:04 - LaserLockController - INFO - Setting voltage to 0.05V
+2025-08-06 15:41:05 - LaserLockController - INFO - getting sweep signal
+2025-08-06 15:41:15 - LaserLockController - INFO - Setting voltage to 0.1394736842105263V
+2025-08-06 15:41:16 - LaserLockController - INFO - getting sweep signal
+2025-08-06 15:41:57 - LaserLockController - INFO - Starting scan from 0.05V to 1.75V with 20 points.
+2025-08-06 15:41:57 - LaserLockController - INFO - Setting voltage to 0.05V
+2025-08-06 15:41:59 - LaserLockController - INFO - getting sweep signal
+2025-08-06 15:42:17 - LaserLockController - INFO - Starting scan from 0.9V to 1.0V with 2 points.
+2025-08-06 15:42:17 - LaserLockController - INFO - Setting voltage to 0.9V
+2025-08-06 15:42:18 - LaserLockController - INFO - getting sweep signal
+2025-08-06 15:42:28 - LaserLockController - INFO - Setting voltage to 1.0V
+2025-08-06 15:42:50 - LaserLockController - INFO - LaserLockController initialized successfully.
+2025-08-06 15:42:53 - LaserLockController - INFO - Starting scan from 0.9V to 1.0V with 2 points.
+2025-08-06 15:42:53 - LaserLockController - INFO - Setting voltage to 0.9V
+2025-08-06 15:42:53 - LaserLockController - INFO - getting sweep signal
+2025-08-06 15:42:54 - LaserLockController - INFO - Setting voltage to 1.0V
+2025-08-06 15:42:55 - LaserLockController - INFO - getting sweep signal
+2025-08-06 15:43:01 - LaserLockController - INFO - Scan completed successfully.
+2025-08-06 15:43:11 - LaserLockController - INFO - Starting scan from 0.05V to 1.75V with 2 points.
+2025-08-06 15:43:11 - LaserLockController - INFO - Setting voltage to 0.05V
+2025-08-06 15:43:12 - LaserLockController - INFO - getting sweep signal
+2025-08-06 15:43:13 - LaserLockController - INFO - Setting voltage to 1.75V
+2025-08-06 15:43:14 - LaserLockController - INFO - getting sweep signal
+2025-08-06 15:43:20 - LaserLockController - INFO - Scan completed successfully.
+2025-08-06 15:43:23 - LaserLockController - INFO - Starting scan from 0.05V to 1.75V with 20 points.
+2025-08-06 15:43:24 - LaserLockController - INFO - Setting voltage to 0.05V
+2025-08-06 15:43:25 - LaserLockController - INFO - getting sweep signal
+2025-08-06 15:43:26 - LaserLockController - INFO - Setting voltage to 0.1394736842105263V
+2025-08-06 15:43:26 - LaserLockController - INFO - getting sweep signal
+2025-08-06 15:43:32 - LaserLockController - INFO - Setting voltage to 0.22894736842105262V
+2025-08-06 15:43:33 - LaserLockController - INFO - getting sweep signal
+2025-08-06 15:43:39 - LaserLockController - INFO - Setting voltage to 0.31842105263157894V
+2025-08-06 15:43:40 - LaserLockController - INFO - getting sweep signal
+2025-08-06 15:43:46 - LaserLockController - INFO - Setting voltage to 0.40789473684210525V
+2025-08-06 15:43:47 - LaserLockController - INFO - getting sweep signal
+2025-08-06 15:43:53 - LaserLockController - INFO - Setting voltage to 0.49736842105263157V
+2025-08-06 15:43:53 - LaserLockController - INFO - getting sweep signal
+2025-08-06 15:43:59 - LaserLockController - INFO - Setting voltage to 0.5868421052631579V
+2025-08-06 15:44:00 - LaserLockController - INFO - getting sweep signal
+2025-08-06 15:44:07 - LaserLockController - INFO - Setting voltage to 0.6763157894736842V
+2025-08-06 15:44:07 - LaserLockController - INFO - getting sweep signal
+2025-08-06 15:44:14 - LaserLockController - INFO - Setting voltage to 0.7657894736842106V
+2025-08-06 15:44:15 - LaserLockController - INFO - getting sweep signal
+2025-08-06 15:44:21 - LaserLockController - INFO - Setting voltage to 0.855263157894737V
+2025-08-06 15:44:22 - LaserLockController - INFO - getting sweep signal
+2025-08-06 15:44:27 - LaserLockController - INFO - Setting voltage to 0.9447368421052632V
+2025-08-06 15:44:28 - LaserLockController - INFO - getting sweep signal
+2025-08-06 15:44:35 - LaserLockController - INFO - Setting voltage to 1.0342105263157895V
+2025-08-06 15:44:36 - LaserLockController - INFO - getting sweep signal
+2025-08-06 15:44:42 - LaserLockController - INFO - Setting voltage to 1.1236842105263158V
+2025-08-06 15:44:42 - LaserLockController - INFO - getting sweep signal
+2025-08-06 15:44:48 - LaserLockController - INFO - Setting voltage to 1.2131578947368422V
+2025-08-06 15:44:49 - LaserLockController - INFO - getting sweep signal
+2025-08-06 15:44:56 - LaserLockController - INFO - Setting voltage to 1.3026315789473684V
+2025-08-06 15:44:57 - LaserLockController - INFO - getting sweep signal
+2025-08-06 15:45:03 - LaserLockController - INFO - Setting voltage to 1.3921052631578947V
+2025-08-06 15:45:04 - LaserLockController - INFO - getting sweep signal
+2025-08-06 15:45:10 - LaserLockController - INFO - Setting voltage to 1.481578947368421V
+2025-08-06 15:45:11 - LaserLockController - INFO - getting sweep signal
+2025-08-06 15:45:17 - LaserLockController - INFO - Setting voltage to 1.5710526315789475V
+2025-08-06 15:45:18 - LaserLockController - INFO - getting sweep signal
+2025-08-06 15:45:24 - LaserLockController - INFO - Setting voltage to 1.6605263157894739V
+2025-08-06 15:45:25 - LaserLockController - INFO - getting sweep signal
+2025-08-06 15:45:31 - LaserLockController - INFO - Setting voltage to 1.75V
+2025-08-06 15:45:31 - LaserLockController - INFO - getting sweep signal
+2025-08-06 15:45:38 - LaserLockController - INFO - Scan completed successfully.
+2025-08-06 15:52:18 - LaserLockController - INFO - Starting scan from 0.05V to 1.75V with 20 points.
+2025-08-06 15:52:18 - LaserLockController - INFO - Setting voltage to 0.05V
+2025-08-06 15:52:19 - LaserLockController - INFO - getting sweep signal
+2025-08-06 15:52:25 - LaserLockController - INFO - Setting voltage to 0.1394736842105263V
+2025-08-06 15:52:26 - LaserLockController - INFO - getting sweep signal
+2025-08-06 15:52:32 - LaserLockController - INFO - Setting voltage to 0.22894736842105262V
+2025-08-06 15:52:33 - LaserLockController - INFO - getting sweep signal
+2025-08-06 15:52:40 - LaserLockController - INFO - Setting voltage to 0.31842105263157894V
+2025-08-06 15:52:41 - LaserLockController - INFO - getting sweep signal
+2025-08-06 15:52:47 - LaserLockController - INFO - Setting voltage to 0.40789473684210525V
+2025-08-06 15:52:48 - LaserLockController - INFO - getting sweep signal
+2025-08-06 15:52:54 - LaserLockController - INFO - Setting voltage to 0.49736842105263157V
+2025-08-06 15:52:55 - LaserLockController - INFO - getting sweep signal
+2025-08-06 15:53:01 - LaserLockController - INFO - Setting voltage to 0.5868421052631579V
+2025-08-06 15:53:02 - LaserLockController - INFO - getting sweep signal
+2025-08-06 15:53:08 - LaserLockController - INFO - Setting voltage to 0.6763157894736842V
+2025-08-06 15:53:09 - LaserLockController - INFO - getting sweep signal
+2025-08-06 15:53:15 - LaserLockController - INFO - Setting voltage to 0.7657894736842106V
+2025-08-06 15:53:16 - LaserLockController - INFO - getting sweep signal
+2025-08-06 15:53:22 - LaserLockController - INFO - Setting voltage to 0.855263157894737V
+2025-08-06 15:53:23 - LaserLockController - INFO - getting sweep signal
+2025-08-06 15:53:29 - LaserLockController - INFO - Setting voltage to 0.9447368421052632V
+2025-08-06 15:53:30 - LaserLockController - INFO - getting sweep signal
+2025-08-06 15:53:36 - LaserLockController - INFO - Setting voltage to 1.0342105263157895V
+2025-08-06 15:53:37 - LaserLockController - INFO - getting sweep signal
+2025-08-06 15:53:43 - LaserLockController - INFO - Setting voltage to 1.1236842105263158V
+2025-08-06 15:53:44 - LaserLockController - INFO - getting sweep signal
+2025-08-06 15:53:50 - LaserLockController - INFO - Setting voltage to 1.2131578947368422V
+2025-08-06 15:53:51 - LaserLockController - INFO - getting sweep signal
+2025-08-06 15:53:57 - LaserLockController - INFO - Setting voltage to 1.3026315789473684V
+2025-08-06 15:53:58 - LaserLockController - INFO - getting sweep signal
+2025-08-06 15:54:04 - LaserLockController - INFO - Setting voltage to 1.3921052631578947V
+2025-08-06 15:54:05 - LaserLockController - INFO - getting sweep signal
+2025-08-06 15:54:11 - LaserLockController - INFO - Setting voltage to 1.481578947368421V
+2025-08-06 15:54:11 - LaserLockController - INFO - getting sweep signal
+2025-08-06 15:54:17 - LaserLockController - INFO - Setting voltage to 1.5710526315789475V
+2025-08-06 15:54:19 - LaserLockController - INFO - getting sweep signal
+2025-08-06 15:54:20 - LaserLockController - INFO - Setting voltage to 1.6605263157894739V
+2025-08-06 15:54:21 - LaserLockController - INFO - getting sweep signal
+2025-08-06 15:54:27 - LaserLockController - INFO - Setting voltage to 1.75V
+2025-08-06 15:54:28 - LaserLockController - INFO - getting sweep signal
+2025-08-06 15:54:34 - LaserLockController - INFO - Scan completed successfully.
+2025-08-06 15:56:30 - LaserLockController - INFO - Starting scan from 0.05V to 1.75V with 20 points.
+2025-08-06 15:57:03 - LaserLockController - INFO - Starting scan from 0.05V to 1.75V with 20 points.
+2025-08-06 15:57:46 - LaserLockController - INFO - Starting scan from 0.05V to 1.75V with 20 points.
+2025-08-06 15:59:59 - LaserLockController - INFO - Scan completed successfully.
+2025-08-06 16:00:25 - LaserLockController - INFO - Starting scan from 0.05V to 1.75V with 20 points.
+2025-08-06 16:02:39 - LaserLockController - INFO - Scan completed successfully.
+2025-08-06 16:05:21 - LaserLockController - INFO - LaserLockController initialized successfully.
+2025-08-06 16:05:24 - LaserLockController - INFO - Starting scan from 0.05V to 1.75V with 20 points.
+2025-08-06 16:07:35 - LaserLockController - INFO - Scan completed successfully.
+2025-08-06 16:08:21 - LaserLockController - INFO - Starting scan from 1.1V to 1.2V with 20 points.
+2025-08-06 16:08:33 - LaserLockController - INFO - Starting scan from 1.1V to 1.2V with 2 points.
+2025-08-06 16:08:40 - LaserLockController - INFO - Scan completed successfully.
+2025-08-06 16:08:52 - LaserLockController - INFO - Starting scan from 1.2V to 1.2V with 1 points.
+2025-08-06 16:09:06 - LaserLockController - INFO - Starting scan from 1.19V to 1.2V with 2 points.
+2025-08-06 16:09:15 - LaserLockController - INFO - Scan completed successfully.
+2025-08-06 16:09:28 - LaserLockController - INFO - Starting scan from 1.24V to 1.25V with 2 points.
+2025-08-06 16:09:41 - LaserLockController - INFO - Scan completed successfully.
+2025-08-06 16:09:45 - LaserLockController - INFO - Starting scan from 1.24V to 1.25V with 2 points.
+2025-08-06 16:09:54 - LaserLockController - INFO - Scan completed successfully.
+2025-08-06 16:30:30 - LaserLockController - INFO - LaserLockController initialized successfully.
+2025-08-06 16:30:35 - LaserLockController - INFO - Starting scan from 1.24V to 1.25V with 2 points.
+2025-08-06 16:30:49 - LaserLockController - INFO - Scan completed successfully.
+2025-08-06 16:31:00 - LaserLockController - INFO - Starting scan from 1.26V to 1.27V with 2 points.
+2025-08-06 16:31:14 - LaserLockController - INFO - Scan completed successfully.
+2025-08-06 16:33:44 - LaserLockController - INFO - Starting scan from 1.28V to 1.29V with 2 points.
+2025-08-06 16:33:58 - LaserLockController - INFO - Scan completed successfully.
+2025-08-06 16:34:57 - LaserLockController - INFO - Resetting reference lines.
+2025-08-06 16:34:57 - LaserLockController - INFO - Reference lines reset successfully.
+2025-08-06 16:34:57 - LaserLockController - INFO - Saving reference line with key feature_1.
+2025-08-06 16:34:57 - LaserLockController - INFO - Reference line feature_1 saved successfully.
+2025-08-06 16:35:10 - LaserLockController - INFO - Resetting reference lines.
+2025-08-06 16:35:10 - LaserLockController - INFO - Reference lines reset successfully.
+2025-08-06 16:35:10 - LaserLockController - INFO - Saving reference line with key feature_1.
+2025-08-06 16:35:10 - LaserLockController - INFO - Reference line feature_1 saved successfully.
+2025-08-06 16:35:15 - LaserLockController - INFO - Resetting reference lines.
+2025-08-06 16:35:15 - LaserLockController - INFO - Reference lines reset successfully.
+2025-08-06 16:35:15 - LaserLockController - INFO - Saving reference line with key feature_1.
+2025-08-06 16:35:16 - LaserLockController - INFO - Reference line feature_1 saved successfully.
+2025-08-06 16:35:33 - LaserLockController - INFO - Finding reference lines.
+2025-08-06 16:40:08 - LaserLockController - INFO - Finding reference lines.
+2025-08-06 16:41:55 - LaserLockController - INFO - Finding reference lines.
+2025-08-06 16:45:20 - LaserLockController - INFO - Finding reference lines.
+2025-08-06 16:46:03 - LaserLockController - INFO - Finding reference lines.
+2025-08-06 16:46:28 - LaserLockController - INFO - Finding reference lines.
+2025-08-06 16:46:40 - LaserLockController - INFO - Finding reference lines.
+2025-08-06 16:47:06 - LaserLockController - INFO - Finding reference lines.
+2025-08-06 16:47:34 - LaserLockController - INFO - Reference lines found successfully.
+2025-08-19 11:23:50 - LaserLockController - INFO - LaserLockController initialized successfully.
+2025-08-19 11:24:03 - LaserLockController - INFO - Starting scan from 1.28V to 1.29V with 2 points.
+2025-08-19 11:24:17 - LaserLockController - INFO - Scan completed successfully.
+2025-08-20 08:59:23 - LaserLockController - INFO - LaserLockController initialized successfully.
+2025-08-20 08:59:25 - LaserLockController - INFO - Starting scan from 1.28V to 1.29V with 2 points.
+2025-08-20 08:59:39 - LaserLockController - INFO - Scan completed successfully.
+2025-08-20 09:00:12 - LaserLockController - INFO - Starting scan from 1.28V to 1.29V with 2 points.
+2025-08-20 09:00:50 - LaserLockController - INFO - Starting scan from 1.28V to 1.29V with 2 points.
+2025-08-20 09:01:14 - LaserLockController - INFO - Starting scan from 1.1V to 1.4V with 2 points.
+2025-08-20 09:01:28 - LaserLockController - INFO - 
+Scan completed successfully.
+2025-08-20 09:02:17 - LaserLockController - INFO - Starting scan from 1.1V to 1.4V with 2 points.
+2025-08-20 09:02:31 - LaserLockController - INFO - Scan completed successfully.
+2025-08-20 09:23:10 - LaserLockController - INFO - Starting scan from 1.1V to 1.4V with 2 points.
+2025-08-20 09:23:24 - LaserLockController - INFO - Scan completed successfully.
+2025-08-20 09:23:57 - LaserLockController - INFO - Starting scan from 1.1V to 1.4V with 4 points.
+2025-08-20 09:24:24 - LaserLockController - INFO - Scan completed successfully.
+2025-08-20 09:25:56 - LaserLockController - INFO - Starting scan from 1.1V to 1.4V with 4 points.
+2025-08-20 09:26:26 - LaserLockController - INFO - Starting scan from 1.1V to 1.4V with 4 points.
+2025-08-20 09:26:52 - LaserLockController - INFO - Scan completed successfully.
+2025-08-20 09:27:27 - LaserLockController - INFO - Starting scan from 1.1V to 1.4V with 4 points.
+2025-08-20 09:27:54 - LaserLockController - INFO - Scan completed successfully.
+2025-08-20 09:29:56 - LaserLockController - INFO - Starting scan from 1.1V to 1.4V with 4 points.
+2025-08-20 09:30:23 - LaserLockController - INFO - Scan completed successfully.
+2025-08-26 11:12:50 - LaserLockController - INFO - LaserLockController initialized successfully.
+2025-08-26 11:12:50 - LaserLockController - INFO - Starting scan from 1.1V to 1.4V with 4 points.
+2025-08-26 11:13:13 - LaserLockController - INFO - Scan completed successfully.
+2025-08-26 11:13:29 - LaserLockController - INFO - Finding reference lines.
+2025-08-26 11:13:52 - LaserLockController - INFO - Reference lines found successfully.
+2025-08-27 17:24:04 - LaserLockController - INFO - LaserLockController initialized successfully.
+2025-08-27 17:24:10 - LaserLockController - INFO - Starting scan from 1.1V to 1.4V with 4 points.
+2025-08-27 17:24:33 - LaserLockController - INFO - Scan completed successfully.
+2025-08-27 17:39:28 - LaserLockController - INFO - Resetting reference lines.
+2025-08-27 17:39:28 - LaserLockController - INFO - Reference lines reset successfully.
+2025-08-27 17:39:28 - LaserLockController - INFO - Saving reference line with key feature_1.
+2025-08-27 17:39:29 - LaserLockController - INFO - Reference line feature_1 saved successfully.
+2025-08-27 17:39:33 - LaserLockController - INFO - Finding reference lines.
+2025-08-27 17:39:54 - LaserLockController - INFO - Finding reference lines.
+2025-08-27 17:40:23 - LaserLockController - INFO - Reference lines found successfully.
+2025-10-13 15:39:09 - LaserLockController - INFO - LaserLockController initialized successfully.
+2025-10-13 15:39:14 - LaserLockController - INFO - Starting scan from 0.05V to 1.75V with 40 points.
+2025-10-13 15:39:29 - LaserLockController - INFO - Starting scan from 0.05V to 1.75V with 5 points.
+2025-10-13 15:39:58 - LaserLockController - INFO - Scan completed successfully.
+2025-10-13 15:40:31 - LaserLockController - INFO - Starting scan from 0.05V to 1.75V with 20 points.
+2025-10-13 15:42:49 - LaserLockController - INFO - Scan completed successfully.
+2025-10-13 15:44:13 - LaserLockController - INFO - LaserLockController initialized successfully.
+2025-10-13 15:44:16 - LaserLockController - INFO - Starting scan from 0.75V to 1.05V with 4 points.
+2025-10-13 15:44:23 - LaserLockController - INFO - Scan completed successfully.
+2025-10-13 15:44:46 - LaserLockController - INFO - Starting scan from 0.75V to 1.05V with 4 points.
+2025-10-13 15:44:52 - LaserLockController - INFO - Scan completed successfully.
+2025-10-13 15:45:29 - LaserLockController - INFO - LaserLockController initialized successfully.
+2025-10-13 15:45:30 - LaserLockController - INFO - Starting scan from 0.75V to 1.05V with 4 points.
+2025-10-13 15:45:37 - LaserLockController - INFO - Scan completed successfully.
+2025-10-13 15:46:16 - LaserLockController - INFO - Starting scan from 0.6V to 1.2V with 10 points.
+2025-10-13 15:46:33 - LaserLockController - INFO - Scan completed successfully.
+2025-10-13 15:47:13 - LaserLockController - INFO - LaserLockController initialized successfully.
+2025-10-13 15:47:13 - LaserLockController - INFO - Starting scan from 0.6V to 1.2V with 10 points.
+2025-10-13 15:47:44 - LaserLockController - INFO - Scan completed successfully.
+2025-10-13 15:48:46 - LaserLockController - INFO - Starting scan from 0.93V to 0.94V with 2 points.
+2025-10-13 15:48:53 - LaserLockController - INFO - Scan completed successfully.
+2025-10-13 15:48:58 - LaserLockController - INFO - Starting scan from 0.93V to 0.94V with 2 points.
+2025-10-13 15:49:04 - LaserLockController - INFO - Scan completed successfully.
+2025-10-13 15:49:20 - LaserLockController - INFO - Starting scan from 0.93V to 0.94V with 2 points.
+2025-10-13 15:49:26 - LaserLockController - INFO - Scan completed successfully.
+2025-10-13 15:49:31 - LaserLockController - INFO - Starting scan from 0.93V to 0.94V with 2 points.
+2025-10-13 15:49:37 - LaserLockController - INFO - Scan completed successfully.
+2025-10-13 15:49:42 - LaserLockController - INFO - Starting scan from 0.93V to 0.94V with 2 points.
+2025-10-13 15:49:48 - LaserLockController - INFO - Scan completed successfully.
+2025-10-13 15:50:15 - LaserLockController - INFO - Starting scan from 0.93V to 0.94V with 2 points.
+2025-10-13 15:50:21 - LaserLockController - INFO - Scan completed successfully.
+2025-10-13 15:51:57 - LaserLockController - INFO - LaserLockController initialized successfully.
+2025-10-13 15:51:59 - LaserLockController - INFO - Starting scan from 0.93V to 0.94V with 2 points.
+2025-10-13 15:52:05 - LaserLockController - INFO - Scan completed successfully.
+2025-10-13 15:52:12 - LaserLockController - INFO - Starting scan from 0.93V to 0.94V with 2 points.
+2025-10-13 15:52:18 - LaserLockController - INFO - Scan completed successfully.
+2025-10-13 15:52:31 - LaserLockController - INFO - Starting scan from 0.85V to 1.05V with 10 points.
+2025-10-13 15:53:01 - LaserLockController - INFO - Scan completed successfully.
+2025-10-13 16:04:44 - LaserLockController - INFO - LaserLockController initialized successfully.
+2025-10-13 16:05:06 - LaserLockController - INFO - Starting scan from 0.85V to 0.95V with 10 points.
+2025-10-13 16:05:21 - LaserLockController - INFO - Scan completed successfully.
+2025-10-13 16:11:00 - LaserLockController - INFO - Resetting reference lines.
+2025-10-13 16:11:00 - LaserLockController - INFO - Reference lines reset successfully.
+2025-10-13 16:11:00 - LaserLockController - INFO - Saving reference line with key feature_1.
+2025-10-13 16:11:21 - LaserLockController - INFO - Saving reference line with key feature_1.
+2025-10-14 08:56:04 - LaserLockController - INFO - LaserLockController initialized successfully.
+2025-10-14 08:56:08 - LaserLockController - INFO - Starting scan from 0.85V to 0.95V with 10 points.
+2025-10-14 08:56:22 - LaserLockController - INFO - Scan completed successfully.
+2025-10-14 09:02:51 - LaserLockController - INFO - Starting scan from 0.9V to 1.0V with 10 points.
+2025-10-14 09:03:05 - LaserLockController - INFO - Scan completed successfully.
+2025-10-14 09:04:11 - LaserLockController - INFO - Starting scan from 0.91V to 0.95V with 10 points.
+2025-10-14 09:04:26 - LaserLockController - INFO - Scan completed successfully.
+2025-10-14 09:07:46 - LaserLockController - INFO - LaserLockController initialized successfully.
+2025-10-14 09:07:46 - LaserLockController - INFO - Starting scan from 0.91V to 0.95V with 10 points.
+2025-10-14 09:08:01 - LaserLockController - INFO - Scan completed successfully.
+2025-10-14 09:10:43 - LaserLockController - INFO - LaserLockController initialized successfully.
+2025-10-14 09:10:43 - LaserLockController - INFO - Starting scan from 0.91V to 0.95V with 10 points.
+2025-10-14 09:10:58 - LaserLockController - INFO - Scan completed successfully.
+2025-10-14 09:15:17 - LaserLockController - INFO - Saving reference line with key feature_1.
+2025-10-14 09:22:16 - LaserLockController - INFO - Saving reference line with key feature_1.
+2025-10-14 09:22:17 - LaserLockController - INFO - Reference line feature_1 saved successfully.
+2025-10-14 09:23:38 - LaserLockController - INFO - LaserLockController initialized successfully.
+2025-10-14 09:23:38 - LaserLockController - INFO - Starting scan from 0.91V to 0.95V with 10 points.
+2025-10-14 09:23:53 - LaserLockController - INFO - Scan completed successfully.
+2025-10-14 09:23:55 - LaserLockController - INFO - Saving reference line with key feature_1.
+2025-10-14 09:23:55 - LaserLockController - INFO - Reference line feature_1 saved successfully.
+2025-10-14 09:25:20 - LaserLockController - INFO - LaserLockController initialized successfully.
+2025-10-14 09:25:20 - LaserLockController - INFO - Starting scan from 0.91V to 0.95V with 10 points.
+2025-10-14 09:25:35 - LaserLockController - INFO - Scan completed successfully.
+2025-10-14 09:25:37 - LaserLockController - INFO - Saving reference line with key feature_1.
+2025-10-14 09:25:37 - LaserLockController - INFO - Reference line feature_1 saved successfully.
+2025-10-14 09:26:18 - LaserLockController - INFO - Saving reference line with key feature_1.
+2025-10-14 09:26:18 - LaserLockController - INFO - Reference line feature_1 saved successfully.
+2025-10-14 09:27:55 - LaserLockController - INFO - LaserLockController initialized successfully.
+2025-10-14 09:27:55 - LaserLockController - INFO - Starting scan from 0.91V to 0.95V with 10 points.
+2025-10-14 09:28:09 - LaserLockController - INFO - Scan completed successfully.
+2025-10-14 09:28:11 - LaserLockController - INFO - Saving reference line with key feature_1.
+2025-10-14 09:28:11 - LaserLockController - INFO - Reference line feature_1 saved successfully.
+2025-10-14 09:28:43 - LaserLockController - INFO - LaserLockController initialized successfully.
+2025-10-14 09:28:43 - LaserLockController - INFO - Starting scan from 0.91V to 0.95V with 10 points.
+2025-10-14 09:28:58 - LaserLockController - INFO - Scan completed successfully.
+2025-10-14 09:29:03 - LaserLockController - INFO - Saving reference line with key feature_1.
+2025-10-14 09:29:03 - LaserLockController - INFO - Reference line feature_1 saved successfully.
+2025-10-14 09:29:22 - LaserLockController - INFO - LaserLockController initialized successfully.
+2025-10-14 09:29:22 - LaserLockController - INFO - Starting scan from 0.91V to 0.95V with 10 points.
+2025-10-14 09:29:38 - LaserLockController - INFO - Scan completed successfully.
+2025-10-14 09:29:41 - LaserLockController - INFO - Saving reference line with key feature_1.
+2025-10-14 09:29:42 - LaserLockController - INFO - Reference line feature_1 saved successfully.
+2025-10-14 09:30:07 - LaserLockController - INFO - LaserLockController initialized successfully.
+2025-10-14 09:30:07 - LaserLockController - INFO - Starting scan from 0.91V to 0.95V with 10 points.
+2025-10-14 09:30:21 - LaserLockController - INFO - Scan completed successfully.
+2025-10-14 09:30:24 - LaserLockController - INFO - Saving reference line with key feature_1.
+2025-10-14 09:30:24 - LaserLockController - INFO - Reference line feature_1 saved successfully.
+2025-10-14 09:36:38 - LaserLockController - INFO - LaserLockController initialized successfully.
+2025-10-14 09:36:38 - LaserLockController - INFO - Starting scan from 0.91V to 0.95V with 10 points.
+2025-10-14 09:36:53 - LaserLockController - INFO - Scan completed successfully.
+2025-10-14 09:37:51 - LaserLockController - INFO - Saving reference line with key feature_1.
+2025-10-14 09:37:51 - LaserLockController - INFO - Reference line feature_1 saved successfully.
+2025-10-14 09:42:12 - LaserLockController - INFO - LaserLockController initialized successfully.
+2025-10-14 09:42:12 - LaserLockController - INFO - Starting scan from 0.91V to 0.95V with 10 points.
+2025-10-14 09:42:26 - LaserLockController - INFO - Scan completed successfully.
+2025-10-14 09:43:18 - LaserLockController - INFO - Saving reference line with key feature_1.
+2025-10-14 09:43:18 - LaserLockController - INFO - Reference line feature_1 saved successfully.
+2025-10-14 09:48:34 - LaserLockController - INFO - LaserLockController initialized successfully.
+2025-10-14 09:48:34 - LaserLockController - INFO - Starting scan from 0.91V to 0.95V with 10 points.
+2025-10-14 09:48:50 - LaserLockController - INFO - Scan completed successfully.
+2025-10-14 09:48:58 - LaserLockController - INFO - Saving reference line with key feature_1.
+2025-10-14 09:48:58 - LaserLockController - INFO - Reference line feature_1 saved successfully.
+2025-10-14 09:49:41 - LaserLockController - INFO - LaserLockController initialized successfully.
+2025-10-14 09:49:41 - LaserLockController - INFO - Starting scan from 0.91V to 0.95V with 10 points.
+2025-10-14 09:49:56 - LaserLockController - INFO - Scan completed successfully.
+2025-10-14 09:49:58 - LaserLockController - INFO - Saving reference line with key feature_1.
+2025-10-14 09:49:58 - LaserLockController - INFO - Reference line feature_1 saved successfully.
+2025-10-14 09:52:09 - LaserLockController - INFO - LaserLockController initialized successfully.
+2025-10-14 09:52:09 - LaserLockController - INFO - Starting scan from 0.91V to 0.95V with 10 points.
+2025-10-14 09:52:24 - LaserLockController - INFO - Scan completed successfully.
+2025-10-14 09:52:26 - LaserLockController - INFO - Saving reference line with key feature_1.
+2025-10-14 09:52:26 - LaserLockController - INFO - Reference line feature_1 saved successfully.
+2025-10-14 09:54:38 - LaserLockController - INFO - Saving reference line with key feature_1.
+2025-10-14 09:54:39 - LaserLockController - INFO - Reference line feature_1 saved successfully.
+2025-10-14 09:55:01 - LaserLockController - INFO - Saving reference line with key feature_1.
+2025-10-14 09:55:01 - LaserLockController - INFO - Reference line feature_1 saved successfully.
+2025-10-14 09:55:09 - LaserLockController - INFO - Finding reference lines.
+2025-10-14 09:55:15 - LaserLockController - INFO - Reference lines found successfully.
+2025-10-14 09:56:15 - LaserLockController - INFO - Finding reference lines.
+2025-10-14 09:56:31 - LaserLockController - INFO - Reference lines found successfully.
+2025-10-14 09:57:10 - LaserLockController - INFO - Saving reference line with key feature_1.
+2025-10-14 09:57:10 - LaserLockController - INFO - Reference line feature_1 saved successfully.
+2025-10-14 09:57:15 - LaserLockController - INFO - Finding reference lines.
+2025-10-14 09:57:29 - LaserLockController - INFO - Reference lines found successfully.
+2025-10-14 09:58:34 - LaserLockController - INFO - Starting scan from 0.9V to 1.0V with 10 points.
+2025-10-14 09:58:48 - LaserLockController - INFO - Scan completed successfully.
+2025-10-14 09:59:12 - LaserLockController - INFO - Starting scan from 0.94V to 1.1V with 10 points.
+2025-10-14 09:59:27 - LaserLockController - INFO - Scan completed successfully.
+2025-10-14 10:00:29 - LaserLockController - INFO - Saving reference line with key feature_1.
+2025-10-14 10:00:29 - LaserLockController - INFO - Reference line feature_1 saved successfully.
+2025-10-14 10:01:10 - LaserLockController - INFO - Saving reference line with key feature_1.
+2025-10-14 10:01:11 - LaserLockController - INFO - Reference line feature_1 saved successfully.
+2025-10-14 10:01:33 - LaserLockController - INFO - Saving reference line with key feature_1.
+2025-10-14 10:01:33 - LaserLockController - INFO - Reference line feature_1 saved successfully.
+2025-10-14 10:01:59 - LaserLockController - INFO - Finding reference lines.
+2025-10-14 10:02:28 - LaserLockController - INFO - Reference lines found successfully.
+2025-10-14 10:04:43 - LaserLockController - INFO - Finding reference lines.
+2025-10-14 10:05:12 - LaserLockController - INFO - Reference lines found successfully.
+2025-10-14 10:05:59 - LaserLockController - INFO - Finding reference lines.
+2025-10-14 10:06:29 - LaserLockController - INFO - Reference lines found successfully.
+2025-10-14 10:08:07 - LaserLockController - INFO - Line LINE_feature_1 is centered at offset 0.9705263157894737.
+2025-10-14 10:13:13 - LaserLockController - INFO - Finding reference lines.
+2025-10-14 10:13:17 - LaserLockController - INFO - Reference lines found successfully.
+2025-10-14 10:13:34 - LaserLockController - INFO - Finding reference lines.
+2025-10-14 10:13:38 - LaserLockController - INFO - Reference lines found successfully.
+2025-10-14 10:13:58 - LaserLockController - INFO - Finding reference lines.
+2025-10-14 10:14:01 - LaserLockController - INFO - Reference lines found successfully.
+2025-10-14 10:16:03 - LaserLockController - INFO - Finding reference lines.
+2025-10-14 10:16:06 - LaserLockController - INFO - Reference lines found successfully.
+2025-10-14 10:18:21 - LaserLockController - INFO - Finding reference lines.
+2025-10-14 10:18:25 - LaserLockController - INFO - Reference lines found successfully.
+2025-10-14 10:18:37 - LaserLockController - INFO - Finding reference lines.
+2025-10-14 10:18:41 - LaserLockController - INFO - Reference lines found successfully.

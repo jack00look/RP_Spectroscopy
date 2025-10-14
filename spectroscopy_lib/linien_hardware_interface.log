@@ -1,0 +1,112 @@
+2025-10-13 13:54:51 - LinienHardwareInterface - INFO - Configuration loaded from /Users/simone/Desktop/Tesi_Magistrale/Serafini/spectroscopy_lib/linien_connect_config.yaml:
+
+2025-10-13 13:54:51 - LinienHardwareInterface - INFO - Attempting connection via local_host address (192.168.1.159:18862)
+2025-10-13 13:54:51 - LinienHardwareInterface - WARNING - Failed to connect via local_host address: Device.__init__() got an unexpected keyword argument 'ssh_port'
+2025-10-13 13:54:51 - LinienHardwareInterface - INFO - Attempting connection via vpn_host address (10.194.33.151:2224)
+2025-10-13 13:54:51 - LinienHardwareInterface - WARNING - Failed to connect via vpn_host address: Device.__init__() got an unexpected keyword argument 'ssh_port'
+2025-10-13 13:54:51 - LinienHardwareInterface - ERROR - No network connection found.
+2025-10-13 15:21:12 - LinienHardwareInterface - INFO - Configuration loaded from /home/bec3/Desktop/Simone_Damian/Serafini/spectroscopy_lib/linien_connect_config.yaml:
+
+2025-10-13 15:21:12 - LinienHardwareInterface - INFO - Attempting connection via local_host address (192.168.1.159:18862)
+2025-10-13 15:21:12 - LinienHardwareInterface - WARNING - Failed to connect via local_host address: Device.__init__() got an unexpected keyword argument 'ssh_port'
+2025-10-13 15:21:12 - LinienHardwareInterface - INFO - Attempting connection via vpn_host address (10.194.33.151:2224)
+2025-10-13 15:21:12 - LinienHardwareInterface - WARNING - Failed to connect via vpn_host address: Device.__init__() got an unexpected keyword argument 'ssh_port'
+2025-10-13 15:21:12 - LinienHardwareInterface - ERROR - No network connection found.
+2025-10-13 15:23:07 - LinienHardwareInterface - INFO - Configuration loaded from /home/bec3/Desktop/Simone_Damian/Serafini/spectroscopy_lib/linien_connect_config.yaml:
+
+2025-10-13 15:23:07 - LinienHardwareInterface - INFO - Attempting connection via local_host address (192.168.1.159:18862)
+2025-10-13 15:23:07 - LinienHardwareInterface - WARNING - Failed to connect via local_host address: Device.__init__() got an unexpected keyword argument 'ssh_port'
+2025-10-13 15:23:07 - LinienHardwareInterface - INFO - Attempting connection via vpn_host address (10.194.33.151:2224)
+2025-10-13 15:23:07 - LinienHardwareInterface - WARNING - Failed to connect via vpn_host address: Device.__init__() got an unexpected keyword argument 'ssh_port'
+2025-10-13 15:23:07 - LinienHardwareInterface - ERROR - No network connection found.
+2025-10-13 15:25:32 - LinienHardwareInterface - INFO - Configuration loaded from /home/bec3/Desktop/Simone_Damian/Serafini/spectroscopy_lib/linien_connect_config.yaml:
+
+2025-10-13 15:25:32 - LinienHardwareInterface - INFO - Attempting connection via local_host address (192.168.1.159:18862)
+2025-10-13 15:25:32 - LinienHardwareInterface - WARNING - Failed to connect via local_host address: Device.__init__() got an unexpected keyword argument 'ssh_port'
+2025-10-13 15:25:32 - LinienHardwareInterface - INFO - Attempting connection via vpn_host address (10.194.33.151:2224)
+2025-10-13 15:25:32 - LinienHardwareInterface - WARNING - Failed to connect via vpn_host address: Device.__init__() got an unexpected keyword argument 'ssh_port'
+2025-10-13 15:25:32 - LinienHardwareInterface - ERROR - No network connection found.
+2025-10-13 15:38:48 - LinienHardwareInterface - INFO - Configuration loaded from /home/bec3/Desktop/Simone_Damian/Serafini/spectroscopy_lib/linien_connect_config.yaml:
+
+2025-10-13 15:38:48 - LinienHardwareInterface - INFO - Attempting connection via local_host address (192.168.1.159:18862)
+2025-10-13 15:38:51 - LinienHardwareInterface - INFO - Connected to device via local_host address
+2025-10-13 15:43:46 - LinienHardwareInterface - INFO - Configuration loaded from /home/bec3/Desktop/Simone_Damian/Serafini/spectroscopy_lib/linien_connect_config.yaml:
+
+2025-10-13 15:43:46 - LinienHardwareInterface - INFO - Attempting connection via local_host address (192.168.1.159:18862)
+2025-10-13 15:43:51 - LinienHardwareInterface - INFO - Connected to device via local_host address
+2025-10-13 15:45:18 - LinienHardwareInterface - INFO - Configuration loaded from /home/bec3/Desktop/Simone_Damian/Serafini/spectroscopy_lib/linien_connect_config.yaml:
+
+2025-10-13 15:45:18 - LinienHardwareInterface - INFO - Attempting connection via local_host address (192.168.1.159:18862)
+2025-10-13 15:45:22 - LinienHardwareInterface - INFO - Connected to device via local_host address
+2025-10-13 15:47:01 - LinienHardwareInterface - INFO - Configuration loaded from /home/bec3/Desktop/Simone_Damian/Serafini/spectroscopy_lib/linien_connect_config.yaml:
+
+2025-10-13 15:47:01 - LinienHardwareInterface - INFO - Attempting connection via local_host address (192.168.1.159:18862)
+2025-10-13 15:47:05 - LinienHardwareInterface - INFO - Connected to device via local_host address
+2025-10-13 16:04:34 - LinienHardwareInterface - INFO - Configuration loaded from /home/bec3/Desktop/Simone_Damian/Serafini/spectroscopy_lib/linien_connect_config.yaml:
+
+2025-10-13 16:04:34 - LinienHardwareInterface - INFO - Attempting connection via local_host address (192.168.1.159:18862)
+2025-10-13 16:04:38 - LinienHardwareInterface - INFO - Connected to device via local_host address
+2025-10-14 08:55:55 - LinienHardwareInterface - INFO - Configuration loaded from /home/bec3/Desktop/Simone_Damian/Serafini/spectroscopy_lib/linien_connect_config.yaml:
+
+2025-10-14 08:55:55 - LinienHardwareInterface - INFO - Attempting connection via local_host address (192.168.1.159:18862)
+2025-10-14 08:55:58 - LinienHardwareInterface - INFO - Connected to device via local_host address
+2025-10-14 09:07:38 - LinienHardwareInterface - INFO - Configuration loaded from /home/bec3/Desktop/Simone_Damian/Serafini/spectroscopy_lib/linien_connect_config.yaml:
+
+2025-10-14 09:07:38 - LinienHardwareInterface - INFO - Attempting connection via local_host address (192.168.1.159:18862)
+2025-10-14 09:07:41 - LinienHardwareInterface - INFO - Connected to device via local_host address
+2025-10-14 09:10:35 - LinienHardwareInterface - INFO - Configuration loaded from /home/bec3/Desktop/Simone_Damian/Serafini/spectroscopy_lib/linien_connect_config.yaml:
+
+2025-10-14 09:10:35 - LinienHardwareInterface - INFO - Attempting connection via local_host address (192.168.1.159:18862)
+2025-10-14 09:10:38 - LinienHardwareInterface - INFO - Connected to device via local_host address
+2025-10-14 09:23:30 - LinienHardwareInterface - INFO - Configuration loaded from /home/bec3/Desktop/Simone_Damian/Serafini/spectroscopy_lib/linien_connect_config.yaml:
+
+2025-10-14 09:23:30 - LinienHardwareInterface - INFO - Attempting connection via local_host address (192.168.1.159:18862)
+2025-10-14 09:23:33 - LinienHardwareInterface - INFO - Connected to device via local_host address
+2025-10-14 09:25:12 - LinienHardwareInterface - INFO - Configuration loaded from /home/bec3/Desktop/Simone_Damian/Serafini/spectroscopy_lib/linien_connect_config.yaml:
+
+2025-10-14 09:25:12 - LinienHardwareInterface - INFO - Attempting connection via local_host address (192.168.1.159:18862)
+2025-10-14 09:25:15 - LinienHardwareInterface - INFO - Connected to device via local_host address
+2025-10-14 09:27:46 - LinienHardwareInterface - INFO - Configuration loaded from /home/bec3/Desktop/Simone_Damian/Serafini/spectroscopy_lib/linien_connect_config.yaml:
+
+2025-10-14 09:27:46 - LinienHardwareInterface - INFO - Attempting connection via local_host address (192.168.1.159:18862)
+2025-10-14 09:27:49 - LinienHardwareInterface - INFO - Connected to device via local_host address
+2025-10-14 09:28:34 - LinienHardwareInterface - INFO - Configuration loaded from /home/bec3/Desktop/Simone_Damian/Serafini/spectroscopy_lib/linien_connect_config.yaml:
+
+2025-10-14 09:28:34 - LinienHardwareInterface - INFO - Attempting connection via local_host address (192.168.1.159:18862)
+2025-10-14 09:28:37 - LinienHardwareInterface - INFO - Connected to device via local_host address
+2025-10-14 09:29:14 - LinienHardwareInterface - INFO - Configuration loaded from /home/bec3/Desktop/Simone_Damian/Serafini/spectroscopy_lib/linien_connect_config.yaml:
+
+2025-10-14 09:29:14 - LinienHardwareInterface - INFO - Attempting connection via local_host address (192.168.1.159:18862)
+2025-10-14 09:29:17 - LinienHardwareInterface - INFO - Connected to device via local_host address
+2025-10-14 09:29:58 - LinienHardwareInterface - INFO - Configuration loaded from /home/bec3/Desktop/Simone_Damian/Serafini/spectroscopy_lib/linien_connect_config.yaml:
+
+2025-10-14 09:29:58 - LinienHardwareInterface - INFO - Attempting connection via local_host address (192.168.1.159:18862)
+2025-10-14 09:30:01 - LinienHardwareInterface - INFO - Connected to device via local_host address
+2025-10-14 09:36:30 - LinienHardwareInterface - INFO - Configuration loaded from /home/bec3/Desktop/Simone_Damian/Serafini/spectroscopy_lib/linien_connect_config.yaml:
+
+2025-10-14 09:36:30 - LinienHardwareInterface - INFO - Attempting connection via local_host address (192.168.1.159:18862)
+2025-10-14 09:36:33 - LinienHardwareInterface - INFO - Connected to device via local_host address
+2025-10-14 09:42:04 - LinienHardwareInterface - INFO - Configuration loaded from /home/bec3/Desktop/Simone_Damian/Serafini/spectroscopy_lib/linien_connect_config.yaml:
+
+2025-10-14 09:42:04 - LinienHardwareInterface - INFO - Attempting connection via local_host address (192.168.1.159:18862)
+2025-10-14 09:42:07 - LinienHardwareInterface - INFO - Connected to device via local_host address
+2025-10-14 09:48:26 - LinienHardwareInterface - INFO - Configuration loaded from /home/bec3/Desktop/Simone_Damian/Serafini/spectroscopy_lib/linien_connect_config.yaml:
+
+2025-10-14 09:48:26 - LinienHardwareInterface - INFO - Attempting connection via local_host address (192.168.1.159:18862)
+2025-10-14 09:48:29 - LinienHardwareInterface - INFO - Connected to device via local_host address
+2025-10-14 09:49:32 - LinienHardwareInterface - INFO - Configuration loaded from /home/bec3/Desktop/Simone_Damian/Serafini/spectroscopy_lib/linien_connect_config.yaml:
+
+2025-10-14 09:49:32 - LinienHardwareInterface - INFO - Attempting connection via local_host address (192.168.1.159:18862)
+2025-10-14 09:49:35 - LinienHardwareInterface - INFO - Connected to device via local_host address
+2025-10-14 09:52:00 - LinienHardwareInterface - INFO - Configuration loaded from /home/bec3/Desktop/Simone_Damian/Serafini/spectroscopy_lib/linien_connect_config.yaml:
+
+2025-10-14 09:52:00 - LinienHardwareInterface - INFO - Attempting connection via local_host address (192.168.1.159:18862)
+2025-10-14 09:52:04 - LinienHardwareInterface - INFO - Connected to device via local_host address
+2025-10-14 10:18:23 - LinienHardwareInterface - DEBUG - Sweep signal received from server.
+2025-10-14 10:18:24 - LinienHardwareInterface - DEBUG - Sweep signal received from server.
+2025-10-14 10:18:39 - LinienHardwareInterface - DEBUG - Sweep signal received from server.
+2025-10-14 10:18:41 - LinienHardwareInterface - DEBUG - Sweep signal received from server.
+2025-10-14 11:03:27 - LinienHardwareInterface - INFO - Configuration loaded from /home/bec3/Desktop/Simone_Damian/Serafini/spectroscopy_lib/linien_connect_config.yaml:
+
+2025-10-14 11:03:27 - LinienHardwareInterface - INFO - Attempting connection via local_host address (192.168.1.159:18862)
+2025-10-14 11:03:30 - LinienHardwareInterface - INFO - Connected to device via local_host address
