@@ -50,7 +50,7 @@ class LinienDataHandler:
         """
         Save a reference line to the REFERENCE_LINES_FOLDER directory. If a reference with the same key already exists it overwrites it.
             - self.reference_lines contains all the already uploaded reference lines;
-            - key muste be a string "LINE_*";
+            - key must be a string "LINE_*";
             - signal must be a dictionary {"x", "y"};
             - V_lock_start and V_lock_end are expressed in volts.
         """
@@ -87,3 +87,15 @@ class LinienDataHandler:
             except Exception as e:
                 self.logger.error(f"Failed to delete reference line file {path.name}: {e}")
         self.logger.info("All reference lines reset successfully.")
+
+    def plot_reference_line_plus_offset(self, key, offset):
+        """
+        Plots the reference line with the desired offset to identify the right zero-crossing of the error signal.
+        """
+
+        if key not in self.reference_lines:
+            self.logger.error(f"Reference line with key {key} doesn't exists.")
+            return
+        
+        reference_line = self.reference_lines[key]
+        print(reference_line, offset)

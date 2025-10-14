@@ -142,7 +142,7 @@ class LaserLockController:
         ind = np.argmin(np.abs(self.last_Vscan - Vscan))
         return self.last_Vscan_results[ind]
     
-    def save_reference_line(self, key: str, V_scan : float, start_voltage : float =-1., stop_voltage : float = +1.,V_lock_start = -1.,V_lock_end = +1.):
+    def save_reference_line(self, key: str, V_scan : float, start_voltage : float =-1., stop_voltage : float = +1.,V_lock_start = -1.,V_lock_end = +1.,offset : float = 0.):
         """
         Save a reference line to the data handler.
         """
@@ -153,7 +153,7 @@ class LaserLockController:
         stop_index = np.argmin(np.abs(sweep_signal['x'] - stop_voltage))
         true_end_voltage = sweep_signal['x'][stop_index]
         sweep_signal_cut = {}
-        sweep_signal_cut['y'] = sweep_signal['y'][start_index:stop_index]
+        sweep_signal_cut['y'] = sweep_signal['y'][start_index:stop_index] + offset
         sweep_signal_cut['x'] = sweep_signal['x'][start_index:stop_index]
         locking_region_inside = True
         if V_lock_start < true_start_voltage or V_lock_start > true_end_voltage or V_lock_end < true_start_voltage or V_lock_end > true_end_voltage or V_lock_start >= V_lock_end:
@@ -162,7 +162,8 @@ class LaserLockController:
             self.logger.warning(f"Locking region [{V_lock_start:.2f}V, {V_lock_end:.2f}V] is outside the scan range [{true_start_voltage:.2f}V to {true_end_voltage:.2f}V].")
         self.data_handler.save_reference_line(key, sweep_signal_cut,V_lock_start,V_lock_end)
         self.data_handler._load_reference_lines()  # Reload reference lines to ensure the new one is included
-        fig,ax = plt.subplots(tight_layout=True)
+        fig,axs = plt.subplots(nrows=2,tight_layout=True)
+        ax,ax1 = axs
         ax.plot(sweep_signal['x'],sweep_signal['y'])
         ax.axvspan(V_lock_start,V_lock_end,color = 'r',alpha=0.2,label = 'locking region')
         ax.axvline(x=true_start_voltage, color='r', linestyle='--', label='Start Voltage')
@@ -172,6 +173,11 @@ class LaserLockController:
         ax.set_xlabel('Voltage (V)')
         ax.set_ylabel('Signal (a.u.)')
         ax.legend()
+        ax1.plot(sweep_signal_cut['x'],sweep_signal_cut['y'])
+        ax1.axhline(y=0.,color='0.8',linestyle='dashed')
+        ax1.axvspan(V_lock_start,V_lock_end,color = 'r',alpha=0.2,label = 'locking region')
+
+
         plt.show()
         self.logger.info(f"Reference line {key} saved successfully.")
 
@@ -199,6 +205,7 @@ class LaserLockController:
         
         correlations = np.zeros((num_reference_lines, num_points))
         len_matches = np.zeros((num_reference_lines, num_points))
+        offsets = np.zeros((num_reference_lines, num_points))
 
         for i in range(num_points):
             self.logger.debug(f"Setting voltage to {V_scan[i]}V")
@@ -207,12 +214,14 @@ class LaserLockController:
             V_scan_results.append(sweep_signal)
             for index,key in enumerate(self.data_handler.reference_lines):
                 reference_signal = self.data_handler.reference_lines[key]
-                r_coeff, len_window = SignalAnalysis.find_correlation(sweep_signal, reference_signal)
+                r_coeff, len_window, offset = SignalAnalysis.find_correlation(sweep_signal, reference_signal)
                 correlations[index, i] = r_coeff
                 len_matches[index, i] = len_window
-                self.logger.debug(f"Correlation with {key} at {V_scan[i]}V: {r_coeff}, Length of match: {len_window}")
+                offsets[index, i] = offset
+                self.logger.debug(f"Correlation with {key} at {V_scan[i]}V: {r_coeff}, Length of match: {len_window}, offset with respect to the reference signal: {offset}")
         
         self.lines_positions = {}
+        self.lines_offset = {}
         fig,ax = plt.subplots(nrows= 1 + num_reference_lines, figsize=(10, 2 * (1 + num_reference_lines)), tight_layout=True)
 
         colors = plt.cm.viridis(np.linspace(0, 1, num_reference_lines))
@@ -221,13 +230,16 @@ class LaserLockController:
             len_reference_signal = reference_signal['x'][-1]-reference_signal['x'][0]
             ind = find_best_correlation(correlations[index,:], len_matches[index,:], linewidth=len_reference_signal)
             self.lines_positions[key] = V_scan[ind]
+            self.lines_offset[key] = offsets[index, ind] - self.hardware_interface.get_param('offset_a')
             ax[0].plot(V_scan, correlations[index,:], label=f'Correlation with {key}', color=colors[index])
             ax[0].axvline(x=V_scan[ind], color=colors[index], linestyle='--', label=f'Detected Position {key}')
             ax[index + 1].plot(V_scan_results[ind]['x'],V_scan_results[ind]['y'])
             ax[index + 1].set_title(f'Sweep at {V_scan[ind]}V')
             ax[index + 1].set_xlabel('Voltage (V)')
             ax[index + 1].set_ylabel('Signal (a.u.)')
-        
+            self.logger.debug("Offset with respect to the reference line:"+str(offsets[index, ind]))
+        print(self.lines_positions)
+        print(self.lines_offset)
         ax[0].set_title('Correlations with Reference Lines')
         ax[0].set_xlabel('Voltage (V)')
         ax[0].set_ylabel('Correlation Coefficient')
@@ -275,12 +287,14 @@ class LaserLockController:
         
         # get starting offset
         offset = self.lines_positions[line_name]
+        offset_y = self.lines_offset[line_name]
 
         #get reference line and linewidth
         reference_signal = self.data_handler.reference_lines[line_name]
         linewidth = reference_signal['x'][-1] - reference_signal['x'][0]
 
         self.hardware_interface.set_param('big_offset', offset)
+        self.hardware_interface.set_param('offset_a',offset_y)
 
         # --- Logging initial offset ---
         self.logger.debug(f'START offset = {offset}')
@@ -311,7 +325,7 @@ class LaserLockController:
             # 1. Acquire signal and compute correlation and shift
             sweep_signal = self.hardware_interface.get_sweep()
             shift = SignalAnalysis.find_shift(sweep_signal,reference_signal)
-            len_match,corr = SignalAnalysis.find_correlation(sweep_signal,reference_signal)
+            len_match,corr, _ = SignalAnalysis.find_correlation(sweep_signal,reference_signal)
             current_time = time.time() - time_0
 
             times.append(current_time)
@@ -425,3 +439,13 @@ class LaserLockController:
                     cnt = 0
                     line_outside = True
                     frequence_stable = False
+
+    def set_debug_mode(self):
+        self.logger.setLevel(logging.DEBUG)
+        for handler in self.logger.handlers:
+            handler.setLevel(logging.DEBUG)
+        
+    def unset_debug_mode(self):
+        self.logger.setLevel(logging.INFO)
+        for handler in self.logger.handlers:
+            handler.setLevel(logging.INFO)
