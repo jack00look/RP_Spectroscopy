@@ -230,16 +230,16 @@ class LaserLockController:
             len_reference_signal = reference_signal['x'][-1]-reference_signal['x'][0]
             ind = find_best_correlation(correlations[index,:], len_matches[index,:], linewidth=len_reference_signal)
             self.lines_positions[key] = V_scan[ind]
-            self.lines_offset[key] = offsets[index, ind] - self.hardware_interface.get_param('offset_a')
+            self.lines_offset[key] = offsets[index, ind] #+ self.hardware_interface.get_param('offset_a')
             ax[0].plot(V_scan, correlations[index,:], label=f'Correlation with {key}', color=colors[index])
             ax[0].axvline(x=V_scan[ind], color=colors[index], linestyle='--', label=f'Detected Position {key}')
             ax[index + 1].plot(V_scan_results[ind]['x'],V_scan_results[ind]['y'])
             ax[index + 1].set_title(f'Sweep at {V_scan[ind]}V')
             ax[index + 1].set_xlabel('Voltage (V)')
             ax[index + 1].set_ylabel('Signal (a.u.)')
-            self.logger.debug("Offset with respect to the reference line:"+str(offsets[index, ind]))
-        print(self.lines_positions)
-        print(self.lines_offset)
+            self.logger.debug("Offset with respect to the reference line:"+str(self.lines_offset[key]))
+        #print(self.lines_positions)
+        #print(self.lines_offset)
         ax[0].set_title('Correlations with Reference Lines')
         ax[0].set_xlabel('Voltage (V)')
         ax[0].set_ylabel('Correlation Coefficient')
@@ -285,22 +285,23 @@ class LaserLockController:
         if line_name not in self.lines_positions:
             raise ValueError(f"Unknown line name: {line_name}")
         
-        # get starting offset
-        offset = self.lines_positions[line_name]
-        offset_y = self.lines_offset[line_name]
+        # get starting offsets
+        offset = self.lines_positions[line_name] #horizontal offset where we expect the line
+        offset_y = self.lines_offset[line_name] #vertical offset
+        self.logger.debug(f"Vertical offset = {- offset_y} to have the zero-crossing placed nicely.") #the offset of the found line with respect to the reference line, so we need to apply the negative offset to center it.
 
         #get reference line and linewidth
         reference_signal = self.data_handler.reference_lines[line_name]
         linewidth = reference_signal['x'][-1] - reference_signal['x'][0]
 
         self.hardware_interface.set_param('big_offset', offset)
-        self.hardware_interface.set_param('offset_a',offset_y)
+        self.hardware_interface.set_param('offset_a', - offset_y) #the offset of the found line with respect to the reference line, so we need to apply the negative offset to center it.
 
         # --- Logging initial offset ---
         self.logger.debug(f'START offset = {offset}')
 
         # --- Feedback loop parameters ---
-        JITTER_THR = 0.05 
+        JITTER_THR = 0.05
         thr_cnt = 5
         offset_0 = offset
 
@@ -341,6 +342,7 @@ class LaserLockController:
             signal_xmax = sweep_signal['x'][-1] + 1.2*linewidth
             plot1.plot(sweep_signal['x'],sweep_signal['y'])
             plot1.plot(reference_signal['x'] + shift, reference_signal['y'], '--')
+            plot1.hlines(0, signal_xmin, signal_xmax, color = '0.8', linestyles = 'dashed')
             plot1.set_xlim(signal_xmin, signal_xmax)
             ymax = np.max(np.array([np.max(sweep_signal['y']),np.max(reference_signal['y'])]))
             ymin = np.min(np.array([np.min(sweep_signal['y']),np.min(reference_signal['y'])]))

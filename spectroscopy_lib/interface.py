@@ -259,9 +259,9 @@ class LinienHardwareInterface:
         if param_name not in self.writeable_params and param_name not in self.readable_params:
             raise ValueError(f"Parameter {param_name} does not exist.")
         if param_name in self.writeable_params:
-            return self.writeable_params[param_name].get_remote_value()
+            return self.writeable_params[param_name].get_physical_value()
         if param_name in self.readable_params:
-            return self.readable_params[param_name].get_remote_value()
+            return self.readable_params[param_name].get_raw_value()
     
     def set_param(self, param_name, value):
         if param_name not in self.writeable_params:

@@ -186,3 +186,56 @@
 2025-10-14 16:17:11 - LinienHardwareInterface - DEBUG - Sweep signal received from server.
 2025-10-14 16:17:13 - LinienHardwareInterface - DEBUG - Sweep signal received from server.
 2025-10-14 16:17:15 - LinienHardwareInterface - DEBUG - Sweep signal received from server.
+2025-10-15 08:49:04 - LinienHardwareInterface - INFO - Configuration loaded from /home/bec3/Desktop/Simone_Damian/Serafini/spectroscopy_lib/linien_connect_config.yaml:
+
+2025-10-15 08:49:04 - LinienHardwareInterface - INFO - Attempting connection via local_host address (192.168.1.159:18862)
+2025-10-15 08:49:37 - LinienHardwareInterface - INFO - Connected to device via local_host address
+2025-10-15 12:28:56 - LinienHardwareInterface - INFO - Configuration loaded from /home/bec3/Desktop/Simone_Damian/Serafini/spectroscopy_lib/linien_connect_config.yaml:
+
+2025-10-15 12:28:56 - LinienHardwareInterface - INFO - Attempting connection via local_host address (192.168.1.159:18862)
+2025-10-15 12:29:29 - LinienHardwareInterface - INFO - Connected to device via local_host address
+2025-10-15 12:30:09 - LinienHardwareInterface - DEBUG - Loading writeable parameter dual_channel with hardware name dual_channel, initial value False, scaling None
+2025-10-15 12:30:09 - LinienHardwareInterface - DEBUG - Loading writeable parameter channel_mixing with hardware name channel_mixing, initial value -128, scaling None
+2025-10-15 12:30:09 - LinienHardwareInterface - DEBUG - Loading writeable parameter demodulation_multiplier_a with hardware name demodulation_multiplier_a, initial value 1.0, scaling 1.0
+2025-10-15 12:30:09 - LinienHardwareInterface - DEBUG - Loading writeable parameter offset_a with hardware name offset_a, initial value 0.0, scaling 8191.0
+2025-10-15 12:30:09 - LinienHardwareInterface - DEBUG - Loading writeable parameter invert_a with hardware name invert_a, initial value False, scaling None
+2025-10-15 12:30:09 - LinienHardwareInterface - DEBUG - Loading writeable parameter filter_automatic_a with hardware name filter_automatic_a, initial value False, scaling None
+2025-10-15 12:30:09 - LinienHardwareInterface - DEBUG - Loading writeable parameter filter_1_enabled_a with hardware name filter_1_enabled_a, initial value True, scaling None
+2025-10-15 12:30:09 - LinienHardwareInterface - DEBUG - Loading writeable parameter filter_1_type_a with hardware name filter_1_type_a, initial value 0, scaling 1.0
+2025-10-15 12:30:09 - LinienHardwareInterface - DEBUG - Loading writeable parameter filter_2_enabled_a with hardware name filter_2_enabled_a, initial value True, scaling None
+2025-10-15 12:30:09 - LinienHardwareInterface - DEBUG - Loading writeable parameter filter_2_type_a with hardware name filter_2_type_a, initial value 0, scaling 1.0
+2025-10-15 12:30:09 - LinienHardwareInterface - DEBUG - Loading writeable parameter demodulation_multiplier_b with hardware name demodulation_multiplier_b, initial value 1.0, scaling 1.0
+2025-10-15 12:30:09 - LinienHardwareInterface - DEBUG - Loading writeable parameter offset_b with hardware name offset_b, initial value 0.0, scaling 1.0
+2025-10-15 12:30:09 - LinienHardwareInterface - DEBUG - Loading writeable parameter invert_b with hardware name invert_b, initial value False, scaling None
+2025-10-15 12:30:09 - LinienHardwareInterface - DEBUG - Loading writeable parameter filter_automatic_b with hardware name filter_automatic_b, initial value False, scaling None
+2025-10-15 12:30:09 - LinienHardwareInterface - DEBUG - Loading writeable parameter filter_1_enabled_b with hardware name filter_1_enabled_b, initial value True, scaling None
+2025-10-15 12:30:09 - LinienHardwareInterface - DEBUG - Loading writeable parameter filter_1_type_b with hardware name filter_1_type_b, initial value 0, scaling 1.0
+2025-10-15 12:30:09 - LinienHardwareInterface - DEBUG - Loading writeable parameter filter_2_enabled_b with hardware name filter_2_enabled_b, initial value True, scaling None
+2025-10-15 12:30:09 - LinienHardwareInterface - DEBUG - Loading writeable parameter filter_2_type_b with hardware name filter_2_type_b, initial value 0, scaling 1.0
+2025-10-15 12:30:09 - LinienHardwareInterface - DEBUG - Loading writeable parameter big_offset with hardware name analog_out_1, initial value 0.93, scaling 18204.0
+2025-10-15 12:30:09 - LinienHardwareInterface - DEBUG - Loading writeable parameter small_offset with hardware name analog_out_2, initial value 0.0, scaling 18204.0
+2025-10-15 12:30:09 - LinienHardwareInterface - DEBUG - Loading writeable parameter modulation_channel with hardware name mod_channel, initial value 0, scaling None
+2025-10-15 12:30:09 - LinienHardwareInterface - DEBUG - Loading writeable parameter sweep_channel with hardware name sweep_channel, initial value 1, scaling None
+2025-10-15 12:30:09 - LinienHardwareInterface - DEBUG - Loading writeable parameter control_channel with hardware name control_channel, initial value 1, scaling None
+2025-10-15 12:30:10 - LinienHardwareInterface - DEBUG - Loading writeable parameter polarity_fast_out1 with hardware name polarity_fast_out1, initial value 0, scaling None
+2025-10-15 12:30:10 - LinienHardwareInterface - DEBUG - Loading writeable parameter polarity_fast_out2 with hardware name polarity_fast_out2, initial value 0, scaling None
+2025-10-15 12:30:10 - LinienHardwareInterface - DEBUG - Loading writeable parameter slow_control_channel with hardware name slow_control_channel, initial value 2, scaling None
+2025-10-15 12:30:10 - LinienHardwareInterface - DEBUG - Loading writeable parameter polarity_analog_out0 with hardware name polarity_analog_out0, initial value 1, scaling None
+2025-10-15 12:30:10 - LinienHardwareInterface - DEBUG - Loading writeable parameter modulation_amplitude with hardware name modulation_amplitude, initial value 1.8, scaling 4095.75
+2025-10-15 12:30:10 - LinienHardwareInterface - DEBUG - Loading writeable parameter modulation_frequency with hardware name modulation_frequency, initial value 0.05, scaling 33554432.0
+2025-10-15 12:30:10 - LinienHardwareInterface - DEBUG - Loading writeable parameter sweep_amplitude with hardware name sweep_amplitude, initial value 0.9, scaling 1.0
+2025-10-15 12:30:10 - LinienHardwareInterface - DEBUG - Loading writeable parameter sweep_center with hardware name sweep_center, initial value 0.0, scaling 1.0
+2025-10-15 12:30:10 - LinienHardwareInterface - DEBUG - Loading writeable parameter sweep_speed with hardware name sweep_speed, initial value 8, scaling None
+2025-10-15 12:30:10 - LinienHardwareInterface - DEBUG - Loading writeable parameter phase with hardware name demodulation_phase_a, initial value 150, scaling 1.0
+2025-10-15 12:30:10 - LinienHardwareInterface - DEBUG - Loading writeable parameter filter_1_frequency with hardware name filter_1_frequency_a, initial value 10000, scaling 1.0
+2025-10-15 12:30:10 - LinienHardwareInterface - DEBUG - Loading writeable parameter filter_2_frequency with hardware name filter_2_frequency_a, initial value 10000, scaling 1.0
+2025-10-15 12:30:10 - LinienHardwareInterface - DEBUG - Loading writeable parameter pid_p with hardware name p, initial value 5000, scaling 1.0
+2025-10-15 12:30:10 - LinienHardwareInterface - DEBUG - Loading writeable parameter pid_i with hardware name i, initial value 100, scaling 1.0
+2025-10-15 12:30:10 - LinienHardwareInterface - DEBUG - Loading writeable parameter pid_d with hardware name d, initial value 0, scaling 1.0
+2025-10-15 12:30:10 - LinienHardwareInterface - DEBUG - Loading writeable parameter pid_on_slow_enabled with hardware name pid_on_slow_enabled, initial value True, scaling None
+2025-10-15 12:30:10 - LinienHardwareInterface - DEBUG - Loading writeable parameter pid_slow_strength with hardware name pid_on_slow_strength, initial value 1000, scaling 1.0
+2025-10-15 12:30:10 - LinienHardwareInterface - DEBUG - Loading writeable parameter control_history_length with hardware name control_signal_history_length, initial value 1000, scaling 1.0
+2025-10-15 13:57:29 - LinienHardwareInterface - INFO - Configuration loaded from /home/bec3/Desktop/Simone_Damian/Serafini/spectroscopy_lib/linien_connect_config.yaml:
+
+2025-10-15 13:57:29 - LinienHardwareInterface - INFO - Attempting connection via local_host address (192.168.1.159:18862)
+2025-10-15 13:58:02 - LinienHardwareInterface - INFO - Connected to device via local_host address
