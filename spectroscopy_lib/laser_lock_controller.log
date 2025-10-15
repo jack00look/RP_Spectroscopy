@@ -1751,3 +1751,484 @@ Scan completed successfully.
 2025-10-15 16:05:20 - LaserLockController - DEBUG - START offset = 0.9888888888888889
 2025-10-15 16:05:51 - LaserLockController - DEBUG - Trying new offset = 1.028888888888889
 2025-10-15 16:06:22 - LaserLockController - DEBUG - Trying new offset = 0.9488888888888889
+2025-10-15 16:13:20 - LaserLockController - DEBUG - Vertical offset = 0.00346379019072909 to have the zero-crossing placed nicely.
+2025-10-15 16:13:21 - LaserLockController - DEBUG - START offset = 0.9888888888888889
+2025-10-15 16:13:40 - LaserLockController - DEBUG - Vertical offset = 0.00346379019072909 to have the zero-crossing placed nicely.
+2025-10-15 16:13:40 - LaserLockController - DEBUG - START offset = 0.9888888888888889
+2025-10-15 16:14:31 - LaserLockController - DEBUG - Vertical offset = 0.00346379019072909 to have the zero-crossing placed nicely.
+2025-10-15 16:14:31 - LaserLockController - DEBUG - START offset = 0.9888888888888889
+2025-10-15 16:15:02 - LaserLockController - DEBUG - Trying new offset = 1.028888888888889
+2025-10-15 16:15:33 - LaserLockController - DEBUG - Trying new offset = 0.9488888888888889
+2025-10-15 16:16:04 - LaserLockController - DEBUG - Trying new offset = 1.068888888888889
+2025-10-15 16:16:34 - LaserLockController - DEBUG - Trying new offset = 0.908888888888889
+2025-10-15 16:17:04 - LaserLockController - DEBUG - Trying new offset = 1.108888888888889
+2025-10-15 16:17:35 - LaserLockController - DEBUG - Trying new offset = 0.8688888888888889
+2025-10-15 16:19:29 - LaserLockController - DEBUG - Vertical offset = 0.00346379019072909 to have the zero-crossing placed nicely.
+2025-10-15 16:19:30 - LaserLockController - DEBUG - START offset = 0.9888888888888889
+2025-10-15 16:20:02 - LaserLockController - DEBUG - Trying new offset = 1.028888888888889
+2025-10-15 16:20:32 - LaserLockController - DEBUG - Trying new offset = 0.9488888888888889
+2025-10-15 16:21:03 - LaserLockController - DEBUG - Trying new offset = 1.068888888888889
+2025-10-15 16:21:34 - LaserLockController - DEBUG - Trying new offset = 0.908888888888889
+2025-10-15 16:23:14 - LaserLockController - INFO - Finding reference lines.
+2025-10-15 16:23:14 - LaserLockController - DEBUG - Setting voltage to 0.9V
+2025-10-15 16:23:15 - LaserLockController - DEBUG - Correlation with LINE_feature_1 at 0.9V: 0.9767263610470069, Length of match: 0.9982394366197184, offset with respect to the reference signal: -3.268715141273803e-05
+2025-10-15 16:23:15 - LaserLockController - DEBUG - Setting voltage to 0.9222222222222223V
+2025-10-15 16:23:17 - LaserLockController - DEBUG - Correlation with LINE_feature_1 at 0.9222222222222223V: 0.9950310410983416, Length of match: 0.9964788732394366, offset with respect to the reference signal: -0.0001436173876225265
+2025-10-15 16:23:17 - LaserLockController - DEBUG - Setting voltage to 0.9444444444444445V
+2025-10-15 16:23:18 - LaserLockController - DEBUG - Correlation with LINE_feature_1 at 0.9444444444444445V: 0.9959253066115179, Length of match: 0.9964788732394371, offset with respect to the reference signal: -5.8392515182249935e-05
+2025-10-15 16:23:18 - LaserLockController - DEBUG - Setting voltage to 0.9666666666666667V
+2025-10-15 16:23:19 - LaserLockController - DEBUG - Correlation with LINE_feature_1 at 0.9666666666666667V: 0.28702263681562734, Length of match: 0.9964788732394366, offset with respect to the reference signal: 5.13733647045325e-05
+2025-10-15 16:23:19 - LaserLockController - DEBUG - Setting voltage to 0.9888888888888889V
+2025-10-15 16:23:21 - LaserLockController - DEBUG - Correlation with LINE_feature_1 at 0.9888888888888889V: 0.6327669526744024, Length of match: 0.5369718309859157, offset with respect to the reference signal: -0.00047430580100372695
+2025-10-15 16:23:21 - LaserLockController - DEBUG - Setting voltage to 1.011111111111111V
+2025-10-15 16:23:23 - LaserLockController - DEBUG - Correlation with LINE_feature_1 at 1.011111111111111V: 0.6877588968396642, Length of match: 0.5352112676056341, offset with respect to the reference signal: -0.0008995270733845689
+2025-10-15 16:23:23 - LaserLockController - DEBUG - Setting voltage to 1.0333333333333334V
+2025-10-15 16:23:25 - LaserLockController - DEBUG - Correlation with LINE_feature_1 at 1.0333333333333334V: 0.6126806438614616, Length of match: 0.5352112676056341, offset with respect to the reference signal: -0.0016106618288713084
+2025-10-15 16:23:25 - LaserLockController - DEBUG - Setting voltage to 1.0555555555555556V
+2025-10-15 16:23:26 - LaserLockController - DEBUG - Correlation with LINE_feature_1 at 1.0555555555555556V: 0.6714208304110557, Length of match: 0.5352112676056341, offset with respect to the reference signal: -0.0016331832803700224
+2025-10-15 16:23:26 - LaserLockController - DEBUG - Setting voltage to 1.077777777777778V
+2025-10-15 16:23:27 - LaserLockController - DEBUG - Correlation with LINE_feature_1 at 1.077777777777778V: 0.6370623713226203, Length of match: 0.5352112676056341, offset with respect to the reference signal: -0.0019841972204657716
+2025-10-15 16:23:27 - LaserLockController - DEBUG - Setting voltage to 1.1V
+2025-10-15 16:23:29 - LaserLockController - DEBUG - Correlation with LINE_feature_1 at 1.1V: 0.680171488909981, Length of match: 0.5352112676056341, offset with respect to the reference signal: -0.002171222126261771
+2025-10-15 16:23:29 - LaserLockController - DEBUG - Offset with respect to the reference line:-5.8392515182249935e-05
+2025-10-15 16:23:29 - LaserLockController - INFO - Reference lines found successfully.
+2025-10-15 16:23:35 - LaserLockController - DEBUG - Vertical offset = 5.8392515182249935e-05 to have the zero-crossing placed nicely.
+2025-10-15 16:23:37 - LaserLockController - DEBUG - START offset = 0.9444444444444445
+2025-10-15 16:23:38 - LaserLockController - DEBUG - Line is now inside
+2025-10-15 16:23:44 - LaserLockController - DEBUG - space_left = 0.5715681485100147, space_right = 0.728969223253542
+2025-10-15 16:23:44 - LaserLockController - INFO - Line LINE_feature_1 is centered at offset 0.9444444444444445.
+2025-10-15 16:24:27 - LaserLockController - DEBUG - Vertical offset = 5.8392515182249935e-05 to have the zero-crossing placed nicely.
+2025-10-15 16:24:27 - LaserLockController - DEBUG - START offset = 0.9444444444444445
+2025-10-15 16:24:28 - LaserLockController - DEBUG - Line is now inside
+2025-10-15 16:24:34 - LaserLockController - DEBUG - space_left = 0.636638983878847, space_right = 0.6638983878847097
+2025-10-15 16:24:34 - LaserLockController - INFO - Line LINE_feature_1 is centered at offset 0.9444444444444445.
+2025-10-15 16:24:47 - LaserLockController - INFO - Locking the laser failed :(
+2025-10-15 16:25:02 - LaserLockController - DEBUG - Vertical offset = 5.8392515182249935e-05 to have the zero-crossing placed nicely.
+2025-10-15 16:25:02 - LaserLockController - DEBUG - START offset = 0.9444444444444445
+2025-10-15 16:25:03 - LaserLockController - DEBUG - Line is now inside
+2025-10-15 16:25:08 - LaserLockController - DEBUG - space_left = 0.5073766487542745, space_right = 0.7931607230092822
+2025-10-15 16:25:08 - LaserLockController - INFO - Line LINE_feature_1 is centered at offset 0.9444444444444445.
+2025-10-15 16:25:21 - LaserLockController - INFO - Locking the laser failed :(
+2025-10-15 16:26:23 - LaserLockController - DEBUG - Vertical offset = 5.8392515182249935e-05 to have the zero-crossing placed nicely.
+2025-10-15 16:26:23 - LaserLockController - DEBUG - START offset = 0.9444444444444445
+2025-10-15 16:26:24 - LaserLockController - DEBUG - Line is now inside
+2025-10-15 16:26:29 - LaserLockController - DEBUG - space_left = 0.553981436248168, space_right = 0.7465559355153887
+2025-10-15 16:26:29 - LaserLockController - INFO - Line LINE_feature_1 is centered at offset 0.9444444444444445.
+2025-10-15 16:26:43 - LaserLockController - INFO - Locking the laser failed :(
+2025-10-15 16:26:47 - LaserLockController - DEBUG - Vertical offset = 5.8392515182249935e-05 to have the zero-crossing placed nicely.
+2025-10-15 16:26:47 - LaserLockController - DEBUG - START offset = 0.9444444444444445
+2025-10-15 16:26:47 - LaserLockController - DEBUG - Line is now inside
+2025-10-15 16:26:53 - LaserLockController - DEBUG - Vertical offset = 5.8392515182249935e-05 to have the zero-crossing placed nicely.
+2025-10-15 16:26:53 - LaserLockController - DEBUG - START offset = 0.9444444444444445
+2025-10-15 16:26:54 - LaserLockController - DEBUG - Line is now inside
+2025-10-15 16:34:19 - LaserLockController - INFO - Saving reference line with key feature_1.
+2025-10-15 16:34:19 - LaserLockController - INFO - Reference line feature_1 saved successfully.
+2025-10-15 16:34:27 - LaserLockController - INFO - Finding reference lines.
+2025-10-15 16:34:27 - LaserLockController - DEBUG - Setting voltage to 0.9V
+2025-10-15 16:34:29 - LaserLockController - DEBUG - Correlation with LINE_feature_1 at 0.9V: 0.99142947739619, Length of match: 0.6742957746478878, offset with respect to the reference signal: -0.0034958768868132415
+2025-10-15 16:34:29 - LaserLockController - DEBUG - Setting voltage to 0.9222222222222223V
+2025-10-15 16:34:30 - LaserLockController - DEBUG - Correlation with LINE_feature_1 at 0.9222222222222223V: 0.4152337755581703, Length of match: 0.5352112676056341, offset with respect to the reference signal: -0.004767465983307573
+2025-10-15 16:34:30 - LaserLockController - DEBUG - Setting voltage to 0.9444444444444445V
+2025-10-15 16:34:31 - LaserLockController - DEBUG - Correlation with LINE_feature_1 at 0.9444444444444445V: 0.9976336970613288, Length of match: 0.9964788732394371, offset with respect to the reference signal: -0.0035736267966989593
+2025-10-15 16:34:31 - LaserLockController - DEBUG - Setting voltage to 0.9666666666666667V
+2025-10-15 16:34:33 - LaserLockController - DEBUG - Correlation with LINE_feature_1 at 0.9666666666666667V: 0.9919792843021307, Length of match: 0.6813380281690146, offset with respect to the reference signal: -0.0035238668732617004
+2025-10-15 16:34:33 - LaserLockController - DEBUG - Setting voltage to 0.9888888888888889V
+2025-10-15 16:34:34 - LaserLockController - DEBUG - Correlation with LINE_feature_1 at 0.9888888888888889V: 0.6146577095610255, Length of match: 0.5352112676056341, offset with respect to the reference signal: -0.0031332082431813546
+2025-10-15 16:34:34 - LaserLockController - DEBUG - Setting voltage to 1.011111111111111V
+2025-10-15 16:34:36 - LaserLockController - DEBUG - Correlation with LINE_feature_1 at 1.011111111111111V: 0.6794286428415016, Length of match: 0.5352112676056341, offset with respect to the reference signal: -0.0035827714091387305
+2025-10-15 16:34:36 - LaserLockController - DEBUG - Setting voltage to 1.0333333333333334V
+2025-10-15 16:34:37 - LaserLockController - DEBUG - Correlation with LINE_feature_1 at 1.0333333333333334V: 0.6490346111657453, Length of match: 0.5352112676056341, offset with respect to the reference signal: -0.004264138913612136
+2025-10-15 16:34:37 - LaserLockController - DEBUG - Setting voltage to 1.0555555555555556V
+2025-10-15 16:34:38 - LaserLockController - DEBUG - Correlation with LINE_feature_1 at 1.0555555555555556V: 0.629758409799845, Length of match: 0.5352112676056341, offset with respect to the reference signal: -0.005132017021002457
+2025-10-15 16:34:38 - LaserLockController - DEBUG - Setting voltage to 1.077777777777778V
+2025-10-15 16:34:40 - LaserLockController - DEBUG - Correlation with LINE_feature_1 at 1.077777777777778V: 0.612893190469636, Length of match: 0.5352112676056341, offset with respect to the reference signal: -0.005230746340511155
+2025-10-15 16:34:40 - LaserLockController - DEBUG - Setting voltage to 1.1V
+2025-10-15 16:34:41 - LaserLockController - DEBUG - Correlation with LINE_feature_1 at 1.1V: 0.6333862943945333, Length of match: 0.5352112676056341, offset with respect to the reference signal: -0.005516116100671584
+2025-10-15 16:34:41 - LaserLockController - DEBUG - Offset with respect to the reference line:-0.003515234281516709
+2025-10-15 16:34:41 - LaserLockController - INFO - Reference lines found successfully.
+2025-10-15 16:35:05 - LaserLockController - DEBUG - Vertical offset = 0.003515234281516709 to have the zero-crossing placed nicely.
+2025-10-15 16:35:07 - LaserLockController - DEBUG - START offset = 0.9444444444444445
+2025-10-15 16:35:08 - LaserLockController - DEBUG - Line is now inside
+2025-10-15 16:35:13 - LaserLockController - DEBUG - space_left = 0.47923790913531994, space_right = 0.8212994626282367
+2025-10-15 16:35:13 - LaserLockController - INFO - Line LINE_feature_1 is centered at offset 0.9444444444444445.
+2025-10-15 16:35:27 - LaserLockController - INFO - Locking the laser failed :(
+2025-10-15 16:36:06 - LaserLockController - DEBUG - Vertical offset = 0.003515234281516709 to have the zero-crossing placed nicely.
+2025-10-15 16:36:06 - LaserLockController - DEBUG - START offset = 0.9444444444444445
+2025-10-15 16:36:07 - LaserLockController - DEBUG - Line is now inside
+2025-10-15 16:36:12 - LaserLockController - DEBUG - space_left = 0.5302393746946751, space_right = 0.7702979970688816
+2025-10-15 16:36:12 - LaserLockController - INFO - Line LINE_feature_1 is centered at offset 0.9444444444444445.
+2025-10-15 16:36:25 - LaserLockController - INFO - Locking the laser failed :(
+2025-10-15 16:37:12 - LaserLockController - DEBUG - Vertical offset = 0.003515234281516709 to have the zero-crossing placed nicely.
+2025-10-15 16:37:12 - LaserLockController - DEBUG - START offset = 0.9444444444444445
+2025-10-15 16:37:13 - LaserLockController - DEBUG - Line is now inside
+2025-10-15 16:37:18 - LaserLockController - DEBUG - space_left = 0.527601367855398, space_right = 0.7729360039081586
+2025-10-15 16:37:18 - LaserLockController - INFO - Line LINE_feature_1 is centered at offset 0.9444444444444445.
+2025-10-15 16:37:31 - LaserLockController - INFO - Locking the laser failed :(
+2025-10-15 16:39:41 - LaserLockController - DEBUG - Vertical offset = 0.003515234281516709 to have the zero-crossing placed nicely.
+2025-10-15 16:39:41 - LaserLockController - DEBUG - START offset = 0.9444444444444445
+2025-10-15 16:39:42 - LaserLockController - DEBUG - Line is now inside
+2025-10-15 16:39:46 - LaserLockController - DEBUG - Vertical offset = 0.003515234281516709 to have the zero-crossing placed nicely.
+2025-10-15 16:39:46 - LaserLockController - DEBUG - START offset = 0.9444444444444445
+2025-10-15 16:39:48 - LaserLockController - DEBUG - Vertical offset = 0.003515234281516709 to have the zero-crossing placed nicely.
+2025-10-15 16:39:48 - LaserLockController - DEBUG - START offset = 0.9444444444444445
+2025-10-15 16:39:50 - LaserLockController - DEBUG - Vertical offset = 0.003515234281516709 to have the zero-crossing placed nicely.
+2025-10-15 16:39:50 - LaserLockController - DEBUG - START offset = 0.9444444444444445
+2025-10-15 16:39:51 - LaserLockController - DEBUG - Line is now inside
+2025-10-15 16:39:56 - LaserLockController - DEBUG - space_left = 0.5012212994626283, space_right = 0.7993160723009284
+2025-10-15 16:39:56 - LaserLockController - INFO - Line LINE_feature_1 is centered at offset 0.9444444444444445.
+2025-10-15 16:40:10 - LaserLockController - INFO - Locking the laser failed :(
+2025-10-15 16:40:21 - LaserLockController - DEBUG - Vertical offset = 0.003515234281516709 to have the zero-crossing placed nicely.
+2025-10-15 16:40:21 - LaserLockController - DEBUG - START offset = 0.9444444444444445
+2025-10-15 16:40:22 - LaserLockController - DEBUG - Line is now inside
+2025-10-15 16:40:48 - LaserLockController - DEBUG - Vertical offset = 0.003515234281516709 to have the zero-crossing placed nicely.
+2025-10-15 16:40:48 - LaserLockController - DEBUG - START offset = 0.9444444444444445
+2025-10-15 16:40:49 - LaserLockController - DEBUG - Vertical offset = 0.003515234281516709 to have the zero-crossing placed nicely.
+2025-10-15 16:40:49 - LaserLockController - DEBUG - START offset = 0.9444444444444445
+2025-10-15 16:40:50 - LaserLockController - DEBUG - Line is now inside
+2025-10-15 16:40:52 - LaserLockController - DEBUG - Vertical offset = 0.003515234281516709 to have the zero-crossing placed nicely.
+2025-10-15 16:40:52 - LaserLockController - DEBUG - START offset = 0.9444444444444445
+2025-10-15 16:40:52 - LaserLockController - DEBUG - Line is now inside
+2025-10-15 16:40:54 - LaserLockController - DEBUG - Vertical offset = 0.003515234281516709 to have the zero-crossing placed nicely.
+2025-10-15 16:40:54 - LaserLockController - DEBUG - START offset = 0.9444444444444445
+2025-10-15 16:40:55 - LaserLockController - DEBUG - Vertical offset = 0.003515234281516709 to have the zero-crossing placed nicely.
+2025-10-15 16:40:55 - LaserLockController - DEBUG - START offset = 0.9444444444444445
+2025-10-15 16:40:56 - LaserLockController - DEBUG - Line is now inside
+2025-10-15 16:40:57 - LaserLockController - DEBUG - Vertical offset = 0.003515234281516709 to have the zero-crossing placed nicely.
+2025-10-15 16:40:57 - LaserLockController - DEBUG - START offset = 0.9444444444444445
+2025-10-15 16:40:58 - LaserLockController - DEBUG - Line is now inside
+2025-10-15 16:40:59 - LaserLockController - DEBUG - Vertical offset = 0.003515234281516709 to have the zero-crossing placed nicely.
+2025-10-15 16:40:59 - LaserLockController - DEBUG - START offset = 0.9444444444444445
+2025-10-15 16:41:00 - LaserLockController - DEBUG - Line is now inside
+2025-10-15 16:41:05 - LaserLockController - DEBUG - Vertical offset = 0.003515234281516709 to have the zero-crossing placed nicely.
+2025-10-15 16:41:05 - LaserLockController - DEBUG - START offset = 0.9444444444444445
+2025-10-15 16:41:06 - LaserLockController - DEBUG - Line is now inside
+2025-10-15 16:41:12 - LaserLockController - DEBUG - space_left = 0.5064973131411822, space_right = 0.7940400586223745
+2025-10-15 16:41:12 - LaserLockController - INFO - Line LINE_feature_1 is centered at offset 0.9444444444444445.
+2025-10-15 16:41:26 - LaserLockController - INFO - Locking the laser failed :(
+2025-10-15 16:41:27 - LaserLockController - DEBUG - Vertical offset = 0.003515234281516709 to have the zero-crossing placed nicely.
+2025-10-15 16:41:27 - LaserLockController - DEBUG - START offset = 0.9444444444444445
+2025-10-15 16:41:28 - LaserLockController - DEBUG - Line is now inside
+2025-10-15 16:42:24 - LaserLockController - DEBUG - Vertical offset = 0.003515234281516709 to have the zero-crossing placed nicely.
+2025-10-15 16:42:24 - LaserLockController - DEBUG - START offset = 0.9444444444444445
+2025-10-15 16:42:25 - LaserLockController - DEBUG - Line is now inside
+2025-10-15 16:42:26 - LaserLockController - DEBUG - Vertical offset = 0.003515234281516709 to have the zero-crossing placed nicely.
+2025-10-15 16:42:26 - LaserLockController - DEBUG - START offset = 0.9444444444444445
+2025-10-15 16:42:27 - LaserLockController - DEBUG - Line is now inside
+2025-10-15 16:42:27 - LaserLockController - DEBUG - Vertical offset = 0.003515234281516709 to have the zero-crossing placed nicely.
+2025-10-15 16:42:27 - LaserLockController - DEBUG - START offset = 0.9444444444444445
+2025-10-15 16:42:28 - LaserLockController - DEBUG - Line is now inside
+2025-10-15 16:42:33 - LaserLockController - DEBUG - space_left = 0.527601367855398, space_right = 0.7729360039081586
+2025-10-15 16:42:33 - LaserLockController - INFO - Line LINE_feature_1 is centered at offset 0.9444444444444445.
+2025-10-15 16:42:37 - LaserLockController - DEBUG - Vertical offset = 0.003515234281516709 to have the zero-crossing placed nicely.
+2025-10-15 16:42:37 - LaserLockController - DEBUG - START offset = 0.9444444444444445
+2025-10-15 16:42:38 - LaserLockController - DEBUG - Line is now inside
+2025-10-15 16:42:40 - LaserLockController - DEBUG - Vertical offset = 0.003515234281516709 to have the zero-crossing placed nicely.
+2025-10-15 16:42:40 - LaserLockController - DEBUG - START offset = 0.9444444444444445
+2025-10-15 16:42:41 - LaserLockController - DEBUG - Vertical offset = 0.003515234281516709 to have the zero-crossing placed nicely.
+2025-10-15 16:42:41 - LaserLockController - DEBUG - START offset = 0.9444444444444445
+2025-10-15 16:42:42 - LaserLockController - DEBUG - Vertical offset = 0.003515234281516709 to have the zero-crossing placed nicely.
+2025-10-15 16:42:42 - LaserLockController - DEBUG - START offset = 0.9444444444444445
+2025-10-15 16:42:43 - LaserLockController - DEBUG - Line is now inside
+2025-10-15 16:42:44 - LaserLockController - DEBUG - Vertical offset = 0.003515234281516709 to have the zero-crossing placed nicely.
+2025-10-15 16:42:44 - LaserLockController - DEBUG - START offset = 0.9444444444444445
+2025-10-15 16:42:45 - LaserLockController - DEBUG - Vertical offset = 0.003515234281516709 to have the zero-crossing placed nicely.
+2025-10-15 16:42:45 - LaserLockController - DEBUG - START offset = 0.9444444444444445
+2025-10-15 16:42:51 - LaserLockController - DEBUG - Vertical offset = 0.003515234281516709 to have the zero-crossing placed nicely.
+2025-10-15 16:42:51 - LaserLockController - DEBUG - START offset = 0.9444444444444445
+2025-10-15 16:42:52 - LaserLockController - DEBUG - Line is now inside
+2025-10-15 16:42:56 - LaserLockController - DEBUG - space_left = 0.5425500732779677, space_right = 0.757987298485589
+2025-10-15 16:42:56 - LaserLockController - INFO - Line LINE_feature_1 is centered at offset 0.9444444444444445.
+2025-10-15 16:43:10 - LaserLockController - INFO - Locking the laser failed :(
+2025-10-15 16:43:12 - LaserLockController - DEBUG - Vertical offset = 0.003515234281516709 to have the zero-crossing placed nicely.
+2025-10-15 16:43:12 - LaserLockController - DEBUG - START offset = 0.9444444444444445
+2025-10-15 16:43:13 - LaserLockController - DEBUG - Line is now inside
+2025-10-15 16:43:18 - LaserLockController - DEBUG - space_left = 0.519687347337567, space_right = 0.7808500244259896
+2025-10-15 16:43:18 - LaserLockController - INFO - Line LINE_feature_1 is centered at offset 0.9444444444444445.
+2025-10-15 16:43:21 - LaserLockController - DEBUG - Vertical offset = 0.003515234281516709 to have the zero-crossing placed nicely.
+2025-10-15 16:43:21 - LaserLockController - DEBUG - START offset = 0.9444444444444445
+2025-10-15 16:43:22 - LaserLockController - DEBUG - Line is now inside
+2025-10-15 16:43:27 - LaserLockController - DEBUG - Vertical offset = 0.003515234281516709 to have the zero-crossing placed nicely.
+2025-10-15 16:43:27 - LaserLockController - DEBUG - START offset = 0.9444444444444445
+2025-10-15 16:43:28 - LaserLockController - DEBUG - Line is now inside
+2025-10-15 16:43:33 - LaserLockController - DEBUG - space_left = 0.5240840254030287, space_right = 0.776453346360528
+2025-10-15 16:43:33 - LaserLockController - INFO - Line LINE_feature_1 is centered at offset 0.9444444444444445.
+2025-10-15 16:43:36 - LaserLockController - DEBUG - Vertical offset = 0.003515234281516709 to have the zero-crossing placed nicely.
+2025-10-15 16:43:36 - LaserLockController - DEBUG - START offset = 0.9444444444444445
+2025-10-15 16:43:37 - LaserLockController - DEBUG - Line is now inside
+2025-10-15 16:44:05 - LaserLockController - DEBUG - Vertical offset = 0.003515234281516709 to have the zero-crossing placed nicely.
+2025-10-15 16:44:05 - LaserLockController - DEBUG - START offset = 0.9444444444444445
+2025-10-15 16:44:06 - LaserLockController - DEBUG - Line is now inside
+2025-10-15 16:44:11 - LaserLockController - DEBUG - space_left = 0.5267220322423057, space_right = 0.7738153395212509
+2025-10-15 16:44:11 - LaserLockController - INFO - Line LINE_feature_1 is centered at offset 0.9444444444444445.
+2025-10-15 16:44:14 - LaserLockController - DEBUG - Vertical offset = 0.003515234281516709 to have the zero-crossing placed nicely.
+2025-10-15 16:44:14 - LaserLockController - DEBUG - START offset = 0.9444444444444445
+2025-10-15 16:44:15 - LaserLockController - DEBUG - Line is now inside
+2025-10-15 16:47:28 - LaserLockController - DEBUG - Vertical offset = 0.003515234281516709 to have the zero-crossing placed nicely.
+2025-10-15 16:47:28 - LaserLockController - DEBUG - START offset = 0.9444444444444445
+2025-10-15 16:47:51 - LaserLockController - DEBUG - Vertical offset = 0.003515234281516709 to have the zero-crossing placed nicely.
+2025-10-15 16:47:51 - LaserLockController - DEBUG - START offset = 0.9444444444444445
+2025-10-15 16:48:02 - LaserLockController - DEBUG - Vertical offset = 0.003515234281516709 to have the zero-crossing placed nicely.
+2025-10-15 16:48:02 - LaserLockController - DEBUG - START offset = 0.9444444444444445
+2025-10-15 16:48:04 - LaserLockController - DEBUG - Vertical offset = 0.003515234281516709 to have the zero-crossing placed nicely.
+2025-10-15 16:48:04 - LaserLockController - DEBUG - START offset = 0.9444444444444445
+2025-10-15 16:48:05 - LaserLockController - DEBUG - Line is now inside
+2025-10-15 16:48:10 - LaserLockController - DEBUG - space_left = 0.5100146555935515, space_right = 0.7905227161700051
+2025-10-15 16:48:10 - LaserLockController - INFO - Line LINE_feature_1 is centered at offset 0.9444444444444445.
+2025-10-15 16:48:15 - LaserLockController - DEBUG - Vertical offset = 0.003515234281516709 to have the zero-crossing placed nicely.
+2025-10-15 16:48:15 - LaserLockController - DEBUG - START offset = 0.9444444444444445
+2025-10-15 16:48:15 - LaserLockController - DEBUG - Line is now inside
+2025-10-15 16:48:19 - LaserLockController - DEBUG - Vertical offset = 0.003515234281516709 to have the zero-crossing placed nicely.
+2025-10-15 16:48:19 - LaserLockController - DEBUG - START offset = 0.9444444444444445
+2025-10-15 16:48:20 - LaserLockController - DEBUG - Line is now inside
+2025-10-15 16:48:25 - LaserLockController - DEBUG - space_left = 0.5082559843673667, space_right = 0.7922813873961899
+2025-10-15 16:48:25 - LaserLockController - INFO - Line LINE_feature_1 is centered at offset 0.9444444444444445.
+2025-10-15 16:48:39 - LaserLockController - INFO - Locking the laser failed :(
+2025-10-15 16:49:02 - LaserLockController - DEBUG - Vertical offset = 0.003515234281516709 to have the zero-crossing placed nicely.
+2025-10-15 16:49:02 - LaserLockController - DEBUG - START offset = 0.9444444444444445
+2025-10-15 16:49:02 - LaserLockController - DEBUG - Line is now inside
+2025-10-15 16:50:07 - LaserLockController - DEBUG - Vertical offset = 0.003515234281516709 to have the zero-crossing placed nicely.
+2025-10-15 16:50:07 - LaserLockController - DEBUG - START offset = 0.9444444444444445
+2025-10-15 16:50:08 - LaserLockController - DEBUG - Line is now inside
+2025-10-15 16:50:54 - LaserLockController - DEBUG - Vertical offset = 0.003515234281516709 to have the zero-crossing placed nicely.
+2025-10-15 16:50:54 - LaserLockController - DEBUG - START offset = 0.9444444444444445
+2025-10-15 16:50:55 - LaserLockController - DEBUG - Line is now inside
+2025-10-15 16:51:16 - LaserLockController - DEBUG - Vertical offset = 0.003515234281516709 to have the zero-crossing placed nicely.
+2025-10-15 16:51:16 - LaserLockController - DEBUG - START offset = 0.9444444444444445
+2025-10-15 16:51:17 - LaserLockController - DEBUG - Line is now inside
+2025-10-15 16:51:22 - LaserLockController - DEBUG - space_left = 0.4862725940400586, space_right = 0.814264777723498
+2025-10-15 16:51:22 - LaserLockController - INFO - Line LINE_feature_1 is centered at offset 0.9444444444444445.
+2025-10-15 16:51:51 - LaserLockController - INFO - LaserLockController initialized successfully.
+2025-10-15 16:52:01 - LaserLockController - INFO - Finding reference lines.
+2025-10-15 16:52:01 - LaserLockController - DEBUG - Setting voltage to 0.9V
+2025-10-15 16:52:02 - LaserLockController - DEBUG - Correlation with LINE_feature_1 at 0.9V: 0.9973989814771309, Length of match: 0.9964788732394371, offset with respect to the reference signal: -0.003472959185240754
+2025-10-15 16:52:02 - LaserLockController - DEBUG - Setting voltage to 0.9222222222222223V
+2025-10-15 16:52:03 - LaserLockController - DEBUG - Correlation with LINE_feature_1 at 0.9222222222222223V: 0.41130982116458087, Length of match: 0.5352112676056341, offset with respect to the reference signal: -0.004689227020476037
+2025-10-15 16:52:03 - LaserLockController - DEBUG - Setting voltage to 0.9444444444444445V
+2025-10-15 16:52:05 - LaserLockController - DEBUG - Correlation with LINE_feature_1 at 0.9444444444444445V: 0.9969853786794504, Length of match: 0.9982394366197184, offset with respect to the reference signal: -0.0035113290908895564
+2025-10-15 16:52:05 - LaserLockController - DEBUG - Setting voltage to 0.9666666666666667V
+2025-10-15 16:52:06 - LaserLockController - DEBUG - Correlation with LINE_feature_1 at 0.9666666666666667V: 0.9960749442405368, Length of match: 0.8151408450704231, offset with respect to the reference signal: -0.0035801581258932953
+2025-10-15 16:52:06 - LaserLockController - DEBUG - Setting voltage to 0.9888888888888889V
+2025-10-15 16:52:07 - LaserLockController - DEBUG - Correlation with LINE_feature_1 at 0.9888888888888889V: 0.5661269871894539, Length of match: 0.5352112676056341, offset with respect to the reference signal: -0.003131261678649361
+2025-10-15 16:52:07 - LaserLockController - DEBUG - Setting voltage to 1.011111111111111V
+2025-10-15 16:52:09 - LaserLockController - DEBUG - Correlation with LINE_feature_1 at 1.011111111111111V: 0.6639905131733882, Length of match: 0.5352112676056341, offset with respect to the reference signal: -0.003493761550389376
+2025-10-15 16:52:09 - LaserLockController - DEBUG - Setting voltage to 1.0333333333333334V
+2025-10-15 16:52:10 - LaserLockController - DEBUG - Correlation with LINE_feature_1 at 1.0333333333333334V: 0.6550953395307714, Length of match: 0.5352112676056341, offset with respect to the reference signal: -0.004174830958852729
+2025-10-15 16:52:10 - LaserLockController - DEBUG - Setting voltage to 1.0555555555555556V
+2025-10-15 16:52:12 - LaserLockController - DEBUG - Correlation with LINE_feature_1 at 1.0555555555555556V: 0.6352378475981652, Length of match: 0.5352112676056341, offset with respect to the reference signal: -0.004676340343289175
+2025-10-15 16:52:12 - LaserLockController - DEBUG - Setting voltage to 1.077777777777778V
+2025-10-15 16:52:13 - LaserLockController - DEBUG - Correlation with LINE_feature_1 at 1.077777777777778V: 0.6658783144731142, Length of match: 0.5352112676056341, offset with respect to the reference signal: -0.005156565967712372
+2025-10-15 16:52:13 - LaserLockController - DEBUG - Setting voltage to 1.1V
+2025-10-15 16:52:14 - LaserLockController - DEBUG - Correlation with LINE_feature_1 at 1.1V: 0.6170965074940212, Length of match: 0.5352112676056341, offset with respect to the reference signal: -0.005447440292814438
+2025-10-15 16:52:14 - LaserLockController - DEBUG - Offset with respect to the reference line:-0.003472959185240754
+2025-10-15 16:52:15 - LaserLockController - INFO - Reference lines found successfully.
+2025-10-15 16:52:16 - LaserLockController - DEBUG - Vertical offset = 0.003472959185240754 to have the zero-crossing placed nicely.
+2025-10-15 16:52:18 - LaserLockController - DEBUG - START offset = 0.9
+2025-10-15 16:52:19 - LaserLockController - DEBUG - Line is now inside
+2025-10-15 16:52:23 - LaserLockController - DEBUG - Vertical offset = 0.003472959185240754 to have the zero-crossing placed nicely.
+2025-10-15 16:52:23 - LaserLockController - DEBUG - START offset = 0.9
+2025-10-15 16:52:24 - LaserLockController - DEBUG - Line is now inside
+2025-10-15 16:52:30 - LaserLockController - DEBUG - space_left = -0.42647777234978024, space_right = 1.727015144113337
+2025-10-15 16:52:30 - LaserLockController - DEBUG - Too far left: increase offset to decrease frequency
+2025-10-15 16:52:31 - LaserLockController - DEBUG - Line is now inside
+2025-10-15 16:52:37 - LaserLockController - DEBUG - space_left = 0.0008793356130922803, space_right = 1.2996580361504644
+2025-10-15 16:52:37 - LaserLockController - DEBUG - Too far left: increase offset to decrease frequency
+2025-10-15 16:52:39 - LaserLockController - DEBUG - Line is now inside
+2025-10-15 16:52:44 - LaserLockController - DEBUG - space_left = 0.38954567659990225, space_right = 0.9109916951636544
+2025-10-15 16:52:44 - LaserLockController - INFO - Line LINE_feature_1 is centered at offset 0.9400000000000001.
+2025-10-15 16:52:58 - LaserLockController - INFO - Locking the laser failed :(
+2025-10-15 16:53:31 - LaserLockController - DEBUG - Vertical offset = 0.003472959185240754 to have the zero-crossing placed nicely.
+2025-10-15 16:53:31 - LaserLockController - DEBUG - START offset = 0.9400000000000001
+2025-10-15 16:53:31 - LaserLockController - DEBUG - Line is now inside
+2025-10-15 16:53:36 - LaserLockController - DEBUG - space_left = 0.39570102589154865, space_right = 0.904836345872008
+2025-10-15 16:53:36 - LaserLockController - INFO - Line LINE_feature_1 is centered at offset 0.9400000000000001.
+2025-10-15 16:53:49 - LaserLockController - INFO - Locking the laser failed :(
+2025-10-15 16:53:51 - LaserLockController - DEBUG - Vertical offset = 0.003472959185240754 to have the zero-crossing placed nicely.
+2025-10-15 16:53:51 - LaserLockController - DEBUG - START offset = 0.9400000000000001
+2025-10-15 16:53:52 - LaserLockController - DEBUG - Line is now inside
+2025-10-15 16:53:58 - LaserLockController - DEBUG - space_left = 0.4168050806057645, space_right = 0.8837322911577922
+2025-10-15 16:53:58 - LaserLockController - INFO - Line LINE_feature_1 is centered at offset 0.9400000000000001.
+2025-10-15 16:54:09 - LaserLockController - DEBUG - Vertical offset = 0.003472959185240754 to have the zero-crossing placed nicely.
+2025-10-15 16:54:09 - LaserLockController - DEBUG - START offset = 0.9400000000000001
+2025-10-15 16:54:10 - LaserLockController - DEBUG - Line is now inside
+2025-10-15 16:54:15 - LaserLockController - DEBUG - space_left = 0.4229604298974109, space_right = 0.8775769418661458
+2025-10-15 16:54:15 - LaserLockController - INFO - Line LINE_feature_1 is centered at offset 0.9400000000000001.
+2025-10-15 16:54:29 - LaserLockController - DEBUG - Vertical offset = 0.003472959185240754 to have the zero-crossing placed nicely.
+2025-10-15 16:54:29 - LaserLockController - DEBUG - START offset = 0.9400000000000001
+2025-10-15 16:54:30 - LaserLockController - DEBUG - Line is now inside
+2025-10-15 16:54:41 - LaserLockController - DEBUG - Vertical offset = 0.003472959185240754 to have the zero-crossing placed nicely.
+2025-10-15 16:54:41 - LaserLockController - DEBUG - START offset = 0.9400000000000001
+2025-10-15 16:54:42 - LaserLockController - DEBUG - Line is now inside
+2025-10-15 16:54:47 - LaserLockController - DEBUG - space_left = 0.38866634098680997, space_right = 0.9118710307767467
+2025-10-15 16:54:47 - LaserLockController - INFO - Line LINE_feature_1 is centered at offset 0.9400000000000001.
+2025-10-15 16:55:02 - LaserLockController - INFO - Locking the laser failed :(
+2025-10-15 16:55:33 - LaserLockController - DEBUG - Vertical offset = 0.003472959185240754 to have the zero-crossing placed nicely.
+2025-10-15 16:55:33 - LaserLockController - DEBUG - START offset = 0.9400000000000001
+2025-10-15 16:55:34 - LaserLockController - DEBUG - Line is now inside
+2025-10-15 16:55:39 - LaserLockController - DEBUG - space_left = 0.4027357107962871, space_right = 0.8978016609672695
+2025-10-15 16:55:39 - LaserLockController - INFO - Line LINE_feature_1 is centered at offset 0.9400000000000001.
+2025-10-15 16:55:53 - LaserLockController - INFO - Locking the laser failed :(
+2025-10-15 16:55:55 - LaserLockController - DEBUG - Vertical offset = 0.003472959185240754 to have the zero-crossing placed nicely.
+2025-10-15 16:55:55 - LaserLockController - DEBUG - START offset = 0.9400000000000001
+2025-10-15 16:55:55 - LaserLockController - DEBUG - Line is now inside
+2025-10-15 16:57:35 - LaserLockController - DEBUG - Vertical offset = 0.003472959185240754 to have the zero-crossing placed nicely.
+2025-10-15 16:57:35 - LaserLockController - DEBUG - START offset = 0.9400000000000001
+2025-10-15 16:57:36 - LaserLockController - DEBUG - Line is now inside
+2025-10-15 16:57:41 - LaserLockController - DEBUG - space_left = 0.3930630190522716, space_right = 0.9074743527112851
+2025-10-15 16:57:41 - LaserLockController - INFO - Line LINE_feature_1 is centered at offset 0.9400000000000001.
+2025-10-15 16:57:41 - LaserLockController - INFO - Locking the laser worked \o/
+2025-10-15 16:59:52 - LaserLockController - DEBUG - Vertical offset = 0.003472959185240754 to have the zero-crossing placed nicely.
+2025-10-15 16:59:52 - LaserLockController - DEBUG - START offset = 0.9400000000000001
+2025-10-15 16:59:53 - LaserLockController - DEBUG - Line is now inside
+2025-10-15 16:59:57 - LaserLockController - DEBUG - linewidth = 0.4994626282364435
+2025-10-15 16:59:57 - LaserLockController - DEBUG - len_sweep_signal = 1.8
+2025-10-15 16:59:57 - LaserLockController - DEBUG - space_left = 0.37107962872496325, space_right = 0.9294577430385934
+2025-10-15 16:59:57 - LaserLockController - INFO - Line LINE_feature_1 is centered at offset 0.9400000000000001.
+2025-10-15 16:59:57 - LaserLockController - INFO - Locking the laser worked \o/
+2025-10-15 17:01:04 - LaserLockController - DEBUG - Vertical offset = 0.003472959185240754 to have the zero-crossing placed nicely.
+2025-10-15 17:01:04 - LaserLockController - DEBUG - START offset = 0.9400000000000001
+2025-10-15 17:01:05 - LaserLockController - DEBUG - Line is now inside
+2025-10-15 17:01:11 - LaserLockController - DEBUG - linewidth = 0.4994626282364435
+2025-10-15 17:01:11 - LaserLockController - DEBUG - len_sweep_signal = 1.8
+2025-10-15 17:01:11 - LaserLockController - DEBUG - shift = 0.3675622862725939
+2025-10-15 17:01:11 - LaserLockController - DEBUG - space_left = 0.3675622862725939, space_right = 0.9329750854909628
+2025-10-15 17:01:11 - LaserLockController - INFO - Line LINE_feature_1 is centered at offset 0.9400000000000001.
+2025-10-15 17:01:11 - LaserLockController - INFO - Locking the laser worked \o/
+2025-10-15 17:02:39 - LaserLockController - DEBUG - Vertical offset = 0.003472959185240754 to have the zero-crossing placed nicely.
+2025-10-15 17:02:39 - LaserLockController - DEBUG - START offset = 0.9400000000000001
+2025-10-15 17:02:40 - LaserLockController - DEBUG - Line is now inside
+2025-10-15 17:02:46 - LaserLockController - DEBUG - space_left = 1.2534929164631168, space_right = 0.04704445530043988
+2025-10-15 17:02:46 - LaserLockController - DEBUG - Too far right: decrease offset to increase frequency
+2025-10-15 17:02:48 - LaserLockController - DEBUG - Line is now inside
+2025-10-15 17:02:49 - LaserLockController - DEBUG - Line has escaped
+2025-10-15 17:03:07 - LaserLockController - DEBUG - Line is now inside
+2025-10-15 17:03:08 - LaserLockController - DEBUG - Line has escaped
+2025-10-15 17:03:10 - LaserLockController - DEBUG - Trying new offset = 0.9800000000000001
+2025-10-15 17:03:12 - LaserLockController - DEBUG - Line is now inside
+2025-10-15 17:03:18 - LaserLockController - DEBUG - space_left = 1.3088910600879335, space_right = -0.008353688324376884
+2025-10-15 17:03:18 - LaserLockController - DEBUG - Too far right: decrease offset to increase frequency
+2025-10-15 17:03:19 - LaserLockController - DEBUG - Line is now inside
+2025-10-15 17:03:21 - LaserLockController - DEBUG - Line has escaped
+2025-10-15 17:03:21 - LaserLockController - DEBUG - Line is now inside
+2025-10-15 17:03:24 - LaserLockController - DEBUG - Line has escaped
+2025-10-15 17:03:27 - LaserLockController - DEBUG - Line is now inside
+2025-10-15 17:03:28 - LaserLockController - DEBUG - Line has escaped
+2025-10-15 17:03:29 - LaserLockController - DEBUG - Line is now inside
+2025-10-15 17:03:31 - LaserLockController - DEBUG - Line has escaped
+2025-10-15 17:03:32 - LaserLockController - DEBUG - Line is now inside
+2025-10-15 17:03:34 - LaserLockController - DEBUG - Line has escaped
+2025-10-15 17:03:35 - LaserLockController - DEBUG - Line is now inside
+2025-10-15 17:03:38 - LaserLockController - DEBUG - Line has escaped
+2025-10-15 17:03:40 - LaserLockController - DEBUG - Trying new offset = 0.9
+2025-10-15 17:03:42 - LaserLockController - DEBUG - Line is now inside
+2025-10-15 17:03:47 - LaserLockController - DEBUG - space_left = 0.42252076209086464, space_right = 0.878016609672692
+2025-10-15 17:03:47 - LaserLockController - INFO - Line LINE_feature_1 is centered at offset 0.9.
+2025-10-15 17:03:47 - LaserLockController - INFO - Locking the laser worked \o/
+2025-10-15 17:06:35 - LaserLockController - DEBUG - Vertical offset = 0.003472959185240754 to have the zero-crossing placed nicely.
+2025-10-15 17:06:35 - LaserLockController - DEBUG - START offset = 0.9
+2025-10-15 17:06:36 - LaserLockController - DEBUG - Line is now inside
+2025-10-15 17:06:41 - LaserLockController - DEBUG - space_left = 0.4638495359062042, space_right = 0.8366878358573524
+2025-10-15 17:06:41 - LaserLockController - INFO - Line LINE_feature_1 is centered at offset 0.9.
+2025-10-15 17:06:41 - LaserLockController - INFO - Locking the laser worked \o/
+2025-10-15 17:07:07 - LaserLockController - DEBUG - Vertical offset = 0.003472959185240754 to have the zero-crossing placed nicely.
+2025-10-15 17:07:07 - LaserLockController - DEBUG - START offset = 0.98
+2025-10-15 17:07:08 - LaserLockController - DEBUG - Line is now inside
+2025-10-15 17:07:14 - LaserLockController - DEBUG - space_left = 1.3159257449926722, space_right = -0.01538837322911557
+2025-10-15 17:07:14 - LaserLockController - DEBUG - Too far right: decrease offset to increase frequency
+2025-10-15 17:07:15 - LaserLockController - DEBUG - Line is now inside
+2025-10-15 17:07:21 - LaserLockController - DEBUG - space_left = 1.5278456277479238, space_right = -0.2273082559843671
+2025-10-15 17:07:21 - LaserLockController - DEBUG - Too far right: decrease offset to increase frequency
+2025-10-15 17:07:22 - LaserLockController - DEBUG - Line is now inside
+2025-10-15 17:07:28 - LaserLockController - DEBUG - space_left = 1.531362970200293, space_right = -0.23082559843673645
+2025-10-15 17:07:28 - LaserLockController - DEBUG - Too far right: decrease offset to increase frequency
+2025-10-15 17:07:29 - LaserLockController - DEBUG - Line is now inside
+2025-10-15 17:07:35 - LaserLockController - DEBUG - space_left = 1.5322423058133854, space_right = -0.23170493404982873
+2025-10-15 17:07:35 - LaserLockController - DEBUG - Too far right: decrease offset to increase frequency
+2025-10-15 17:07:36 - LaserLockController - DEBUG - Line is now inside
+2025-10-15 17:07:41 - LaserLockController - DEBUG - space_left = 1.5331216414264777, space_right = -0.232584269662921
+2025-10-15 17:07:41 - LaserLockController - DEBUG - Too far right: decrease offset to increase frequency
+2025-10-15 17:07:43 - LaserLockController - DEBUG - Line is now inside
+2025-10-15 17:07:49 - LaserLockController - DEBUG - space_left = 1.5322423058133854, space_right = -0.23170493404982873
+2025-10-15 17:07:49 - LaserLockController - DEBUG - Too far right: decrease offset to increase frequency
+2025-10-15 17:07:50 - LaserLockController - DEBUG - Line is now inside
+2025-10-15 17:07:56 - LaserLockController - DEBUG - space_left = 1.5331216414264777, space_right = -0.232584269662921
+2025-10-15 17:07:56 - LaserLockController - DEBUG - Too far right: decrease offset to increase frequency
+2025-10-15 17:07:57 - LaserLockController - DEBUG - Line is now inside
+2025-10-15 17:07:59 - LaserLockController - DEBUG - Line has escaped
+2025-10-15 17:08:02 - LaserLockController - DEBUG - Trying new offset = 1.02
+2025-10-15 17:08:05 - LaserLockController - DEBUG - Line is now inside
+2025-10-15 17:08:10 - LaserLockController - DEBUG - space_left = 1.531362970200293, space_right = -0.23082559843673645
+2025-10-15 17:08:10 - LaserLockController - DEBUG - Too far right: decrease offset to increase frequency
+2025-10-15 17:08:12 - LaserLockController - DEBUG - Line is now inside
+2025-10-15 17:08:17 - LaserLockController - DEBUG - space_left = 1.5322423058133854, space_right = -0.23170493404982873
+2025-10-15 17:08:17 - LaserLockController - DEBUG - Too far right: decrease offset to increase frequency
+2025-10-15 17:08:19 - LaserLockController - DEBUG - Line is now inside
+2025-10-15 17:08:23 - LaserLockController - DEBUG - space_left = 1.5322423058133854, space_right = -0.23170493404982873
+2025-10-15 17:08:23 - LaserLockController - DEBUG - Too far right: decrease offset to increase frequency
+2025-10-15 17:08:26 - LaserLockController - DEBUG - Line is now inside
+2025-10-15 17:08:31 - LaserLockController - DEBUG - space_left = 1.5322423058133854, space_right = -0.23170493404982873
+2025-10-15 17:08:31 - LaserLockController - DEBUG - Too far right: decrease offset to increase frequency
+2025-10-15 17:08:33 - LaserLockController - DEBUG - Line is now inside
+2025-10-15 17:08:39 - LaserLockController - DEBUG - space_left = 1.5322423058133854, space_right = -0.23170493404982873
+2025-10-15 17:08:39 - LaserLockController - DEBUG - Too far right: decrease offset to increase frequency
+2025-10-15 17:08:44 - LaserLockController - DEBUG - Trying new offset = 0.94
+2025-10-15 17:08:46 - LaserLockController - DEBUG - Line is now inside
+2025-10-15 17:08:51 - LaserLockController - DEBUG - space_left = 1.2253541768441623, space_right = 0.0751831949193944
+2025-10-15 17:08:51 - LaserLockController - DEBUG - Too far right: decrease offset to increase frequency
+2025-10-15 17:08:53 - LaserLockController - DEBUG - Line is now inside
+2025-10-15 17:08:59 - LaserLockController - DEBUG - space_left = 1.547191011235955, space_right = -0.24665363947239838
+2025-10-15 17:08:59 - LaserLockController - DEBUG - Too far right: decrease offset to increase frequency
+2025-10-15 17:09:00 - LaserLockController - DEBUG - Line is now inside
+2025-10-15 17:09:05 - LaserLockController - DEBUG - space_left = 1.2930630190522716, space_right = 0.007474352711285048
+2025-10-15 17:09:05 - LaserLockController - DEBUG - Too far right: decrease offset to increase frequency
+2025-10-15 17:09:07 - LaserLockController - DEBUG - Line is now inside
+2025-10-15 17:09:07 - LaserLockController - DEBUG - Line has escaped
+2025-10-15 17:09:12 - LaserLockController - DEBUG - Line is now inside
+2025-10-15 17:09:13 - LaserLockController - DEBUG - Line has escaped
+2025-10-15 17:09:14 - LaserLockController - DEBUG - Trying new offset = 1.06
+2025-10-15 17:09:15 - LaserLockController - DEBUG - Line is now inside
+2025-10-15 17:09:21 - LaserLockController - DEBUG - space_left = 1.5322423058133854, space_right = -0.23170493404982873
+2025-10-15 17:09:21 - LaserLockController - DEBUG - Too far right: decrease offset to increase frequency
+2025-10-15 17:09:23 - LaserLockController - DEBUG - Line is now inside
+2025-10-15 17:09:29 - LaserLockController - DEBUG - space_left = 1.5322423058133854, space_right = -0.23170493404982873
+2025-10-15 17:09:29 - LaserLockController - DEBUG - Too far right: decrease offset to increase frequency
+2025-10-15 17:09:31 - LaserLockController - DEBUG - Line is now inside
+2025-10-15 17:09:36 - LaserLockController - DEBUG - space_left = 1.5322423058133854, space_right = -0.23170493404982873
+2025-10-15 17:09:36 - LaserLockController - DEBUG - Too far right: decrease offset to increase frequency
+2025-10-15 17:09:38 - LaserLockController - DEBUG - Line is now inside
+2025-10-15 17:09:39 - LaserLockController - DEBUG - Line has escaped
+2025-10-15 17:09:44 - LaserLockController - DEBUG - Line is now inside
+2025-10-15 17:09:45 - LaserLockController - DEBUG - Trying new offset = 0.9
+2025-10-15 17:09:50 - LaserLockController - DEBUG - Frequency not stable enough
+2025-10-15 17:09:51 - LaserLockController - DEBUG - space_left = 0.4040547142159257, space_right = 0.896482657547631
+2025-10-15 17:09:51 - LaserLockController - INFO - Line LINE_feature_1 is centered at offset 0.9.
+2025-10-15 17:09:51 - LaserLockController - INFO - Locking the laser worked \o/
+2025-10-15 17:10:18 - LaserLockController - DEBUG - Vertical offset = 0.003472959185240754 to have the zero-crossing placed nicely.
+2025-10-15 17:10:19 - LaserLockController - DEBUG - START offset = 0.94
+2025-10-15 17:10:20 - LaserLockController - DEBUG - Line is now inside
+2025-10-15 17:10:25 - LaserLockController - DEBUG - space_left = 1.2587689301416707, space_right = 0.04176844162188598
+2025-10-15 17:10:25 - LaserLockController - DEBUG - Too far right: decrease offset to increase frequency
+2025-10-15 17:10:50 - LaserLockController - DEBUG - Trying new offset = 0.98
+2025-10-15 17:11:08 - LaserLockController - DEBUG - Vertical offset = 0.003472959185240754 to have the zero-crossing placed nicely.
+2025-10-15 17:11:09 - LaserLockController - DEBUG - START offset = 0.94
+2025-10-15 17:11:11 - LaserLockController - DEBUG - Line is now inside
+2025-10-15 17:11:16 - LaserLockController - DEBUG - space_left = 1.192818759159746, space_right = 0.10771861260381077
+2025-10-15 17:11:16 - LaserLockController - DEBUG - Too far right: decrease offset to increase frequency
+2025-10-15 17:11:18 - LaserLockController - DEBUG - Line is now inside
+2025-10-15 17:11:22 - LaserLockController - DEBUG - space_left = 0.8217391304347825, space_right = 0.47879824132877413
+2025-10-15 17:11:22 - LaserLockController - INFO - Line LINE_feature_1 is centered at offset 0.9199999999999999.
+2025-10-15 17:11:22 - LaserLockController - INFO - Locking the laser worked \o/
+2025-10-15 17:11:56 - LaserLockController - DEBUG - Vertical offset = 0.003472959185240754 to have the zero-crossing placed nicely.
+2025-10-15 17:11:56 - LaserLockController - DEBUG - START offset = 0.95
+2025-10-15 17:11:57 - LaserLockController - DEBUG - Line is now inside
+2025-10-15 17:12:03 - LaserLockController - DEBUG - space_left = 1.4873961895456767, space_right = -0.18685881778212
+2025-10-15 17:12:03 - LaserLockController - DEBUG - Too far right: decrease offset to increase frequency
+2025-10-15 17:12:04 - LaserLockController - DEBUG - Line is now inside
+2025-10-15 17:12:09 - LaserLockController - DEBUG - space_left = 1.296580361504641, space_right = 0.003957010258915705
+2025-10-15 17:12:09 - LaserLockController - DEBUG - Too far right: decrease offset to increase frequency
+2025-10-15 17:12:11 - LaserLockController - DEBUG - Line is now inside
+2025-10-15 17:12:16 - LaserLockController - DEBUG - space_left = 1.096971177332682, space_right = 0.20356619443087465
+2025-10-15 17:12:16 - LaserLockController - DEBUG - Too far right: decrease offset to increase frequency
+2025-10-15 17:12:18 - LaserLockController - DEBUG - Line is now inside
+2025-10-15 17:12:23 - LaserLockController - DEBUG - space_left = 0.8956033219345383, space_right = 0.40493404982901837
+2025-10-15 17:12:23 - LaserLockController - INFO - Line LINE_feature_1 is centered at offset 0.9199999999999999.
+2025-10-15 17:12:23 - LaserLockController - INFO - Locking the laser worked \o/

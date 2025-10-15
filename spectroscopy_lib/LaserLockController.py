@@ -230,7 +230,7 @@ class LaserLockController:
             len_reference_signal = reference_signal['x'][-1]-reference_signal['x'][0]
             ind = find_best_correlation(correlations[index,:], len_matches[index,:], linewidth=len_reference_signal)
             self.lines_positions[key] = V_scan[ind]
-            self.lines_offset[key] = offsets[index, ind] #+ self.hardware_interface.get_param('offset_a')
+            self.lines_offset[key] = offsets[index, ind] + self.hardware_interface.get_param('offset_a')
             ax[0].plot(V_scan, correlations[index,:], label=f'Correlation with {key}', color=colors[index])
             ax[0].axvline(x=V_scan[ind], color=colors[index], linestyle='--', label=f'Detected Position {key}')
             ax[index + 1].plot(V_scan_results[ind]['x'],V_scan_results[ind]['y'])
@@ -288,6 +288,7 @@ class LaserLockController:
         # get starting offsets
         offset = self.lines_positions[line_name] #horizontal offset where we expect the line
         offset_y = self.lines_offset[line_name] #vertical offset
+        #print('Offset y = ',offset_y)
         self.logger.debug(f"Vertical offset = {- offset_y} to have the zero-crossing placed nicely.") #the offset of the found line with respect to the reference line, so we need to apply the negative offset to center it.
 
         #get reference line and linewidth
@@ -307,7 +308,7 @@ class LaserLockController:
 
         # if do not see the line at the offset we are at we try to change it a bit summing offset_try[i]
         offset_big_jump = 0.04 # size of the offset jump if we do not see the reference line
-        offset_small_jump = 0.02
+        offset_small_jump = 0.01
         offset_try = np.array([0.,1.,-1.,2.,-2.,3.,-3.]) * offset_big_jump
         ind_off_try = 0 
         time_0 = time.time()
@@ -326,7 +327,7 @@ class LaserLockController:
             # 1. Acquire signal and compute correlation and shift
             sweep_signal = self.hardware_interface.get_sweep()
             shift = SignalAnalysis.find_shift(sweep_signal,reference_signal)
-            len_match,corr, _ = SignalAnalysis.find_correlation(sweep_signal,reference_signal)
+            corr,len_match, _ = SignalAnalysis.find_correlation(sweep_signal,reference_signal)
             current_time = time.time() - time_0
 
             times.append(current_time)
@@ -334,7 +335,7 @@ class LaserLockController:
             correlations.append(corr)
 
             # 2. Visualization
-            display.clear_output(wait=True)
+            #display.clear_output(wait=True)
             plt.clf()
             plot1 = plt.subplot2grid((2, 1), (0, 0))
             plot2 = plt.subplot2grid((2, 1), (1, 0))
@@ -355,7 +356,7 @@ class LaserLockController:
             plot2.scatter(times, shifts)
             plot2.set_xlim(0, (current_time//60 +1)*60)
             plot2.set_ylim(-1.1, 1.1)
-            plot1.set_title(f'Sweep Signal with {line_name} (Offset = {offset:.2f} V)')
+            plot1.set_title(f'Sweep Signal with {line_name} (Offset = {offset:.2f} V) \n Correlation = {corr:.2f}, Length of match = {len_match:.2f} V')
             plot1.set_xlabel('Voltage (V)')
             plot1.set_ylabel('Signal (a.u.)')
             plot2.set_title(f'Shift over Time (Jitter Threshold = {JITTER_THR})')
@@ -406,26 +407,26 @@ class LaserLockController:
                 if not frequence_stable:
                     self.logger.debug("Frequency not stable enough")
                 else:
-                    space_left = shift
+                    space_left = shift - sweep_signal['x'][0]
                     len_sweep_signal = sweep_signal['x'][-1] - sweep_signal['x'][0]
-                    space_right = len_sweep_signal - linewidth - shift
+                    space_right = len_sweep_signal - linewidth - space_left
                     self.logger.debug(f"space_left = {space_left}, space_right = {space_right}")
                     free_space = len_sweep_signal - linewidth
                     edge_space_thr = free_space / 4
 
                     if space_left > edge_space_thr and space_right > edge_space_thr:
                         self.lines_positions[line_name] = offset
-                        display.clear_output(wait=True)
+                        #display.clear_output(wait=True)
                         self.logger.info(f"Line {line_name} is centered at offset {offset}.")
-                        plt.clf()
+                        #plt.clf()
                         plt.plot(sweep_signal['x'], sweep_signal['y'], label='Sweep Signal')
                         plt.plot(reference_signal['x'] + shift, reference_signal['y'], '--', label='Reference Line')
                         lock_start = reference_signal['V_lock_start'] + shift
                         lock_end = reference_signal['V_lock_end'] + shift
                         plt.axvspan(lock_start,lock_end,color='r',alpha=0.2)
-                        self.hardware_interface.client.connection.root.start_autolock(lock_start,lock_end,pickle.dumps(sweep_signal['x']))
+                        #self.hardware_interface.client.connection.root.start_autolock(lock_start,lock_end,pickle.dumps(sweep_signal['x']))
                         try:
-                            self.hardware_interface.wait_for_lock_status(True)
+                            #self.hardware_interface.wait_for_lock_status(True)
                             self.logger.info("Locking the laser worked \o/")
                         except Exception:
                             self.logger.info("Locking the laser failed :(")

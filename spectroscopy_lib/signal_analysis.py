@@ -26,6 +26,7 @@ class SignalAnalysis():
         reference_signal_y = reference_signal['y']
         dx_sweep = sweep_signal_x[1] - sweep_signal_x[0]
         dx_reference = reference_signal_x[1] - reference_signal_x[0]
+
         if dx_reference < dx_sweep:
             reference_signal_x_new = np.arange(reference_signal_x[0], reference_signal_x[-1], dx_sweep)
             reference_signal_y_new = interp1d(reference_signal_x, reference_signal_y, kind='linear', fill_value='extrapolate')(reference_signal_x_new)
@@ -101,7 +102,7 @@ class SignalAnalysis():
 
     @staticmethod
     def find_correlation(sweep_signal,reference_signal):
-
+        print('reference signal goes from ',reference_signal['x'][0],' to ',reference_signal['x'][-1])
         downsampled_sweep_signal, downsampled_reference_signal = SignalAnalysis.downsample_signals(sweep_signal, reference_signal)
         sweep_signal = downsampled_sweep_signal
         reference_signal = downsampled_reference_signal
@@ -116,7 +117,12 @@ class SignalAnalysis():
         sweep_signal_window, reference_signal_window = SignalAnalysis.find_window(sweep_signal, reference_signal, shift)
         if (len(sweep_signal_window['y']) == 0) or (len(reference_signal_window['y'])==0):
             return 0,0
-        len_window = sweep_signal_window['x'][-1] - sweep_signal_window['x'][0]
+        print('sweep signal window goes from ',sweep_signal_window['x'][0],' to ',sweep_signal_window['x'][-1])
+        print('reference signal goes from ',reference_signal['x'][0],' to ',reference_signal['x'][-1])
+        len_window = (sweep_signal_window['x'][-1] - sweep_signal_window['x'][0])/(reference_signal['x'][-1] - reference_signal['x'][0])
+        print('length of the window: ',sweep_signal_window['x'][-1] - sweep_signal_window['x'][0])
+        print('length of the reference signal: ',reference_signal['x'][-1] - reference_signal['x'][0])
+        print('length ratio: ',len_window)
         matched_sweep_signal, matched_reference_signal, matched_offset = SignalAnalysis.match_signals(sweep_signal_window['y'], reference_signal_window['y'])
         matched_reference_signal_zeroavg = matched_reference_signal - np.mean(matched_reference_signal)
         matched_sweep_signal_zeroavg = matched_sweep_signal - np.mean(matched_sweep_signal)
