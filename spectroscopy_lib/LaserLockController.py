@@ -335,7 +335,7 @@ class LaserLockController:
             correlations.append(corr)
 
             # 2. Visualization
-            #display.clear_output(wait=True)
+            display.clear_output(wait=True)
             plt.clf()
             plot1 = plt.subplot2grid((2, 1), (0, 0))
             plot2 = plt.subplot2grid((2, 1), (1, 0))
@@ -410,7 +410,6 @@ class LaserLockController:
                     space_left = shift - sweep_signal['x'][0]
                     len_sweep_signal = sweep_signal['x'][-1] - sweep_signal['x'][0]
                     space_right = len_sweep_signal - linewidth - space_left
-                    self.logger.debug(f"space_left = {space_left}, space_right = {space_right}")
                     free_space = len_sweep_signal - linewidth
                     edge_space_thr = free_space / 4
 
@@ -423,10 +422,13 @@ class LaserLockController:
                         plt.plot(reference_signal['x'] + shift, reference_signal['y'], '--', label='Reference Line')
                         lock_start = reference_signal['V_lock_start'] + shift
                         lock_end = reference_signal['V_lock_end'] + shift
+                        lock_start_ind = np.argmin(np.abs(sweep_signal['x'] - lock_start))
+                        lock_end_ind = np.argmin(np.abs(sweep_signal['x'] - lock_end))
+                        print(f"Locking region: [{lock_start_ind:.2f}V, {lock_end_ind:.2f}V]")
                         plt.axvspan(lock_start,lock_end,color='r',alpha=0.2)
-                        #self.hardware_interface.client.connection.root.start_autolock(lock_start,lock_end,pickle.dumps(sweep_signal['x']))
+                        self.hardware_interface.client.connection.root.start_autolock(lock_start,lock_end,pickle.dumps(sweep_signal['y']))
                         try:
-                            #self.hardware_interface.wait_for_lock_status(True)
+                            self.hardware_interface.wait_for_lock_status(True)
                             self.logger.info("Locking the laser worked \o/")
                         except Exception:
                             self.logger.info("Locking the laser failed :(")
