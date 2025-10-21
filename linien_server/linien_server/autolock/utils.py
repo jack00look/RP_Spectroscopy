@@ -114,7 +114,7 @@ def get_all_peaks(summed_xscaled, target_idxs):
         current_idx -= 1
 
         value = summed_xscaled[current_idx]
-        last_peak_position, last_peak_height = peaks[-1]#, summed_xscaled[-1]
+        last_peak_position, last_peak_height = peaks[-1]
 
         if sign(last_peak_height) == sign(value):
             if np.abs(value) > np.abs(last_peak_height):
