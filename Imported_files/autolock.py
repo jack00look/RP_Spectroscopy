@@ -107,7 +107,7 @@ class Autolock:
                 additional_spectra,
                 self.line_width,
             )
-            logger.debug('algorithm selected')
+            logger.debug('Algorithm selected')
             if self.autolock_mode_detector.done:
                 self.start_autolock(self.autolock_mode_detector.mode)
 

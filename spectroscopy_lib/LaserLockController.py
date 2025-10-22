@@ -426,7 +426,7 @@ class LaserLockController:
                         lock_end_ind = np.argmin(np.abs(sweep_signal['x'] - lock_end))
                         print(f"Locking region: [{lock_start_ind:.2f}V, {lock_end_ind:.2f}V]")
                         plt.axvspan(lock_start,lock_end,color='r',alpha=0.2)
-                        self.hardware_interface.client.connection.root.start_autolock(lock_start,lock_end,pickle.dumps(sweep_signal['y']))
+                        self.hardware_interface.client.connection.root.start_autolock(lock_start_ind,lock_end_ind,pickle.dumps(sweep_signal['y']))
                         try:
                             self.hardware_interface.wait_for_lock_status(True)
                             self.logger.info("Locking the laser worked \o/")

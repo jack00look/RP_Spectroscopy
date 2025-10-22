@@ -17,9 +17,10 @@
 
 import numpy as np
 from scipy.signal import correlate
+import matplotlib.pyplot as plt
 
 
-def get_lock_region(spectrum, target_idxs):
+def get_lock_region(spectrum, target_idxs, prepared_spectrum=None):
     """Given a spectrum and the points that the user selected for locking,
     calculate the region where locking will work. This is the region between the
     next zero crossings after the extrema."""
@@ -44,10 +45,23 @@ def get_lock_region(spectrum, target_idxs):
             if current_sign != start_sign:
                 #print('found sign change at', current_idx)
                 return current_idx - direction
-
+    
+    def walk_until_slope_changes(start_idx, direction, prepared_spectrum):
+        current_idx = start_idx
+        jump = 5
+        relative_variations = []
+        while True:
+            relative_variation = (prepared_spectrum[current_idx+jump*direction] - prepared_spectrum[current_idx])/prepared_spectrum[current_idx+jump*direction]
+            relative_variations.append(relative_variation)
+            if np.abs(relative_variation) > 2: # arbitrary threshold to detect slope change
+                return int((current_idx+start_idx)/2)
+            current_idx += direction
+        
     return (
-        walk_until_sign_changes(extrema[0], -1),
-        walk_until_sign_changes(extrema[1], 1),
+        #walk_until_sign_changes(extrema[0], -1),
+        #walk_until_sign_changes(extrema[1], 1),
+        walk_until_slope_changes(extrema[0], -1, prepared_spectrum),
+        walk_until_slope_changes(extrema[1], 1, prepared_spectrum),
     )
 
 
@@ -117,6 +131,7 @@ def get_all_peaks(summed_xscaled, target_idxs):
         last_peak_position, last_peak_height = peaks[-1]
 
         if sign(last_peak_height) == sign(value):
+            print(peaks)
             if np.abs(value) > np.abs(last_peak_height):
                 peaks[-1] = (current_idx, value)
         else:

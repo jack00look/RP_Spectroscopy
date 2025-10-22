@@ -230,18 +230,14 @@ def get_lock_point(
     logger.debug('Entered in get_lock_point')
 
     length = len(error_signal)
-    logger.debug(f'length {length}')
 
     # the data that is between the user-selected bounds
     cropped_data = np.array(error_signal[x0:x1])
     logger.debug(f'x0 {x0} x1 {x1}')
-    logger.debug(f'cropped_data {cropped_data}')
 
     min_idx = np.argmin(cropped_data)
     max_idx = np.argmax(cropped_data)
     line_width = abs(max_idx - min_idx)
-
-    logger.debug('a')
 
     # the y value that is between minimum and maximum
     mean_signal = np.mean([cropped_data[min_idx], cropped_data[max_idx]])
@@ -252,8 +248,6 @@ def get_lock_point(
 
     zero_idx = x0 + np.min(idxs) + np.argmin(np.abs(slope_data))
 
-    logger.debug('b')
-
     # roll the error signal such that the target lock point is exactly in the
     # center
     roll = -int(zero_idx - (length / 2))
@@ -263,8 +257,6 @@ def get_lock_point(
     filler = np.empty(abs(roll))
     filler[:] = np.nan
 
-    logger.debug('c')
-
     if roll < 0:
         rolled_error_signal = np.hstack((error_signal[-roll:], filler))
     else:
@@ -272,8 +264,6 @@ def get_lock_point(
 
     target_slope_rising = max_idx > min_idx
     target_zoom = N_POINTS / (idxs[1] - idxs[0]) / final_zoom_factor
-
-    logger.debug('Exiting from get_lock_point')
 
     return (
         float(mean_signal),

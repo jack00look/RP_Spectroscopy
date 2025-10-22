@@ -387,3 +387,209 @@
 2025-10-21 06:40:10,837 - linien_server.autolock.autolock - DEBUG - Entered in run
 2025-10-21 06:40:20,253 - linien_server.server - DEBUG - starting autolock
 2025-10-21 06:41:32,813 - linien_server.server - DEBUG - starting autolock
+2025-10-21 06:57:53,394 - linien_server.cli - INFO - Stopping Linien server
+2025-10-21 06:57:53,574 - linien_server.cli - INFO - Stopped Linien server
+2025-10-21 07:00:02,157 - linien_server.cli - DEBUG - Copied linien-server.service to /etc/systemd/system
+2025-10-21 07:00:02,158 - linien_server.cli - INFO - Starting Linien server
+2025-10-21 07:00:02,233 - linien_server.cli - INFO - Started Linien server
+2025-10-21 07:00:16,062 - linien_server.cli - DEBUG - Copied linien-server.service to /etc/systemd/system
+2025-10-21 07:00:16,065 - linien_server.cli - INFO - Starting Linien server
+2025-10-21 07:00:16,120 - linien_server.cli - INFO - Started Linien server
+2025-10-21 07:00:22,743 - linien_server.parameters - INFO - Restoring parameters from /root/.local/share/linien/parameters.json
+2025-10-21 07:00:22,749 - linien_server.parameters - INFO - Restored parameters from /root/.local/share/linien/parameters.json
+2025-10-21 07:00:22,753 - linien_common.influxdb - INFO - Saved InfluxDB credentials to /root/.local/share/linien/influxdb_credentials.json
+2025-10-21 07:00:23,126 - linien_server.acquisition - INFO - Using fpgautil to deploy gateware.
+2025-10-21 07:00:23,376 - linien_server.server - DEBUG - Ping  1
+2025-10-21 07:00:23,419 - linien_server.mdio_tool - INFO - Disabling ethernet blinking with mdio-tool at /usr/local/lib/python3.10/dist-packages/linien_server/mdio-tool
+2025-10-21 07:00:23,433 - linien_server.server - INFO - Starting server.
+2025-10-21 07:00:24,414 - linien_server.server - DEBUG - Ping  2
+2025-10-21 07:00:24,546 - linien_server.server - INFO - Client Service connected to Server
+2025-10-21 07:00:24,629 - linien_server.server - INFO - ['ALIASES', '__class__', '__delattr__', '__dict__', '__dir__', '__doc__', '__eq__', '__format__', '__ge__', '__getattribute__', '__gt__', '__hash__', '__init__', '__init_subclass__', '__le__', '__lt__', '__module__', '__ne__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__setattr__', '__sizeof__', '__slots__', '__str__', '__subclasshook__', '__weakref__', '_connect', '_protocol', '_rpyc_delattr', '_rpyc_setattr', 'auth_hash', 'exposed_get_service_aliases', 'exposed_get_service_name', 'exposed_notify_new_data', 'exposed_reset_new_data_event', 'exposed_uuid', 'get_service_aliases', 'get_service_name', 'is_new_data_available', 'new_data_event', 'on_connect', 'on_disconnect']
+2025-10-21 07:00:25,445 - linien_server.server - DEBUG - Ping  3
+2025-10-21 07:00:25,462 - linien_server.server - DEBUG - Further pings will be suppressed
+2025-10-21 07:01:51,468 - linien_server.server - DEBUG - starting autolock
+2025-10-21 07:01:51,485 - linien_server.autolock.autolock - DEBUG - Entered in run
+2025-10-21 07:01:51,559 - linien_server.autolock.autolock - DEBUG - x0: -0.1422081094284319, x1: 0.027791890571568112
+2025-10-21 07:01:51,569 - linien_server.autolock.autolock - DEBUG - Saving first error signal
+2025-10-21 07:01:51,572 - linien_server.autolock.autolock - DEBUG - Entered in record_first_error_signal
+2025-10-21 07:01:51,573 - linien_common.common - DEBUG - Entered in get_lock_point
+2025-10-21 07:01:51,575 - linien_common.common - DEBUG - length 2048
+2025-10-21 07:01:51,576 - linien_common.common - DEBUG - x0 0 x1 0
+2025-10-21 07:01:51,577 - linien_common.common - DEBUG - cropped_data []
+2025-10-21 07:01:59,800 - linien_server.server - DEBUG - starting autolock
+2025-10-21 07:12:10,330 - linien_server.server - DEBUG - starting autolock
+2025-10-21 07:13:21,750 - linien_server.server - DEBUG - starting autolock
+2025-10-21 07:15:17,268 - linien_server.cli - INFO - Stopping Linien server
+2025-10-21 07:15:17,395 - linien_server.cli - INFO - Stopped Linien server
+2025-10-21 07:15:27,144 - linien_server.cli - DEBUG - Copied linien-server.service to /etc/systemd/system
+2025-10-21 07:15:27,146 - linien_server.cli - INFO - Starting Linien server
+2025-10-21 07:15:27,213 - linien_server.cli - INFO - Started Linien server
+2025-10-21 07:15:45,725 - linien_server.parameters - INFO - Restoring parameters from /root/.local/share/linien/parameters.json
+2025-10-21 07:15:45,731 - linien_server.parameters - INFO - Restored parameters from /root/.local/share/linien/parameters.json
+2025-10-21 07:15:45,735 - linien_common.influxdb - INFO - Saved InfluxDB credentials to /root/.local/share/linien/influxdb_credentials.json
+2025-10-21 07:15:45,961 - linien_server.acquisition - INFO - Using fpgautil to deploy gateware.
+2025-10-21 07:15:46,153 - linien_server.server - DEBUG - Ping  1
+2025-10-21 07:15:46,165 - linien_server.mdio_tool - INFO - Disabling ethernet blinking with mdio-tool at /usr/local/lib/python3.10/dist-packages/linien_server/mdio-tool
+2025-10-21 07:15:46,192 - linien_server.server - INFO - Starting server.
+2025-10-21 07:15:47,161 - linien_server.server - DEBUG - Ping  2
+2025-10-21 07:15:48,190 - linien_server.server - DEBUG - Ping  3
+2025-10-21 07:15:48,197 - linien_server.server - DEBUG - Further pings will be suppressed
+2025-10-21 07:15:48,603 - linien_server.cli - DEBUG - Copied linien-server.service to /etc/systemd/system
+2025-10-21 07:15:48,605 - linien_server.cli - INFO - Starting Linien server
+2025-10-21 07:15:48,661 - linien_server.cli - INFO - Started Linien server
+2025-10-21 07:15:51,948 - linien_server.server - INFO - Client Service connected to Server
+2025-10-21 07:15:51,957 - linien_server.server - INFO - ['ALIASES', '__class__', '__delattr__', '__dict__', '__dir__', '__doc__', '__eq__', '__format__', '__ge__', '__getattribute__', '__gt__', '__hash__', '__init__', '__init_subclass__', '__le__', '__lt__', '__module__', '__ne__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__setattr__', '__sizeof__', '__slots__', '__str__', '__subclasshook__', '__weakref__', '_connect', '_protocol', '_rpyc_delattr', '_rpyc_setattr', 'auth_hash', 'exposed_get_service_aliases', 'exposed_get_service_name', 'exposed_notify_new_data', 'exposed_reset_new_data_event', 'exposed_uuid', 'get_service_aliases', 'get_service_name', 'is_new_data_available', 'new_data_event', 'on_connect', 'on_disconnect']
+2025-10-21 07:17:47,543 - linien_server.server - DEBUG - starting autolock
+2025-10-21 07:17:47,545 - linien_server.autolock.autolock - DEBUG - Entered in run
+2025-10-21 07:17:47,550 - linien_server.autolock.autolock - DEBUG - x0: 874, x1: 1067
+2025-10-21 07:17:47,585 - linien_server.autolock.autolock - DEBUG - Saving first error signal
+2025-10-21 07:17:47,608 - linien_server.autolock.autolock - DEBUG - Entered in record_first_error_signal
+2025-10-21 07:17:47,635 - linien_common.common - DEBUG - Entered in get_lock_point
+2025-10-21 07:17:47,658 - linien_common.common - DEBUG - length 2048
+2025-10-21 07:17:47,688 - linien_common.common - DEBUG - x0 874 x1 1067
+2025-10-21 07:17:47,761 - linien_common.common - DEBUG - cropped_data [-0.00024416 -0.00036623 -0.00036623 -0.00036623 -0.00036623 -0.00036623
+ -0.00036623 -0.00036623 -0.00036623 -0.00036623 -0.00048831 -0.00048831
+ -0.00048831 -0.00048831 -0.00048831 -0.00048831 -0.00048831 -0.00048831
+ -0.00048831 -0.00048831 -0.00048831 -0.00061039 -0.00061039 -0.00061039
+ -0.00061039 -0.00061039 -0.00061039 -0.00061039 -0.00061039 -0.00061039
+ -0.00061039 -0.00061039 -0.00061039 -0.00073247 -0.00073247 -0.00073247
+ -0.00073247 -0.00061039 -0.00073247 -0.00085454 -0.00085454 -0.00085454
+ -0.00085454 -0.00097662 -0.00097662 -0.00097662 -0.00097662 -0.00097662
+ -0.0010987  -0.0010987  -0.0010987  -0.00122078 -0.00122078 -0.00122078
+ -0.00134286 -0.00134286 -0.00146493 -0.00158701 -0.00158701 -0.00158701
+ -0.00158701 -0.00170909 -0.00183117 -0.00170909 -0.00170909 -0.00183117
+ -0.00207532 -0.00207532 -0.00207532 -0.00195324 -0.00207532 -0.00207532
+ -0.0021974  -0.00207532 -0.0021974  -0.0021974  -0.00244156 -0.00256363
+ -0.00256363 -0.00256363 -0.00256363 -0.00256363 -0.00256363 -0.00268571
+ -0.00256363 -0.00268571 -0.00280779 -0.00292987 -0.00292987 -0.00280779
+ -0.00280779 -0.00280779 -0.00280779 -0.00268571 -0.00268571 -0.00280779
+ -0.00305194 -0.00305194 -0.00305194 -0.00305194 -0.00317402 -0.00317402
+ -0.00317402 -0.00317402 -0.00305194 -0.00305194 -0.00317402 -0.00305194
+ -0.00292987 -0.00280779 -0.00280779 -0.00280779 -0.00268571 -0.00256363
+ -0.00231948 -0.00207532 -0.00195324 -0.00170909 -0.00158701 -0.00134286
+ -0.00122078 -0.00097662 -0.00085454 -0.00061039 -0.00048831 -0.00036623
+ -0.00024416 -0.00012208  0.          0.00012208  0.00024416  0.00048831
+  0.00073247  0.00085454  0.00097662  0.00122078  0.00146493  0.00146493
+  0.00158701  0.00183117  0.00207532  0.00231948  0.00256363  0.00256363
+  0.00256363  0.00268571  0.00292987  0.00280779  0.00280779  0.00268571
+  0.00268571  0.00268571  0.00268571  0.00256363  0.00244156  0.00244156
+  0.00256363  0.00244156  0.0021974   0.00207532  0.00207532  0.0021974
+  0.0021974   0.00207532  0.0021974   0.00231948  0.00244156  0.00256363
+  0.00244156  0.00244156  0.00244156  0.00268571  0.00280779  0.00280779
+  0.00280779  0.00292987  0.00317402  0.00317402  0.00317402  0.00305194
+  0.00305194  0.00305194  0.00292987  0.00268571  0.00256363  0.00256363
+  0.00268571  0.00268571  0.00244156  0.00231948  0.00231948  0.00231948
+  0.0021974 ]
+2025-10-21 07:17:47,801 - linien_common.common - DEBUG - a
+2025-10-21 07:17:47,843 - linien_common.common - DEBUG - b
+2025-10-21 07:17:47,845 - linien_common.common - DEBUG - c
+2025-10-21 07:17:47,849 - linien_common.common - DEBUG - Exiting from get_lock_point
+2025-10-21 07:17:47,852 - linien_server.autolock.autolock - DEBUG - Lock points obtained
+2025-10-21 07:17:47,855 - linien_server.autolock.autolock - DEBUG - First error signal saved
+2025-10-21 07:17:47,856 - linien_server.autolock.algorithm_selection - DEBUG - _JJ_ autolock mode is not autodetect
+2025-10-21 07:17:47,857 - linien_server.autolock.autolock - DEBUG - algorithm selected
+2025-10-21 07:17:47,858 - linien_server.autolock.autolock - DEBUG - Start autolock with mode 1
+2025-10-21 07:17:48,301 - linien_server.autolock.robust - DEBUG - handle new spectrum
+2025-10-21 07:17:48,363 - linien_server.autolock.robust - ERROR - Not enough spectra collected:2 of 5
+2025-10-21 07:17:48,706 - linien_server.autolock.robust - DEBUG - handle new spectrum
+2025-10-21 07:17:48,735 - linien_server.autolock.robust - ERROR - Not enough spectra collected:3 of 5
+2025-10-21 07:17:49,171 - linien_server.autolock.robust - DEBUG - handle new spectrum
+2025-10-21 07:17:49,199 - linien_server.autolock.robust - ERROR - Not enough spectra collected:4 of 5
+2025-10-21 07:17:49,608 - linien_server.autolock.robust - DEBUG - handle new spectrum
+2025-10-21 07:17:49,640 - linien_server.autolock.robust - DEBUG - enough spectra!, calculate
+2025-10-21 07:17:49,766 - linien_server.autolock.robust - DEBUG - x scale is 60
+2025-10-21 07:17:49,967 - linien_server.autolock.robust - DEBUG - Try out tolerance 0.95
+2025-10-21 07:17:49,969 - linien_server.autolock.robust - DEBUG - final wait time is 1 samples
+2025-10-21 07:17:50,106 - linien_server.autolock.robust - DEBUG - Description is [(50, 0), (734, 0)]
+2025-10-21 07:17:50,108 - linien_server.autolock.robust - DEBUG - Calculation of autolock description took 0.4660983085632324
+2025-10-21 07:17:50,169 - linien_server.server - ERROR - incorrect data received for lock state, ignoring!
+2025-10-21 07:17:55,822 - linien_server.autolock.robust - ERROR - Waited too long for autolock! Aborting
+2025-10-21 08:21:04,273 - linien_server.cli - INFO - Stopping Linien server
+2025-10-21 08:21:04,401 - linien_server.cli - INFO - Stopped Linien server
+2025-10-21 08:21:13,000 - linien_server.cli - DEBUG - Copied linien-server.service to /etc/systemd/system
+2025-10-21 08:21:13,001 - linien_server.cli - INFO - Starting Linien server
+2025-10-21 08:21:13,069 - linien_server.cli - INFO - Started Linien server
+2025-10-21 08:21:27,121 - linien_server.cli - DEBUG - Copied linien-server.service to /etc/systemd/system
+2025-10-21 08:21:27,123 - linien_server.cli - INFO - Starting Linien server
+2025-10-21 08:21:27,174 - linien_server.cli - INFO - Started Linien server
+2025-10-21 08:21:30,158 - linien_server.parameters - INFO - Restoring parameters from /root/.local/share/linien/parameters.json
+2025-10-21 08:21:30,161 - linien_server.parameters - INFO - Restored parameters from /root/.local/share/linien/parameters.json
+2025-10-21 08:21:30,167 - linien_common.influxdb - INFO - Saved InfluxDB credentials to /root/.local/share/linien/influxdb_credentials.json
+2025-10-21 08:21:30,381 - linien_server.acquisition - INFO - Using fpgautil to deploy gateware.
+2025-10-21 08:21:30,535 - linien_server.server - DEBUG - Ping  1
+2025-10-21 08:21:30,577 - linien_server.mdio_tool - INFO - Disabling ethernet blinking with mdio-tool at /usr/local/lib/python3.10/dist-packages/linien_server/mdio-tool
+2025-10-21 08:21:30,599 - linien_server.server - INFO - Starting server.
+2025-10-21 08:21:31,549 - linien_server.server - INFO - Client Service connected to Server
+2025-10-21 08:21:31,568 - linien_server.server - DEBUG - Ping  2
+2025-10-21 08:21:31,575 - linien_server.server - INFO - ['ALIASES', '__class__', '__delattr__', '__dict__', '__dir__', '__doc__', '__eq__', '__format__', '__ge__', '__getattribute__', '__gt__', '__hash__', '__init__', '__init_subclass__', '__le__', '__lt__', '__module__', '__ne__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__setattr__', '__sizeof__', '__slots__', '__str__', '__subclasshook__', '__weakref__', '_connect', '_protocol', '_rpyc_delattr', '_rpyc_setattr', 'auth_hash', 'exposed_get_service_aliases', 'exposed_get_service_name', 'exposed_notify_new_data', 'exposed_reset_new_data_event', 'exposed_uuid', 'get_service_aliases', 'get_service_name', 'is_new_data_available', 'new_data_event', 'on_connect', 'on_disconnect']
+2025-10-21 08:21:32,599 - linien_server.server - DEBUG - Ping  3
+2025-10-21 08:21:32,618 - linien_server.server - DEBUG - Further pings will be suppressed
+2025-10-21 08:24:26,642 - linien_server.server - DEBUG - starting autolock
+2025-10-21 08:24:26,659 - linien_server.autolock.autolock - DEBUG - Entered in run
+2025-10-21 08:24:26,669 - linien_server.autolock.autolock - DEBUG - x0: 718, x1: 911
+2025-10-21 08:24:26,676 - linien_server.autolock.autolock - DEBUG - Saving first error signal
+2025-10-21 08:24:26,678 - linien_server.autolock.autolock - DEBUG - Entered in record_first_error_signal
+2025-10-21 08:24:26,679 - linien_common.common - DEBUG - Entered in get_lock_point
+2025-10-21 08:24:26,680 - linien_common.common - DEBUG - length 2048
+2025-10-21 08:24:26,681 - linien_common.common - DEBUG - x0 718 x1 911
+2025-10-21 08:24:26,707 - linien_common.common - DEBUG - cropped_data [-0.00024416 -0.00036623 -0.00024416 -0.00024416 -0.00036623 -0.00036623
+ -0.00036623 -0.00036623 -0.00024416 -0.00036623 -0.00036623 -0.00036623
+ -0.00036623 -0.00036623 -0.00036623 -0.00036623 -0.00036623 -0.00036623
+ -0.00048831 -0.00048831 -0.00048831 -0.00048831 -0.00048831 -0.00048831
+ -0.00048831 -0.00048831 -0.00048831 -0.00061039 -0.00061039 -0.00061039
+ -0.00048831 -0.00048831 -0.00048831 -0.00048831 -0.00061039 -0.00061039
+ -0.00073247 -0.00073247 -0.00085454 -0.00073247 -0.00073247 -0.00073247
+ -0.00085454 -0.00085454 -0.00085454 -0.00085454 -0.00085454 -0.00085454
+ -0.00097662 -0.00097662 -0.00097662 -0.00097662 -0.00097662 -0.00097662
+ -0.0010987  -0.0010987  -0.00122078 -0.00134286 -0.00134286 -0.00134286
+ -0.00134286 -0.00134286 -0.00146493 -0.00146493 -0.00158701 -0.00158701
+ -0.00170909 -0.00183117 -0.00183117 -0.00183117 -0.00195324 -0.00207532
+ -0.0021974  -0.0021974  -0.0021974  -0.00231948 -0.00231948 -0.00244156
+ -0.00244156 -0.00244156 -0.00256363 -0.00256363 -0.00256363 -0.00244156
+ -0.00244156 -0.00244156 -0.00256363 -0.00256363 -0.00256363 -0.00268571
+ -0.00268571 -0.00268571 -0.00280779 -0.00268571 -0.00268571 -0.00256363
+ -0.00268571 -0.00280779 -0.00280779 -0.00280779 -0.00280779 -0.00292987
+ -0.00305194 -0.00292987 -0.00292987 -0.00280779 -0.00292987 -0.00292987
+ -0.00280779 -0.00280779 -0.00280779 -0.00292987 -0.00292987 -0.00268571
+ -0.00244156 -0.00231948 -0.0021974  -0.00207532 -0.00183117 -0.00158701
+ -0.00146493 -0.00134286 -0.0010987  -0.00097662 -0.00073247 -0.00048831
+ -0.00036623 -0.00012208  0.00012208  0.00024416  0.00048831  0.00061039
+  0.00085454  0.00097662  0.0010987   0.00122078  0.00146493  0.00170909
+  0.00183117  0.00183117  0.00207532  0.00231948  0.00256363  0.00256363
+  0.00256363  0.00268571  0.00280779  0.00280779  0.00268571  0.00256363
+  0.00256363  0.00268571  0.00268571  0.00244156  0.00231948  0.00231948
+  0.00244156  0.00231948  0.0021974   0.00195324  0.00195324  0.00207532
+  0.0021974   0.0021974   0.0021974   0.00231948  0.00256363  0.00268571
+  0.00268571  0.00256363  0.00268571  0.00280779  0.00292987  0.00292987
+  0.00292987  0.00305194  0.00317402  0.00317402  0.00305194  0.00292987
+  0.00305194  0.00317402  0.00317402  0.00305194  0.00292987  0.00280779
+  0.00268571  0.00256363  0.00244156  0.00207532  0.0021974   0.0021974
+  0.0021974 ]
+2025-10-21 08:24:26,708 - linien_common.common - DEBUG - a
+2025-10-21 08:24:26,710 - linien_common.common - DEBUG - b
+2025-10-21 08:24:26,712 - linien_common.common - DEBUG - c
+2025-10-21 08:24:26,713 - linien_common.common - DEBUG - Exiting from get_lock_point
+2025-10-21 08:24:26,714 - linien_server.autolock.autolock - DEBUG - Lock points obtained
+2025-10-21 08:24:26,717 - linien_server.autolock.autolock - DEBUG - First error signal saved
+2025-10-21 08:24:26,719 - linien_server.autolock.algorithm_selection - DEBUG - _JJ_ autolock mode is not autodetect
+2025-10-21 08:24:26,720 - linien_server.autolock.autolock - DEBUG - algorithm selected
+2025-10-21 08:24:26,721 - linien_server.autolock.autolock - DEBUG - Start autolock with mode 1
+2025-10-21 08:24:27,081 - linien_server.autolock.robust - DEBUG - handle new spectrum
+2025-10-21 08:24:27,129 - linien_server.autolock.robust - ERROR - Not enough spectra collected:2 of 5
+2025-10-21 08:24:27,440 - linien_server.autolock.robust - DEBUG - handle new spectrum
+2025-10-21 08:24:27,468 - linien_server.autolock.robust - ERROR - Not enough spectra collected:3 of 5
+2025-10-21 08:24:27,874 - linien_server.autolock.robust - DEBUG - handle new spectrum
+2025-10-21 08:24:27,903 - linien_server.autolock.robust - ERROR - Not enough spectra collected:4 of 5
+2025-10-21 08:24:28,316 - linien_server.autolock.robust - DEBUG - handle new spectrum
+2025-10-21 08:24:28,349 - linien_server.autolock.robust - DEBUG - enough spectra!, calculate
+2025-10-21 08:24:28,350 - linien_server.autolock.robust - DEBUG - Entered in calculate_autolock_instructions
+2025-10-21 08:24:28,359 - linien_server.autolock.robust - DEBUG - Saved new robust_spectra.npy and target_idxs.npy
+2025-10-21 08:24:28,478 - linien_server.autolock.robust - DEBUG - x scale is 61
+2025-10-21 08:24:28,661 - linien_server.autolock.robust - DEBUG - Try out tolerance 0.95
+2025-10-21 08:24:28,663 - linien_server.autolock.robust - DEBUG - final wait time is 1 samples
+2025-10-21 08:24:28,757 - linien_server.autolock.robust - DEBUG - Try out tolerance 0.9
+2025-10-21 08:24:28,760 - linien_server.autolock.robust - DEBUG - final wait time is 22 samples
+2025-10-21 08:24:28,854 - linien_server.autolock.robust - DEBUG - Description is [(671, 0)]
+2025-10-21 08:24:28,856 - linien_server.autolock.robust - DEBUG - Calculation of autolock description took 0.5054864883422852
+2025-10-21 08:24:28,916 - linien_server.server - ERROR - incorrect data received for lock state, ignoring!
+2025-10-21 08:24:34,496 - linien_server.autolock.robust - ERROR - Waited too long for autolock! Aborting
