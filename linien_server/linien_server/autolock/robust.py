@@ -271,6 +271,7 @@ def get_lock_position_from_autolock_instructions(
             and abs(value) >= abs(current_threshold)
             and idx - last_detected_peak > wait_for
         ):
+            print('detected peak at', idx,  'with height', value, 'for threshold', current_threshold)
             description_idx += 1
             last_detected_peak = idx
 
