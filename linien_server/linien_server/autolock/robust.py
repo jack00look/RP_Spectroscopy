@@ -17,6 +17,7 @@
 
 import logging
 from time import time
+from scipy.signal import correlate
 
 import numpy as np
 from linien_common.common import (
@@ -172,7 +173,11 @@ class RobustAutolock:
         self.stop_timeout()
 
 
-def calculate_autolock_instructions(spectra_with_jitter, target_idxs):
+def calculate_autolock_instructions(spectra_with_jitter, target_idxs, zero_crossing_correction):
+    '''
+    zero_crossing_correction: - (+) if the shift in order to find easily the peaks has to be downwords (upwords)
+    '''
+
     spectra, crop_left = crop_spectra_to_same_view(spectra_with_jitter)
 
     target_idxs = [idx - crop_left for idx in target_idxs]
@@ -184,10 +189,18 @@ def calculate_autolock_instructions(spectra_with_jitter, target_idxs):
     logger.debug(f"x scale is {time_scale}")
 
     prepared_spectrum = get_diff_at_time_scale(sum_up_spectrum(spectra[0]), time_scale)
-    peaks = get_all_peaks(prepared_spectrum, target_idxs)
+    shift_prepared = np.argmax(correlate(prepared_spectrum,spectra[0]))-len(prepared_spectrum)
+    target_idxs_prepared = [idx + shift_prepared for idx in target_idxs]
+
+    prepared_spectrum_offset = [value + zero_crossing_correction for value in prepared_spectrum]
+    peaks_offset = get_all_peaks(prepared_spectrum_offset, target_idxs_prepared)
+    peaks = []
+    for i in range(len(peaks_offset)):
+        peaks.append((peaks_offset[i][0], peaks_offset[i][1] - zero_crossing_correction))
+
     y_scale = peaks[0][1]
 
-    lock_regions = [get_lock_region(spectrum, target_idxs) for spectrum in spectra]
+    lock_regions = [get_lock_region(spectrum, target_idxs, prepared_spectrum) for spectrum in spectra]
 
     for tolerance_factor in [0.95, 0.9, 0.85, 0.8, 0.75, 0.7, 0.65, 0.6, 0.55, 0.5]:
         logger.debug(f"Try out tolerance {tolerance_factor}")
@@ -206,7 +219,7 @@ def calculate_autolock_instructions(spectra_with_jitter, target_idxs):
         # now find out how much we have to wait in the end (because we detect the peak
         # too early because our threshold is too low)
         target_peak_described_height = peaks_filtered[0][1]
-        target_peak_idx = get_target_peak(prepared_spectrum, target_idxs)
+        target_peak_idx = get_target_peak(prepared_spectrum, target_idxs_prepared)
         current_idx = target_peak_idx
         while True:
             current_idx -= 1
@@ -223,7 +236,7 @@ def calculate_autolock_instructions(spectra_with_jitter, target_idxs):
         for peak_position, peak_height in list(reversed(peaks_filtered)):
             # TODO: this .9 factor is very arbitrary.
             description.append(
-                (int(0.9 * (peak_position - last_peak_position)), int(peak_height))
+                (int(0.97 * (peak_position - last_peak_position)), int(peak_height))
             )
             last_peak_position = peak_position
         print('for tolerance', tolerance_factor, 'description is', description)

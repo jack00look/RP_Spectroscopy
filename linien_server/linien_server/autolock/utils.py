@@ -149,10 +149,10 @@ def get_target_peak(summed_xscaled, target_idxs):
     # in the selected region, we may have 1 minimum and one maximum
     # we know that we are interested in the "left" extremum --> sort extrema
     # by index and take the first one
-    print('extrema are', np.argmin(selected_region), np.argmax(selected_region))
-    print('selected region is from ', target_idxs[0], 'to', target_idxs[1])
+    #print('extrema are', np.argmin(selected_region), np.argmax(selected_region))
+    #print('selected region is from ', target_idxs[0], 'to', target_idxs[1])
     extremum = np.min([np.argmin(selected_region), np.argmax(selected_region)])
-    print('extremum is at', extremum)
+    #print('extremum is at', extremum)
 
     current_idx = target_idxs[0] + extremum #if there is a minimum or a maximum before the 
     #zero-crossing, inside the target region, we will set the region within which 
