@@ -123,6 +123,8 @@ class Autolock:
 
     def start_autolock(self, mode):
         logger.debug(f"Start autolock with mode {mode}")
+        logger.debug(f"additional_spectra: {self.additional_spectra}")
+        logger.debug(f"first_error_signal: {self.first_error_signal}")
         self.parameters.autolock_mode.value = mode
 
         self.algorithm = [None, RobustAutolock, SimpleAutolock][mode](

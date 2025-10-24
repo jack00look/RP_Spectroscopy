@@ -176,7 +176,8 @@ class RobustAutolock:
 
 def calculate_autolock_instructions(spectra_with_jitter, target_idxs):
     logger.debug("Entered in calculate_autolock_instructions")
-    np.save('/root/.local/share/linien/robust_spectra.npy',np.array(spectra_with_jitter)) 
+    np.save('/root/.local/share/linien/robust_spectra.npy',np.array(spectra_with_jitter))
+    logger.debug(f'min and max values of the saved spectra: ({spectra_with_jitter[0].min()},{spectra_with_jitter[0].max()}), ({spectra_with_jitter[1].min()},{spectra_with_jitter[1].max()}), ({spectra_with_jitter[2].min()},{spectra_with_jitter[2].max()}), ({spectra_with_jitter[3].min()},{spectra_with_jitter[3].max()}), ({spectra_with_jitter[4].min()},{spectra_with_jitter[4].max()})')
     np.save('/root/.local/share/linien/target_idxs.npy',np.array([target_idxs[0],target_idxs[1]]))
     logger.debug("Saved new robust_spectra.npy and target_idxs.npy")
     spectra, crop_left = crop_spectra_to_same_view(spectra_with_jitter)
