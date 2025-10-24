@@ -172,6 +172,25 @@ class RobustAutolock:
     def after_lock(self):
         self.stop_timeout()
 
+    
+
+def get_all_peaks_improved(prepared_spectrum, target_idxs_prepared):
+    
+    shift_extrema = (-max(prepared_spectrum), -min(prepared_spectrum)) #I want furst to shift everything down and then go up step by step
+    shifts = np.linspace(shift_extrema[0], shift_extrema[1], num=6).astype(int)
+    peaks = []
+    for shift in shifts:
+        prepared_spectrum_shifted = [value + shift for value in prepared_spectrum]
+        temporary_peaks = get_all_peaks(prepared_spectrum_shifted, target_idxs_prepared)
+        #print("temporary peaks", temporary_peaks)
+        if len(temporary_peaks) > len(peaks):
+            peaks = temporary_peaks
+
+    for i in range(len(peaks)):
+        peaks[i] = (peaks[i][0], prepared_spectrum[peaks[i][0]])
+
+    #print("final peaks", peaks)
+    return peaks
 
 def calculate_autolock_instructions(spectra_with_jitter, target_idxs, zero_crossing_correction):
     '''
@@ -192,11 +211,12 @@ def calculate_autolock_instructions(spectra_with_jitter, target_idxs, zero_cross
     shift_prepared = np.argmax(correlate(prepared_spectrum,spectra[0]))-len(prepared_spectrum)
     target_idxs_prepared = [idx + shift_prepared for idx in target_idxs]
 
-    prepared_spectrum_offset = [value + zero_crossing_correction for value in prepared_spectrum]
-    peaks_offset = get_all_peaks(prepared_spectrum_offset, target_idxs_prepared)
-    peaks = []
-    for i in range(len(peaks_offset)):
-        peaks.append((peaks_offset[i][0], peaks_offset[i][1] - zero_crossing_correction))
+    #prepared_spectrum_offset = [value + zero_crossing_correction for value in prepared_spectrum]
+    #peaks_offset = get_all_peaks(prepared_spectrum_offset, target_idxs_prepared)
+    peaks = get_all_peaks_improved(prepared_spectrum, target_idxs_prepared)
+    #peaks = []
+    #for i in range(len(peaks_offset)):
+    #    peaks.append((peaks_offset[i][0], peaks_offset[i][1] - zero_crossing_correction))
 
     y_scale = peaks[0][1]
 

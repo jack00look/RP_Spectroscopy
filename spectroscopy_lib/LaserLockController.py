@@ -438,10 +438,10 @@ class LaserLockController:
                         return
                     elif space_left < free_space / 4:
                         self.logger.debug("Too far left: increase offset to decrease frequency")
-                        offset += offset_small_jump
+                        offset -= offset_small_jump
                     else:
                         self.logger.debug("Too far right: decrease offset to increase frequency")
-                        offset -= offset_small_jump
+                        offset += offset_small_jump
 
                     self.hardware_interface.set_param('big_offset', offset)
                     cnt = 0

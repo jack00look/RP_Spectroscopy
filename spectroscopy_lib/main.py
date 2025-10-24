@@ -13,6 +13,9 @@ from IPython import display
 import logging
 import sys
 
+def from_sweep_signal_to_sweep_signal_raw(sweep_signal):
+        return np.array(sweep_signal, dtype=np.float64) * (2*Vpp)
+
 def setup_logging(logger,logger_file):
     """
     Sets up the logging to stream and file
@@ -306,9 +309,6 @@ class RP_linien:
             error_signal = np.array(to_plot['error_signal_1']).astype(np.float64)
         self.sweep_signal = error_signal
         return error_signal
-
-    def from_sweep_signal_to_sweep_signal_raw(self,sweep_signal):
-        return np.array(sweep_signal, dtype=np.float64) * (2*Vpp)
     
     def lock_laser(self):
         self.delete_history()
