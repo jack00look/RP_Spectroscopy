@@ -3344,3 +3344,43 @@ Scan completed successfully.
 2025-10-24 16:26:33 - LaserLockController - DEBUG - Line is now inside
 2025-10-24 16:26:38 - LaserLockController - INFO - Line LINE_feature_1 is centered at offset 0.9500000000000001.
 2025-10-24 16:26:52 - LaserLockController - INFO - Locking the laser failed :(
+2025-10-27 08:41:32 - LaserLockController - INFO - LaserLockController initialized successfully.
+2025-10-27 08:41:35 - LaserLockController - INFO - Starting scan from 0.8V to 1.0V with 10 points.
+2025-10-27 08:41:50 - LaserLockController - INFO - Scan completed successfully.
+2025-10-27 08:42:03 - LaserLockController - INFO - Saving reference line with key feature_1.
+2025-10-27 08:42:03 - LaserLockController - INFO - Reference line feature_1 saved successfully.
+2025-10-27 08:42:15 - LaserLockController - INFO - Saving reference line with key feature_1.
+2025-10-27 08:42:16 - LaserLockController - INFO - Reference line feature_1 saved successfully.
+2025-10-27 08:42:24 - LaserLockController - INFO - Finding reference lines.
+2025-10-27 08:42:38 - LaserLockController - INFO - Reference lines found successfully.
+2025-10-27 08:42:44 - LaserLockController - DEBUG - Vertical offset = 0.0018516384373204447 to have the zero-crossing placed nicely.
+2025-10-27 08:42:45 - LaserLockController - DEBUG - START offset = 0.9222222222222223
+2025-10-27 08:42:46 - LaserLockController - DEBUG - Line is now inside
+2025-10-27 08:42:51 - LaserLockController - DEBUG - Too far right: decrease offset to increase frequency
+2025-10-27 08:42:53 - LaserLockController - DEBUG - Line is now inside
+2025-10-27 08:42:57 - LaserLockController - DEBUG - Too far right: decrease offset to increase frequency
+2025-10-27 08:42:59 - LaserLockController - DEBUG - Line is now inside
+2025-10-27 08:43:05 - LaserLockController - INFO - Line LINE_feature_1 is centered at offset 0.9422222222222223.
+2025-10-27 08:43:18 - LaserLockController - INFO - Locking the laser failed :(
+2025-10-27 08:50:01 - LaserLockController - INFO - Saving reference line with key feature_1.
+2025-10-27 08:50:02 - LaserLockController - INFO - Reference line feature_1 saved successfully.
+2025-10-27 08:50:08 - LaserLockController - INFO - Saving reference line with key feature_1.
+2025-10-27 08:50:09 - LaserLockController - INFO - Reference line feature_1 saved successfully.
+2025-10-27 08:50:14 - LaserLockController - INFO - Saving reference line with key feature_1.
+2025-10-27 08:50:14 - LaserLockController - INFO - Reference line feature_1 saved successfully.
+2025-10-27 08:50:19 - LaserLockController - INFO - Finding reference lines.
+2025-10-27 08:50:19 - LaserLockController - DEBUG - Setting voltage to 0.9V
+2025-10-27 08:51:34 - LaserLockController - INFO - LaserLockController initialized successfully.
+2025-10-27 08:51:35 - LaserLockController - INFO - Starting scan from 0.8V to 1.0V with 10 points.
+2025-10-27 08:51:51 - LaserLockController - INFO - Scan completed successfully.
+2025-10-27 08:52:06 - LaserLockController - INFO - Saving reference line with key feature_1.
+2025-10-27 08:52:06 - LaserLockController - INFO - Reference line feature_1 saved successfully.
+2025-10-27 08:52:29 - LaserLockController - INFO - Saving reference line with key feature_1.
+2025-10-27 08:52:29 - LaserLockController - INFO - Reference line feature_1 saved successfully.
+2025-10-27 08:52:37 - LaserLockController - INFO - Finding reference lines.
+2025-10-27 08:52:51 - LaserLockController - INFO - Reference lines found successfully.
+2025-10-27 08:52:56 - LaserLockController - DEBUG - Vertical offset = 0.0029961205311273453 to have the zero-crossing placed nicely.
+2025-10-27 08:52:58 - LaserLockController - DEBUG - START offset = 0.9222222222222223
+2025-10-27 08:52:58 - LaserLockController - DEBUG - Line is now inside
+2025-10-27 08:53:04 - LaserLockController - INFO - Line LINE_feature_1 is centered at offset 0.9222222222222223.
+2025-10-27 08:53:19 - LaserLockController - INFO - Locking the laser failed :(

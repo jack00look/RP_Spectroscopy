@@ -183,6 +183,37 @@ def get_all_peaks(summed_xscaled, target_idxs):
 
     return peaks
 
+def get_all_peaks_v2(summed_xscaled, target_idxs):
+    current_idx = get_target_peak(summed_xscaled, target_idxs)
+
+    peaks = []
+    print('first peak is in ', current_idx, ' with value ', summed_xscaled[current_idx])
+    peaks.append((current_idx, summed_xscaled[current_idx]))
+    current_idx -= 5
+    peaks.append((current_idx, summed_xscaled[current_idx]))
+    dummy_idx = current_idx
+    dummy_value = summed_xscaled[dummy_idx]
+
+    while True:
+        if current_idx == 0:
+            break
+        current_idx -= 1
+
+        value = summed_xscaled[current_idx]
+        last_peak_position, last_peak_height = peaks[-1]
+
+        if sign(last_peak_height) == sign(value):
+            if np.abs(value) > np.abs(last_peak_height):
+                peaks[-1] = (current_idx, value)
+        else:
+            peaks.append((current_idx, value))
+            if peaks[-2] == (dummy_idx, dummy_value):
+                peaks.pop(-2)
+    if peaks[-1] == (dummy_idx, dummy_value):
+        peaks.pop(-1)
+
+    return peaks
+
 def crop_spectra_to_same_view(spectra_with_jitter):
     cropped_spectra = []
 
