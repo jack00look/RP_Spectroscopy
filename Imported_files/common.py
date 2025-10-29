@@ -308,6 +308,8 @@ def combine_error_signal(
 
 def check_plot_data(is_locked: bool, plot_data: Dict[str, np.ndarray]) -> bool:
     if is_locked:
+        logger.debug('Entered in check_plot_data and is_locked is True')
+        logger.debug(f'plot_data: {plot_data}')
         if "error_signal" not in plot_data or "control_signal" not in plot_data:
             return False
     else:

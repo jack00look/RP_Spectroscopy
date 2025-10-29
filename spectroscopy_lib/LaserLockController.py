@@ -430,8 +430,9 @@ class LaserLockController:
                         sweep_signal_raw = from_sweep_signal_to_sweep_signal_raw(sweep_signal['y'])
                         print(f"sweep signal raw {sweep_signal_raw}")
                         self.hardware_interface.client.connection.root.start_autolock(lock_start_ind,lock_end_ind,pickle.dumps(sweep_signal_raw))
+                        print("Started autolock")
                         try:
-                            self.hardware_interface.wait_for_lock_status(True)
+                            #self.hardware_interface.wait_for_lock_status(True)
                             self.logger.info("Locking the laser worked \o/")
                         except Exception:
                             self.logger.info("Locking the laser failed :(")

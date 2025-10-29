@@ -28,6 +28,7 @@ from linien_common.common import (
 from linien_server.autolock.utils import (
     crop_spectra_to_same_view,
     get_all_peaks,
+    get_all_peaks_v2,
     get_diff_at_time_scale,
     get_lock_region,
     get_target_peak,
@@ -193,7 +194,7 @@ def calculate_autolock_instructions(spectra_with_jitter, target_idxs):
     prepared_spectrum = get_diff_at_time_scale(sum_up_spectrum(spectra[0]), time_scale)
     shift_prepared = np.argmax(correlate(prepared_spectrum,spectra[0]))-len(prepared_spectrum)
     target_idxs_prepared = [idx + shift_prepared for idx in target_idxs]
-    peaks = get_all_peaks(prepared_spectrum, target_idxs_prepared)
+    peaks = get_all_peaks_v2(prepared_spectrum, target_idxs_prepared)
     y_scale = peaks[0][1]
 
     lock_regions = [get_lock_region(spectrum, target_idxs) for spectrum in spectra]

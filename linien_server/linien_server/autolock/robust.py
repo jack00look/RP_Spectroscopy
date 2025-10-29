@@ -195,6 +195,7 @@ def get_all_peaks_improved(prepared_spectrum, target_idxs_prepared):
 def calculate_autolock_instructions(spectra_with_jitter, target_idxs, zero_crossing_correction):
     '''
     zero_crossing_correction: - (+) if the shift in order to find easily the peaks has to be downwords (upwords)
+    DA TOGLIERE
     '''
 
     spectra, crop_left = crop_spectra_to_same_view(spectra_with_jitter)

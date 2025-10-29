@@ -26,8 +26,8 @@ class NewDataListener:
 
     def notify_new_data(self,value=None):
         if not(self._writeable):
-            #print('parameter ',self._name,' is not writeable')
-            #print('value is ',value)
+            print('parameter ',self._name,' is not writeable')
+            print('value is ',value)
             if value!= self.value:
                 self.new_data_event.set()
                 self.value = value
@@ -71,11 +71,11 @@ class ParameterImplementationBasic:
         This is useful to ensure that the value is set correctly before proceeding.
         """
         self.new_data_listener.reset_new_data_event()
-        #print('new data event reset')
+        print('new data event reset')
         time_0 = time.time()
         while not self.new_data_listener.is_new_data_available():
             self._client.parameters.check_for_changed_parameters()
-            #print('no update yet')
+            print('no update yet')
             if (time.time() - time_0) > timeout:
                 raise TimeoutError(f"Timeout while waiting for parameter {self._name} to update.")
             time.sleep(0.1)  # Sleep to avoid busy waiting
@@ -117,7 +117,10 @@ class ParameterImplementationWriteable(ParameterImplementationBasic):
             self.value = value
             if self._conversion is not None:
                 self.get_local_parameter().value = value * self._conversion
-                self.new_data_listener.set_written_value(self.value * self._conversion)
+                if self._conversion == 1.:
+                    self.new_data_listener.set_written_value(int(value))
+                else:
+                    self.new_data_listener.set_written_value(self.value * self._conversion)
             else:
                 self.get_local_parameter().value = self.value
                 self.new_data_listener.set_written_value(self.value)
@@ -132,7 +135,10 @@ class ParameterImplementationWriteable(ParameterImplementationBasic):
         if self.remote_value is None:
             return None
         if self._conversion is not None:
-            return self.remote_value/self._conversion
+            if self._conversion == 1.:
+                return int(self.remote_value)
+            else:
+                return self.remote_value/self._conversion
         else:
             return self.remote_value
     
@@ -251,7 +257,7 @@ class LinienHardwareInterface:
         wait_for_multiple_parameters_update(self.client, list(self.writeable_params.values()) + list(self.readable_params.values()))
 
         # setup the autolock mode
-        self.client.parameters.autolock_mode_preference.value = AutolockMode.ROBUST # use robust autolock mode
+        self.client.parameters.autolock_mode_preference.value = AutolockMode.SIMPLE # use robust autolock mode
         self.client.parameters.autolock_determine_offset.value = False # do not determine offset automatically
         self.client.connection.root.write_registers()
 
@@ -392,6 +398,7 @@ class LinienHardwareInterface:
         counter = 0
         while True:
             self.readable_params['sweep_signal'].wait_for_update()
+            print("checking lock status...")
             to_plot = pickle.loads(self.readable_params['sweep_signal'].get_raw_value())
             is_locked = "error_signal" in to_plot
 
@@ -399,7 +406,7 @@ class LinienHardwareInterface:
                 break
 
             counter += 1
-            if counter > 10:
+            if counter > 50:
                 raise Exception("waited too long")
 
             time.sleep(1)
