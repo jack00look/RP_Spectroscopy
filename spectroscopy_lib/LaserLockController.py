@@ -432,10 +432,11 @@ class LaserLockController:
                         self.hardware_interface.client.connection.root.start_autolock(lock_start_ind,lock_end_ind,pickle.dumps(sweep_signal_raw))
                         print("Started autolock")
                         try:
-                            #self.hardware_interface.wait_for_lock_status(True)
+                            self.hardware_interface.wait_for_lock_status(True)
                             self.logger.info("Locking the laser worked \o/")
                         except Exception:
                             self.logger.info("Locking the laser failed :(")
+                            self.hardware_interface.client.connection.root.start_sweep()
                         return
                     elif space_left < free_space / 4:
                         self.logger.debug("Too far left: increase offset to decrease frequency")
