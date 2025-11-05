@@ -5157,7 +5157,8 @@ ValueError: attempt to get argmin of an empty sequence
 2025-11-04 09:44:47,799 - linien_server.autolock.autolock - DEBUG - check_plot_data: True
 2025-11-04 09:44:47,896 - linien_server.autolock.robust - DEBUG - handle new spectrum
 2025-11-04 09:44:47,924 - linien_server.autolock.robust - DEBUG - enough spectra!, calculate
-2025-11-04 09:44:48,089 - linien_server.autolock.autolock - ERROR - Error while handling new spectrum
+2025-11-04 09:44:48,089 - linien_server.autolock.autolock - ERROR - 
+
 Traceback (most recent call last):
   File "/usr/local/lib/python3.10/dist-packages/linien_server/autolock/autolock.py", line 212, in react_to_new_spectrum
     return self.algorithm.handle_new_spectrum(combined_error_signal)
