@@ -165,12 +165,12 @@ class Autolock:
         if self.parameters.pause_acquisition.value:
             return
         
-        logger.debug(f'plot_data: {plot_data}, self.parameters.autolock_running.value: {self.parameters.autolock_running.value}')
+        #logger.debug(f'plot_data: {plot_data}, self.parameters.autolock_running.value: {self.parameters.autolock_running.value}')
         if plot_data is None or not self.parameters.autolock_running.value:
             return
 
         plot_data_unpickled = pickle.loads(plot_data)
-        logger.debug(f'plot_data_unpickled: {plot_data_unpickled}')
+        #logger.debug(f"plot_data_unpickled? {if plot_data_unpickled is not None}"
         if plot_data_unpickled is None:
             return
 
