@@ -52,7 +52,7 @@ def get_lock_region(spectrum, target_idxs):
         walk_until_sign_changes(extrema[1], 1),
     )
 
-def get_lock_region_v2(spectrum, target_idxs, prepared_spectrum=None):
+def get_lock_region_v2(spectrum, target_idxs, prepared_spectrum=None, time_scale=None):
     """Given a spectrum and the points that the user selected for locking,
     calculate the region where locking will work. This is the region between the
     next zero crossings after the extrema."""
@@ -78,17 +78,36 @@ def get_lock_region_v2(spectrum, target_idxs, prepared_spectrum=None):
                 #print('found sign change at', current_idx)
                 return current_idx - direction
     
-    def walk_until_slope_changes(start_idx, direction, prepared_spectrum):
-        current_idx = start_idx
-        jump = 10
-        relative_variations = []
-        while True:
-            relative_variation = (prepared_spectrum[current_idx+jump*direction] - prepared_spectrum[current_idx])/prepared_spectrum[current_idx+jump*direction]
-            relative_variations.append(relative_variation)
-            if np.abs(relative_variation) > 2: # arbitrary threshold to detect slope change
-                #return int((current_idx+start_idx)*(1./2.))
-                return current_idx
-            current_idx += direction
+    def walk_until_slope_changes(start_idx, direction, prepared_spectrum, time_scale):
+
+        prepared_spectrum = np.array(prepared_spectrum)
+        derivative_prepared_spectrum = prepared_spectrum[1:] - prepared_spectrum[:-1]
+        derivative_prepared_spectrum_smooth = get_diff_at_time_scale(sum_up_spectrum(derivative_prepared_spectrum), time_scale)
+
+        zero_crossings_smooth_derivative = []
+        previous_value = derivative_prepared_spectrum_smooth[0]
+        for i in range(1, len(derivative_prepared_spectrum_smooth)):
+            current_value = derivative_prepared_spectrum_smooth[i]
+            if previous_value*current_value <= 0 :
+                zero_crossings_smooth_derivative.append(i-time_scale//2) #we take into account the delay introduced by smoothing
+            previous_value = current_value
+
+        #zero_crossings_smooth_derivative = np.array(zero_crossings_smooth_derivative)
+        logger.debug(f"Zero crossings of smoothed derivative: {zero_crossings_smooth_derivative}")
+        if direction == -1:
+            logger.debug(f"start_idx - time_scale//5: {start_idx - time_scale//5}")
+            #considered_zeros = zero_crossings_smooth_derivative[:start_idx - time_scale//5] #start_idx and the maximum of that peak
+            considered_zeros = [z for z in zero_crossings_smooth_derivative if z <= start_idx - time_scale//5]
+            logger.debug(f"Considered zeros (backward): {considered_zeros}")
+            #could not coincide due to the moving average. So we take a small margin
+            return considered_zeros[-1]
+        else:
+            logger.debug(f"start_idx + time_scale//5: {start_idx + time_scale//5}")
+            #considered_zeros = zero_crossings_smooth_derivative[start_idx + time_scale//5:]
+            considered_zeros = [z for z in zero_crossings_smooth_derivative if z >= start_idx + time_scale//5]
+            logger.debug(f"Considered zeros (forward): {considered_zeros}")
+            return considered_zeros[0]
+        
 
     def walk_until_signal_is_constant(start_idx, direction, prepared_spectrum):
         '''
@@ -124,8 +143,8 @@ def get_lock_region_v2(spectrum, target_idxs, prepared_spectrum=None):
             previous_average = current_average
         
     return (
-        max(walk_until_average_reaches_minimum_and_then_increases(extrema[0], -1, prepared_spectrum), walk_until_sign_changes(extrema[0], -1)),
-        min(walk_until_average_reaches_minimum_and_then_increases(extrema[1], 1, prepared_spectrum), walk_until_sign_changes(extrema[1], 1)),
+        max(walk_until_slope_changes(extrema[0], -1, prepared_spectrum, time_scale), walk_until_sign_changes(extrema[0], -1)),
+        min(walk_until_slope_changes(extrema[1], 1, prepared_spectrum, time_scale), walk_until_sign_changes(extrema[1], 1)),
     )
 
 
@@ -237,25 +256,18 @@ def crop_spectra_to_same_view(spectra_with_jitter):
     logger.debug("Entered in crop_spectra_to_same_view")
     cropped_spectra = []
 
-    shifts = []
+    shifts = [1] # first spectrum is the reference
 
     correlations = []
 
-    for idx, spectrum in enumerate(spectra_with_jitter):
-        if idx == 0:
-            #np.save('/root/.local/share/linien/spectrum0_in_crop.npy',np.array([spectrum,spectra_with_jitter[0]]))
-            logger.debug("Saved new spectrum0_in_crop.npy")
+    for idx, spectrum in enumerate(spectra_with_jitter[1:]):
         correlate_temp = correlate(spectra_with_jitter[0], spectrum)
         correlations.append(np.array(correlate_temp))
         shift = np.argmax(correlate_temp) - len(spectrum)
         
-        logger.debug(f"correlation max: {np.max(correlate_temp)}")
-        logger.debug(f"correlation argmax: {np.argmax(correlate_temp)}")
-        logger.debug(f"s - s_jitter: {spectrum[100:105] - spectra_with_jitter[0][100:105]}")
+        #logger.debug(f"correlation max: {np.max(correlate_temp)}")
+        #logger.debug(f"correlation argmax: {np.argmax(correlate_temp)}")
         shifts.append(-shift)
-
-    #np.save('/root/.local/share/linien/correlations.npy',np.array(correlations))
-    logger.debug("Saved new correlations.npy")
 
     logger.debug(f"Shifts calculated for cropping: {shifts}")
 

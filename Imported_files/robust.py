@@ -290,7 +290,7 @@ def calculate_autolock_instructions_v2(spectra_with_jitter, target_idxs):
 
     y_scale = peaks[0][1]
 
-    lock_regions = [get_lock_region_v2(spectrum, target_idxs, prepared_spectrum) for spectrum in spectra] #CHANGED CODE. Use v2 lock region function.
+    lock_regions = [get_lock_region_v2(spectrum, target_idxs, prepared_spectrum, time_scale) for spectrum in spectra] #CHANGED CODE. Use v2 lock region function.
     
     logger.debug(f"Determined lock regions: {lock_regions}")
 

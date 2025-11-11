@@ -71,9 +71,6 @@ class BaseService(rpyc.Service):
 
     def on_connect(self, conn: Connection) -> None:
         self._uuid_mapping[conn] = conn.root.uuid
-        self._conn = conn
-        logger.info('Client Service connected to Server')
-        logger.info(dir(self._conn.root))
 
     def on_disconnect(self, conn: Connection) -> None:
         uuid = self._uuid_mapping[conn]
@@ -192,9 +189,6 @@ class RedPitayaControlService(BaseService, LinienControlService):
             sleep(1)
 
     def _push_acquired_data_to_parameters(self, stop_event: Event):
-        logger.debug("Entered in _push_acquired_data_to_parameters")
-        logger.debug(f"stop_event: {stop_event.is_set()}")
-
         last_hash = None
         while not stop_event.is_set():
             (
@@ -204,12 +198,6 @@ class RedPitayaControlService(BaseService, LinienControlService):
                 new_data,
                 data_uuid,
             ) = self.registers.acquisition.exposed_return_data(last_hash)
-            #logger.debug("Inside data pushing loop")
-            #logger.debug(f"new_data_returned: {new_data_returned}")
-            #logger.debug(f"new_hash: {new_hash}")
-            #logger.debug(f"data_was_raw: {data_was_raw}")
-            #logger.debug(f"new_data: {new_data}")
-            #logger.debug(f"data_uuid: {data_uuid}")
             if new_data_returned:
                 last_hash = new_hash
             # When a parameter is changed, `pause_acquisition` is set. This means that
@@ -220,12 +208,9 @@ class RedPitayaControlService(BaseService, LinienControlService):
                     continue
 
                 data_loaded = pickle.loads(new_data)
-                #logger.debug(f"data_loaded : {data_loaded}")
 
                 if not data_was_raw:
                     is_locked = self.parameters.lock.value
-
-                    logger.debug(f"is_locked: {is_locked}")
 
                     if not check_plot_data(is_locked, data_loaded):
                         logger.error(
@@ -272,7 +257,6 @@ class RedPitayaControlService(BaseService, LinienControlService):
 
     def exposed_start_autolock(self, x0, x1, spectrum, additional_spectra=None):
         spectrum = pickle.loads(spectrum)
-        logger.debug('starting autolock')
         # start_watching = self.parameters.watch_lock.value
         start_watching = False
         auto_offset = self.parameters.autolock_determine_offset.value
