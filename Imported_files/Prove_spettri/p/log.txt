@@ -1,0 +1,126 @@
+2025-11-11 08:20:45,048 - linien_server.cli - INFO - Stopping Linien server
+2025-11-11 08:20:45,186 - linien_server.cli - INFO - Stopped Linien server
+2025-11-11 08:20:48,368 - linien_server.cli - DEBUG - Copied linien-server.service to /etc/systemd/system
+2025-11-11 08:20:48,370 - linien_server.cli - INFO - Starting Linien server
+2025-11-11 08:20:48,435 - linien_server.cli - INFO - Started Linien server
+2025-11-11 08:20:58,808 - linien_server.cli - DEBUG - Copied linien-server.service to /etc/systemd/system
+2025-11-11 08:20:58,810 - linien_server.cli - INFO - Starting Linien server
+2025-11-11 08:20:58,872 - linien_server.cli - INFO - Started Linien server
+2025-11-11 08:21:07,303 - linien_server.parameters - INFO - Restoring parameters from /root/.local/share/linien/parameters.json
+2025-11-11 08:21:07,309 - linien_server.parameters - INFO - Restored parameters from /root/.local/share/linien/parameters.json
+2025-11-11 08:21:07,314 - linien_common.influxdb - INFO - Saved InfluxDB credentials to /root/.local/share/linien/influxdb_credentials.json
+2025-11-11 08:21:07,541 - linien_server.acquisition - INFO - Using fpgautil to deploy gateware.
+2025-11-11 08:21:07,709 - linien_server.server - DEBUG - Ping  1
+2025-11-11 08:21:07,765 - linien_server.mdio_tool - INFO - Disabling ethernet blinking with mdio-tool at /usr/local/lib/python3.10/dist-packages/linien_server/mdio-tool
+2025-11-11 08:21:07,807 - linien_server.server - INFO - Starting server.
+2025-11-11 08:21:08,749 - linien_server.server - DEBUG - Ping  2
+2025-11-11 08:21:09,776 - linien_server.server - DEBUG - Ping  3
+2025-11-11 08:21:09,782 - linien_server.server - DEBUG - Further pings will be suppressed
+2025-11-11 08:21:33,499 - linien_server.autolock.autolock - DEBUG - Initialize Autolock
+2025-11-11 08:21:33,500 - linien_server.autolock.autolock - DEBUG - Start the autolock
+2025-11-11 08:21:33,501 - linien_server.autolock.autolock - DEBUG - (x0, x1) = (1150,1350)
+2025-11-11 08:21:33,506 - linien_server.autolock.autolock - DEBUG - Start autolock with mode 1
+2025-11-11 08:21:33,879 - linien_server.autolock.autolock - DEBUG - entered in react_new_spectrum
+2025-11-11 08:21:33,881 - linien_server.autolock.autolock - DEBUG - pause_acquisition: False
+2025-11-11 08:21:33,882 - linien_server.autolock.autolock - DEBUG - check_plot_data: True
+2025-11-11 08:21:33,983 - linien_server.autolock.robust - DEBUG - handle new spectrum
+2025-11-11 08:21:34,031 - linien_server.autolock.robust - ERROR - Not enough spectra collected:2 of 5
+2025-11-11 08:21:34,274 - linien_server.autolock.autolock - DEBUG - entered in react_new_spectrum
+2025-11-11 08:21:34,276 - linien_server.autolock.autolock - DEBUG - pause_acquisition: False
+2025-11-11 08:21:34,279 - linien_server.autolock.autolock - DEBUG - check_plot_data: True
+2025-11-11 08:21:34,379 - linien_server.autolock.robust - DEBUG - handle new spectrum
+2025-11-11 08:21:34,408 - linien_server.autolock.robust - ERROR - Not enough spectra collected:3 of 5
+2025-11-11 08:21:34,672 - linien_server.autolock.autolock - DEBUG - entered in react_new_spectrum
+2025-11-11 08:21:34,674 - linien_server.autolock.autolock - DEBUG - pause_acquisition: False
+2025-11-11 08:21:34,676 - linien_server.autolock.autolock - DEBUG - check_plot_data: True
+2025-11-11 08:21:34,776 - linien_server.autolock.robust - DEBUG - handle new spectrum
+2025-11-11 08:21:34,805 - linien_server.autolock.robust - ERROR - Not enough spectra collected:4 of 5
+2025-11-11 08:21:35,061 - linien_server.autolock.autolock - DEBUG - entered in react_new_spectrum
+2025-11-11 08:21:35,063 - linien_server.autolock.autolock - DEBUG - pause_acquisition: False
+2025-11-11 08:21:35,065 - linien_server.autolock.autolock - DEBUG - check_plot_data: True
+2025-11-11 08:21:35,165 - linien_server.autolock.robust - DEBUG - handle new spectrum
+2025-11-11 08:21:35,193 - linien_server.autolock.robust - DEBUG - enough spectra!, calculate
+2025-11-11 08:21:35,195 - linien_server.autolock.robust - DEBUG - Entered in calculate_autolock_instructions_v2
+2025-11-11 08:21:35,200 - linien_server.autolock.robust - DEBUG - Saved new robust_spectra.npy and target_idxs.npy
+2025-11-11 08:21:35,201 - linien_server.autolock.utils - DEBUG - Entered in crop_spectra_to_same_view
+2025-11-11 08:21:35,366 - linien_server.autolock.utils - DEBUG - Shifts calculated for cropping: [22, -2, 1, -2, -3]
+2025-11-11 08:21:35,370 - linien_server.autolock.robust - DEBUG - Saved new robust_spectra_cropped.npy
+2025-11-11 08:21:35,371 - linien_server.autolock.utils - DEBUG - Entered in get_time_scale
+2025-11-11 08:21:35,372 - linien_server.autolock.utils - DEBUG - Spectrum length:2023
+2025-11-11 08:21:35,375 - linien_server.autolock.utils - DEBUG - Spectrum: [-2 -1 -1 -1 -2]...[3 3 3 3 3]
+2025-11-11 08:21:35,376 - linien_server.autolock.utils - DEBUG - Target indices: [1211, 1246]
+2025-11-11 08:21:35,378 - linien_server.autolock.utils - DEBUG - Entered in get_time_scale
+2025-11-11 08:21:35,380 - linien_server.autolock.utils - DEBUG - Spectrum length:2023
+2025-11-11 08:21:35,384 - linien_server.autolock.utils - DEBUG - Spectrum: [ 0  0  0 -1 -1]...[3 3 3 3 3]
+2025-11-11 08:21:35,385 - linien_server.autolock.utils - DEBUG - Target indices: [1211, 1246]
+2025-11-11 08:21:35,388 - linien_server.autolock.utils - DEBUG - Entered in get_time_scale
+2025-11-11 08:21:35,389 - linien_server.autolock.utils - DEBUG - Spectrum length:2023
+2025-11-11 08:21:35,393 - linien_server.autolock.utils - DEBUG - Spectrum: [ 0 -1 -1 -1 -1]...[3 3 3 3 3]
+2025-11-11 08:21:35,394 - linien_server.autolock.utils - DEBUG - Target indices: [1211, 1246]
+2025-11-11 08:21:35,395 - linien_server.autolock.utils - DEBUG - Entered in get_time_scale
+2025-11-11 08:21:35,397 - linien_server.autolock.utils - DEBUG - Spectrum length:2023
+2025-11-11 08:21:35,399 - linien_server.autolock.utils - DEBUG - Spectrum: [-1 -1  0 -1 -1]...[3 3 3 3 3]
+2025-11-11 08:21:35,400 - linien_server.autolock.utils - DEBUG - Target indices: [1211, 1246]
+2025-11-11 08:21:35,402 - linien_server.autolock.utils - DEBUG - Entered in get_time_scale
+2025-11-11 08:21:35,403 - linien_server.autolock.utils - DEBUG - Spectrum length:2023
+2025-11-11 08:21:35,406 - linien_server.autolock.utils - DEBUG - Spectrum: [-2 -1 -1 -1 -1]...[3 3 3 3 3]
+2025-11-11 08:21:35,407 - linien_server.autolock.utils - DEBUG - Target indices: [1211, 1246]
+2025-11-11 08:21:35,409 - linien_server.autolock.robust - DEBUG - x scale is 29
+2025-11-11 08:21:35,460 - linien_server.autolock.robust - DEBUG - shift prepared spectrum by 13 samples to the left to match the original spectrum
+2025-11-11 08:21:35,547 - linien_server.autolock.robust - DEBUG - Detected peaks with (position, height): [(1224, -172), (1198, 676), (1023, -110), (842, 1091), (787, -1022)]
+2025-11-11 08:21:35,971 - linien_server.autolock.robust - DEBUG - Determined lock regions: [(1207, 1241), (1160, 1503), (1160, 1503), (1158, 1503), (1162, 1503)]
+2025-11-11 08:21:35,973 - linien_server.autolock.robust - DEBUG - Try out tolerance 0.95
+2025-11-11 08:21:35,975 - linien_server.autolock.robust - DEBUG - Original peaks: [(1224, -172), (1198, 676), (1023, -110), (842, 1091), (787, -1022)]
+2025-11-11 08:21:35,976 - linien_server.autolock.robust - DEBUG - Filtered peaks: [(1224, -163.4), (1198, 642.1999999999999), (1023, -104.5), (842, 1036.45), (787, -970.9)]
+2025-11-11 08:21:35,977 - linien_server.autolock.robust - DEBUG - Discarded peaks: [(1224, -172), (1198, 676), (1023, -110), (842, 1091), (787, -1022)]
+2025-11-11 08:21:35,979 - linien_server.autolock.robust - DEBUG - Target peak index in prepared spectrum: 1224
+2025-11-11 08:21:35,980 - linien_server.autolock.robust - DEBUG - final wait time is 1 samples
+2025-11-11 08:21:35,982 - linien_server.autolock.robust - DEBUG - Generated description: [(708, -970), (49, 1036), (162, -104), (157, 642), (23, -163)]
+2025-11-11 08:21:36,013 - linien_server.autolock.robust - DEBUG - Lock position found at index 1225 for current spectrum
+2025-11-11 08:21:36,151 - linien_server.autolock.robust - DEBUG - Try out tolerance 0.9
+2025-11-11 08:21:36,153 - linien_server.autolock.robust - DEBUG - Original peaks: [(1224, -172), (1198, 676), (1023, -110), (842, 1091), (787, -1022)]
+2025-11-11 08:21:36,156 - linien_server.autolock.robust - DEBUG - Filtered peaks: [(1224, -154.8), (1198, 608.4), (1023, -99.0), (842, 981.9), (787, -919.8000000000001)]
+2025-11-11 08:21:36,159 - linien_server.autolock.robust - DEBUG - Discarded peaks: [(1224, -172), (1198, 676), (1023, -110), (842, 1091), (787, -1022)]
+2025-11-11 08:21:36,161 - linien_server.autolock.robust - DEBUG - Target peak index in prepared spectrum: 1224
+2025-11-11 08:21:36,162 - linien_server.autolock.robust - DEBUG - final wait time is 1 samples
+2025-11-11 08:21:36,163 - linien_server.autolock.robust - DEBUG - Generated description: [(708, -919), (49, 981), (162, -99), (157, 608), (23, -154)]
+2025-11-11 08:21:36,195 - linien_server.autolock.robust - DEBUG - Lock position found at index 1225 for current spectrum
+2025-11-11 08:21:36,290 - linien_server.autolock.robust - DEBUG - Lock position found at index 1245 for current spectrum
+2025-11-11 08:21:36,324 - linien_server.autolock.robust - DEBUG - Try out tolerance 0.85
+2025-11-11 08:21:36,326 - linien_server.autolock.robust - DEBUG - Original peaks: [(1224, -172), (1198, 676), (1023, -110), (842, 1091), (787, -1022)]
+2025-11-11 08:21:36,328 - linien_server.autolock.robust - DEBUG - Filtered peaks: [(1224, -146.2), (1198, 574.6), (1023, -93.5), (842, 927.35), (787, -868.6999999999999)]
+2025-11-11 08:21:36,329 - linien_server.autolock.robust - DEBUG - Discarded peaks: [(1224, -172), (1198, 676), (1023, -110), (842, 1091), (787, -1022)]
+2025-11-11 08:21:36,331 - linien_server.autolock.robust - DEBUG - Target peak index in prepared spectrum: 1224
+2025-11-11 08:21:36,333 - linien_server.autolock.robust - DEBUG - final wait time is 1 samples
+2025-11-11 08:21:36,334 - linien_server.autolock.robust - DEBUG - Generated description: [(708, -868), (49, 927), (162, -93), (157, 574), (23, -146)]
+2025-11-11 08:21:36,365 - linien_server.autolock.robust - DEBUG - Lock position found at index 1225 for current spectrum
+2025-11-11 08:21:36,461 - linien_server.autolock.robust - DEBUG - Lock position found at index 1245 for current spectrum
+2025-11-11 08:21:36,499 - linien_server.autolock.robust - DEBUG - Try out tolerance 0.8
+2025-11-11 08:21:36,502 - linien_server.autolock.robust - DEBUG - Original peaks: [(1224, -172), (1198, 676), (1023, -110), (842, 1091), (787, -1022)]
+2025-11-11 08:21:36,504 - linien_server.autolock.robust - DEBUG - Filtered peaks: [(1224, -137.6), (1198, 540.8000000000001), (1023, -88.0), (842, 872.8000000000001), (787, -817.6)]
+2025-11-11 08:21:36,505 - linien_server.autolock.robust - DEBUG - Discarded peaks: [(1224, -172), (1198, 676), (1023, -110), (842, 1091), (787, -1022)]
+2025-11-11 08:21:36,507 - linien_server.autolock.robust - DEBUG - Target peak index in prepared spectrum: 1224
+2025-11-11 08:21:36,508 - linien_server.autolock.robust - DEBUG - final wait time is 1 samples
+2025-11-11 08:21:36,510 - linien_server.autolock.robust - DEBUG - Generated description: [(708, -817), (49, 872), (162, -88), (157, 540), (23, -137)]
+2025-11-11 08:21:36,541 - linien_server.autolock.robust - DEBUG - Lock position found at index 1225 for current spectrum
+2025-11-11 08:21:36,569 - linien_server.autolock.robust - DEBUG - Lock position found at index 1246 for current spectrum
+2025-11-11 08:21:36,635 - linien_server.autolock.robust - DEBUG - Lock position found at index 1245 for current spectrum
+2025-11-11 08:21:36,670 - linien_server.autolock.robust - DEBUG - Try out tolerance 0.75
+2025-11-11 08:21:36,673 - linien_server.autolock.robust - DEBUG - Original peaks: [(1224, -172), (1198, 676), (1023, -110), (842, 1091), (787, -1022)]
+2025-11-11 08:21:36,674 - linien_server.autolock.robust - DEBUG - Filtered peaks: [(1224, -129.0), (1198, 507.0), (1023, -82.5), (842, 818.25), (787, -766.5)]
+2025-11-11 08:21:36,676 - linien_server.autolock.robust - DEBUG - Discarded peaks: [(1224, -172), (1198, 676), (1023, -110), (842, 1091), (787, -1022)]
+2025-11-11 08:21:36,677 - linien_server.autolock.robust - DEBUG - Target peak index in prepared spectrum: 1224
+2025-11-11 08:21:36,679 - linien_server.autolock.robust - DEBUG - final wait time is 1 samples
+2025-11-11 08:21:36,680 - linien_server.autolock.robust - DEBUG - Generated description: [(708, -766), (49, 818), (162, -82), (157, 507), (23, -129)]
+2025-11-11 08:21:36,712 - linien_server.autolock.robust - DEBUG - Lock position found at index 1225 for current spectrum
+2025-11-11 08:21:36,740 - linien_server.autolock.robust - DEBUG - Lock position found at index 1246 for current spectrum
+2025-11-11 08:21:36,767 - linien_server.autolock.robust - DEBUG - Lock position found at index 1247 for current spectrum
+2025-11-11 08:21:36,796 - linien_server.autolock.robust - DEBUG - Lock position found at index 1245 for current spectrum
+2025-11-11 08:21:36,825 - linien_server.autolock.robust - DEBUG - Lock position found at index 1246 for current spectrum
+2025-11-11 08:21:36,828 - linien_server.autolock.robust - DEBUG - Description is [(708, -766), (49, 818), (162, -82), (157, 507), (23, -129)]
+2025-11-11 08:21:36,830 - linien_server.autolock.robust - DEBUG - Calculation of autolock description took 1.6354427337646484
+2025-11-11 08:21:36,891 - linien_server.server - ERROR - incorrect data received for lock state, ignoring!
+2025-11-11 08:21:37,213 - linien_server.autolock.autolock - DEBUG - entered in react_new_spectrum
+2025-11-11 08:21:37,217 - linien_server.autolock.autolock - DEBUG - pause_acquisition: False
+2025-11-11 08:21:37,219 - linien_server.autolock.autolock - DEBUG - check_plot_data: True
+2025-11-11 08:21:37,221 - linien_server.autolock.autolock - DEBUG - after lock

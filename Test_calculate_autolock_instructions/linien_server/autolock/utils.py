@@ -18,6 +18,9 @@
 import numpy as np
 from scipy.signal import correlate
 
+import logging
+logger = logging.getLogger(__name__)
+logger.setLevel(logging.DEBUG)
 
 def get_lock_region(spectrum, target_idxs):
     """Given a spectrum and the points that the user selected for locking,
@@ -127,6 +130,10 @@ def get_lock_region_v2(spectrum, target_idxs, prepared_spectrum=None):
 
 
 def get_time_scale(spectrum, target_idxs):
+    logger.debug("Entered in get_time_scale")
+    logger.debug(f"Spectrum length:{len(spectrum)}")
+    logger.debug(f"Spectrum: {spectrum[:5]}...{spectrum[-5:]}")
+    logger.debug(f"Target indices: {target_idxs}")
     part = spectrum[target_idxs[0] : target_idxs[1]]
     return np.abs(np.argmin(part) - np.argmax(part))
 
@@ -227,14 +234,30 @@ def get_all_peaks_v2(summed_xscaled, target_idxs):
 
 
 def crop_spectra_to_same_view(spectra_with_jitter):
+    logger.debug("Entered in crop_spectra_to_same_view")
     cropped_spectra = []
 
     shifts = []
 
-    for idx, spectrum in enumerate(spectra_with_jitter):
-        shift = np.argmax(correlate(spectra_with_jitter[0], spectrum)) - len(spectrum)
+    correlations = []
 
+    for idx, spectrum in enumerate(spectra_with_jitter):
+        if idx == 0:
+            #np.save('/root/.local/share/linien/spectrum0_in_crop.npy',np.array([spectrum,spectra_with_jitter[0]]))
+            logger.debug("Saved new spectrum0_in_crop.npy")
+        correlate_temp = correlate(spectra_with_jitter[0], spectrum)
+        correlations.append(np.array(correlate_temp))
+        shift = np.argmax(correlate_temp) - len(spectrum)
+        
+        logger.debug(f"correlation max: {np.max(correlate_temp)}")
+        logger.debug(f"correlation argmax: {np.argmax(correlate_temp)}")
+        logger.debug(f"s - s_jitter: {spectrum[100:105] - spectra_with_jitter[0][100:105]}")
         shifts.append(-shift)
+
+    #np.save('/root/.local/share/linien/correlations.npy',np.array(correlations))
+    logger.debug("Saved new correlations.npy")
+
+    logger.debug(f"Shifts calculated for cropping: {shifts}")
 
     min_shift = min(shifts)
     max_shift = max(shifts)

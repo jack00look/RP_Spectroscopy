@@ -19,6 +19,7 @@ import logging
 from time import time
 
 import numpy as np
+from scipy.signal import correlate
 from linien_common.common import (
     AUTOLOCK_MAX_N_INSTRUCTIONS,
     SpectrumUncorrelatedException,
@@ -33,6 +34,8 @@ from linien_server.autolock.utils import (
     get_time_scale,
     sign,
     sum_up_spectrum,
+    get_all_peaks_v2,
+    get_lock_region_v2,
 )
 
 logger = logging.getLogger(__name__)
@@ -103,7 +106,7 @@ class RobustAutolock:
             logger.debug("enough spectra!, calculate")
 
             t1 = time()
-            description, final_wait_time, time_scale = calculate_autolock_instructions(
+            description, final_wait_time, time_scale = calculate_autolock_instructions_v2(
                 self.spectra, (self.x0, self.x1)
             )
             t2 = time()
@@ -256,6 +259,116 @@ def calculate_autolock_instructions(spectra_with_jitter, target_idxs):
     logger.debug(f"Description is {description}")
     return description, final_wait_time, time_scale
 
+def calculate_autolock_instructions_v2(spectra_with_jitter, target_idxs):
+    #save the spectra and the target indexes to look how the algorithm works in local
+    logger.debug("Entered in calculate_autolock_instructions_v2")
+    np.save('/root/.local/share/linien/robust_spectra.npy',np.array(spectra_with_jitter))
+    np.save('/root/.local/share/linien/target_idxs.npy',np.array([target_idxs[0],target_idxs[1]]))
+    logger.debug("Saved new robust_spectra.npy and target_idxs.npy")
+    spectra, crop_left = crop_spectra_to_same_view(spectra_with_jitter)
+    np.save('/root/.local/share/linien/robust_spectra_cropped.npy',np.array(spectra))
+    logger.debug("Saved new robust_spectra_cropped.npy")
+
+    target_idxs = [idx - crop_left for idx in target_idxs]
+
+    time_scale = int(
+        round(np.mean([get_time_scale(spectrum, target_idxs) for spectrum in spectra]))
+    )
+
+    logger.debug(f"x scale is {time_scale}")
+
+    prepared_spectrum = get_diff_at_time_scale(sum_up_spectrum(spectra[0]), time_scale)
+
+    shift_prepared = np.argmax(correlate(prepared_spectrum, spectra[0]))-len(prepared_spectrum) # ADDED CODE. Due to
+    #the moving average everything is shifted by approximately half of the window size
+    logger.debug(f"shift prepared spectrum by {shift_prepared} samples to the left to match the original spectrum")
+
+    target_idxs_prepared = [idx + shift_prepared for idx in target_idxs] #ADDED CODE. Adjust target idxs after preparation.
+
+    peaks = get_all_peaks_v2(prepared_spectrum, target_idxs_prepared) #CHANGED CODE. Use adjusted target idxs.
+    logger.debug(f"Detected peaks with (position, height): {[(pos, height) for pos, height in peaks]}")
+
+    y_scale = peaks[0][1]
+
+    lock_regions = [get_lock_region_v2(spectrum, target_idxs, prepared_spectrum) for spectrum in spectra] #CHANGED CODE. Use v2 lock region function.
+    
+    logger.debug(f"Determined lock regions: {lock_regions}")
+
+    for tolerance_factor in [0.95, 0.9, 0.85, 0.8, 0.75, 0.7, 0.65, 0.6, 0.55, 0.5]:
+        logger.debug(f"Try out tolerance {tolerance_factor}")
+        peaks_filtered = [
+            (peak_position, peak_height * tolerance_factor)
+            for peak_position, peak_height in peaks
+        ]
+        # it is important to do the filtering that happens here after the previous
+        # line as the previous line shrinks the values
+        peaks_filtered = [
+            (peak_position, peak_height)
+            for peak_position, peak_height in peaks_filtered
+            if abs(peak_height) > abs(y_scale * (1 - tolerance_factor))
+        ]
+
+        logger.debug(f"Original peaks: {[(pos, height) for pos, height in peaks]}")
+        logger.debug(f"Filtered peaks: {[(pos, height) for pos, height in peaks_filtered]}")
+
+        discarded_peaks = []
+        for peak_position, peak_height in peaks:
+            if (peak_position, peak_height) not in peaks_filtered:
+                discarded_peaks.append((peak_position, peak_height))
+        logger.debug(f"Discarded peaks: {[(pos, height) for pos, height in discarded_peaks]}")
+
+        # now find out how much we have to wait in the end (because we detect the peak
+        # too early because our threshold is too low)
+        target_peak_described_height = peaks_filtered[0][1]
+        target_peak_idx = get_target_peak(prepared_spectrum, target_idxs_prepared) #CHANGED CODE. Use adjusted target idxs.
+        logger.debug(f"Target peak index in prepared spectrum: {target_peak_idx}")
+        current_idx = target_peak_idx
+        while True:
+            current_idx -= 1
+            if np.abs(prepared_spectrum[current_idx]) < np.abs(
+                target_peak_described_height
+            ):
+                break
+        final_wait_time = target_peak_idx - current_idx
+        logger.debug(f"final wait time is {final_wait_time} samples")
+
+        description = []
+
+        last_peak_position = 0
+        for peak_position, peak_height in list(reversed(peaks_filtered)):
+            # TODO: this .9 factor is very arbitrary.
+            description.append(
+                (int(0.9 * (peak_position - last_peak_position)), int(peak_height))
+            )
+            last_peak_position = peak_position
+        
+        logger.debug(f"Generated description: {description}")
+
+        # test whether description works fine for every recorded spectrum
+        does_work = True
+        for spectrum, lock_region in zip(spectra, lock_regions):
+            try:
+                lock_position = get_lock_position_from_autolock_instructions(
+                    spectrum, description, time_scale, spectra[0], final_wait_time
+                )
+                logger.debug(f"Lock position found at index {lock_position} for current spectrum")
+                if not lock_region[0] <= lock_position <= lock_region[1]:
+                    raise LockPositionNotFound()
+
+            except LockPositionNotFound:
+                does_work = False
+
+        if does_work:
+            break
+    else:
+        raise UnableToFindDescription()
+
+    if len(description) > AUTOLOCK_MAX_N_INSTRUCTIONS:
+        logger.warning(f"Autolock description too long. Cropping! {description}")
+        description = description[-AUTOLOCK_MAX_N_INSTRUCTIONS:]
+
+    logger.debug(f"Description is {description}")
+    return description, final_wait_time, time_scale
 
 def get_lock_position_from_autolock_instructions(
     spectrum, description, time_scale, initial_spectrum, final_wait_time
@@ -283,7 +396,6 @@ def get_lock_position_from_autolock_instructions(
                 return idx + final_wait_time
 
     raise LockPositionNotFound()
-
 
 def sweep_speed_to_time(sweep_speed):
     """
