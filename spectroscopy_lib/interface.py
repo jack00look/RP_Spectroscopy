@@ -26,8 +26,8 @@ class NewDataListener:
 
     def notify_new_data(self,value=None):
         if not(self._writeable):
-            print('parameter ',self._name,' is not writeable')
-            print('value is ',value)
+            #print('parameter ',self._name,' is not writeable')
+            #print('value is ',value)
             if value!= self.value:
                 self.new_data_event.set()
                 self.value = value
@@ -71,11 +71,11 @@ class ParameterImplementationBasic:
         This is useful to ensure that the value is set correctly before proceeding.
         """
         self.new_data_listener.reset_new_data_event()
-        print('new data event reset')
+        #print('new data event reset')
         time_0 = time.time()
         while not self.new_data_listener.is_new_data_available():
             self._client.parameters.check_for_changed_parameters()
-            print('no update yet')
+            #print('no update yet')
             if (time.time() - time_0) > timeout:
                 raise TimeoutError(f"Timeout while waiting for parameter {self._name} to update.")
             time.sleep(0.1)  # Sleep to avoid busy waiting
@@ -206,7 +206,7 @@ class LinienHardwareInterface:
         for name, device_info in self.DEVICES.items():
             try:
                 self.logger.info(f"Attempting connection via {name} address ({device_info['ip']}:{device_info['linien_port']})")
-                self.device = Device(host=device_info['ip'], port=device_info['linien_port'], ssh_port=device_info['ssh_port'], username=self.USERNAME, password=self.PASSWORD)
+                self.device = Device(host=device_info['ip'], username=self.USERNAME, password=self.PASSWORD)
                 self.client = LinienClient(self.device)
                 self.client.connect(autostart_server=True, use_parameter_cache=False)
                 self.logger.info(f"Connected to device via {name} address")
@@ -257,7 +257,7 @@ class LinienHardwareInterface:
         wait_for_multiple_parameters_update(self.client, list(self.writeable_params.values()) + list(self.readable_params.values()))
 
         # setup the autolock mode
-        self.client.parameters.autolock_mode_preference.value = AutolockMode.SIMPLE # use robust autolock mode
+        self.client.parameters.autolock_mode_preference.value = AutolockMode.ROBUST # use robust autolock mode
         self.client.parameters.autolock_determine_offset.value = False # do not determine offset automatically
         self.client.connection.root.write_registers()
 
@@ -270,16 +270,19 @@ class LinienHardwareInterface:
             return self.readable_params[param_name].get_raw_value()
     
     def set_param(self, param_name, value):
+        #print('--- Entered in set_param ---')
+        #print('setting param ',param_name,' to value ',value)
         if param_name not in self.writeable_params:
             raise ValueError(f"Parameter {param_name} does not exist.")
         physical_value = self.writeable_params[param_name].get_physical_value()
         #print('physical value is ',physical_value, ' type is ',type(physical_value))
         #print('value is ',value, ' type is ',type(value))
+        #print('np.abs((value - physical_value)/value)', np.abs((value - physical_value)/value))
         if physical_value is None:
             #print('yet no physical value')
             self.writeable_params[param_name].set_value(value)
             self.writeable_params[param_name].wait_for_update()
-        if np.abs(value - physical_value)/value > 0.0001:
+        if np.abs((value - physical_value)/value) > 0.0001:
             #print('new value')
             self.writeable_params[param_name].set_value(value)
             self.writeable_params[param_name].wait_for_update()

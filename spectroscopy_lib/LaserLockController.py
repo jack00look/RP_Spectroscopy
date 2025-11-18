@@ -174,6 +174,8 @@ class LaserLockController:
         ax.set_ylabel('Signal (a.u.)')
         ax.legend()
         ax1.plot(sweep_signal_cut['x'],sweep_signal_cut['y'])
+        ax1.set_xlabel('Voltage (V)')
+        ax1.set_ylabel('Signal (a.u.)')
         ax1.axhline(y=0.,color='0.8',linestyle='dashed')
         ax1.axvspan(V_lock_start,V_lock_end,color = 'r',alpha=0.2,label = 'locking region')
 
@@ -205,7 +207,7 @@ class LaserLockController:
         
         correlations = np.zeros((num_reference_lines, num_points))
         len_matches = np.zeros((num_reference_lines, num_points))
-        offsets = np.zeros((num_reference_lines, num_points))
+        offsets = np.zeros((num_reference_lines, num_points)) #vertical offset
 
         for i in range(num_points):
             self.logger.debug(f"Setting voltage to {V_scan[i]}V")
@@ -289,7 +291,7 @@ class LaserLockController:
         offset = self.lines_positions[line_name] #horizontal offset where we expect the line
         offset_y = self.lines_offset[line_name] #vertical offset
         #print('Offset y = ',offset_y)
-        self.logger.debug(f"Vertical offset = {- offset_y} to have the zero-crossing placed nicely.") #the offset of the found line with respect to the reference line, so we need to apply the negative offset to center it.
+        self.logger.debug(f"Vertical offset to apply = {- offset_y} to have the zero-crossing placed nicely.") #the offset of the found line with respect to the reference line, so we need to apply the negative offset to center it.
 
         #get reference line and linewidth
         reference_signal = self.data_handler.reference_lines[line_name]
@@ -297,6 +299,8 @@ class LaserLockController:
 
         self.hardware_interface.set_param('big_offset', offset)
         self.hardware_interface.set_param('offset_a', - offset_y) #the offset of the found line with respect to the reference line, so we need to apply the negative offset to center it.
+        
+        #print(f"offset_a: {self.hardware_interface.get_param('offset_a')}")
 
         # --- Logging initial offset ---
         self.logger.debug(f'START offset = {offset}')
@@ -407,6 +411,7 @@ class LaserLockController:
                 if not frequence_stable:
                     self.logger.debug("Frequency not stable enough")
                 else:
+                    self.logger.debug("Frequency stable enough")
                     space_left = shift - sweep_signal['x'][0]
                     len_sweep_signal = sweep_signal['x'][-1] - sweep_signal['x'][0]
                     space_right = len_sweep_signal - linewidth - space_left
@@ -424,11 +429,11 @@ class LaserLockController:
                         lock_end = reference_signal['V_lock_end'] + shift
                         lock_start_ind = np.argmin(np.abs(sweep_signal['x'] - lock_start))
                         lock_end_ind = np.argmin(np.abs(sweep_signal['x'] - lock_end))
-                        print(f"Locking region: [{lock_start_ind:.2f}V, {lock_end_ind:.2f}V]")
+                        #print(f"Locking region: [{lock_start_ind:.2f}, {lock_end_ind:.2f}]")
                         plt.axvspan(lock_start,lock_end,color='r',alpha=0.2)
-                        print(f"sweep signal: {sweep_signal['y']}")
+                        #print(f"sweep signal: {sweep_signal['y']}")
                         sweep_signal_raw = from_sweep_signal_to_sweep_signal_raw(sweep_signal['y'])
-                        print(f"sweep signal raw {sweep_signal_raw}")
+                        #print(f"sweep signal raw {sweep_signal_raw}")
                         self.hardware_interface.client.connection.root.start_autolock(lock_start_ind,lock_end_ind,pickle.dumps(sweep_signal_raw))
                         print("Started autolock")
                         try:

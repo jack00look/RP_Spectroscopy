@@ -1901,3 +1901,1080 @@ ValueError: attempt to get argmin of an empty sequence
 2025-11-11 10:57:47,982 - linien_server.autolock.autolock - DEBUG - pause_acquisition: False
 2025-11-11 10:57:47,984 - linien_server.autolock.autolock - DEBUG - check_plot_data: True
 2025-11-11 10:57:47,986 - linien_server.autolock.autolock - DEBUG - after lock
+2025-11-11 10:59:48,930 - linien_server.autolock.autolock - DEBUG - Initialize Autolock
+2025-11-11 10:59:48,955 - linien_server.autolock.autolock - DEBUG - Start the autolock
+2025-11-11 10:59:48,977 - linien_server.autolock.autolock - DEBUG - (x0, x1) = (1500,1800)
+2025-11-11 10:59:49,018 - linien_server.autolock.autolock - DEBUG - Start autolock with mode 1
+2025-11-11 10:59:49,153 - linien_server.autolock.autolock - DEBUG - entered in react_new_spectrum
+2025-11-11 10:59:49,155 - linien_server.autolock.autolock - DEBUG - pause_acquisition: False
+2025-11-11 10:59:49,158 - linien_server.autolock.autolock - DEBUG - check_plot_data: True
+2025-11-11 10:59:49,254 - linien_server.autolock.robust - DEBUG - handle new spectrum
+2025-11-11 10:59:49,282 - linien_server.autolock.robust - ERROR - Not enough spectra collected:2 of 5
+2025-11-11 10:59:49,545 - linien_server.autolock.autolock - DEBUG - entered in react_new_spectrum
+2025-11-11 10:59:49,547 - linien_server.autolock.autolock - DEBUG - pause_acquisition: False
+2025-11-11 10:59:49,549 - linien_server.autolock.autolock - DEBUG - check_plot_data: True
+2025-11-11 10:59:49,645 - linien_server.autolock.robust - DEBUG - handle new spectrum
+2025-11-11 10:59:49,673 - linien_server.autolock.robust - ERROR - Not enough spectra collected:3 of 5
+2025-11-11 10:59:49,881 - linien_server.autolock.autolock - DEBUG - entered in react_new_spectrum
+2025-11-11 10:59:49,883 - linien_server.autolock.autolock - DEBUG - pause_acquisition: False
+2025-11-11 10:59:49,885 - linien_server.autolock.autolock - DEBUG - check_plot_data: True
+2025-11-11 10:59:49,981 - linien_server.autolock.robust - DEBUG - handle new spectrum
+2025-11-11 10:59:50,009 - linien_server.autolock.robust - ERROR - Not enough spectra collected:4 of 5
+2025-11-11 10:59:50,270 - linien_server.autolock.autolock - DEBUG - entered in react_new_spectrum
+2025-11-11 10:59:50,272 - linien_server.autolock.autolock - DEBUG - pause_acquisition: False
+2025-11-11 10:59:50,274 - linien_server.autolock.autolock - DEBUG - check_plot_data: True
+2025-11-11 10:59:50,370 - linien_server.autolock.robust - DEBUG - handle new spectrum
+2025-11-11 10:59:50,398 - linien_server.autolock.robust - DEBUG - enough spectra!, calculate
+2025-11-11 10:59:50,399 - linien_server.autolock.robust - DEBUG - Entered in calculate_autolock_instructions_v2
+2025-11-11 10:59:50,404 - linien_server.autolock.robust - DEBUG - Saved new robust_spectra.npy and target_idxs.npy
+2025-11-11 10:59:50,405 - linien_server.autolock.utils - DEBUG - Entered in crop_spectra_to_same_view
+2025-11-11 10:59:50,538 - linien_server.autolock.utils - DEBUG - Shifts calculated for cropping: [1, 22, 23, 22, 22]
+2025-11-11 10:59:50,541 - linien_server.autolock.robust - DEBUG - Saved new robust_spectra_cropped.npy
+2025-11-11 10:59:50,542 - linien_server.autolock.utils - DEBUG - Entered in get_time_scale
+2025-11-11 10:59:50,544 - linien_server.autolock.utils - DEBUG - Spectrum length:2026
+2025-11-11 10:59:50,547 - linien_server.autolock.utils - DEBUG - Spectrum: [-7  0 -1 -1 -1]...[-11 -11 -11 -11 -11]
+2025-11-11 10:59:50,548 - linien_server.autolock.utils - DEBUG - Target indices: [1646, 1681]
+2025-11-11 10:59:50,549 - linien_server.autolock.utils - DEBUG - Entered in get_time_scale
+2025-11-11 10:59:50,550 - linien_server.autolock.utils - DEBUG - Spectrum length:2026
+2025-11-11 10:59:50,553 - linien_server.autolock.utils - DEBUG - Spectrum: [-1 -1 -1 -1  0]...[-11 -11 -11 -11 -11]
+2025-11-11 10:59:50,554 - linien_server.autolock.utils - DEBUG - Target indices: [1646, 1681]
+2025-11-11 10:59:50,555 - linien_server.autolock.utils - DEBUG - Entered in get_time_scale
+2025-11-11 10:59:50,556 - linien_server.autolock.utils - DEBUG - Spectrum length:2026
+2025-11-11 10:59:50,559 - linien_server.autolock.utils - DEBUG - Spectrum: [-1 -1  0  0  0]...[-11 -11 -11 -10 -10]
+2025-11-11 10:59:50,560 - linien_server.autolock.utils - DEBUG - Target indices: [1646, 1681]
+2025-11-11 10:59:50,561 - linien_server.autolock.utils - DEBUG - Entered in get_time_scale
+2025-11-11 10:59:50,562 - linien_server.autolock.utils - DEBUG - Spectrum length:2026
+2025-11-11 10:59:50,565 - linien_server.autolock.utils - DEBUG - Spectrum: [0 0 0 0 0]...[-11 -11 -11 -10 -10]
+2025-11-11 10:59:50,566 - linien_server.autolock.utils - DEBUG - Target indices: [1646, 1681]
+2025-11-11 10:59:50,567 - linien_server.autolock.utils - DEBUG - Entered in get_time_scale
+2025-11-11 10:59:50,568 - linien_server.autolock.utils - DEBUG - Spectrum length:2026
+2025-11-11 10:59:50,571 - linien_server.autolock.utils - DEBUG - Spectrum: [ 0 -1  0  0  0]...[-10 -10 -10 -10 -10]
+2025-11-11 10:59:50,572 - linien_server.autolock.utils - DEBUG - Target indices: [1646, 1681]
+2025-11-11 10:59:50,574 - linien_server.autolock.robust - DEBUG - x scale is 34
+2025-11-11 10:59:50,627 - linien_server.autolock.robust - DEBUG - shift prepared spectrum by 15 samples to the left to match the original spectrum
+2025-11-11 10:59:50,736 - linien_server.autolock.robust - DEBUG - Detected peaks with (position, height): [(1661, 311), (1555, -421), (1321, 928), (1268, -1278)]
+2025-11-11 10:59:50,796 - linien_server.autolock.robust - DEBUG - Determined lock regions: [(1630, 1696), (1630, 1696), (1630, 1696), (1630, 1696), (1630, 1696)]
+2025-11-11 10:59:50,798 - linien_server.autolock.robust - DEBUG - Try out tolerance 0.95
+2025-11-11 10:59:50,799 - linien_server.autolock.robust - DEBUG - Original peaks: [(1661, 311), (1555, -421), (1321, 928), (1268, -1278)]
+2025-11-11 10:59:50,801 - linien_server.autolock.robust - DEBUG - Filtered peaks: [(1661, 295.45), (1555, -399.95), (1321, 881.5999999999999), (1268, -1214.1)]
+2025-11-11 10:59:50,802 - linien_server.autolock.robust - DEBUG - Discarded peaks: [(1661, 311), (1555, -421), (1321, 928), (1268, -1278)]
+2025-11-11 10:59:50,803 - linien_server.autolock.robust - DEBUG - Target peak index in prepared spectrum: 1661
+2025-11-11 10:59:50,806 - linien_server.autolock.robust - DEBUG - final wait time is 11 samples
+2025-11-11 10:59:50,807 - linien_server.autolock.robust - DEBUG - Generated description: [(1141, -1214), (47, 881), (210, -399), (95, 295)]
+2025-11-11 10:59:50,845 - linien_server.autolock.robust - DEBUG - Lock position found at index 1662 for current spectrum
+2025-11-11 10:59:50,878 - linien_server.autolock.robust - DEBUG - Lock position found at index 1662 for current spectrum
+2025-11-11 10:59:50,911 - linien_server.autolock.robust - DEBUG - Lock position found at index 1661 for current spectrum
+2025-11-11 10:59:50,944 - linien_server.autolock.robust - DEBUG - Lock position found at index 1662 for current spectrum
+2025-11-11 10:59:50,978 - linien_server.autolock.robust - DEBUG - Lock position found at index 1660 for current spectrum
+2025-11-11 10:59:50,980 - linien_server.autolock.robust - DEBUG - Description is [(1141, -1214), (47, 881), (210, -399), (95, 295)]
+2025-11-11 10:59:50,982 - linien_server.autolock.robust - DEBUG - Calculation of autolock description took 0.5825293064117432
+2025-11-11 10:59:51,045 - linien_server.server - ERROR - incorrect data received for lock state, ignoring!
+2025-11-11 10:59:51,387 - linien_server.autolock.autolock - DEBUG - entered in react_new_spectrum
+2025-11-11 10:59:51,389 - linien_server.autolock.autolock - DEBUG - pause_acquisition: False
+2025-11-11 10:59:51,392 - linien_server.autolock.autolock - DEBUG - check_plot_data: True
+2025-11-11 10:59:51,394 - linien_server.autolock.autolock - DEBUG - after lock
+2025-11-11 14:53:26,901 - linien_server.cli - INFO - Stopping Linien server
+2025-11-11 14:53:27,068 - linien_server.cli - INFO - Stopped Linien server
+2025-11-11 14:53:30,317 - linien_server.cli - DEBUG - Copied linien-server.service to /etc/systemd/system
+2025-11-11 14:53:30,319 - linien_server.cli - INFO - Starting Linien server
+2025-11-11 14:53:30,391 - linien_server.cli - INFO - Started Linien server
+2025-11-11 14:53:47,260 - linien_server.parameters - INFO - Restoring parameters from /root/.local/share/linien/parameters.json
+2025-11-11 14:53:47,263 - linien_server.parameters - INFO - Restored parameters from /root/.local/share/linien/parameters.json
+2025-11-11 14:53:47,270 - linien_common.influxdb - INFO - Saved InfluxDB credentials to /root/.local/share/linien/influxdb_credentials.json
+2025-11-11 14:53:47,466 - linien_server.acquisition - INFO - Using fpgautil to deploy gateware.
+2025-11-11 14:53:47,628 - linien_server.server - DEBUG - Ping  1
+2025-11-11 14:53:47,670 - linien_server.mdio_tool - INFO - Disabling ethernet blinking with mdio-tool at /usr/local/lib/python3.10/dist-packages/linien_server/mdio-tool
+2025-11-11 14:53:47,732 - linien_server.server - INFO - Starting server.
+2025-11-11 14:53:48,656 - linien_server.server - DEBUG - Ping  2
+2025-11-11 14:53:49,679 - linien_server.server - DEBUG - Ping  3
+2025-11-11 14:53:49,680 - linien_server.server - DEBUG - Further pings will be suppressed
+2025-11-11 15:11:36,735 - linien_server.cli - INFO - Stopping Linien server
+2025-11-11 15:11:36,877 - linien_server.cli - INFO - Stopped Linien server
+2025-11-11 15:11:40,002 - linien_server.cli - DEBUG - Copied linien-server.service to /etc/systemd/system
+2025-11-11 15:11:40,009 - linien_server.cli - INFO - Starting Linien server
+2025-11-11 15:11:40,082 - linien_server.cli - INFO - Started Linien server
+2025-11-11 15:11:57,730 - linien_server.parameters - INFO - Restoring parameters from /root/.local/share/linien/parameters.json
+2025-11-11 15:11:57,733 - linien_server.parameters - INFO - Restored parameters from /root/.local/share/linien/parameters.json
+2025-11-11 15:11:57,740 - linien_common.influxdb - INFO - Saved InfluxDB credentials to /root/.local/share/linien/influxdb_credentials.json
+2025-11-11 15:11:57,938 - linien_server.acquisition - INFO - Using fpgautil to deploy gateware.
+2025-11-11 15:11:58,109 - linien_server.server - DEBUG - Ping  1
+2025-11-11 15:11:58,130 - linien_server.mdio_tool - INFO - Disabling ethernet blinking with mdio-tool at /usr/local/lib/python3.10/dist-packages/linien_server/mdio-tool
+2025-11-11 15:11:58,165 - linien_server.server - INFO - Starting server.
+2025-11-11 15:11:59,135 - linien_server.server - DEBUG - Ping  2
+2025-11-11 15:12:00,148 - linien_server.server - DEBUG - Ping  3
+2025-11-11 15:12:00,173 - linien_server.server - DEBUG - Further pings will be suppressed
+2025-11-11 15:13:52,196 - linien_server.cli - INFO - Stopping Linien server
+2025-11-11 15:13:52,320 - linien_server.cli - INFO - Stopped Linien server
+2025-11-11 15:13:55,337 - linien_server.cli - DEBUG - Copied linien-server.service to /etc/systemd/system
+2025-11-11 15:13:55,338 - linien_server.cli - INFO - Starting Linien server
+2025-11-11 15:13:55,406 - linien_server.cli - INFO - Started Linien server
+2025-11-11 15:14:12,120 - linien_server.parameters - INFO - Restoring parameters from /root/.local/share/linien/parameters.json
+2025-11-11 15:14:12,123 - linien_server.parameters - INFO - Restored parameters from /root/.local/share/linien/parameters.json
+2025-11-11 15:14:12,127 - linien_common.influxdb - INFO - Saved InfluxDB credentials to /root/.local/share/linien/influxdb_credentials.json
+2025-11-11 15:14:12,317 - linien_server.acquisition - INFO - Using fpgautil to deploy gateware.
+2025-11-11 15:14:12,679 - linien_server.server - DEBUG - Ping  1
+2025-11-11 15:14:12,723 - linien_server.mdio_tool - INFO - Disabling ethernet blinking with mdio-tool at /usr/local/lib/python3.10/dist-packages/linien_server/mdio-tool
+2025-11-11 15:14:12,773 - linien_server.server - INFO - Starting server.
+2025-11-11 15:14:13,704 - linien_server.server - DEBUG - Ping  2
+2025-11-11 15:14:14,722 - linien_server.server - DEBUG - Ping  3
+2025-11-11 15:14:14,723 - linien_server.server - DEBUG - Further pings will be suppressed
+2025-11-11 15:19:26,910 - linien_server.cli - INFO - Stopping Linien server
+2025-11-11 15:19:27,023 - linien_server.cli - INFO - Stopped Linien server
+2025-11-11 15:19:30,012 - linien_server.cli - DEBUG - Copied linien-server.service to /etc/systemd/system
+2025-11-11 15:19:30,014 - linien_server.cli - INFO - Starting Linien server
+2025-11-11 15:19:30,081 - linien_server.cli - INFO - Started Linien server
+2025-11-11 15:19:46,634 - linien_server.parameters - INFO - Restoring parameters from /root/.local/share/linien/parameters.json
+2025-11-11 15:19:46,637 - linien_server.parameters - INFO - Restored parameters from /root/.local/share/linien/parameters.json
+2025-11-11 15:19:46,643 - linien_common.influxdb - INFO - Saved InfluxDB credentials to /root/.local/share/linien/influxdb_credentials.json
+2025-11-11 15:19:46,840 - linien_server.acquisition - INFO - Using fpgautil to deploy gateware.
+2025-11-11 15:19:47,097 - linien_server.server - DEBUG - Ping  1
+2025-11-11 15:19:47,113 - linien_server.mdio_tool - INFO - Disabling ethernet blinking with mdio-tool at /usr/local/lib/python3.10/dist-packages/linien_server/mdio-tool
+2025-11-11 15:19:47,180 - linien_server.server - INFO - Starting server.
+2025-11-11 15:19:48,116 - linien_server.server - DEBUG - Ping  2
+2025-11-11 15:19:49,134 - linien_server.server - DEBUG - Ping  3
+2025-11-11 15:19:49,156 - linien_server.server - DEBUG - Further pings will be suppressed
+2025-11-13 09:16:03,916 - linien_server.cli - DEBUG - Copied linien-server.service to /etc/systemd/system
+2025-11-13 09:16:03,919 - linien_server.cli - INFO - Starting Linien server
+2025-11-13 09:16:03,986 - linien_server.cli - INFO - Started Linien server
+2025-11-13 09:16:23,641 - linien_server.parameters - INFO - Restoring parameters from /root/.local/share/linien/parameters.json
+2025-11-13 09:16:23,648 - linien_server.parameters - INFO - Restored parameters from /root/.local/share/linien/parameters.json
+2025-11-13 09:16:23,652 - linien_common.influxdb - INFO - Saved InfluxDB credentials to /root/.local/share/linien/influxdb_credentials.json
+2025-11-13 09:16:24,479 - linien_server.acquisition - INFO - Using fpgautil to deploy gateware.
+2025-11-13 09:16:24,732 - linien_server.server - DEBUG - Ping  1
+2025-11-13 09:16:24,791 - linien_server.mdio_tool - INFO - Disabling ethernet blinking with mdio-tool at /usr/local/lib/python3.10/dist-packages/linien_server/mdio-tool
+2025-11-13 09:16:24,833 - linien_server.server - INFO - Starting server.
+2025-11-13 09:16:25,757 - linien_server.server - DEBUG - Ping  2
+2025-11-13 09:16:26,785 - linien_server.server - DEBUG - Ping  3
+2025-11-13 09:16:26,811 - linien_server.server - DEBUG - Further pings will be suppressed
+2025-11-13 10:03:30,092 - linien_server.cli - INFO - Stopping Linien server
+2025-11-13 10:03:30,284 - linien_server.cli - INFO - Stopped Linien server
+2025-11-13 10:03:33,622 - linien_server.cli - DEBUG - Copied linien-server.service to /etc/systemd/system
+2025-11-13 10:03:33,624 - linien_server.cli - INFO - Starting Linien server
+2025-11-13 10:03:33,690 - linien_server.cli - INFO - Started Linien server
+2025-11-13 10:03:53,392 - linien_server.parameters - INFO - Restoring parameters from /root/.local/share/linien/parameters.json
+2025-11-13 10:03:53,398 - linien_server.parameters - INFO - Restored parameters from /root/.local/share/linien/parameters.json
+2025-11-13 10:03:53,403 - linien_common.influxdb - INFO - Saved InfluxDB credentials to /root/.local/share/linien/influxdb_credentials.json
+2025-11-13 10:03:53,666 - linien_server.acquisition - INFO - Using fpgautil to deploy gateware.
+2025-11-13 10:03:53,929 - linien_server.server - DEBUG - Ping  1
+2025-11-13 10:03:53,946 - linien_server.mdio_tool - INFO - Disabling ethernet blinking with mdio-tool at /usr/local/lib/python3.10/dist-packages/linien_server/mdio-tool
+2025-11-13 10:03:54,007 - linien_server.server - INFO - Starting server.
+2025-11-13 10:03:54,949 - linien_server.server - DEBUG - Ping  2
+2025-11-13 10:03:55,967 - linien_server.server - DEBUG - Ping  3
+2025-11-13 10:03:55,984 - linien_server.server - DEBUG - Further pings will be suppressed
+2025-11-13 14:17:20,359 - linien_server.autolock.autolock - DEBUG - Initialize Autolock
+2025-11-13 14:17:20,380 - linien_server.autolock.autolock - DEBUG - Start the autolock
+2025-11-13 14:17:20,413 - linien_server.autolock.autolock - DEBUG - (x0, x1) = (1500,1800)
+2025-11-13 14:17:20,431 - linien_server.autolock.autolock - DEBUG - Start autolock with mode 1
+2025-11-13 14:17:20,769 - linien_server.autolock.autolock - DEBUG - entered in react_new_spectrum
+2025-11-13 14:17:20,771 - linien_server.autolock.autolock - DEBUG - pause_acquisition: False
+2025-11-13 14:17:20,773 - linien_server.autolock.autolock - DEBUG - check_plot_data: True
+2025-11-13 14:17:20,875 - linien_server.autolock.robust - DEBUG - handle new spectrum
+2025-11-13 14:17:20,922 - linien_server.autolock.robust - ERROR - Not enough spectra collected:2 of 5
+2025-11-13 14:17:21,106 - linien_server.autolock.autolock - DEBUG - entered in react_new_spectrum
+2025-11-13 14:17:21,108 - linien_server.autolock.autolock - DEBUG - pause_acquisition: False
+2025-11-13 14:17:21,110 - linien_server.autolock.autolock - DEBUG - check_plot_data: True
+2025-11-13 14:17:21,213 - linien_server.autolock.robust - DEBUG - handle new spectrum
+2025-11-13 14:17:21,242 - linien_server.autolock.robust - ERROR - Not enough spectra collected:3 of 5
+2025-11-13 14:17:21,470 - linien_server.autolock.autolock - DEBUG - entered in react_new_spectrum
+2025-11-13 14:17:21,475 - linien_server.autolock.autolock - DEBUG - pause_acquisition: False
+2025-11-13 14:17:21,477 - linien_server.autolock.autolock - DEBUG - check_plot_data: True
+2025-11-13 14:17:21,577 - linien_server.autolock.robust - DEBUG - handle new spectrum
+2025-11-13 14:17:21,605 - linien_server.autolock.robust - ERROR - Not enough spectra collected:4 of 5
+2025-11-13 14:17:21,868 - linien_server.autolock.autolock - DEBUG - entered in react_new_spectrum
+2025-11-13 14:17:21,870 - linien_server.autolock.autolock - DEBUG - pause_acquisition: False
+2025-11-13 14:17:21,872 - linien_server.autolock.autolock - DEBUG - check_plot_data: True
+2025-11-13 14:17:21,971 - linien_server.autolock.robust - DEBUG - handle new spectrum
+2025-11-13 14:17:21,999 - linien_server.autolock.robust - DEBUG - enough spectra!, calculate
+2025-11-13 14:17:22,000 - linien_server.autolock.robust - DEBUG - Entered in calculate_autolock_instructions_v2
+2025-11-13 14:17:22,010 - linien_server.autolock.robust - DEBUG - Saved new robust_spectra.npy and target_idxs.npy
+2025-11-13 14:17:22,011 - linien_server.autolock.utils - DEBUG - Entered in crop_spectra_to_same_view
+2025-11-13 14:17:22,144 - linien_server.autolock.utils - DEBUG - Shifts calculated for cropping: [1, 2, -2, -1, 2]
+2025-11-13 14:17:22,148 - linien_server.autolock.robust - DEBUG - Saved new robust_spectra_cropped.npy
+2025-11-13 14:17:22,149 - linien_server.autolock.utils - DEBUG - Entered in get_time_scale
+2025-11-13 14:17:22,151 - linien_server.autolock.utils - DEBUG - Spectrum length:2044
+2025-11-13 14:17:22,154 - linien_server.autolock.utils - DEBUG - Spectrum: [-12 -12 -11  -7  -4]...[-3 -2 -4 -7 -9]
+2025-11-13 14:17:22,155 - linien_server.autolock.utils - DEBUG - Target indices: [1604, 1640]
+2025-11-13 14:17:22,156 - linien_server.autolock.utils - DEBUG - Entered in get_time_scale
+2025-11-13 14:17:22,157 - linien_server.autolock.utils - DEBUG - Spectrum length:2044
+2025-11-13 14:17:22,160 - linien_server.autolock.utils - DEBUG - Spectrum: [-10 -12 -13 -10  -6]...[ -3  -3  -5  -8 -10]
+2025-11-13 14:17:22,161 - linien_server.autolock.utils - DEBUG - Target indices: [1604, 1640]
+2025-11-13 14:17:22,162 - linien_server.autolock.utils - DEBUG - Entered in get_time_scale
+2025-11-13 14:17:22,163 - linien_server.autolock.utils - DEBUG - Spectrum length:2044
+2025-11-13 14:17:22,166 - linien_server.autolock.utils - DEBUG - Spectrum: [ -7 -12 -11  -7  -4]...[-3 -3 -5 -8 -9]
+2025-11-13 14:17:22,167 - linien_server.autolock.utils - DEBUG - Target indices: [1604, 1640]
+2025-11-13 14:17:22,169 - linien_server.autolock.utils - DEBUG - Entered in get_time_scale
+2025-11-13 14:17:22,170 - linien_server.autolock.utils - DEBUG - Spectrum length:2044
+2025-11-13 14:17:22,172 - linien_server.autolock.utils - DEBUG - Spectrum: [-12 -13 -13 -10  -6]...[-4 -3 -4 -7 -9]
+2025-11-13 14:17:22,173 - linien_server.autolock.utils - DEBUG - Target indices: [1604, 1640]
+2025-11-13 14:17:22,175 - linien_server.autolock.utils - DEBUG - Entered in get_time_scale
+2025-11-13 14:17:22,176 - linien_server.autolock.utils - DEBUG - Spectrum length:2044
+2025-11-13 14:17:22,179 - linien_server.autolock.utils - DEBUG - Spectrum: [-12 -14 -13 -10  -7]...[ -4  -3  -5  -8 -10]
+2025-11-13 14:17:22,180 - linien_server.autolock.utils - DEBUG - Target indices: [1604, 1640]
+2025-11-13 14:17:22,182 - linien_server.autolock.robust - DEBUG - x scale is 35
+2025-11-13 14:17:22,236 - linien_server.autolock.robust - DEBUG - shift prepared spectrum by 16 samples to the left to match the original spectrum
+2025-11-13 14:17:22,347 - linien_server.autolock.robust - DEBUG - Detected peaks with (position, height): [(1620, 177), (1614, 192), (1356, -322), (1241, 200), (1182, -835)]
+2025-11-13 14:17:22,372 - linien_server.autolock.utils - DEBUG - Zero crossings of smoothed derivative: [51, 52, 57, 63, 64, 71, 72, 86, 89, 93, 122, 124, 128, 142, 144, 149, 152, 157, 160, 164, 177, 180, 184, 188, 192, 197, 199, 212, 216, 219, 224, 227, 233, 234, 241, 242, 243, 247, 252, 254, 260, 262, 263, 268, 271, 275, 280, 282, 304, 306, 311, 315, 318, 332, 333, 339, 342, 347, 351, 353, 360, 361, 367, 370, 374, 378, 382, 387, 389, 395, 398, 402, 407, 409, 415, 416, 423, 424, 425, 430, 434, 437, 443, 444, 450, 453, 458, 461, 465, 470, 472, 478, 480, 481, 485, 489, 493, 498, 500, 506, 508, 513, 517, 520, 521, 525, 528, 534, 535, 549, 552, 553, 556, 561, 564, 569, 571, 572, 577, 580, 583, 612, 616, 619, 640, 643, 647, 652, 654, 661, 662, 667, 672, 674, 704, 707, 711, 715, 719, 722, 728, 729, 767, 816, 855, 857, 862, 865, 870, 872, 894, 897, 900, 901, 906, 908, 914, 916, 921, 925, 928, 949, 952, 956, 961, 963, 977, 980, 983, 1020, 1080, 1081, 1182, 1242, 1318, 1319, 1356, 1360, 1361, 1363, 1392, 1395, 1399, 1404, 1407, 1412, 1415, 1419, 1424, 1426, 1448, 1451, 1455, 1460, 1462, 1468, 1470, 1475, 1479, 1482, 1488, 1489, 1512, 1513, 1519, 1521, 1613, 1666, 1764, 1768, 1771, 1776, 1780, 1783, 1820, 1823, 1826, 1832, 1834, 1840, 1842, 1847, 1851, 1854, 1868, 1869, 1875, 1878, 1882, 1887, 1889, 1903, 1906, 1910, 1939, 1941, 1946, 1951, 1953, 1959, 1961, 1966, 1969, 1973, 1994, 1995, 1997, 2002, 2005, 2009]
+2025-11-13 14:17:22,374 - linien_server.autolock.utils - DEBUG - start_idx - time_scale//5: 1597
+2025-11-13 14:17:22,377 - linien_server.autolock.utils - DEBUG - Considered zeros (backward): [51, 52, 57, 63, 64, 71, 72, 86, 89, 93, 122, 124, 128, 142, 144, 149, 152, 157, 160, 164, 177, 180, 184, 188, 192, 197, 199, 212, 216, 219, 224, 227, 233, 234, 241, 242, 243, 247, 252, 254, 260, 262, 263, 268, 271, 275, 280, 282, 304, 306, 311, 315, 318, 332, 333, 339, 342, 347, 351, 353, 360, 361, 367, 370, 374, 378, 382, 387, 389, 395, 398, 402, 407, 409, 415, 416, 423, 424, 425, 430, 434, 437, 443, 444, 450, 453, 458, 461, 465, 470, 472, 478, 480, 481, 485, 489, 493, 498, 500, 506, 508, 513, 517, 520, 521, 525, 528, 534, 535, 549, 552, 553, 556, 561, 564, 569, 571, 572, 577, 580, 583, 612, 616, 619, 640, 643, 647, 652, 654, 661, 662, 667, 672, 674, 704, 707, 711, 715, 719, 722, 728, 729, 767, 816, 855, 857, 862, 865, 870, 872, 894, 897, 900, 901, 906, 908, 914, 916, 921, 925, 928, 949, 952, 956, 961, 963, 977, 980, 983, 1020, 1080, 1081, 1182, 1242, 1318, 1319, 1356, 1360, 1361, 1363, 1392, 1395, 1399, 1404, 1407, 1412, 1415, 1419, 1424, 1426, 1448, 1451, 1455, 1460, 1462, 1468, 1470, 1475, 1479, 1482, 1488, 1489, 1512, 1513, 1519, 1521]
+2025-11-13 14:17:22,405 - linien_server.autolock.utils - DEBUG - Zero crossings of smoothed derivative: [51, 52, 57, 63, 64, 71, 72, 86, 89, 93, 122, 124, 128, 142, 144, 149, 152, 157, 160, 164, 177, 180, 184, 188, 192, 197, 199, 212, 216, 219, 224, 227, 233, 234, 241, 242, 243, 247, 252, 254, 260, 262, 263, 268, 271, 275, 280, 282, 304, 306, 311, 315, 318, 332, 333, 339, 342, 347, 351, 353, 360, 361, 367, 370, 374, 378, 382, 387, 389, 395, 398, 402, 407, 409, 415, 416, 423, 424, 425, 430, 434, 437, 443, 444, 450, 453, 458, 461, 465, 470, 472, 478, 480, 481, 485, 489, 493, 498, 500, 506, 508, 513, 517, 520, 521, 525, 528, 534, 535, 549, 552, 553, 556, 561, 564, 569, 571, 572, 577, 580, 583, 612, 616, 619, 640, 643, 647, 652, 654, 661, 662, 667, 672, 674, 704, 707, 711, 715, 719, 722, 728, 729, 767, 816, 855, 857, 862, 865, 870, 872, 894, 897, 900, 901, 906, 908, 914, 916, 921, 925, 928, 949, 952, 956, 961, 963, 977, 980, 983, 1020, 1080, 1081, 1182, 1242, 1318, 1319, 1356, 1360, 1361, 1363, 1392, 1395, 1399, 1404, 1407, 1412, 1415, 1419, 1424, 1426, 1448, 1451, 1455, 1460, 1462, 1468, 1470, 1475, 1479, 1482, 1488, 1489, 1512, 1513, 1519, 1521, 1613, 1666, 1764, 1768, 1771, 1776, 1780, 1783, 1820, 1823, 1826, 1832, 1834, 1840, 1842, 1847, 1851, 1854, 1868, 1869, 1875, 1878, 1882, 1887, 1889, 1903, 1906, 1910, 1939, 1941, 1946, 1951, 1953, 1959, 1961, 1966, 1969, 1973, 1994, 1995, 1997, 2002, 2005, 2009]
+2025-11-13 14:17:22,407 - linien_server.autolock.utils - DEBUG - start_idx + time_scale//5: 1646
+2025-11-13 14:17:22,410 - linien_server.autolock.utils - DEBUG - Considered zeros (forward): [1666, 1764, 1768, 1771, 1776, 1780, 1783, 1820, 1823, 1826, 1832, 1834, 1840, 1842, 1847, 1851, 1854, 1868, 1869, 1875, 1878, 1882, 1887, 1889, 1903, 1906, 1910, 1939, 1941, 1946, 1951, 1953, 1959, 1961, 1966, 1969, 1973, 1994, 1995, 1997, 2002, 2005, 2009]
+2025-11-13 14:17:22,460 - linien_server.autolock.utils - DEBUG - Zero crossings of smoothed derivative: [51, 52, 57, 63, 64, 71, 72, 86, 89, 93, 122, 124, 128, 142, 144, 149, 152, 157, 160, 164, 177, 180, 184, 188, 192, 197, 199, 212, 216, 219, 224, 227, 233, 234, 241, 242, 243, 247, 252, 254, 260, 262, 263, 268, 271, 275, 280, 282, 304, 306, 311, 315, 318, 332, 333, 339, 342, 347, 351, 353, 360, 361, 367, 370, 374, 378, 382, 387, 389, 395, 398, 402, 407, 409, 415, 416, 423, 424, 425, 430, 434, 437, 443, 444, 450, 453, 458, 461, 465, 470, 472, 478, 480, 481, 485, 489, 493, 498, 500, 506, 508, 513, 517, 520, 521, 525, 528, 534, 535, 549, 552, 553, 556, 561, 564, 569, 571, 572, 577, 580, 583, 612, 616, 619, 640, 643, 647, 652, 654, 661, 662, 667, 672, 674, 704, 707, 711, 715, 719, 722, 728, 729, 767, 816, 855, 857, 862, 865, 870, 872, 894, 897, 900, 901, 906, 908, 914, 916, 921, 925, 928, 949, 952, 956, 961, 963, 977, 980, 983, 1020, 1080, 1081, 1182, 1242, 1318, 1319, 1356, 1360, 1361, 1363, 1392, 1395, 1399, 1404, 1407, 1412, 1415, 1419, 1424, 1426, 1448, 1451, 1455, 1460, 1462, 1468, 1470, 1475, 1479, 1482, 1488, 1489, 1512, 1513, 1519, 1521, 1613, 1666, 1764, 1768, 1771, 1776, 1780, 1783, 1820, 1823, 1826, 1832, 1834, 1840, 1842, 1847, 1851, 1854, 1868, 1869, 1875, 1878, 1882, 1887, 1889, 1903, 1906, 1910, 1939, 1941, 1946, 1951, 1953, 1959, 1961, 1966, 1969, 1973, 1994, 1995, 1997, 2002, 2005, 2009]
+2025-11-13 14:17:22,461 - linien_server.autolock.utils - DEBUG - start_idx - time_scale//5: 1597
+2025-11-13 14:17:22,465 - linien_server.autolock.utils - DEBUG - Considered zeros (backward): [51, 52, 57, 63, 64, 71, 72, 86, 89, 93, 122, 124, 128, 142, 144, 149, 152, 157, 160, 164, 177, 180, 184, 188, 192, 197, 199, 212, 216, 219, 224, 227, 233, 234, 241, 242, 243, 247, 252, 254, 260, 262, 263, 268, 271, 275, 280, 282, 304, 306, 311, 315, 318, 332, 333, 339, 342, 347, 351, 353, 360, 361, 367, 370, 374, 378, 382, 387, 389, 395, 398, 402, 407, 409, 415, 416, 423, 424, 425, 430, 434, 437, 443, 444, 450, 453, 458, 461, 465, 470, 472, 478, 480, 481, 485, 489, 493, 498, 500, 506, 508, 513, 517, 520, 521, 525, 528, 534, 535, 549, 552, 553, 556, 561, 564, 569, 571, 572, 577, 580, 583, 612, 616, 619, 640, 643, 647, 652, 654, 661, 662, 667, 672, 674, 704, 707, 711, 715, 719, 722, 728, 729, 767, 816, 855, 857, 862, 865, 870, 872, 894, 897, 900, 901, 906, 908, 914, 916, 921, 925, 928, 949, 952, 956, 961, 963, 977, 980, 983, 1020, 1080, 1081, 1182, 1242, 1318, 1319, 1356, 1360, 1361, 1363, 1392, 1395, 1399, 1404, 1407, 1412, 1415, 1419, 1424, 1426, 1448, 1451, 1455, 1460, 1462, 1468, 1470, 1475, 1479, 1482, 1488, 1489, 1512, 1513, 1519, 1521]
+2025-11-13 14:17:22,493 - linien_server.autolock.utils - DEBUG - Zero crossings of smoothed derivative: [51, 52, 57, 63, 64, 71, 72, 86, 89, 93, 122, 124, 128, 142, 144, 149, 152, 157, 160, 164, 177, 180, 184, 188, 192, 197, 199, 212, 216, 219, 224, 227, 233, 234, 241, 242, 243, 247, 252, 254, 260, 262, 263, 268, 271, 275, 280, 282, 304, 306, 311, 315, 318, 332, 333, 339, 342, 347, 351, 353, 360, 361, 367, 370, 374, 378, 382, 387, 389, 395, 398, 402, 407, 409, 415, 416, 423, 424, 425, 430, 434, 437, 443, 444, 450, 453, 458, 461, 465, 470, 472, 478, 480, 481, 485, 489, 493, 498, 500, 506, 508, 513, 517, 520, 521, 525, 528, 534, 535, 549, 552, 553, 556, 561, 564, 569, 571, 572, 577, 580, 583, 612, 616, 619, 640, 643, 647, 652, 654, 661, 662, 667, 672, 674, 704, 707, 711, 715, 719, 722, 728, 729, 767, 816, 855, 857, 862, 865, 870, 872, 894, 897, 900, 901, 906, 908, 914, 916, 921, 925, 928, 949, 952, 956, 961, 963, 977, 980, 983, 1020, 1080, 1081, 1182, 1242, 1318, 1319, 1356, 1360, 1361, 1363, 1392, 1395, 1399, 1404, 1407, 1412, 1415, 1419, 1424, 1426, 1448, 1451, 1455, 1460, 1462, 1468, 1470, 1475, 1479, 1482, 1488, 1489, 1512, 1513, 1519, 1521, 1613, 1666, 1764, 1768, 1771, 1776, 1780, 1783, 1820, 1823, 1826, 1832, 1834, 1840, 1842, 1847, 1851, 1854, 1868, 1869, 1875, 1878, 1882, 1887, 1889, 1903, 1906, 1910, 1939, 1941, 1946, 1951, 1953, 1959, 1961, 1966, 1969, 1973, 1994, 1995, 1997, 2002, 2005, 2009]
+2025-11-13 14:17:22,498 - linien_server.autolock.utils - DEBUG - start_idx + time_scale//5: 1646
+2025-11-13 14:17:22,502 - linien_server.autolock.utils - DEBUG - Considered zeros (forward): [1666, 1764, 1768, 1771, 1776, 1780, 1783, 1820, 1823, 1826, 1832, 1834, 1840, 1842, 1847, 1851, 1854, 1868, 1869, 1875, 1878, 1882, 1887, 1889, 1903, 1906, 1910, 1939, 1941, 1946, 1951, 1953, 1959, 1961, 1966, 1969, 1973, 1994, 1995, 1997, 2002, 2005, 2009]
+2025-11-13 14:17:22,536 - linien_server.autolock.utils - DEBUG - Zero crossings of smoothed derivative: [51, 52, 57, 63, 64, 71, 72, 86, 89, 93, 122, 124, 128, 142, 144, 149, 152, 157, 160, 164, 177, 180, 184, 188, 192, 197, 199, 212, 216, 219, 224, 227, 233, 234, 241, 242, 243, 247, 252, 254, 260, 262, 263, 268, 271, 275, 280, 282, 304, 306, 311, 315, 318, 332, 333, 339, 342, 347, 351, 353, 360, 361, 367, 370, 374, 378, 382, 387, 389, 395, 398, 402, 407, 409, 415, 416, 423, 424, 425, 430, 434, 437, 443, 444, 450, 453, 458, 461, 465, 470, 472, 478, 480, 481, 485, 489, 493, 498, 500, 506, 508, 513, 517, 520, 521, 525, 528, 534, 535, 549, 552, 553, 556, 561, 564, 569, 571, 572, 577, 580, 583, 612, 616, 619, 640, 643, 647, 652, 654, 661, 662, 667, 672, 674, 704, 707, 711, 715, 719, 722, 728, 729, 767, 816, 855, 857, 862, 865, 870, 872, 894, 897, 900, 901, 906, 908, 914, 916, 921, 925, 928, 949, 952, 956, 961, 963, 977, 980, 983, 1020, 1080, 1081, 1182, 1242, 1318, 1319, 1356, 1360, 1361, 1363, 1392, 1395, 1399, 1404, 1407, 1412, 1415, 1419, 1424, 1426, 1448, 1451, 1455, 1460, 1462, 1468, 1470, 1475, 1479, 1482, 1488, 1489, 1512, 1513, 1519, 1521, 1613, 1666, 1764, 1768, 1771, 1776, 1780, 1783, 1820, 1823, 1826, 1832, 1834, 1840, 1842, 1847, 1851, 1854, 1868, 1869, 1875, 1878, 1882, 1887, 1889, 1903, 1906, 1910, 1939, 1941, 1946, 1951, 1953, 1959, 1961, 1966, 1969, 1973, 1994, 1995, 1997, 2002, 2005, 2009]
+2025-11-13 14:17:22,537 - linien_server.autolock.utils - DEBUG - start_idx - time_scale//5: 1597
+2025-11-13 14:17:22,541 - linien_server.autolock.utils - DEBUG - Considered zeros (backward): [51, 52, 57, 63, 64, 71, 72, 86, 89, 93, 122, 124, 128, 142, 144, 149, 152, 157, 160, 164, 177, 180, 184, 188, 192, 197, 199, 212, 216, 219, 224, 227, 233, 234, 241, 242, 243, 247, 252, 254, 260, 262, 263, 268, 271, 275, 280, 282, 304, 306, 311, 315, 318, 332, 333, 339, 342, 347, 351, 353, 360, 361, 367, 370, 374, 378, 382, 387, 389, 395, 398, 402, 407, 409, 415, 416, 423, 424, 425, 430, 434, 437, 443, 444, 450, 453, 458, 461, 465, 470, 472, 478, 480, 481, 485, 489, 493, 498, 500, 506, 508, 513, 517, 520, 521, 525, 528, 534, 535, 549, 552, 553, 556, 561, 564, 569, 571, 572, 577, 580, 583, 612, 616, 619, 640, 643, 647, 652, 654, 661, 662, 667, 672, 674, 704, 707, 711, 715, 719, 722, 728, 729, 767, 816, 855, 857, 862, 865, 870, 872, 894, 897, 900, 901, 906, 908, 914, 916, 921, 925, 928, 949, 952, 956, 961, 963, 977, 980, 983, 1020, 1080, 1081, 1182, 1242, 1318, 1319, 1356, 1360, 1361, 1363, 1392, 1395, 1399, 1404, 1407, 1412, 1415, 1419, 1424, 1426, 1448, 1451, 1455, 1460, 1462, 1468, 1470, 1475, 1479, 1482, 1488, 1489, 1512, 1513, 1519, 1521]
+2025-11-13 14:17:22,568 - linien_server.autolock.utils - DEBUG - Zero crossings of smoothed derivative: [51, 52, 57, 63, 64, 71, 72, 86, 89, 93, 122, 124, 128, 142, 144, 149, 152, 157, 160, 164, 177, 180, 184, 188, 192, 197, 199, 212, 216, 219, 224, 227, 233, 234, 241, 242, 243, 247, 252, 254, 260, 262, 263, 268, 271, 275, 280, 282, 304, 306, 311, 315, 318, 332, 333, 339, 342, 347, 351, 353, 360, 361, 367, 370, 374, 378, 382, 387, 389, 395, 398, 402, 407, 409, 415, 416, 423, 424, 425, 430, 434, 437, 443, 444, 450, 453, 458, 461, 465, 470, 472, 478, 480, 481, 485, 489, 493, 498, 500, 506, 508, 513, 517, 520, 521, 525, 528, 534, 535, 549, 552, 553, 556, 561, 564, 569, 571, 572, 577, 580, 583, 612, 616, 619, 640, 643, 647, 652, 654, 661, 662, 667, 672, 674, 704, 707, 711, 715, 719, 722, 728, 729, 767, 816, 855, 857, 862, 865, 870, 872, 894, 897, 900, 901, 906, 908, 914, 916, 921, 925, 928, 949, 952, 956, 961, 963, 977, 980, 983, 1020, 1080, 1081, 1182, 1242, 1318, 1319, 1356, 1360, 1361, 1363, 1392, 1395, 1399, 1404, 1407, 1412, 1415, 1419, 1424, 1426, 1448, 1451, 1455, 1460, 1462, 1468, 1470, 1475, 1479, 1482, 1488, 1489, 1512, 1513, 1519, 1521, 1613, 1666, 1764, 1768, 1771, 1776, 1780, 1783, 1820, 1823, 1826, 1832, 1834, 1840, 1842, 1847, 1851, 1854, 1868, 1869, 1875, 1878, 1882, 1887, 1889, 1903, 1906, 1910, 1939, 1941, 1946, 1951, 1953, 1959, 1961, 1966, 1969, 1973, 1994, 1995, 1997, 2002, 2005, 2009]
+2025-11-13 14:17:22,570 - linien_server.autolock.utils - DEBUG - start_idx + time_scale//5: 1646
+2025-11-13 14:17:22,574 - linien_server.autolock.utils - DEBUG - Considered zeros (forward): [1666, 1764, 1768, 1771, 1776, 1780, 1783, 1820, 1823, 1826, 1832, 1834, 1840, 1842, 1847, 1851, 1854, 1868, 1869, 1875, 1878, 1882, 1887, 1889, 1903, 1906, 1910, 1939, 1941, 1946, 1951, 1953, 1959, 1961, 1966, 1969, 1973, 1994, 1995, 1997, 2002, 2005, 2009]
+2025-11-13 14:17:22,609 - linien_server.autolock.utils - DEBUG - Zero crossings of smoothed derivative: [51, 52, 57, 63, 64, 71, 72, 86, 89, 93, 122, 124, 128, 142, 144, 149, 152, 157, 160, 164, 177, 180, 184, 188, 192, 197, 199, 212, 216, 219, 224, 227, 233, 234, 241, 242, 243, 247, 252, 254, 260, 262, 263, 268, 271, 275, 280, 282, 304, 306, 311, 315, 318, 332, 333, 339, 342, 347, 351, 353, 360, 361, 367, 370, 374, 378, 382, 387, 389, 395, 398, 402, 407, 409, 415, 416, 423, 424, 425, 430, 434, 437, 443, 444, 450, 453, 458, 461, 465, 470, 472, 478, 480, 481, 485, 489, 493, 498, 500, 506, 508, 513, 517, 520, 521, 525, 528, 534, 535, 549, 552, 553, 556, 561, 564, 569, 571, 572, 577, 580, 583, 612, 616, 619, 640, 643, 647, 652, 654, 661, 662, 667, 672, 674, 704, 707, 711, 715, 719, 722, 728, 729, 767, 816, 855, 857, 862, 865, 870, 872, 894, 897, 900, 901, 906, 908, 914, 916, 921, 925, 928, 949, 952, 956, 961, 963, 977, 980, 983, 1020, 1080, 1081, 1182, 1242, 1318, 1319, 1356, 1360, 1361, 1363, 1392, 1395, 1399, 1404, 1407, 1412, 1415, 1419, 1424, 1426, 1448, 1451, 1455, 1460, 1462, 1468, 1470, 1475, 1479, 1482, 1488, 1489, 1512, 1513, 1519, 1521, 1613, 1666, 1764, 1768, 1771, 1776, 1780, 1783, 1820, 1823, 1826, 1832, 1834, 1840, 1842, 1847, 1851, 1854, 1868, 1869, 1875, 1878, 1882, 1887, 1889, 1903, 1906, 1910, 1939, 1941, 1946, 1951, 1953, 1959, 1961, 1966, 1969, 1973, 1994, 1995, 1997, 2002, 2005, 2009]
+2025-11-13 14:17:22,611 - linien_server.autolock.utils - DEBUG - start_idx - time_scale//5: 1597
+2025-11-13 14:17:22,614 - linien_server.autolock.utils - DEBUG - Considered zeros (backward): [51, 52, 57, 63, 64, 71, 72, 86, 89, 93, 122, 124, 128, 142, 144, 149, 152, 157, 160, 164, 177, 180, 184, 188, 192, 197, 199, 212, 216, 219, 224, 227, 233, 234, 241, 242, 243, 247, 252, 254, 260, 262, 263, 268, 271, 275, 280, 282, 304, 306, 311, 315, 318, 332, 333, 339, 342, 347, 351, 353, 360, 361, 367, 370, 374, 378, 382, 387, 389, 395, 398, 402, 407, 409, 415, 416, 423, 424, 425, 430, 434, 437, 443, 444, 450, 453, 458, 461, 465, 470, 472, 478, 480, 481, 485, 489, 493, 498, 500, 506, 508, 513, 517, 520, 521, 525, 528, 534, 535, 549, 552, 553, 556, 561, 564, 569, 571, 572, 577, 580, 583, 612, 616, 619, 640, 643, 647, 652, 654, 661, 662, 667, 672, 674, 704, 707, 711, 715, 719, 722, 728, 729, 767, 816, 855, 857, 862, 865, 870, 872, 894, 897, 900, 901, 906, 908, 914, 916, 921, 925, 928, 949, 952, 956, 961, 963, 977, 980, 983, 1020, 1080, 1081, 1182, 1242, 1318, 1319, 1356, 1360, 1361, 1363, 1392, 1395, 1399, 1404, 1407, 1412, 1415, 1419, 1424, 1426, 1448, 1451, 1455, 1460, 1462, 1468, 1470, 1475, 1479, 1482, 1488, 1489, 1512, 1513, 1519, 1521]
+2025-11-13 14:17:22,640 - linien_server.autolock.utils - DEBUG - Zero crossings of smoothed derivative: [51, 52, 57, 63, 64, 71, 72, 86, 89, 93, 122, 124, 128, 142, 144, 149, 152, 157, 160, 164, 177, 180, 184, 188, 192, 197, 199, 212, 216, 219, 224, 227, 233, 234, 241, 242, 243, 247, 252, 254, 260, 262, 263, 268, 271, 275, 280, 282, 304, 306, 311, 315, 318, 332, 333, 339, 342, 347, 351, 353, 360, 361, 367, 370, 374, 378, 382, 387, 389, 395, 398, 402, 407, 409, 415, 416, 423, 424, 425, 430, 434, 437, 443, 444, 450, 453, 458, 461, 465, 470, 472, 478, 480, 481, 485, 489, 493, 498, 500, 506, 508, 513, 517, 520, 521, 525, 528, 534, 535, 549, 552, 553, 556, 561, 564, 569, 571, 572, 577, 580, 583, 612, 616, 619, 640, 643, 647, 652, 654, 661, 662, 667, 672, 674, 704, 707, 711, 715, 719, 722, 728, 729, 767, 816, 855, 857, 862, 865, 870, 872, 894, 897, 900, 901, 906, 908, 914, 916, 921, 925, 928, 949, 952, 956, 961, 963, 977, 980, 983, 1020, 1080, 1081, 1182, 1242, 1318, 1319, 1356, 1360, 1361, 1363, 1392, 1395, 1399, 1404, 1407, 1412, 1415, 1419, 1424, 1426, 1448, 1451, 1455, 1460, 1462, 1468, 1470, 1475, 1479, 1482, 1488, 1489, 1512, 1513, 1519, 1521, 1613, 1666, 1764, 1768, 1771, 1776, 1780, 1783, 1820, 1823, 1826, 1832, 1834, 1840, 1842, 1847, 1851, 1854, 1868, 1869, 1875, 1878, 1882, 1887, 1889, 1903, 1906, 1910, 1939, 1941, 1946, 1951, 1953, 1959, 1961, 1966, 1969, 1973, 1994, 1995, 1997, 2002, 2005, 2009]
+2025-11-13 14:17:22,642 - linien_server.autolock.utils - DEBUG - start_idx + time_scale//5: 1646
+2025-11-13 14:17:22,645 - linien_server.autolock.utils - DEBUG - Considered zeros (forward): [1666, 1764, 1768, 1771, 1776, 1780, 1783, 1820, 1823, 1826, 1832, 1834, 1840, 1842, 1847, 1851, 1854, 1868, 1869, 1875, 1878, 1882, 1887, 1889, 1903, 1906, 1910, 1939, 1941, 1946, 1951, 1953, 1959, 1961, 1966, 1969, 1973, 1994, 1995, 1997, 2002, 2005, 2009]
+2025-11-13 14:17:22,679 - linien_server.autolock.utils - DEBUG - Zero crossings of smoothed derivative: [51, 52, 57, 63, 64, 71, 72, 86, 89, 93, 122, 124, 128, 142, 144, 149, 152, 157, 160, 164, 177, 180, 184, 188, 192, 197, 199, 212, 216, 219, 224, 227, 233, 234, 241, 242, 243, 247, 252, 254, 260, 262, 263, 268, 271, 275, 280, 282, 304, 306, 311, 315, 318, 332, 333, 339, 342, 347, 351, 353, 360, 361, 367, 370, 374, 378, 382, 387, 389, 395, 398, 402, 407, 409, 415, 416, 423, 424, 425, 430, 434, 437, 443, 444, 450, 453, 458, 461, 465, 470, 472, 478, 480, 481, 485, 489, 493, 498, 500, 506, 508, 513, 517, 520, 521, 525, 528, 534, 535, 549, 552, 553, 556, 561, 564, 569, 571, 572, 577, 580, 583, 612, 616, 619, 640, 643, 647, 652, 654, 661, 662, 667, 672, 674, 704, 707, 711, 715, 719, 722, 728, 729, 767, 816, 855, 857, 862, 865, 870, 872, 894, 897, 900, 901, 906, 908, 914, 916, 921, 925, 928, 949, 952, 956, 961, 963, 977, 980, 983, 1020, 1080, 1081, 1182, 1242, 1318, 1319, 1356, 1360, 1361, 1363, 1392, 1395, 1399, 1404, 1407, 1412, 1415, 1419, 1424, 1426, 1448, 1451, 1455, 1460, 1462, 1468, 1470, 1475, 1479, 1482, 1488, 1489, 1512, 1513, 1519, 1521, 1613, 1666, 1764, 1768, 1771, 1776, 1780, 1783, 1820, 1823, 1826, 1832, 1834, 1840, 1842, 1847, 1851, 1854, 1868, 1869, 1875, 1878, 1882, 1887, 1889, 1903, 1906, 1910, 1939, 1941, 1946, 1951, 1953, 1959, 1961, 1966, 1969, 1973, 1994, 1995, 1997, 2002, 2005, 2009]
+2025-11-13 14:17:22,680 - linien_server.autolock.utils - DEBUG - start_idx - time_scale//5: 1597
+2025-11-13 14:17:22,683 - linien_server.autolock.utils - DEBUG - Considered zeros (backward): [51, 52, 57, 63, 64, 71, 72, 86, 89, 93, 122, 124, 128, 142, 144, 149, 152, 157, 160, 164, 177, 180, 184, 188, 192, 197, 199, 212, 216, 219, 224, 227, 233, 234, 241, 242, 243, 247, 252, 254, 260, 262, 263, 268, 271, 275, 280, 282, 304, 306, 311, 315, 318, 332, 333, 339, 342, 347, 351, 353, 360, 361, 367, 370, 374, 378, 382, 387, 389, 395, 398, 402, 407, 409, 415, 416, 423, 424, 425, 430, 434, 437, 443, 444, 450, 453, 458, 461, 465, 470, 472, 478, 480, 481, 485, 489, 493, 498, 500, 506, 508, 513, 517, 520, 521, 525, 528, 534, 535, 549, 552, 553, 556, 561, 564, 569, 571, 572, 577, 580, 583, 612, 616, 619, 640, 643, 647, 652, 654, 661, 662, 667, 672, 674, 704, 707, 711, 715, 719, 722, 728, 729, 767, 816, 855, 857, 862, 865, 870, 872, 894, 897, 900, 901, 906, 908, 914, 916, 921, 925, 928, 949, 952, 956, 961, 963, 977, 980, 983, 1020, 1080, 1081, 1182, 1242, 1318, 1319, 1356, 1360, 1361, 1363, 1392, 1395, 1399, 1404, 1407, 1412, 1415, 1419, 1424, 1426, 1448, 1451, 1455, 1460, 1462, 1468, 1470, 1475, 1479, 1482, 1488, 1489, 1512, 1513, 1519, 1521]
+2025-11-13 14:17:22,710 - linien_server.autolock.utils - DEBUG - Zero crossings of smoothed derivative: [51, 52, 57, 63, 64, 71, 72, 86, 89, 93, 122, 124, 128, 142, 144, 149, 152, 157, 160, 164, 177, 180, 184, 188, 192, 197, 199, 212, 216, 219, 224, 227, 233, 234, 241, 242, 243, 247, 252, 254, 260, 262, 263, 268, 271, 275, 280, 282, 304, 306, 311, 315, 318, 332, 333, 339, 342, 347, 351, 353, 360, 361, 367, 370, 374, 378, 382, 387, 389, 395, 398, 402, 407, 409, 415, 416, 423, 424, 425, 430, 434, 437, 443, 444, 450, 453, 458, 461, 465, 470, 472, 478, 480, 481, 485, 489, 493, 498, 500, 506, 508, 513, 517, 520, 521, 525, 528, 534, 535, 549, 552, 553, 556, 561, 564, 569, 571, 572, 577, 580, 583, 612, 616, 619, 640, 643, 647, 652, 654, 661, 662, 667, 672, 674, 704, 707, 711, 715, 719, 722, 728, 729, 767, 816, 855, 857, 862, 865, 870, 872, 894, 897, 900, 901, 906, 908, 914, 916, 921, 925, 928, 949, 952, 956, 961, 963, 977, 980, 983, 1020, 1080, 1081, 1182, 1242, 1318, 1319, 1356, 1360, 1361, 1363, 1392, 1395, 1399, 1404, 1407, 1412, 1415, 1419, 1424, 1426, 1448, 1451, 1455, 1460, 1462, 1468, 1470, 1475, 1479, 1482, 1488, 1489, 1512, 1513, 1519, 1521, 1613, 1666, 1764, 1768, 1771, 1776, 1780, 1783, 1820, 1823, 1826, 1832, 1834, 1840, 1842, 1847, 1851, 1854, 1868, 1869, 1875, 1878, 1882, 1887, 1889, 1903, 1906, 1910, 1939, 1941, 1946, 1951, 1953, 1959, 1961, 1966, 1969, 1973, 1994, 1995, 1997, 2002, 2005, 2009]
+2025-11-13 14:17:22,711 - linien_server.autolock.utils - DEBUG - start_idx + time_scale//5: 1646
+2025-11-13 14:17:22,714 - linien_server.autolock.utils - DEBUG - Considered zeros (forward): [1666, 1764, 1768, 1771, 1776, 1780, 1783, 1820, 1823, 1826, 1832, 1834, 1840, 1842, 1847, 1851, 1854, 1868, 1869, 1875, 1878, 1882, 1887, 1889, 1903, 1906, 1910, 1939, 1941, 1946, 1951, 1953, 1959, 1961, 1966, 1969, 1973, 1994, 1995, 1997, 2002, 2005, 2009]
+2025-11-13 14:17:22,724 - linien_server.autolock.robust - DEBUG - Determined lock regions: [(1586, 1666), (1594, 1666), (1586, 1666), (1586, 1666), (1586, 1666)]
+2025-11-13 14:17:22,725 - linien_server.autolock.robust - DEBUG - Try out tolerance 0.95
+2025-11-13 14:17:22,727 - linien_server.autolock.robust - DEBUG - Original peaks: [(1620, 177), (1614, 192), (1356, -322), (1241, 200), (1182, -835)]
+2025-11-13 14:17:22,729 - linien_server.autolock.robust - DEBUG - Filtered peaks: [(1620, 168.15), (1614, 182.39999999999998), (1356, -305.9), (1241, 190.0), (1182, -793.25)]
+2025-11-13 14:17:22,730 - linien_server.autolock.robust - DEBUG - Discarded peaks: [(1620, 177), (1614, 192), (1356, -322), (1241, 200), (1182, -835)]
+2025-11-13 14:17:22,732 - linien_server.autolock.robust - DEBUG - Target peak index in prepared spectrum: 1620
+2025-11-13 14:17:22,734 - linien_server.autolock.robust - DEBUG - final wait time is 9 samples
+2025-11-13 14:17:22,735 - linien_server.autolock.robust - DEBUG - Generated description: [(1063, -793), (53, 190), (103, -305), (232, 182), (5, 168)]
+2025-11-13 14:17:22,772 - linien_server.autolock.robust - DEBUG - Lock position found at index 1628 for current spectrum
+2025-11-13 14:17:22,839 - linien_server.autolock.robust - DEBUG - Lock position found at index 1627 for current spectrum
+2025-11-13 14:17:22,872 - linien_server.autolock.robust - DEBUG - Lock position found at index 1627 for current spectrum
+2025-11-13 14:17:22,905 - linien_server.autolock.robust - DEBUG - Lock position found at index 1621 for current spectrum
+2025-11-13 14:17:22,906 - linien_server.autolock.robust - DEBUG - Try out tolerance 0.9
+2025-11-13 14:17:22,908 - linien_server.autolock.robust - DEBUG - Original peaks: [(1620, 177), (1614, 192), (1356, -322), (1241, 200), (1182, -835)]
+2025-11-13 14:17:22,909 - linien_server.autolock.robust - DEBUG - Filtered peaks: [(1620, 159.3), (1614, 172.8), (1356, -289.8), (1241, 180.0), (1182, -751.5)]
+2025-11-13 14:17:22,911 - linien_server.autolock.robust - DEBUG - Discarded peaks: [(1620, 177), (1614, 192), (1356, -322), (1241, 200), (1182, -835)]
+2025-11-13 14:17:22,912 - linien_server.autolock.robust - DEBUG - Target peak index in prepared spectrum: 1620
+2025-11-13 14:17:22,915 - linien_server.autolock.robust - DEBUG - final wait time is 10 samples
+2025-11-13 14:17:22,916 - linien_server.autolock.robust - DEBUG - Generated description: [(1063, -751), (53, 180), (103, -289), (232, 172), (5, 159)]
+2025-11-13 14:17:22,954 - linien_server.autolock.robust - DEBUG - Lock position found at index 1628 for current spectrum
+2025-11-13 14:17:22,988 - linien_server.autolock.robust - DEBUG - Lock position found at index 1634 for current spectrum
+2025-11-13 14:17:23,021 - linien_server.autolock.robust - DEBUG - Lock position found at index 1627 for current spectrum
+2025-11-13 14:17:23,054 - linien_server.autolock.robust - DEBUG - Lock position found at index 1628 for current spectrum
+2025-11-13 14:17:23,086 - linien_server.autolock.robust - DEBUG - Lock position found at index 1621 for current spectrum
+2025-11-13 14:17:23,087 - linien_server.autolock.robust - DEBUG - Description is [(1063, -751), (53, 180), (103, -289), (232, 172), (5, 159)]
+2025-11-13 14:17:23,089 - linien_server.autolock.robust - DEBUG - Calculation of autolock description took 1.0890145301818848
+2025-11-13 14:17:23,149 - linien_server.server - ERROR - incorrect data received for lock state, ignoring!
+2025-11-13 14:17:23,460 - linien_server.autolock.autolock - DEBUG - entered in react_new_spectrum
+2025-11-13 14:17:23,462 - linien_server.autolock.autolock - DEBUG - pause_acquisition: False
+2025-11-13 14:17:23,465 - linien_server.autolock.autolock - DEBUG - check_plot_data: True
+2025-11-13 14:17:23,466 - linien_server.autolock.autolock - DEBUG - after lock
+2025-11-14 11:00:25,636 - linien_server.cli - DEBUG - Copied linien-server.service to /etc/systemd/system
+2025-11-14 11:00:25,638 - linien_server.cli - INFO - Starting Linien server
+2025-11-14 11:00:25,705 - linien_server.cli - INFO - Started Linien server
+2025-11-14 11:00:44,814 - linien_server.parameters - INFO - Restoring parameters from /root/.local/share/linien/parameters.json
+2025-11-14 11:00:44,821 - linien_server.parameters - INFO - Restored parameters from /root/.local/share/linien/parameters.json
+2025-11-14 11:00:44,826 - linien_common.influxdb - INFO - Saved InfluxDB credentials to /root/.local/share/linien/influxdb_credentials.json
+2025-11-14 11:00:45,919 - linien_server.acquisition - INFO - Using fpgautil to deploy gateware.
+2025-11-14 11:00:46,175 - linien_server.server - DEBUG - Ping  1
+2025-11-14 11:00:46,234 - linien_server.mdio_tool - INFO - Disabling ethernet blinking with mdio-tool at /usr/local/lib/python3.10/dist-packages/linien_server/mdio-tool
+2025-11-14 11:00:46,278 - linien_server.server - INFO - Starting server.
+2025-11-14 11:00:47,209 - linien_server.server - DEBUG - Ping  2
+2025-11-14 11:00:48,244 - linien_server.server - DEBUG - Ping  3
+2025-11-14 11:00:48,270 - linien_server.server - DEBUG - Further pings will be suppressed
+2025-11-17 08:32:54,434 - linien_server.cli - DEBUG - Copied linien-server.service to /etc/systemd/system
+2025-11-17 08:32:54,438 - linien_server.cli - INFO - Starting Linien server
+2025-11-17 08:32:54,508 - linien_server.cli - INFO - Started Linien server
+2025-11-17 08:33:14,277 - linien_server.parameters - INFO - Restoring parameters from /root/.local/share/linien/parameters.json
+2025-11-17 08:33:14,283 - linien_server.parameters - INFO - Restored parameters from /root/.local/share/linien/parameters.json
+2025-11-17 08:33:14,288 - linien_common.influxdb - INFO - Saved InfluxDB credentials to /root/.local/share/linien/influxdb_credentials.json
+2025-11-17 08:33:15,181 - linien_server.acquisition - INFO - Using fpgautil to deploy gateware.
+2025-11-17 08:33:15,433 - linien_server.server - DEBUG - Ping  1
+2025-11-17 08:33:15,476 - linien_server.mdio_tool - INFO - Disabling ethernet blinking with mdio-tool at /usr/local/lib/python3.10/dist-packages/linien_server/mdio-tool
+2025-11-17 08:33:15,489 - linien_server.server - INFO - Starting server.
+2025-11-17 08:33:16,447 - linien_server.server - DEBUG - Ping  2
+2025-11-17 08:33:17,468 - linien_server.server - DEBUG - Ping  3
+2025-11-17 08:33:17,486 - linien_server.server - DEBUG - Further pings will be suppressed
+2025-11-17 15:00:47,818 - linien_server.autolock.autolock - DEBUG - Initialize Autolock
+2025-11-17 15:00:47,835 - linien_server.autolock.autolock - DEBUG - Start the autolock
+2025-11-17 15:00:47,836 - linien_server.autolock.autolock - DEBUG - (x0, x1) = (1600,1850)
+2025-11-17 15:00:47,874 - linien_server.autolock.autolock - DEBUG - Start autolock with mode 1
+2025-11-17 15:00:47,994 - linien_server.autolock.autolock - DEBUG - entered in react_new_spectrum
+2025-11-17 15:00:47,996 - linien_server.autolock.autolock - DEBUG - pause_acquisition: False
+2025-11-17 15:00:47,997 - linien_server.autolock.autolock - DEBUG - check_plot_data: True
+2025-11-17 15:00:48,095 - linien_server.autolock.robust - DEBUG - handle new spectrum
+2025-11-17 15:00:48,158 - linien_server.autolock.robust - ERROR - Not enough spectra collected:2 of 5
+2025-11-17 15:00:48,369 - linien_server.autolock.autolock - DEBUG - entered in react_new_spectrum
+2025-11-17 15:00:48,371 - linien_server.autolock.autolock - DEBUG - pause_acquisition: False
+2025-11-17 15:00:48,374 - linien_server.autolock.autolock - DEBUG - check_plot_data: True
+2025-11-17 15:00:48,474 - linien_server.autolock.robust - DEBUG - handle new spectrum
+2025-11-17 15:00:48,502 - linien_server.autolock.robust - ERROR - Not enough spectra collected:3 of 5
+2025-11-17 15:00:48,765 - linien_server.autolock.autolock - DEBUG - entered in react_new_spectrum
+2025-11-17 15:00:48,767 - linien_server.autolock.autolock - DEBUG - pause_acquisition: False
+2025-11-17 15:00:48,769 - linien_server.autolock.autolock - DEBUG - check_plot_data: True
+2025-11-17 15:00:48,870 - linien_server.autolock.robust - DEBUG - handle new spectrum
+2025-11-17 15:00:48,898 - linien_server.autolock.robust - ERROR - Not enough spectra collected:4 of 5
+2025-11-17 15:00:49,151 - linien_server.autolock.autolock - DEBUG - entered in react_new_spectrum
+2025-11-17 15:00:49,153 - linien_server.autolock.autolock - DEBUG - pause_acquisition: False
+2025-11-17 15:00:49,155 - linien_server.autolock.autolock - DEBUG - check_plot_data: True
+2025-11-17 15:00:49,256 - linien_server.autolock.robust - DEBUG - handle new spectrum
+2025-11-17 15:00:49,284 - linien_server.autolock.robust - DEBUG - enough spectra!, calculate
+2025-11-17 15:00:49,285 - linien_server.autolock.robust - DEBUG - Entered in calculate_autolock_instructions_v2
+2025-11-17 15:00:49,299 - linien_server.autolock.robust - DEBUG - Saved new robust_spectra.npy and target_idxs.npy
+2025-11-17 15:00:49,300 - linien_server.autolock.utils - DEBUG - Entered in crop_spectra_to_same_view
+2025-11-17 15:00:49,439 - linien_server.autolock.utils - DEBUG - Shifts calculated for cropping: [1, 19, 21, 23, 24]
+2025-11-17 15:00:49,447 - linien_server.autolock.robust - DEBUG - Saved new robust_spectra_cropped.npy
+2025-11-17 15:00:49,448 - linien_server.autolock.utils - DEBUG - Entered in get_time_scale
+2025-11-17 15:00:49,449 - linien_server.autolock.utils - DEBUG - Spectrum length:2025
+2025-11-17 15:00:49,452 - linien_server.autolock.utils - DEBUG - Spectrum: [-6 -5 -5 -5 -5]...[-11 -11 -11 -11 -11]
+2025-11-17 15:00:49,454 - linien_server.autolock.utils - DEBUG - Target indices: [1677, 1722]
+2025-11-17 15:00:49,455 - linien_server.autolock.utils - DEBUG - Entered in get_time_scale
+2025-11-17 15:00:49,456 - linien_server.autolock.utils - DEBUG - Spectrum length:2025
+2025-11-17 15:00:49,459 - linien_server.autolock.utils - DEBUG - Spectrum: [-6 -6 -5 -5 -5]...[-15 -15 -16 -15 -15]
+2025-11-17 15:00:49,460 - linien_server.autolock.utils - DEBUG - Target indices: [1677, 1722]
+2025-11-17 15:00:49,461 - linien_server.autolock.utils - DEBUG - Entered in get_time_scale
+2025-11-17 15:00:49,462 - linien_server.autolock.utils - DEBUG - Spectrum length:2025
+2025-11-17 15:00:49,465 - linien_server.autolock.utils - DEBUG - Spectrum: [-5 -5 -5 -5 -4]...[-15 -15 -15 -15 -15]
+2025-11-17 15:00:49,467 - linien_server.autolock.utils - DEBUG - Target indices: [1677, 1722]
+2025-11-17 15:00:49,470 - linien_server.autolock.utils - DEBUG - Entered in get_time_scale
+2025-11-17 15:00:49,473 - linien_server.autolock.utils - DEBUG - Spectrum length:2025
+2025-11-17 15:00:49,476 - linien_server.autolock.utils - DEBUG - Spectrum: [-5 -5 -5 -5 -5]...[-15 -15 -15 -15 -15]
+2025-11-17 15:00:49,477 - linien_server.autolock.utils - DEBUG - Target indices: [1677, 1722]
+2025-11-17 15:00:49,478 - linien_server.autolock.utils - DEBUG - Entered in get_time_scale
+2025-11-17 15:00:49,479 - linien_server.autolock.utils - DEBUG - Spectrum length:2025
+2025-11-17 15:00:49,482 - linien_server.autolock.utils - DEBUG - Spectrum: [-5 -6 -6 -6 -6]...[-15 -15 -15 -14 -14]
+2025-11-17 15:00:49,483 - linien_server.autolock.utils - DEBUG - Target indices: [1677, 1722]
+2025-11-17 15:00:49,487 - linien_server.autolock.robust - DEBUG - x scale is 42
+2025-11-17 15:00:49,539 - linien_server.autolock.robust - DEBUG - shift prepared spectrum by 19 samples to the left to match the original spectrum
+2025-11-17 15:00:49,657 - linien_server.autolock.robust - DEBUG - Detected peaks with (position, height): [(1696, 842), (1578, -264), (1310, 1827), (1252, -1660)]
+2025-11-17 15:00:49,682 - linien_server.autolock.utils - DEBUG - Zero crossings of smoothed derivative: [60, 83, 84, 137, 138, 139, 171, 195, 196, 233, 234, 235, 236, 255, 297, 324, 325, 356, 357, 384, 385, 423, 424, 425, 434, 476, 514, 602, 635, 667, 709, 713, 714, 792, 793, 848, 894, 968, 969, 1053, 1245, 1313, 1528, 1529, 1531, 1578, 1690, 1755, 1946, 1956, 2002]
+2025-11-17 15:00:49,683 - linien_server.autolock.utils - DEBUG - start_idx - time_scale//5: 1669
+2025-11-17 15:00:49,685 - linien_server.autolock.utils - DEBUG - Considered zeros (backward): [60, 83, 84, 137, 138, 139, 171, 195, 196, 233, 234, 235, 236, 255, 297, 324, 325, 356, 357, 384, 385, 423, 424, 425, 434, 476, 514, 602, 635, 667, 709, 713, 714, 792, 793, 848, 894, 968, 969, 1053, 1245, 1313, 1528, 1529, 1531, 1578]
+2025-11-17 15:00:49,713 - linien_server.autolock.utils - DEBUG - Zero crossings of smoothed derivative: [60, 83, 84, 137, 138, 139, 171, 195, 196, 233, 234, 235, 236, 255, 297, 324, 325, 356, 357, 384, 385, 423, 424, 425, 434, 476, 514, 602, 635, 667, 709, 713, 714, 792, 793, 848, 894, 968, 969, 1053, 1245, 1313, 1528, 1529, 1531, 1578, 1690, 1755, 1946, 1956, 2002]
+2025-11-17 15:00:49,714 - linien_server.autolock.utils - DEBUG - start_idx + time_scale//5: 1729
+2025-11-17 15:00:49,716 - linien_server.autolock.utils - DEBUG - Considered zeros (forward): [1755, 1946, 1956, 2002]
+2025-11-17 15:00:49,759 - linien_server.autolock.utils - DEBUG - Zero crossings of smoothed derivative: [60, 83, 84, 137, 138, 139, 171, 195, 196, 233, 234, 235, 236, 255, 297, 324, 325, 356, 357, 384, 385, 423, 424, 425, 434, 476, 514, 602, 635, 667, 709, 713, 714, 792, 793, 848, 894, 968, 969, 1053, 1245, 1313, 1528, 1529, 1531, 1578, 1690, 1755, 1946, 1956, 2002]
+2025-11-17 15:00:49,760 - linien_server.autolock.utils - DEBUG - start_idx - time_scale//5: 1675
+2025-11-17 15:00:49,762 - linien_server.autolock.utils - DEBUG - Considered zeros (backward): [60, 83, 84, 137, 138, 139, 171, 195, 196, 233, 234, 235, 236, 255, 297, 324, 325, 356, 357, 384, 385, 423, 424, 425, 434, 476, 514, 602, 635, 667, 709, 713, 714, 792, 793, 848, 894, 968, 969, 1053, 1245, 1313, 1528, 1529, 1531, 1578]
+2025-11-17 15:00:49,788 - linien_server.autolock.utils - DEBUG - Zero crossings of smoothed derivative: [60, 83, 84, 137, 138, 139, 171, 195, 196, 233, 234, 235, 236, 255, 297, 324, 325, 356, 357, 384, 385, 423, 424, 425, 434, 476, 514, 602, 635, 667, 709, 713, 714, 792, 793, 848, 894, 968, 969, 1053, 1245, 1313, 1528, 1529, 1531, 1578, 1690, 1755, 1946, 1956, 2002]
+2025-11-17 15:00:49,789 - linien_server.autolock.utils - DEBUG - start_idx + time_scale//5: 1729
+2025-11-17 15:00:49,791 - linien_server.autolock.utils - DEBUG - Considered zeros (forward): [1755, 1946, 1956, 2002]
+2025-11-17 15:00:49,822 - linien_server.autolock.utils - DEBUG - Zero crossings of smoothed derivative: [60, 83, 84, 137, 138, 139, 171, 195, 196, 233, 234, 235, 236, 255, 297, 324, 325, 356, 357, 384, 385, 423, 424, 425, 434, 476, 514, 602, 635, 667, 709, 713, 714, 792, 793, 848, 894, 968, 969, 1053, 1245, 1313, 1528, 1529, 1531, 1578, 1690, 1755, 1946, 1956, 2002]
+2025-11-17 15:00:49,824 - linien_server.autolock.utils - DEBUG - start_idx - time_scale//5: 1669
+2025-11-17 15:00:49,826 - linien_server.autolock.utils - DEBUG - Considered zeros (backward): [60, 83, 84, 137, 138, 139, 171, 195, 196, 233, 234, 235, 236, 255, 297, 324, 325, 356, 357, 384, 385, 423, 424, 425, 434, 476, 514, 602, 635, 667, 709, 713, 714, 792, 793, 848, 894, 968, 969, 1053, 1245, 1313, 1528, 1529, 1531, 1578]
+2025-11-17 15:00:49,854 - linien_server.autolock.utils - DEBUG - Zero crossings of smoothed derivative: [60, 83, 84, 137, 138, 139, 171, 195, 196, 233, 234, 235, 236, 255, 297, 324, 325, 356, 357, 384, 385, 423, 424, 425, 434, 476, 514, 602, 635, 667, 709, 713, 714, 792, 793, 848, 894, 968, 969, 1053, 1245, 1313, 1528, 1529, 1531, 1578, 1690, 1755, 1946, 1956, 2002]
+2025-11-17 15:00:49,855 - linien_server.autolock.utils - DEBUG - start_idx + time_scale//5: 1729
+2025-11-17 15:00:49,857 - linien_server.autolock.utils - DEBUG - Considered zeros (forward): [1755, 1946, 1956, 2002]
+2025-11-17 15:00:49,888 - linien_server.autolock.utils - DEBUG - Zero crossings of smoothed derivative: [60, 83, 84, 137, 138, 139, 171, 195, 196, 233, 234, 235, 236, 255, 297, 324, 325, 356, 357, 384, 385, 423, 424, 425, 434, 476, 514, 602, 635, 667, 709, 713, 714, 792, 793, 848, 894, 968, 969, 1053, 1245, 1313, 1528, 1529, 1531, 1578, 1690, 1755, 1946, 1956, 2002]
+2025-11-17 15:00:49,889 - linien_server.autolock.utils - DEBUG - start_idx - time_scale//5: 1669
+2025-11-17 15:00:49,891 - linien_server.autolock.utils - DEBUG - Considered zeros (backward): [60, 83, 84, 137, 138, 139, 171, 195, 196, 233, 234, 235, 236, 255, 297, 324, 325, 356, 357, 384, 385, 423, 424, 425, 434, 476, 514, 602, 635, 667, 709, 713, 714, 792, 793, 848, 894, 968, 969, 1053, 1245, 1313, 1528, 1529, 1531, 1578]
+2025-11-17 15:00:49,917 - linien_server.autolock.utils - DEBUG - Zero crossings of smoothed derivative: [60, 83, 84, 137, 138, 139, 171, 195, 196, 233, 234, 235, 236, 255, 297, 324, 325, 356, 357, 384, 385, 423, 424, 425, 434, 476, 514, 602, 635, 667, 709, 713, 714, 792, 793, 848, 894, 968, 969, 1053, 1245, 1313, 1528, 1529, 1531, 1578, 1690, 1755, 1946, 1956, 2002]
+2025-11-17 15:00:49,918 - linien_server.autolock.utils - DEBUG - start_idx + time_scale//5: 1729
+2025-11-17 15:00:49,920 - linien_server.autolock.utils - DEBUG - Considered zeros (forward): [1755, 1946, 1956, 2002]
+2025-11-17 15:00:49,951 - linien_server.autolock.utils - DEBUG - Zero crossings of smoothed derivative: [60, 83, 84, 137, 138, 139, 171, 195, 196, 233, 234, 235, 236, 255, 297, 324, 325, 356, 357, 384, 385, 423, 424, 425, 434, 476, 514, 602, 635, 667, 709, 713, 714, 792, 793, 848, 894, 968, 969, 1053, 1245, 1313, 1528, 1529, 1531, 1578, 1690, 1755, 1946, 1956, 2002]
+2025-11-17 15:00:49,952 - linien_server.autolock.utils - DEBUG - start_idx - time_scale//5: 1674
+2025-11-17 15:00:49,954 - linien_server.autolock.utils - DEBUG - Considered zeros (backward): [60, 83, 84, 137, 138, 139, 171, 195, 196, 233, 234, 235, 236, 255, 297, 324, 325, 356, 357, 384, 385, 423, 424, 425, 434, 476, 514, 602, 635, 667, 709, 713, 714, 792, 793, 848, 894, 968, 969, 1053, 1245, 1313, 1528, 1529, 1531, 1578]
+2025-11-17 15:00:49,980 - linien_server.autolock.utils - DEBUG - Zero crossings of smoothed derivative: [60, 83, 84, 137, 138, 139, 171, 195, 196, 233, 234, 235, 236, 255, 297, 324, 325, 356, 357, 384, 385, 423, 424, 425, 434, 476, 514, 602, 635, 667, 709, 713, 714, 792, 793, 848, 894, 968, 969, 1053, 1245, 1313, 1528, 1529, 1531, 1578, 1690, 1755, 1946, 1956, 2002]
+2025-11-17 15:00:49,981 - linien_server.autolock.utils - DEBUG - start_idx + time_scale//5: 1729
+2025-11-17 15:00:49,983 - linien_server.autolock.utils - DEBUG - Considered zeros (forward): [1755, 1946, 1956, 2002]
+2025-11-17 15:00:49,990 - linien_server.autolock.robust - DEBUG - Determined lock regions: [(1633, 1755), (1628, 1755), (1634, 1755), (1633, 1755), (1635, 1755)]
+2025-11-17 15:00:49,994 - linien_server.autolock.robust - DEBUG - Try out tolerance 0.95
+2025-11-17 15:00:49,996 - linien_server.autolock.robust - DEBUG - Original peaks: [(1696, 842), (1578, -264), (1310, 1827), (1252, -1660)]
+2025-11-17 15:00:50,007 - linien_server.autolock.robust - DEBUG - Filtered peaks: [(1696, 799.9), (1578, -250.79999999999998), (1310, 1735.6499999999999), (1252, -1577.0)]
+2025-11-17 15:00:50,009 - linien_server.autolock.robust - DEBUG - Discarded peaks: [(1696, 842), (1578, -264), (1310, 1827), (1252, -1660)]
+2025-11-17 15:00:50,011 - linien_server.autolock.robust - DEBUG - Target peak index in prepared spectrum: 1696
+2025-11-17 15:00:50,013 - linien_server.autolock.robust - DEBUG - final wait time is 10 samples
+2025-11-17 15:00:50,015 - linien_server.autolock.robust - DEBUG - Generated description: [(1126, -1577), (52, 1735), (241, -250), (106, 799)]
+2025-11-17 15:00:50,053 - linien_server.autolock.robust - DEBUG - Lock position found at index 1697 for current spectrum
+2025-11-17 15:00:50,086 - linien_server.autolock.robust - DEBUG - Lock position found at index 1702 for current spectrum
+2025-11-17 15:00:50,119 - linien_server.autolock.robust - DEBUG - Lock position found at index 1699 for current spectrum
+2025-11-17 15:00:50,153 - linien_server.autolock.robust - DEBUG - Lock position found at index 1696 for current spectrum
+2025-11-17 15:00:50,188 - linien_server.autolock.robust - DEBUG - Lock position found at index 1702 for current spectrum
+2025-11-17 15:00:50,190 - linien_server.autolock.robust - DEBUG - Description is [(1126, -1577), (52, 1735), (241, -250), (106, 799)]
+2025-11-17 15:00:50,192 - linien_server.autolock.robust - DEBUG - Calculation of autolock description took 0.9066646099090576
+2025-11-17 15:00:50,253 - linien_server.server - ERROR - incorrect data received for lock state, ignoring!
+2025-11-17 15:00:50,576 - linien_server.autolock.autolock - DEBUG - entered in react_new_spectrum
+2025-11-17 15:00:50,578 - linien_server.autolock.autolock - DEBUG - pause_acquisition: False
+2025-11-17 15:00:50,581 - linien_server.autolock.autolock - DEBUG - check_plot_data: True
+2025-11-17 15:00:50,582 - linien_server.autolock.autolock - DEBUG - after lock
+2025-11-18 07:39:10,572 - linien_server.cli - DEBUG - Copied linien-server.service to /etc/systemd/system
+2025-11-18 07:39:10,574 - linien_server.cli - INFO - Starting Linien server
+2025-11-18 07:39:10,640 - linien_server.cli - INFO - Started Linien server
+2025-11-18 07:39:30,506 - linien_server.parameters - INFO - Restoring parameters from /root/.local/share/linien/parameters.json
+2025-11-18 07:39:30,510 - linien_server.parameters - INFO - Restored parameters from /root/.local/share/linien/parameters.json
+2025-11-18 07:39:30,515 - linien_common.influxdb - INFO - Saved InfluxDB credentials to /root/.local/share/linien/influxdb_credentials.json
+2025-11-18 07:39:31,381 - linien_server.acquisition - INFO - Using fpgautil to deploy gateware.
+2025-11-18 07:39:31,651 - linien_server.server - DEBUG - Ping  1
+2025-11-18 07:39:31,717 - linien_server.mdio_tool - INFO - Disabling ethernet blinking with mdio-tool at /usr/local/lib/python3.10/dist-packages/linien_server/mdio-tool
+2025-11-18 07:39:31,762 - linien_server.server - INFO - Starting server.
+2025-11-18 07:39:32,681 - linien_server.server - DEBUG - Ping  2
+2025-11-18 07:39:33,697 - linien_server.server - DEBUG - Ping  3
+2025-11-18 07:39:33,707 - linien_server.server - DEBUG - Further pings will be suppressed
+2025-11-18 08:51:06,440 - linien_server.cli - INFO - Stopping Linien server
+2025-11-18 08:51:06,554 - linien_server.cli - INFO - Stopped Linien server
+2025-11-18 08:51:09,884 - linien_server.cli - DEBUG - Copied linien-server.service to /etc/systemd/system
+2025-11-18 08:51:09,885 - linien_server.cli - INFO - Starting Linien server
+2025-11-18 08:51:09,962 - linien_server.cli - INFO - Started Linien server
+2025-11-18 08:51:28,388 - linien_server.parameters - INFO - Restoring parameters from /root/.local/share/linien/parameters.json
+2025-11-18 08:51:28,394 - linien_server.parameters - INFO - Restored parameters from /root/.local/share/linien/parameters.json
+2025-11-18 08:51:28,399 - linien_common.influxdb - INFO - Saved InfluxDB credentials to /root/.local/share/linien/influxdb_credentials.json
+2025-11-18 08:51:28,645 - linien_server.acquisition - INFO - Using fpgautil to deploy gateware.
+2025-11-18 08:51:28,887 - linien_server.server - DEBUG - Ping  1
+2025-11-18 08:51:28,911 - linien_server.mdio_tool - INFO - Disabling ethernet blinking with mdio-tool at /usr/local/lib/python3.10/dist-packages/linien_server/mdio-tool
+2025-11-18 08:51:28,979 - linien_server.server - INFO - Starting server.
+2025-11-18 08:51:29,893 - linien_server.server - DEBUG - Ping  2
+2025-11-18 08:51:30,915 - linien_server.server - DEBUG - Ping  3
+2025-11-18 08:51:30,937 - linien_server.server - DEBUG - Further pings will be suppressed
+2025-11-18 09:31:52,256 - linien_server.cli - INFO - Stopping Linien server
+2025-11-18 09:31:52,521 - linien_server.cli - INFO - Stopped Linien server
+2025-11-18 09:31:55,741 - linien_server.cli - DEBUG - Copied linien-server.service to /etc/systemd/system
+2025-11-18 09:31:55,742 - linien_server.cli - INFO - Starting Linien server
+2025-11-18 09:31:55,811 - linien_server.cli - INFO - Started Linien server
+2025-11-18 09:32:08,136 - linien_server.cli - DEBUG - Copied linien-server.service to /etc/systemd/system
+2025-11-18 09:32:08,138 - linien_server.cli - INFO - Starting Linien server
+2025-11-18 09:32:08,189 - linien_server.cli - INFO - Started Linien server
+2025-11-18 09:32:14,913 - linien_server.parameters - INFO - Restoring parameters from /root/.local/share/linien/parameters.json
+2025-11-18 09:32:14,916 - linien_server.parameters - INFO - Restored parameters from /root/.local/share/linien/parameters.json
+2025-11-18 09:32:14,920 - linien_common.influxdb - INFO - Saved InfluxDB credentials to /root/.local/share/linien/influxdb_credentials.json
+2025-11-18 09:32:15,123 - linien_server.acquisition - INFO - Using fpgautil to deploy gateware.
+2025-11-18 09:32:15,284 - linien_server.server - DEBUG - Ping  1
+2025-11-18 09:32:15,325 - linien_server.mdio_tool - INFO - Disabling ethernet blinking with mdio-tool at /usr/local/lib/python3.10/dist-packages/linien_server/mdio-tool
+2025-11-18 09:32:15,363 - linien_server.server - INFO - Starting server.
+2025-11-18 09:32:16,318 - linien_server.server - DEBUG - Ping  2
+2025-11-18 09:32:17,350 - linien_server.server - DEBUG - Ping  3
+2025-11-18 09:32:17,361 - linien_server.server - DEBUG - Further pings will be suppressed
+2025-11-18 09:48:20,669 - linien_server.cli - INFO - Stopping Linien server
+2025-11-18 09:48:20,816 - linien_server.cli - INFO - Stopped Linien server
+2025-11-18 09:48:24,090 - linien_server.cli - DEBUG - Copied linien-server.service to /etc/systemd/system
+2025-11-18 09:48:24,091 - linien_server.cli - INFO - Starting Linien server
+2025-11-18 09:48:24,159 - linien_server.cli - INFO - Started Linien server
+2025-11-18 09:48:38,567 - linien_server.cli - DEBUG - Copied linien-server.service to /etc/systemd/system
+2025-11-18 09:48:38,569 - linien_server.cli - INFO - Starting Linien server
+2025-11-18 09:48:38,619 - linien_server.cli - INFO - Started Linien server
+2025-11-18 09:48:42,241 - linien_server.parameters - INFO - Restoring parameters from /root/.local/share/linien/parameters.json
+2025-11-18 09:48:42,245 - linien_server.parameters - INFO - Restored parameters from /root/.local/share/linien/parameters.json
+2025-11-18 09:48:42,249 - linien_common.influxdb - INFO - Saved InfluxDB credentials to /root/.local/share/linien/influxdb_credentials.json
+2025-11-18 09:48:42,451 - linien_server.acquisition - INFO - Using fpgautil to deploy gateware.
+2025-11-18 09:48:42,602 - linien_server.server - DEBUG - Ping  1
+2025-11-18 09:48:42,644 - linien_server.mdio_tool - INFO - Disabling ethernet blinking with mdio-tool at /usr/local/lib/python3.10/dist-packages/linien_server/mdio-tool
+2025-11-18 09:48:42,671 - linien_server.server - INFO - Starting server.
+2025-11-18 09:48:43,615 - linien_server.server - DEBUG - Ping  2
+2025-11-18 09:48:44,623 - linien_server.server - DEBUG - Ping  3
+2025-11-18 09:48:44,638 - linien_server.server - DEBUG - Further pings will be suppressed
+2025-11-18 09:50:10,133 - linien_server.cli - INFO - Stopping Linien server
+2025-11-18 09:50:10,245 - linien_server.cli - INFO - Stopped Linien server
+2025-11-18 09:50:13,380 - linien_server.cli - DEBUG - Copied linien-server.service to /etc/systemd/system
+2025-11-18 09:50:13,381 - linien_server.cli - INFO - Starting Linien server
+2025-11-18 09:50:13,453 - linien_server.cli - INFO - Started Linien server
+2025-11-18 09:50:22,062 - linien_server.cli - DEBUG - Copied linien-server.service to /etc/systemd/system
+2025-11-18 09:50:22,064 - linien_server.cli - INFO - Starting Linien server
+2025-11-18 09:50:22,115 - linien_server.cli - INFO - Started Linien server
+2025-11-18 09:50:30,209 - linien_server.parameters - INFO - Restoring parameters from /root/.local/share/linien/parameters.json
+2025-11-18 09:50:30,213 - linien_server.parameters - INFO - Restored parameters from /root/.local/share/linien/parameters.json
+2025-11-18 09:50:30,216 - linien_common.influxdb - INFO - Saved InfluxDB credentials to /root/.local/share/linien/influxdb_credentials.json
+2025-11-18 09:50:30,407 - linien_server.acquisition - INFO - Using fpgautil to deploy gateware.
+2025-11-18 09:50:30,549 - linien_server.server - DEBUG - Ping  1
+2025-11-18 09:50:30,559 - linien_server.mdio_tool - INFO - Disabling ethernet blinking with mdio-tool at /usr/local/lib/python3.10/dist-packages/linien_server/mdio-tool
+2025-11-18 09:50:30,595 - linien_server.server - INFO - Starting server.
+2025-11-18 09:50:31,562 - linien_server.server - DEBUG - Ping  2
+2025-11-18 09:50:32,580 - linien_server.server - DEBUG - Ping  3
+2025-11-18 09:50:32,597 - linien_server.server - DEBUG - Further pings will be suppressed
+2025-11-18 10:50:31,936 - linien_server.cli - INFO - Stopping Linien server
+2025-11-18 10:50:32,178 - linien_server.cli - INFO - Stopped Linien server
+2025-11-18 10:50:35,578 - linien_server.cli - DEBUG - Copied linien-server.service to /etc/systemd/system
+2025-11-18 10:50:35,580 - linien_server.cli - INFO - Starting Linien server
+2025-11-18 10:50:35,645 - linien_server.cli - INFO - Started Linien server
+2025-11-18 10:50:48,727 - linien_server.cli - DEBUG - Copied linien-server.service to /etc/systemd/system
+2025-11-18 10:50:48,729 - linien_server.cli - INFO - Starting Linien server
+2025-11-18 10:50:48,808 - linien_server.cli - INFO - Started Linien server
+2025-11-18 10:50:56,156 - linien_server.parameters - INFO - Restoring parameters from /root/.local/share/linien/parameters.json
+2025-11-18 10:50:56,162 - linien_server.parameters - INFO - Restored parameters from /root/.local/share/linien/parameters.json
+2025-11-18 10:50:56,167 - linien_common.influxdb - INFO - Saved InfluxDB credentials to /root/.local/share/linien/influxdb_credentials.json
+2025-11-18 10:50:56,402 - linien_server.acquisition - INFO - Using fpgautil to deploy gateware.
+2025-11-18 10:50:56,646 - linien_server.server - DEBUG - Ping  1
+2025-11-18 10:50:56,689 - linien_server.mdio_tool - INFO - Disabling ethernet blinking with mdio-tool at /usr/local/lib/python3.10/dist-packages/linien_server/mdio-tool
+2025-11-18 10:50:56,738 - linien_server.server - INFO - Starting server.
+2025-11-18 10:50:57,662 - linien_server.server - DEBUG - Ping  2
+2025-11-18 10:50:58,698 - linien_server.server - DEBUG - Ping  3
+2025-11-18 10:50:58,713 - linien_server.server - DEBUG - Further pings will be suppressed
+2025-11-18 11:06:55,417 - linien_server.cli - INFO - Stopping Linien server
+2025-11-18 11:06:55,541 - linien_server.cli - INFO - Stopped Linien server
+2025-11-18 11:06:58,828 - linien_server.cli - DEBUG - Copied linien-server.service to /etc/systemd/system
+2025-11-18 11:06:58,829 - linien_server.cli - INFO - Starting Linien server
+2025-11-18 11:06:58,905 - linien_server.cli - INFO - Started Linien server
+2025-11-18 11:07:07,364 - linien_server.cli - DEBUG - Copied linien-server.service to /etc/systemd/system
+2025-11-18 11:07:07,366 - linien_server.cli - INFO - Starting Linien server
+2025-11-18 11:07:07,417 - linien_server.cli - INFO - Started Linien server
+2025-11-18 11:07:17,470 - linien_server.parameters - INFO - Restoring parameters from /root/.local/share/linien/parameters.json
+2025-11-18 11:07:17,474 - linien_server.parameters - INFO - Restored parameters from /root/.local/share/linien/parameters.json
+2025-11-18 11:07:17,477 - linien_common.influxdb - INFO - Saved InfluxDB credentials to /root/.local/share/linien/influxdb_credentials.json
+2025-11-18 11:07:17,670 - linien_server.acquisition - INFO - Using fpgautil to deploy gateware.
+2025-11-18 11:07:17,805 - linien_server.server - DEBUG - Ping  1
+2025-11-18 11:07:17,816 - linien_server.mdio_tool - INFO - Disabling ethernet blinking with mdio-tool at /usr/local/lib/python3.10/dist-packages/linien_server/mdio-tool
+2025-11-18 11:07:17,863 - linien_server.server - INFO - Starting server.
+2025-11-18 11:07:18,818 - linien_server.server - DEBUG - Ping  2
+2025-11-18 11:07:19,839 - linien_server.server - DEBUG - Ping  3
+2025-11-18 11:07:19,851 - linien_server.server - DEBUG - Further pings will be suppressed
+2025-11-18 12:35:40,306 - linien_server.cli - DEBUG - Copied linien-server.service to /etc/systemd/system
+2025-11-18 12:35:40,309 - linien_server.cli - INFO - Starting Linien server
+2025-11-18 12:35:40,432 - linien_server.cli - INFO - Started Linien server
+2025-11-18 12:36:00,197 - linien_server.parameters - INFO - Restoring parameters from /root/.local/share/linien/parameters.json
+2025-11-18 12:36:00,202 - linien_server.parameters - INFO - Restored parameters from /root/.local/share/linien/parameters.json
+2025-11-18 12:36:00,207 - linien_common.influxdb - INFO - Saved InfluxDB credentials to /root/.local/share/linien/influxdb_credentials.json
+2025-11-18 12:36:00,452 - linien_server.acquisition - INFO - Using fpgautil to deploy gateware.
+2025-11-18 12:36:00,697 - linien_server.server - DEBUG - Ping  1
+2025-11-18 12:36:00,761 - linien_server.mdio_tool - INFO - Disabling ethernet blinking with mdio-tool at /usr/local/lib/python3.10/dist-packages/linien_server/mdio-tool
+2025-11-18 12:36:00,807 - linien_server.server - INFO - Starting server.
+2025-11-18 12:36:01,733 - linien_server.server - DEBUG - Ping  2
+2025-11-18 12:36:02,743 - linien_server.server - DEBUG - Ping  3
+2025-11-18 12:36:02,768 - linien_server.server - DEBUG - Further pings will be suppressed
+2025-11-18 13:15:08,621 - linien_server.cli - INFO - Stopping Linien server
+2025-11-18 13:15:08,936 - linien_server.cli - INFO - Stopped Linien server
+2025-11-18 13:15:12,323 - linien_server.cli - DEBUG - Copied linien-server.service to /etc/systemd/system
+2025-11-18 13:15:12,325 - linien_server.cli - INFO - Starting Linien server
+2025-11-18 13:15:12,402 - linien_server.cli - INFO - Started Linien server
+2025-11-18 13:15:22,931 - linien_server.cli - DEBUG - Copied linien-server.service to /etc/systemd/system
+2025-11-18 13:15:22,934 - linien_server.cli - INFO - Starting Linien server
+2025-11-18 13:15:22,985 - linien_server.cli - INFO - Started Linien server
+2025-11-18 13:15:32,484 - linien_server.parameters - INFO - Restoring parameters from /root/.local/share/linien/parameters.json
+2025-11-18 13:15:32,490 - linien_server.parameters - INFO - Restored parameters from /root/.local/share/linien/parameters.json
+2025-11-18 13:15:32,495 - linien_common.influxdb - INFO - Saved InfluxDB credentials to /root/.local/share/linien/influxdb_credentials.json
+2025-11-18 13:15:32,726 - linien_server.acquisition - INFO - Using fpgautil to deploy gateware.
+2025-11-18 13:15:32,969 - linien_server.server - DEBUG - Ping  1
+2025-11-18 13:15:33,017 - linien_server.mdio_tool - INFO - Disabling ethernet blinking with mdio-tool at /usr/local/lib/python3.10/dist-packages/linien_server/mdio-tool
+2025-11-18 13:15:33,072 - linien_server.server - INFO - Starting server.
+2025-11-18 13:15:34,011 - linien_server.server - DEBUG - Ping  2
+2025-11-18 13:15:35,041 - linien_server.server - DEBUG - Ping  3
+2025-11-18 13:15:35,050 - linien_server.server - DEBUG - Further pings will be suppressed
+2025-11-18 13:54:34,587 - linien_server.autolock.autolock - DEBUG - Initialize Autolock
+2025-11-18 13:54:34,644 - linien_server.autolock.autolock - DEBUG - Start the autolock
+2025-11-18 13:54:34,653 - linien_server.autolock.autolock - DEBUG - (x0, x1) = (1373,1506)
+2025-11-18 13:54:34,659 - linien_server.autolock.autolock - DEBUG - Start autolock with mode 2
+2025-11-18 13:54:34,662 - linien_server.autolock.simple - DEBUG - started SimpleAutolock
+2025-11-18 13:54:35,047 - linien_server.autolock.autolock - DEBUG - entered in react_new_spectrum
+2025-11-18 13:54:35,051 - linien_server.autolock.autolock - DEBUG - pause_acquisition: False
+2025-11-18 13:54:35,054 - linien_server.autolock.autolock - DEBUG - check_plot_data: True
+2025-11-18 13:54:35,232 - linien_server.autolock.simple - DEBUG - lock point is 3392, shift is -0.4140625
+2025-11-18 13:57:45,069 - linien_server.cli - INFO - Stopping Linien server
+2025-11-18 13:57:45,196 - linien_server.cli - INFO - Stopped Linien server
+2025-11-18 13:57:48,502 - linien_server.cli - DEBUG - Copied linien-server.service to /etc/systemd/system
+2025-11-18 13:57:48,504 - linien_server.cli - INFO - Starting Linien server
+2025-11-18 13:57:48,584 - linien_server.cli - INFO - Started Linien server
+2025-11-18 13:57:57,034 - linien_server.cli - DEBUG - Copied linien-server.service to /etc/systemd/system
+2025-11-18 13:57:57,036 - linien_server.cli - INFO - Starting Linien server
+2025-11-18 13:57:57,088 - linien_server.cli - INFO - Started Linien server
+2025-11-18 13:58:06,878 - linien_server.parameters - INFO - Restoring parameters from /root/.local/share/linien/parameters.json
+2025-11-18 13:58:06,881 - linien_server.parameters - INFO - Restored parameters from /root/.local/share/linien/parameters.json
+2025-11-18 13:58:06,885 - linien_common.influxdb - INFO - Saved InfluxDB credentials to /root/.local/share/linien/influxdb_credentials.json
+2025-11-18 13:58:07,075 - linien_server.acquisition - INFO - Using fpgautil to deploy gateware.
+2025-11-18 13:58:07,233 - linien_server.server - DEBUG - Ping  1
+2025-11-18 13:58:07,280 - linien_server.mdio_tool - INFO - Disabling ethernet blinking with mdio-tool at /usr/local/lib/python3.10/dist-packages/linien_server/mdio-tool
+2025-11-18 13:58:07,330 - linien_server.server - INFO - Starting server.
+2025-11-18 13:58:08,261 - linien_server.server - DEBUG - Ping  2
+2025-11-18 13:58:09,281 - linien_server.server - DEBUG - Ping  3
+2025-11-18 13:58:09,304 - linien_server.server - DEBUG - Further pings will be suppressed
+2025-11-18 14:02:14,742 - linien_server.autolock.autolock - DEBUG - Initialize Autolock
+2025-11-18 14:02:14,763 - linien_server.autolock.autolock - DEBUG - Start the autolock
+2025-11-18 14:02:14,771 - linien_server.autolock.autolock - DEBUG - (x0, x1) = (958,1193)
+2025-11-18 14:02:14,777 - linien_server.autolock.autolock - DEBUG - Start autolock with mode 2
+2025-11-18 14:02:14,779 - linien_server.autolock.simple - DEBUG - started SimpleAutolock
+2025-11-18 14:02:15,142 - linien_server.autolock.autolock - DEBUG - entered in react_new_spectrum
+2025-11-18 14:02:15,147 - linien_server.autolock.autolock - DEBUG - pause_acquisition: False
+2025-11-18 14:02:15,151 - linien_server.autolock.autolock - DEBUG - check_plot_data: True
+2025-11-18 14:02:15,304 - linien_server.autolock.simple - DEBUG - lock point is 320, shift is -0.0390625
+2025-11-18 14:37:55,537 - linien_server.cli - INFO - Stopping Linien server
+2025-11-18 14:37:55,663 - linien_server.cli - INFO - Stopped Linien server
+2025-11-18 14:37:58,747 - linien_server.cli - DEBUG - Copied linien-server.service to /etc/systemd/system
+2025-11-18 14:37:58,748 - linien_server.cli - INFO - Starting Linien server
+2025-11-18 14:37:58,824 - linien_server.cli - INFO - Started Linien server
+2025-11-18 14:38:15,081 - linien_server.parameters - INFO - Restoring parameters from /root/.local/share/linien/parameters.json
+2025-11-18 14:38:15,084 - linien_server.parameters - INFO - Restored parameters from /root/.local/share/linien/parameters.json
+2025-11-18 14:38:15,088 - linien_common.influxdb - INFO - Saved InfluxDB credentials to /root/.local/share/linien/influxdb_credentials.json
+2025-11-18 14:38:15,286 - linien_server.acquisition - INFO - Using fpgautil to deploy gateware.
+2025-11-18 14:38:15,425 - linien_server.server - DEBUG - Ping  1
+2025-11-18 14:38:15,446 - linien_server.mdio_tool - INFO - Disabling ethernet blinking with mdio-tool at /usr/local/lib/python3.10/dist-packages/linien_server/mdio-tool
+2025-11-18 14:38:15,494 - linien_server.server - INFO - Starting server.
+2025-11-18 14:38:16,450 - linien_server.server - DEBUG - Ping  2
+2025-11-18 14:38:17,480 - linien_server.server - DEBUG - Ping  3
+2025-11-18 14:38:17,502 - linien_server.server - DEBUG - Further pings will be suppressed
+2025-11-18 14:40:12,700 - linien_server.autolock.autolock - DEBUG - Initialize Autolock
+2025-11-18 14:40:12,727 - linien_server.autolock.autolock - DEBUG - Start the autolock
+2025-11-18 14:40:12,736 - linien_server.autolock.autolock - DEBUG - (x0, x1) = (1030,1265)
+2025-11-18 14:40:12,743 - linien_server.autolock.autolock - DEBUG - Start autolock with mode 1
+2025-11-18 14:40:13,124 - linien_server.autolock.autolock - DEBUG - entered in react_new_spectrum
+2025-11-18 14:40:13,127 - linien_server.autolock.autolock - DEBUG - pause_acquisition: False
+2025-11-18 14:40:13,130 - linien_server.autolock.autolock - DEBUG - check_plot_data: True
+2025-11-18 14:40:13,243 - linien_server.autolock.robust - DEBUG - handle new spectrum
+2025-11-18 14:40:13,296 - linien_server.autolock.robust - ERROR - Not enough spectra collected:2 of 5
+2025-11-18 14:40:13,502 - linien_server.autolock.autolock - DEBUG - entered in react_new_spectrum
+2025-11-18 14:40:13,504 - linien_server.autolock.autolock - DEBUG - pause_acquisition: False
+2025-11-18 14:40:13,506 - linien_server.autolock.autolock - DEBUG - check_plot_data: True
+2025-11-18 14:40:13,603 - linien_server.autolock.robust - DEBUG - handle new spectrum
+2025-11-18 14:40:13,631 - linien_server.autolock.robust - ERROR - Not enough spectra collected:3 of 5
+2025-11-18 14:40:13,891 - linien_server.autolock.autolock - DEBUG - entered in react_new_spectrum
+2025-11-18 14:40:13,895 - linien_server.autolock.autolock - DEBUG - pause_acquisition: False
+2025-11-18 14:40:13,897 - linien_server.autolock.autolock - DEBUG - check_plot_data: True
+2025-11-18 14:40:13,999 - linien_server.autolock.robust - DEBUG - handle new spectrum
+2025-11-18 14:40:14,028 - linien_server.autolock.robust - ERROR - Not enough spectra collected:4 of 5
+2025-11-18 14:40:14,313 - linien_server.autolock.autolock - DEBUG - entered in react_new_spectrum
+2025-11-18 14:40:14,315 - linien_server.autolock.autolock - DEBUG - pause_acquisition: False
+2025-11-18 14:40:14,318 - linien_server.autolock.autolock - DEBUG - check_plot_data: True
+2025-11-18 14:40:14,422 - linien_server.autolock.robust - DEBUG - handle new spectrum
+2025-11-18 14:40:14,455 - linien_server.autolock.robust - DEBUG - enough spectra!, calculate
+2025-11-18 14:40:14,456 - linien_server.autolock.robust - DEBUG - Entered in calculate_autolock_instructions_v2
+2025-11-18 14:40:14,464 - linien_server.autolock.robust - DEBUG - Saved new robust_spectra.npy and target_idxs.npy
+2025-11-18 14:40:14,466 - linien_server.autolock.utils - DEBUG - Entered in crop_spectra_to_same_view
+2025-11-18 14:40:14,560 - linien_server.autolock.utils - DEBUG - Shifts calculated for cropping: [1, 2, -1, -2, -8]
+2025-11-18 14:40:14,564 - linien_server.autolock.robust - DEBUG - Saved new robust_spectra_cropped.npy
+2025-11-18 14:40:14,565 - linien_server.autolock.utils - DEBUG - Entered in get_time_scale
+2025-11-18 14:40:14,567 - linien_server.autolock.utils - DEBUG - Spectrum length:2038
+2025-11-18 14:40:14,571 - linien_server.autolock.utils - DEBUG - Spectrum: [4. 4. 4. 4. 4.]...[20. 20. 20. 19. 20.]
+2025-11-18 14:40:14,573 - linien_server.autolock.utils - DEBUG - Target indices: [1110, 1155]
+2025-11-18 14:40:14,574 - linien_server.autolock.utils - DEBUG - Entered in get_time_scale
+2025-11-18 14:40:14,576 - linien_server.autolock.utils - DEBUG - Spectrum length:2038
+2025-11-18 14:40:14,582 - linien_server.autolock.utils - DEBUG - Spectrum: [5 5 5 5 4]...[21 21 21 20 20]
+2025-11-18 14:40:14,586 - linien_server.autolock.utils - DEBUG - Target indices: [1110, 1155]
+2025-11-18 14:40:14,588 - linien_server.autolock.utils - DEBUG - Entered in get_time_scale
+2025-11-18 14:40:14,589 - linien_server.autolock.utils - DEBUG - Spectrum length:2038
+2025-11-18 14:40:14,592 - linien_server.autolock.utils - DEBUG - Spectrum: [3 3 3 3 3]...[20 19 19 19 19]
+2025-11-18 14:40:14,593 - linien_server.autolock.utils - DEBUG - Target indices: [1110, 1155]
+2025-11-18 14:40:14,595 - linien_server.autolock.utils - DEBUG - Entered in get_time_scale
+2025-11-18 14:40:14,596 - linien_server.autolock.utils - DEBUG - Spectrum length:2038
+2025-11-18 14:40:14,599 - linien_server.autolock.utils - DEBUG - Spectrum: [3 2 2 3 2]...[19 19 19 19 19]
+2025-11-18 14:40:14,600 - linien_server.autolock.utils - DEBUG - Target indices: [1110, 1155]
+2025-11-18 14:40:14,601 - linien_server.autolock.utils - DEBUG - Entered in get_time_scale
+2025-11-18 14:40:14,602 - linien_server.autolock.utils - DEBUG - Spectrum length:2038
+2025-11-18 14:40:14,605 - linien_server.autolock.utils - DEBUG - Spectrum: [-2  2  2  2  2]...[18 18 18 19 19]
+2025-11-18 14:40:14,606 - linien_server.autolock.utils - DEBUG - Target indices: [1110, 1155]
+2025-11-18 14:40:14,608 - linien_server.autolock.robust - DEBUG - x scale is 40
+2025-11-18 14:40:14,647 - linien_server.autolock.robust - DEBUG - shift prepared spectrum by 18 samples to the left to match the original spectrum
+2025-11-18 14:40:14,743 - linien_server.autolock.robust - DEBUG - Detected peaks with (position, height): [(1128, 1226.0), (745, -1807.0), (445, 54.0), (406, -183.0), (361, 195.0)]
+2025-11-18 14:40:14,770 - linien_server.autolock.utils - DEBUG - Zero crossings of smoothed derivative: [54, 55, 62, 92, 93, 131, 132, 156, 157, 158, 159, 160, 161, 190, 191, 213, 279, 280, 354, 406, 450, 563, 569, 740, 799, 873, 903, 929, 930, 1124, 1182, 1346, 1347, 1348, 1349, 1586, 1602, 1835, 1850]
+2025-11-18 14:40:14,772 - linien_server.autolock.utils - DEBUG - start_idx - time_scale//5: 1102
+2025-11-18 14:40:14,773 - linien_server.autolock.utils - DEBUG - Considered zeros (backward): [54, 55, 62, 92, 93, 131, 132, 156, 157, 158, 159, 160, 161, 190, 191, 213, 279, 280, 354, 406, 450, 563, 569, 740, 799, 873, 903, 929, 930]
+2025-11-18 14:40:14,804 - linien_server.autolock.utils - DEBUG - Zero crossings of smoothed derivative: [54, 55, 62, 92, 93, 131, 132, 156, 157, 158, 159, 160, 161, 190, 191, 213, 279, 280, 354, 406, 450, 563, 569, 740, 799, 873, 903, 929, 930, 1124, 1182, 1346, 1347, 1348, 1349, 1586, 1602, 1835, 1850]
+2025-11-18 14:40:14,805 - linien_server.autolock.utils - DEBUG - start_idx + time_scale//5: 1158
+2025-11-18 14:40:14,807 - linien_server.autolock.utils - DEBUG - Considered zeros (forward): [1182, 1346, 1347, 1348, 1349, 1586, 1602, 1835, 1850]
+2025-11-18 14:40:14,835 - linien_server.autolock.utils - DEBUG - Zero crossings of smoothed derivative: [54, 55, 62, 92, 93, 131, 132, 156, 157, 158, 159, 160, 161, 190, 191, 213, 279, 280, 354, 406, 450, 563, 569, 740, 799, 873, 903, 929, 930, 1124, 1182, 1346, 1347, 1348, 1349, 1586, 1602, 1835, 1850]
+2025-11-18 14:40:14,836 - linien_server.autolock.utils - DEBUG - start_idx - time_scale//5: 1102
+2025-11-18 14:40:14,838 - linien_server.autolock.utils - DEBUG - Considered zeros (backward): [54, 55, 62, 92, 93, 131, 132, 156, 157, 158, 159, 160, 161, 190, 191, 213, 279, 280, 354, 406, 450, 563, 569, 740, 799, 873, 903, 929, 930]
+2025-11-18 14:40:14,868 - linien_server.autolock.utils - DEBUG - Zero crossings of smoothed derivative: [54, 55, 62, 92, 93, 131, 132, 156, 157, 158, 159, 160, 161, 190, 191, 213, 279, 280, 354, 406, 450, 563, 569, 740, 799, 873, 903, 929, 930, 1124, 1182, 1346, 1347, 1348, 1349, 1586, 1602, 1835, 1850]
+2025-11-18 14:40:14,869 - linien_server.autolock.utils - DEBUG - start_idx + time_scale//5: 1159
+2025-11-18 14:40:14,870 - linien_server.autolock.utils - DEBUG - Considered zeros (forward): [1182, 1346, 1347, 1348, 1349, 1586, 1602, 1835, 1850]
+2025-11-18 14:40:14,899 - linien_server.autolock.utils - DEBUG - Zero crossings of smoothed derivative: [54, 55, 62, 92, 93, 131, 132, 156, 157, 158, 159, 160, 161, 190, 191, 213, 279, 280, 354, 406, 450, 563, 569, 740, 799, 873, 903, 929, 930, 1124, 1182, 1346, 1347, 1348, 1349, 1586, 1602, 1835, 1850]
+2025-11-18 14:40:14,900 - linien_server.autolock.utils - DEBUG - start_idx - time_scale//5: 1102
+2025-11-18 14:40:14,902 - linien_server.autolock.utils - DEBUG - Considered zeros (backward): [54, 55, 62, 92, 93, 131, 132, 156, 157, 158, 159, 160, 161, 190, 191, 213, 279, 280, 354, 406, 450, 563, 569, 740, 799, 873, 903, 929, 930]
+2025-11-18 14:40:14,930 - linien_server.autolock.utils - DEBUG - Zero crossings of smoothed derivative: [54, 55, 62, 92, 93, 131, 132, 156, 157, 158, 159, 160, 161, 190, 191, 213, 279, 280, 354, 406, 450, 563, 569, 740, 799, 873, 903, 929, 930, 1124, 1182, 1346, 1347, 1348, 1349, 1586, 1602, 1835, 1850]
+2025-11-18 14:40:14,932 - linien_server.autolock.utils - DEBUG - start_idx + time_scale//5: 1159
+2025-11-18 14:40:14,933 - linien_server.autolock.utils - DEBUG - Considered zeros (forward): [1182, 1346, 1347, 1348, 1349, 1586, 1602, 1835, 1850]
+2025-11-18 14:40:14,963 - linien_server.autolock.utils - DEBUG - Zero crossings of smoothed derivative: [54, 55, 62, 92, 93, 131, 132, 156, 157, 158, 159, 160, 161, 190, 191, 213, 279, 280, 354, 406, 450, 563, 569, 740, 799, 873, 903, 929, 930, 1124, 1182, 1346, 1347, 1348, 1349, 1586, 1602, 1835, 1850]
+2025-11-18 14:40:14,966 - linien_server.autolock.utils - DEBUG - start_idx - time_scale//5: 1102
+2025-11-18 14:40:14,968 - linien_server.autolock.utils - DEBUG - Considered zeros (backward): [54, 55, 62, 92, 93, 131, 132, 156, 157, 158, 159, 160, 161, 190, 191, 213, 279, 280, 354, 406, 450, 563, 569, 740, 799, 873, 903, 929, 930]
+2025-11-18 14:40:14,997 - linien_server.autolock.utils - DEBUG - Zero crossings of smoothed derivative: [54, 55, 62, 92, 93, 131, 132, 156, 157, 158, 159, 160, 161, 190, 191, 213, 279, 280, 354, 406, 450, 563, 569, 740, 799, 873, 903, 929, 930, 1124, 1182, 1346, 1347, 1348, 1349, 1586, 1602, 1835, 1850]
+2025-11-18 14:40:14,998 - linien_server.autolock.utils - DEBUG - start_idx + time_scale//5: 1158
+2025-11-18 14:40:15,000 - linien_server.autolock.utils - DEBUG - Considered zeros (forward): [1182, 1346, 1347, 1348, 1349, 1586, 1602, 1835, 1850]
+2025-11-18 14:40:15,028 - linien_server.autolock.utils - DEBUG - Zero crossings of smoothed derivative: [54, 55, 62, 92, 93, 131, 132, 156, 157, 158, 159, 160, 161, 190, 191, 213, 279, 280, 354, 406, 450, 563, 569, 740, 799, 873, 903, 929, 930, 1124, 1182, 1346, 1347, 1348, 1349, 1586, 1602, 1835, 1850]
+2025-11-18 14:40:15,030 - linien_server.autolock.utils - DEBUG - start_idx - time_scale//5: 1103
+2025-11-18 14:40:15,031 - linien_server.autolock.utils - DEBUG - Considered zeros (backward): [54, 55, 62, 92, 93, 131, 132, 156, 157, 158, 159, 160, 161, 190, 191, 213, 279, 280, 354, 406, 450, 563, 569, 740, 799, 873, 903, 929, 930]
+2025-11-18 14:40:15,060 - linien_server.autolock.utils - DEBUG - Zero crossings of smoothed derivative: [54, 55, 62, 92, 93, 131, 132, 156, 157, 158, 159, 160, 161, 190, 191, 213, 279, 280, 354, 406, 450, 563, 569, 740, 799, 873, 903, 929, 930, 1124, 1182, 1346, 1347, 1348, 1349, 1586, 1602, 1835, 1850]
+2025-11-18 14:40:15,061 - linien_server.autolock.utils - DEBUG - start_idx + time_scale//5: 1159
+2025-11-18 14:40:15,063 - linien_server.autolock.utils - DEBUG - Considered zeros (forward): [1182, 1346, 1347, 1348, 1349, 1586, 1602, 1835, 1850]
+2025-11-18 14:40:15,065 - linien_server.autolock.robust - DEBUG - Determined lock regions: [(930, 1182), (953, 1182), (1001, 1182), (992, 1182), (994, 1182)]
+2025-11-18 14:40:15,067 - linien_server.autolock.robust - DEBUG - Try out tolerance 0.95
+2025-11-18 14:40:15,068 - linien_server.autolock.robust - DEBUG - Original peaks: [(1128, 1226.0), (745, -1807.0), (445, 54.0), (406, -183.0), (361, 195.0)]
+2025-11-18 14:40:15,069 - linien_server.autolock.robust - DEBUG - Filtered peaks: [(1128, 1164.7), (745, -1716.6499999999999), (406, -173.85), (361, 185.25)]
+2025-11-18 14:40:15,071 - linien_server.autolock.robust - DEBUG - Discarded peaks: [(1128, 1226.0), (745, -1807.0), (445, 54.0), (406, -183.0), (361, 195.0)]
+2025-11-18 14:40:15,072 - linien_server.autolock.robust - DEBUG - Target peak index in prepared spectrum: 1128
+2025-11-18 14:40:15,074 - linien_server.autolock.robust - DEBUG - final wait time is 8 samples
+2025-11-18 14:40:15,075 - linien_server.autolock.robust - DEBUG - Generated description: [(324, 185), (40, -173), (305, -1716), (344, 1164)]
+2025-11-18 14:40:15,106 - linien_server.autolock.robust - DEBUG - Lock position found at index 1129 for current spectrum
+2025-11-18 14:40:15,163 - linien_server.autolock.robust - DEBUG - Lock position found at index 1127 for current spectrum
+2025-11-18 14:40:15,191 - linien_server.autolock.robust - DEBUG - Lock position found at index 1129 for current spectrum
+2025-11-18 14:40:15,219 - linien_server.autolock.robust - DEBUG - Lock position found at index 1130 for current spectrum
+2025-11-18 14:40:15,220 - linien_server.autolock.robust - DEBUG - Try out tolerance 0.9
+2025-11-18 14:40:15,221 - linien_server.autolock.robust - DEBUG - Original peaks: [(1128, 1226.0), (745, -1807.0), (445, 54.0), (406, -183.0), (361, 195.0)]
+2025-11-18 14:40:15,223 - linien_server.autolock.robust - DEBUG - Filtered peaks: [(1128, 1103.4), (745, -1626.3), (406, -164.70000000000002), (361, 175.5)]
+2025-11-18 14:40:15,224 - linien_server.autolock.robust - DEBUG - Discarded peaks: [(1128, 1226.0), (745, -1807.0), (445, 54.0), (406, -183.0), (361, 195.0)]
+2025-11-18 14:40:15,226 - linien_server.autolock.robust - DEBUG - Target peak index in prepared spectrum: 1128
+2025-11-18 14:40:15,227 - linien_server.autolock.robust - DEBUG - final wait time is 11 samples
+2025-11-18 14:40:15,229 - linien_server.autolock.robust - DEBUG - Generated description: [(324, 175), (40, -164), (305, -1626), (344, 1103)]
+2025-11-18 14:40:15,258 - linien_server.autolock.robust - DEBUG - Lock position found at index 1129 for current spectrum
+2025-11-18 14:40:15,286 - linien_server.autolock.robust - DEBUG - Lock position found at index 1126 for current spectrum
+2025-11-18 14:40:15,316 - linien_server.autolock.robust - DEBUG - Lock position found at index 1127 for current spectrum
+2025-11-18 14:40:15,344 - linien_server.autolock.robust - DEBUG - Lock position found at index 1129 for current spectrum
+2025-11-18 14:40:15,371 - linien_server.autolock.robust - DEBUG - Lock position found at index 1130 for current spectrum
+2025-11-18 14:40:15,372 - linien_server.autolock.robust - DEBUG - Description is [(324, 175), (40, -164), (305, -1626), (344, 1103)]
+2025-11-18 14:40:15,374 - linien_server.autolock.robust - DEBUG - Calculation of autolock description took 0.9174072742462158
+2025-11-18 14:40:15,434 - linien_server.server - ERROR - incorrect data received for lock state, ignoring!
+2025-11-18 14:40:21,206 - linien_server.autolock.robust - ERROR - Waited too long for autolock! Aborting
+2025-11-18 15:28:16,236 - linien_server.cli - INFO - Stopping Linien server
+2025-11-18 15:28:16,350 - linien_server.cli - INFO - Stopped Linien server
+2025-11-18 15:28:19,465 - linien_server.cli - DEBUG - Copied linien-server.service to /etc/systemd/system
+2025-11-18 15:28:19,466 - linien_server.cli - INFO - Starting Linien server
+2025-11-18 15:28:19,533 - linien_server.cli - INFO - Started Linien server
+2025-11-18 15:28:36,213 - linien_server.cli - DEBUG - Copied linien-server.service to /etc/systemd/system
+2025-11-18 15:28:36,215 - linien_server.cli - INFO - Starting Linien server
+2025-11-18 15:28:36,261 - linien_server.parameters - INFO - Restoring parameters from /root/.local/share/linien/parameters.json
+2025-11-18 15:28:36,264 - linien_server.cli - INFO - Started Linien server
+2025-11-18 15:28:36,267 - linien_server.parameters - INFO - Restored parameters from /root/.local/share/linien/parameters.json
+2025-11-18 15:28:36,272 - linien_common.influxdb - INFO - Saved InfluxDB credentials to /root/.local/share/linien/influxdb_credentials.json
+2025-11-18 15:28:36,512 - linien_server.acquisition - INFO - Using fpgautil to deploy gateware.
+2025-11-18 15:28:36,652 - linien_server.server - DEBUG - Ping  1
+2025-11-18 15:28:36,695 - linien_server.mdio_tool - INFO - Disabling ethernet blinking with mdio-tool at /usr/local/lib/python3.10/dist-packages/linien_server/mdio-tool
+2025-11-18 15:28:36,733 - linien_server.server - INFO - Starting server.
+2025-11-18 15:28:37,659 - linien_server.server - DEBUG - Ping  2
+2025-11-18 15:28:38,678 - linien_server.server - DEBUG - Ping  3
+2025-11-18 15:28:38,679 - linien_server.server - DEBUG - Further pings will be suppressed
+2025-11-18 15:29:23,507 - linien_server.autolock.autolock - DEBUG - Initialize Autolock
+2025-11-18 15:29:23,524 - linien_server.autolock.autolock - DEBUG - Start the autolock
+2025-11-18 15:29:23,526 - linien_server.autolock.autolock - DEBUG - (x0, x1) = (1100,1400)
+2025-11-18 15:29:23,533 - linien_server.autolock.autolock - DEBUG - Start autolock with mode 1
+2025-11-18 15:29:23,913 - linien_server.autolock.autolock - DEBUG - entered in react_new_spectrum
+2025-11-18 15:29:23,916 - linien_server.autolock.autolock - DEBUG - pause_acquisition: False
+2025-11-18 15:29:23,918 - linien_server.autolock.autolock - DEBUG - check_plot_data: True
+2025-11-18 15:29:24,016 - linien_server.autolock.robust - DEBUG - handle new spectrum
+2025-11-18 15:29:24,044 - linien_server.autolock.robust - ERROR - Not enough spectra collected:2 of 5
+2025-11-18 15:29:24,295 - linien_server.autolock.autolock - DEBUG - entered in react_new_spectrum
+2025-11-18 15:29:24,297 - linien_server.autolock.autolock - DEBUG - pause_acquisition: False
+2025-11-18 15:29:24,300 - linien_server.autolock.autolock - DEBUG - check_plot_data: True
+2025-11-18 15:29:24,397 - linien_server.autolock.robust - DEBUG - handle new spectrum
+2025-11-18 15:29:24,425 - linien_server.autolock.robust - ERROR - Not enough spectra collected:3 of 5
+2025-11-18 15:29:24,700 - linien_server.autolock.autolock - DEBUG - entered in react_new_spectrum
+2025-11-18 15:29:24,702 - linien_server.autolock.autolock - DEBUG - pause_acquisition: False
+2025-11-18 15:29:24,704 - linien_server.autolock.autolock - DEBUG - check_plot_data: True
+2025-11-18 15:29:24,800 - linien_server.autolock.robust - DEBUG - handle new spectrum
+2025-11-18 15:29:24,827 - linien_server.autolock.robust - ERROR - Not enough spectra collected:4 of 5
+2025-11-18 15:29:25,029 - linien_server.autolock.autolock - DEBUG - entered in react_new_spectrum
+2025-11-18 15:29:25,032 - linien_server.autolock.autolock - DEBUG - pause_acquisition: False
+2025-11-18 15:29:25,033 - linien_server.autolock.autolock - DEBUG - check_plot_data: True
+2025-11-18 15:29:25,129 - linien_server.autolock.robust - DEBUG - handle new spectrum
+2025-11-18 15:29:25,157 - linien_server.autolock.robust - DEBUG - enough spectra!, calculate
+2025-11-18 15:29:25,158 - linien_server.autolock.robust - DEBUG - Entered in calculate_autolock_instructions_v2
+2025-11-18 15:29:25,164 - linien_server.autolock.robust - DEBUG - Saved new robust_spectra.npy and target_idxs.npy
+2025-11-18 15:29:25,165 - linien_server.autolock.utils - DEBUG - Entered in crop_spectra_to_same_view
+2025-11-18 15:29:25,297 - linien_server.autolock.utils - DEBUG - Shifts calculated for cropping: [1, -3, -4, 1, 0]
+2025-11-18 15:29:25,301 - linien_server.autolock.robust - DEBUG - Saved new robust_spectra_cropped.npy
+2025-11-18 15:29:25,302 - linien_server.autolock.utils - DEBUG - Entered in get_time_scale
+2025-11-18 15:29:25,303 - linien_server.autolock.utils - DEBUG - Spectrum length:2043
+2025-11-18 15:29:25,306 - linien_server.autolock.utils - DEBUG - Spectrum: [66 66 66 66 66]...[77 77 76 76 76]
+2025-11-18 15:29:25,307 - linien_server.autolock.utils - DEBUG - Target indices: [1251, 1287]
+2025-11-18 15:29:25,309 - linien_server.autolock.utils - DEBUG - Entered in get_time_scale
+2025-11-18 15:29:25,310 - linien_server.autolock.utils - DEBUG - Spectrum length:2043
+2025-11-18 15:29:25,313 - linien_server.autolock.utils - DEBUG - Spectrum: [65 66 66 66 66]...[76 76 75 76 76]
+2025-11-18 15:29:25,314 - linien_server.autolock.utils - DEBUG - Target indices: [1251, 1287]
+2025-11-18 15:29:25,315 - linien_server.autolock.utils - DEBUG - Entered in get_time_scale
+2025-11-18 15:29:25,316 - linien_server.autolock.utils - DEBUG - Spectrum length:2043
+2025-11-18 15:29:25,319 - linien_server.autolock.utils - DEBUG - Spectrum: [61 66 66 66 66]...[75 75 75 75 75]
+2025-11-18 15:29:25,320 - linien_server.autolock.utils - DEBUG - Target indices: [1251, 1287]
+2025-11-18 15:29:25,321 - linien_server.autolock.utils - DEBUG - Entered in get_time_scale
+2025-11-18 15:29:25,322 - linien_server.autolock.utils - DEBUG - Spectrum length:2043
+2025-11-18 15:29:25,325 - linien_server.autolock.utils - DEBUG - Spectrum: [65 65 65 65 66]...[76 76 76 76 76]
+2025-11-18 15:29:25,326 - linien_server.autolock.utils - DEBUG - Target indices: [1251, 1287]
+2025-11-18 15:29:25,328 - linien_server.autolock.utils - DEBUG - Entered in get_time_scale
+2025-11-18 15:29:25,329 - linien_server.autolock.utils - DEBUG - Spectrum length:2043
+2025-11-18 15:29:25,331 - linien_server.autolock.utils - DEBUG - Spectrum: [65 66 66 65 65]...[76 75 75 75 75]
+2025-11-18 15:29:25,333 - linien_server.autolock.utils - DEBUG - Target indices: [1251, 1287]
+2025-11-18 15:29:25,334 - linien_server.autolock.robust - DEBUG - x scale is 28
+2025-11-18 15:29:25,388 - linien_server.autolock.robust - DEBUG - shift prepared spectrum by 7 samples to the left to match the original spectrum
+2025-11-18 15:29:25,475 - linien_server.autolock.robust - DEBUG - Detected peaks with (position, height): [(1259, 2555)]
+2025-11-18 15:29:25,500 - linien_server.autolock.utils - DEBUG - Zero crossings of smoothed derivative: [40, 42, 43, 63, 64, 65, 66, 68, 69, 90, 91, 93, 94, 95, 96, 98, 99, 100, 101, 102, 103, 166, 167, 202, 208, 209, 218, 219, 246, 247, 295, 302, 303, 336, 367, 368, 408, 409, 433, 465, 466, 491, 492, 540, 594, 634, 667, 714, 747, 748, 920, 968, 1035, 1036, 1037, 1038, 1088, 1136, 1137, 1155, 1156, 1258, 1305, 1491, 1492, 1499, 1500, 1501, 1502, 1555, 1556, 1575, 1615, 1620, 1621, 1622, 1681, 1682, 1687, 1741, 1760, 1761, 1811, 1812, 1813, 1862, 1863, 1887, 1933, 1934, 1935, 1936, 1937, 1938, 1939, 1940, 1941, 1988, 1989, 2012]
+2025-11-18 15:29:25,501 - linien_server.autolock.utils - DEBUG - start_idx - time_scale//5: 1246
+2025-11-18 15:29:25,503 - linien_server.autolock.utils - DEBUG - Considered zeros (backward): [40, 42, 43, 63, 64, 65, 66, 68, 69, 90, 91, 93, 94, 95, 96, 98, 99, 100, 101, 102, 103, 166, 167, 202, 208, 209, 218, 219, 246, 247, 295, 302, 303, 336, 367, 368, 408, 409, 433, 465, 466, 491, 492, 540, 594, 634, 667, 714, 747, 748, 920, 968, 1035, 1036, 1037, 1038, 1088, 1136, 1137, 1155, 1156]
+2025-11-18 15:29:25,549 - linien_server.autolock.utils - DEBUG - Zero crossings of smoothed derivative: [40, 42, 43, 63, 64, 65, 66, 68, 69, 90, 91, 93, 94, 95, 96, 98, 99, 100, 101, 102, 103, 166, 167, 202, 208, 209, 218, 219, 246, 247, 295, 302, 303, 336, 367, 368, 408, 409, 433, 465, 466, 491, 492, 540, 594, 634, 667, 714, 747, 748, 920, 968, 1035, 1036, 1037, 1038, 1088, 1136, 1137, 1155, 1156, 1258, 1305, 1491, 1492, 1499, 1500, 1501, 1502, 1555, 1556, 1575, 1615, 1620, 1621, 1622, 1681, 1682, 1687, 1741, 1760, 1761, 1811, 1812, 1813, 1862, 1863, 1887, 1933, 1934, 1935, 1936, 1937, 1938, 1939, 1940, 1941, 1988, 1989, 2012]
+2025-11-18 15:29:25,551 - linien_server.autolock.utils - DEBUG - start_idx + time_scale//5: 1291
+2025-11-18 15:29:25,553 - linien_server.autolock.utils - DEBUG - Considered zeros (forward): [1305, 1491, 1492, 1499, 1500, 1501, 1502, 1555, 1556, 1575, 1615, 1620, 1621, 1622, 1681, 1682, 1687, 1741, 1760, 1761, 1811, 1812, 1813, 1862, 1863, 1887, 1933, 1934, 1935, 1936, 1937, 1938, 1939, 1940, 1941, 1988, 1989, 2012]
+2025-11-18 15:29:25,627 - linien_server.autolock.utils - DEBUG - Zero crossings of smoothed derivative: [40, 42, 43, 63, 64, 65, 66, 68, 69, 90, 91, 93, 94, 95, 96, 98, 99, 100, 101, 102, 103, 166, 167, 202, 208, 209, 218, 219, 246, 247, 295, 302, 303, 336, 367, 368, 408, 409, 433, 465, 466, 491, 492, 540, 594, 634, 667, 714, 747, 748, 920, 968, 1035, 1036, 1037, 1038, 1088, 1136, 1137, 1155, 1156, 1258, 1305, 1491, 1492, 1499, 1500, 1501, 1502, 1555, 1556, 1575, 1615, 1620, 1621, 1622, 1681, 1682, 1687, 1741, 1760, 1761, 1811, 1812, 1813, 1862, 1863, 1887, 1933, 1934, 1935, 1936, 1937, 1938, 1939, 1940, 1941, 1988, 1989, 2012]
+2025-11-18 15:29:25,630 - linien_server.autolock.utils - DEBUG - start_idx - time_scale//5: 1246
+2025-11-18 15:29:25,632 - linien_server.autolock.utils - DEBUG - Considered zeros (backward): [40, 42, 43, 63, 64, 65, 66, 68, 69, 90, 91, 93, 94, 95, 96, 98, 99, 100, 101, 102, 103, 166, 167, 202, 208, 209, 218, 219, 246, 247, 295, 302, 303, 336, 367, 368, 408, 409, 433, 465, 466, 491, 492, 540, 594, 634, 667, 714, 747, 748, 920, 968, 1035, 1036, 1037, 1038, 1088, 1136, 1137, 1155, 1156]
+2025-11-18 15:29:25,683 - linien_server.autolock.utils - DEBUG - Zero crossings of smoothed derivative: [40, 42, 43, 63, 64, 65, 66, 68, 69, 90, 91, 93, 94, 95, 96, 98, 99, 100, 101, 102, 103, 166, 167, 202, 208, 209, 218, 219, 246, 247, 295, 302, 303, 336, 367, 368, 408, 409, 433, 465, 466, 491, 492, 540, 594, 634, 667, 714, 747, 748, 920, 968, 1035, 1036, 1037, 1038, 1088, 1136, 1137, 1155, 1156, 1258, 1305, 1491, 1492, 1499, 1500, 1501, 1502, 1555, 1556, 1575, 1615, 1620, 1621, 1622, 1681, 1682, 1687, 1741, 1760, 1761, 1811, 1812, 1813, 1862, 1863, 1887, 1933, 1934, 1935, 1936, 1937, 1938, 1939, 1940, 1941, 1988, 1989, 2012]
+2025-11-18 15:29:25,684 - linien_server.autolock.utils - DEBUG - start_idx + time_scale//5: 1286
+2025-11-18 15:29:25,686 - linien_server.autolock.utils - DEBUG - Considered zeros (forward): [1305, 1491, 1492, 1499, 1500, 1501, 1502, 1555, 1556, 1575, 1615, 1620, 1621, 1622, 1681, 1682, 1687, 1741, 1760, 1761, 1811, 1812, 1813, 1862, 1863, 1887, 1933, 1934, 1935, 1936, 1937, 1938, 1939, 1940, 1941, 1988, 1989, 2012]
+2025-11-18 15:29:25,728 - linien_server.autolock.utils - DEBUG - Zero crossings of smoothed derivative: [40, 42, 43, 63, 64, 65, 66, 68, 69, 90, 91, 93, 94, 95, 96, 98, 99, 100, 101, 102, 103, 166, 167, 202, 208, 209, 218, 219, 246, 247, 295, 302, 303, 336, 367, 368, 408, 409, 433, 465, 466, 491, 492, 540, 594, 634, 667, 714, 747, 748, 920, 968, 1035, 1036, 1037, 1038, 1088, 1136, 1137, 1155, 1156, 1258, 1305, 1491, 1492, 1499, 1500, 1501, 1502, 1555, 1556, 1575, 1615, 1620, 1621, 1622, 1681, 1682, 1687, 1741, 1760, 1761, 1811, 1812, 1813, 1862, 1863, 1887, 1933, 1934, 1935, 1936, 1937, 1938, 1939, 1940, 1941, 1988, 1989, 2012]
+2025-11-18 15:29:25,730 - linien_server.autolock.utils - DEBUG - start_idx - time_scale//5: 1246
+2025-11-18 15:29:25,733 - linien_server.autolock.utils - DEBUG - Considered zeros (backward): [40, 42, 43, 63, 64, 65, 66, 68, 69, 90, 91, 93, 94, 95, 96, 98, 99, 100, 101, 102, 103, 166, 167, 202, 208, 209, 218, 219, 246, 247, 295, 302, 303, 336, 367, 368, 408, 409, 433, 465, 466, 491, 492, 540, 594, 634, 667, 714, 747, 748, 920, 968, 1035, 1036, 1037, 1038, 1088, 1136, 1137, 1155, 1156]
+2025-11-18 15:29:25,784 - linien_server.autolock.utils - DEBUG - Zero crossings of smoothed derivative: [40, 42, 43, 63, 64, 65, 66, 68, 69, 90, 91, 93, 94, 95, 96, 98, 99, 100, 101, 102, 103, 166, 167, 202, 208, 209, 218, 219, 246, 247, 295, 302, 303, 336, 367, 368, 408, 409, 433, 465, 466, 491, 492, 540, 594, 634, 667, 714, 747, 748, 920, 968, 1035, 1036, 1037, 1038, 1088, 1136, 1137, 1155, 1156, 1258, 1305, 1491, 1492, 1499, 1500, 1501, 1502, 1555, 1556, 1575, 1615, 1620, 1621, 1622, 1681, 1682, 1687, 1741, 1760, 1761, 1811, 1812, 1813, 1862, 1863, 1887, 1933, 1934, 1935, 1936, 1937, 1938, 1939, 1940, 1941, 1988, 1989, 2012]
+2025-11-18 15:29:25,786 - linien_server.autolock.utils - DEBUG - start_idx + time_scale//5: 1282
+2025-11-18 15:29:25,788 - linien_server.autolock.utils - DEBUG - Considered zeros (forward): [1305, 1491, 1492, 1499, 1500, 1501, 1502, 1555, 1556, 1575, 1615, 1620, 1621, 1622, 1681, 1682, 1687, 1741, 1760, 1761, 1811, 1812, 1813, 1862, 1863, 1887, 1933, 1934, 1935, 1936, 1937, 1938, 1939, 1940, 1941, 1988, 1989, 2012]
+2025-11-18 15:29:25,828 - linien_server.autolock.utils - DEBUG - Zero crossings of smoothed derivative: [40, 42, 43, 63, 64, 65, 66, 68, 69, 90, 91, 93, 94, 95, 96, 98, 99, 100, 101, 102, 103, 166, 167, 202, 208, 209, 218, 219, 246, 247, 295, 302, 303, 336, 367, 368, 408, 409, 433, 465, 466, 491, 492, 540, 594, 634, 667, 714, 747, 748, 920, 968, 1035, 1036, 1037, 1038, 1088, 1136, 1137, 1155, 1156, 1258, 1305, 1491, 1492, 1499, 1500, 1501, 1502, 1555, 1556, 1575, 1615, 1620, 1621, 1622, 1681, 1682, 1687, 1741, 1760, 1761, 1811, 1812, 1813, 1862, 1863, 1887, 1933, 1934, 1935, 1936, 1937, 1938, 1939, 1940, 1941, 1988, 1989, 2012]
+2025-11-18 15:29:25,830 - linien_server.autolock.utils - DEBUG - start_idx - time_scale//5: 1246
+2025-11-18 15:29:25,832 - linien_server.autolock.utils - DEBUG - Considered zeros (backward): [40, 42, 43, 63, 64, 65, 66, 68, 69, 90, 91, 93, 94, 95, 96, 98, 99, 100, 101, 102, 103, 166, 167, 202, 208, 209, 218, 219, 246, 247, 295, 302, 303, 336, 367, 368, 408, 409, 433, 465, 466, 491, 492, 540, 594, 634, 667, 714, 747, 748, 920, 968, 1035, 1036, 1037, 1038, 1088, 1136, 1137, 1155, 1156]
+2025-11-18 15:29:25,883 - linien_server.autolock.utils - DEBUG - Zero crossings of smoothed derivative: [40, 42, 43, 63, 64, 65, 66, 68, 69, 90, 91, 93, 94, 95, 96, 98, 99, 100, 101, 102, 103, 166, 167, 202, 208, 209, 218, 219, 246, 247, 295, 302, 303, 336, 367, 368, 408, 409, 433, 465, 466, 491, 492, 540, 594, 634, 667, 714, 747, 748, 920, 968, 1035, 1036, 1037, 1038, 1088, 1136, 1137, 1155, 1156, 1258, 1305, 1491, 1492, 1499, 1500, 1501, 1502, 1555, 1556, 1575, 1615, 1620, 1621, 1622, 1681, 1682, 1687, 1741, 1760, 1761, 1811, 1812, 1813, 1862, 1863, 1887, 1933, 1934, 1935, 1936, 1937, 1938, 1939, 1940, 1941, 1988, 1989, 2012]
+2025-11-18 15:29:25,884 - linien_server.autolock.utils - DEBUG - start_idx + time_scale//5: 1281
+2025-11-18 15:29:25,886 - linien_server.autolock.utils - DEBUG - Considered zeros (forward): [1305, 1491, 1492, 1499, 1500, 1501, 1502, 1555, 1556, 1575, 1615, 1620, 1621, 1622, 1681, 1682, 1687, 1741, 1760, 1761, 1811, 1812, 1813, 1862, 1863, 1887, 1933, 1934, 1935, 1936, 1937, 1938, 1939, 1940, 1941, 1988, 1989, 2012]
+2025-11-18 15:29:25,927 - linien_server.autolock.utils - DEBUG - Zero crossings of smoothed derivative: [40, 42, 43, 63, 64, 65, 66, 68, 69, 90, 91, 93, 94, 95, 96, 98, 99, 100, 101, 102, 103, 166, 167, 202, 208, 209, 218, 219, 246, 247, 295, 302, 303, 336, 367, 368, 408, 409, 433, 465, 466, 491, 492, 540, 594, 634, 667, 714, 747, 748, 920, 968, 1035, 1036, 1037, 1038, 1088, 1136, 1137, 1155, 1156, 1258, 1305, 1491, 1492, 1499, 1500, 1501, 1502, 1555, 1556, 1575, 1615, 1620, 1621, 1622, 1681, 1682, 1687, 1741, 1760, 1761, 1811, 1812, 1813, 1862, 1863, 1887, 1933, 1934, 1935, 1936, 1937, 1938, 1939, 1940, 1941, 1988, 1989, 2012]
+2025-11-18 15:29:25,929 - linien_server.autolock.utils - DEBUG - start_idx - time_scale//5: 1246
+2025-11-18 15:29:25,931 - linien_server.autolock.utils - DEBUG - Considered zeros (backward): [40, 42, 43, 63, 64, 65, 66, 68, 69, 90, 91, 93, 94, 95, 96, 98, 99, 100, 101, 102, 103, 166, 167, 202, 208, 209, 218, 219, 246, 247, 295, 302, 303, 336, 367, 368, 408, 409, 433, 465, 466, 491, 492, 540, 594, 634, 667, 714, 747, 748, 920, 968, 1035, 1036, 1037, 1038, 1088, 1136, 1137, 1155, 1156]
+2025-11-18 15:29:25,981 - linien_server.autolock.utils - DEBUG - Zero crossings of smoothed derivative: [40, 42, 43, 63, 64, 65, 66, 68, 69, 90, 91, 93, 94, 95, 96, 98, 99, 100, 101, 102, 103, 166, 167, 202, 208, 209, 218, 219, 246, 247, 295, 302, 303, 336, 367, 368, 408, 409, 433, 465, 466, 491, 492, 540, 594, 634, 667, 714, 747, 748, 920, 968, 1035, 1036, 1037, 1038, 1088, 1136, 1137, 1155, 1156, 1258, 1305, 1491, 1492, 1499, 1500, 1501, 1502, 1555, 1556, 1575, 1615, 1620, 1621, 1622, 1681, 1682, 1687, 1741, 1760, 1761, 1811, 1812, 1813, 1862, 1863, 1887, 1933, 1934, 1935, 1936, 1937, 1938, 1939, 1940, 1941, 1988, 1989, 2012]
+2025-11-18 15:29:25,982 - linien_server.autolock.utils - DEBUG - start_idx + time_scale//5: 1282
+2025-11-18 15:29:25,984 - linien_server.autolock.utils - DEBUG - Considered zeros (forward): [1305, 1491, 1492, 1499, 1500, 1501, 1502, 1555, 1556, 1575, 1615, 1620, 1621, 1622, 1681, 1682, 1687, 1741, 1760, 1761, 1811, 1812, 1813, 1862, 1863, 1887, 1933, 1934, 1935, 1936, 1937, 1938, 1939, 1940, 1941, 1988, 1989, 2012]
+2025-11-18 15:29:26,001 - linien_server.autolock.robust - DEBUG - Determined lock regions: [(1156, 1305), (1156, 1305), (1156, 1305), (1156, 1305), (1156, 1305)]
+2025-11-18 15:29:26,002 - linien_server.autolock.robust - DEBUG - Try out tolerance 0.95
+2025-11-18 15:29:26,003 - linien_server.autolock.robust - DEBUG - Original peaks: [(1259, 2555)]
+2025-11-18 15:29:26,004 - linien_server.autolock.robust - DEBUG - Filtered peaks: [(1259, 2427.25)]
+2025-11-18 15:29:26,005 - linien_server.autolock.robust - DEBUG - Discarded peaks: [(1259, 2555)]
+2025-11-18 15:29:26,007 - linien_server.autolock.robust - DEBUG - Target peak index in prepared spectrum: 1259
+2025-11-18 15:29:26,009 - linien_server.autolock.robust - DEBUG - final wait time is 10 samples
+2025-11-18 15:29:26,011 - linien_server.autolock.robust - DEBUG - Generated description: [(1133, 2427)]
+2025-11-18 15:29:26,044 - linien_server.autolock.robust - DEBUG - Lock position found at index 1260 for current spectrum
+2025-11-18 15:29:26,076 - linien_server.autolock.robust - DEBUG - Lock position found at index 1256 for current spectrum
+2025-11-18 15:29:26,105 - linien_server.autolock.robust - DEBUG - Lock position found at index 1252 for current spectrum
+2025-11-18 15:29:26,134 - linien_server.autolock.robust - DEBUG - Lock position found at index 1256 for current spectrum
+2025-11-18 15:29:26,162 - linien_server.autolock.robust - DEBUG - Lock position found at index 1253 for current spectrum
+2025-11-18 15:29:26,164 - linien_server.autolock.robust - DEBUG - Description is [(1133, 2427)]
+2025-11-18 15:29:26,165 - linien_server.autolock.robust - DEBUG - Calculation of autolock description took 1.0068373680114746
+2025-11-18 15:29:26,225 - linien_server.server - ERROR - incorrect data received for lock state, ignoring!
+2025-11-18 15:29:26,786 - linien_server.autolock.autolock - DEBUG - entered in react_new_spectrum
+2025-11-18 15:29:26,789 - linien_server.autolock.autolock - DEBUG - pause_acquisition: False
+2025-11-18 15:29:26,791 - linien_server.autolock.autolock - DEBUG - check_plot_data: True
+2025-11-18 15:29:26,792 - linien_server.autolock.autolock - DEBUG - after lock
+2025-11-18 15:37:39,916 - linien_server.autolock.autolock - DEBUG - Initialize Autolock
+2025-11-18 15:37:39,926 - linien_server.autolock.autolock - DEBUG - Start the autolock
+2025-11-18 15:37:39,930 - linien_server.autolock.autolock - DEBUG - (x0, x1) = (1000,1350)
+2025-11-18 15:37:39,937 - linien_server.autolock.autolock - DEBUG - Start autolock with mode 1
+2025-11-18 15:37:40,323 - linien_server.autolock.autolock - DEBUG - entered in react_new_spectrum
+2025-11-18 15:37:40,326 - linien_server.autolock.autolock - DEBUG - pause_acquisition: False
+2025-11-18 15:37:40,328 - linien_server.autolock.autolock - DEBUG - check_plot_data: True
+2025-11-18 15:37:40,429 - linien_server.autolock.robust - DEBUG - handle new spectrum
+2025-11-18 15:37:40,458 - linien_server.autolock.robust - ERROR - Not enough spectra collected:2 of 5
+2025-11-18 15:37:40,710 - linien_server.autolock.autolock - DEBUG - entered in react_new_spectrum
+2025-11-18 15:37:40,712 - linien_server.autolock.autolock - DEBUG - pause_acquisition: False
+2025-11-18 15:37:40,713 - linien_server.autolock.autolock - DEBUG - check_plot_data: True
+2025-11-18 15:37:40,809 - linien_server.autolock.robust - DEBUG - handle new spectrum
+2025-11-18 15:37:40,837 - linien_server.autolock.robust - ERROR - Not enough spectra collected:3 of 5
+2025-11-18 15:37:41,162 - linien_server.autolock.autolock - DEBUG - entered in react_new_spectrum
+2025-11-18 15:37:41,166 - linien_server.autolock.autolock - DEBUG - pause_acquisition: False
+2025-11-18 15:37:41,169 - linien_server.autolock.autolock - DEBUG - check_plot_data: True
+2025-11-18 15:37:41,266 - linien_server.autolock.robust - DEBUG - handle new spectrum
+2025-11-18 15:37:41,294 - linien_server.autolock.robust - ERROR - Not enough spectra collected:4 of 5
+2025-11-18 15:37:41,561 - linien_server.autolock.autolock - DEBUG - entered in react_new_spectrum
+2025-11-18 15:37:41,564 - linien_server.autolock.autolock - DEBUG - pause_acquisition: False
+2025-11-18 15:37:41,566 - linien_server.autolock.autolock - DEBUG - check_plot_data: True
+2025-11-18 15:37:41,662 - linien_server.autolock.robust - DEBUG - handle new spectrum
+2025-11-18 15:37:41,690 - linien_server.autolock.robust - DEBUG - enough spectra!, calculate
+2025-11-18 15:37:41,691 - linien_server.autolock.robust - DEBUG - Entered in calculate_autolock_instructions_v2
+2025-11-18 15:37:41,697 - linien_server.autolock.robust - DEBUG - Saved new robust_spectra.npy and target_idxs.npy
+2025-11-18 15:37:41,698 - linien_server.autolock.utils - DEBUG - Entered in crop_spectra_to_same_view
+2025-11-18 15:37:41,830 - linien_server.autolock.utils - DEBUG - Shifts calculated for cropping: [1, -1, -7, -7, -6]
+2025-11-18 15:37:41,834 - linien_server.autolock.robust - DEBUG - Saved new robust_spectra_cropped.npy
+2025-11-18 15:37:41,835 - linien_server.autolock.utils - DEBUG - Entered in get_time_scale
+2025-11-18 15:37:41,836 - linien_server.autolock.utils - DEBUG - Spectrum length:2040
+2025-11-18 15:37:41,840 - linien_server.autolock.utils - DEBUG - Spectrum: [0 1 1 0 0]...[11 11 11 11 11]
+2025-11-18 15:37:41,841 - linien_server.autolock.utils - DEBUG - Target indices: [1203, 1238]
+2025-11-18 15:37:41,842 - linien_server.autolock.utils - DEBUG - Entered in get_time_scale
+2025-11-18 15:37:41,843 - linien_server.autolock.utils - DEBUG - Spectrum length:2040
+2025-11-18 15:37:41,846 - linien_server.autolock.utils - DEBUG - Spectrum: [0 0 0 0 0]...[11 11 11 11 11]
+2025-11-18 15:37:41,847 - linien_server.autolock.utils - DEBUG - Target indices: [1203, 1238]
+2025-11-18 15:37:41,848 - linien_server.autolock.utils - DEBUG - Entered in get_time_scale
+2025-11-18 15:37:41,849 - linien_server.autolock.utils - DEBUG - Spectrum length:2040
+2025-11-18 15:37:41,852 - linien_server.autolock.utils - DEBUG - Spectrum: [-6  0  0  0  0]...[11 11 11 11 11]
+2025-11-18 15:37:41,853 - linien_server.autolock.utils - DEBUG - Target indices: [1203, 1238]
+2025-11-18 15:37:41,854 - linien_server.autolock.utils - DEBUG - Entered in get_time_scale
+2025-11-18 15:37:41,855 - linien_server.autolock.utils - DEBUG - Spectrum length:2040
+2025-11-18 15:37:41,858 - linien_server.autolock.utils - DEBUG - Spectrum: [-7 -1 -1 -1 -1]...[10 10 10 10 10]
+2025-11-18 15:37:41,859 - linien_server.autolock.utils - DEBUG - Target indices: [1203, 1238]
+2025-11-18 15:37:41,861 - linien_server.autolock.utils - DEBUG - Entered in get_time_scale
+2025-11-18 15:37:41,862 - linien_server.autolock.utils - DEBUG - Spectrum length:2040
+2025-11-18 15:37:41,864 - linien_server.autolock.utils - DEBUG - Spectrum: [-1 -1 -2 -2 -2]...[10 10 10 10 10]
+2025-11-18 15:37:41,866 - linien_server.autolock.utils - DEBUG - Target indices: [1203, 1238]
+2025-11-18 15:37:41,867 - linien_server.autolock.robust - DEBUG - x scale is 33
+2025-11-18 15:37:41,920 - linien_server.autolock.robust - DEBUG - shift prepared spectrum by 15 samples to the left to match the original spectrum
+2025-11-18 15:37:42,003 - linien_server.autolock.robust - DEBUG - Detected peaks with (position, height): [(1218, 725), (1114, -341), (926, 646), (880, -1721), (92, 3), (64, -32), (30, 9), (0, 0)]
+2025-11-18 15:37:42,033 - linien_server.autolock.utils - DEBUG - Zero crossings of smoothed derivative: [18, 58, 88, 89, 124, 146, 183, 216, 314, 342, 377, 378, 379, 381, 382, 487, 488, 517, 518, 539, 540, 556, 600, 635, 724, 742, 878, 929, 990, 1019, 1020, 1111, 1214, 1264, 1574, 1575, 1597, 1823, 1824, 1842, 1843, 1952, 1953, 1963, 1964, 2008, 2019]
+2025-11-18 15:37:42,034 - linien_server.autolock.utils - DEBUG - start_idx - time_scale//5: 1197
+2025-11-18 15:37:42,036 - linien_server.autolock.utils - DEBUG - Considered zeros (backward): [18, 58, 88, 89, 124, 146, 183, 216, 314, 342, 377, 378, 379, 381, 382, 487, 488, 517, 518, 539, 540, 556, 600, 635, 724, 742, 878, 929, 990, 1019, 1020, 1111]
+2025-11-18 15:37:42,064 - linien_server.autolock.utils - DEBUG - Zero crossings of smoothed derivative: [18, 58, 88, 89, 124, 146, 183, 216, 314, 342, 377, 378, 379, 381, 382, 487, 488, 517, 518, 539, 540, 556, 600, 635, 724, 742, 878, 929, 990, 1019, 1020, 1111, 1214, 1264, 1574, 1575, 1597, 1823, 1824, 1842, 1843, 1952, 1953, 1963, 1964, 2008, 2019]
+2025-11-18 15:37:42,065 - linien_server.autolock.utils - DEBUG - start_idx + time_scale//5: 1243
+2025-11-18 15:37:42,066 - linien_server.autolock.utils - DEBUG - Considered zeros (forward): [1264, 1574, 1575, 1597, 1823, 1824, 1842, 1843, 1952, 1953, 1963, 1964, 2008, 2019]
+2025-11-18 15:37:42,111 - linien_server.autolock.utils - DEBUG - Zero crossings of smoothed derivative: [18, 58, 88, 89, 124, 146, 183, 216, 314, 342, 377, 378, 379, 381, 382, 487, 488, 517, 518, 539, 540, 556, 600, 635, 724, 742, 878, 929, 990, 1019, 1020, 1111, 1214, 1264, 1574, 1575, 1597, 1823, 1824, 1842, 1843, 1952, 1953, 1963, 1964, 2008, 2019]
+2025-11-18 15:37:42,112 - linien_server.autolock.utils - DEBUG - start_idx - time_scale//5: 1200
+2025-11-18 15:37:42,114 - linien_server.autolock.utils - DEBUG - Considered zeros (backward): [18, 58, 88, 89, 124, 146, 183, 216, 314, 342, 377, 378, 379, 381, 382, 487, 488, 517, 518, 539, 540, 556, 600, 635, 724, 742, 878, 929, 990, 1019, 1020, 1111]
+2025-11-18 15:37:42,140 - linien_server.autolock.utils - DEBUG - Zero crossings of smoothed derivative: [18, 58, 88, 89, 124, 146, 183, 216, 314, 342, 377, 378, 379, 381, 382, 487, 488, 517, 518, 539, 540, 556, 600, 635, 724, 742, 878, 929, 990, 1019, 1020, 1111, 1214, 1264, 1574, 1575, 1597, 1823, 1824, 1842, 1843, 1952, 1953, 1963, 1964, 2008, 2019]
+2025-11-18 15:37:42,141 - linien_server.autolock.utils - DEBUG - start_idx + time_scale//5: 1243
+2025-11-18 15:37:42,143 - linien_server.autolock.utils - DEBUG - Considered zeros (forward): [1264, 1574, 1575, 1597, 1823, 1824, 1842, 1843, 1952, 1953, 1963, 1964, 2008, 2019]
+2025-11-18 15:37:42,176 - linien_server.autolock.utils - DEBUG - Zero crossings of smoothed derivative: [18, 58, 88, 89, 124, 146, 183, 216, 314, 342, 377, 378, 379, 381, 382, 487, 488, 517, 518, 539, 540, 556, 600, 635, 724, 742, 878, 929, 990, 1019, 1020, 1111, 1214, 1264, 1574, 1575, 1597, 1823, 1824, 1842, 1843, 1952, 1953, 1963, 1964, 2008, 2019]
+2025-11-18 15:37:42,177 - linien_server.autolock.utils - DEBUG - start_idx - time_scale//5: 1200
+2025-11-18 15:37:42,179 - linien_server.autolock.utils - DEBUG - Considered zeros (backward): [18, 58, 88, 89, 124, 146, 183, 216, 314, 342, 377, 378, 379, 381, 382, 487, 488, 517, 518, 539, 540, 556, 600, 635, 724, 742, 878, 929, 990, 1019, 1020, 1111]
+2025-11-18 15:37:42,205 - linien_server.autolock.utils - DEBUG - Zero crossings of smoothed derivative: [18, 58, 88, 89, 124, 146, 183, 216, 314, 342, 377, 378, 379, 381, 382, 487, 488, 517, 518, 539, 540, 556, 600, 635, 724, 742, 878, 929, 990, 1019, 1020, 1111, 1214, 1264, 1574, 1575, 1597, 1823, 1824, 1842, 1843, 1952, 1953, 1963, 1964, 2008, 2019]
+2025-11-18 15:37:42,206 - linien_server.autolock.utils - DEBUG - start_idx + time_scale//5: 1243
+2025-11-18 15:37:42,208 - linien_server.autolock.utils - DEBUG - Considered zeros (forward): [1264, 1574, 1575, 1597, 1823, 1824, 1842, 1843, 1952, 1953, 1963, 1964, 2008, 2019]
+2025-11-18 15:37:42,243 - linien_server.autolock.utils - DEBUG - Zero crossings of smoothed derivative: [18, 58, 88, 89, 124, 146, 183, 216, 314, 342, 377, 378, 379, 381, 382, 487, 488, 517, 518, 539, 540, 556, 600, 635, 724, 742, 878, 929, 990, 1019, 1020, 1111, 1214, 1264, 1574, 1575, 1597, 1823, 1824, 1842, 1843, 1952, 1953, 1963, 1964, 2008, 2019]
+2025-11-18 15:37:42,245 - linien_server.autolock.utils - DEBUG - start_idx - time_scale//5: 1197
+2025-11-18 15:37:42,248 - linien_server.autolock.utils - DEBUG - Considered zeros (backward): [18, 58, 88, 89, 124, 146, 183, 216, 314, 342, 377, 378, 379, 381, 382, 487, 488, 517, 518, 539, 540, 556, 600, 635, 724, 742, 878, 929, 990, 1019, 1020, 1111]
+2025-11-18 15:37:42,276 - linien_server.autolock.utils - DEBUG - Zero crossings of smoothed derivative: [18, 58, 88, 89, 124, 146, 183, 216, 314, 342, 377, 378, 379, 381, 382, 487, 488, 517, 518, 539, 540, 556, 600, 635, 724, 742, 878, 929, 990, 1019, 1020, 1111, 1214, 1264, 1574, 1575, 1597, 1823, 1824, 1842, 1843, 1952, 1953, 1963, 1964, 2008, 2019]
+2025-11-18 15:37:42,278 - linien_server.autolock.utils - DEBUG - start_idx + time_scale//5: 1243
+2025-11-18 15:37:42,279 - linien_server.autolock.utils - DEBUG - Considered zeros (forward): [1264, 1574, 1575, 1597, 1823, 1824, 1842, 1843, 1952, 1953, 1963, 1964, 2008, 2019]
+2025-11-18 15:37:42,313 - linien_server.autolock.utils - DEBUG - Zero crossings of smoothed derivative: [18, 58, 88, 89, 124, 146, 183, 216, 314, 342, 377, 378, 379, 381, 382, 487, 488, 517, 518, 539, 540, 556, 600, 635, 724, 742, 878, 929, 990, 1019, 1020, 1111, 1214, 1264, 1574, 1575, 1597, 1823, 1824, 1842, 1843, 1952, 1953, 1963, 1964, 2008, 2019]
+2025-11-18 15:37:42,314 - linien_server.autolock.utils - DEBUG - start_idx - time_scale//5: 1198
+2025-11-18 15:37:42,316 - linien_server.autolock.utils - DEBUG - Considered zeros (backward): [18, 58, 88, 89, 124, 146, 183, 216, 314, 342, 377, 378, 379, 381, 382, 487, 488, 517, 518, 539, 540, 556, 600, 635, 724, 742, 878, 929, 990, 1019, 1020, 1111]
+2025-11-18 15:37:42,342 - linien_server.autolock.utils - DEBUG - Zero crossings of smoothed derivative: [18, 58, 88, 89, 124, 146, 183, 216, 314, 342, 377, 378, 379, 381, 382, 487, 488, 517, 518, 539, 540, 556, 600, 635, 724, 742, 878, 929, 990, 1019, 1020, 1111, 1214, 1264, 1574, 1575, 1597, 1823, 1824, 1842, 1843, 1952, 1953, 1963, 1964, 2008, 2019]
+2025-11-18 15:37:42,343 - linien_server.autolock.utils - DEBUG - start_idx + time_scale//5: 1243
+2025-11-18 15:37:42,344 - linien_server.autolock.utils - DEBUG - Considered zeros (forward): [1264, 1574, 1575, 1597, 1823, 1824, 1842, 1843, 1952, 1953, 1963, 1964, 2008, 2019]
+2025-11-18 15:37:42,354 - linien_server.autolock.robust - DEBUG - Determined lock regions: [(1168, 1264), (1169, 1264), (1169, 1264), (1170, 1264), (1172, 1264)]
+2025-11-18 15:37:42,355 - linien_server.autolock.robust - DEBUG - Try out tolerance 0.95
+2025-11-18 15:37:42,358 - linien_server.autolock.robust - DEBUG - Original peaks: [(1218, 725), (1114, -341), (926, 646), (880, -1721), (92, 3), (64, -32), (30, 9), (0, 0)]
+2025-11-18 15:37:42,359 - linien_server.autolock.robust - DEBUG - Filtered peaks: [(1218, 688.75), (1114, -323.95), (926, 613.6999999999999), (880, -1634.9499999999998)]
+2025-11-18 15:37:42,361 - linien_server.autolock.robust - DEBUG - Discarded peaks: [(1218, 725), (1114, -341), (926, 646), (880, -1721), (92, 3), (64, -32), (30, 9), (0, 0)]
+2025-11-18 15:37:42,362 - linien_server.autolock.robust - DEBUG - Target peak index in prepared spectrum: 1218
+2025-11-18 15:37:42,364 - linien_server.autolock.robust - DEBUG - final wait time is 8 samples
+2025-11-18 15:37:42,366 - linien_server.autolock.robust - DEBUG - Generated description: [(792, -1634), (41, 613), (169, -323), (93, 688)]
+2025-11-18 15:37:42,398 - linien_server.autolock.robust - DEBUG - Lock position found at index 1218 for current spectrum
+2025-11-18 15:37:42,426 - linien_server.autolock.robust - DEBUG - Lock position found at index 1222 for current spectrum
+2025-11-18 15:37:42,455 - linien_server.autolock.robust - DEBUG - Lock position found at index 1221 for current spectrum
+2025-11-18 15:37:42,518 - linien_server.autolock.robust - DEBUG - Lock position found at index 1220 for current spectrum
+2025-11-18 15:37:42,519 - linien_server.autolock.robust - DEBUG - Try out tolerance 0.9
+2025-11-18 15:37:42,521 - linien_server.autolock.robust - DEBUG - Original peaks: [(1218, 725), (1114, -341), (926, 646), (880, -1721), (92, 3), (64, -32), (30, 9), (0, 0)]
+2025-11-18 15:37:42,523 - linien_server.autolock.robust - DEBUG - Filtered peaks: [(1218, 652.5), (1114, -306.90000000000003), (926, 581.4), (880, -1548.9)]
+2025-11-18 15:37:42,524 - linien_server.autolock.robust - DEBUG - Discarded peaks: [(1218, 725), (1114, -341), (926, 646), (880, -1721), (92, 3), (64, -32), (30, 9), (0, 0)]
+2025-11-18 15:37:42,526 - linien_server.autolock.robust - DEBUG - Target peak index in prepared spectrum: 1218
+2025-11-18 15:37:42,528 - linien_server.autolock.robust - DEBUG - final wait time is 10 samples
+2025-11-18 15:37:42,530 - linien_server.autolock.robust - DEBUG - Generated description: [(792, -1548), (41, 581), (169, -306), (93, 652)]
+2025-11-18 15:37:42,562 - linien_server.autolock.robust - DEBUG - Lock position found at index 1219 for current spectrum
+2025-11-18 15:37:42,591 - linien_server.autolock.robust - DEBUG - Lock position found at index 1222 for current spectrum
+2025-11-18 15:37:42,621 - linien_server.autolock.robust - DEBUG - Lock position found at index 1221 for current spectrum
+2025-11-18 15:37:42,652 - linien_server.autolock.robust - DEBUG - Lock position found at index 1220 for current spectrum
+2025-11-18 15:37:42,680 - linien_server.autolock.robust - DEBUG - Lock position found at index 1221 for current spectrum
+2025-11-18 15:37:42,681 - linien_server.autolock.robust - DEBUG - Description is [(792, -1548), (41, 581), (169, -306), (93, 652)]
+2025-11-18 15:37:42,683 - linien_server.autolock.robust - DEBUG - Calculation of autolock description took 0.9914519786834717
+2025-11-18 15:37:42,743 - linien_server.server - ERROR - incorrect data received for lock state, ignoring!
+2025-11-18 15:37:43,042 - linien_server.autolock.autolock - DEBUG - entered in react_new_spectrum
+2025-11-18 15:37:43,046 - linien_server.autolock.autolock - DEBUG - pause_acquisition: False
+2025-11-18 15:37:43,049 - linien_server.autolock.autolock - DEBUG - check_plot_data: True
+2025-11-18 15:37:43,051 - linien_server.autolock.autolock - DEBUG - after lock
+2025-11-18 15:42:26,171 - linien_server.cli - INFO - Stopping Linien server
+2025-11-18 15:42:26,272 - linien_server.cli - INFO - Stopped Linien server
+2025-11-18 15:42:29,364 - linien_server.cli - DEBUG - Copied linien-server.service to /etc/systemd/system
+2025-11-18 15:42:29,365 - linien_server.cli - INFO - Starting Linien server
+2025-11-18 15:42:29,433 - linien_server.cli - INFO - Started Linien server
+2025-11-18 15:42:45,061 - linien_server.parameters - INFO - Restoring parameters from /root/.local/share/linien/parameters.json
+2025-11-18 15:42:45,064 - linien_server.parameters - INFO - Restored parameters from /root/.local/share/linien/parameters.json
+2025-11-18 15:42:45,068 - linien_common.influxdb - INFO - Saved InfluxDB credentials to /root/.local/share/linien/influxdb_credentials.json
+2025-11-18 15:42:45,262 - linien_server.acquisition - INFO - Using fpgautil to deploy gateware.
+2025-11-18 15:42:45,395 - linien_server.server - DEBUG - Ping  1
+2025-11-18 15:42:45,447 - linien_server.mdio_tool - INFO - Disabling ethernet blinking with mdio-tool at /usr/local/lib/python3.10/dist-packages/linien_server/mdio-tool
+2025-11-18 15:42:45,484 - linien_server.server - INFO - Starting server.
+2025-11-18 15:42:46,424 - linien_server.server - DEBUG - Ping  2
+2025-11-18 15:42:47,446 - linien_server.server - DEBUG - Ping  3
+2025-11-18 15:42:47,453 - linien_server.server - DEBUG - Further pings will be suppressed
+2025-11-18 15:44:50,405 - linien_server.autolock.autolock - DEBUG - Initialize Autolock
+2025-11-18 15:44:50,425 - linien_server.autolock.autolock - DEBUG - Start the autolock
+2025-11-18 15:44:50,435 - linien_server.autolock.autolock - DEBUG - (x0, x1) = (1046,1281)
+2025-11-18 15:44:50,441 - linien_server.autolock.autolock - DEBUG - Start autolock with mode 1
+2025-11-18 15:44:50,800 - linien_server.autolock.autolock - DEBUG - entered in react_new_spectrum
+2025-11-18 15:44:50,802 - linien_server.autolock.autolock - DEBUG - pause_acquisition: False
+2025-11-18 15:44:50,805 - linien_server.autolock.autolock - DEBUG - check_plot_data: True
+2025-11-18 15:44:50,909 - linien_server.autolock.robust - DEBUG - handle new spectrum
+2025-11-18 15:44:50,952 - linien_server.autolock.robust - ERROR - Not enough spectra collected:2 of 5
+2025-11-18 15:44:51,200 - linien_server.autolock.autolock - DEBUG - entered in react_new_spectrum
+2025-11-18 15:44:51,202 - linien_server.autolock.autolock - DEBUG - pause_acquisition: False
+2025-11-18 15:44:51,205 - linien_server.autolock.autolock - DEBUG - check_plot_data: True
+2025-11-18 15:44:51,300 - linien_server.autolock.robust - DEBUG - handle new spectrum
+2025-11-18 15:44:51,328 - linien_server.autolock.robust - ERROR - Not enough spectra collected:3 of 5
+2025-11-18 15:44:51,597 - linien_server.autolock.autolock - DEBUG - entered in react_new_spectrum
+2025-11-18 15:44:51,601 - linien_server.autolock.autolock - DEBUG - pause_acquisition: False
+2025-11-18 15:44:51,603 - linien_server.autolock.autolock - DEBUG - check_plot_data: True
+2025-11-18 15:44:51,700 - linien_server.autolock.robust - DEBUG - handle new spectrum
+2025-11-18 15:44:51,727 - linien_server.autolock.robust - ERROR - Not enough spectra collected:4 of 5
+2025-11-18 15:44:52,033 - linien_server.autolock.autolock - DEBUG - entered in react_new_spectrum
+2025-11-18 15:44:52,036 - linien_server.autolock.autolock - DEBUG - pause_acquisition: False
+2025-11-18 15:44:52,038 - linien_server.autolock.autolock - DEBUG - check_plot_data: True
+2025-11-18 15:44:52,139 - linien_server.autolock.robust - DEBUG - handle new spectrum
+2025-11-18 15:44:52,169 - linien_server.autolock.robust - DEBUG - enough spectra!, calculate
+2025-11-18 15:44:52,171 - linien_server.autolock.robust - DEBUG - Entered in calculate_autolock_instructions_v2
+2025-11-18 15:44:52,176 - linien_server.autolock.robust - DEBUG - Saved new robust_spectra.npy and target_idxs.npy
+2025-11-18 15:44:52,178 - linien_server.autolock.utils - DEBUG - Entered in crop_spectra_to_same_view
+2025-11-18 15:44:52,271 - linien_server.autolock.utils - DEBUG - Shifts calculated for cropping: [1, 5, 2, 0, -2]
+2025-11-18 15:44:52,276 - linien_server.autolock.robust - DEBUG - Saved new robust_spectra_cropped.npy
+2025-11-18 15:44:52,277 - linien_server.autolock.utils - DEBUG - Entered in get_time_scale
+2025-11-18 15:44:52,278 - linien_server.autolock.utils - DEBUG - Spectrum length:2041
+2025-11-18 15:44:52,283 - linien_server.autolock.utils - DEBUG - Spectrum: [5. 5. 5. 5. 5.]...[18. 18. 18. 17. 17.]
+2025-11-18 15:44:52,284 - linien_server.autolock.utils - DEBUG - Target indices: [1081, 1116]
+2025-11-18 15:44:52,286 - linien_server.autolock.utils - DEBUG - Entered in get_time_scale
+2025-11-18 15:44:52,287 - linien_server.autolock.utils - DEBUG - Spectrum length:2041
+2025-11-18 15:44:52,290 - linien_server.autolock.utils - DEBUG - Spectrum: [5 5 5 5 6]...[19 19 19 19 19]
+2025-11-18 15:44:52,294 - linien_server.autolock.utils - DEBUG - Target indices: [1081, 1116]
+2025-11-18 15:44:52,297 - linien_server.autolock.utils - DEBUG - Entered in get_time_scale
+2025-11-18 15:44:52,300 - linien_server.autolock.utils - DEBUG - Spectrum length:2041
+2025-11-18 15:44:52,304 - linien_server.autolock.utils - DEBUG - Spectrum: [5 5 5 5 5]...[18 18 19 19 19]
+2025-11-18 15:44:52,305 - linien_server.autolock.utils - DEBUG - Target indices: [1081, 1116]
+2025-11-18 15:44:52,307 - linien_server.autolock.utils - DEBUG - Entered in get_time_scale
+2025-11-18 15:44:52,308 - linien_server.autolock.utils - DEBUG - Spectrum length:2041
+2025-11-18 15:44:52,311 - linien_server.autolock.utils - DEBUG - Spectrum: [5 5 5 5 5]...[18 18 18 18 18]
+2025-11-18 15:44:52,312 - linien_server.autolock.utils - DEBUG - Target indices: [1081, 1116]
+2025-11-18 15:44:52,313 - linien_server.autolock.utils - DEBUG - Entered in get_time_scale
+2025-11-18 15:44:52,314 - linien_server.autolock.utils - DEBUG - Spectrum length:2041
+2025-11-18 15:44:52,317 - linien_server.autolock.utils - DEBUG - Spectrum: [0 5 4 4 4]...[17 17 17 17 17]
+2025-11-18 15:44:52,318 - linien_server.autolock.utils - DEBUG - Target indices: [1081, 1116]
+2025-11-18 15:44:52,320 - linien_server.autolock.robust - DEBUG - x scale is 31
+2025-11-18 15:44:52,360 - linien_server.autolock.robust - DEBUG - shift prepared spectrum by 14 samples to the left to match the original spectrum
+2025-11-18 15:44:52,449 - linien_server.autolock.robust - DEBUG - Detected peaks with (position, height): [(1095, 848.0), (886, -99.0), (815, 715.0), (772, -1435.0), (474, 54.0), (447, -3.0), (438, 2.0), (433, 0.0), (429, 1.0), (398, -35.0), (359, 37.0), (331, -1.0), (50, 161.0)]
+2025-11-18 15:44:52,481 - linien_server.autolock.utils - DEBUG - Zero crossings of smoothed derivative: [44, 83, 110, 111, 206, 207, 236, 286, 299, 333, 357, 401, 402, 469, 508, 538, 587, 588, 623, 770, 817, 884, 913, 937, 978, 998, 1090, 1138, 1232, 1244, 1245, 1298, 1315, 1316, 1418, 1419, 1433, 1481, 1482, 1491, 1492, 1597, 1621, 1622, 1677, 1678, 1679, 1733, 1744, 1745, 1850, 1873, 1874, 1979, 1980, 1981, 1982, 1983, 1998]
+2025-11-18 15:44:52,485 - linien_server.autolock.utils - DEBUG - start_idx - time_scale//5: 1075
+2025-11-18 15:44:52,487 - linien_server.autolock.utils - DEBUG - Considered zeros (backward): [44, 83, 110, 111, 206, 207, 236, 286, 299, 333, 357, 401, 402, 469, 508, 538, 587, 588, 623, 770, 817, 884, 913, 937, 978, 998]
+2025-11-18 15:44:52,514 - linien_server.autolock.utils - DEBUG - Zero crossings of smoothed derivative: [44, 83, 110, 111, 206, 207, 236, 286, 299, 333, 357, 401, 402, 469, 508, 538, 587, 588, 623, 770, 817, 884, 913, 937, 978, 998, 1090, 1138, 1232, 1244, 1245, 1298, 1315, 1316, 1418, 1419, 1433, 1481, 1482, 1491, 1492, 1597, 1621, 1622, 1677, 1678, 1679, 1733, 1744, 1745, 1850, 1873, 1874, 1979, 1980, 1981, 1982, 1983, 1998]
+2025-11-18 15:44:52,516 - linien_server.autolock.utils - DEBUG - start_idx + time_scale//5: 1121
+2025-11-18 15:44:52,517 - linien_server.autolock.utils - DEBUG - Considered zeros (forward): [1138, 1232, 1244, 1245, 1298, 1315, 1316, 1418, 1419, 1433, 1481, 1482, 1491, 1492, 1597, 1621, 1622, 1677, 1678, 1679, 1733, 1744, 1745, 1850, 1873, 1874, 1979, 1980, 1981, 1982, 1983, 1998]
+2025-11-18 15:44:52,547 - linien_server.autolock.utils - DEBUG - Zero crossings of smoothed derivative: [44, 83, 110, 111, 206, 207, 236, 286, 299, 333, 357, 401, 402, 469, 508, 538, 587, 588, 623, 770, 817, 884, 913, 937, 978, 998, 1090, 1138, 1232, 1244, 1245, 1298, 1315, 1316, 1418, 1419, 1433, 1481, 1482, 1491, 1492, 1597, 1621, 1622, 1677, 1678, 1679, 1733, 1744, 1745, 1850, 1873, 1874, 1979, 1980, 1981, 1982, 1983, 1998]
+2025-11-18 15:44:52,549 - linien_server.autolock.utils - DEBUG - start_idx - time_scale//5: 1080
+2025-11-18 15:44:52,550 - linien_server.autolock.utils - DEBUG - Considered zeros (backward): [44, 83, 110, 111, 206, 207, 236, 286, 299, 333, 357, 401, 402, 469, 508, 538, 587, 588, 623, 770, 817, 884, 913, 937, 978, 998]
+2025-11-18 15:44:52,578 - linien_server.autolock.utils - DEBUG - Zero crossings of smoothed derivative: [44, 83, 110, 111, 206, 207, 236, 286, 299, 333, 357, 401, 402, 469, 508, 538, 587, 588, 623, 770, 817, 884, 913, 937, 978, 998, 1090, 1138, 1232, 1244, 1245, 1298, 1315, 1316, 1418, 1419, 1433, 1481, 1482, 1491, 1492, 1597, 1621, 1622, 1677, 1678, 1679, 1733, 1744, 1745, 1850, 1873, 1874, 1979, 1980, 1981, 1982, 1983, 1998]
+2025-11-18 15:44:52,579 - linien_server.autolock.utils - DEBUG - start_idx + time_scale//5: 1121
+2025-11-18 15:44:52,581 - linien_server.autolock.utils - DEBUG - Considered zeros (forward): [1138, 1232, 1244, 1245, 1298, 1315, 1316, 1418, 1419, 1433, 1481, 1482, 1491, 1492, 1597, 1621, 1622, 1677, 1678, 1679, 1733, 1744, 1745, 1850, 1873, 1874, 1979, 1980, 1981, 1982, 1983, 1998]
+2025-11-18 15:44:52,611 - linien_server.autolock.utils - DEBUG - Zero crossings of smoothed derivative: [44, 83, 110, 111, 206, 207, 236, 286, 299, 333, 357, 401, 402, 469, 508, 538, 587, 588, 623, 770, 817, 884, 913, 937, 978, 998, 1090, 1138, 1232, 1244, 1245, 1298, 1315, 1316, 1418, 1419, 1433, 1481, 1482, 1491, 1492, 1597, 1621, 1622, 1677, 1678, 1679, 1733, 1744, 1745, 1850, 1873, 1874, 1979, 1980, 1981, 1982, 1983, 1998]
+2025-11-18 15:44:52,612 - linien_server.autolock.utils - DEBUG - start_idx - time_scale//5: 1077
+2025-11-18 15:44:52,614 - linien_server.autolock.utils - DEBUG - Considered zeros (backward): [44, 83, 110, 111, 206, 207, 236, 286, 299, 333, 357, 401, 402, 469, 508, 538, 587, 588, 623, 770, 817, 884, 913, 937, 978, 998]
+2025-11-18 15:44:52,642 - linien_server.autolock.utils - DEBUG - Zero crossings of smoothed derivative: [44, 83, 110, 111, 206, 207, 236, 286, 299, 333, 357, 401, 402, 469, 508, 538, 587, 588, 623, 770, 817, 884, 913, 937, 978, 998, 1090, 1138, 1232, 1244, 1245, 1298, 1315, 1316, 1418, 1419, 1433, 1481, 1482, 1491, 1492, 1597, 1621, 1622, 1677, 1678, 1679, 1733, 1744, 1745, 1850, 1873, 1874, 1979, 1980, 1981, 1982, 1983, 1998]
+2025-11-18 15:44:52,643 - linien_server.autolock.utils - DEBUG - start_idx + time_scale//5: 1120
+2025-11-18 15:44:52,645 - linien_server.autolock.utils - DEBUG - Considered zeros (forward): [1138, 1232, 1244, 1245, 1298, 1315, 1316, 1418, 1419, 1433, 1481, 1482, 1491, 1492, 1597, 1621, 1622, 1677, 1678, 1679, 1733, 1744, 1745, 1850, 1873, 1874, 1979, 1980, 1981, 1982, 1983, 1998]
+2025-11-18 15:44:52,674 - linien_server.autolock.utils - DEBUG - Zero crossings of smoothed derivative: [44, 83, 110, 111, 206, 207, 236, 286, 299, 333, 357, 401, 402, 469, 508, 538, 587, 588, 623, 770, 817, 884, 913, 937, 978, 998, 1090, 1138, 1232, 1244, 1245, 1298, 1315, 1316, 1418, 1419, 1433, 1481, 1482, 1491, 1492, 1597, 1621, 1622, 1677, 1678, 1679, 1733, 1744, 1745, 1850, 1873, 1874, 1979, 1980, 1981, 1982, 1983, 1998]
+2025-11-18 15:44:52,675 - linien_server.autolock.utils - DEBUG - start_idx - time_scale//5: 1077
+2025-11-18 15:44:52,677 - linien_server.autolock.utils - DEBUG - Considered zeros (backward): [44, 83, 110, 111, 206, 207, 236, 286, 299, 333, 357, 401, 402, 469, 508, 538, 587, 588, 623, 770, 817, 884, 913, 937, 978, 998]
+2025-11-18 15:44:52,705 - linien_server.autolock.utils - DEBUG - Zero crossings of smoothed derivative: [44, 83, 110, 111, 206, 207, 236, 286, 299, 333, 357, 401, 402, 469, 508, 538, 587, 588, 623, 770, 817, 884, 913, 937, 978, 998, 1090, 1138, 1232, 1244, 1245, 1298, 1315, 1316, 1418, 1419, 1433, 1481, 1482, 1491, 1492, 1597, 1621, 1622, 1677, 1678, 1679, 1733, 1744, 1745, 1850, 1873, 1874, 1979, 1980, 1981, 1982, 1983, 1998]
+2025-11-18 15:44:52,707 - linien_server.autolock.utils - DEBUG - start_idx + time_scale//5: 1119
+2025-11-18 15:44:52,709 - linien_server.autolock.utils - DEBUG - Considered zeros (forward): [1138, 1232, 1244, 1245, 1298, 1315, 1316, 1418, 1419, 1433, 1481, 1482, 1491, 1492, 1597, 1621, 1622, 1677, 1678, 1679, 1733, 1744, 1745, 1850, 1873, 1874, 1979, 1980, 1981, 1982, 1983, 1998]
+2025-11-18 15:44:52,741 - linien_server.autolock.utils - DEBUG - Zero crossings of smoothed derivative: [44, 83, 110, 111, 206, 207, 236, 286, 299, 333, 357, 401, 402, 469, 508, 538, 587, 588, 623, 770, 817, 884, 913, 937, 978, 998, 1090, 1138, 1232, 1244, 1245, 1298, 1315, 1316, 1418, 1419, 1433, 1481, 1482, 1491, 1492, 1597, 1621, 1622, 1677, 1678, 1679, 1733, 1744, 1745, 1850, 1873, 1874, 1979, 1980, 1981, 1982, 1983, 1998]
+2025-11-18 15:44:52,742 - linien_server.autolock.utils - DEBUG - start_idx - time_scale//5: 1075
+2025-11-18 15:44:52,744 - linien_server.autolock.utils - DEBUG - Considered zeros (backward): [44, 83, 110, 111, 206, 207, 236, 286, 299, 333, 357, 401, 402, 469, 508, 538, 587, 588, 623, 770, 817, 884, 913, 937, 978, 998]
+2025-11-18 15:44:52,772 - linien_server.autolock.utils - DEBUG - Zero crossings of smoothed derivative: [44, 83, 110, 111, 206, 207, 236, 286, 299, 333, 357, 401, 402, 469, 508, 538, 587, 588, 623, 770, 817, 884, 913, 937, 978, 998, 1090, 1138, 1232, 1244, 1245, 1298, 1315, 1316, 1418, 1419, 1433, 1481, 1482, 1491, 1492, 1597, 1621, 1622, 1677, 1678, 1679, 1733, 1744, 1745, 1850, 1873, 1874, 1979, 1980, 1981, 1982, 1983, 1998]
+2025-11-18 15:44:52,773 - linien_server.autolock.utils - DEBUG - start_idx + time_scale//5: 1119
+2025-11-18 15:44:52,774 - linien_server.autolock.utils - DEBUG - Considered zeros (forward): [1138, 1232, 1244, 1245, 1298, 1315, 1316, 1418, 1419, 1433, 1481, 1482, 1491, 1492, 1597, 1621, 1622, 1677, 1678, 1679, 1733, 1744, 1745, 1850, 1873, 1874, 1979, 1980, 1981, 1982, 1983, 1998]
+2025-11-18 15:44:52,779 - linien_server.autolock.robust - DEBUG - Determined lock regions: [(1006, 1138), (1019, 1138), (1008, 1138), (1019, 1138), (1016, 1138)]
+2025-11-18 15:44:52,780 - linien_server.autolock.robust - DEBUG - Try out tolerance 0.95
+2025-11-18 15:44:52,782 - linien_server.autolock.robust - DEBUG - Original peaks: [(1095, 848.0), (886, -99.0), (815, 715.0), (772, -1435.0), (474, 54.0), (447, -3.0), (438, 2.0), (433, 0.0), (429, 1.0), (398, -35.0), (359, 37.0), (331, -1.0), (50, 161.0)]
+2025-11-18 15:44:52,783 - linien_server.autolock.robust - DEBUG - Filtered peaks: [(1095, 805.5999999999999), (886, -94.05), (815, 679.25), (772, -1363.25), (474, 51.3), (50, 152.95)]
+2025-11-18 15:44:52,785 - linien_server.autolock.robust - DEBUG - Discarded peaks: [(1095, 848.0), (886, -99.0), (815, 715.0), (772, -1435.0), (474, 54.0), (447, -3.0), (438, 2.0), (433, 0.0), (429, 1.0), (398, -35.0), (359, 37.0), (331, -1.0), (50, 161.0)]
+2025-11-18 15:44:52,786 - linien_server.autolock.robust - DEBUG - Target peak index in prepared spectrum: 1095
+2025-11-18 15:44:52,788 - linien_server.autolock.robust - DEBUG - final wait time is 9 samples
+2025-11-18 15:44:52,790 - linien_server.autolock.robust - DEBUG - Generated description: [(45, 152), (381, 51), (268, -1363), (38, 679), (63, -94), (188, 805)]
+2025-11-18 15:44:52,817 - linien_server.autolock.robust - DEBUG - Lock position found at index 1096 for current spectrum
+2025-11-18 15:44:52,941 - linien_server.autolock.robust - DEBUG - Try out tolerance 0.9
+2025-11-18 15:44:52,943 - linien_server.autolock.robust - DEBUG - Original peaks: [(1095, 848.0), (886, -99.0), (815, 715.0), (772, -1435.0), (474, 54.0), (447, -3.0), (438, 2.0), (433, 0.0), (429, 1.0), (398, -35.0), (359, 37.0), (331, -1.0), (50, 161.0)]
+2025-11-18 15:44:52,944 - linien_server.autolock.robust - DEBUG - Filtered peaks: [(1095, 763.2), (886, -89.10000000000001), (815, 643.5), (772, -1291.5), (50, 144.9)]
+2025-11-18 15:44:52,945 - linien_server.autolock.robust - DEBUG - Discarded peaks: [(1095, 848.0), (886, -99.0), (815, 715.0), (772, -1435.0), (474, 54.0), (447, -3.0), (438, 2.0), (433, 0.0), (429, 1.0), (398, -35.0), (359, 37.0), (331, -1.0), (50, 161.0)]
+2025-11-18 15:44:52,947 - linien_server.autolock.robust - DEBUG - Target peak index in prepared spectrum: 1095
+2025-11-18 15:44:52,949 - linien_server.autolock.robust - DEBUG - final wait time is 11 samples
+2025-11-18 15:44:52,950 - linien_server.autolock.robust - DEBUG - Generated description: [(45, 144), (649, -1291), (38, 643), (63, -89), (188, 763)]
+2025-11-18 15:44:52,976 - linien_server.autolock.robust - DEBUG - Lock position found at index 1096 for current spectrum
+2025-11-18 15:44:53,001 - linien_server.autolock.robust - DEBUG - Lock position found at index 1101 for current spectrum
+2025-11-18 15:44:53,058 - linien_server.autolock.robust - DEBUG - Lock position found at index 1099 for current spectrum
+2025-11-18 15:44:53,085 - linien_server.autolock.robust - DEBUG - Lock position found at index 1097 for current spectrum
+2025-11-18 15:44:53,086 - linien_server.autolock.robust - DEBUG - Try out tolerance 0.85
+2025-11-18 15:44:53,088 - linien_server.autolock.robust - DEBUG - Original peaks: [(1095, 848.0), (886, -99.0), (815, 715.0), (772, -1435.0), (474, 54.0), (447, -3.0), (438, 2.0), (433, 0.0), (429, 1.0), (398, -35.0), (359, 37.0), (331, -1.0), (50, 161.0)]
+2025-11-18 15:44:53,089 - linien_server.autolock.robust - DEBUG - Filtered peaks: [(1095, 720.8), (815, 607.75), (772, -1219.75), (50, 136.85)]
+2025-11-18 15:44:53,091 - linien_server.autolock.robust - DEBUG - Discarded peaks: [(1095, 848.0), (886, -99.0), (815, 715.0), (772, -1435.0), (474, 54.0), (447, -3.0), (438, 2.0), (433, 0.0), (429, 1.0), (398, -35.0), (359, 37.0), (331, -1.0), (50, 161.0)]
+2025-11-18 15:44:53,092 - linien_server.autolock.robust - DEBUG - Target peak index in prepared spectrum: 1095
+2025-11-18 15:44:53,094 - linien_server.autolock.robust - DEBUG - final wait time is 13 samples
+2025-11-18 15:44:53,096 - linien_server.autolock.robust - DEBUG - Generated description: [(45, 136), (649, -1219), (38, 607), (252, 720)]
+2025-11-18 15:44:53,122 - linien_server.autolock.robust - DEBUG - Lock position found at index 1096 for current spectrum
+2025-11-18 15:44:53,147 - linien_server.autolock.robust - DEBUG - Lock position found at index 1101 for current spectrum
+2025-11-18 15:44:53,172 - linien_server.autolock.robust - DEBUG - Lock position found at index 1098 for current spectrum
+2025-11-18 15:44:53,196 - linien_server.autolock.robust - DEBUG - Lock position found at index 1099 for current spectrum
+2025-11-18 15:44:53,221 - linien_server.autolock.robust - DEBUG - Lock position found at index 1097 for current spectrum
+2025-11-18 15:44:53,222 - linien_server.autolock.robust - DEBUG - Description is [(45, 136), (649, -1219), (38, 607), (252, 720)]
+2025-11-18 15:44:53,224 - linien_server.autolock.robust - DEBUG - Calculation of autolock description took 1.0533740520477295
+2025-11-18 15:44:53,284 - linien_server.server - ERROR - incorrect data received for lock state, ignoring!
+2025-11-18 15:44:59,191 - linien_server.autolock.robust - ERROR - Waited too long for autolock! Aborting

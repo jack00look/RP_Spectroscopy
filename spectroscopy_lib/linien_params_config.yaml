@@ -149,7 +149,7 @@ writeable_parameters:
   # These parameters control the modulation of the laser frequency
   modulation_amplitude:
     hardware_name: modulation_amplitude
-    initial_value: 1.8
+    initial_value: 0.1
     scaling: 4095.75  # This is value of Vpp constant
 
   modulation_frequency:
