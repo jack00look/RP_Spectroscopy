@@ -160,7 +160,7 @@ writeable_parameters:
   ### SWEEP SETUP ###
   sweep_amplitude:
     hardware_name: sweep_amplitude
-    initial_value: 0.9 # This is the amplitude of the sweep signal as a percentage of the maximum output voltage of the sweep channel
+    initial_value: 1.0 # This is the amplitude of the sweep signal as a percentage of the maximum output voltage of the sweep channel
     scaling: 1.0
 
   sweep_center:
@@ -194,17 +194,17 @@ writeable_parameters:
   ### PID CONTROL SETUP ###
   pid_p:
     hardware_name: p
-    initial_value: 5000
+    initial_value: 40
     scaling: 1.0  # PID proportional gain
 
   pid_i:
     hardware_name: i
-    initial_value: 100
+    initial_value: 4
     scaling: 1.0  # PID integral gain
 
   pid_d:
     hardware_name: d
-    initial_value: 0
+    initial_value: 1
     scaling: 1.0  # PID derivative gain
 
   pid_on_slow_enabled:
@@ -214,7 +214,7 @@ writeable_parameters:
 
   pid_slow_strength:
     hardware_name: pid_on_slow_strength
-    initial_value: 1000
+    initial_value: 5
     scaling: 1.0  # PID strength on slow control
 
   ### SIGNAL HISTORY SETUP ###
