@@ -509,3 +509,25 @@
 2025-11-18 15:01:10 - LinienDataHandler - INFO - All reference lines loaded successfully.
 2025-11-18 15:38:52 - LinienDataHandler - INFO - All reference lines loaded successfully.
 2025-11-18 16:43:51 - LinienDataHandler - INFO - All reference lines loaded successfully.
+2025-11-19 10:05:44 - LinienDataHandler - INFO - All reference lines loaded successfully.
+2025-11-19 10:07:40 - LinienDataHandler - INFO - Saved reference line: REFERENCE_LINE_feature_1.npy
+2025-11-19 10:07:40 - LinienDataHandler - INFO - All reference lines loaded successfully.
+2025-11-19 10:08:13 - LinienDataHandler - INFO - Saved reference line: REFERENCE_LINE_feature_1.npy
+2025-11-19 10:08:13 - LinienDataHandler - ERROR - Failed to load reference lines: too many indices for array: array is 1-dimensional, but 2 were indexed
+2025-11-19 10:08:13 - LinienDataHandler - ERROR - Traceback (most recent call last):
+  File "/home/bec3/Desktop/Simone_Damian/Serafini/spectroscopy_lib/data_handler.py", line 34, in _load_reference_lines
+    "x": reference_line[:, 0],
+IndexError: too many indices for array: array is 1-dimensional, but 2 were indexed
+
+2025-11-19 10:08:26 - LinienDataHandler - INFO - Saved reference line: REFERENCE_LINE_feature_1.npy
+2025-11-19 10:08:26 - LinienDataHandler - INFO - All reference lines loaded successfully.
+2025-11-19 10:08:33 - LinienDataHandler - INFO - Saved reference line: REFERENCE_LINE_feature_1.npy
+2025-11-19 10:08:33 - LinienDataHandler - INFO - All reference lines loaded successfully.
+2025-11-19 10:08:37 - LinienDataHandler - INFO - Saved reference line: REFERENCE_LINE_feature_1.npy
+2025-11-19 10:08:37 - LinienDataHandler - INFO - All reference lines loaded successfully.
+2025-11-19 10:08:41 - LinienDataHandler - INFO - Saved reference line: REFERENCE_LINE_feature_1.npy
+2025-11-19 10:08:41 - LinienDataHandler - INFO - All reference lines loaded successfully.
+2025-11-19 10:14:29 - LinienDataHandler - INFO - All reference lines loaded successfully.
+2025-11-19 10:57:33 - LinienDataHandler - INFO - All reference lines loaded successfully.
+2025-11-19 12:03:54 - LinienDataHandler - INFO - All reference lines loaded successfully.
+2025-11-19 12:05:11 - LinienDataHandler - INFO - All reference lines loaded successfully.

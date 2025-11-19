@@ -35,6 +35,7 @@ logger.setLevel(logging.DEBUG)
 
 class Autolock:
     def __init__(self, control, parameters: Parameters) -> None:
+        logger.debug("Initialize Autolock")
         self.control = control
         self.parameters = parameters
 
@@ -76,30 +77,28 @@ class Autolock:
         control and error signals after the lock was successful and tries to relock
         automatically using the spectrum that was recorded in the first run of the lock.
         """
-
-        logger.debug('Entered in run')
+        logger.debug("Start the autolock")
         self.parameters.autolock_running.value = True
         self.parameters.autolock_preparing.value = True
         self.parameters.autolock_percentage.value = 0
         self.parameters.fetch_additional_signals.value = False
-        logger.debug(f'x0: {x0}, x1: {x1}')
         self.x0, self.x1 = int(x0), int(x1)
         self.should_watch_lock = should_watch_lock
-
+        logger.debug(f"(x0, x1) = ({self.x0},{self.x1})")
         # collect parameters that should be restored after stopping the lock
         self.parameters.autolock_initial_sweep_amplitude.value = (
             self.parameters.sweep_amplitude.value
         )
 
         self.additional_spectra = additional_spectra or []
-        logger.debug('Saving first error signal')
+
         (
             self.first_error_signal,
             self.first_error_signal_rolled,
             self.line_width,
             self.peak_idxs,
         ) = self.record_first_error_signal(spectrum, auto_offset)
-        logger.debug('First error signal saved')
+
         try:
             self.autolock_mode_detector = AutolockAlgorithmSelector(
                 self.parameters.autolock_mode_preference.value,
@@ -107,7 +106,7 @@ class Autolock:
                 additional_spectra,
                 self.line_width,
             )
-            logger.debug('Algorithm selected')
+
             if self.autolock_mode_detector.done:
                 self.start_autolock(self.autolock_mode_detector.mode)
 
@@ -123,8 +122,6 @@ class Autolock:
 
     def start_autolock(self, mode):
         logger.debug(f"Start autolock with mode {mode}")
-        logger.debug(f"additional_spectra: {self.additional_spectra}")
-        logger.debug(f"first_error_signal: {self.first_error_signal}")
         self.parameters.autolock_mode.value = mode
 
         self.algorithm = [None, RobustAutolock, SimpleAutolock][mode](
@@ -154,7 +151,7 @@ class Autolock:
 
         If the autolock is approaching the desired line, a correlation function of the
         spectrum with the reference spectrum is calculated and the laser current is
-        adapted such that the targetd line is centered.
+        adapted such that the targeted line is centered.
 
         After this procedure is done, the real lock is turned on and after some time the
         lock is verified.
@@ -162,13 +159,18 @@ class Autolock:
         If automatic relocking is desired, the control and error signals are
         continuously monitored after locking.
         """
+        logger.debug('entered in react_new_spectrum')
+
+        logger.debug(f'pause_acquisition: {self.parameters.pause_acquisition.value}')
         if self.parameters.pause_acquisition.value:
             return
-
+        
+        #logger.debug(f'plot_data: {plot_data}, self.parameters.autolock_running.value: {self.parameters.autolock_running.value}')
         if plot_data is None or not self.parameters.autolock_running.value:
             return
 
         plot_data_unpickled = pickle.loads(plot_data)
+        #logger.debug(f"plot_data_unpickled? {if plot_data_unpickled is not None}"
         if plot_data_unpickled is None:
             return
 
@@ -176,6 +178,7 @@ class Autolock:
 
         # check that `plot_data` contains the information we need otherwise skip this
         # round
+        logger.debug(f'check_plot_data: {check_plot_data(is_locked, plot_data_unpickled)}')
         if not check_plot_data(is_locked, plot_data_unpickled):
             return
 
@@ -224,7 +227,6 @@ class Autolock:
             self.exposed_stop()
 
     def record_first_error_signal(self, error_signal, auto_offset):
-        logger.debug('Entered in record_first_error_signal')
         (
             mean_signal,
             target_slope_rising,
@@ -233,8 +235,6 @@ class Autolock:
             line_width,
             peak_idxs,
         ) = get_lock_point(error_signal, self.x0, self.x1)
-
-        logger.debug('Lock points obtained')
 
         self.central_y = int(mean_signal)
 
