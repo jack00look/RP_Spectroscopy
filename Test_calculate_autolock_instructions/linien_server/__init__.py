@@ -25,8 +25,7 @@ try:
    __version__ = importlib_metadata.version("linien-server")
 except importlib_metadata.PackageNotFoundError:
    __version__ = "dev"
-
-
+   
 logger = logging.getLogger(__name__)
 logger.setLevel(logging.DEBUG)
 

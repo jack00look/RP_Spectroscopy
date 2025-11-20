@@ -339,7 +339,7 @@ class LaserLockController:
             correlations.append(corr)
 
             # 2. Visualization
-            display.clear_output(wait=True)
+            #display.clear_output(wait=True)
             plt.clf()
             plot1 = plt.subplot2grid((2, 1), (0, 0))
             plot2 = plt.subplot2grid((2, 1), (1, 0))

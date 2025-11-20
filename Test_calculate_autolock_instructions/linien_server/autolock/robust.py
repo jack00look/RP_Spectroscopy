@@ -112,6 +112,9 @@ class RobustAutolock:
             t2 = time()
             dt = t2 - t1
             logger.debug(f"Calculation of autolock description took {dt}")
+            logger.debug(f"time_scale: {time_scale} of type: {type(time_scale)}")
+            logger.debug(f"final_wait_time: {final_wait_time} of type: {type(final_wait_time)}")
+            logger.debug(f"description: {description} of type: {type(description)} of {type(description[0])}")
 
             # sets up a timeout: if the lock doesn't finish within a certain time span,
             # throw an error
@@ -343,6 +346,16 @@ def calculate_autolock_instructions_v2(spectra_with_jitter, target_idxs):
             last_peak_position = peak_position
         
         logger.debug(f"Generated description: {description}")
+
+        #We throw away the peaks to the left caused by the non-0 background
+        old_description = description
+        while True:
+            if old_description[0][0] <= 500:
+                description = [(t+old_description[0][0], x) for (t, x) in old_description[1:]]
+                old_description = description
+            else:
+                logger.debug(f"Filtered description: {description}")
+                break
 
         # test whether description works fine for every recorded spectrum
         does_work = True

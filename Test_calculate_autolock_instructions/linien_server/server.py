@@ -216,6 +216,7 @@ class RedPitayaControlService(BaseService, LinienControlService):
                         logger.error(
                             "incorrect data received for lock state, ignoring!"
                         )
+                        logger.info(f"is_locked: {is_locked}, data_loaded keys: {data_loaded.keys()}")
                         continue
 
                     self.parameters.to_plot.value = new_data
