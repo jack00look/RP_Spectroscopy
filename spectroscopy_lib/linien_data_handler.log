@@ -552,3 +552,8 @@ IndexError: too many indices for array: array is 1-dimensional, but 2 were index
 2025-11-20 11:00:24 - LinienDataHandler - INFO - All reference lines loaded successfully.
 2025-11-20 12:35:01 - LinienDataHandler - INFO - All reference lines loaded successfully.
 2025-11-20 12:44:12 - LinienDataHandler - INFO - All reference lines loaded successfully.
+2025-11-24 08:43:48 - LinienDataHandler - INFO - All reference lines loaded successfully.
+2025-11-24 08:46:50 - LinienDataHandler - INFO - Saved reference line: REFERENCE_LINE_feature_1.npy
+2025-11-24 08:46:50 - LinienDataHandler - INFO - All reference lines loaded successfully.
+2025-11-24 08:47:28 - LinienDataHandler - INFO - Saved reference line: REFERENCE_LINE_feature_1.npy
+2025-11-24 08:47:28 - LinienDataHandler - INFO - All reference lines loaded successfully.

@@ -5417,3 +5417,52 @@
 2025-11-20 12:46:11 - LinienHardwareInterface - DEBUG - Sweep signal received from server.
 2025-11-20 12:46:12 - LinienHardwareInterface - DEBUG - Sweep signal received from server.
 2025-11-20 12:46:13 - LinienHardwareInterface - DEBUG - Sweep signal received from server.
+2025-11-24 08:43:26 - LinienHardwareInterface - INFO - Configuration loaded from /home/bec3/Desktop/Simone_Damian/Serafini/spectroscopy_lib/linien_connect_config.yaml:
+
+2025-11-24 08:43:26 - LinienHardwareInterface - INFO - Attempting connection via local_host address (192.168.1.159:18862)
+2025-11-24 08:43:29 - LinienHardwareInterface - INFO - Connected to device via local_host address
+2025-11-24 08:46:15 - LinienHardwareInterface - DEBUG - Sweep signal received from server.
+2025-11-24 08:46:17 - LinienHardwareInterface - DEBUG - Sweep signal received from server.
+2025-11-24 08:46:18 - LinienHardwareInterface - DEBUG - Sweep signal received from server.
+2025-11-24 08:46:20 - LinienHardwareInterface - DEBUG - Sweep signal received from server.
+2025-11-24 08:46:21 - LinienHardwareInterface - DEBUG - Sweep signal received from server.
+2025-11-24 08:46:22 - LinienHardwareInterface - DEBUG - Sweep signal received from server.
+2025-11-24 08:46:24 - LinienHardwareInterface - DEBUG - Sweep signal received from server.
+2025-11-24 08:46:25 - LinienHardwareInterface - DEBUG - Sweep signal received from server.
+2025-11-24 08:46:26 - LinienHardwareInterface - DEBUG - Sweep signal received from server.
+2025-11-24 08:46:28 - LinienHardwareInterface - DEBUG - Sweep signal received from server.
+2025-11-24 08:47:47 - LinienHardwareInterface - DEBUG - Sweep signal received from server.
+2025-11-24 08:47:48 - LinienHardwareInterface - DEBUG - Sweep signal received from server.
+2025-11-24 08:47:50 - LinienHardwareInterface - DEBUG - Sweep signal received from server.
+2025-11-24 08:47:51 - LinienHardwareInterface - DEBUG - Sweep signal received from server.
+2025-11-24 08:47:53 - LinienHardwareInterface - DEBUG - Sweep signal received from server.
+2025-11-24 08:47:54 - LinienHardwareInterface - DEBUG - Sweep signal received from server.
+2025-11-24 08:47:55 - LinienHardwareInterface - DEBUG - Sweep signal received from server.
+2025-11-24 08:47:57 - LinienHardwareInterface - DEBUG - Sweep signal received from server.
+2025-11-24 08:47:58 - LinienHardwareInterface - DEBUG - Sweep signal received from server.
+2025-11-24 08:48:00 - LinienHardwareInterface - DEBUG - Sweep signal received from server.
+2025-11-24 08:48:01 - LinienHardwareInterface - DEBUG - Sweep signal received from server.
+2025-11-24 08:48:02 - LinienHardwareInterface - DEBUG - Sweep signal received from server.
+2025-11-24 08:48:20 - LinienHardwareInterface - DEBUG - Sweep signal received from server.
+2025-11-24 08:48:21 - LinienHardwareInterface - DEBUG - Sweep signal received from server.
+2025-11-24 08:48:22 - LinienHardwareInterface - DEBUG - Sweep signal received from server.
+2025-11-24 08:48:23 - LinienHardwareInterface - DEBUG - Sweep signal received from server.
+2025-11-24 08:48:24 - LinienHardwareInterface - DEBUG - Sweep signal received from server.
+2025-11-24 08:48:26 - LinienHardwareInterface - DEBUG - Sweep signal received from server.
+2025-11-24 08:48:27 - LinienHardwareInterface - DEBUG - Sweep signal received from server.
+2025-11-24 08:48:29 - LinienHardwareInterface - DEBUG - Sweep signal received from server.
+2025-11-24 08:48:29 - LinienHardwareInterface - DEBUG - Sweep signal received from server.
+2025-11-24 08:48:31 - LinienHardwareInterface - DEBUG - Sweep signal received from server.
+2025-11-24 08:48:32 - LinienHardwareInterface - DEBUG - Sweep signal received from server.
+2025-11-24 08:48:33 - LinienHardwareInterface - DEBUG - Sweep signal received from server.
+2025-11-24 08:48:34 - LinienHardwareInterface - DEBUG - Sweep signal received from server.
+2025-11-24 08:48:35 - LinienHardwareInterface - DEBUG - Sweep signal received from server.
+2025-11-24 08:48:36 - LinienHardwareInterface - DEBUG - Sweep signal received from server.
+2025-11-24 08:48:38 - LinienHardwareInterface - DEBUG - Sweep signal received from server.
+2025-11-24 08:48:39 - LinienHardwareInterface - DEBUG - Sweep signal received from server.
+2025-11-24 08:48:40 - LinienHardwareInterface - DEBUG - Sweep signal received from server.
+2025-11-24 08:48:41 - LinienHardwareInterface - DEBUG - Sweep signal received from server.
+2025-11-24 10:01:02 - LinienHardwareInterface - INFO - Configuration loaded from /home/bec3/Desktop/Simone_Damian/Serafini/spectroscopy_lib/linien_connect_config.yaml:
+
+2025-11-24 10:01:02 - LinienHardwareInterface - INFO - Attempting connection via local_host address (192.168.1.159:18862)
+2025-11-24 10:01:12 - LinienHardwareInterface - INFO - Connected to device via local_host address

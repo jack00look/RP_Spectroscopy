@@ -180,6 +180,17 @@ class Registers:
             logic_slow_decimation=16,
         )
 
+        import time
+        logger.debug("=== write_registers called; timestamp=%s ===", time.time())
+        logger.debug("Proposed new keys (count %d): %s", len(new), list(new.keys()))
+        # inspect autolock-related proposed values (if present)
+        ak = {k: new[k] for k in new.keys() if "autolock" in k or "autolock_robust" in k}
+        logger.debug("Proposed autolock keys and values: %s", ak)
+
+        # Show cached values for comparison
+        cached_ak = {k: self.control._cached_data.get(k) for k in ak.keys()}
+        logger.debug("Cached autolock keys and values before update: %s", cached_ak)
+
         for instruction_idx, [wait_for, peak_height] in enumerate(
             self.parameters.autolock_instructions.value
         ):
@@ -228,7 +239,14 @@ class Registers:
                 or (self.control._cached_data.get(k) != v)
             )
         )
+
+        logger.debug("After filtering, keys to actually write: %s", list(new.keys()))
+        if len(new) == 0:
+            logger.debug("No keys changed, skipping actual CSR set")
+
         self.control._cached_data.update(new)
+
+        logger.debug("UPDATED control._cached_data autolock keys now: %s", {k: self.control._cached_data[k] for k in self.control._cached_data.keys() if 'autolock' in k})
 
         # pass sweep speed changes to acquisition process
         sweep_changed = self.parameters.sweep_speed.value != self._last_sweep_speed
