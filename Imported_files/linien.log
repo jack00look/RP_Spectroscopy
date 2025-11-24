@@ -6374,3 +6374,237 @@ linien_server.autolock.robust.UnableToFindDescription
 2025-11-24 09:10:38,634 - linien_server.autolock.autolock - DEBUG - pause_acquisition: False
 2025-11-24 09:10:38,636 - linien_server.autolock.autolock - DEBUG - check_plot_data: True
 2025-11-24 09:10:38,637 - linien_server.autolock.autolock - DEBUG - after lock
+2025-11-24 10:19:39,948 - linien_server.cli - INFO - Stopping Linien server
+2025-11-24 10:19:40,085 - linien_server.cli - INFO - Stopped Linien server
+2025-11-24 10:19:43,506 - linien_server.cli - DEBUG - Copied linien-server.service to /etc/systemd/system
+2025-11-24 10:19:43,507 - linien_server.cli - INFO - Starting Linien server
+2025-11-24 10:19:43,581 - linien_server.cli - INFO - Started Linien server
+2025-11-24 10:20:00,452 - linien_server.parameters - INFO - Restoring parameters from /root/.local/share/linien/parameters.json
+2025-11-24 10:20:00,455 - linien_server.parameters - INFO - Restored parameters from /root/.local/share/linien/parameters.json
+2025-11-24 10:20:00,461 - linien_common.influxdb - INFO - Saved InfluxDB credentials to /root/.local/share/linien/influxdb_credentials.json
+2025-11-24 10:20:00,662 - linien_server.acquisition - INFO - Using fpgautil to deploy gateware.
+2025-11-24 10:20:00,977 - linien_server.server - DEBUG - Ping  1
+2025-11-24 10:20:00,996 - linien_server.registers - DEBUG - === write_registers called; timestamp=1763979600.996828 ===
+2025-11-24 10:20:01,020 - linien_server.registers - DEBUG - Proposed new keys (count 48): ['logic_sweep_run', 'logic_sweep_pause', 'logic_sweep_step', 'logic_sweep_min', 'logic_sweep_max', 'logic_mod_freq', 'logic_mod_amp', 'logic_dual_channel', 'logic_pid_only_mode', 'logic_chain_a_factor', 'logic_chain_b_factor', 'logic_chain_a_offset', 'logic_chain_b_offset', 'logic_out_offset', 'logic_combined_offset', 'logic_control_channel', 'logic_mod_channel', 'logic_sweep_channel', 'logic_slow_control_channel', 'slow_chain_pid_reset', 'logic_analog_out_1', 'logic_analog_out_2', 'logic_analog_out_3', 'logic_autolock_fast_target_position', 'logic_autolock_autolock_mode', 'logic_autolock_robust_N_instructions', 'logic_autolock_robust_time_scale', 'logic_autolock_robust_final_wait_time', 'fast_a_demod_delay', 'fast_a_demod_multiplier', 'fast_a_dx_sel', 'fast_a_y_tap', 'fast_a_dy_sel', 'fast_a_invert', 'fast_b_demod_delay', 'fast_b_demod_multiplier', 'fast_b_dx_sel', 'fast_b_y_tap', 'fast_b_dy_sel', 'fast_b_invert', 'scopegen_external_trigger', 'gpio_p_oes', 'gpio_n_oes', 'gpio_p_outs', 'gpio_n_outs', 'gpio_n_do0_en', 'gpio_n_do1_en', 'logic_slow_decimation']
+2025-11-24 10:20:01,048 - linien_server.registers - DEBUG - Proposed autolock keys and values: {'logic_autolock_fast_target_position': 0, 'logic_autolock_autolock_mode': <AutolockMode.SIMPLE: 2>, 'logic_autolock_robust_N_instructions': 0, 'logic_autolock_robust_time_scale': 0, 'logic_autolock_robust_final_wait_time': 0}
+2025-11-24 10:20:01,076 - linien_server.registers - DEBUG - Cached autolock keys and values before update: {'logic_autolock_fast_target_position': None, 'logic_autolock_autolock_mode': None, 'logic_autolock_robust_N_instructions': None, 'logic_autolock_robust_time_scale': None, 'logic_autolock_robust_final_wait_time': None}
+2025-11-24 10:20:01,099 - linien_server.registers - DEBUG - After filtering, keys to actually write: ['logic_sweep_run', 'logic_sweep_pause', 'logic_sweep_step', 'logic_sweep_min', 'logic_sweep_max', 'logic_mod_freq', 'logic_mod_amp', 'logic_dual_channel', 'logic_pid_only_mode', 'logic_chain_a_factor', 'logic_chain_b_factor', 'logic_chain_a_offset', 'logic_chain_b_offset', 'logic_out_offset', 'logic_combined_offset', 'logic_control_channel', 'logic_mod_channel', 'logic_sweep_channel', 'logic_slow_control_channel', 'slow_chain_pid_reset', 'logic_analog_out_1', 'logic_analog_out_2', 'logic_analog_out_3', 'logic_autolock_fast_target_position', 'logic_autolock_autolock_mode', 'logic_autolock_robust_N_instructions', 'logic_autolock_robust_time_scale', 'logic_autolock_robust_final_wait_time', 'fast_a_demod_delay', 'fast_a_demod_multiplier', 'fast_a_dx_sel', 'fast_a_y_tap', 'fast_a_dy_sel', 'fast_a_invert', 'fast_b_demod_delay', 'fast_b_demod_multiplier', 'fast_b_dx_sel', 'fast_b_y_tap', 'fast_b_dy_sel', 'fast_b_invert', 'scopegen_external_trigger', 'gpio_p_oes', 'gpio_n_oes', 'gpio_p_outs', 'gpio_n_outs', 'gpio_n_do0_en', 'gpio_n_do1_en', 'logic_slow_decimation', 'scopegen_adc_a_sel', 'scopegen_adc_a_q_sel', 'scopegen_adc_b_sel', 'scopegen_adc_b_q_sel']
+2025-11-24 10:20:01,123 - linien_server.registers - DEBUG - UPDATED control._cached_data autolock keys now: {'logic_autolock_fast_target_position': 0, 'logic_autolock_autolock_mode': <AutolockMode.SIMPLE: 2>, 'logic_autolock_robust_N_instructions': 0, 'logic_autolock_robust_time_scale': 0, 'logic_autolock_robust_final_wait_time': 0}
+2025-11-24 10:20:01,181 - linien_server.mdio_tool - INFO - Disabling ethernet blinking with mdio-tool at /usr/local/lib/python3.10/dist-packages/linien_server/mdio-tool
+2025-11-24 10:20:01,216 - linien_server.server - INFO - Starting server.
+2025-11-24 10:20:02,000 - linien_server.server - DEBUG - Ping  2
+2025-11-24 10:20:03,010 - linien_server.server - DEBUG - Ping  3
+2025-11-24 10:20:03,011 - linien_server.server - DEBUG - Further pings will be suppressed
+2025-11-24 10:24:38,260 - linien_server.registers - DEBUG - === write_registers called; timestamp=1763979878.2602458 ===
+2025-11-24 10:24:38,261 - linien_server.registers - DEBUG - Proposed new keys (count 48): ['logic_sweep_run', 'logic_sweep_pause', 'logic_sweep_step', 'logic_sweep_min', 'logic_sweep_max', 'logic_mod_freq', 'logic_mod_amp', 'logic_dual_channel', 'logic_pid_only_mode', 'logic_chain_a_factor', 'logic_chain_b_factor', 'logic_chain_a_offset', 'logic_chain_b_offset', 'logic_out_offset', 'logic_combined_offset', 'logic_control_channel', 'logic_mod_channel', 'logic_sweep_channel', 'logic_slow_control_channel', 'slow_chain_pid_reset', 'logic_analog_out_1', 'logic_analog_out_2', 'logic_analog_out_3', 'logic_autolock_fast_target_position', 'logic_autolock_autolock_mode', 'logic_autolock_robust_N_instructions', 'logic_autolock_robust_time_scale', 'logic_autolock_robust_final_wait_time', 'fast_a_demod_delay', 'fast_a_demod_multiplier', 'fast_a_dx_sel', 'fast_a_y_tap', 'fast_a_dy_sel', 'fast_a_invert', 'fast_b_demod_delay', 'fast_b_demod_multiplier', 'fast_b_dx_sel', 'fast_b_y_tap', 'fast_b_dy_sel', 'fast_b_invert', 'scopegen_external_trigger', 'gpio_p_oes', 'gpio_n_oes', 'gpio_p_outs', 'gpio_n_outs', 'gpio_n_do0_en', 'gpio_n_do1_en', 'logic_slow_decimation']
+2025-11-24 10:24:38,263 - linien_server.registers - DEBUG - Proposed autolock keys and values: {'logic_autolock_fast_target_position': 0, 'logic_autolock_autolock_mode': <AutolockMode.SIMPLE: 2>, 'logic_autolock_robust_N_instructions': 0, 'logic_autolock_robust_time_scale': 0, 'logic_autolock_robust_final_wait_time': 0}
+2025-11-24 10:24:38,265 - linien_server.registers - DEBUG - Cached autolock keys and values before update: {'logic_autolock_fast_target_position': 0, 'logic_autolock_autolock_mode': <AutolockMode.SIMPLE: 2>, 'logic_autolock_robust_N_instructions': 0, 'logic_autolock_robust_time_scale': 0, 'logic_autolock_robust_final_wait_time': 0}
+2025-11-24 10:24:38,266 - linien_server.registers - DEBUG - After filtering, keys to actually write: []
+2025-11-24 10:24:38,267 - linien_server.registers - DEBUG - No keys changed, skipping actual CSR set
+2025-11-24 10:24:38,269 - linien_server.registers - DEBUG - UPDATED control._cached_data autolock keys now: {'logic_autolock_fast_target_position': 0, 'logic_autolock_autolock_mode': <AutolockMode.SIMPLE: 2>, 'logic_autolock_robust_N_instructions': 0, 'logic_autolock_robust_time_scale': 0, 'logic_autolock_robust_final_wait_time': 0}
+2025-11-24 10:24:38,454 - linien_server.registers - DEBUG - === write_registers called; timestamp=1763979878.4546833 ===
+2025-11-24 10:24:38,477 - linien_server.registers - DEBUG - Proposed new keys (count 48): ['logic_sweep_run', 'logic_sweep_pause', 'logic_sweep_step', 'logic_sweep_min', 'logic_sweep_max', 'logic_mod_freq', 'logic_mod_amp', 'logic_dual_channel', 'logic_pid_only_mode', 'logic_chain_a_factor', 'logic_chain_b_factor', 'logic_chain_a_offset', 'logic_chain_b_offset', 'logic_out_offset', 'logic_combined_offset', 'logic_control_channel', 'logic_mod_channel', 'logic_sweep_channel', 'logic_slow_control_channel', 'slow_chain_pid_reset', 'logic_analog_out_1', 'logic_analog_out_2', 'logic_analog_out_3', 'logic_autolock_fast_target_position', 'logic_autolock_autolock_mode', 'logic_autolock_robust_N_instructions', 'logic_autolock_robust_time_scale', 'logic_autolock_robust_final_wait_time', 'fast_a_demod_delay', 'fast_a_demod_multiplier', 'fast_a_dx_sel', 'fast_a_y_tap', 'fast_a_dy_sel', 'fast_a_invert', 'fast_b_demod_delay', 'fast_b_demod_multiplier', 'fast_b_dx_sel', 'fast_b_y_tap', 'fast_b_dy_sel', 'fast_b_invert', 'scopegen_external_trigger', 'gpio_p_oes', 'gpio_n_oes', 'gpio_p_outs', 'gpio_n_outs', 'gpio_n_do0_en', 'gpio_n_do1_en', 'logic_slow_decimation']
+2025-11-24 10:24:38,500 - linien_server.registers - DEBUG - Proposed autolock keys and values: {'logic_autolock_fast_target_position': 0, 'logic_autolock_autolock_mode': <AutolockMode.SIMPLE: 2>, 'logic_autolock_robust_N_instructions': 0, 'logic_autolock_robust_time_scale': 0, 'logic_autolock_robust_final_wait_time': 0}
+2025-11-24 10:24:38,528 - linien_server.registers - DEBUG - Cached autolock keys and values before update: {'logic_autolock_fast_target_position': 0, 'logic_autolock_autolock_mode': <AutolockMode.SIMPLE: 2>, 'logic_autolock_robust_N_instructions': 0, 'logic_autolock_robust_time_scale': 0, 'logic_autolock_robust_final_wait_time': 0}
+2025-11-24 10:24:38,551 - linien_server.registers - DEBUG - After filtering, keys to actually write: ['logic_mod_freq', 'logic_mod_amp']
+2025-11-24 10:24:38,573 - linien_server.registers - DEBUG - UPDATED control._cached_data autolock keys now: {'logic_autolock_fast_target_position': 0, 'logic_autolock_autolock_mode': <AutolockMode.SIMPLE: 2>, 'logic_autolock_robust_N_instructions': 0, 'logic_autolock_robust_time_scale': 0, 'logic_autolock_robust_final_wait_time': 0}
+2025-11-24 10:24:42,884 - linien_server.registers - DEBUG - === write_registers called; timestamp=1763979882.8845856 ===
+2025-11-24 10:24:42,889 - linien_server.registers - DEBUG - Proposed new keys (count 48): ['logic_sweep_run', 'logic_sweep_pause', 'logic_sweep_step', 'logic_sweep_min', 'logic_sweep_max', 'logic_mod_freq', 'logic_mod_amp', 'logic_dual_channel', 'logic_pid_only_mode', 'logic_chain_a_factor', 'logic_chain_b_factor', 'logic_chain_a_offset', 'logic_chain_b_offset', 'logic_out_offset', 'logic_combined_offset', 'logic_control_channel', 'logic_mod_channel', 'logic_sweep_channel', 'logic_slow_control_channel', 'slow_chain_pid_reset', 'logic_analog_out_1', 'logic_analog_out_2', 'logic_analog_out_3', 'logic_autolock_fast_target_position', 'logic_autolock_autolock_mode', 'logic_autolock_robust_N_instructions', 'logic_autolock_robust_time_scale', 'logic_autolock_robust_final_wait_time', 'fast_a_demod_delay', 'fast_a_demod_multiplier', 'fast_a_dx_sel', 'fast_a_y_tap', 'fast_a_dy_sel', 'fast_a_invert', 'fast_b_demod_delay', 'fast_b_demod_multiplier', 'fast_b_dx_sel', 'fast_b_y_tap', 'fast_b_dy_sel', 'fast_b_invert', 'scopegen_external_trigger', 'gpio_p_oes', 'gpio_n_oes', 'gpio_p_outs', 'gpio_n_outs', 'gpio_n_do0_en', 'gpio_n_do1_en', 'logic_slow_decimation']
+2025-11-24 10:24:42,893 - linien_server.registers - DEBUG - Proposed autolock keys and values: {'logic_autolock_fast_target_position': 0, 'logic_autolock_autolock_mode': <AutolockMode.SIMPLE: 2>, 'logic_autolock_robust_N_instructions': 0, 'logic_autolock_robust_time_scale': 0, 'logic_autolock_robust_final_wait_time': 0}
+2025-11-24 10:24:42,896 - linien_server.registers - DEBUG - Cached autolock keys and values before update: {'logic_autolock_fast_target_position': 0, 'logic_autolock_autolock_mode': <AutolockMode.SIMPLE: 2>, 'logic_autolock_robust_N_instructions': 0, 'logic_autolock_robust_time_scale': 0, 'logic_autolock_robust_final_wait_time': 0}
+2025-11-24 10:24:42,898 - linien_server.registers - DEBUG - After filtering, keys to actually write: ['logic_chain_a_offset']
+2025-11-24 10:24:42,899 - linien_server.registers - DEBUG - UPDATED control._cached_data autolock keys now: {'logic_autolock_fast_target_position': 0, 'logic_autolock_autolock_mode': <AutolockMode.SIMPLE: 2>, 'logic_autolock_robust_N_instructions': 0, 'logic_autolock_robust_time_scale': 0, 'logic_autolock_robust_final_wait_time': 0}
+2025-11-24 10:25:05,409 - linien_server.autolock.autolock - DEBUG - Initialize Autolock
+2025-11-24 10:25:05,416 - linien_server.autolock.autolock - DEBUG - Start the autolock
+2025-11-24 10:25:05,418 - linien_server.autolock.autolock - DEBUG - (x0, x1) = (1550,1800)
+2025-11-24 10:25:05,436 - linien_server.registers - DEBUG - === write_registers called; timestamp=1763979905.4367945 ===
+2025-11-24 10:25:05,459 - linien_server.registers - DEBUG - Proposed new keys (count 48): ['logic_sweep_run', 'logic_sweep_pause', 'logic_sweep_step', 'logic_sweep_min', 'logic_sweep_max', 'logic_mod_freq', 'logic_mod_amp', 'logic_dual_channel', 'logic_pid_only_mode', 'logic_chain_a_factor', 'logic_chain_b_factor', 'logic_chain_a_offset', 'logic_chain_b_offset', 'logic_out_offset', 'logic_combined_offset', 'logic_control_channel', 'logic_mod_channel', 'logic_sweep_channel', 'logic_slow_control_channel', 'slow_chain_pid_reset', 'logic_analog_out_1', 'logic_analog_out_2', 'logic_analog_out_3', 'logic_autolock_fast_target_position', 'logic_autolock_autolock_mode', 'logic_autolock_robust_N_instructions', 'logic_autolock_robust_time_scale', 'logic_autolock_robust_final_wait_time', 'fast_a_demod_delay', 'fast_a_demod_multiplier', 'fast_a_dx_sel', 'fast_a_y_tap', 'fast_a_dy_sel', 'fast_a_invert', 'fast_b_demod_delay', 'fast_b_demod_multiplier', 'fast_b_dx_sel', 'fast_b_y_tap', 'fast_b_dy_sel', 'fast_b_invert', 'scopegen_external_trigger', 'gpio_p_oes', 'gpio_n_oes', 'gpio_p_outs', 'gpio_n_outs', 'gpio_n_do0_en', 'gpio_n_do1_en', 'logic_slow_decimation']
+2025-11-24 10:25:05,477 - linien_server.registers - DEBUG - Proposed autolock keys and values: {'logic_autolock_fast_target_position': 0, 'logic_autolock_autolock_mode': <AutolockMode.SIMPLE: 2>, 'logic_autolock_robust_N_instructions': 0, 'logic_autolock_robust_time_scale': 0, 'logic_autolock_robust_final_wait_time': 0}
+2025-11-24 10:25:05,500 - linien_server.registers - DEBUG - Cached autolock keys and values before update: {'logic_autolock_fast_target_position': 0, 'logic_autolock_autolock_mode': <AutolockMode.SIMPLE: 2>, 'logic_autolock_robust_N_instructions': 0, 'logic_autolock_robust_time_scale': 0, 'logic_autolock_robust_final_wait_time': 0}
+2025-11-24 10:25:05,528 - linien_server.registers - DEBUG - After filtering, keys to actually write: []
+2025-11-24 10:25:05,550 - linien_server.registers - DEBUG - No keys changed, skipping actual CSR set
+2025-11-24 10:25:05,573 - linien_server.registers - DEBUG - UPDATED control._cached_data autolock keys now: {'logic_autolock_fast_target_position': 0, 'logic_autolock_autolock_mode': <AutolockMode.SIMPLE: 2>, 'logic_autolock_robust_N_instructions': 0, 'logic_autolock_robust_time_scale': 0, 'logic_autolock_robust_final_wait_time': 0}
+2025-11-24 10:25:05,601 - linien_server.autolock.autolock - DEBUG - Start autolock with mode 1
+2025-11-24 10:25:05,662 - linien_server.autolock.autolock - DEBUG - entered in react_new_spectrum
+2025-11-24 10:25:05,664 - linien_server.autolock.autolock - DEBUG - pause_acquisition: False
+2025-11-24 10:25:05,666 - linien_server.autolock.autolock - DEBUG - check_plot_data: True
+2025-11-24 10:25:05,771 - linien_server.autolock.robust - DEBUG - handle new spectrum
+2025-11-24 10:25:05,818 - linien_server.autolock.robust - ERROR - Not enough spectra collected:2 of 5
+2025-11-24 10:25:06,054 - linien_server.autolock.autolock - DEBUG - entered in react_new_spectrum
+2025-11-24 10:25:06,057 - linien_server.autolock.autolock - DEBUG - pause_acquisition: False
+2025-11-24 10:25:06,059 - linien_server.autolock.autolock - DEBUG - check_plot_data: True
+2025-11-24 10:25:06,158 - linien_server.autolock.robust - DEBUG - handle new spectrum
+2025-11-24 10:25:06,186 - linien_server.autolock.robust - ERROR - Not enough spectra collected:3 of 5
+2025-11-24 10:25:06,463 - linien_server.autolock.autolock - DEBUG - entered in react_new_spectrum
+2025-11-24 10:25:06,465 - linien_server.autolock.autolock - DEBUG - pause_acquisition: False
+2025-11-24 10:25:06,467 - linien_server.autolock.autolock - DEBUG - check_plot_data: True
+2025-11-24 10:25:06,566 - linien_server.autolock.robust - DEBUG - handle new spectrum
+2025-11-24 10:25:06,595 - linien_server.autolock.robust - ERROR - Not enough spectra collected:4 of 5
+2025-11-24 10:25:06,869 - linien_server.autolock.autolock - DEBUG - entered in react_new_spectrum
+2025-11-24 10:25:06,872 - linien_server.autolock.autolock - DEBUG - pause_acquisition: False
+2025-11-24 10:25:06,873 - linien_server.autolock.autolock - DEBUG - check_plot_data: True
+2025-11-24 10:25:06,972 - linien_server.autolock.robust - DEBUG - handle new spectrum
+2025-11-24 10:25:07,001 - linien_server.autolock.robust - DEBUG - enough spectra!, calculate
+2025-11-24 10:25:07,002 - linien_server.autolock.robust - DEBUG - Entered in calculate_autolock_instructions_v2
+2025-11-24 10:25:07,007 - linien_server.autolock.robust - DEBUG - Saved new robust_spectra.npy and target_idxs.npy
+2025-11-24 10:25:07,008 - linien_server.autolock.utils - DEBUG - Entered in crop_spectra_to_same_view
+2025-11-24 10:25:07,141 - linien_server.autolock.utils - DEBUG - Shifts calculated for cropping: [1, 6, 5, 4, 7]
+2025-11-24 10:25:07,145 - linien_server.autolock.robust - DEBUG - Saved new robust_spectra_cropped.npy
+2025-11-24 10:25:07,146 - linien_server.autolock.utils - DEBUG - Entered in get_time_scale
+2025-11-24 10:25:07,147 - linien_server.autolock.utils - DEBUG - Spectrum length:2042
+2025-11-24 10:25:07,150 - linien_server.autolock.utils - DEBUG - Spectrum: [13 14 14 14 14]...[6 6 6 7 7]
+2025-11-24 10:25:07,152 - linien_server.autolock.utils - DEBUG - Target indices: [1621, 1665]
+2025-11-24 10:25:07,153 - linien_server.autolock.utils - DEBUG - Entered in get_time_scale
+2025-11-24 10:25:07,154 - linien_server.autolock.utils - DEBUG - Spectrum length:2042
+2025-11-24 10:25:07,157 - linien_server.autolock.utils - DEBUG - Spectrum: [15 15 15 15 15]...[8 8 8 8 8]
+2025-11-24 10:25:07,158 - linien_server.autolock.utils - DEBUG - Target indices: [1621, 1665]
+2025-11-24 10:25:07,159 - linien_server.autolock.utils - DEBUG - Entered in get_time_scale
+2025-11-24 10:25:07,160 - linien_server.autolock.utils - DEBUG - Spectrum length:2042
+2025-11-24 10:25:07,163 - linien_server.autolock.utils - DEBUG - Spectrum: [15 15 15 15 15]...[8 8 8 8 7]
+2025-11-24 10:25:07,164 - linien_server.autolock.utils - DEBUG - Target indices: [1621, 1665]
+2025-11-24 10:25:07,166 - linien_server.autolock.utils - DEBUG - Entered in get_time_scale
+2025-11-24 10:25:07,167 - linien_server.autolock.utils - DEBUG - Spectrum length:2042
+2025-11-24 10:25:07,169 - linien_server.autolock.utils - DEBUG - Spectrum: [14 14 14 14 14]...[6 6 6 6 6]
+2025-11-24 10:25:07,171 - linien_server.autolock.utils - DEBUG - Target indices: [1621, 1665]
+2025-11-24 10:25:07,172 - linien_server.autolock.utils - DEBUG - Entered in get_time_scale
+2025-11-24 10:25:07,173 - linien_server.autolock.utils - DEBUG - Spectrum length:2042
+2025-11-24 10:25:07,176 - linien_server.autolock.utils - DEBUG - Spectrum: [15 15 15 15 16]...[8 8 8 8 8]
+2025-11-24 10:25:07,177 - linien_server.autolock.utils - DEBUG - Target indices: [1621, 1665]
+2025-11-24 10:25:07,179 - linien_server.autolock.robust - DEBUG - x scale is 37
+2025-11-24 10:25:07,232 - linien_server.autolock.robust - DEBUG - shift prepared spectrum by 17 samples to the left to match the original spectrum
+2025-11-24 10:25:07,345 - linien_server.autolock.robust - DEBUG - Detected peaks with (position, height): [(1640, 949), (1384, -136), (1318, 683), (1267, -1497), (988, 123), (956, -52), (234, 609)]
+2025-11-24 10:25:07,369 - linien_server.autolock.utils - DEBUG - Zero crossings of smoothed derivative: [53, 68, 69, 111, 133, 165, 198, 236, 328, 360, 391, 415, 460, 487, 584, 585, 613, 614, 728, 729, 730, 731, 834, 835, 836, 837, 907, 957, 993, 1265, 1321, 1386, 1413, 1435, 1638, 1692, 1829, 1830, 1846, 1858, 1859]
+2025-11-24 10:25:07,371 - linien_server.autolock.utils - DEBUG - start_idx - time_scale//5: 1614
+2025-11-24 10:25:07,372 - linien_server.autolock.utils - DEBUG - Considered zeros (backward): [53, 68, 69, 111, 133, 165, 198, 236, 328, 360, 391, 415, 460, 487, 584, 585, 613, 614, 728, 729, 730, 731, 834, 835, 836, 837, 907, 957, 993, 1265, 1321, 1386, 1413, 1435]
+2025-11-24 10:25:07,401 - linien_server.autolock.utils - DEBUG - Zero crossings of smoothed derivative: [53, 68, 69, 111, 133, 165, 198, 236, 328, 360, 391, 415, 460, 487, 584, 585, 613, 614, 728, 729, 730, 731, 834, 835, 836, 837, 907, 957, 993, 1265, 1321, 1386, 1413, 1435, 1638, 1692, 1829, 1830, 1846, 1858, 1859]
+2025-11-24 10:25:07,403 - linien_server.autolock.utils - DEBUG - start_idx + time_scale//5: 1668
+2025-11-24 10:25:07,404 - linien_server.autolock.utils - DEBUG - Considered zeros (forward): [1692, 1829, 1830, 1846, 1858, 1859]
+2025-11-24 10:25:07,435 - linien_server.autolock.utils - DEBUG - Zero crossings of smoothed derivative: [53, 68, 69, 111, 133, 165, 198, 236, 328, 360, 391, 415, 460, 487, 584, 585, 613, 614, 728, 729, 730, 731, 834, 835, 836, 837, 907, 957, 993, 1265, 1321, 1386, 1413, 1435, 1638, 1692, 1829, 1830, 1846, 1858, 1859]
+2025-11-24 10:25:07,437 - linien_server.autolock.utils - DEBUG - start_idx - time_scale//5: 1619
+2025-11-24 10:25:07,439 - linien_server.autolock.utils - DEBUG - Considered zeros (backward): [53, 68, 69, 111, 133, 165, 198, 236, 328, 360, 391, 415, 460, 487, 584, 585, 613, 614, 728, 729, 730, 731, 834, 835, 836, 837, 907, 957, 993, 1265, 1321, 1386, 1413, 1435]
+2025-11-24 10:25:07,465 - linien_server.autolock.utils - DEBUG - Zero crossings of smoothed derivative: [53, 68, 69, 111, 133, 165, 198, 236, 328, 360, 391, 415, 460, 487, 584, 585, 613, 614, 728, 729, 730, 731, 834, 835, 836, 837, 907, 957, 993, 1265, 1321, 1386, 1413, 1435, 1638, 1692, 1829, 1830, 1846, 1858, 1859]
+2025-11-24 10:25:07,466 - linien_server.autolock.utils - DEBUG - start_idx + time_scale//5: 1668
+2025-11-24 10:25:07,468 - linien_server.autolock.utils - DEBUG - Considered zeros (forward): [1692, 1829, 1830, 1846, 1858, 1859]
+2025-11-24 10:25:07,495 - linien_server.autolock.utils - DEBUG - Zero crossings of smoothed derivative: [53, 68, 69, 111, 133, 165, 198, 236, 328, 360, 391, 415, 460, 487, 584, 585, 613, 614, 728, 729, 730, 731, 834, 835, 836, 837, 907, 957, 993, 1265, 1321, 1386, 1413, 1435, 1638, 1692, 1829, 1830, 1846, 1858, 1859]
+2025-11-24 10:25:07,497 - linien_server.autolock.utils - DEBUG - start_idx - time_scale//5: 1617
+2025-11-24 10:25:07,498 - linien_server.autolock.utils - DEBUG - Considered zeros (backward): [53, 68, 69, 111, 133, 165, 198, 236, 328, 360, 391, 415, 460, 487, 584, 585, 613, 614, 728, 729, 730, 731, 834, 835, 836, 837, 907, 957, 993, 1265, 1321, 1386, 1413, 1435]
+2025-11-24 10:25:07,525 - linien_server.autolock.utils - DEBUG - Zero crossings of smoothed derivative: [53, 68, 69, 111, 133, 165, 198, 236, 328, 360, 391, 415, 460, 487, 584, 585, 613, 614, 728, 729, 730, 731, 834, 835, 836, 837, 907, 957, 993, 1265, 1321, 1386, 1413, 1435, 1638, 1692, 1829, 1830, 1846, 1858, 1859]
+2025-11-24 10:25:07,526 - linien_server.autolock.utils - DEBUG - start_idx + time_scale//5: 1667
+2025-11-24 10:25:07,527 - linien_server.autolock.utils - DEBUG - Considered zeros (forward): [1692, 1829, 1830, 1846, 1858, 1859]
+2025-11-24 10:25:07,555 - linien_server.autolock.utils - DEBUG - Zero crossings of smoothed derivative: [53, 68, 69, 111, 133, 165, 198, 236, 328, 360, 391, 415, 460, 487, 584, 585, 613, 614, 728, 729, 730, 731, 834, 835, 836, 837, 907, 957, 993, 1265, 1321, 1386, 1413, 1435, 1638, 1692, 1829, 1830, 1846, 1858, 1859]
+2025-11-24 10:25:07,557 - linien_server.autolock.utils - DEBUG - start_idx - time_scale//5: 1620
+2025-11-24 10:25:07,559 - linien_server.autolock.utils - DEBUG - Considered zeros (backward): [53, 68, 69, 111, 133, 165, 198, 236, 328, 360, 391, 415, 460, 487, 584, 585, 613, 614, 728, 729, 730, 731, 834, 835, 836, 837, 907, 957, 993, 1265, 1321, 1386, 1413, 1435]
+2025-11-24 10:25:07,587 - linien_server.autolock.utils - DEBUG - Zero crossings of smoothed derivative: [53, 68, 69, 111, 133, 165, 198, 236, 328, 360, 391, 415, 460, 487, 584, 585, 613, 614, 728, 729, 730, 731, 834, 835, 836, 837, 907, 957, 993, 1265, 1321, 1386, 1413, 1435, 1638, 1692, 1829, 1830, 1846, 1858, 1859]
+2025-11-24 10:25:07,589 - linien_server.autolock.utils - DEBUG - start_idx + time_scale//5: 1671
+2025-11-24 10:25:07,590 - linien_server.autolock.utils - DEBUG - Considered zeros (forward): [1692, 1829, 1830, 1846, 1858, 1859]
+2025-11-24 10:25:07,617 - linien_server.autolock.utils - DEBUG - Zero crossings of smoothed derivative: [53, 68, 69, 111, 133, 165, 198, 236, 328, 360, 391, 415, 460, 487, 584, 585, 613, 614, 728, 729, 730, 731, 834, 835, 836, 837, 907, 957, 993, 1265, 1321, 1386, 1413, 1435, 1638, 1692, 1829, 1830, 1846, 1858, 1859]
+2025-11-24 10:25:07,618 - linien_server.autolock.utils - DEBUG - start_idx - time_scale//5: 1618
+2025-11-24 10:25:07,620 - linien_server.autolock.utils - DEBUG - Considered zeros (backward): [53, 68, 69, 111, 133, 165, 198, 236, 328, 360, 391, 415, 460, 487, 584, 585, 613, 614, 728, 729, 730, 731, 834, 835, 836, 837, 907, 957, 993, 1265, 1321, 1386, 1413, 1435]
+2025-11-24 10:25:07,647 - linien_server.autolock.utils - DEBUG - Zero crossings of smoothed derivative: [53, 68, 69, 111, 133, 165, 198, 236, 328, 360, 391, 415, 460, 487, 584, 585, 613, 614, 728, 729, 730, 731, 834, 835, 836, 837, 907, 957, 993, 1265, 1321, 1386, 1413, 1435, 1638, 1692, 1829, 1830, 1846, 1858, 1859]
+2025-11-24 10:25:07,648 - linien_server.autolock.utils - DEBUG - start_idx + time_scale//5: 1667
+2025-11-24 10:25:07,649 - linien_server.autolock.utils - DEBUG - Considered zeros (forward): [1692, 1829, 1830, 1846, 1858, 1859]
+2025-11-24 10:25:07,653 - linien_server.autolock.robust - DEBUG - Determined lock regions: [(1551, 1692), (1545, 1692), (1557, 1692), (1553, 1692), (1557, 1692)]
+2025-11-24 10:25:07,654 - linien_server.autolock.robust - DEBUG - Try out tolerance 0.95
+2025-11-24 10:25:07,657 - linien_server.autolock.robust - DEBUG - Original peaks: [(1640, 949), (1384, -136), (1318, 683), (1267, -1497), (988, 123), (956, -52), (234, 609)]
+2025-11-24 10:25:07,658 - linien_server.autolock.robust - DEBUG - Filtered peaks: [(1640, 901.55), (1384, -129.2), (1318, 648.85), (1267, -1422.1499999999999), (988, 116.85), (956, -49.4), (234, 578.55)]
+2025-11-24 10:25:07,659 - linien_server.autolock.robust - DEBUG - Discarded peaks: [(1640, 949), (1384, -136), (1318, 683), (1267, -1497), (988, 123), (956, -52), (234, 609)]
+2025-11-24 10:25:07,661 - linien_server.autolock.robust - DEBUG - Target peak index in prepared spectrum: 1640
+2025-11-24 10:25:07,663 - linien_server.autolock.robust - DEBUG - final wait time is 7 samples
+2025-11-24 10:25:07,665 - linien_server.autolock.robust - DEBUG - Generated description: [(210, 578), (649, -49), (28, 116), (251, -1422), (45, 648), (59, -129), (230, 901)]
+2025-11-24 10:25:07,666 - linien_server.autolock.robust - DEBUG - Filtered description: [(859, -49), (238, 116), (461, -1422), (255, 648), (269, -129), (440, 901)]
+2025-11-24 10:25:07,825 - linien_server.autolock.robust - DEBUG - Try out tolerance 0.9
+2025-11-24 10:25:07,828 - linien_server.autolock.robust - DEBUG - Original peaks: [(1640, 949), (1384, -136), (1318, 683), (1267, -1497), (988, 123), (956, -52), (234, 609)]
+2025-11-24 10:25:07,829 - linien_server.autolock.robust - DEBUG - Filtered peaks: [(1640, 854.1), (1384, -122.4), (1318, 614.7), (1267, -1347.3), (988, 110.7), (234, 548.1)]
+2025-11-24 10:25:07,831 - linien_server.autolock.robust - DEBUG - Discarded peaks: [(1640, 949), (1384, -136), (1318, 683), (1267, -1497), (988, 123), (956, -52), (234, 609)]
+2025-11-24 10:25:07,832 - linien_server.autolock.robust - DEBUG - Target peak index in prepared spectrum: 1640
+2025-11-24 10:25:07,835 - linien_server.autolock.robust - DEBUG - final wait time is 10 samples
+2025-11-24 10:25:07,836 - linien_server.autolock.robust - DEBUG - Generated description: [(210, 548), (678, 110), (251, -1347), (45, 614), (59, -122), (230, 854)]
+2025-11-24 10:25:07,837 - linien_server.autolock.robust - DEBUG - Filtered description: [(888, 110), (461, -1347), (255, 614), (269, -122), (440, 854)]
+2025-11-24 10:25:08,024 - linien_server.autolock.robust - DEBUG - Try out tolerance 0.85
+2025-11-24 10:25:08,026 - linien_server.autolock.robust - DEBUG - Original peaks: [(1640, 949), (1384, -136), (1318, 683), (1267, -1497), (988, 123), (956, -52), (234, 609)]
+2025-11-24 10:25:08,027 - linien_server.autolock.robust - DEBUG - Filtered peaks: [(1640, 806.65), (1318, 580.55), (1267, -1272.45), (234, 517.65)]
+2025-11-24 10:25:08,029 - linien_server.autolock.robust - DEBUG - Discarded peaks: [(1640, 949), (1384, -136), (1318, 683), (1267, -1497), (988, 123), (956, -52), (234, 609)]
+2025-11-24 10:25:08,030 - linien_server.autolock.robust - DEBUG - Target peak index in prepared spectrum: 1640
+2025-11-24 10:25:08,033 - linien_server.autolock.robust - DEBUG - final wait time is 12 samples
+2025-11-24 10:25:08,034 - linien_server.autolock.robust - DEBUG - Generated description: [(210, 517), (929, -1272), (45, 580), (289, 806)]
+2025-11-24 10:25:08,035 - linien_server.autolock.robust - DEBUG - Filtered description: [(1139, -1272), (255, 580), (499, 806)]
+2025-11-24 10:25:08,195 - linien_server.autolock.robust - DEBUG - Try out tolerance 0.8
+2025-11-24 10:25:08,197 - linien_server.autolock.robust - DEBUG - Original peaks: [(1640, 949), (1384, -136), (1318, 683), (1267, -1497), (988, 123), (956, -52), (234, 609)]
+2025-11-24 10:25:08,199 - linien_server.autolock.robust - DEBUG - Filtered peaks: [(1640, 759.2), (1318, 546.4), (1267, -1197.6000000000001), (234, 487.20000000000005)]
+2025-11-24 10:25:08,200 - linien_server.autolock.robust - DEBUG - Discarded peaks: [(1640, 949), (1384, -136), (1318, 683), (1267, -1497), (988, 123), (956, -52), (234, 609)]
+2025-11-24 10:25:08,202 - linien_server.autolock.robust - DEBUG - Target peak index in prepared spectrum: 1640
+2025-11-24 10:25:08,204 - linien_server.autolock.robust - DEBUG - final wait time is 14 samples
+2025-11-24 10:25:08,206 - linien_server.autolock.robust - DEBUG - Generated description: [(210, 487), (929, -1197), (45, 546), (289, 759)]
+2025-11-24 10:25:08,207 - linien_server.autolock.robust - DEBUG - Filtered description: [(1139, -1197), (255, 546), (499, 759)]
+2025-11-24 10:25:08,369 - linien_server.autolock.robust - DEBUG - Try out tolerance 0.75
+2025-11-24 10:25:08,373 - linien_server.autolock.robust - DEBUG - Original peaks: [(1640, 949), (1384, -136), (1318, 683), (1267, -1497), (988, 123), (956, -52), (234, 609)]
+2025-11-24 10:25:08,375 - linien_server.autolock.robust - DEBUG - Filtered peaks: [(1640, 711.75), (1318, 512.25), (1267, -1122.75), (234, 456.75)]
+2025-11-24 10:25:08,376 - linien_server.autolock.robust - DEBUG - Discarded peaks: [(1640, 949), (1384, -136), (1318, 683), (1267, -1497), (988, 123), (956, -52), (234, 609)]
+2025-11-24 10:25:08,378 - linien_server.autolock.robust - DEBUG - Target peak index in prepared spectrum: 1640
+2025-11-24 10:25:08,381 - linien_server.autolock.robust - DEBUG - final wait time is 16 samples
+2025-11-24 10:25:08,382 - linien_server.autolock.robust - DEBUG - Generated description: [(210, 456), (929, -1122), (45, 512), (289, 711)]
+2025-11-24 10:25:08,384 - linien_server.autolock.robust - DEBUG - Filtered description: [(1139, -1122), (255, 512), (499, 711)]
+2025-11-24 10:25:08,543 - linien_server.autolock.robust - DEBUG - Try out tolerance 0.7
+2025-11-24 10:25:08,546 - linien_server.autolock.robust - DEBUG - Original peaks: [(1640, 949), (1384, -136), (1318, 683), (1267, -1497), (988, 123), (956, -52), (234, 609)]
+2025-11-24 10:25:08,548 - linien_server.autolock.robust - DEBUG - Filtered peaks: [(1640, 664.3), (1318, 478.09999999999997), (1267, -1047.8999999999999), (234, 426.29999999999995)]
+2025-11-24 10:25:08,549 - linien_server.autolock.robust - DEBUG - Discarded peaks: [(1640, 949), (1384, -136), (1318, 683), (1267, -1497), (988, 123), (956, -52), (234, 609)]
+2025-11-24 10:25:08,551 - linien_server.autolock.robust - DEBUG - Target peak index in prepared spectrum: 1640
+2025-11-24 10:25:08,554 - linien_server.autolock.robust - DEBUG - final wait time is 18 samples
+2025-11-24 10:25:08,555 - linien_server.autolock.robust - DEBUG - Generated description: [(210, 426), (929, -1047), (45, 478), (289, 664)]
+2025-11-24 10:25:08,556 - linien_server.autolock.robust - DEBUG - Filtered description: [(1139, -1047), (255, 478), (499, 664)]
+2025-11-24 10:25:08,716 - linien_server.autolock.robust - DEBUG - Try out tolerance 0.65
+2025-11-24 10:25:08,719 - linien_server.autolock.robust - DEBUG - Original peaks: [(1640, 949), (1384, -136), (1318, 683), (1267, -1497), (988, 123), (956, -52), (234, 609)]
+2025-11-24 10:25:08,721 - linien_server.autolock.robust - DEBUG - Filtered peaks: [(1640, 616.85), (1318, 443.95), (1267, -973.0500000000001), (234, 395.85)]
+2025-11-24 10:25:08,724 - linien_server.autolock.robust - DEBUG - Discarded peaks: [(1640, 949), (1384, -136), (1318, 683), (1267, -1497), (988, 123), (956, -52), (234, 609)]
+2025-11-24 10:25:08,726 - linien_server.autolock.robust - DEBUG - Target peak index in prepared spectrum: 1640
+2025-11-24 10:25:08,730 - linien_server.autolock.robust - DEBUG - final wait time is 20 samples
+2025-11-24 10:25:08,731 - linien_server.autolock.robust - DEBUG - Generated description: [(210, 395), (929, -973), (45, 443), (289, 616)]
+2025-11-24 10:25:08,733 - linien_server.autolock.robust - DEBUG - Filtered description: [(1139, -973), (255, 443), (499, 616)]
+2025-11-24 10:25:08,898 - linien_server.autolock.robust - DEBUG - Try out tolerance 0.6
+2025-11-24 10:25:08,901 - linien_server.autolock.robust - DEBUG - Original peaks: [(1640, 949), (1384, -136), (1318, 683), (1267, -1497), (988, 123), (956, -52), (234, 609)]
+2025-11-24 10:25:08,902 - linien_server.autolock.robust - DEBUG - Filtered peaks: [(1640, 569.4), (1318, 409.8), (1267, -898.1999999999999)]
+2025-11-24 10:25:08,903 - linien_server.autolock.robust - DEBUG - Discarded peaks: [(1640, 949), (1384, -136), (1318, 683), (1267, -1497), (988, 123), (956, -52), (234, 609)]
+2025-11-24 10:25:08,905 - linien_server.autolock.robust - DEBUG - Target peak index in prepared spectrum: 1640
+2025-11-24 10:25:08,908 - linien_server.autolock.robust - DEBUG - final wait time is 22 samples
+2025-11-24 10:25:08,910 - linien_server.autolock.robust - DEBUG - Generated description: [(1140, -898), (45, 409), (289, 569)]
+2025-11-24 10:25:08,911 - linien_server.autolock.robust - DEBUG - Filtered description: [(1140, -898), (45, 409), (289, 569)]
+2025-11-24 10:25:08,942 - linien_server.autolock.robust - DEBUG - Lock position found at index 1641 for current spectrum
+2025-11-24 10:25:08,970 - linien_server.autolock.robust - DEBUG - Lock position found at index 1643 for current spectrum
+2025-11-24 10:25:08,998 - linien_server.autolock.robust - DEBUG - Lock position found at index 1640 for current spectrum
+2025-11-24 10:25:09,026 - linien_server.autolock.robust - DEBUG - Lock position found at index 1643 for current spectrum
+2025-11-24 10:25:09,053 - linien_server.autolock.robust - DEBUG - Lock position found at index 1641 for current spectrum
+2025-11-24 10:25:09,054 - linien_server.autolock.robust - DEBUG - Description is [(1140, -898), (45, 409), (289, 569)]
+2025-11-24 10:25:09,056 - linien_server.autolock.robust - DEBUG - Calculation of autolock description took 2.0537967681884766
+2025-11-24 10:25:09,057 - linien_server.autolock.robust - DEBUG - time_scale: 37 of type: <class 'int'>
+2025-11-24 10:25:09,058 - linien_server.autolock.robust - DEBUG - final_wait_time: 22 of type: <class 'numpy.intc'>
+2025-11-24 10:25:09,059 - linien_server.autolock.robust - DEBUG - description: [(1140, -898), (45, 409), (289, 569)] of type: <class 'list'> of <class 'tuple'>
+2025-11-24 10:25:09,061 - linien_server.registers - DEBUG - === write_registers called; timestamp=1763979909.061272 ===
+2025-11-24 10:25:09,062 - linien_server.registers - DEBUG - Proposed new keys (count 48): ['logic_sweep_run', 'logic_sweep_pause', 'logic_sweep_step', 'logic_sweep_min', 'logic_sweep_max', 'logic_mod_freq', 'logic_mod_amp', 'logic_dual_channel', 'logic_pid_only_mode', 'logic_chain_a_factor', 'logic_chain_b_factor', 'logic_chain_a_offset', 'logic_chain_b_offset', 'logic_out_offset', 'logic_combined_offset', 'logic_control_channel', 'logic_mod_channel', 'logic_sweep_channel', 'logic_slow_control_channel', 'slow_chain_pid_reset', 'logic_analog_out_1', 'logic_analog_out_2', 'logic_analog_out_3', 'logic_autolock_fast_target_position', 'logic_autolock_autolock_mode', 'logic_autolock_robust_N_instructions', 'logic_autolock_robust_time_scale', 'logic_autolock_robust_final_wait_time', 'fast_a_demod_delay', 'fast_a_demod_multiplier', 'fast_a_dx_sel', 'fast_a_y_tap', 'fast_a_dy_sel', 'fast_a_invert', 'fast_b_demod_delay', 'fast_b_demod_multiplier', 'fast_b_dx_sel', 'fast_b_y_tap', 'fast_b_dy_sel', 'fast_b_invert', 'scopegen_external_trigger', 'gpio_p_oes', 'gpio_n_oes', 'gpio_p_outs', 'gpio_n_outs', 'gpio_n_do0_en', 'gpio_n_do1_en', 'logic_slow_decimation']
+2025-11-24 10:25:09,064 - linien_server.registers - DEBUG - Proposed autolock keys and values: {'logic_autolock_fast_target_position': 0, 'logic_autolock_autolock_mode': <AutolockMode.ROBUST: 1>, 'logic_autolock_robust_N_instructions': 0, 'logic_autolock_robust_time_scale': 0, 'logic_autolock_robust_final_wait_time': 0}
+2025-11-24 10:25:09,065 - linien_server.registers - DEBUG - Cached autolock keys and values before update: {'logic_autolock_fast_target_position': 0, 'logic_autolock_autolock_mode': <AutolockMode.SIMPLE: 2>, 'logic_autolock_robust_N_instructions': 0, 'logic_autolock_robust_time_scale': 0, 'logic_autolock_robust_final_wait_time': 0}
+2025-11-24 10:25:09,067 - linien_server.registers - DEBUG - After filtering, keys to actually write: ['logic_autolock_autolock_mode']
+2025-11-24 10:25:09,068 - linien_server.registers - DEBUG - UPDATED control._cached_data autolock keys now: {'logic_autolock_fast_target_position': 0, 'logic_autolock_autolock_mode': <AutolockMode.ROBUST: 1>, 'logic_autolock_robust_N_instructions': 0, 'logic_autolock_robust_time_scale': 0, 'logic_autolock_robust_final_wait_time': 0}
+2025-11-24 10:25:09,071 - linien_server.registers - DEBUG - === write_registers called; timestamp=1763979909.0710893 ===
+2025-11-24 10:25:09,073 - linien_server.registers - DEBUG - Proposed new keys (count 48): ['logic_sweep_run', 'logic_sweep_pause', 'logic_sweep_step', 'logic_sweep_min', 'logic_sweep_max', 'logic_mod_freq', 'logic_mod_amp', 'logic_dual_channel', 'logic_pid_only_mode', 'logic_chain_a_factor', 'logic_chain_b_factor', 'logic_chain_a_offset', 'logic_chain_b_offset', 'logic_out_offset', 'logic_combined_offset', 'logic_control_channel', 'logic_mod_channel', 'logic_sweep_channel', 'logic_slow_control_channel', 'slow_chain_pid_reset', 'logic_analog_out_1', 'logic_analog_out_2', 'logic_analog_out_3', 'logic_autolock_fast_target_position', 'logic_autolock_autolock_mode', 'logic_autolock_robust_N_instructions', 'logic_autolock_robust_time_scale', 'logic_autolock_robust_final_wait_time', 'fast_a_demod_delay', 'fast_a_demod_multiplier', 'fast_a_dx_sel', 'fast_a_y_tap', 'fast_a_dy_sel', 'fast_a_invert', 'fast_b_demod_delay', 'fast_b_demod_multiplier', 'fast_b_dx_sel', 'fast_b_y_tap', 'fast_b_dy_sel', 'fast_b_invert', 'scopegen_external_trigger', 'gpio_p_oes', 'gpio_n_oes', 'gpio_p_outs', 'gpio_n_outs', 'gpio_n_do0_en', 'gpio_n_do1_en', 'logic_slow_decimation']
+2025-11-24 10:25:09,075 - linien_server.registers - DEBUG - Proposed autolock keys and values: {'logic_autolock_fast_target_position': 0, 'logic_autolock_autolock_mode': <AutolockMode.ROBUST: 1>, 'logic_autolock_robust_N_instructions': 3, 'logic_autolock_robust_time_scale': 37, 'logic_autolock_robust_final_wait_time': 22}
+2025-11-24 10:25:09,078 - linien_server.registers - DEBUG - Cached autolock keys and values before update: {'logic_autolock_fast_target_position': 0, 'logic_autolock_autolock_mode': <AutolockMode.ROBUST: 1>, 'logic_autolock_robust_N_instructions': 0, 'logic_autolock_robust_time_scale': 0, 'logic_autolock_robust_final_wait_time': 0}
+2025-11-24 10:25:09,080 - linien_server.registers - DEBUG - logic_autolock_robust_peak_height_0 = -898, logic_autolock_robust_wait_for_0 = 1140
+2025-11-24 10:25:09,082 - linien_server.registers - DEBUG - logic_autolock_robust_peak_height_1 = 409, logic_autolock_robust_wait_for_1 = 45
+2025-11-24 10:25:09,083 - linien_server.registers - DEBUG - logic_autolock_robust_peak_height_2 = 569, logic_autolock_robust_wait_for_2 = 289
+2025-11-24 10:25:09,084 - linien_server.registers - DEBUG - After filtering, keys to actually write: ['logic_autolock_robust_N_instructions', 'logic_autolock_robust_time_scale', 'logic_autolock_robust_final_wait_time', 'logic_autolock_robust_peak_height_0', 'logic_autolock_robust_wait_for_0', 'logic_autolock_robust_peak_height_1', 'logic_autolock_robust_wait_for_1', 'logic_autolock_robust_peak_height_2', 'logic_autolock_robust_wait_for_2']
+2025-11-24 10:25:09,086 - linien_server.registers - DEBUG - UPDATED control._cached_data autolock keys now: {'logic_autolock_fast_target_position': 0, 'logic_autolock_autolock_mode': <AutolockMode.ROBUST: 1>, 'logic_autolock_robust_N_instructions': 3, 'logic_autolock_robust_time_scale': 37, 'logic_autolock_robust_final_wait_time': 22, 'logic_autolock_robust_peak_height_0': -898, 'logic_autolock_robust_wait_for_0': 1140, 'logic_autolock_robust_peak_height_1': 409, 'logic_autolock_robust_wait_for_1': 45, 'logic_autolock_robust_peak_height_2': 569, 'logic_autolock_robust_wait_for_2': 289}
+2025-11-24 10:25:09,089 - linien_server.registers - DEBUG - === write_registers called; timestamp=1763979909.089072 ===
+2025-11-24 10:25:09,090 - linien_server.registers - DEBUG - Proposed new keys (count 48): ['logic_sweep_run', 'logic_sweep_pause', 'logic_sweep_step', 'logic_sweep_min', 'logic_sweep_max', 'logic_mod_freq', 'logic_mod_amp', 'logic_dual_channel', 'logic_pid_only_mode', 'logic_chain_a_factor', 'logic_chain_b_factor', 'logic_chain_a_offset', 'logic_chain_b_offset', 'logic_out_offset', 'logic_combined_offset', 'logic_control_channel', 'logic_mod_channel', 'logic_sweep_channel', 'logic_slow_control_channel', 'slow_chain_pid_reset', 'logic_analog_out_1', 'logic_analog_out_2', 'logic_analog_out_3', 'logic_autolock_fast_target_position', 'logic_autolock_autolock_mode', 'logic_autolock_robust_N_instructions', 'logic_autolock_robust_time_scale', 'logic_autolock_robust_final_wait_time', 'fast_a_demod_delay', 'fast_a_demod_multiplier', 'fast_a_dx_sel', 'fast_a_y_tap', 'fast_a_dy_sel', 'fast_a_invert', 'fast_b_demod_delay', 'fast_b_demod_multiplier', 'fast_b_dx_sel', 'fast_b_y_tap', 'fast_b_dy_sel', 'fast_b_invert', 'scopegen_external_trigger', 'gpio_p_oes', 'gpio_n_oes', 'gpio_p_outs', 'gpio_n_outs', 'gpio_n_do0_en', 'gpio_n_do1_en', 'logic_slow_decimation']
+2025-11-24 10:25:09,091 - linien_server.registers - DEBUG - Proposed autolock keys and values: {'logic_autolock_fast_target_position': 0, 'logic_autolock_autolock_mode': <AutolockMode.ROBUST: 1>, 'logic_autolock_robust_N_instructions': 3, 'logic_autolock_robust_time_scale': 37, 'logic_autolock_robust_final_wait_time': 22}
+2025-11-24 10:25:09,093 - linien_server.registers - DEBUG - Cached autolock keys and values before update: {'logic_autolock_fast_target_position': 0, 'logic_autolock_autolock_mode': <AutolockMode.ROBUST: 1>, 'logic_autolock_robust_N_instructions': 3, 'logic_autolock_robust_time_scale': 37, 'logic_autolock_robust_final_wait_time': 22}
+2025-11-24 10:25:09,094 - linien_server.registers - DEBUG - logic_autolock_robust_peak_height_0 = -898, logic_autolock_robust_wait_for_0 = 1140
+2025-11-24 10:25:09,095 - linien_server.registers - DEBUG - logic_autolock_robust_peak_height_1 = 409, logic_autolock_robust_wait_for_1 = 45
+2025-11-24 10:25:09,097 - linien_server.registers - DEBUG - logic_autolock_robust_peak_height_2 = 569, logic_autolock_robust_wait_for_2 = 289
+2025-11-24 10:25:09,098 - linien_server.registers - DEBUG - After filtering, keys to actually write: ['scopegen_adc_a_sel', 'scopegen_adc_a_q_sel', 'scopegen_adc_b_sel']
+2025-11-24 10:25:09,099 - linien_server.registers - DEBUG - UPDATED control._cached_data autolock keys now: {'logic_autolock_fast_target_position': 0, 'logic_autolock_autolock_mode': <AutolockMode.ROBUST: 1>, 'logic_autolock_robust_N_instructions': 3, 'logic_autolock_robust_time_scale': 37, 'logic_autolock_robust_final_wait_time': 22, 'logic_autolock_robust_peak_height_0': -898, 'logic_autolock_robust_wait_for_0': 1140, 'logic_autolock_robust_peak_height_1': 409, 'logic_autolock_robust_wait_for_1': 45, 'logic_autolock_robust_peak_height_2': 569, 'logic_autolock_robust_wait_for_2': 289}
+2025-11-24 10:25:09,156 - linien_server.server - ERROR - incorrect data received for lock state, ignoring!
+2025-11-24 10:25:09,157 - linien_server.server - INFO - is_locked: True, data_loaded keys: dict_keys(['error_signal_1', 'monitor_signal', 'slow_control_signal'])
+2025-11-24 10:25:09,454 - linien_server.autolock.autolock - DEBUG - entered in react_new_spectrum
+2025-11-24 10:25:09,456 - linien_server.autolock.autolock - DEBUG - pause_acquisition: False
+2025-11-24 10:25:09,458 - linien_server.autolock.autolock - DEBUG - check_plot_data: True
+2025-11-24 10:25:09,459 - linien_server.autolock.autolock - DEBUG - after lock
