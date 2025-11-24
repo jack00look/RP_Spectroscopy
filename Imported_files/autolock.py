@@ -212,6 +212,7 @@ class Autolock:
                     return self.algorithm.handle_new_spectrum(combined_error_signal)
 
             else:
+                logger.debug(f"Laser is locked (is_locked = {is_locked})")
                 error_signal = plot_data_unpickled["error_signal"]
                 control_signal = plot_data_unpickled["control_signal"]
 
@@ -255,7 +256,7 @@ class Autolock:
         return error_signal, error_signal_rolled, line_width, peak_idxs
 
     def after_lock(self, error_signal, control_signal, slow_out):
-        logger.debug("after lock")
+        logger.debug("entered in after_lock")
         self.parameters.autolock_locked.value = True
 
         self.remove_data_listener()

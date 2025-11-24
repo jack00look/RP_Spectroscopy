@@ -19,7 +19,7 @@ from typing import Optional
 
 import numpy as np
 import rpyc
-from linien_common.common import FilterType, MHz, convert_channel_mixing_value
+from linien_common.common import FilterType, MHz, convert_channel_mixing_value, AutolockMode
 from linien_common.config import ACQUISITION_PORT, DEFAULT_SWEEP_SPEED
 from linien_server.parameters import Parameters
 
@@ -91,6 +91,9 @@ class Registers:
         lock_changed = self.parameters.lock.value != self.control.exposed_is_locked
         self.control.exposed_is_locked = self.parameters.lock.value
 
+        # NOTE: autolock mode is intentionally NOT placed here — we'll append it
+        # later after autolock instruction keys so we can guarantee the instruction
+        # registers are written before switching the FPGA mode to ROBUST.
         new = dict(
             # sweep run is 1 by default. The gateware automatically takes care of
             # stopping the sweep run after `request_lock` is set by setting
@@ -139,7 +142,7 @@ class Registers:
             logic_analog_out_2=self.parameters.analog_out_2.value,
             logic_analog_out_3=self.parameters.analog_out_3.value,
             logic_autolock_fast_target_position=self.parameters.autolock_target_position.value,  # noqa: E501
-            logic_autolock_autolock_mode=self.parameters.autolock_mode.value,
+            # NOTE: autolock_mode intentionally omitted here — appended later
             logic_autolock_robust_N_instructions=len(
                 self.parameters.autolock_instructions.value
             ),
@@ -228,6 +231,41 @@ class Registers:
                         "fast_b_out_q" if self.parameters.dual_channel.value else "zero"
                     ),
                 }
+            )
+
+        # --- SAFETY: ensure autolock_mode=ROBUST is not written *before* the
+        # instruction registers are present on the FPGA. We append autolock_mode at
+        # the end (so it will be written after instruction keys) but only if it's
+        # safe to do so here.
+        desired_mode = self.parameters.autolock_mode.value
+        desired_N = len(self.parameters.autolock_instructions.value)
+        cached_N = self.control._cached_data.get(
+            "logic_autolock_robust_N_instructions", 0
+        )
+
+        # Condition to safely write mode now:
+        # - If desired_mode is ROBUST, only write it now if either the desired N
+        #   instructions are already scheduled to be written in `new` (so they will
+        #   arrive before mode) OR the FPGA cached N already matches desired_N.
+        # - If desired_mode is not ROBUST (e.g. SIMPLE), it's safe to write anytime.
+        safe_to_write_mode = False
+        if desired_mode == AutolockMode.ROBUST:
+            if ("logic_autolock_robust_N_instructions" in new and new[
+                "logic_autolock_robust_N_instructions"
+            ] == desired_N) or (cached_N == desired_N and desired_N != 0):
+                safe_to_write_mode = True
+        else:
+            safe_to_write_mode = True
+
+        if safe_to_write_mode:
+            # place mode at the end so that (when both mode and instructions are
+            # in `new`) the instruction registers come first (insertion-order)
+            new["logic_autolock_autolock_mode"] = desired_mode
+        else:
+            logger.debug(
+                "Delaying write of autolock mode until instruction registers are present: desired_N=%s cached_N=%s",
+                desired_N,
+                cached_N,
             )
 
         # filter out values that did not change
