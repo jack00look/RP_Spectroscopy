@@ -27,6 +27,7 @@ class NewDataListener:
         
 
     def notify_new_data(self,value=None):
+        logger.info(f"New data notification for parameter {self._name}: value={value}, writeable={self._writeable}")
         if not(self._writeable):
             #print('parameter ',self._name,' is not writeable')
             #print('value is ',value)
@@ -398,33 +399,13 @@ class LinienHardwareInterface:
             sweep_signal['s'] = error_signal_strength
         return sweep_signal
     
-    # def wait_for_lock_status(self, should_be_locked):
-    #     """A helper function that waits until the laser is locked or unlocked."""
-    #     counter = 0
-    #     while True:
-    #         self.readable_params['sweep_signal'].wait_for_update()
-    #         print("checking lock status...")
-    #         to_plot = pickle.loads(self.readable_params['sweep_signal'].get_raw_value())
-
-    #         print(f"to_plot keys: {list(to_plot.keys())}")
-
-    #         is_locked = "error_signal" in to_plot
-
-    #         if is_locked == should_be_locked:
-    #             break
-
-    #         counter += 1
-    #         if counter > 50:
-    #             raise Exception("waited too long")
-
-    #         time.sleep(1)
-
     def wait_for_lock_status(self, should_be_locked):
-        """Wait until the laser reaches the desired lock state."""
+        """A helper function that waits until the laser is locked or unlocked."""
         counter = 0
         while True:
+            self.readable_params['sweep_signal'].wait_for_update()
             print("checking lock status...")
-            to_plot = pickle.loads(self.client.parameters.to_plot.value)
+            to_plot = pickle.loads(self.readable_params['sweep_signal'].get_raw_value())
 
             print(f"to_plot keys: {list(to_plot.keys())}")
 
@@ -434,10 +415,30 @@ class LinienHardwareInterface:
                 break
 
             counter += 1
-            if counter > 10:
+            if counter > 50:
                 raise Exception("waited too long")
 
             time.sleep(1)
+
+    # def wait_for_lock_status(self, should_be_locked):
+    #     """Wait until the laser reaches the desired lock state."""
+    #     counter = 0
+    #     while True:
+    #         print("checking lock status...")
+    #         to_plot = pickle.loads(self.client.parameters.to_plot.value)
+
+    #         print(f"to_plot keys: {list(to_plot.keys())}")
+
+    #         is_locked = "error_signal" in to_plot
+
+    #         if is_locked == should_be_locked:
+    #             break
+
+    #         counter += 1
+    #         if counter > 10:
+    #             raise Exception("waited too long")
+
+    #         time.sleep(1)
     
     def get_lock_history(self):
         control_signal_history = self.readable_params['control_signal_history'].get_raw_value()

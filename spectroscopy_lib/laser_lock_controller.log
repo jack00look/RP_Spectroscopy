@@ -5424,3 +5424,200 @@ Scan completed successfully.
 2025-11-24 13:59:03 - LaserLockController - DEBUG - Frequency stable enough
 2025-11-24 13:59:03 - LaserLockController - INFO - Line LINE_feature_1 is centered at offset 1.03.
 2025-11-24 13:59:13 - LaserLockController - INFO - Locking the laser failed :(
+2025-11-25 11:28:33 - LaserLockController - INFO - LaserLockController initialized successfully.
+2025-11-25 11:28:37 - LaserLockController - INFO - Starting scan from 0.95V to 1.05V with 10 points.
+2025-11-25 11:28:53 - LaserLockController - INFO - Scan completed successfully.
+2025-11-25 11:29:39 - LaserLockController - INFO - Saving reference line with key feature_1.
+2025-11-25 11:29:40 - LaserLockController - INFO - Reference line feature_1 saved successfully.
+2025-11-25 11:33:52 - LaserLockController - INFO - Starting scan from 0.95V to 1.05V with 10 points.
+2025-11-25 11:34:07 - LaserLockController - INFO - Scan completed successfully.
+2025-11-25 11:34:18 - LaserLockController - INFO - Saving reference line with key feature_1.
+2025-11-25 11:34:19 - LaserLockController - INFO - Reference line feature_1 saved successfully.
+2025-11-25 11:34:36 - LaserLockController - INFO - Starting scan from 0.9V to 1V with 10 points.
+2025-11-25 11:34:52 - LaserLockController - INFO - Scan completed successfully.
+2025-11-25 11:35:03 - LaserLockController - INFO - Saving reference line with key feature_1.
+2025-11-25 11:35:04 - LaserLockController - INFO - Reference line feature_1 saved successfully.
+2025-11-25 11:35:42 - LaserLockController - INFO - Saving reference line with key feature_1.
+2025-11-25 11:35:42 - LaserLockController - INFO - Reference line feature_1 saved successfully.
+2025-11-25 11:35:53 - LaserLockController - INFO - Saving reference line with key feature_1.
+2025-11-25 11:35:54 - LaserLockController - INFO - Reference line feature_1 saved successfully.
+2025-11-25 11:36:00 - LaserLockController - INFO - Saving reference line with key feature_1.
+2025-11-25 11:36:00 - LaserLockController - INFO - Reference line feature_1 saved successfully.
+2025-11-25 11:36:04 - LaserLockController - INFO - Saving reference line with key feature_1.
+2025-11-25 11:36:05 - LaserLockController - INFO - Reference line feature_1 saved successfully.
+2025-11-25 11:36:31 - LaserLockController - INFO - Finding reference lines.
+2025-11-25 11:36:31 - LaserLockController - DEBUG - Setting voltage to 0.9V
+2025-11-25 11:36:33 - LaserLockController - DEBUG - Correlation with LINE_feature_1 at 0.9V: 0.08133957357651242, Length of match: 0.43529411764705894, offset with respect to the reference signal: 0.01378800237357362
+2025-11-25 11:36:33 - LaserLockController - DEBUG - Setting voltage to 1.02V
+2025-11-25 11:36:34 - LaserLockController - DEBUG - Correlation with LINE_feature_1 at 1.02V: 0.32366630444935435, Length of match: 0.43529411764705894, offset with respect to the reference signal: 0.01148376981685789
+2025-11-25 11:36:34 - LaserLockController - DEBUG - Setting voltage to 1.1400000000000001V
+2025-11-25 11:36:36 - LaserLockController - DEBUG - Correlation with LINE_feature_1 at 1.1400000000000001V: 0.35876241916696167, Length of match: 0.43529411764705894, offset with respect to the reference signal: 0.01405148123870691
+2025-11-25 11:36:36 - LaserLockController - DEBUG - Setting voltage to 1.26V
+2025-11-25 11:36:37 - LaserLockController - DEBUG - Correlation with LINE_feature_1 at 1.26V: 0.15862691733116138, Length of match: 0.43529411764705894, offset with respect to the reference signal: 0.014135809489304216
+2025-11-25 11:36:37 - LaserLockController - DEBUG - Setting voltage to 1.38V
+2025-11-25 11:36:38 - LaserLockController - DEBUG - Correlation with LINE_feature_1 at 1.38V: 0.12599417323229137, Length of match: 0.43529411764705894, offset with respect to the reference signal: 0.014171424525312394
+2025-11-25 11:36:38 - LaserLockController - DEBUG - Setting voltage to 1.5V
+2025-11-25 11:36:40 - LaserLockController - DEBUG - Correlation with LINE_feature_1 at 1.5V: 0.10534945253407986, Length of match: 0.43529411764705894, offset with respect to the reference signal: 0.01416511808358028
+2025-11-25 11:36:40 - LaserLockController - DEBUG - Offset with respect to the reference line:0.01405148123870691
+2025-11-25 11:36:40 - LaserLockController - INFO - Reference lines found successfully.
+2025-11-25 11:36:53 - LaserLockController - INFO - Finding reference lines.
+2025-11-25 11:36:53 - LaserLockController - DEBUG - Setting voltage to 0.9V
+2025-11-25 11:36:55 - LaserLockController - DEBUG - Correlation with LINE_feature_1 at 0.9V: 0.2508812933389984, Length of match: 0.43529411764705894, offset with respect to the reference signal: 0.013876394668274242
+2025-11-25 11:36:55 - LaserLockController - DEBUG - Setting voltage to 0.91V
+2025-11-25 11:36:56 - LaserLockController - DEBUG - Correlation with LINE_feature_1 at 0.91V: 0.9977941381371003, Length of match: 0.7019607843137255, offset with respect to the reference signal: 0.009959830909545647
+2025-11-25 11:36:56 - LaserLockController - DEBUG - Setting voltage to 0.92V
+2025-11-25 11:36:58 - LaserLockController - DEBUG - Correlation with LINE_feature_1 at 0.92V: 0.99730984649238, Length of match: 0.9960784313725493, offset with respect to the reference signal: 0.00992259496406052
+2025-11-25 11:36:58 - LaserLockController - DEBUG - Setting voltage to 0.9299999999999999V
+2025-11-25 11:36:59 - LaserLockController - DEBUG - Correlation with LINE_feature_1 at 0.9299999999999999V: 0.06397176389355042, Length of match: 0.43529411764705894, offset with respect to the reference signal: 0.010922903606407876
+2025-11-25 11:36:59 - LaserLockController - DEBUG - Setting voltage to 0.94V
+2025-11-25 11:37:01 - LaserLockController - DEBUG - Correlation with LINE_feature_1 at 0.94V: 0.6036564739439182, Length of match: 0.43529411764705894, offset with respect to the reference signal: 0.011213599619396023
+2025-11-25 11:37:01 - LaserLockController - DEBUG - Setting voltage to 0.95V
+2025-11-25 11:37:02 - LaserLockController - DEBUG - Correlation with LINE_feature_1 at 0.95V: 0.2817074037216006, Length of match: 0.43529411764705894, offset with respect to the reference signal: 0.01131960323231435
+2025-11-25 11:37:02 - LaserLockController - DEBUG - Offset with respect to the reference line:0.009959830909545647
+2025-11-25 11:37:03 - LaserLockController - INFO - Reference lines found successfully.
+2025-11-25 11:37:08 - LaserLockController - DEBUG - Vertical offset to apply = -0.009959830909545647 to have the zero-crossing placed nicely.
+2025-11-25 11:37:10 - LaserLockController - DEBUG - START offset = 0.91
+2025-11-25 11:37:11 - LaserLockController - DEBUG - Line is now inside
+2025-11-25 11:37:16 - LaserLockController - DEBUG - Frequency stable enough
+2025-11-25 11:37:16 - LaserLockController - INFO - Line LINE_feature_1 is centered at offset 0.91.
+2025-11-25 11:37:27 - LaserLockController - INFO - Locking the laser failed :(
+2025-11-25 11:38:19 - LaserLockController - DEBUG - Vertical offset to apply = -0.009959830909545647 to have the zero-crossing placed nicely.
+2025-11-25 11:38:19 - LaserLockController - DEBUG - START offset = 0.91
+2025-11-25 11:38:20 - LaserLockController - DEBUG - Line is now inside
+2025-11-25 11:38:41 - LaserLockController - DEBUG - Vertical offset to apply = -0.009959830909545647 to have the zero-crossing placed nicely.
+2025-11-25 11:38:41 - LaserLockController - DEBUG - START offset = 0.91
+2025-11-25 11:40:06 - LaserLockController - INFO - LaserLockController initialized successfully.
+2025-11-25 11:40:25 - LaserLockController - INFO - Starting scan from 0.9V to 1V with 10 points.
+2025-11-25 11:46:00 - LaserLockController - INFO - LaserLockController initialized successfully.
+2025-11-25 11:46:12 - LaserLockController - INFO - Starting scan from 0.9V to 1V with 10 points.
+2025-11-25 11:46:28 - LaserLockController - INFO - Scan completed successfully.
+2025-11-25 11:46:52 - LaserLockController - INFO - Saving reference line with key feature_1.
+2025-11-25 11:46:53 - LaserLockController - INFO - Reference line feature_1 saved successfully.
+2025-11-25 11:47:09 - LaserLockController - INFO - Saving reference line with key feature_1.
+2025-11-25 11:47:09 - LaserLockController - WARNING - Locking region [0.51V, 0.65V] is outside the scan range [0.30V to 0.60V].
+2025-11-25 11:47:09 - LaserLockController - INFO - Reference line feature_1 saved successfully.
+2025-11-25 11:47:17 - LaserLockController - INFO - Saving reference line with key feature_1.
+2025-11-25 11:47:17 - LaserLockController - WARNING - Locking region [0.41V, 0.65V] is outside the scan range [0.30V to 0.60V].
+2025-11-25 11:47:18 - LaserLockController - INFO - Reference line feature_1 saved successfully.
+2025-11-25 11:47:24 - LaserLockController - INFO - Saving reference line with key feature_1.
+2025-11-25 11:47:25 - LaserLockController - INFO - Reference line feature_1 saved successfully.
+2025-11-25 11:47:27 - LaserLockController - INFO - Saving reference line with key feature_1.
+2025-11-25 11:47:28 - LaserLockController - INFO - Reference line feature_1 saved successfully.
+2025-11-25 11:47:34 - LaserLockController - INFO - Finding reference lines.
+2025-11-25 11:47:34 - LaserLockController - DEBUG - Setting voltage to 0.9V
+2025-11-25 11:47:36 - LaserLockController - DEBUG - Correlation with LINE_feature_1 at 0.9V: 0.42820394142555507, Length of match: 0.5555555555555561, offset with respect to the reference signal: 0.009465500985567215
+2025-11-25 11:47:36 - LaserLockController - DEBUG - Setting voltage to 0.91V
+2025-11-25 11:47:37 - LaserLockController - DEBUG - Correlation with LINE_feature_1 at 0.91V: 0.4494277310962203, Length of match: 0.558823529411765, offset with respect to the reference signal: 0.010163251171230575
+2025-11-25 11:47:37 - LaserLockController - DEBUG - Setting voltage to 0.92V
+2025-11-25 11:47:39 - LaserLockController - DEBUG - Correlation with LINE_feature_1 at 0.92V: 0.4861775677199967, Length of match: 0.558823529411765, offset with respect to the reference signal: 0.010379062865908804
+2025-11-25 11:47:39 - LaserLockController - DEBUG - Setting voltage to 0.9299999999999999V
+2025-11-25 11:47:41 - LaserLockController - DEBUG - Correlation with LINE_feature_1 at 0.9299999999999999V: 0.3359221320772786, Length of match: 0.5620915032679749, offset with respect to the reference signal: 0.011725571446400603
+2025-11-25 11:47:41 - LaserLockController - DEBUG - Setting voltage to 0.94V
+2025-11-25 11:47:42 - LaserLockController - DEBUG - Correlation with LINE_feature_1 at 0.94V: 0.521275689598718, Length of match: 0.558823529411765, offset with respect to the reference signal: 0.011767410969257461
+2025-11-25 11:47:42 - LaserLockController - DEBUG - Setting voltage to 0.95V
+2025-11-25 11:47:44 - LaserLockController - DEBUG - Correlation with LINE_feature_1 at 0.95V: 0.3403952971689703, Length of match: 0.5620915032679749, offset with respect to the reference signal: 0.011831410990111204
+2025-11-25 11:47:44 - LaserLockController - DEBUG - Offset with respect to the reference line:0.011767410969257461
+2025-11-25 11:47:44 - LaserLockController - INFO - Reference lines found successfully.
+2025-11-25 11:47:57 - LaserLockController - DEBUG - Vertical offset to apply = -0.011767410969257461 to have the zero-crossing placed nicely.
+2025-11-25 11:47:59 - LaserLockController - DEBUG - START offset = 0.94
+2025-11-25 11:48:00 - LaserLockController - DEBUG - Line is now inside
+2025-11-25 11:48:05 - LaserLockController - DEBUG - Frequency stable enough
+2025-11-25 11:48:05 - LaserLockController - INFO - Line LINE_feature_1 is centered at offset 0.94.
+2025-11-25 11:48:15 - LaserLockController - INFO - Locking the laser failed :(
+2025-11-25 11:53:49 - LaserLockController - INFO - LaserLockController initialized successfully.
+2025-11-25 11:53:55 - LaserLockController - INFO - Starting scan from 0.9V to 1V with 10 points.
+2025-11-25 11:54:10 - LaserLockController - INFO - Scan completed successfully.
+2025-11-25 11:54:22 - LaserLockController - INFO - Saving reference line with key feature_1.
+2025-11-25 11:54:22 - LaserLockController - INFO - Reference line feature_1 saved successfully.
+2025-11-25 11:54:28 - LaserLockController - INFO - Saving reference line with key feature_1.
+2025-11-25 11:54:29 - LaserLockController - INFO - Reference line feature_1 saved successfully.
+2025-11-25 11:54:35 - LaserLockController - INFO - Finding reference lines.
+2025-11-25 11:54:35 - LaserLockController - DEBUG - Setting voltage to 0.9V
+2025-11-25 11:54:36 - LaserLockController - DEBUG - Correlation with LINE_feature_1 at 0.9V: 0.5766230174507734, Length of match: 0.44771241830065434, offset with respect to the reference signal: 0.010831216080424125
+2025-11-25 11:54:36 - LaserLockController - DEBUG - Setting voltage to 0.91V
+2025-11-25 11:54:38 - LaserLockController - DEBUG - Correlation with LINE_feature_1 at 0.91V: 0.561932509806019, Length of match: 0.44771241830065434, offset with respect to the reference signal: 0.010662697242915825
+2025-11-25 11:54:38 - LaserLockController - DEBUG - Setting voltage to 0.92V
+2025-11-25 11:54:39 - LaserLockController - DEBUG - Correlation with LINE_feature_1 at 0.92V: 0.5174692230308644, Length of match: 0.44771241830065434, offset with respect to the reference signal: 0.010697594526739107
+2025-11-25 11:54:39 - LaserLockController - DEBUG - Setting voltage to 0.9299999999999999V
+2025-11-25 11:54:41 - LaserLockController - DEBUG - Correlation with LINE_feature_1 at 0.9299999999999999V: 0.6121005541295557, Length of match: 0.44771241830065434, offset with respect to the reference signal: 0.011874399857118044
+2025-11-25 11:54:41 - LaserLockController - DEBUG - Setting voltage to 0.94V
+2025-11-25 11:54:42 - LaserLockController - DEBUG - Correlation with LINE_feature_1 at 0.94V: 0.3825224120197176, Length of match: 0.44771241830065434, offset with respect to the reference signal: 0.01195891845951781
+2025-11-25 11:54:42 - LaserLockController - DEBUG - Setting voltage to 0.95V
+2025-11-25 11:54:44 - LaserLockController - DEBUG - Correlation with LINE_feature_1 at 0.95V: 0.22179470456327646, Length of match: 0.44771241830065434, offset with respect to the reference signal: 0.011822437140941531
+2025-11-25 11:54:44 - LaserLockController - DEBUG - Offset with respect to the reference line:0.011874399857118044
+2025-11-25 11:54:44 - LaserLockController - INFO - Reference lines found successfully.
+2025-11-25 11:54:50 - LaserLockController - DEBUG - Vertical offset to apply = -0.011874399857118044 to have the zero-crossing placed nicely.
+2025-11-25 11:54:52 - LaserLockController - DEBUG - START offset = 0.9299999999999999
+2025-11-25 11:54:53 - LaserLockController - DEBUG - Line is now inside
+2025-11-25 11:54:59 - LaserLockController - DEBUG - Frequency stable enough
+2025-11-25 11:54:59 - LaserLockController - INFO - Line LINE_feature_1 is centered at offset 0.9299999999999999.
+2025-11-25 11:55:13 - LaserLockController - INFO - Locking the laser failed :(
+2025-11-25 11:55:22 - LaserLockController - DEBUG - Vertical offset to apply = -0.011874399857118044 to have the zero-crossing placed nicely.
+2025-11-25 11:55:22 - LaserLockController - DEBUG - START offset = 0.9299999999999999
+2025-11-25 11:57:28 - LaserLockController - INFO - LaserLockController initialized successfully.
+2025-11-25 11:57:30 - LaserLockController - INFO - Finding reference lines.
+2025-11-25 11:57:30 - LaserLockController - DEBUG - Setting voltage to 0.9V
+2025-11-25 11:57:32 - LaserLockController - DEBUG - Correlation with LINE_feature_1 at 0.9V: 0.3640885000839571, Length of match: 0.44771241830065434, offset with respect to the reference signal: 0.0099867816055433
+2025-11-25 11:57:32 - LaserLockController - DEBUG - Setting voltage to 0.91V
+2025-11-25 11:57:33 - LaserLockController - DEBUG - Correlation with LINE_feature_1 at 0.91V: 0.6854330379086303, Length of match: 0.44771241830065434, offset with respect to the reference signal: 0.010552697410996835
+2025-11-25 11:57:33 - LaserLockController - DEBUG - Setting voltage to 0.92V
+2025-11-25 11:57:35 - LaserLockController - DEBUG - Correlation with LINE_feature_1 at 0.92V: 0.3098221359788231, Length of match: 0.44771241830065434, offset with respect to the reference signal: 0.011416310814433448
+2025-11-25 11:57:35 - LaserLockController - DEBUG - Setting voltage to 0.9299999999999999V
+2025-11-25 11:57:37 - LaserLockController - DEBUG - Correlation with LINE_feature_1 at 0.9299999999999999V: 0.4909948141237177, Length of match: 0.44771241830065434, offset with respect to the reference signal: 0.012012379272522081
+2025-11-25 11:57:37 - LaserLockController - DEBUG - Setting voltage to 0.94V
+2025-11-25 11:57:38 - LaserLockController - DEBUG - Correlation with LINE_feature_1 at 0.94V: 0.6109816696808503, Length of match: 0.44771241830065434, offset with respect to the reference signal: 0.012104927858471625
+2025-11-25 11:57:38 - LaserLockController - DEBUG - Setting voltage to 0.95V
+2025-11-25 11:57:40 - LaserLockController - DEBUG - Correlation with LINE_feature_1 at 0.95V: 0.4368984707714185, Length of match: 0.44771241830065434, offset with respect to the reference signal: 0.012072652099427041
+2025-11-25 11:57:40 - LaserLockController - DEBUG - Offset with respect to the reference line:0.010552697410996835
+2025-11-25 11:57:40 - LaserLockController - INFO - Reference lines found successfully.
+2025-11-25 11:57:47 - LaserLockController - DEBUG - Vertical offset to apply = -0.010552697410996835 to have the zero-crossing placed nicely.
+2025-11-25 11:57:49 - LaserLockController - DEBUG - START offset = 0.91
+2025-11-25 11:57:50 - LaserLockController - DEBUG - Line is now inside
+2025-11-25 11:57:55 - LaserLockController - DEBUG - Frequency stable enough
+2025-11-25 11:57:55 - LaserLockController - INFO - Line LINE_feature_1 is centered at offset 0.91.
+2025-11-25 11:58:09 - LaserLockController - INFO - Locking the laser failed :(
+2025-11-25 11:58:14 - LaserLockController - DEBUG - Vertical offset to apply = -0.010552697410996835 to have the zero-crossing placed nicely.
+2025-11-25 11:58:14 - LaserLockController - DEBUG - START offset = 0.91
+2025-11-25 11:59:05 - LaserLockController - INFO - LaserLockController initialized successfully.
+2025-11-25 11:59:05 - LaserLockController - INFO - Finding reference lines.
+2025-11-25 11:59:05 - LaserLockController - DEBUG - Setting voltage to 0.9V
+2025-11-25 11:59:07 - LaserLockController - DEBUG - Correlation with LINE_feature_1 at 0.9V: 0.9590112462710818, Length of match: 0.9934640522875821, offset with respect to the reference signal: 0.0017629820077110997
+2025-11-25 11:59:07 - LaserLockController - DEBUG - Setting voltage to 0.91V
+2025-11-25 11:59:08 - LaserLockController - DEBUG - Correlation with LINE_feature_1 at 0.91V: 0.44932261980125326, Length of match: 0.44771241830065434, offset with respect to the reference signal: 0.0018723420122999637
+2025-11-25 11:59:08 - LaserLockController - DEBUG - Setting voltage to 0.92V
+2025-11-25 11:59:10 - LaserLockController - DEBUG - Correlation with LINE_feature_1 at 0.92V: 0.3399163931481694, Length of match: 0.44771241830065434, offset with respect to the reference signal: 0.00202790754206652
+2025-11-25 11:59:10 - LaserLockController - DEBUG - Setting voltage to 0.9299999999999999V
+2025-11-25 11:59:11 - LaserLockController - DEBUG - Correlation with LINE_feature_1 at 0.9299999999999999V: 0.2375756914563908, Length of match: 0.4444444444444446, offset with respect to the reference signal: 0.0022046441072669843
+2025-11-25 11:59:11 - LaserLockController - DEBUG - Setting voltage to 0.94V
+2025-11-25 11:59:13 - LaserLockController - DEBUG - Correlation with LINE_feature_1 at 0.94V: 0.2650730425037219, Length of match: 0.44771241830065434, offset with respect to the reference signal: 0.002312028734432026
+2025-11-25 11:59:13 - LaserLockController - DEBUG - Setting voltage to 0.95V
+2025-11-25 11:59:14 - LaserLockController - DEBUG - Correlation with LINE_feature_1 at 0.95V: 0.28137943296454654, Length of match: 0.44771241830065434, offset with respect to the reference signal: 0.002289880706802985
+2025-11-25 11:59:14 - LaserLockController - DEBUG - Offset with respect to the reference line:0.0017629820077110997
+2025-11-25 11:59:15 - LaserLockController - INFO - Reference lines found successfully.
+2025-11-25 11:59:31 - LaserLockController - DEBUG - Vertical offset to apply = -0.0017629820077110997 to have the zero-crossing placed nicely.
+2025-11-25 11:59:34 - LaserLockController - DEBUG - START offset = 0.9
+2025-11-25 11:59:40 - LaserLockController - DEBUG - Line is now inside
+2025-11-25 11:59:44 - LaserLockController - DEBUG - Line has escaped
+2025-11-25 11:59:46 - LaserLockController - DEBUG - Line is now inside
+2025-11-25 11:59:48 - LaserLockController - DEBUG - Line has escaped
+2025-11-25 11:59:55 - LaserLockController - INFO - Finding reference lines.
+2025-11-25 11:59:55 - LaserLockController - DEBUG - Setting voltage to 0.9V
+2025-11-25 11:59:55 - LaserLockController - DEBUG - Correlation with LINE_feature_1 at 0.9V: 0.6203470023478688, Length of match: 0.44771241830065434, offset with respect to the reference signal: 0.00851811906305863
+2025-11-25 11:59:55 - LaserLockController - DEBUG - Setting voltage to 0.91V
+2025-11-25 11:59:57 - LaserLockController - DEBUG - Correlation with LINE_feature_1 at 0.91V: 0.5229436192699048, Length of match: 0.44771241830065434, offset with respect to the reference signal: 0.009307729522339214
+2025-11-25 11:59:57 - LaserLockController - DEBUG - Setting voltage to 0.92V
+2025-11-25 11:59:58 - LaserLockController - DEBUG - Correlation with LINE_feature_1 at 0.92V: 0.33810203660649873, Length of match: 0.44771241830065434, offset with respect to the reference signal: 0.009394118777231576
+2025-11-25 11:59:58 - LaserLockController - DEBUG - Setting voltage to 0.9299999999999999V
+2025-11-25 12:00:00 - LaserLockController - DEBUG - Correlation with LINE_feature_1 at 0.9299999999999999V: 0.48731081631389234, Length of match: 0.44771241830065434, offset with respect to the reference signal: 0.010127314519930625
+2025-11-25 12:00:00 - LaserLockController - DEBUG - Setting voltage to 0.94V
+2025-11-25 12:00:01 - LaserLockController - DEBUG - Correlation with LINE_feature_1 at 0.94V: 0.6423539599409096, Length of match: 0.44771241830065434, offset with respect to the reference signal: 0.010550283962683524
+2025-11-25 12:00:01 - LaserLockController - DEBUG - Setting voltage to 0.95V
+2025-11-25 12:00:03 - LaserLockController - DEBUG - Correlation with LINE_feature_1 at 0.95V: 0.15121930985642554, Length of match: 0.44771241830065434, offset with respect to the reference signal: 0.010506240764354486
+2025-11-25 12:00:03 - LaserLockController - DEBUG - Offset with respect to the reference line:0.008787301954972425
+2025-11-25 12:00:03 - LaserLockController - INFO - Reference lines found successfully.
+2025-11-25 12:00:07 - LaserLockController - DEBUG - Vertical offset to apply = -0.008787301954972425 to have the zero-crossing placed nicely.
+2025-11-25 12:00:10 - LaserLockController - DEBUG - START offset = 0.94
+2025-11-25 12:00:11 - LaserLockController - DEBUG - Line is now inside
+2025-11-25 12:00:16 - LaserLockController - DEBUG - Frequency stable enough
+2025-11-25 12:00:16 - LaserLockController - INFO - Line LINE_feature_1 is centered at offset 0.94.
+2025-11-25 12:00:16 - LaserLockController - INFO - Locking the laser worked \o/
