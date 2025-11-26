@@ -205,6 +205,9 @@ class RedPitayaControlService(BaseService, LinienControlService):
             # the new settings.
             if not self.parameters.pause_acquisition.value:
                 if data_uuid != self.data_uuid:
+                    # logger.debug(
+                    #     f"Ignoring data with uuid {data_uuid}, current uuid is {self.data_uuid}"
+                    # )
                     continue
 
                 data_loaded = pickle.loads(new_data)
@@ -295,11 +298,16 @@ class RedPitayaControlService(BaseService, LinienControlService):
             self.parameters.task.value.run()
 
     def exposed_start_sweep(self):
+        logger.info("Starting sweep")
         self.exposed_pause_acquisition()
+        logger.info("Acquisition paused")
         self.parameters.combined_offset.value = 0
         self.parameters.lock.value = False
+        logger.info("Parameters set for sweep")
         self.exposed_write_registers()
+        logger.info("Registers written")
         self.exposed_continue_acquisition()
+        logger.info("Acquisition continued")
 
     def exposed_start_lock(self):
         self.exposed_pause_acquisition()

@@ -326,8 +326,10 @@ class LaserLockController:
         frequence_stable = False
         cnt = 0
 
+        not_locked = True
+
         # --- Main Feedback Loop ---
-        while True:
+        while not_locked:
             # 1. Acquire signal and compute correlation and shift
             sweep_signal = self.hardware_interface.get_sweep()
             shift = SignalAnalysis.find_shift(sweep_signal,reference_signal)
@@ -437,11 +439,14 @@ class LaserLockController:
                         self.hardware_interface.client.connection.root.start_autolock(lock_start_ind,lock_end_ind,pickle.dumps(sweep_signal_raw))
                         print("Started autolock")
                         try:
-                            #self.hardware_interface.wait_for_lock_status(True)
+                            self.hardware_interface.wait_for_lock_status(True)
                             self.logger.info("Locking the laser worked \o/")
+                            not_locked = False
                         except Exception:
-                            #Sself.logger.info("Locking the laser failed :(")
+                            self.logger.info("Locking the laser failed :(")
                             self.hardware_interface.client.connection.root.start_sweep()
+                            not_locked = False
+                        self.logger.info("Exiting centering and locking procedure.")
                         return
                     elif space_left < free_space / 4:
                         self.logger.debug("Too far left: increase offset to decrease frequency")

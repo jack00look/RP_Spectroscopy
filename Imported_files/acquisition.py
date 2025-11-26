@@ -247,6 +247,7 @@ class AcquisitionService(Service):
     ]:
         no_data_available = self.data_hash is None
         data_not_changed = self.data_hash == last_hash
+        #logger.debug('Data requested: no_data_available=%s, data_not_changed=%s, pause_event=%s',no_data_available, data_not_changed, self.pause_event.is_set())
         if data_not_changed or no_data_available or self.pause_event.is_set():
             return False, None, None, None, None
         else:
@@ -289,20 +290,26 @@ class AcquisitionService(Service):
         self.data = None
 
     def exposed_continue_acquisition(self, uuid: Optional[float]) -> None:
+        logger.debug("Continuing acquisition")
         self.program_acquisition_and_rearm()
+        logger.debug("Acquisition reprogrammed")
         sleep(0.01)
         # resetting data here is not strictly required but we want to be on the safe
         # side
         self.data_hash = None
         self.data = None
         self.pause_event.clear()
+        logger.debug("Pause event cleared")
         self.data_uuid = uuid
+        logger.debug("Data UUID set: %s", self.data_uuid)
         # if we are sweeping, we have to skip one data set because an incomplete sweep
         # may have been recorded. When locked, this does not matter
+        logger.debug("confirmed_that_in_lock: %s", self.confirmed_that_in_lock)
         if self.confirmed_that_in_lock:
             self.skip_next_data_event.clear()
         else:
             self.skip_next_data_event.set()
+        logger.debug("Skip next data event set")
 
 
 def flash_fpga():

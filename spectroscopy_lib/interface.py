@@ -415,7 +415,7 @@ class LinienHardwareInterface:
                 break
 
             counter += 1
-            if counter > 50:
+            if counter > 10:
                 raise Exception("waited too long")
 
             time.sleep(1)
