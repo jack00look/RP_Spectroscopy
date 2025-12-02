@@ -3,6 +3,7 @@ import matplotlib as mpl
 from IPython import display
 from  matplotlib import pyplot as plt
 from scipy.ndimage import gaussian_filter1d
+from scipy.signal import find_peaks
 import numpy as np
 
 def locking_monitor(c, monitor_signal_reference_point):
@@ -15,6 +16,9 @@ def locking_monitor(c, monitor_signal_reference_point):
     unlocking_time_monitor_signal = 0 #unlocking time detection from monitor signal stats pov
     old_monitor_signal_against_reference_flag = 1
     monitor_signal_against_reference_flag = 1 #1 means locking is ok from the monitor signal stats pov
+    
+    old_control_signal_value_flag = 1
+    control_signal_value_flag = 1 #1 means ok
 
     while True:
 
@@ -34,14 +38,31 @@ def locking_monitor(c, monitor_signal_reference_point):
 
         ax0, ax1, ax2 = axs
 
+        # ---- Control Signal ----
+
         ax0.set_title("Control Signal")
         ax0.plot(control_history["times"], control_history["values"])
         #evaluation of the derivateive of the control signal
-        sigma = 0.1
+        sigma = 5
         dt = control_history["times"][-1] - control_history["times"][-2]
         d_control_history = np.diff(gaussian_filter1d(control_history["values"], sigma=sigma))/dt
         ax0_d = ax0.twinx()
         ax0_d.plot(control_history["times"][:-1], d_control_history, color="red", alpha=0.5)
+
+        detected_peaks, _ = find_peaks(np.abs(d_control_history), height=500)
+
+        if len(detected_peaks) > 0:
+            xs = [control_history["times"][i] for i in detected_peaks]
+            ax0_d.vlines(xs, ymin=ax0_d.get_ylim()[0], ymax=ax0_d.get_ylim()[1])
+            control_signal_value_flag = 0
+            if old_control_signal_value_flag and not control_signal_value_flag:
+                print("Fast variation of the control signal detected at time:", xs)
+                return
+
+
+        old_control_signal_value_flag = control_signal_value_flag
+
+        # ---- Slow Control Signal ----
 
         ax1.set_title("Slow Control Signal")
         ax1.plot(control_history["slow_times"], control_history["slow_values"])
@@ -51,6 +72,8 @@ def locking_monitor(c, monitor_signal_reference_point):
         ax1_d = ax1.twinx()
         ax1_d.plot(control_history["slow_times"][:-1], d_slow_control_history, color="red", alpha=0.5)
 
+        # ---- Monitor Signal ----
+
         ax2.set_title("Monitor Signal")
         ax2.plot(signal_history["times"], signal_history["values"])
         ax2.axhline(monitor_signal_reference_point[1], color="gray")
@@ -59,8 +82,6 @@ def locking_monitor(c, monitor_signal_reference_point):
 
         monitor_signal_mean, monitor_signal_std = monitor_signal_stats(signal_history["values"], evaluation_time)
         
-        old_monitor_signal_against_reference_flag = monitor_signal_against_reference_flag
-
         if (monitor_signal_mean - 2*monitor_signal_std > monitor_signal_reference_point[1]) or (monitor_signal_mean + 2*monitor_signal_std < monitor_signal_reference_point[1]):
             monitor_signal_against_reference_flag = 0
             if old_monitor_signal_against_reference_flag and not monitor_signal_against_reference_flag:
@@ -74,6 +95,9 @@ def locking_monitor(c, monitor_signal_reference_point):
                 print("System re-entered in the locking region at time:", signal_history["times"][-evaluation_time], "(unlocked for ", signal_history["times"][-evaluation_time]-unlocking_time_monitor_signal, "s)")
             else:
                 print("System is locked at time:", signal_history["times"][-evaluation_time])
+
+        old_monitor_signal_against_reference_flag = monitor_signal_against_reference_flag
+
         colours = ["orange", "green"]
         ax2.fill_between(signal_history["times"][-evaluation_time:], monitor_signal_mean - 2*monitor_signal_std, monitor_signal_mean + 2*monitor_signal_std, color=colours[monitor_signal_against_reference_flag], alpha=0.3)
 
