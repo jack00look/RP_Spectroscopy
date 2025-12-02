@@ -8,6 +8,10 @@ from scipy.signal import find_peaks
 import numpy as np
 import matplotlib.dates as mdates
 from datetime import datetime
+import logging
+import sys
+
+
 
 def locking_monitor(c, monitor_signal_reference_point):
     print("Starting locking monitor...")
@@ -221,4 +225,27 @@ def find_monitor_signal_fluctuations(monitor_signal, monitor_signal_reference_po
     evaluation_time = 10
     mean = np.mean(monitor_signal[-evaluation_time:])
     std_dev = np.std(monitor_signal[-evaluation_time:])
+
+def setup_logging(logger,logger_file):
+    """
+    Sets up the logging to stream and file
+    """
+    logger.setLevel(logging.INFO) #sets the level of this function in the logging different levels to INFO
+    console_handler = logging.StreamHandler(sys.stdout) #sends logging outputs to stream in the std output
+    file_handler = logging.FileHandler(logger_file) #sends logging outputs to a disk file
+    formatter = logging.Formatter(
+        fmt="%(asctime)s - %(name)s - %(levelname)s - %(message)s",
+        datefmt="%Y-%m-%d %H:%M:%S"
+    ) #organizes the log data as desired. It is a template
+    console_handler.setFormatter(formatter) #chooses this formatter for the console
+    file_handler.setFormatter(formatter) #chooses this formatter for the log file
+    console_handler.setLevel(logging.INFO) #sets the level of this logging informations to INFO in the console
+    file_handler.setLevel(logging.INFO) #sets the level of this logging informations to INFO in the file
+    if not logger.hasHandlers(): #if the logger does not have handlers it gives them to it, otherwise it clears the handlers and reassign them
+        logger.addHandler(console_handler)
+        logger.addHandler(file_handler)
+    else:
+        logger.handlers.clear()
+        logger.addHandler(console_handler)
+        logger.addHandler(file_handler)
 
