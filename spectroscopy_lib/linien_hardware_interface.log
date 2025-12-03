@@ -6040,3 +6040,7 @@
 2025-11-26 12:07:41 - LinienHardwareInterface - DEBUG - Sweep signal received from server.
 2025-11-26 12:07:42 - LinienHardwareInterface - DEBUG - Sweep signal received from server.
 2025-11-26 12:07:43 - LinienHardwareInterface - DEBUG - Sweep signal received from server.
+2025-12-03 09:04:47 - LinienHardwareInterface - INFO - Configuration loaded from /home/bec3/Desktop/Simone_Damian/Serafini/spectroscopy_lib/linien_connect_config.yaml:
+
+2025-12-03 09:04:47 - LinienHardwareInterface - INFO - Attempting connection via local_host address (192.168.1.159:18862)
+2025-12-03 09:04:50 - LinienHardwareInterface - INFO - Connected to device via local_host address

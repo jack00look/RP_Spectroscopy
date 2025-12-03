@@ -149,7 +149,7 @@ writeable_parameters:
   # These parameters control the modulation of the laser frequency
   modulation_amplitude:
     hardware_name: modulation_amplitude
-    initial_value: 0.1
+    initial_value: 0.5
     scaling: 4095.75  # This is value of Vpp constant
 
   modulation_frequency:
@@ -194,12 +194,12 @@ writeable_parameters:
   ### PID CONTROL SETUP ###
   pid_p:
     hardware_name: p
-    initial_value: 40
+    initial_value: 2000
     scaling: 1.0  # PID proportional gain
 
   pid_i:
     hardware_name: i
-    initial_value: 4
+    initial_value: 1
     scaling: 1.0  # PID integral gain
 
   pid_d:
@@ -214,14 +214,14 @@ writeable_parameters:
 
   pid_slow_strength:
     hardware_name: pid_on_slow_strength
-    initial_value: 5
+    initial_value: 10
     scaling: 1.0  # PID strength on slow control
 
   ### SIGNAL HISTORY SETUP ###
   # Should not need to change
   control_history_length:
     hardware_name: control_signal_history_length
-    initial_value: 1000 # Length of control signal history buffer in seconds
+    initial_value: 60 # Length of control signal history buffer in seconds
     scaling: 1.0  # Control signal history buffer size
 
 readable_parameters:

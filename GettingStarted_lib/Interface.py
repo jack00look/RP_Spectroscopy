@@ -74,7 +74,7 @@ class Interface:
     
     def _basic_configure(self):
 
-        self.load_parameter_config() # loads parameters from config file
+        self.load_parameter_config() # loads parameters from config file                           DA QUI
         #self.set_debug_mode()
 
         # setup the autolock mode
@@ -84,14 +84,8 @@ class Interface:
     
     def load_parameter_config(self):
         """
-        Load writeable and readable parameters from a YAML config file.
-
-        Args:
-            config_path (str or Path): Path to the YAML file.
-            client: The hardware interface client.
-
-        Returns:
-            Tuple (writeable_params, readable_params) as dictionaries.
+        Load writeable and readable parameters from a YAML config file and create corresponding parameter objects. It also
+        writes the initial values of the writeable parameters to the device only once at the end of the loading procedure.   
         """
         
         if not self.PARAMS_CONFIG_PATH.exists():
@@ -104,22 +98,59 @@ class Interface:
         for name, entry in config.get("writeable_parameters", {}).items():
             self.logger.debug(f"Loading writeable parameter {name} with hardware name {entry['hardware_name']}, initial value {entry['initial_value']}, scaling {entry['scaling']}")
             self.writeable_params[name] = WriteableParameter(
-                name=name,
-                hardware_name=entry["hardware_name"],
+                name=entry["hardware_name"],
                 initial_value=entry["initial_value"],
-                scaling=entry["scaling"]
+                scaling=entry["scaling"],
+                client = self.client
             )
 
         self.readable_params = {}
         for name,entry in config.get("readable_parameters", {}).items():
-            self.readable_params[name] = entry['hardware_name']
-        
-class WriteableParameter:
-    def __init__(self, name, hardware_name, initial_value, scaling):
-        self.name = name
-        self.hardware_name = hardware_name
-        self.initial_value = initial_value
-        self.scaling = scaling
+            self.readable_params[name] = ReadableParameter(
+                name=entry['hardware_name'],
+                client = self.client
+            )
 
-    def __repr__(self):
-        return f"Parameter(name={self.name}, hardware_name={self.hardware_name}, value={self.initial_value}, scaling={self.scaling})"
+        self.client.connection.root.write_registers()
+
+class ReadableParameter:
+    def __init__(self, name, client):
+        self.name = name
+        self.remote_value = None
+        self.client = client
+
+class WriteableParameter(ReadableParameter):
+    def __init__(self, name, initial_value, scaling, client):
+        super().__init__(name, client) #Writeable parameters are also readable parameters so they inherits all the attributes of the parent class
+        self.value = initial_value
+        self.scaling = scaling
+        self.initialize_parameter()
+
+    def get_attribute(self):
+        attribute = getattr(self.client.parameters, self.name)
+        return attribute
+
+    def initialize_parameter(self):
+        '''
+        The initialization is faster then using set_value for each parameter because it runs
+        only at the end the write_registers().
+        '''
+        if self.scaling is not None:
+            if self.scaling == 1:
+                self.get_attribute().value = int(self.value)
+            else:
+                self.get_attribute().value = self.value * self.scaling
+        else:
+            self.get_attribute().value = self.value
+
+    def set_value(self, value):
+        self.value = value
+        if self.scaling is not None:
+            if self.scaling == 1:
+                self.get_attribute().value = int(value)
+            else:
+                self.get_attribute().value = self.value * self.scaling
+        else:
+            self.get_attribute().value = self.value
+
+        self.client.connection.root.write_registers()
