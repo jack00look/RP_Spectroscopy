@@ -11,8 +11,6 @@ from datetime import datetime
 import logging
 import sys
 
-
-
 def locking_monitor(c, monitor_signal_reference_point):
     print("Starting locking monitor...")
     counter = 0

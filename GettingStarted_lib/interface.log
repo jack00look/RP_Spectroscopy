@@ -22,3 +22,12 @@
 
 2025-12-03 11:29:53 - Interface - INFO - Attempting connection via RedPitaya_K address (192.168.1.159:18862)
 2025-12-03 11:29:56 - Interface - INFO - Connected to device via RedPitaya_K address
+2025-12-03 11:49:19 - Interface - INFO - Configuration loaded from /home/bec3/Desktop/Simone_Damian/Serafini/GettingStarted_lib/connect_config.yaml:
+
+2025-12-03 11:49:19 - Interface - INFO - Attempting connection via RedPitaya_K address (192.168.1.159:18862)
+2025-12-03 11:49:22 - Interface - INFO - Connected to device via RedPitaya_K address
+2025-12-03 11:50:12 - Interface - ERROR - Parameter p not found among writeable parameters.
+2025-12-03 13:11:13 - Interface - INFO - Configuration loaded from /home/bec3/Desktop/Simone_Damian/Serafini/GettingStarted_lib/connect_config.yaml:
+
+2025-12-03 13:11:13 - Interface - INFO - Attempting connection via RedPitaya_K address (192.168.1.159:18862)
+2025-12-03 13:11:16 - Interface - INFO - Connected to device via RedPitaya_K address

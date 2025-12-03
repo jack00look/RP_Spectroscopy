@@ -4,6 +4,10 @@ from GettingStarted_lib.general_lib import setup_logging
 import yaml
 from linien_client.device import Device
 from linien_client.connection import LinienClient
+from linien_common.common import AutolockMode
+import pickle
+from time import sleep
+import numpy as np
 
 logger = logging.getLogger(__name__)
 logger.setLevel(logging.DEBUG)
@@ -74,13 +78,12 @@ class Interface:
     
     def _basic_configure(self):
 
-        self.load_parameter_config() # loads parameters from config file                           DA QUI
-        #self.set_debug_mode()
+        self.load_parameter_config() # loads parameters from config file
 
         # setup the autolock mode
-        #self.client.parameters.autolock_mode_preference.value = AutolockMode.ROBUST # use robust autolock mode
-        #self.client.parameters.autolock_determine_offset.value = False # do not determine offset automatically
-        #self.client.connection.root.write_registers()
+        self.client.parameters.autolock_mode_preference.value = AutolockMode.ROBUST # use robust autolock mode
+        self.client.parameters.autolock_determine_offset.value = False # do not determine offset automatically
+        self.client.connection.root.write_registers()
     
     def load_parameter_config(self):
         """
@@ -111,7 +114,91 @@ class Interface:
                 client = self.client
             )
 
+        self.write_registers()
+
+    def write_registers(self):
         self.client.connection.root.write_registers()
+
+    def check_for_changed_parameters(self):
+        self.client.parameters.check_for_changed_parameters()
+
+    def set_value(self, param_name, value):
+        """
+        Sets the value of a writeable parameter.
+        """
+        if param_name in self.writeable_params:
+            self.writeable_params[param_name].set_value(value)
+            self.write_registers()
+            self.logger.debug(f"Set parameter {param_name} to value {value}")
+        else:
+            self.logger.error(f"Parameter {param_name} not found among writeable parameters.")
+            raise KeyError(f"Parameter {param_name} not found among writeable parameters.")
+        
+    def get_remote_value(self, param_name):
+        """
+        Gets the remote value of a parameter.
+        """
+        if param_name in self.readable_params:
+            value = self.readable_params[param_name].get_remote_value()
+            self.logger.debug(f"Got remote value {value} for parameter {param_name}")
+            return value
+        elif param_name in self.writeable_params:
+            value = self.writeable_params[param_name].get_remote_value()
+            self.logger.debug(f"Got remote value {value} for parameter {param_name}")
+            return value
+        else:
+            self.logger.error(f"Parameter {param_name} not found among both readable and writeable parameters.")
+            raise KeyError(f"Parameter {param_name} not found among both readable and writeable parameters.")
+        
+    def wait_for_lock_status(self, should_be_locked):
+        """Wait until the laser reaches the desired lock state."""
+        counter = 0
+        while True:
+            print("checking lock status...")
+            to_plot = pickle.loads(self.client.parameters.to_plot.value)
+
+            print(f"to_plot keys: {list(to_plot.keys())}")
+
+            is_locked = "error_signal" in to_plot
+
+            if is_locked == should_be_locked:
+                break
+
+            counter += 1
+            if counter > 10:
+                raise Exception("waited too long")
+
+            sleep(1)
+
+    def start_sweep(self):
+        self.client.connection.root.start_sweep()
+
+    def get_sweep(self):
+        """
+        Neglectiing the mixing channel for simplicity.
+        """
+        self.start_sweep()
+        sleep(1)
+        self.check_for_changed_parameters()
+        to_plot = pickle.loads(self.readable_params.get_remote_value("to_plot"))
+        error_signal = np.array(to_plot["error_signal_1"])
+        sweep_signal = {}
+        sweep_center = self.writeable_params.get_remote_value("sweep_center")
+        sweep_range = self.writeable_params.get_remote_value("sweep_amplitude")
+        sweep_scan = np.linspace(sweep_center - sweep_range, sweep_center + sweep_range, len(error_signal))
+        sweep_signal['x'] = sweep_scan
+        sweep_signal['y'] = error_signal
+        return sweep_signal
+
+    def set_debug_mode(self):
+        self.logger.setLevel(logging.DEBUG)
+        for handler in self.logger.handlers:
+            handler.setLevel(logging.DEBUG)
+        
+    def unset_debug_mode(self):
+        self.logger.setLevel(logging.INFO)
+        for handler in self.logger.handlers:
+            handler.setLevel(logging.INFO)
 
 class ReadableParameter:
     def __init__(self, name, client):
@@ -119,16 +206,21 @@ class ReadableParameter:
         self.remote_value = None
         self.client = client
 
+    def get_attribute(self):
+        attribute = getattr(self.client.parameters, self.name)
+        return attribute
+    
+    def get_remote_value(self):
+        value = self.get_attribute().value
+        self.value = value
+        return value
+
 class WriteableParameter(ReadableParameter):
     def __init__(self, name, initial_value, scaling, client):
         super().__init__(name, client) #Writeable parameters are also readable parameters so they inherits all the attributes of the parent class
         self.value = initial_value
         self.scaling = scaling
         self.initialize_parameter()
-
-    def get_attribute(self):
-        attribute = getattr(self.client.parameters, self.name)
-        return attribute
 
     def initialize_parameter(self):
         '''
