@@ -159,7 +159,7 @@ class Interface:
             print("checking lock status...")
             to_plot = pickle.loads(self.client.parameters.to_plot.value)
 
-            print(f"to_plot keys: {list(to_plot.keys())}")
+            #print(f"to_plot keys: {list(to_plot.keys())}")
 
             is_locked = "error_signal" in to_plot
 

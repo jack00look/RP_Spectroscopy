@@ -173,6 +173,20 @@ def locking_monitor(c, monitor_signal_reference_point):
 
         sleep(2)
 
+def find_monitor_signal_peak(error_signal, monitor_signal, x0, x1):
+    error_signal_selected_region = error_signal[x0:x1]
+    monitor_signal_selected_region = monitor_signal[x0:x1]
+
+    maximum_error_index = np.argmax(error_signal_selected_region)
+    minimum_error_index = np.argmin(error_signal_selected_region)
+
+    if minimum_error_index < maximum_error_index:
+        #slope is positive so I have to look for a minimum in the monitor signal
+        return [x0 + np.argmin(monitor_signal_selected_region), monitor_signal_selected_region[np.argmin(monitor_signal_selected_region)]]
+    else:
+        return [x0 + np.argmax(monitor_signal_selected_region), monitor_signal_selected_region[np.argmax(monitor_signal_selected_region)]]
+
+
 def find_monitor_signal_reference_height(monitor_signal, error_signal, x0, x1):
     error_signal_selected_region = error_signal[x0:x1]
 
