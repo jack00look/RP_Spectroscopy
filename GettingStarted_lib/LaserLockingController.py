@@ -6,6 +6,7 @@ import logging
 from matplotlib import pyplot as plt
 from linien_common.common import ANALOG_OUT_V
 from IPython.display import clear_output
+import pickle
 
 class LaserLockingController():
     """
@@ -84,7 +85,7 @@ class LaserLockingController():
         ax1.axvline(x0, color="g")
         ax1.axvline(x1, color="g")
         ax2.axvline(x0, color="g")
-        ax2.axvline(x1, color="g")
+        ax2.axvline(x1, color="g", label = 'Selected lock region')
         
         ax2.legend()
 
@@ -93,4 +94,12 @@ class LaserLockingController():
 
         # ----
 
+        self.hardware_interface.client.connection.root.start_autolock(x0, x1, pickle.dumps(error_signal))
+
+        try:
+            self.hardware_interface.wait_for_lock_status(True)
+            print("Locking the laser worked! \\o/")
+            #gl.locking_monitor(c, monitor_signal_reference_point)
+        except Exception:
+            print("Locking the laser failed :(")
 

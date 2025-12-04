@@ -141,7 +141,7 @@ writeable_parameters:
 
   polarity_analog_out0:
     hardware_name: polarity_analog_out0
-    initial_value: 1 # 0 if when signal increases laser frequency increases, 1 if it decreases (NB absolute value not true, important is relative value to slow output)
+    initial_value: 0 # 0 if when signal increases laser frequency increases, 1 if it decreases (NB absolute value not true, important is relative value to slow output)
     scaling: null
 
   
@@ -199,7 +199,7 @@ writeable_parameters:
 
   pid_i:
     hardware_name: i
-    initial_value: 1
+    initial_value: 100
     scaling: 1.0  # PID integral gain
 
   pid_d:
