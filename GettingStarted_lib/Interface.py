@@ -8,6 +8,8 @@ from linien_common.common import AutolockMode
 import pickle
 from time import sleep
 import numpy as np
+from matplotlib import pyplot as plt
+from linien_common.common import ANALOG_OUT_V
 
 logger = logging.getLogger(__name__)
 logger.setLevel(logging.DEBUG)
@@ -128,7 +130,7 @@ class Interface:
         """
         if param_name in self.writeable_params:
             self.writeable_params[param_name].set_value(value)
-            self.write_registers()
+            self.write_registers() #actually it already does this in the other set_value
             self.logger.debug(f"Set parameter {param_name} to value {value}")
         else:
             self.logger.error(f"Parameter {param_name} not found among writeable parameters.")
@@ -180,15 +182,49 @@ class Interface:
         self.start_sweep()
         sleep(1)
         self.check_for_changed_parameters()
-        to_plot = pickle.loads(self.readable_params.get_remote_value("to_plot"))
+        to_plot = pickle.loads(self.readable_params["sweep_signal"].get_remote_value())
         error_signal = np.array(to_plot["error_signal_1"])
+        monitor_signal = np.array(to_plot["monitor_signal"])
         sweep_signal = {}
-        sweep_center = self.writeable_params.get_remote_value("sweep_center")
-        sweep_range = self.writeable_params.get_remote_value("sweep_amplitude")
+        sweep_center = self.writeable_params["sweep_center"].get_remote_value()
+        sweep_range = self.writeable_params["sweep_amplitude"].get_remote_value()
         sweep_scan = np.linspace(sweep_center - sweep_range, sweep_center + sweep_range, len(error_signal))
         sweep_signal['x'] = sweep_scan
-        sweep_signal['y'] = error_signal
+        sweep_signal['error_signal'] = error_signal
+        sweep_signal['monitor_signal'] = monitor_signal
         return sweep_signal
+    
+    def plot_sweep(self):
+        sweep_signal = self.get_sweep()
+
+        fig, ax1 = plt.subplots(tight_layout=True)
+
+        color1 = 'tab:blue'
+        ax1.plot(sweep_signal['x'], sweep_signal['error_signal'], color=color1)
+        ax1.axhline(y=0, color='gray')
+        ax1.set_ylabel('Error Signal [a.u.]', color=color1)
+        ax1.tick_params(axis='y', colors=color1)
+        ax1.spines['left'].set_color(color1)
+        ax1.set_xlabel('Sweep voltage [V]')
+
+        ax2 = ax1.twinx()
+        color2 = 'tab:red'
+        ax2.plot(sweep_signal['x'], sweep_signal['monitor_signal'], color=color2)
+        ax2.set_ylabel('Monitor Signal [a.u.]', color=color2)
+        ax2.tick_params(axis='y', colors=color2)
+        ax2.spines['right'].set_color(color2)
+        ax2.spines['left'].set_visible(False)
+
+        plt.title(f'Sweep Signal (centered at {(self.writeable_params["big_offset"].get_remote_value() * ANALOG_OUT_V):.2g}V)')
+        plt.show()
+
+    def adjust_vertical_offset(self):
+        actual_offset = self.writeable_params["offset_a"].get_remote_value()
+        print(f"Actual offset_a: {actual_offset}")
+        offset_variation = input("Enter offset variation to apply: ")
+        new_offset = actual_offset + int(offset_variation/self.writeable_params["offset_a"].scaling)
+        self.set_value("offset_a", new_offset)
+
 
     def set_debug_mode(self):
         self.logger.setLevel(logging.DEBUG)
@@ -199,6 +235,7 @@ class Interface:
         self.logger.setLevel(logging.INFO)
         for handler in self.logger.handlers:
             handler.setLevel(logging.INFO)
+
 
 class ReadableParameter:
     def __init__(self, name, client):
@@ -211,6 +248,7 @@ class ReadableParameter:
         return attribute
     
     def get_remote_value(self):
+        self.client.parameters.check_for_changed_parameters()
         value = self.get_attribute().value
         self.value = value
         return value
