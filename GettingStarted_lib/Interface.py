@@ -221,9 +221,10 @@ class Interface:
     def adjust_vertical_offset(self):
         actual_offset = self.writeable_params["offset_a"].get_remote_value()
         print(f"Actual offset_a: {actual_offset}")
-        offset_variation = input("Enter offset variation to apply: ")
-        new_offset = actual_offset + int(offset_variation/self.writeable_params["offset_a"].scaling)
-        self.set_value("offset_a", new_offset)
+        offset_variation = float(input("Enter offset variation to apply: "))
+        new_offset = actual_offset + offset_variation
+        self.set_value("offset_a", new_offset/self.writeable_params["offset_a"].scaling)
+        print(f"New offset_a set to: {new_offset}")
 
 
     def set_debug_mode(self):
