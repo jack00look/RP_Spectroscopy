@@ -10,6 +10,9 @@ from time import sleep
 import numpy as np
 from matplotlib import pyplot as plt
 from linien_common.common import ANALOG_OUT_V
+import matplotlib.dates as mdates
+from datetime import datetime
+from scipy.ndimage import gaussian_filter1d
 
 logger = logging.getLogger(__name__)
 logger.setLevel(logging.DEBUG)
@@ -225,6 +228,54 @@ class Interface:
         new_offset = actual_offset + offset_variation
         self.set_value("offset_a", new_offset/self.writeable_params["offset_a"].scaling)
         print(f"New offset_a set to: {new_offset}")
+
+    def get_history(self):
+        control_signal_history = self.readable_params["control_signal_history"].get_remote_value()
+        monitor_signal_history = self.readable_params["monitor_signal_history"].get_remote_value()
+        temp_dict = {}
+
+        # ---- Time conversion ----
+            # Control Signal
+        times_CS_unix = np.array(control_signal_history["times"]) #UNIX
+        times_CS_dt = [datetime.fromtimestamp(t) for t in times_CS_unix] #datetime
+        times_CS_mpl  = mdates.date2num(times_CS_dt)   #Matplotlib dates
+            # Slow CS
+        times_SCS_unix = np.array(control_signal_history["slow_times"]) #UNIX
+        times_SCS_dt = [datetime.fromtimestamp(t) for t in times_SCS_unix] #datetime
+        times_SCS_mpl  = mdates.date2num(times_SCS_dt)   #Matplotlib dates
+            # Monitor Signal
+        times_MS_unix = np.array(monitor_signal_history["times"]) #UNIX
+        times_MS_dt = [datetime.fromtimestamp(t) for t in times_MS_unix] #datetime
+        times_MS_mpl  = mdates.date2num(times_MS_dt)   #Matplotlib dates
+        # ----
+
+        temp_dict['fast_control_values'] = np.array(control_signal_history['values'])
+        temp_dict['fast_control_times_unix'] = times_CS_unix
+        temp_dict['fast_control_times_dt'] = times_CS_dt
+        temp_dict['fast_control_times_mpl'] = times_CS_mpl
+        #evaluation of the derivateive of the control signal
+        sigma = 5
+        dt = temp_dict['fast_control_times_unix'][-1] - temp_dict['fast_control_times_unix'][-2]
+        d_control_history = np.diff(gaussian_filter1d(temp_dict['fast_control_values'], sigma=sigma))/dt
+        temp_dict['d_fast_control_values'] = d_control_history
+
+        temp_dict['slow_control_values'] = np.array(control_signal_history['slow_values'])
+        temp_dict['slow_control_times_unix'] = times_SCS_unix
+        temp_dict['slow_control_times_dt'] = times_SCS_dt
+        temp_dict['slow_control_times_mpl'] = times_SCS_mpl
+        #evaluation of the derivateive of the slow control signal
+        dt_slow = temp_dict['slow_control_times_unix'][-1] - temp_dict['slow_control_times_unix'][-2]
+        d_slow_control_history = np.diff(gaussian_filter1d(temp_dict['slow_control_values'], sigma = sigma))/dt_slow
+        temp_dict['d_slow_control_values'] = d_slow_control_history
+        
+        temp_dict['monitor_values'] = np.array(monitor_signal_history['values'])
+        temp_dict['monitor_times_unix'] = times_MS_unix
+        temp_dict['monitor_times_dt'] = times_MS_dt
+        temp_dict['monitor_times_mpl'] = times_MS_mpl
+        
+        self.history = temp_dict
+
+        return temp_dict
 
 
     def set_debug_mode(self):

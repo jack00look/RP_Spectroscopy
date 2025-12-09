@@ -7,6 +7,15 @@ from matplotlib import pyplot as plt
 from linien_common.common import ANALOG_OUT_V
 from IPython.display import clear_output
 import pickle
+import time
+from time import sleep
+from IPython import display
+import numpy as np
+from scipy.ndimage import gaussian_filter1d
+import matplotlib.dates as mdates
+from scipy.signal import find_peaks
+
+
 
 class LaserLockingController():
     """
@@ -59,6 +68,7 @@ class LaserLockingController():
         clear_output(wait=True)
 
         expected_lock_monitor_signal_point = find_monitor_signal_peak(error_signal, monitor_signal, x0, x1)
+        self.expected_lock_monitor_signal_point = expected_lock_monitor_signal_point
         print("Expected lock monitor signal point:", expected_lock_monitor_signal_point)
 
         # ---- plot the sweep signal with expected lock point ----
@@ -102,4 +112,125 @@ class LaserLockingController():
             #gl.locking_monitor(c, monitor_signal_reference_point)
         except Exception:
             print("Locking the laser failed :(")
+            return
+
+    def start_locking_monitor(self):
+        self.stop = False
+
+        try:
+            self.hardware_interface.wait_for_lock_status(True)
+            print("Laser is locked! Starting locking monitor...")
+        except Exception:
+            print("Laser is not locked. Cannot start locking monitor.")
+            return
+        
+        while True:
+
+            history = self.hardware_interface.get_history()
+
+            self.detect_unlock_event()
+
+            self.show_history()
+
+            if self.stop:
+                print("Laser lost locking!")
+                print("Exiting locking monitor...")
+                break
+
+            sleep(2)
+
+    def show_history(self):
+
+        display.clear_output(wait=True)
+
+        fig, axs = plt.subplots(3,1, sharex=True, tight_layout=True)
+        ax0, ax1, ax2 = axs
+
+        fig.suptitle("History data")
+
+        # ---- Control Signal History ----
+
+        ax0.set_title("Control Signal")
+        ax0.plot(self.hardware_interface.history['fast_control_times_mpl'], self.hardware_interface.history['fast_control_values'])
+        ax0_d = ax0.twinx()
+        ax0_d.plot(self.hardware_interface.history['fast_control_times_mpl'][:-1], self.hardware_interface.history['d_fast_control_values'], color="red", alpha=0.5)
+        ax0_d.set_ylabel("Derivative", color="red")
+        ax0_d.tick_params(axis='y', colors="red")
+        ax0_d.spines['right'].set_color("red")
+
+        if self.unlock_events['unlock_event_fast_control_signal']:
+            ax0_d.vlines(self.unlock_events['unlock_event_fast_control_signal_at_time'], ymin=ax0_d.get_ylim()[0], ymax=ax0_d.get_ylim()[1], color="orange", label="Fast variation detected")
+            ax0_d.legend()
+
+        # ---- Slow Control Signal History ----
+
+        ax1.set_title("Slow Control Signal")
+        ax1.plot(self.hardware_interface.history['slow_control_times_mpl'], self.hardware_interface.history['slow_control_values'])
+        ax1_d = ax1.twinx()
+        ax1_d.plot(self.hardware_interface.history['slow_control_times_mpl'][:-1], self.hardware_interface.history['d_slow_control_values'], color="red", alpha=0.5)
+        ax1_d.set_ylabel("Derivative", color="red")
+        ax1_d.tick_params(axis='y', colors="red")
+        ax1_d.spines['right'].set_color("red")
+
+        if self.unlock_events['unlock_event_slow_control_signal']:
+            ax1_d.vlines(self.unlock_events['unlock_event_slow_control_signal_at_time'], ymin=ax1_d.get_ylim()[0], ymax=ax1_d.get_ylim()[1], color="orange", label="Fast variation detected")
+            ax1_d.legend()
+
+        # ---- Monitor Signal ----
+
+        ax2.set_title("Monitor Signal")
+        ax2.plot(self.hardware_interface.history['monitor_times_mpl'], self.hardware_interface.history['monitor_values'])
+        ax2.axhline(self.expected_lock_monitor_signal_point[1], color="gray")
+
+        # ----
+
+        ax2.xaxis.set_major_formatter(mdates.DateFormatter("%H:%M:%S"))
+        ax2.xaxis.set_major_locator(mdates.AutoDateLocator())
+        # Rotate labels if needed
+        fig.autofmt_xdate()
+
+        display.display(fig)
+
+        plt.close(fig)
+
+    def detect_unlock_event(self):
+        """
+        We have different ways to detect an unlock event:
+            1) Fast variations of the fast control signal (derivative too high)
+            2) Fast variation of the slow control signal (derivative too high)
+        """
+
+        temp_unlock_events = {}
+
+        time_now = time.time()
+
+        # 1) Fast variations of the fast control signal (derivative too high)
+
+        detected_peaks, _ = find_peaks(np.abs(self.hardware_interface.history['d_fast_control_values']), height=500)
+        detected_peaks = [i for i in detected_peaks if  i > int(len(self.hardware_interface.history['d_fast_control_values'])/2)] #only consider recent peaks
+
+        if len(detected_peaks) > 0:
+            xs = [self.hardware_interface.history['fast_control_times_mpl'][i] for i in detected_peaks]
+            print("Fast variation of the fast control signal detected at time:", self.hardware_interface.history['fast_control_times_dt'][detected_peaks[0]].strftime("%Y-%m-%d %H:%M:%S"))
+            temp_unlock_events['unlock_event_fast_control_signal'] = True
+            temp_unlock_events['unlock_event_fast_control_signal_at_time'] = xs
+            self.stop = True
+
+        # 2) Fast variation of the slow control signal (derivative too high)
+
+        detected_peaks, _ = find_peaks(np.abs(self.hardware_interface.history['d_slow_control_values']), height=40)
+        detected_peaks = [i for i in detected_peaks if  i > int(len(self.hardware_interface.history['d_slow_control_values'])/2)] #only consider recent peaks
+
+
+        if len(detected_peaks) > 0:
+            xs = [self.hardware_interface.history['slow_control_times_mpl'][i] for i in detected_peaks]
+            print("Fast variation of the slow control signal detected at time:", self.hardware_interface.history['slow_control_times_dt'][detected_peaks[0]].strftime("%Y-%m-%d %H:%M:%S"))
+            temp_unlock_events['unlock_event_slow_control_signal'] = True
+            temp_unlock_events['unlock_event_slow_control_signal_at_time'] = xs
+            self.stop = True
+
+        self.unlock_events = temp_unlock_events
+
+        return
+
 
