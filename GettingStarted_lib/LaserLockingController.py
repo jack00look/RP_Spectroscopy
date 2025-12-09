@@ -28,6 +28,9 @@ class LaserLockingController():
         self.logger = logging.getLogger(self.__class__.__name__)
         setup_logging(self.logger, self.LOG_FILE)
 
+        self.lock_unlock_logger = logging.getLogger("UnlockEventsLogger")
+        setup_logging(self.lock_unlock_logger, Path(__file__).parent / "lock_unlock_events.log")
+
         self.hardware_interface = interface
         self.logger.info("LaserLockController initialized successfully.")
 
@@ -109,7 +112,8 @@ class LaserLockingController():
         try:
             self.hardware_interface.wait_for_lock_status(True)
             print("Locking the laser worked! \\o/")
-            #gl.locking_monitor(c, monitor_signal_reference_point)
+            sleep(2)
+            self.lock_unlock_logger.info("Laser locked at time: " + time.strftime("%Y-%m-%d %H:%M:%S", time.localtime()))
         except Exception:
             print("Locking the laser failed :(")
             return
@@ -133,7 +137,8 @@ class LaserLockingController():
             self.show_history()
 
             if self.stop:
-                print("Laser lost locking!")
+                print("Laser lost locking:")
+
                 print("Exiting locking monitor...")
                 break
 
@@ -198,9 +203,13 @@ class LaserLockingController():
         We have different ways to detect an unlock event:
             1) Fast variations of the fast control signal (derivative too high)
             2) Fast variation of the slow control signal (derivative too high)
+            3) If fast control signal is saturated
+            4) If slow control signal is saturated
         """
 
         temp_unlock_events = {}
+        temp_unlock_events['unlock_event_fast_control_signal'] = False
+        temp_unlock_events['unlock_event_slow_control_signal'] = False
 
         time_now = time.time()
 
@@ -212,6 +221,7 @@ class LaserLockingController():
         if len(detected_peaks) > 0:
             xs = [self.hardware_interface.history['fast_control_times_mpl'][i] for i in detected_peaks]
             print("Fast variation of the fast control signal detected at time:", self.hardware_interface.history['fast_control_times_dt'][detected_peaks[0]].strftime("%Y-%m-%d %H:%M:%S"))
+            self.lock_unlock_logger.info(f"Fast variation of the fast control signal detected at time: {self.hardware_interface.history['fast_control_times_dt'][detected_peaks[0]].strftime('%Y-%m-%d %H:%M:%S')}")
             temp_unlock_events['unlock_event_fast_control_signal'] = True
             temp_unlock_events['unlock_event_fast_control_signal_at_time'] = xs
             self.stop = True
@@ -225,9 +235,13 @@ class LaserLockingController():
         if len(detected_peaks) > 0:
             xs = [self.hardware_interface.history['slow_control_times_mpl'][i] for i in detected_peaks]
             print("Fast variation of the slow control signal detected at time:", self.hardware_interface.history['slow_control_times_dt'][detected_peaks[0]].strftime("%Y-%m-%d %H:%M:%S"))
+            self.lock_unlock_logger.info(f"Fast variation of the slow control signal detected at time: {self.hardware_interface.history['slow_control_times_dt'][detected_peaks[0]].strftime('%Y-%m-%d %H:%M:%S')}")
             temp_unlock_events['unlock_event_slow_control_signal'] = True
             temp_unlock_events['unlock_event_slow_control_signal_at_time'] = xs
             self.stop = True
+
+        # 3) If fast control signal is saturated
+        # 4) If slow control signal is saturated
 
         self.unlock_events = temp_unlock_events
 
