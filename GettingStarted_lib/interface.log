@@ -88,3 +88,11 @@
 
 2025-12-09 11:52:36 - Interface - INFO - Attempting connection via RedPitaya_K address (192.168.1.159:18862)
 2025-12-09 11:52:37 - Interface - INFO - Connected to device via RedPitaya_K address
+2025-12-12 08:47:54 - Interface - INFO - Configuration loaded from /home/bec3/Desktop/Simone_Damian/Serafini/GettingStarted_lib/connect_config.yaml:
+
+2025-12-12 08:47:54 - Interface - INFO - Attempting connection via RedPitaya_K address (192.168.1.159:18862)
+2025-12-12 08:48:25 - Interface - INFO - Connected to device via RedPitaya_K address
+2025-12-12 09:43:22 - Interface - INFO - Configuration loaded from /home/bec3/Desktop/Simone_Damian/Serafini/GettingStarted_lib/connect_config.yaml:
+
+2025-12-12 09:43:22 - Interface - INFO - Attempting connection via RedPitaya_K address (192.168.1.159:18862)
+2025-12-12 09:43:25 - Interface - INFO - Connected to device via RedPitaya_K address

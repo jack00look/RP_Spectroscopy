@@ -179,7 +179,6 @@ class LaserLockController:
         ax1.axhline(y=0.,color='0.8',linestyle='dashed')
         ax1.axvspan(V_lock_start,V_lock_end,color = 'r',alpha=0.2,label = 'locking region')
 
-
         plt.show()
         self.logger.info(f"Reference line {key} saved successfully.")
 
@@ -227,9 +226,9 @@ class LaserLockController:
         fig,ax = plt.subplots(nrows= 1 + num_reference_lines, figsize=(10, 2 * (1 + num_reference_lines)), tight_layout=True)
 
         colors = plt.cm.viridis(np.linspace(0, 1, num_reference_lines))
-        for index,key in enumerate(self.data_handler.reference_lines):
+        for index, key in enumerate(self.data_handler.reference_lines):
             reference_signal = self.data_handler.reference_lines[key]
-            len_reference_signal = reference_signal['x'][-1]-reference_signal['x'][0]
+            len_reference_signal = reference_signal['x'][-1] - reference_signal['x'][0]
             ind = find_best_correlation(correlations[index,:], len_matches[index,:], linewidth=len_reference_signal)
             self.lines_positions[key] = V_scan[ind]
             self.lines_offset[key] = offsets[index, ind] + self.hardware_interface.get_param('offset_a')

@@ -10,3 +10,13 @@
 2025-12-09 08:58:52 - LaserLockingController - INFO - LaserLockController initialized successfully.
 2025-12-09 11:42:25 - LaserLockingController - INFO - LaserLockController initialized successfully.
 2025-12-09 11:53:02 - LaserLockingController - INFO - LaserLockController initialized successfully.
+2025-12-12 08:48:39 - LaserLockingController - INFO - LaserLockController initialized successfully.
+2025-12-12 09:18:24 - LaserLockingController - INFO - Starting scan from 0.9V to 1.0V with 10 points.
+2025-12-12 09:18:45 - LaserLockingController - INFO - Scan completed successfully.
+2025-12-12 09:43:26 - LaserLockingController - INFO - LaserLockController initialized successfully.
+2025-12-12 09:45:15 - LaserLockingController - INFO - Starting scan from 0.9V to 1.0V with 10 points.
+2025-12-12 09:45:39 - LaserLockingController - INFO - Scan completed successfully.
+2025-12-12 09:47:59 - LaserLockingController - INFO - Saving reference line with key K_D2.
+2025-12-12 09:47:59 - LaserLockingController - INFO - Reference line K_D2 saved successfully.
+2025-12-12 09:48:34 - LaserLockingController - INFO - Saving reference line with key K_D2.
+2025-12-12 09:48:35 - LaserLockingController - INFO - Reference line K_D2 saved successfully.
