@@ -24,6 +24,7 @@ from linien_common.common import (
     AUTOLOCK_MAX_N_INSTRUCTIONS,
     SpectrumUncorrelatedException,
     determine_shift_by_correlation,
+    AutolockMode,
 )
 from linien_server.autolock.utils import (
     crop_spectra_to_same_view,
@@ -120,23 +121,39 @@ class RobustAutolock:
             # throw an error
             self.setup_timeout()
 
-            # first reset lock in case it was True. This ensures that autolock starts
-            # properly once all parameters are set
+            # first reset the lock (if it was True). This ensures autolock's FSM
+            # starts from a clean state before we program new instructions.
             self.parameters.lock.value = False
             self.control.exposed_write_registers()
 
+            # --- PROGRAM ALL AUTLOCK PARAMETERS LOCALLY FIRST ---
+            # write the autolock parameters (time scale, instruction list and final wait)
+            # BEFORE we switch the autolock mode on. This ensures the FPGA never sees
+            # 'ROBUST' mode while the instruction set is still outdated / partial.
             self.parameters.autolock_time_scale.value = time_scale
             self.parameters.autolock_instructions.value = description
             self.parameters.autolock_final_wait_time.value = final_wait_time
 
+            # Now set the autolock mode to ROBUST (only after the parameters are in place).
+            # Doing this *after* the parameters prevents the FPGA state machine from
+            # starting with stale/partial instructions.
+            self.parameters.autolock_mode.value = AutolockMode.ROBUST
+
+            # Commit the whole group of autolock values in a single write.
+            # control.exposed_write_registers triggers the register writer which will
+            # do the minimal-diff writes — but because we've changed the related
+            # autolock keys together the FPGA will see the intended set.
             self.control.exposed_write_registers()
 
+            # finally request the lock (enable autolock)
             self.parameters.lock.value = True
             self.control.exposed_write_registers()
 
+            # finished preparing
             self.parameters.autolock_preparing.value = False
 
             self._done = True
+
 
         else:
             logger.error(
