@@ -9,7 +9,7 @@ import pickle
 from time import sleep
 import numpy as np
 from matplotlib import pyplot as plt
-from linien_common.common import ANALOG_OUT_V
+from linien_common.common import ANALOG_OUT_V, Vpp
 import matplotlib.dates as mdates
 from datetime import datetime
 from scipy.ndimage import gaussian_filter1d
@@ -186,8 +186,8 @@ class Interface:
         sleep(1)
         self.check_for_changed_parameters()
         to_plot = pickle.loads(self.readable_params["sweep_signal"].get_remote_value())
-        error_signal = np.array(to_plot["error_signal_1"])
-        monitor_signal = np.array(to_plot["monitor_signal"])
+        error_signal = np.array(to_plot["error_signal_1"]/(2*Vpp))
+        monitor_signal = np.array(to_plot["monitor_signal"]/(2*Vpp))
         sweep_signal = {}
         sweep_center = self.writeable_params["sweep_center"].get_remote_value()
         sweep_range = self.writeable_params["sweep_amplitude"].get_remote_value()
@@ -205,7 +205,7 @@ class Interface:
         color1 = 'tab:blue'
         ax1.plot(sweep_signal['x'], sweep_signal['error_signal'], color=color1)
         ax1.axhline(y=0, color='gray')
-        ax1.set_ylabel('Error Signal [a.u.]', color=color1)
+        ax1.set_ylabel('Error Signal [V]', color=color1)
         ax1.tick_params(axis='y', colors=color1)
         ax1.spines['left'].set_color(color1)
         ax1.set_xlabel('Sweep voltage [V]')
@@ -213,12 +213,12 @@ class Interface:
         ax2 = ax1.twinx()
         color2 = 'tab:red'
         ax2.plot(sweep_signal['x'], sweep_signal['monitor_signal'], color=color2)
-        ax2.set_ylabel('Monitor Signal [a.u.]', color=color2)
+        ax2.set_ylabel('Monitor Signal [V]', color=color2)
         ax2.tick_params(axis='y', colors=color2)
         ax2.spines['right'].set_color(color2)
         ax2.spines['left'].set_visible(False)
 
-        plt.title(f'Sweep Signal (centered at {(self.writeable_params["big_offset"].get_remote_value() * ANALOG_OUT_V):.2g}V)')
+        plt.title(f'Sweep Signal (centered at {(self.writeable_params["big_offset"].get_remote_value() * ANALOG_OUT_V * self.writeable_params["big_offset"].scaling):.2g}V)')
         plt.show()
 
     def adjust_vertical_offset(self):
@@ -226,7 +226,7 @@ class Interface:
         print(f"Actual offset_a: {actual_offset}")
         offset_variation = float(input("Enter offset variation to apply: "))
         new_offset = actual_offset + offset_variation
-        self.set_value("offset_a", new_offset/self.writeable_params["offset_a"].scaling)
+        self.set_value("offset_a", new_offset)
         print(f"New offset_a set to: {new_offset}")
 
     def get_history(self):
@@ -249,7 +249,7 @@ class Interface:
         times_MS_mpl  = mdates.date2num(times_MS_dt)   #Matplotlib dates
         # ----
 
-        temp_dict['fast_control_values'] = np.array(control_signal_history['values'])
+        temp_dict['fast_control_values'] = np.array(control_signal_history['values']) / ( 2 * Vpp )
         temp_dict['fast_control_times_unix'] = times_CS_unix
         temp_dict['fast_control_times_dt'] = times_CS_dt
         temp_dict['fast_control_times_mpl'] = times_CS_mpl
@@ -259,7 +259,7 @@ class Interface:
         d_control_history = np.diff(gaussian_filter1d(temp_dict['fast_control_values'], sigma=sigma))/dt
         temp_dict['d_fast_control_values'] = d_control_history
 
-        temp_dict['slow_control_values'] = np.array(control_signal_history['slow_values'])
+        temp_dict['slow_control_values'] = np.array(control_signal_history['slow_values']) * ANALOG_OUT_V
         temp_dict['slow_control_times_unix'] = times_SCS_unix
         temp_dict['slow_control_times_dt'] = times_SCS_dt
         temp_dict['slow_control_times_mpl'] = times_SCS_mpl
@@ -268,7 +268,7 @@ class Interface:
         d_slow_control_history = np.diff(gaussian_filter1d(temp_dict['slow_control_values'], sigma = sigma))/dt_slow
         temp_dict['d_slow_control_values'] = d_slow_control_history
         
-        temp_dict['monitor_values'] = np.array(monitor_signal_history['values'])
+        temp_dict['monitor_values'] = np.array(monitor_signal_history['values']) / ( 2 * Vpp )
         temp_dict['monitor_times_unix'] = times_MS_unix
         temp_dict['monitor_times_dt'] = times_MS_dt
         temp_dict['monitor_times_mpl'] = times_MS_mpl
@@ -336,3 +336,9 @@ class WriteableParameter(ReadableParameter):
             self.get_attribute().value = self.value
 
         self.client.connection.root.write_registers()
+
+    def get_remote_value(self):
+        self.client.parameters.check_for_changed_parameters()
+        value = self.get_attribute().value / self.scaling
+        self.value = value
+        return value

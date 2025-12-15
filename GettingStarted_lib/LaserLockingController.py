@@ -4,7 +4,7 @@ from GettingStarted_lib.general_lib import setup_logging, find_monitor_signal_pe
 from pathlib import Path
 import logging
 from matplotlib import pyplot as plt
-from linien_common.common import ANALOG_OUT_V
+from linien_common.common import ANALOG_OUT_V, Vpp
 from IPython.display import clear_output
 import pickle
 import time
@@ -61,7 +61,7 @@ class LaserLockingController():
         color1 = 'tab:blue'
         ax1.plot(error_signal, color=color1)
         ax1.axhline(y=0, color='gray')
-        ax1.set_ylabel('Error Signal [a.u.]', color=color1)
+        ax1.set_ylabel('Error Signal [V]', color=color1)
         ax1.tick_params(axis='y', colors=color1)
         ax1.spines['left'].set_color(color1)
         #ax1.set_xlabel('Sweep voltage [V]')
@@ -69,12 +69,12 @@ class LaserLockingController():
         ax2 = ax1.twinx()
         color2 = 'tab:red'
         ax2.plot(monitor_signal, color=color2)
-        ax2.set_ylabel('Monitor Signal [a.u.]', color=color2)
+        ax2.set_ylabel('Monitor Signal [V]', color=color2)
         ax2.tick_params(axis='y', colors=color2)
         ax2.spines['right'].set_color(color2)
         ax2.spines['left'].set_visible(False)
 
-        plt.title(f'Sweep Signal (centered at {(self.hardware_interface.writeable_params["big_offset"].get_remote_value() * ANALOG_OUT_V):.2g}V)')
+        plt.title(f'Sweep Signal (centered at {(self.hardware_interface.writeable_params["big_offset"].get_remote_value() * ANALOG_OUT_V * self.hardware_interface.writeable_params["big_offset"].scaling):.2g} V)')
         plt.show()
 
         # ---- ask user to select locking region ----
@@ -86,7 +86,7 @@ class LaserLockingController():
 
         expected_lock_monitor_signal_point = find_monitor_signal_peak(error_signal, monitor_signal, x0, x1)
         self.expected_lock_monitor_signal_point = expected_lock_monitor_signal_point
-        print("Expected lock monitor signal point:", expected_lock_monitor_signal_point)
+        #print("Expected lock monitor signal point:", expected_lock_monitor_signal_point)
 
         # ---- plot the sweep signal with expected lock point ----
         fig, ax1 = plt.subplots(tight_layout=True)
@@ -94,7 +94,7 @@ class LaserLockingController():
         color1 = 'tab:blue'
         ax1.plot(error_signal, color=color1)
         ax1.axhline(y=0, color='gray')
-        ax1.set_ylabel('Error Signal [a.u.]', color=color1)
+        ax1.set_ylabel('Error Signal [V]', color=color1)
         ax1.tick_params(axis='y', colors=color1)
         ax1.spines['left'].set_color(color1)
         #ax1.set_xlabel('Sweep voltage [V]')
@@ -102,7 +102,7 @@ class LaserLockingController():
         ax2 = ax1.twinx()
         color2 = 'tab:red'
         ax2.plot(monitor_signal, color=color2)
-        ax2.set_ylabel('Monitor Signal [a.u.]', color=color2)
+        ax2.set_ylabel('Monitor Signal [V]', color=color2)
         ax2.tick_params(axis='y', colors=color2)
         ax2.spines['right'].set_color(color2)
         ax2.spines['left'].set_visible(False)
@@ -116,12 +116,12 @@ class LaserLockingController():
         
         ax2.legend()
 
-        plt.title(f'Sweep Signal (centered at {(self.hardware_interface.writeable_params["big_offset"].get_remote_value() * ANALOG_OUT_V):.2g}V)')
+        plt.title(f'Sweep Signal (centered at {(self.hardware_interface.writeable_params["big_offset"].get_remote_value() * ANALOG_OUT_V * self.hardware_interface.writeable_params["big_offset"].scaling):.2g} V)')
         plt.show()
 
         # ----
 
-        self.hardware_interface.client.connection.root.start_autolock(x0, x1, pickle.dumps(error_signal))
+        self.hardware_interface.client.connection.root.start_autolock(x0, x1, pickle.dumps(error_signal*2*Vpp))
 
         try:
             self.hardware_interface.wait_for_lock_status(True)
@@ -155,6 +155,7 @@ class LaserLockingController():
                 print("Trying to center the line looking at the slow control signal...")
                 self.hardware_interface.start_sweep()
                 self.center_after_unlock()
+                sleep(1)
                 self.hardware_interface.plot_sweep()
                 break
 
@@ -173,9 +174,12 @@ class LaserLockingController():
 
         ax0.set_title("Control Signal")
         ax0.plot(self.hardware_interface.history['fast_control_times_mpl'], self.hardware_interface.history['fast_control_values'])
+        ax0.set_ylabel("Signal [V]", color = 'tab:blue')
+        ax0.tick_params(axis='y', colors="tab:blue")
+        ax0.spines['left'].set_color("tab:blue")
         ax0_d = ax0.twinx()
         ax0_d.plot(self.hardware_interface.history['fast_control_times_mpl'][:-1], self.hardware_interface.history['d_fast_control_values'], color="red", alpha=0.5)
-        ax0_d.set_ylabel("Derivative", color="red")
+        ax0_d.set_ylabel("Derivative [V/s]", color="red")
         ax0_d.tick_params(axis='y', colors="red")
         ax0_d.spines['right'].set_color("red")
 
@@ -187,9 +191,12 @@ class LaserLockingController():
 
         ax1.set_title("Slow Control Signal")
         ax1.plot(self.hardware_interface.history['slow_control_times_mpl'], self.hardware_interface.history['slow_control_values'])
+        ax1.set_ylabel("Signal [V]", color = 'tab:blue')
+        ax1.tick_params(axis='y', colors="tab:blue")
+        ax1.spines['left'].set_color("tab:blue")
         ax1_d = ax1.twinx()
         ax1_d.plot(self.hardware_interface.history['slow_control_times_mpl'][:-1], self.hardware_interface.history['d_slow_control_values'], color="red", alpha=0.5)
-        ax1_d.set_ylabel("Derivative", color="red")
+        ax1_d.set_ylabel("Derivative [V/s]", color="red")
         ax1_d.tick_params(axis='y', colors="red")
         ax1_d.spines['right'].set_color("red")
 
@@ -201,6 +208,9 @@ class LaserLockingController():
 
         ax2.set_title("Monitor Signal")
         ax2.plot(self.hardware_interface.history['monitor_times_mpl'], self.hardware_interface.history['monitor_values'])
+        ax2.set_ylabel("Signal [V]", color = 'tab:blue')
+        ax2.tick_params(axis='y', colors="tab:blue")
+        ax2.spines['left'].set_color("tab:blue")
         ax2.axhline(self.expected_lock_monitor_signal_point[1], color="gray")
 
         # ----
@@ -231,7 +241,7 @@ class LaserLockingController():
 
         # 1) Fast variations of the fast control signal (derivative too high)
 
-        detected_peaks, _ = find_peaks(np.abs(self.hardware_interface.history['d_fast_control_values']), height=500)
+        detected_peaks, _ = find_peaks(np.abs(self.hardware_interface.history['d_fast_control_values']), height=0.2)
         detected_peaks = [i for i in detected_peaks if  i > int(len(self.hardware_interface.history['d_fast_control_values'])/2)] #only consider recent peaks
 
         if len(detected_peaks) > 0:
@@ -244,7 +254,7 @@ class LaserLockingController():
 
         # 2) Fast variation of the slow control signal (derivative too high)
 
-        detected_peaks, _ = find_peaks(np.abs(self.hardware_interface.history['d_slow_control_values']), height=40)
+        detected_peaks, _ = find_peaks(np.abs(self.hardware_interface.history['d_slow_control_values']), height=0.002)
         detected_peaks = [i for i in detected_peaks if  i > int(len(self.hardware_interface.history['d_slow_control_values'])/2)] #only consider recent peaks
 
 
@@ -336,11 +346,11 @@ class LaserLockingController():
         ax.hlines(0, np.min(sweep_signal['x']), np.max(sweep_signal['x']), color = '0.8', linestyles = 'dashed')
         ax.set_title(f'Reference Line {key}')
         ax.set_xlabel('Voltage (V)')
-        ax.set_ylabel('Signal (a.u.)')
+        ax.set_ylabel('Signal (V)')
         ax.legend()
         ax1.plot(sweep_signal_cut['x'],sweep_signal_cut['y'])
         ax1.set_xlabel('Voltage (V)')
-        ax1.set_ylabel('Signal (a.u.)')
+        ax1.set_ylabel('Signal (V)')
         ax1.axhline(y=0.,color='0.8',linestyle='dashed')
         ax1.axvspan(V_lock_start,V_lock_end,color = 'r',alpha=0.2,label = 'locking region')
 
@@ -425,7 +435,7 @@ class LaserLockingController():
             ax[index + 1].axhline(y=0.,color='0.8',linestyle='dashed')
             ax[index + 1].set_title(f'Sweep at {V_scan[ind]}V')
             ax[index + 1].set_xlabel('Voltage (V)')
-            ax[index + 1].set_ylabel('Signal (a.u.)')
+            ax[index + 1].set_ylabel('Signal (V)')
             self.logger.debug("Offset with respect to the reference line:"+str(self.lines_offset[key]))
         #print(self.lines_positions)
         #print(self.lines_offset)
@@ -518,7 +528,7 @@ class LaserLockingController():
             plot2.set_ylim(-1.1, 1.1)
             plot1.set_title(f'Sweep Signal with {line_name} (Offset = {offset:.2f} V) \n Correlation = {corr:.2f}, Length of match = {len_match:.2f} V')
             plot1.set_xlabel('Voltage (V)')
-            plot1.set_ylabel('Signal (a.u.)')
+            plot1.set_ylabel('Signal (V)')
             plot2.set_title(f'Shift over Time (Jitter Threshold = {JITTER_THR})')
             plot2.set_xlabel('Time (s)')
             plot2.set_ylabel('Shift (V)')
