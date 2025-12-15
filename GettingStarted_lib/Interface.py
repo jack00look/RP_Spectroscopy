@@ -319,7 +319,7 @@ class WriteableParameter(ReadableParameter):
         '''
         if self.scaling is not None:
             if self.scaling == 1:
-                self.get_attribute().value = int(self.value)
+                self.get_attribute().value = self.value
             else:
                 self.get_attribute().value = self.value * self.scaling
         else:
@@ -329,7 +329,7 @@ class WriteableParameter(ReadableParameter):
         self.value = value
         if self.scaling is not None:
             if self.scaling == 1:
-                self.get_attribute().value = int(value)
+                self.get_attribute().value = value
             else:
                 self.get_attribute().value = self.value * self.scaling
         else:

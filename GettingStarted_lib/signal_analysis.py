@@ -20,6 +20,10 @@ class SignalAnalysis():
     
     @staticmethod
     def downsample_signals(sweep_signal,reference_signal):
+        """
+        It makes sure that both signals have the same sampling rate by downsampling the one with the higher sampling rate.
+        """
+
         sweep_signal_x = sweep_signal['x']
         sweep_signal_y = sweep_signal['y']
         reference_signal_x = reference_signal['x']
@@ -43,9 +47,9 @@ class SignalAnalysis():
     
 
     @staticmethod
-    def find_shift(sweep_signal,reference_signal):
+    def find_shift(sweep_signal, reference_signal):
         """
-        Find how much the reference signal is shifted in the sweep signal
+        Find how much the reference signal is shifted inside the sweep signal.
         """
 
         # sometimes there are artifacts at the beginning and end of the sweep signal
@@ -56,7 +60,7 @@ class SignalAnalysis():
         downsampled_sweep_signal, downsampled_reference_signal = SignalAnalysis.downsample_signals(sweep_signal_cropped, reference_signal)
         dx = downsampled_sweep_signal['x'][1] - downsampled_sweep_signal['x'][0]
 
-        # calculate the cross-correlation between the cropped sweep signal and the reference signal
+        # calculate the cross-correlation between the cropped sweep signal and reference signal
         correlation = correlate(downsampled_sweep_signal['y'], downsampled_reference_signal['y'], mode='full')
 
         # find the index of the maximum correlation value
@@ -66,7 +70,10 @@ class SignalAnalysis():
         return shift
     
     @staticmethod
-    def find_window(sweep_signal, reference_signal,shift):
+    def find_window(sweep_signal, reference_signal, shift):
+        """
+        Returns the window in which both signals overlap after applying the shift.
+        """
         downsampled_sweep_signal, downsampled_reference_signal = SignalAnalysis.downsample_signals(sweep_signal, reference_signal)
         ref_shifted_min = downsampled_reference_signal['x'][0] + shift
         ref_shifted_max = downsampled_reference_signal['x'][-1] + shift
@@ -92,6 +99,9 @@ class SignalAnalysis():
 
     @staticmethod
     def match_signals(sweep_signal, reference_signal):
+        """
+        Matches the amplitude and offset of the reference signal to the sweep signal using least squares optimization.
+        """
         sweep_signal_zeroavg = sweep_signal - np.mean(sweep_signal)
         reference_signal_zeroavg = reference_signal - np.mean(reference_signal)
         a_opt = np.sum(reference_signal_zeroavg * sweep_signal_zeroavg) / np.sum(reference_signal_zeroavg**2)
@@ -102,6 +112,9 @@ class SignalAnalysis():
 
     @staticmethod
     def find_correlation(sweep_signal,reference_signal):
+        """
+        Finds the correlation coefficient between the sweep signal and reference signal after aligning and matching them.
+        """
         downsampled_sweep_signal, downsampled_reference_signal = SignalAnalysis.downsample_signals(sweep_signal, reference_signal)
         sweep_signal = downsampled_sweep_signal
         reference_signal = downsampled_reference_signal
