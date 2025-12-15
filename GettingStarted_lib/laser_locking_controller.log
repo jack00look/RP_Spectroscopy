@@ -65,3 +65,87 @@
 2025-12-15 15:06:22 - LaserLockingController - INFO - Scan completed successfully.
 2025-12-15 15:06:45 - LaserLockingController - INFO - Finding reference lines.
 2025-12-15 15:07:07 - LaserLockingController - INFO - Reference lines found successfully.
+2025-12-15 16:28:42 - LaserLockingController - INFO - Finding reference lines.
+2025-12-15 16:29:04 - LaserLockingController - INFO - Reference lines found successfully.
+2025-12-15 16:29:27 - LaserLockingController - INFO - Saving reference line with key K_D2.
+2025-12-15 16:29:27 - LaserLockingController - INFO - Reference line K_D2 saved successfully.
+2025-12-15 16:30:10 - LaserLockingController - INFO - Saving reference line with key K_D2.
+2025-12-15 16:30:11 - LaserLockingController - INFO - Reference line K_D2 saved successfully.
+2025-12-15 16:31:43 - LaserLockingController - INFO - Line LINE_K_D2 is centered at offset 0.9555555555555556.
+2025-12-15 16:31:54 - LaserLockingController - INFO - Locking the laser failed :(
+2025-12-15 16:31:54 - LaserLockingController - INFO - Exiting centering and locking procedure.
+2025-12-15 16:32:37 - LaserLockingController - INFO - Line LINE_K_D2 is centered at offset 0.9555555555555556.
+2025-12-15 16:32:48 - LaserLockingController - INFO - Locking the laser failed :(
+2025-12-15 16:32:48 - LaserLockingController - INFO - Exiting centering and locking procedure.
+2025-12-15 16:35:44 - LaserLockingController - DEBUG - Vertical offset to apply = 0.00031179123523435593 to have the zero-crossing placed nicely.
+2025-12-15 16:35:45 - LaserLockingController - DEBUG - START offset = 0.9555555555555556
+2025-12-15 16:35:47 - LaserLockingController - DEBUG - Line is now inside
+2025-12-15 16:35:57 - LaserLockingController - DEBUG - Frequency stable enough
+2025-12-15 16:35:57 - LaserLockingController - INFO - Line LINE_K_D2 is centered at offset 0.9555555555555556.
+2025-12-15 16:36:08 - LaserLockingController - INFO - Locking the laser failed :(
+2025-12-15 16:36:08 - LaserLockingController - INFO - Exiting centering and locking procedure.
+2025-12-15 16:38:04 - LaserLockingController - DEBUG - Vertical offset to apply = 0.00031179123523435593 to have the zero-crossing placed nicely.
+2025-12-15 16:38:05 - LaserLockingController - DEBUG - START offset = 0.9555555555555556
+2025-12-15 16:38:07 - LaserLockingController - DEBUG - Line is now inside
+2025-12-15 16:38:17 - LaserLockingController - DEBUG - Frequency stable enough
+2025-12-15 16:38:17 - LaserLockingController - INFO - Line LINE_K_D2 is centered at offset 0.9555555555555556.
+2025-12-15 16:38:37 - LaserLockingController - DEBUG - Vertical offset to apply = 0.00031179123523435593 to have the zero-crossing placed nicely.
+2025-12-15 16:38:38 - LaserLockingController - DEBUG - START offset = 0.9555555555555556
+2025-12-15 16:38:40 - LaserLockingController - DEBUG - Line is now inside
+2025-12-15 16:38:51 - LaserLockingController - DEBUG - Frequency stable enough
+2025-12-15 16:38:51 - LaserLockingController - INFO - Line LINE_K_D2 is centered at offset 0.9555555555555556.
+2025-12-15 16:38:51 - LaserLockingController - DEBUG - Starting autolock between indices 677 and 831.
+2025-12-15 16:39:01 - LaserLockingController - INFO - Locking the laser failed :(
+2025-12-15 16:39:02 - LaserLockingController - INFO - Exiting centering and locking procedure.
+2025-12-15 16:41:00 - LaserLockingController - DEBUG - Vertical offset to apply = 0.00031179123523435593 to have the zero-crossing placed nicely.
+2025-12-15 16:41:01 - LaserLockingController - DEBUG - START offset = 0.9555555555555556
+2025-12-15 16:41:03 - LaserLockingController - DEBUG - Line is now inside
+2025-12-15 16:41:14 - LaserLockingController - DEBUG - Frequency stable enough
+2025-12-15 16:41:14 - LaserLockingController - INFO - Line LINE_K_D2 is centered at offset 0.9555555555555556.
+2025-12-15 16:41:14 - LaserLockingController - DEBUG - Starting autolock between indices 633 and 787.
+2025-12-15 16:41:14 - LaserLockingController - DEBUG - First 10 values of sweep signal raw: [5. 4. 4. 4. 5. 5. 5. 5. 5. 5.]
+2025-12-15 16:41:24 - LaserLockingController - INFO - Locking the laser failed :(
+2025-12-15 16:41:24 - LaserLockingController - INFO - Exiting centering and locking procedure.
+2025-12-15 16:43:33 - LaserLockingController - DEBUG - Vertical offset to apply = 0.00031179123523435593 to have the zero-crossing placed nicely.
+2025-12-15 16:43:33 - LaserLockingController - DEBUG - START offset = 0.9555555555555556
+2025-12-15 16:43:36 - LaserLockingController - DEBUG - Line is now inside
+2025-12-15 16:43:46 - LaserLockingController - DEBUG - Frequency stable enough
+2025-12-15 16:43:46 - LaserLockingController - INFO - Line LINE_K_D2 is centered at offset 0.9555555555555556.
+2025-12-15 16:43:46 - LaserLockingController - DEBUG - Starting autolock between indices 663 and 817.
+2025-12-15 16:43:46 - LaserLockingController - DEBUG - First 10 values of sweep signal raw: [7. 5. 5. 5. 5. 5. 5. 5. 4. 4.]
+2025-12-15 16:43:56 - LaserLockingController - INFO - Locking the laser failed :(
+2025-12-15 16:43:56 - LaserLockingController - INFO - Exiting centering and locking procedure.
+2025-12-15 16:44:53 - LaserLockingController - DEBUG - Vertical offset to apply = 0.00031179123523435593 to have the zero-crossing placed nicely.
+2025-12-15 16:44:53 - LaserLockingController - DEBUG - START offset = 0.9555555555555556
+2025-12-15 16:44:56 - LaserLockingController - DEBUG - Line is now inside
+2025-12-15 16:45:06 - LaserLockingController - DEBUG - Frequency stable enough
+2025-12-15 16:45:06 - LaserLockingController - INFO - Line LINE_K_D2 is centered at offset 0.9555555555555556.
+2025-12-15 16:45:06 - LaserLockingController - DEBUG - Starting autolock between indices 623 and 777.
+2025-12-15 16:45:06 - LaserLockingController - DEBUG - First 10 values of sweep signal raw: [ 5. -5. -5. -6. -7. -8. -8. -8. -8. -8.]
+2025-12-15 16:45:17 - LaserLockingController - INFO - Locking the laser failed :(
+2025-12-15 16:45:17 - LaserLockingController - INFO - Exiting centering and locking procedure.
+2025-12-15 16:57:14 - LaserLockingController - DEBUG - Vertical offset to apply = 0.00031179123523435593 to have the zero-crossing placed nicely.
+2025-12-15 16:57:15 - LaserLockingController - DEBUG - START offset = 0.9555555555555556
+2025-12-15 16:57:18 - LaserLockingController - DEBUG - Line is now inside
+2025-12-15 16:57:28 - LaserLockingController - DEBUG - Frequency stable enough
+2025-12-15 16:57:28 - LaserLockingController - INFO - Line LINE_K_D2 is centered at offset 0.9555555555555556.
+2025-12-15 16:57:28 - LaserLockingController - DEBUG - Starting autolock between indices 554 and 708.
+2025-12-15 16:57:28 - LaserLockingController - DEBUG - First 10 values of sweep signal raw: [ 5. -1. -1. -1. -1. -1. -1. -1. -1. -1.]
+2025-12-15 16:57:38 - LaserLockingController - INFO - Locking the laser failed :(
+2025-12-15 16:57:38 - LaserLockingController - INFO - Exiting centering and locking procedure.
+2025-12-15 17:02:32 - LaserLockingController - INFO - Finding reference lines.
+2025-12-15 17:02:32 - LaserLockingController - DEBUG - Setting voltage to 0.9V
+2025-12-15 17:03:54 - LaserLockingController - INFO - LaserLockController initialized successfully.
+2025-12-15 17:04:03 - LaserLockingController - INFO - Finding reference lines.
+2025-12-15 17:04:28 - LaserLockingController - INFO - Reference lines found successfully.
+2025-12-15 17:04:44 - LaserLockingController - INFO - Finding reference lines.
+2025-12-15 17:04:55 - LaserLockingController - INFO - Reference lines found successfully.
+2025-12-15 17:04:59 - LaserLockingController - DEBUG - Vertical offset to apply = 0.0002676709632195921 to have the zero-crossing placed nicely.
+2025-12-15 17:05:00 - LaserLockingController - DEBUG - START offset = 0.93
+2025-12-15 17:05:03 - LaserLockingController - DEBUG - Line is now inside
+2025-12-15 17:05:13 - LaserLockingController - DEBUG - Frequency stable enough
+2025-12-15 17:05:13 - LaserLockingController - INFO - Line LINE_K_D2 is centered at offset 0.93.
+2025-12-15 17:05:13 - LaserLockingController - DEBUG - Starting autolock between indices 1047 and 1201.
+2025-12-15 17:05:13 - LaserLockingController - DEBUG - First 10 values of sweep signal raw: [-7.  2.  2.  2.  2.  2.  2.  2.  3.  2.]
+2025-12-15 17:05:17 - LaserLockingController - INFO - Locking the laser worked \o/
+2025-12-15 17:05:17 - LaserLockingController - INFO - Exiting centering and locking procedure.

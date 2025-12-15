@@ -496,8 +496,8 @@ class LaserLockingController():
         while not_locked:
             # 1. Acquire signal and compute correlation and shift
             sweep_signal = self.hardware_interface.get_sweep()
-            shift = SignalAnalysis.find_shift(sweep_signal,reference_signal)
-            corr,len_match, _ = SignalAnalysis.find_correlation(sweep_signal,reference_signal)
+            shift = SignalAnalysis.find_shift({'x' : sweep_signal['x'], 'y': sweep_signal['error_signal']} ,reference_signal)
+            corr,len_match, _ = SignalAnalysis.find_correlation({'x' : sweep_signal['x'], 'y': sweep_signal['error_signal']}, reference_signal)
             current_time = time.time() - time_0
 
             times.append(current_time)
@@ -511,12 +511,12 @@ class LaserLockingController():
             plot2 = plt.subplot2grid((2, 1), (1, 0))
             signal_xmin = sweep_signal['x'][0] - 1.2*linewidth
             signal_xmax = sweep_signal['x'][-1] + 1.2*linewidth
-            plot1.plot(sweep_signal['x'],sweep_signal['y'])
+            plot1.plot(sweep_signal['x'],sweep_signal['error_signal'])
             plot1.plot(reference_signal['x'] + shift, reference_signal['y'], '--')
             plot1.hlines(0, signal_xmin, signal_xmax, color = '0.8', linestyles = 'dashed')
             plot1.set_xlim(signal_xmin, signal_xmax)
-            ymax = np.max(np.array([np.max(sweep_signal['y']),np.max(reference_signal['y'])]))
-            ymin = np.min(np.array([np.min(sweep_signal['y']),np.min(reference_signal['y'])]))
+            ymax = np.max(np.array([np.max(sweep_signal['error_signal']),np.max(reference_signal['y'])]))
+            ymin = np.min(np.array([np.min(sweep_signal['error_signal']),np.min(reference_signal['y'])]))
             ydiff = ymax - ymin
             ymax = ymax + ydiff * 0.2
             ymin = ymin - ydiff * 0.2
@@ -527,11 +527,11 @@ class LaserLockingController():
             plot2.set_xlim(0, (current_time//60 +1)*60)
             plot2.set_ylim(-1.1, 1.1)
             plot1.set_title(f'Sweep Signal with {line_name} (Offset = {offset:.2f} V) \n Correlation = {corr:.2f}, Length of match = {len_match:.2f} V')
-            plot1.set_xlabel('Voltage (V)')
-            plot1.set_ylabel('Signal (V)')
+            plot1.set_xlabel('Voltage [V]')
+            plot1.set_ylabel('Signal [V]')
             plot2.set_title(f'Shift over Time (Jitter Threshold = {JITTER_THR})')
-            plot2.set_xlabel('Time (s)')
-            plot2.set_ylabel('Shift (V)')
+            plot2.set_xlabel('Time [s]')
+            plot2.set_ylabel('Shift [V]')
             plt.tight_layout()
             display.display(plt.gcf())
 
@@ -557,7 +557,7 @@ class LaserLockingController():
                 offset = offset_0 + offset_try[ind_off_try]
                 time_last = current_time
                 self.logger.debug(f'Trying new offset = {offset}')
-                self.hardware_interface.set_param('big_offset', offset)
+                self.hardware_interface.set_value('big_offset', offset)
                 continue
 
             # 5. When enough points collected, check stability and try to center
@@ -589,17 +589,22 @@ class LaserLockingController():
                         #display.clear_output(wait=True)
                         self.logger.info(f"Line {line_name} is centered at offset {offset}.")
                         #plt.clf()
-                        plt.plot(sweep_signal['x'], sweep_signal['y'], label='Sweep Signal')
-                        plt.plot(reference_signal['x'] + shift, reference_signal['y'], '--', label='Reference Line')
+                        ##plt.plot(sweep_signal['x'], sweep_signal['error_signal'], label='Sweep Signal')
+                        ##plt.plot(reference_signal['x'] + shift, reference_signal['y'], '--', label='Reference Line')
                         lock_start = reference_signal['V_lock_start'] + shift
                         lock_end = reference_signal['V_lock_end'] + shift
                         lock_start_ind = np.argmin(np.abs(sweep_signal['x'] - lock_start))
                         lock_end_ind = np.argmin(np.abs(sweep_signal['x'] - lock_end))
                         #print(f"Locking region: [{lock_start_ind:.2f}, {lock_end_ind:.2f}]")
-                        plt.axvspan(lock_start,lock_end,color='r',alpha=0.2)
+                        plot1.axvspan(lock_start,lock_end,color='r',alpha=0.2)
                         #print(f"sweep signal: {sweep_signal['y']}")
-                        sweep_signal_raw = from_sweep_signal_to_sweep_signal_raw(sweep_signal['y'])
+                        sweep_signal_raw = sweep_signal['error_signal'] * 2 * Vpp
                         #print(f"sweep signal raw {sweep_signal_raw}")
+                        self.logger.debug(f"Starting autolock between indices {lock_start_ind} and {lock_end_ind}.")
+                        self.logger.debug(f"First 10 values of sweep signal raw: {sweep_signal_raw[:10]}")
+                        # plt.plot(reference_signal['x'] + shift, reference_signal['y'], '--', label='Reference Line')
+                        # plt.plot([lock_start, lock_end], [0, 0], 'k-', lw=4, label='Locking Region')
+                        # plt.show()
                         self.hardware_interface.client.connection.root.start_autolock(lock_start_ind,lock_end_ind,pickle.dumps(sweep_signal_raw))
                         print("Started autolock")
                         try:
@@ -623,4 +628,14 @@ class LaserLockingController():
                     cnt = 0
                     line_outside = True
                     frequence_stable = False
+
+    def set_debug_mode(self):
+        self.logger.setLevel(logging.DEBUG)
+        for handler in self.logger.handlers:
+            handler.setLevel(logging.DEBUG)
+        
+    def unset_debug_mode(self):
+        self.logger.setLevel(logging.INFO)
+        for handler in self.logger.handlers:
+            handler.setLevel(logging.INFO)
 
