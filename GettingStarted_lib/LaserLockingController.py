@@ -582,7 +582,7 @@ class LaserLockingController():
                     len_sweep_signal = sweep_signal['x'][-1] - sweep_signal['x'][0]
                     space_right = len_sweep_signal - linewidth - space_left
                     free_space = len_sweep_signal - linewidth
-                    edge_space_thr = free_space / 4
+                    edge_space_thr = free_space / 3
 
                     if space_left > edge_space_thr and space_right > edge_space_thr:
                         self.lines_positions[line_name] = offset
@@ -605,11 +605,15 @@ class LaserLockingController():
                         # plt.plot(reference_signal['x'] + shift, reference_signal['y'], '--', label='Reference Line')
                         # plt.plot([lock_start, lock_end], [0, 0], 'k-', lw=4, label='Locking Region')
                         # plt.show()
+                        expected_lock_monitor_signal_point = find_monitor_signal_peak(sweep_signal['error_signal'], sweep_signal["monitor_signal"], lock_start_ind, lock_end_ind)
+                        self.expected_lock_monitor_signal_point = expected_lock_monitor_signal_point
                         self.hardware_interface.client.connection.root.start_autolock(lock_start_ind,lock_end_ind,pickle.dumps(sweep_signal_raw))
                         print("Started autolock")
                         try:
                             self.hardware_interface.wait_for_lock_status(True)
                             self.logger.info("Locking the laser worked \o/")
+                            sleep(2)
+                            self.lock_unlock_logger.info("Laser locked at time: " + time.strftime("%Y-%m-%d %H:%M:%S", time.localtime()))
                             not_locked = False
                         except Exception:
                             self.logger.info("Locking the laser failed :(")
@@ -617,17 +621,43 @@ class LaserLockingController():
                             not_locked = False
                         self.logger.info("Exiting centering and locking procedure.")
                         return
-                    elif space_left < free_space / 4:
+                    elif space_left < edge_space_thr:
                         self.logger.debug("Too far left: increase offset to decrease frequency")
                         offset -= offset_small_jump
                     else:
                         self.logger.debug("Too far right: decrease offset to increase frequency")
                         offset += offset_small_jump
 
-                    self.hardware_interface.set_param('big_offset', offset)
+                    self.hardware_interface.set_value('big_offset', offset)
                     cnt = 0
                     line_outside = True
                     frequence_stable = False
+
+    def automatic_lock_relock(self, line_name, relock: bool = True):
+        """
+        relock tells the function to relock automatically after detecting an unlock event
+        or not to do so.
+        """
+        self.logger.info(f"Starting automatic lock for line {line_name} with relock = {relock}.")
+        # The first search is borad to be sure to find the line without any initial hint (2s/scan) 
+        self.find_reference_lines(0.75, 1.25, 15)
+        try:
+            self.center_and_lock_v1(line_name)
+        except Exception:
+            self.logger.error("Automatic lock/relock failed...")
+            return
+        
+        if not relock:
+            self.start_locking_monitor()
+        else:
+            while True:
+                self.start_locking_monitor()
+                self.find_reference_lines(self.hardware_interface.get_remote_value('big_offset') - 0.02, self.hardware_interface.get_remote_value('big_offset') + 0.02, 6)
+                try:
+                    self.center_and_lock_v1(line_name)
+                except Exception:
+                    self.logger.error("Automatic relock failed...")
+                    return
 
     def set_debug_mode(self):
         self.logger.setLevel(logging.DEBUG)
