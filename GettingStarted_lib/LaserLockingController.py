@@ -159,7 +159,7 @@ class LaserLockingController():
                 self.hardware_interface.plot_sweep()
                 break
 
-            sleep(2)
+            sleep(5)
 
     def show_history(self):
 
@@ -390,6 +390,7 @@ class LaserLockingController():
             return
         
         correlations = np.zeros((num_reference_lines, num_points))
+        amplitudes = np.zeros((num_reference_lines, num_points)) #amplification factro of the signal to match the reference line
         len_matches = np.zeros((num_reference_lines, num_points))
         offsets = np.zeros((num_reference_lines, num_points)) #vertical offset
 
@@ -402,8 +403,9 @@ class LaserLockingController():
             V_scan_results.append(sweep_signal)
             for index,key in enumerate(self.data_handler.reference_lines):
                 reference_signal = self.data_handler.reference_lines[key]
-                r_coeff, len_window, offset = SignalAnalysis.find_correlation({'x': sweep_signal['x'], 'y': sweep_signal['error_signal']}, reference_signal)
+                r_coeff, len_window, offset, amplitude = SignalAnalysis.find_correlation({'x': sweep_signal['x'], 'y': sweep_signal['error_signal']}, reference_signal)
                 correlations[index, i] = r_coeff
+                amplitudes[index, i] = amplitude
                 len_matches[index, i] = len_window
                 offsets[index, i] = offset
                 self.logger.debug(f"Correlation with {key} at {V_scan[i]}V: {r_coeff}, Length of match: {len_window}, offset with respect to the reference signal: {offset}")
@@ -428,7 +430,8 @@ class LaserLockingController():
             len_reference_signal = reference_signal['x'][-1]-reference_signal['x'][0]
             ind = find_best_correlation(correlations[index,:], len_matches[index,:], linewidth=len_reference_signal)
             self.lines_positions[key] = V_scan[ind]
-            self.lines_offset[key] = offsets[index, ind] + self.hardware_interface.writeable_params["offset_a"].get_remote_value()
+            print(self.hardware_interface.writeable_params["offset_a"].get_remote_value())
+            self.lines_offset[key] = - offsets[index, ind] + self.hardware_interface.writeable_params["offset_a"].get_remote_value()
             ax[0].plot(V_scan, correlations[index,:], label=f'Correlation with {key}', color=colors[index])
             ax[0].axvline(x=V_scan[ind], color=colors[index], linestyle='--', label=f'Detected Position {key}')
             ax[index + 1].plot(V_scan_results[ind]['x'],V_scan_results[ind]['error_signal'])
@@ -455,14 +458,14 @@ class LaserLockingController():
         offset = self.lines_positions[line_name] #horizontal offset where we expect the line
         offset_y = self.lines_offset[line_name] #vertical offset
         #print('Offset y = ',offset_y)
-        self.logger.debug(f"Vertical offset to apply = {- offset_y} to have the zero-crossing placed nicely.") #the offset of the found line with respect to the reference line, so we need to apply the negative offset to center it.
+        self.logger.debug(f"Vertical offset to apply = {offset_y} to have the zero-crossing placed nicely.") #the offset of the found line with respect to the reference line, so we need to apply the negative offset to center it.
 
         #get reference line and linewidth
         reference_signal = self.data_handler.reference_lines[line_name]
         linewidth = reference_signal['x'][-1] - reference_signal['x'][0]
 
         self.hardware_interface.set_value('big_offset', offset)
-        self.hardware_interface.set_value('offset_a', - offset_y) #the offset of the found line with respect to the reference line, so we need to apply the negative offset to center it.
+        self.hardware_interface.set_value('offset_a', offset_y) #+ self.hardware_interface.writeable_params["offset_a"].get_remote_value()) #the offset of the found line with respect to the reference line, so we need to apply the negative offset to center it.
         
         #print(f"offset_a: {self.hardware_interface.get_param('offset_a')}")
 
@@ -485,6 +488,7 @@ class LaserLockingController():
         correlations = []
         shifts = []
         times = []
+        amplitudes = []
         line_outside_arr = []
         line_outside = True
         frequence_stable = False
@@ -497,12 +501,13 @@ class LaserLockingController():
             # 1. Acquire signal and compute correlation and shift
             sweep_signal = self.hardware_interface.get_sweep()
             shift = SignalAnalysis.find_shift({'x' : sweep_signal['x'], 'y': sweep_signal['error_signal']} ,reference_signal)
-            corr,len_match, _ = SignalAnalysis.find_correlation({'x' : sweep_signal['x'], 'y': sweep_signal['error_signal']}, reference_signal)
+            corr,len_match, vertical_offset, amplitude = SignalAnalysis.find_correlation({'x' : sweep_signal['x'], 'y': sweep_signal['error_signal']}, reference_signal)
             current_time = time.time() - time_0
 
             times.append(current_time)
             shifts.append(shift)
             correlations.append(corr)
+            amplitudes.append(amplitude)
 
             # 2. Visualization
             display.clear_output(wait=True)
@@ -613,7 +618,9 @@ class LaserLockingController():
                             self.hardware_interface.wait_for_lock_status(True)
                             self.logger.info("Locking the laser worked \o/")
                             sleep(2)
-                            self.lock_unlock_logger.info("Laser locked at time: " + time.strftime("%Y-%m-%d %H:%M:%S", time.localtime()))
+                            #self.lock_unlock_logger.info("Laser locked at time: " + time.strftime("%Y-%m-%d %H:%M:%S", time.localtime()) + "with (horizontal offset, amplitude, vertical offset) = (",offset,",",amplitude,",",self.hardware_interface.writeable_params["offset_a"].get_remote_value(),")")
+                            self.lock_unlock_logger.info(f"laser locked with parameters: horizontal offset = {offset}, amplitude = {amplitude}, vertical offset = {self.hardware_interface.writeable_params['offset_a'].get_remote_value()}")
+                            #self.lock_unlock_logger.info("Laser locked at time: " + time.strftime("%Y-%m-%d %H:%M:%S", time.localtime()))
                             not_locked = False
                         except Exception:
                             self.logger.info("Locking the laser failed :(")

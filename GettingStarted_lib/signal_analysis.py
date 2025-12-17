@@ -108,7 +108,7 @@ class SignalAnalysis():
         b_opt = np.mean(sweep_signal) - a_opt * np.mean(reference_signal)
         matched_reference_signal = a_opt * reference_signal + b_opt
         matched_sweep_signal = sweep_signal
-        return matched_sweep_signal, matched_reference_signal, b_opt
+        return matched_sweep_signal, matched_reference_signal, b_opt, a_opt
 
     @staticmethod
     def find_correlation(sweep_signal,reference_signal):
@@ -130,9 +130,9 @@ class SignalAnalysis():
         if (len(sweep_signal_window['y']) == 0) or (len(reference_signal_window['y'])==0):
             return 0,0
         len_window = (sweep_signal_window['x'][-1] - sweep_signal_window['x'][0])/(reference_signal['x'][-1] - reference_signal['x'][0])
-        matched_sweep_signal, matched_reference_signal, matched_offset = SignalAnalysis.match_signals(sweep_signal_window['y'], reference_signal_window['y'])
+        matched_sweep_signal, matched_reference_signal, matched_offset, matched_amplitude = SignalAnalysis.match_signals(sweep_signal_window['y'], reference_signal_window['y'])
         matched_reference_signal_zeroavg = matched_reference_signal - np.mean(matched_reference_signal)
         matched_sweep_signal_zeroavg = matched_sweep_signal - np.mean(matched_sweep_signal)
         r_coeff = np.sum(matched_reference_signal_zeroavg * matched_sweep_signal_zeroavg) / np.sqrt(np.sum(matched_reference_signal_zeroavg**2) * np.sum(matched_sweep_signal_zeroavg**2))
 
-        return r_coeff, len_window, matched_offset
+        return r_coeff, len_window, matched_offset, matched_amplitude

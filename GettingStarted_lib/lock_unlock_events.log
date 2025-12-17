@@ -25,3 +25,16 @@
 2025-12-16 11:32:45 - UnlockEventsLogger - INFO - Fast variation of the slow control signal detected at time: 2025-12-16 11:32:44
 2025-12-16 11:33:36 - UnlockEventsLogger - INFO - Laser locked at time: 2025-12-16 11:33:36
 2025-12-16 11:42:52 - UnlockEventsLogger - INFO - Laser locked at time: 2025-12-16 11:42:52
+2025-12-16 13:31:16 - UnlockEventsLogger - INFO - Laser locked at time: 2025-12-16 13:31:16
+2025-12-16 13:58:34 - UnlockEventsLogger - INFO - Fast variation of the fast control signal detected at time: 2025-12-16 13:58:32
+2025-12-16 13:58:34 - UnlockEventsLogger - INFO - Fast variation of the slow control signal detected at time: 2025-12-16 13:58:33
+2025-12-16 13:59:38 - UnlockEventsLogger - INFO - Laser locked at time: 2025-12-16 13:59:38
+2025-12-16 14:00:19 - UnlockEventsLogger - INFO - Fast variation of the fast control signal detected at time: 2025-12-16 14:00:16
+2025-12-16 14:00:19 - UnlockEventsLogger - INFO - Fast variation of the slow control signal detected at time: 2025-12-16 14:00:17
+2025-12-16 14:11:26 - UnlockEventsLogger - INFO - Laser locked at time: 2025-12-16 14:11:26
+2025-12-17 09:03:43 - UnlockEventsLogger - INFO - Fast variation of the fast control signal detected at time: 2025-12-17 09:03:41
+2025-12-17 09:05:24 - UnlockEventsLogger - INFO - Fast variation of the slow control signal detected at time: 2025-12-17 09:05:24
+2025-12-17 09:09:13 - UnlockEventsLogger - INFO - Laser locked at time: 2025-12-17 09:09:13
+2025-12-17 09:09:14 - UnlockEventsLogger - INFO - Fast variation of the slow control signal detected at time: 2025-12-17 09:09:13
+2025-12-17 09:10:27 - UnlockEventsLogger - INFO - Laser locked at time: 2025-12-17 09:10:27
+2025-12-17 09:17:42 - UnlockEventsLogger - INFO - laser locked with parameters: horizontal offset = 0.9485714285714286, amplitude = 1.023646112252993, vertical offset = -0.0068298604431019285
