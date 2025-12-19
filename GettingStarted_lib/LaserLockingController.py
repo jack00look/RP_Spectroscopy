@@ -254,7 +254,7 @@ class LaserLockingController():
 
         # 2) Fast variation of the slow control signal (derivative too high)
 
-        detected_peaks, _ = find_peaks(np.abs(self.hardware_interface.history['d_slow_control_values']), height=0.002)
+        detected_peaks, _ = find_peaks(np.abs(self.hardware_interface.history['d_slow_control_values']), height=0.003)
         detected_peaks = [i for i in detected_peaks if  i > int(len(self.hardware_interface.history['d_slow_control_values'])/2)] #only consider recent peaks
 
 
