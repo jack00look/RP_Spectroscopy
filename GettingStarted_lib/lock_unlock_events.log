@@ -86,3 +86,42 @@
 2025-12-17 17:34:29 - UnlockEventsLogger - INFO - laser locked with parameters: horizontal offset = 0.9365714285714286, amplitude = 0.8403693076386439, vertical offset = -0.0067903939610954742025-12-18 16:26:35 - UnlockEventsLogger - INFO - laser locked with parameters: horizontal offset = 0.9385714285714286, amplitude = 1.004936748642408, vertical offset = -0.007858869022997091
 2025-12-18 16:28:52 - UnlockEventsLogger - INFO - Fast variation of the fast control signal detected at time: 2025-12-18 16:28:49
 2025-12-18 16:29:57 - UnlockEventsLogger - INFO - laser locked with parameters: horizontal offset = 0.9385714285714286, amplitude = 1.037488972038535, vertical offset = -0.00800364286109257
+2026-01-19 10:53:29 - UnlockEventsLogger - INFO - laser locked with parameters: horizontal offset = 0.9500000000000001, amplitude = 0.8846141494918114, vertical offset = -0.005245467417088841
+2026-01-19 10:57:01 - UnlockEventsLogger - INFO - laser locked with parameters: horizontal offset = 0.9528571428571428, amplitude = 0.7269622068205693, vertical offset = -0.00570012684845521
+2026-01-19 11:11:40 - UnlockEventsLogger - INFO - Fast variation of the fast control signal detected at time: 2026-01-19 11:11:39
+2026-01-19 11:13:12 - UnlockEventsLogger - INFO - laser locked with parameters: horizontal offset = 0.9728571428571429, amplitude = 0.6153176736368923, vertical offset = -0.006236239265415266
+2026-01-19 11:13:30 - UnlockEventsLogger - INFO - Fast variation of the slow control signal detected at time: 2026-01-19 11:13:25
+2026-01-19 11:16:14 - UnlockEventsLogger - INFO - laser locked with parameters: horizontal offset = 0.9685714285714286, amplitude = 0.8019282203315692, vertical offset = -0.006335610911568725
+2026-01-19 11:16:26 - UnlockEventsLogger - INFO - Fast variation of the slow control signal detected at time: 2026-01-19 11:16:23
+2026-01-19 11:17:31 - UnlockEventsLogger - INFO - laser locked with parameters: horizontal offset = 0.9685714285714286, amplitude = 0.8264962338334089, vertical offset = -0.006386557150180279
+2026-01-19 11:18:07 - UnlockEventsLogger - INFO - Fast variation of the slow control signal detected at time: 2026-01-19 11:18:04
+2026-01-19 11:19:14 - UnlockEventsLogger - INFO - laser locked with parameters: horizontal offset = 0.9685714285714286, amplitude = 0.7695736435098677, vertical offset = -0.006296268461159174
+2026-01-19 11:19:33 - UnlockEventsLogger - INFO - Fast variation of the slow control signal detected at time: 2026-01-19 11:19:22
+2026-01-19 11:20:39 - UnlockEventsLogger - INFO - laser locked with parameters: horizontal offset = 0.9685714285714286, amplitude = 0.7783139184296217, vertical offset = -0.006371272127762627
+2026-01-19 11:20:39 - UnlockEventsLogger - INFO - Fast variation of the slow control signal detected at time: 2026-01-19 11:20:39
+2026-01-19 11:21:44 - UnlockEventsLogger - INFO - laser locked with parameters: horizontal offset = 0.9685714285714286, amplitude = 0.6991505034386223, vertical offset = -0.006256362155475768
+2026-01-19 11:22:08 - UnlockEventsLogger - INFO - Fast variation of the slow control signal detected at time: 2026-01-19 11:22:04
+2026-01-19 11:23:14 - UnlockEventsLogger - INFO - laser locked with parameters: horizontal offset = 0.9685714285714286, amplitude = 0.6525664577949836, vertical offset = -0.006250065645905736
+2026-01-19 11:23:21 - UnlockEventsLogger - INFO - Fast variation of the slow control signal detected at time: 2026-01-19 11:23:19
+2026-01-19 11:24:26 - UnlockEventsLogger - INFO - laser locked with parameters: horizontal offset = 0.9685714285714286, amplitude = 0.6647564824100539, vertical offset = -0.006224141025906721
+2026-01-19 11:24:44 - UnlockEventsLogger - INFO - Fast variation of the slow control signal detected at time: 2026-01-19 11:24:42
+2026-01-19 12:08:47 - UnlockEventsLogger - INFO - laser locked with parameters: horizontal offset = 0.9485714285714286, amplitude = 0.8539955979400958, vertical offset = -0.006116473563507723
+2026-01-19 12:09:05 - UnlockEventsLogger - INFO - Fast variation of the slow control signal detected at time: 2026-01-19 12:09:00
+2026-01-19 12:18:40 - UnlockEventsLogger - INFO - laser locked with parameters: horizontal offset = 0.9528571428571428, amplitude = 0.7757921387858827, vertical offset = -0.006015735057240004
+2026-01-19 12:18:53 - UnlockEventsLogger - INFO - Fast variation of the slow control signal detected at time: 2026-01-19 12:18:46
+2026-01-20 08:41:17 - UnlockEventsLogger - INFO - laser locked with parameters: horizontal offset = 0.9500000000000001, amplitude = 0.659448293889825, vertical offset = -0.005974296692779293
+2026-01-20 08:43:03 - UnlockEventsLogger - INFO - laser locked with parameters: horizontal offset = 0.9585714285714286, amplitude = 0.5706802247132533, vertical offset = -0.006093400988214058
+2026-01-20 08:52:47 - UnlockEventsLogger - INFO - Fast variation of the fast control signal detected at time: 2026-01-20 08:52:43
+2026-01-20 08:52:47 - UnlockEventsLogger - INFO - Fast variation of the slow control signal detected at time: 2026-01-20 08:52:44
+2026-01-20 09:01:04 - UnlockEventsLogger - INFO - laser locked with parameters: horizontal offset = 0.9925714285714285, amplitude = 0.7945856738076363, vertical offset = -0.0070839987422593705
+2026-01-20 09:42:30 - UnlockEventsLogger - INFO - Fast variation of the fast control signal detected at time: 2026-01-20 09:42:29
+2026-01-20 10:17:58 - UnlockEventsLogger - INFO - laser locked with parameters: horizontal offset = 1.0, amplitude = 0.7486126594536822, vertical offset = -0.006194271323094246
+2026-01-20 11:00:59 - UnlockEventsLogger - INFO - Fast variation of the slow control signal detected at time: 2026-01-20 11:00:58
+2026-01-20 11:02:03 - UnlockEventsLogger - INFO - laser locked with parameters: horizontal offset = 1.01, amplitude = 0.6748866317554857, vertical offset = -0.006136277414722877
+2026-01-20 12:05:35 - UnlockEventsLogger - INFO - laser locked with parameters: horizontal offset = 1.01, amplitude = 0.9106340558549562, vertical offset = -0.0059537820321115134
+2026-01-20 13:46:03 - UnlockEventsLogger - INFO - Fast variation of the fast control signal detected at time: 2026-01-20 13:46:01
+2026-01-20 13:46:03 - UnlockEventsLogger - INFO - Fast variation of the slow control signal detected at time: 2026-01-20 13:46:01
+2026-01-20 13:47:23 - UnlockEventsLogger - INFO - laser locked with parameters: horizontal offset = 0.99, amplitude = 0.586145711151043, vertical offset = -0.006031873180166923
+2026-01-20 14:17:49 - UnlockEventsLogger - INFO - laser locked with parameters: horizontal offset = 1.0014285714285713, amplitude = 0.5516583446273358, vertical offset = -0.007583086305385601
+2026-01-20 14:28:40 - UnlockEventsLogger - INFO - Fast variation of the slow control signal detected at time: 2026-01-20 14:28:39
+2026-01-20 15:28:33 - UnlockEventsLogger - INFO - laser locked with parameters: horizontal offset = 0.9442857142857143, amplitude = 0.488525073987075, vertical offset = -0.005993390209201633

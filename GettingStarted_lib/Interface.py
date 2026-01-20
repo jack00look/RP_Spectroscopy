@@ -20,6 +20,7 @@ logger.setLevel(logging.DEBUG)
 class Interface:
     CONNECT_CONFIG_PATH = Path(__file__).parent / 'connect_config.yaml'
     PARAMS_CONFIG_PATH = Path(__file__).parent / 'params_config.yaml'
+    HARDWARE_PARAMS_PATH = Path(__file__).parent / 'hardware_params.yaml'
     LOG_FILE = Path(__file__).parent / "interface.log"
 
 
@@ -83,12 +84,34 @@ class Interface:
     
     def _basic_configure(self):
 
+        self.load_hardware_parameters() #loads the external hardware parameters
+
         self.load_parameter_config() # loads parameters from config file
 
         # setup the autolock mode
         self.client.parameters.autolock_mode_preference.value = AutolockMode.ROBUST # use robust autolock mode
         self.client.parameters.autolock_determine_offset.value = False # do not determine offset automatically
         self.client.connection.root.write_registers()
+
+    def load_hardware_parameters(self):
+        """
+        Load hardware (circuits) parameters from a YAML config file.
+        """
+        if not self.HARDWARE_PARAMS_PATH.exists():
+            raise FileNotFoundError(f"Parameter config file not found: {self.HARDWARE_PARAMS_PATH}")
+
+        with open(self.HARDWARE_PARAMS_PATH, 'r') as f:
+            config = yaml.safe_load(f)
+
+        self.hardware_parameters_summator = {}
+        for name, entry in config.get("summator_circuit", {}).items():
+            self.logger.debug(f"Loading hardware parameter {name}")
+            self.hardware_parameters_summator[name] = HardwareParameter(
+                name=entry["hardware_name"],
+                RP_out=entry["RedPitaya_connected_output"],
+                RP_param=entry["RedPitaya_connected_parameter"],
+                gain=entry["gain"]
+            )
     
     def load_parameter_config(self):
         """
@@ -183,7 +206,8 @@ class Interface:
         Neglectiing the mixing channel for simplicity.
         """
         self.start_sweep()
-        sleep(1)
+        #print("Sweep_speed ", self.writeable_params["sweep_speed"].get_remote_value())
+        sleep(5.0 * ((2.0**self.writeable_params["sweep_speed"].get_remote_value())/(3.8e3))) #wait 3 sweep periods
         self.check_for_changed_parameters()
         to_plot = pickle.loads(self.readable_params["sweep_signal"].get_remote_value())
         error_signal = np.array(to_plot["error_signal_1"]/(2*Vpp))
@@ -339,6 +363,16 @@ class WriteableParameter(ReadableParameter):
 
     def get_remote_value(self):
         self.client.parameters.check_for_changed_parameters()
-        value = self.get_attribute().value / self.scaling
+        if self.scaling is not None:
+            value = self.get_attribute().value / self.scaling
+        else:
+            value = self.get_attribute().value
         self.value = value
         return value
+    
+class HardwareParameter:
+    def __init__(self, name, RP_out, RP_param, gain):
+        self.hardware_name = name
+        self.RedPitaya_connected_output = RP_out
+        self.RedPitaya_connected_parameter = RP_param
+        self.gain = gain

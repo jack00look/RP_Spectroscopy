@@ -213,6 +213,21 @@ class LaserLockingController():
         ax2.spines['left'].set_color("tab:blue")
         ax2.axhline(self.expected_lock_monitor_signal_point[1], color="gray")
 
+        num_points = 100
+
+        recent_monitor_values = self.hardware_interface.history['monitor_values'][-num_points:]
+        recent_monitor_times_mpl = self.hardware_interface.history['monitor_times_mpl'][-num_points:]
+        recent_monitor_values_mean = np.mean(recent_monitor_values)
+        recent_monitor_values_std = np.std(recent_monitor_values)
+        expected_monitor_value = self.expected_lock_monitor_signal_point[1]
+
+        if self.monitor_signal_drift == 0:
+            ax2.fill_between([recent_monitor_times_mpl[0], recent_monitor_times_mpl[-1]], recent_monitor_values_mean - 5 * recent_monitor_values_std, recent_monitor_values_mean + 5 * recent_monitor_values_std, color='green', alpha=0.2)
+        elif self.monitor_signal_drift == 1:
+            ax2.fill_between([recent_monitor_times_mpl[0], recent_monitor_times_mpl[-1]], recent_monitor_values_mean - 10 * recent_monitor_values_std, recent_monitor_values_mean + 10 * recent_monitor_values_std, color='orange', alpha=0.2)
+        else:
+            ax2.fill_between([recent_monitor_times_mpl[0], recent_monitor_times_mpl[-1]], recent_monitor_values_mean - 10 * recent_monitor_values_std, recent_monitor_values_mean + 10 * recent_monitor_values_std, color='red', alpha=0.2)
+        
         # ----
 
         ax2.xaxis.set_major_formatter(mdates.DateFormatter("%H:%M:%S"))
@@ -231,6 +246,7 @@ class LaserLockingController():
             2) Fast variation of the slow control signal (derivative too high)
             3) If fast control signal is saturated
             4) If slow control signal is saturated
+            5) If monitor signal is out of range with respect to the expected lock monitor signal point
         """
 
         temp_unlock_events = {}
@@ -254,7 +270,7 @@ class LaserLockingController():
 
         # 2) Fast variation of the slow control signal (derivative too high)
 
-        detected_peaks, _ = find_peaks(np.abs(self.hardware_interface.history['d_slow_control_values']), height=0.003)
+        detected_peaks, _ = find_peaks(np.abs(self.hardware_interface.history['d_slow_control_values']), height=0.004)
         detected_peaks = [i for i in detected_peaks if  i > int(len(self.hardware_interface.history['d_slow_control_values'])/2)] #only consider recent peaks
 
 
@@ -269,19 +285,43 @@ class LaserLockingController():
         # 3) If fast control signal is saturated
         # 4) If slow control signal is saturated
 
+        # 5) If monitor signal is out of range with respect to the expected lock monitor signal point
+
+        self.monitor_signal_drift = 0 #0 if everything is good, 1 if warning, 2 if super bad (see below)
+        num_points = 100
+        recent_monitor_values = self.hardware_interface.history['monitor_values'][-num_points:]
+        recent_monitor_times_mpl = self.hardware_interface.history['monitor_times_mpl'][-num_points:]
+        recent_monitor_values_mean = np.mean(recent_monitor_values)
+        recent_monitor_values_std = np.std(recent_monitor_values)
+        expected_monitor_value = self.expected_lock_monitor_signal_point[1]
+        if np.abs(recent_monitor_values_mean - expected_monitor_value) <= 5 * recent_monitor_values_std:
+            # all good
+            self.monitor_signal_drift = 0
+        elif (np.abs(recent_monitor_values_mean - expected_monitor_value) > 5 * recent_monitor_values_std) and (np.abs(recent_monitor_values_mean - expected_monitor_value) <= 10 * recent_monitor_values_std):
+            # warning
+            self.monitor_signal_drift = 1
+        else:
+            # super bad
+            self.monitor_signal_drift = 2
+
         self.unlock_events = temp_unlock_events
 
         return
     
     def center_after_unlock(self):
         """
-        After an unlock event we try to center the line again looking at the slow control signal values before the unlocking.
+        After an unlock event we try to center the line again looking at the slow control signal values before the unlocking. 
+        Analog_out_0 is used for the slow control signal and is fed into the summator. To center the line we act on
+        'big_offset' that is also fed into the summator. They have different gain but we can take care of it knwing the informations that
+        are written in the hardware_params.yalm file.
         """
 
         slow_control_values = self.hardware_interface.history['slow_control_values']
         selected_slow_control_values = slow_control_values[:int(len(slow_control_values)/2)] #consider only the first half of the history (before unlock)
         slow_control_mean = np.mean(selected_slow_control_values)
         offset = self.hardware_interface.get_remote_value('big_offset')
+        #proportionality_factor = self.hardware_interface.hardware_parameters_summator['slow_in_1'].gain / self.hardware_interface.hardware_parameters_summator['slow_in_2'].gain
+        #self.logger.debug(f"Proportionality factor between slow control signal and big_offset: {proportionality_factor}")
         self.hardware_interface.set_value('big_offset', offset + int(slow_control_mean/2)) #due to the gains in the summator circuit used
 
     
@@ -589,7 +629,7 @@ class LaserLockingController():
                     free_space = len_sweep_signal - linewidth
                     edge_space_thr = free_space / 3
 
-                    if space_left > edge_space_thr and space_right > edge_space_thr:
+                    if space_left > free_space/2 and space_right > edge_space_thr:
                         self.lines_positions[line_name] = offset
                         #display.clear_output(wait=True)
                         self.logger.info(f"Line {line_name} is centered at offset {offset}.")
@@ -628,7 +668,7 @@ class LaserLockingController():
                             not_locked = False
                         self.logger.info("Exiting centering and locking procedure.")
                         return
-                    elif space_left < edge_space_thr:
+                    elif space_left < free_space/2:
                         self.logger.debug("Too far left: increase offset to decrease frequency")
                         offset -= offset_small_jump
                     else:

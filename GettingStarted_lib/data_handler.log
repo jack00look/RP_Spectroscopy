@@ -81,3 +81,43 @@
 2025-12-17 17:03:16 - DataHandler - INFO - All reference lines loaded successfully.
 2025-12-18 08:32:06 - DataHandler - INFO - All reference lines loaded successfully.
 2025-12-18 16:25:03 - DataHandler - INFO - All reference lines loaded successfully.
+2026-01-19 10:43:01 - DataHandler - INFO - All reference lines loaded successfully.
+2026-01-19 10:50:13 - DataHandler - INFO - Saved reference line: REFERENCE_LINE_K_D2.npy
+2026-01-19 10:50:13 - DataHandler - INFO - All reference lines loaded successfully.
+2026-01-19 10:50:54 - DataHandler - INFO - Saved reference line: REFERENCE_LINE_K_D2.npy
+2026-01-19 10:50:54 - DataHandler - INFO - All reference lines loaded successfully.
+2026-01-19 10:51:16 - DataHandler - INFO - Saved reference line: REFERENCE_LINE_K_D2.npy
+2026-01-19 10:51:16 - DataHandler - INFO - All reference lines loaded successfully.
+2026-01-19 12:16:39 - DataHandler - INFO - All reference lines loaded successfully.
+2026-01-19 12:55:12 - DataHandler - INFO - All reference lines loaded successfully.
+2026-01-19 12:55:48 - DataHandler - INFO - Saved reference line: REFERENCE_LINE_K_D2.npy
+2026-01-19 12:55:48 - DataHandler - INFO - All reference lines loaded successfully.
+2026-01-19 12:56:22 - DataHandler - INFO - Saved reference line: REFERENCE_LINE_K_D2.npy
+2026-01-19 12:56:22 - DataHandler - INFO - All reference lines loaded successfully.
+2026-01-19 12:56:30 - DataHandler - INFO - Saved reference line: REFERENCE_LINE_K_D2.npy
+2026-01-19 12:56:30 - DataHandler - INFO - All reference lines loaded successfully.
+2026-01-19 12:56:35 - DataHandler - INFO - Saved reference line: REFERENCE_LINE_K_D2.npy
+2026-01-19 12:56:35 - DataHandler - INFO - All reference lines loaded successfully.
+2026-01-19 13:12:30 - DataHandler - INFO - Saved reference line: REFERENCE_LINE_K_D2.npy
+2026-01-19 13:12:30 - DataHandler - INFO - All reference lines loaded successfully.
+2026-01-19 13:12:38 - DataHandler - INFO - Saved reference line: REFERENCE_LINE_K_D2.npy
+2026-01-19 13:12:38 - DataHandler - INFO - All reference lines loaded successfully.
+2026-01-19 14:22:20 - DataHandler - INFO - All reference lines loaded successfully.
+2026-01-20 08:30:59 - DataHandler - INFO - All reference lines loaded successfully.
+2026-01-20 08:36:40 - DataHandler - INFO - Saved reference line: REFERENCE_LINE_K_D2.npy
+2026-01-20 08:36:40 - DataHandler - INFO - All reference lines loaded successfully.
+2026-01-20 08:37:23 - DataHandler - INFO - Saved reference line: REFERENCE_LINE_K_D2.npy
+2026-01-20 08:37:23 - DataHandler - INFO - All reference lines loaded successfully.
+2026-01-20 08:37:39 - DataHandler - INFO - Saved reference line: REFERENCE_LINE_K_D2.npy
+2026-01-20 08:37:39 - DataHandler - ERROR - Failed to load reference lines: too many indices for array: array is 1-dimensional, but 2 were indexed
+2026-01-20 08:37:39 - DataHandler - ERROR - Traceback (most recent call last):
+  File "/home/bec3/Desktop/Simone_Damian/Serafini/GettingStarted_lib/data_handler.py", line 34, in _load_reference_lines
+    "x": reference_line[:, 0],
+IndexError: too many indices for array: array is 1-dimensional, but 2 were indexed
+
+2026-01-20 08:37:47 - DataHandler - INFO - Saved reference line: REFERENCE_LINE_K_D2.npy
+2026-01-20 08:37:47 - DataHandler - INFO - All reference lines loaded successfully.
+2026-01-20 14:14:43 - DataHandler - INFO - All reference lines loaded successfully.
+2026-01-20 14:37:42 - DataHandler - INFO - All reference lines loaded successfully.
+2026-01-20 14:38:02 - DataHandler - INFO - All reference lines loaded successfully.
+2026-01-20 17:06:50 - DataHandler - INFO - All reference lines loaded successfully.

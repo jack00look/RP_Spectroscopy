@@ -144,3 +144,44 @@
 
 2025-12-18 16:24:59 - Interface - INFO - Attempting connection via RedPitaya_K address (192.168.1.159:18862)
 2025-12-18 16:25:02 - Interface - INFO - Connected to device via RedPitaya_K address
+2026-01-19 10:41:47 - Interface - INFO - Configuration loaded from /home/bec3/Desktop/Simone_Damian/Serafini/GettingStarted_lib/connect_config.yaml:
+
+2026-01-19 10:41:47 - Interface - INFO - Attempting connection via RedPitaya_K address (192.168.1.159:18862)
+2026-01-19 10:41:50 - Interface - WARNING - Failed to connect via RedPitaya_K address: [Errno 113] No route to host
+2026-01-19 10:41:50 - Interface - ERROR - No network connection found.
+2026-01-19 10:42:29 - Interface - INFO - Configuration loaded from /home/bec3/Desktop/Simone_Damian/Serafini/GettingStarted_lib/connect_config.yaml:
+
+2026-01-19 10:42:29 - Interface - INFO - Attempting connection via RedPitaya_K address (192.168.1.159:18862)
+2026-01-19 10:43:00 - Interface - INFO - Connected to device via RedPitaya_K address
+2026-01-19 12:16:35 - Interface - INFO - Configuration loaded from /home/bec3/Desktop/Simone_Damian/Serafini/GettingStarted_lib/connect_config.yaml:
+
+2026-01-19 12:16:35 - Interface - INFO - Attempting connection via RedPitaya_K address (192.168.1.159:18862)
+2026-01-19 12:16:38 - Interface - INFO - Connected to device via RedPitaya_K address
+2026-01-19 12:55:08 - Interface - INFO - Configuration loaded from /home/bec3/Desktop/Simone_Damian/Serafini/GettingStarted_lib/connect_config.yaml:
+
+2026-01-19 12:55:08 - Interface - INFO - Attempting connection via RedPitaya_K address (192.168.1.159:18862)
+2026-01-19 12:55:11 - Interface - INFO - Connected to device via RedPitaya_K address
+2026-01-19 14:22:16 - Interface - INFO - Configuration loaded from /home/bec3/Desktop/Simone_Damian/Serafini/GettingStarted_lib/connect_config.yaml:
+
+2026-01-19 14:22:16 - Interface - INFO - Attempting connection via RedPitaya_K address (192.168.1.159:18862)
+2026-01-19 14:22:19 - Interface - INFO - Connected to device via RedPitaya_K address
+2026-01-20 08:30:28 - Interface - INFO - Configuration loaded from /home/bec3/Desktop/Simone_Damian/Serafini/GettingStarted_lib/connect_config.yaml:
+
+2026-01-20 08:30:28 - Interface - INFO - Attempting connection via RedPitaya_K address (192.168.1.159:18862)
+2026-01-20 08:30:58 - Interface - INFO - Connected to device via RedPitaya_K address
+2026-01-20 14:14:39 - Interface - INFO - Configuration loaded from /home/bec3/Desktop/Simone_Damian/Serafini/GettingStarted_lib/connect_config.yaml:
+
+2026-01-20 14:14:39 - Interface - INFO - Attempting connection via RedPitaya_K address (192.168.1.159:18862)
+2026-01-20 14:14:42 - Interface - INFO - Connected to device via RedPitaya_K address
+2026-01-20 14:37:38 - Interface - INFO - Configuration loaded from /home/bec3/Desktop/Simone_Damian/Serafini/GettingStarted_lib/connect_config.yaml:
+
+2026-01-20 14:37:38 - Interface - INFO - Attempting connection via RedPitaya_K address (192.168.1.159:18862)
+2026-01-20 14:37:41 - Interface - INFO - Connected to device via RedPitaya_K address
+2026-01-20 14:37:58 - Interface - INFO - Configuration loaded from /home/bec3/Desktop/Simone_Damian/Serafini/GettingStarted_lib/connect_config.yaml:
+
+2026-01-20 14:37:59 - Interface - INFO - Attempting connection via RedPitaya_K address (192.168.1.159:18862)
+2026-01-20 14:38:01 - Interface - INFO - Connected to device via RedPitaya_K address
+2026-01-20 17:06:47 - Interface - INFO - Configuration loaded from /home/bec3/Desktop/Simone_Damian/Serafini/GettingStarted_lib/connect_config.yaml:
+
+2026-01-20 17:06:47 - Interface - INFO - Attempting connection via RedPitaya_K address (192.168.1.159:18862)
+2026-01-20 17:06:49 - Interface - INFO - Connected to device via RedPitaya_K address
