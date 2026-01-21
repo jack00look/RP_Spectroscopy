@@ -19,7 +19,7 @@ client = influxdb_client.InfluxDBClient(
 
 write_api = client.write_api(write_options=SYNCHRONOUS)
 
-for value in range(5):
+for value in range(10):
     point = (
         Point("measurement1")
         .tag("device", "Potassium_D2")

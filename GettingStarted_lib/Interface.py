@@ -13,6 +13,7 @@ from linien_common.common import ANALOG_OUT_V, Vpp
 import matplotlib.dates as mdates
 from datetime import datetime
 from scipy.ndimage import gaussian_filter1d
+from GettingStarted_lib.grafana_manager import GrafanaManager
 
 logger = logging.getLogger(__name__)
 logger.setLevel(logging.DEBUG)

@@ -46,6 +46,7 @@ class LaserLockingController():
 
         self.hardware_interface = interface
         self.data_handler = DataHandler()
+        self.force_stop = False # Flag to manually interrupt locking
         self.logger.info("LaserLockController initialized successfully.")
 
     def start_manual_locking(self):
@@ -150,8 +151,13 @@ class LaserLockingController():
 
             self.show_history()
 
+            if self.force_stop:
+                self.logger.info("Manual stop requested.")
+                self.stop = True
+                self.force_stop = False # Reset flag
+
             if self.stop:
-                print("Laser lost locking")
+                print("Laser lost locking or stopped manually")
                 print("Trying to center the line looking at the slow control signal...")
                 self.hardware_interface.start_sweep()
                 self.center_after_unlock()

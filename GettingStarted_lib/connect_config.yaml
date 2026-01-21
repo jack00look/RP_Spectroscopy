@@ -1,8 +1,7 @@
-# Linien hardware configuration
 devices:
-  - name: RedPitaya_K #local_host
-    ip: 192.168.1.159
-    linien_port: 18862
-    ssh_port: 22
-username: root
+- ip: 192.168.1.159
+  linien_port: 18862
+  name: RedPitaya_K
+  ssh_port: 22
 password: root
+username: root
