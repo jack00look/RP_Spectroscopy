@@ -1,5 +1,6 @@
 from GettingStarted_lib.Interface import Interface
 from GettingStarted_lib.general_lib import setup_logging, find_monitor_signal_peak
+from GettingStarted_lib.grafana_manager import GrafanaManager
 
 from pathlib import Path
 import logging
@@ -47,6 +48,7 @@ class LaserLockingController():
         self.hardware_interface = interface
         self.data_handler = DataHandler()
         self.force_stop = False # Flag to manually interrupt locking
+        self.grafana_manager = GrafanaManager()
         self.logger.info("LaserLockController initialized successfully.")
 
     def start_manual_locking(self):
@@ -157,6 +159,12 @@ class LaserLockingController():
                 self.force_stop = False # Reset flag
 
             if self.stop:
+                self.grafana_manager.log_lock_status(
+                                device_name="Potassium", 
+                                line_name="LINE_K_D2", 
+                                is_locked=False, 
+                                monitor_mean=self.expected_lock_monitor_signal_point[1]
+                            )
                 print("Laser lost locking or stopped manually")
                 print("Trying to center the line looking at the slow control signal...")
                 self.hardware_interface.start_sweep()
@@ -663,6 +671,12 @@ class LaserLockingController():
                         try:
                             self.hardware_interface.wait_for_lock_status(True)
                             self.logger.info("Locking the laser worked \o/")
+                            self.grafana_manager.log_lock_status(
+                                device_name="Potassium", 
+                                line_name="LINE_K_D2", 
+                                is_locked=True, 
+                                monitor_mean=self.expected_lock_monitor_signal_point[1]
+                            )
                             sleep(2)
                             #self.lock_unlock_logger.info("Laser locked at time: " + time.strftime("%Y-%m-%d %H:%M:%S", time.localtime()) + "with (horizontal offset, amplitude, vertical offset) = (",offset,",",amplitude,",",self.hardware_interface.writeable_params["offset_a"].get_remote_value(),")")
                             self.lock_unlock_logger.info(f"laser locked with parameters: horizontal offset = {offset}, amplitude = {amplitude}, vertical offset = {self.hardware_interface.writeable_params['offset_a'].get_remote_value()}")
