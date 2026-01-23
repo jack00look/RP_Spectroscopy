@@ -1,0 +1,19 @@
+devices:
+- ip: 192.168.1.159
+  linien_port: 18862
+  name: RedPitaya_K
+  ssh_port: 22
+  password: root
+  username: root
+- ip: 192.168.1.161
+  linien_port: 18862
+  name: RedPitaya_Rb
+  ssh_port: 2244
+  password: root
+  username: root
+- ip: 192.168.1.160
+  linien_port: 18862
+  name: RedPitaya_Na
+  ssh_port: 2244
+  password: root
+  username: root

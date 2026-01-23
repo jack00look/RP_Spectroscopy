@@ -2100,3 +2100,61 @@
 2026-01-22 15:57:44 - LaserLockingController - INFO - Line LINE_K_D2 is centered at offset 0.9408571428571428.
 2026-01-22 15:57:48 - LaserLockingController - INFO - Locking the laser worked \o/
 2026-01-22 15:57:50 - LaserLockingController - INFO - Exiting centering and locking procedure.
+2026-01-22 17:00:47 - LaserLockingController - INFO - Finding reference lines.
+2026-01-22 17:00:59 - LaserLockingController - INFO - Reference lines found successfully.
+2026-01-22 17:02:21 - LaserLockingController - INFO - Line LINE_K_D2 is centered at offset 0.9308571428571428.
+2026-01-22 17:02:26 - LaserLockingController - INFO - Locking the laser worked \o/
+2026-01-22 17:02:28 - LaserLockingController - INFO - Exiting centering and locking procedure.
+2026-01-23 08:23:59 - LaserLockingController - INFO - LaserLockController initialized successfully.
+2026-01-23 08:52:42 - LaserLockingController - INFO - Starting scan from 0.9V to 1.0V with 10 points.
+2026-01-23 08:52:59 - LaserLockingController - INFO - Scan completed successfully.
+2026-01-23 08:53:07 - LaserLockingController - INFO - Saving reference line with key K_D2.
+2026-01-23 08:53:08 - LaserLockingController - INFO - Reference line K_D2 saved successfully.
+2026-01-23 08:53:38 - LaserLockingController - INFO - Saving reference line with key K_D2.
+2026-01-23 08:53:38 - LaserLockingController - INFO - Reference line K_D2 saved successfully.
+2026-01-23 08:53:51 - LaserLockingController - INFO - Starting automatic lock for line LINE_K_D2 with relock = True.
+2026-01-23 08:53:51 - LaserLockingController - INFO - Finding reference lines.
+2026-01-23 08:54:17 - LaserLockingController - INFO - Reference lines found successfully.
+2026-01-23 08:54:37 - LaserLockingController - INFO - Line LINE_K_D2 is centered at offset 0.9385714285714286.
+2026-01-23 08:54:47 - LaserLockingController - INFO - Locking the laser failed :(
+2026-01-23 08:54:47 - LaserLockingController - INFO - Exiting centering and locking procedure.
+2026-01-23 08:54:58 - LaserLockingController - INFO - Finding reference lines.
+2026-01-23 08:55:10 - LaserLockingController - INFO - Reference lines found successfully.
+2026-01-23 08:55:41 - LaserLockingController - INFO - Line LINE_K_D2 is centered at offset 0.9385714285714286.
+2026-01-23 08:55:51 - LaserLockingController - INFO - Locking the laser failed :(
+2026-01-23 08:55:51 - LaserLockingController - INFO - Exiting centering and locking procedure.
+2026-01-23 08:55:57 - LaserLockingController - INFO - Starting automatic lock for line LINE_K_D2 with relock = True.
+2026-01-23 08:55:57 - LaserLockingController - INFO - Finding reference lines.
+2026-01-23 08:56:23 - LaserLockingController - INFO - Reference lines found successfully.
+2026-01-23 08:56:42 - LaserLockingController - INFO - Line LINE_K_D2 is centered at offset 0.9385714285714286.
+2026-01-23 08:56:52 - LaserLockingController - INFO - Locking the laser failed :(
+2026-01-23 08:56:52 - LaserLockingController - INFO - Exiting centering and locking procedure.
+2026-01-23 08:57:04 - LaserLockingController - INFO - Finding reference lines.
+2026-01-23 08:57:15 - LaserLockingController - INFO - Reference lines found successfully.
+2026-01-23 08:57:35 - LaserLockingController - INFO - Line LINE_K_D2 is centered at offset 0.9365714285714286.
+2026-01-23 08:57:45 - LaserLockingController - INFO - Locking the laser failed :(
+2026-01-23 08:57:45 - LaserLockingController - INFO - Exiting centering and locking procedure.
+2026-01-23 08:57:59 - LaserLockingController - INFO - LaserLockController initialized successfully.
+2026-01-23 08:58:09 - LaserLockingController - INFO - Starting automatic lock for line LINE_K_D2 with relock = True.
+2026-01-23 08:58:10 - LaserLockingController - INFO - Finding reference lines.
+2026-01-23 08:58:37 - LaserLockingController - INFO - Reference lines found successfully.
+2026-01-23 08:59:37 - LaserLockingController - INFO - Line LINE_K_D2 is centered at offset 0.9428571428571428.
+2026-01-23 08:59:41 - LaserLockingController - INFO - Locking the laser worked \o/
+2026-01-23 08:59:43 - LaserLockingController - INFO - Exiting centering and locking procedure.
+2026-01-23 08:59:49 - LaserLockingController - INFO - Finding reference lines.
+2026-01-23 09:00:01 - LaserLockingController - INFO - Reference lines found successfully.
+2026-01-23 09:00:30 - LaserLockingController - INFO - Line LINE_K_D2 is centered at offset 0.9428571428571428.
+2026-01-23 09:00:41 - LaserLockingController - INFO - Locking the laser failed :(
+2026-01-23 09:00:41 - LaserLockingController - INFO - Exiting centering and locking procedure.
+2026-01-23 09:00:52 - LaserLockingController - INFO - Finding reference lines.
+2026-01-23 09:01:23 - LaserLockingController - INFO - Starting automatic lock for line LINE_K_D2 with relock = True.
+2026-01-23 09:01:23 - LaserLockingController - INFO - Finding reference lines.
+2026-01-23 09:01:51 - LaserLockingController - INFO - Reference lines found successfully.
+2026-01-23 09:02:11 - LaserLockingController - INFO - Line LINE_K_D2 is centered at offset 0.9385714285714286.
+2026-01-23 09:02:15 - LaserLockingController - INFO - Locking the laser worked \o/
+2026-01-23 09:02:18 - LaserLockingController - INFO - Exiting centering and locking procedure.
+2026-01-23 10:12:06 - LaserLockingController - INFO - Finding reference lines.
+2026-01-23 10:12:17 - LaserLockingController - INFO - Reference lines found successfully.
+2026-01-23 10:12:55 - LaserLockingController - INFO - Line LINE_K_D2 is centered at offset 0.9485714285714286.
+2026-01-23 10:13:00 - LaserLockingController - INFO - Locking the laser worked \o/
+2026-01-23 10:13:02 - LaserLockingController - INFO - Exiting centering and locking procedure.

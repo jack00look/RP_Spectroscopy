@@ -31,8 +31,8 @@ class BoardConfig:
         if not (1 <= self.ssh_port <= 65535):
             raise ValueError(f"Invalid SSH port: {self.ssh_port}")
 
-class ConfigManager:
-    DEFAULT_CONFIG_PATH = Path(__file__).parent / "connect_config.yaml"
+class BoardManager():
+    DEFAULT_CONFIG_PATH = Path(__file__).parent / "boards/board_list.yaml" #"connect_config.yaml"
 
     def __init__(self, config_path: Optional[Path] = None):
         self.config_path = Path(config_path) if config_path else self.DEFAULT_CONFIG_PATH
