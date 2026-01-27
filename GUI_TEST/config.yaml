@@ -1,0 +1,39 @@
+# ==========================================
+# LASER CONTROL APPLICATION CONFIGURATION
+# ==========================================
+
+# --- APPLICATION SETTINGS ---
+app:
+  name: "LaserLockingApp"
+  version: "1.0.0"
+  debug_mode: true           # If true, print verbose logs to console
+  update_interval_ms: 50     # How often the GUI updates plots
+
+# --- FILE PATHS ---
+paths:
+
+  # Where the application saves text logs (errors, events)
+  logs: "/home/bec3/Desktop/Simone_Damian/Serafini/GUI_TEST/logs"
+  
+  # Where the application saves the reference lines
+  reference_lines: "/home/bec3/Desktop/Simone_Damian/Serafini/GUI_TEST/reference_lines"
+  
+  # Path to hardware definitions
+  hardware_calibration: "/home/bec3/Desktop/Simone_Damian/Serafini/GUI_TEST/boards"
+
+# --- NETWORK SERVICES ---
+services:
+  # ZeroRPC: For remote control from other scripts/consoles
+  zerorpc:
+    enabled: true
+    host: "0.0.0.0"  # Listen on all interfaces
+    port: 4242
+
+  # Grafana (via InfluxDB): For long-term monitoring
+  grafana:
+    enabled: false   # Set to true when database is ready
+    url: "http://localhost:8086"
+    org: "PhysicsLab_Trento"
+    bucket: "LaserJitterData"
+    # Note: In production, consider loading tokens from env variables
+    token: "my-super-secret-admin-token"

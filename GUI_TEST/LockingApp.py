@@ -1,0 +1,1 @@
+CONFIG_PATH = Path(__file__).parent / "config.yaml"
