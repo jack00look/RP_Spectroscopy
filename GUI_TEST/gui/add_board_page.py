@@ -7,8 +7,10 @@ class AddBoardPage(QWidget):
     sig_request_back = Signal()
     sig_submit_board = Signal(str, str, str, str)
 
-    def __init__(self):
+    def __init__(self, logger):
         super().__init__()
+        self.logger = logger
+        self.logger.info("AddBoardPage initialized.")
         layout = QVBoxLayout(self)
 
         title = QLabel("Add a new Red Pitaya")

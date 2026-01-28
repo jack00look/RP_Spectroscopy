@@ -9,8 +9,10 @@ class ConnectionPage(QWidget):
     sig_request_add_page = Signal()
     sig_request_refresh = Signal()
 
-    def __init__(self):
+    def __init__(self, logger):
         super().__init__()
+        self.logger = logger
+        self.logger.info("ConnectionPage initialized.")
         layout = QVBoxLayout(self)
 
         title = QLabel("Red Pitaya connection")

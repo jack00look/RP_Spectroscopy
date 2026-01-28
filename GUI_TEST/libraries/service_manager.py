@@ -1,6 +1,8 @@
 from PySide6.QtCore import QObject, Signal, Slot
 import os
 import yaml
+import logging
+from .logging_config import setup_logging
 
 class ServiceManager(QObject):
     sig_board_list_updated = Signal(list) 
@@ -9,6 +11,13 @@ class ServiceManager(QObject):
     def __init__(self, config):
         super().__init__()
         self.config = config
+
+        # Setup Logging
+        log_path = self.config.get('paths', {}).get('logs', './logs')
+        log_file = os.path.join(log_path, 'service_manager.log')
+        self.logger = logging.getLogger('ServiceManager')
+        setup_logging(self.logger, log_file)
+        self.logger.info("ServiceManager initialized.")
         
         # --- PATH LOGIC ---
         # 1. Try the path defined in config.yaml
@@ -21,11 +30,11 @@ class ServiceManager(QObject):
 
         self.board_list_path = os.path.join(hardware_path, "board_list.yaml")
         
-        print(f"DEBUG: ServiceManager looking for board list at: {self.board_list_path}", flush=True)
+        self.logger.debug(f"ServiceManager looking for board list at: {self.board_list_path}")
 
     def _read_yaml(self):
         if not os.path.exists(self.board_list_path):
-            print(f"DEBUG: board_list.yaml not found at {self.board_list_path}", flush=True)
+            self.logger.debug(f"board_list.yaml not found at {self.board_list_path}")
             return {'devices': []}
         
         try:
@@ -35,7 +44,7 @@ class ServiceManager(QObject):
                 return data
         except Exception as e:
             err = f"Failed to read board list: {e}"
-            print(f"ERROR: {err}", flush=True)
+            self.logger.error(f"{err}")
             self.sig_error.emit(err)
             return {'devices': []}
 
@@ -46,24 +55,24 @@ class ServiceManager(QObject):
             
             with open(self.board_list_path, 'w') as f:
                 yaml.safe_dump(data, f, default_flow_style=False)
-            print("DEBUG: board_list.yaml saved.", flush=True)
+            self.logger.debug("board_list.yaml saved.")
         except Exception as e:
             err = f"Failed to save board list: {e}"
-            print(f"ERROR: {err}", flush=True)
+            self.logger.error(f"{err}")
             self.sig_error.emit(err)
 
     @Slot()
     def load_boards(self):
         """Triggered on startup or refresh."""
-        print("DEBUG: Loading boards...", flush=True)
+        self.logger.debug("Loading boards...")
         data = self._read_yaml()
         device_list = data.get('devices', [])
-        print(f"DEBUG: Found {len(device_list)} devices.", flush=True)
+        self.logger.debug(f"Found {len(device_list)} devices.")
         self.sig_board_list_updated.emit(device_list)
 
     @Slot(str, str, str, str)
     def add_board(self, name, ip, linien_port, ssh_port):
-        print(f"SERVICE: Adding board '{name}'...", flush=True)
+        self.logger.info(f"Adding board '{name}'...")
         data = self._read_yaml()
         if 'devices' not in data or data['devices'] is None:
             data['devices'] = []
@@ -83,7 +92,7 @@ class ServiceManager(QObject):
 
     @Slot(str)
     def remove_board(self, board_name):
-        print(f"SERVICE: Removing board '{board_name}'...", flush=True)
+        self.logger.info(f"Removing board '{board_name}'...")
         data = self._read_yaml()
         current_list = data.get('devices', [])
         new_list = [d for d in current_list if d.get('name') != board_name]

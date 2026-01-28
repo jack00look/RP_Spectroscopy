@@ -1,6 +1,9 @@
 from .service_manager import ServiceManager
 from PySide6.QtCore import QThread
 from gui.main_window import MainWindow
+import logging
+import os
+from .logging_config import setup_logging
 
 
 class GeneralManager:
@@ -10,7 +13,14 @@ class GeneralManager:
         if not self.cfg:
              # Fallback: Assume board_list is in the script folder if config fails
             print("WARNING: Using default config fallback.", flush=True)
-            self.cfg = {'paths': {'hardware': './'}}
+            self.cfg = {'paths': {'hardware': './', 'logs': './logs'}}
+
+        # Setup Logging
+        log_path = self.cfg.get('paths', {}).get('logs', './logs')
+        log_file = os.path.join(log_path, 'general_manager.log')
+        self.logger = logging.getLogger('GeneralManager')
+        setup_logging(self.logger, log_file)
+        self.logger.info("GeneralManager starting up...")
 
         self.services = ServiceManager(self.cfg)
         self.svc_thread = QThread()
@@ -40,5 +50,6 @@ class GeneralManager:
         print(f"MANAGER: Connecting to {board_name}...", flush=True)
 
     def cleanup(self):
+        self.logger.info("GeneralManager shutting down.")
         self.svc_thread.quit()
         self.svc_thread.wait()
