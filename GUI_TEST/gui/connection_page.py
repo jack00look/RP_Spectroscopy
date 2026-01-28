@@ -29,10 +29,10 @@ class ConnectionPage(QWidget):
         layout.addWidget(self.table)
 
         btn_layout = QHBoxLayout()
-        self.btn_refresh = QPushButton("↻")
-        self.btn_confirm = QPushButton("Confirm")
-        self.btn_remove = QPushButton("-")
-        self.btn_add = QPushButton("+")
+        self.btn_refresh = QPushButton("Refresh")
+        self.btn_confirm = QPushButton("Connect")
+        self.btn_remove = QPushButton("Delete")
+        self.btn_add = QPushButton("Add")
 
         self.btn_confirm.setStyleSheet("background-color: #4CAF50; color: white;")
         self.btn_remove.setStyleSheet("background-color: #f44336; color: white;")

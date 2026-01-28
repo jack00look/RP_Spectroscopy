@@ -36,7 +36,9 @@ class ServiceManager(QObject):
     # YAML FILES METHODS
     # -------------------------------------------------------------------------
 
-    def _read_yaml(self):
+    # ---- Red Pitaya boards ----
+
+    def _read_boards_yaml(self):
         if not os.path.exists(self.board_list_path):
             self.logger.info(f"board_list.yaml not found at {self.board_list_path}")
             return {'devices': []}
@@ -52,7 +54,7 @@ class ServiceManager(QObject):
             self.sig_error.emit(err)
             return {'devices': []}
 
-    def _save_yaml(self, data):
+    def _save_boards_yaml(self, data):
         try:
             # Ensure directory exists before writing
             os.makedirs(os.path.dirname(self.board_list_path), exist_ok=True)
@@ -69,7 +71,7 @@ class ServiceManager(QObject):
     def load_boards(self):
         """Triggered on startup or refresh."""
         self.logger.info("Loading boards...")
-        data = self._read_yaml()
+        data = self._read_boards_yaml()
         device_list = data.get('devices', [])
         self.logger.info(f"Found {len(device_list)} devices.")
         self.sig_board_list_updated.emit(device_list)
@@ -77,7 +79,7 @@ class ServiceManager(QObject):
     @Slot(str, str, str, str)
     def add_board(self, name, ip, linien_port, ssh_port):
         self.logger.info(f"Adding board '{name}'...")
-        data = self._read_yaml()
+        data = self._read_boards_yaml()
         if 'devices' not in data or data['devices'] is None:
             data['devices'] = []
 
@@ -91,18 +93,24 @@ class ServiceManager(QObject):
         }
 
         data['devices'].append(new_device)
-        self._save_yaml(data)
+        self._save_boards_yaml(data)
         self.sig_board_list_updated.emit(data['devices'])
 
     @Slot(str)
     def remove_board(self, board_name):
         self.logger.info(f"Removing board '{board_name}'...")
-        data = self._read_yaml()
+        data = self._read_boards_yaml()
         current_list = data.get('devices', [])
         new_list = [d for d in current_list if d.get('name') != board_name]
         data['devices'] = new_list
-        self._save_yaml(data)
+        self._save_boards_yaml(data)
         self.sig_board_list_updated.emit(new_list)
+
+    # ---- Reference lines ----
+
+    # ---- Red Pitaya parameters ----
+
+    # ---- Circuits parameters ----
 
     # -------------------------------------------------------------------------
     # ZERORPC METHODS
@@ -113,4 +121,3 @@ class ServiceManager(QObject):
     # GRAFANA METHODS
     # -------------------------------------------------------------------------
 
-    
