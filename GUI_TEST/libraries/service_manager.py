@@ -30,11 +30,15 @@ class ServiceManager(QObject):
 
         self.board_list_path = os.path.join(hardware_path, "board_list.yaml")
         
-        self.logger.debug(f"ServiceManager looking for board list at: {self.board_list_path}")
+        self.logger.info(f"ServiceManager looking for board list at: {self.board_list_path}")
+
+    # -------------------------------------------------------------------------
+    # YAML FILES METHODS
+    # -------------------------------------------------------------------------
 
     def _read_yaml(self):
         if not os.path.exists(self.board_list_path):
-            self.logger.debug(f"board_list.yaml not found at {self.board_list_path}")
+            self.logger.info(f"board_list.yaml not found at {self.board_list_path}")
             return {'devices': []}
         
         try:
@@ -55,7 +59,7 @@ class ServiceManager(QObject):
             
             with open(self.board_list_path, 'w') as f:
                 yaml.safe_dump(data, f, default_flow_style=False)
-            self.logger.debug("board_list.yaml saved.")
+            self.logger.info("board_list.yaml saved.")
         except Exception as e:
             err = f"Failed to save board list: {e}"
             self.logger.error(f"{err}")
@@ -64,10 +68,10 @@ class ServiceManager(QObject):
     @Slot()
     def load_boards(self):
         """Triggered on startup or refresh."""
-        self.logger.debug("Loading boards...")
+        self.logger.info("Loading boards...")
         data = self._read_yaml()
         device_list = data.get('devices', [])
-        self.logger.debug(f"Found {len(device_list)} devices.")
+        self.logger.info(f"Found {len(device_list)} devices.")
         self.sig_board_list_updated.emit(device_list)
 
     @Slot(str, str, str, str)
@@ -99,3 +103,14 @@ class ServiceManager(QObject):
         data['devices'] = new_list
         self._save_yaml(data)
         self.sig_board_list_updated.emit(new_list)
+
+    # -------------------------------------------------------------------------
+    # ZERORPC METHODS
+    # -------------------------------------------------------------------------
+
+
+    # -------------------------------------------------------------------------
+    # GRAFANA METHODS
+    # -------------------------------------------------------------------------
+
+    
