@@ -1,6 +1,6 @@
 from PySide6.QtWidgets import (QMainWindow, QStackedWidget)
-from connection_page import ConnectionPage
-from add_board_page import AddBoardPage
+from .connection_page import ConnectionPage
+from .add_board_page import AddBoardPage
 
 class MainWindow(QMainWindow):
     def __init__(self):

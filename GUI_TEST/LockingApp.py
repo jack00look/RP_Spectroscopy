@@ -41,7 +41,8 @@ def load_config(filename="config.yaml"):
 
 if __name__ == "__main__":
     app = QApplication(sys.argv)
-    gm = GeneralManager()
+    cfg = load_config()
+    gm = GeneralManager(cfg)
     exit_code = app.exec()
     gm.cleanup()
     sys.exit(exit_code)

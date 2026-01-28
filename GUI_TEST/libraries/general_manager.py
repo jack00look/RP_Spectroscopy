@@ -1,12 +1,12 @@
-from service_manager import ServiceManager
+from .service_manager import ServiceManager
 from PySide6.QtCore import QThread
 from gui.main_window import MainWindow
 
 
 class GeneralManager:
-    def __init__(self):
+    def __init__(self, config=None):
         # Load config robustly
-        self.cfg = load_config("config.yaml")
+        self.cfg = config
         if not self.cfg:
              # Fallback: Assume board_list is in the script folder if config fails
             print("WARNING: Using default config fallback.", flush=True)
