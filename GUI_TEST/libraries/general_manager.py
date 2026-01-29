@@ -37,6 +37,12 @@ class GeneralManager:
         self.window.page_connect.sig_request_refresh.connect(self.services.load_boards)
         self.window.page_connect.sig_request_connect.connect(self.connect_to_board)
         self.services.sig_board_list_updated.connect(self.window.page_connect.update_table)
+        
+        # New Navigation Wiring
+        self.window.page_initial.sig_request_reference_lines.connect(self.window.go_to_reference_lines)
+        self.window.page_initial.sig_request_connection.connect(self.window.go_to_connection)
+        self.window.page_reflines.sig_request_back.connect(self.window.go_to_initial_page)
+        self.window.page_connect.sig_request_back.connect(self.window.go_to_initial_page)
 
         self.svc_thread.start()
         

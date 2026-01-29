@@ -8,6 +8,7 @@ class ConnectionPage(QWidget):
     sig_request_remove = Signal(str)
     sig_request_add_page = Signal()
     sig_request_refresh = Signal()
+    sig_request_back = Signal()
 
     def __init__(self, logger):
         super().__init__()
@@ -33,10 +34,12 @@ class ConnectionPage(QWidget):
         self.btn_confirm = QPushButton("Connect")
         self.btn_remove = QPushButton("Delete")
         self.btn_add = QPushButton("Add")
+        self.btn_back = QPushButton("Back")
 
         self.btn_confirm.setStyleSheet("background-color: #4CAF50; color: white;")
         self.btn_remove.setStyleSheet("background-color: #f44336; color: white;")
         
+        btn_layout.addWidget(self.btn_back)
         btn_layout.addWidget(self.btn_refresh)
         btn_layout.addStretch()
         btn_layout.addWidget(self.btn_remove)
@@ -44,6 +47,7 @@ class ConnectionPage(QWidget):
         btn_layout.addWidget(self.btn_confirm)
         layout.addLayout(btn_layout)
 
+        self.btn_back.clicked.connect(self.sig_request_back.emit)
         self.btn_add.clicked.connect(self.sig_request_add_page.emit)
         self.btn_refresh.clicked.connect(self.sig_request_refresh.emit)
         self.btn_confirm.clicked.connect(self.on_confirm_clicked)
