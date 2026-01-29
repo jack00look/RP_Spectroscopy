@@ -1,0 +1,116 @@
+Now I need you to create the layout of the ReferenceLinesPage and all the methods that the buttons inside the page call. All the methods have to be implemented in the servicemanager, where I already created a space for them, under the Reference lines comment. The GUI window must have 
+
+I've got another question: from the initial page of my GUI I can go in the reference line page. At this stage I have not already connected a board, therefore there are some functions that I can't execute. In general, the part of the ServiceManager that handles the reference lines has 3 main functions: add_reference_line, remove_reference_line, modify_reference_line. The first one requires a signal from the board (LLC) that cannot be obtained at this stage. Instead, the other two require only the ability to read numpy and yaml file that I can manage at this point. In a future page (after the connection of a board) I will have again the possibility to open this page but then with also the possibility of exploiting this function. Is there a way not to create two different pages that differs only by the presence of the button that triggers the add_reference_line function? Is there a clever way of solving this problem?
+
+Yes, there is absolutely a clever way to do this without duplicating code. This is a classic UI design pattern: **State-Based UI Toggling**.
+
+You create a **single class** (`ReferencePage`), but you add a specific method to it called `set_connected_state(bool)`. This method toggles the "Add" button on or off (enabled/disabled) based on whether a board is currently connected.
+
+### The Strategy
+
+1. **Default State (Start):** The "Add" button is visible but **greyed out (disabled)**. If the user hovers over it, a tooltip says "Connect board to use".
+2. **Connected State:** When `GeneralManager` successfully connects to a board, it calls `page_reference.set_connected_state(True)`. The button lights up and becomes clickable.
+3. **Wiring:** Since the `LLC` (and its signals) doesn't exist at startup, you perform the signal connection inside the `GeneralManager` **only at the moment connection happens**.
+
+### The Implementation
+
+Here is how you modify the `ReferencePage` and the `GeneralManager`.
+
+#### 1. The Reference Page (Smart View)
+
+```python
+class ReferencePage(QWidget):
+    # Signals for file operations (Always available)
+    sig_remove_line = Signal(str)
+    sig_modify_line = Signal(str, dict)
+    
+    # Signal for capturing new line (Only available when connected)
+    sig_request_capture = Signal() 
+
+    def __init__(self):
+        super().__init__()
+        layout = QVBoxLayout(self)
+
+        # ... (Table setup for existing lines) ...
+        self.lbl_status = QLabel("Mode: Offline (Editing only)")
+        layout.addWidget(self.lbl_status)
+
+        # --- THE BUTTONS ---
+        btn_layout = QHBoxLayout()
+        
+        self.btn_remove = QPushButton("Remove Selected")
+        self.btn_modify = QPushButton("Modify Selected")
+        
+        # The Special "Add" Button
+        self.btn_add = QPushButton("Capture New Reference")
+        self.btn_add.setToolTip("You must connect to a Red Pitaya to capture live data.")
+        
+        # Start in "Offline" mode (Disabled)
+        self.btn_add.setEnabled(False) 
+        
+        btn_layout.addWidget(self.btn_remove)
+        btn_layout.addWidget(self.btn_modify)
+        btn_layout.addWidget(self.btn_add)
+        
+        layout.addLayout(btn_layout)
+
+        # Connect internal click to signal
+        self.btn_add.clicked.connect(self.sig_request_capture.emit)
+
+    def set_connected_state(self, is_connected: bool):
+        """
+        Toggles the UI between 'Offline' and 'Live' modes.
+        Called by GeneralManager.
+        """
+        self.btn_add.setEnabled(is_connected)
+        
+        if is_connected:
+            self.lbl_status.setText("Mode: Online (Live Capture Available)")
+            self.lbl_status.setStyleSheet("color: green; font-weight: bold;")
+            self.btn_add.setToolTip("Click to capture current scope trace as reference.")
+        else:
+            self.lbl_status.setText("Mode: Offline (Editing only)")
+            self.lbl_status.setStyleSheet("color: gray;")
+            self.btn_add.setToolTip("You must connect to a Red Pitaya to capture live data.")
+
+```
+
+#### 2. The General Manager (The Coordinator)
+
+The Manager controls when the switch flips and wires up the signal dynamically.
+
+```python
+class GeneralManager:
+    def __init__(self):
+        # ... setup windows ...
+        
+        # 1. Start in Offline Mode
+        self.window.page_reference.set_connected_state(False)
+
+        # 2. Wire static functions (Remove/Modify) - These work immediately!
+        self.window.page_reference.sig_remove_line.connect(self.services.remove_ref_line)
+
+    def connect_to_board(self, board_name):
+        print(f"Connecting to {board_name}...")
+        
+        # ... (Create Interface and LLC) ...
+        self.llc = LaserLockController(...)
+        
+        # --- DYNAMIC WIRING ---
+        # Now that LLC exists, we wire the "Add" signal
+        self.window.page_reference.sig_request_capture.connect(self.llc.capture_reference_trace)
+        
+        # --- UI UPDATE ---
+        # Unlock the "Add" button
+        self.window.page_reference.set_connected_state(True)
+        
+        # Switch view
+        self.window.go_to_scope()
+
+```
+
+### Why this is better:
+
+1. **Code Reuse:** You write the table logic, layout, and styling only once.
+2. **User Experience:** Instead of the button vanishing (which is confusing), it is disabled. This teaches the user: *"Ah, this feature exists, but I need to connect a board first."*
+3. **Safety:** By disabling the button, you guarantee the user cannot trigger a `capture` command when there is no board connected (which would crash the app).
