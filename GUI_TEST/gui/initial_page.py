@@ -97,7 +97,7 @@ class InitialPage(QWidget):
         self.btn_connection.setEnabled(False)
         
         # Start timer for 1 second
-        self.transition_timer.start(1000)
+        self.transition_timer.start(500)
 
     def finish_connection_transition(self):
         self.logger.info("Transition complete. Requesting Connection Page.")

@@ -1,116 +1,17 @@
-Now I need you to create the layout of the ReferenceLinesPage and all the methods that the buttons inside the page call. All the methods have to be implemented in the servicemanager, where I already created a space for them, under the Reference lines comment. The GUI window must have 
+Now I need you to create the ReferenceLinesPage and all the methods that are needed. All the methods have to be implemented in the servicemanager, where I already created a space for them, under the Reference lines comment. 
 
-I've got another question: from the initial page of my GUI I can go in the reference line page. At this stage I have not already connected a board, therefore there are some functions that I can't execute. In general, the part of the ServiceManager that handles the reference lines has 3 main functions: add_reference_line, remove_reference_line, modify_reference_line. The first one requires a signal from the board (LLC) that cannot be obtained at this stage. Instead, the other two require only the ability to read numpy and yaml file that I can manage at this point. In a future page (after the connection of a board) I will have again the possibility to open this page but then with also the possibility of exploiting this function. Is there a way not to create two different pages that differs only by the presence of the button that triggers the add_reference_line function? Is there a clever way of solving this problem?
+The GUI window must have a general structure like this (I will be more specific below for each of the components): centered horizontally, on the top of the page, the title "Reference lines". Underneath the title I want to use QSplitter to have on the left side a table with the informations from the database (whose structure is specified below) and on the right the plot and the details of the selected line (QSplitter allows the user to drag the divider in the middle to resize the two parts). Then, underneath the Qsplitter I want 5 buttons: on the bottom left corner the "Back" button. On the right the "Delete", "Modify", "Duplicate" and the "Add" buttons.
 
-Yes, there is absolutely a clever way to do this without duplicating code. This is a classic UI design pattern: **State-Based UI Toggling**.
+I need you to implement a State-Based UI Toggling because from the initial page of my GUI I can go in the reference line page (already implemented). At this stage I have not already connected a board, therefore I can't push the "Add" button to add a reference line because this requires the board connection. So, I want that at the beginning the button is disabled and it enables only when I connect a RedPitaya board (that happens when in the ConnectionPage i select the board in the table and click the "connect" button (not implemented yet)). All the other buttons, and therefore methods are accessible already from the beginning. Another thing that has to be taken into account is that if the user enters in this page from the initial page and presses the "back" button, the gui has to turn back to the initial page. Instead, there will be the possibility to access to this page from a window after the connection of the board. In this case, when the user presses the "back" button, the GUI will not return to the initial page but will return to the page from which the user pressed the "Reference lines" button. Pay attention that, considering the fact that the LaserManager has not been defined yet (will be defined when the board is selected in the connection page), the wire connection from the "add" button to the associated LaserManager method will be done in the method of the general manager that initialize the LaserManager.
 
-You create a **single class** (`ReferencePage`), but you add a specific method to it called `set_connected_state(bool)`. This method toggles the "Add" button on or off (enabled/disabled) based on whether a board is currently connected.
+The database structure for the reference lines is the one you can see in the reference_lines folder. There is a reference_lines_inventory.yaml file that contains all the informations about the different lines but the data required for the plot that are contained in separate files. As you can see from the file, the main informations are: the name of the line that is given by the user when the line is saved, the board which created the reference line file, the date and time of the creation of the file in a specific format (when the user saves a reference line using the "Add" button that will be implemented later on), the file name that contains the x and y data for the plot of that specific reference line, the date and time at which the reference line has been modified using the "Modify" button, the polarity that is the sign of a particular property of the system (+ or -) that depends on the board configuration and, as final property, the lock_region that identifies the locking point of the line as a coulpe of x axis points. Then, for each line, the file file_name.npy contains the x and y data to plot it.
 
-### The Strategy
+The table on the left side of the QSplitter must show all the informations that are contained in the reference_lines/reference_lines_inventory.yaml file. When the user clicks on a specific line, on the right side of QSplitter I want the plot of the corresponding reference line and, below it, a table with all its properties. The file that contains the x and y data for the plot is the .npy file named by the entry file_name in the database. In addition, I want to visualize the locking region. In particular, I want a red semitransparent region between the two x-axis lock_region points (a rectangle with extrema on the x axis the lock_region coordinates).
 
-1. **Default State (Start):** The "Add" button is visible but **greyed out (disabled)**. If the user hovers over it, a tooltip says "Connect board to use".
-2. **Connected State:** When `GeneralManager` successfully connects to a board, it calls `page_reference.set_connected_state(True)`. The button lights up and becomes clickable.
-3. **Wiring:** Since the `LLC` (and its signals) doesn't exist at startup, you perform the signal connection inside the `GeneralManager` **only at the moment connection happens**.
+When the user selects a line in the left part of the QSplit and press the "delete" button, the delete_reference_line method must be triggered. This method deletes the associated entry in the .yaml file and the .npy file, refreshing the table afterward.
 
-### The Implementation
+When the user selects a line in the left part of the QSplit and press the "modify" button, the right part of the QSplit must turn into a "Editing mode" and the "modify" button transforms into the "save" button. In this mode, the table underneath the plot shows the actual values but now these can be modified. When the user has modified the parameters, presses on the "save" button. This triggers the modify_reference_line method that modifies the yaml file and the tables are refreshed. The parameters that can be changed are: name, lock_region (both values). If the name is modified, also the old .npy file has to be renamed accordingly. If a parameter is changed, also the modified date is changed to the current one in the yaml file.
 
-Here is how you modify the `ReferencePage` and the `GeneralManager`.
+If there are no lines in the database, the "duplicate" button must be disabled. If there is at least one line in it, it enables.
 
-#### 1. The Reference Page (Smart View)
-
-```python
-class ReferencePage(QWidget):
-    # Signals for file operations (Always available)
-    sig_remove_line = Signal(str)
-    sig_modify_line = Signal(str, dict)
-    
-    # Signal for capturing new line (Only available when connected)
-    sig_request_capture = Signal() 
-
-    def __init__(self):
-        super().__init__()
-        layout = QVBoxLayout(self)
-
-        # ... (Table setup for existing lines) ...
-        self.lbl_status = QLabel("Mode: Offline (Editing only)")
-        layout.addWidget(self.lbl_status)
-
-        # --- THE BUTTONS ---
-        btn_layout = QHBoxLayout()
-        
-        self.btn_remove = QPushButton("Remove Selected")
-        self.btn_modify = QPushButton("Modify Selected")
-        
-        # The Special "Add" Button
-        self.btn_add = QPushButton("Capture New Reference")
-        self.btn_add.setToolTip("You must connect to a Red Pitaya to capture live data.")
-        
-        # Start in "Offline" mode (Disabled)
-        self.btn_add.setEnabled(False) 
-        
-        btn_layout.addWidget(self.btn_remove)
-        btn_layout.addWidget(self.btn_modify)
-        btn_layout.addWidget(self.btn_add)
-        
-        layout.addLayout(btn_layout)
-
-        # Connect internal click to signal
-        self.btn_add.clicked.connect(self.sig_request_capture.emit)
-
-    def set_connected_state(self, is_connected: bool):
-        """
-        Toggles the UI between 'Offline' and 'Live' modes.
-        Called by GeneralManager.
-        """
-        self.btn_add.setEnabled(is_connected)
-        
-        if is_connected:
-            self.lbl_status.setText("Mode: Online (Live Capture Available)")
-            self.lbl_status.setStyleSheet("color: green; font-weight: bold;")
-            self.btn_add.setToolTip("Click to capture current scope trace as reference.")
-        else:
-            self.lbl_status.setText("Mode: Offline (Editing only)")
-            self.lbl_status.setStyleSheet("color: gray;")
-            self.btn_add.setToolTip("You must connect to a Red Pitaya to capture live data.")
-
-```
-
-#### 2. The General Manager (The Coordinator)
-
-The Manager controls when the switch flips and wires up the signal dynamically.
-
-```python
-class GeneralManager:
-    def __init__(self):
-        # ... setup windows ...
-        
-        # 1. Start in Offline Mode
-        self.window.page_reference.set_connected_state(False)
-
-        # 2. Wire static functions (Remove/Modify) - These work immediately!
-        self.window.page_reference.sig_remove_line.connect(self.services.remove_ref_line)
-
-    def connect_to_board(self, board_name):
-        print(f"Connecting to {board_name}...")
-        
-        # ... (Create Interface and LLC) ...
-        self.llc = LaserLockController(...)
-        
-        # --- DYNAMIC WIRING ---
-        # Now that LLC exists, we wire the "Add" signal
-        self.window.page_reference.sig_request_capture.connect(self.llc.capture_reference_trace)
-        
-        # --- UI UPDATE ---
-        # Unlock the "Add" button
-        self.window.page_reference.set_connected_state(True)
-        
-        # Switch view
-        self.window.go_to_scope()
-
-```
-
-### Why this is better:
-
-1. **Code Reuse:** You write the table logic, layout, and styling only once.
-2. **User Experience:** Instead of the button vanishing (which is confusing), it is disabled. This teaches the user: *"Ah, this feature exists, but I need to connect a board first."*
-3. **Safety:** By disabling the button, you guarantee the user cannot trigger a `capture` command when there is no board connected (which would crash the app).
+When a row of the table is selected and the "duplicate" button is pressed, the duplicate_reference_line method is triggered. In this method a new entry of the database is created. This is an exact copy of the copied version and differs from it only by the name that will be the same name of the copied line with a "_COPY" attached. As a consequence, the new .npy file that is created will be the same as the original one but with a "_COPY" inside the name (If the initial name is "K_D2" and the file is named "K_D2_Red...", the new reference line will have a name "K_D2_COPY" and the associated file will begin with "K_D2_COPY_Red..."). The creation date of the new file will be the same as the original file (the physical data are the same) but the modified date has to be changed to the current date.
