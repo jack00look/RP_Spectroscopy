@@ -233,28 +233,3 @@ readable_parameters:
   
   monitor_signal_history:
     hardware_name: monitor_signal_history
-
-advanced_settings:
-  fast_control_fluctuations:
-    initial_value: True # True if fast control fluctuations detection to be used to detect unlock
-  
-  slow_control_fluctuations:
-    initial_value: True # True if slow control fluctuations detection to be used to detect unlock
-
-  fast_control_saturation:
-    initial_value: True # True if fast control saturation detection to be used to detect unlock
-
-  slow_control_saturation:
-    initial_value: True # True if slow control saturation detection to be used to detect unlock
-
-  monitor_signal_drift:
-    initial_value: True # True if monitor signal drift detection to be used to detect unlock
-
-  fast_control_fluctuations_threshold:
-    initial_value: 0.1 # Threshold for fast control fluctuations detection
-
-  slow_control_fluctuations_threshold:
-    initial_value: 0.1 # Threshold for slow control fluctuations detection
-
-  live_refresh_interval:
-    initial_value: 0.25 #s Time interval for live refresh of the plot (history or live sweep)

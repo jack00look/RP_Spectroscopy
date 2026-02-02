@@ -128,7 +128,10 @@ class ReferenceLinesPage(QWidget):
         # self.btn_add.clicked.connect(...) # Future implementation
 
     def setup_details_table(self):
-        rows = ["Name", "Board", "Polarity", "Lock Region Min", "Lock Region Max"]
+        # Rows: Name (editable), Board (read-only), Lock Region Min (editable), Lock Region Max (editable), Polarity (read-only)
+        rows = ["Name", "Board", "Lock Region Min", "Lock Region Max", "Polarity"]
+        editable_rows = [0, 2, 3]  # Name, Lock Region Min, Lock Region Max
+        
         self.table_details.setRowCount(len(rows))
         for i, row_name in enumerate(rows):
             item = QTableWidgetItem(row_name)
@@ -136,7 +139,12 @@ class ReferenceLinesPage(QWidget):
             self.table_details.setItem(i, 0, item)
             
             val_item = QTableWidgetItem("")
-            val_item.setFlags(Qt.ItemIsEnabled | Qt.ItemIsSelectable) # Read only value initially
+            if i in editable_rows:
+                # Editable fields
+                val_item.setFlags(Qt.ItemIsEnabled | Qt.ItemIsSelectable | Qt.ItemIsEditable)
+            else:
+                # Read-only fields
+                val_item.setFlags(Qt.ItemIsEnabled | Qt.ItemIsSelectable)
             self.table_details.setItem(i, 1, val_item)
 
     def set_service_manager(self, sm):
@@ -190,12 +198,12 @@ class ReferenceLinesPage(QWidget):
         self.table_details.item(0, 1).setText(data.get('name', ''))
         # Board
         self.table_details.item(1, 1).setText(data.get('board', ''))
-        # Polarity
-        self.table_details.item(2, 1).setText(data.get('polarity', ''))
         # Lock Region
         region = data.get('lock_region', [0, 0])
-        self.table_details.item(3, 1).setText(str(region[0]))
-        self.table_details.item(4, 1).setText(str(region[1]))
+        self.table_details.item(2, 1).setText(str(region[0]))
+        self.table_details.item(3, 1).setText(str(region[1]))
+        # Polarity
+        self.table_details.item(4, 1).setText(data.get('polarity', ''))
 
     def load_plot_data(self, data):
         # Support both 'file_name' (without .npy) and 'file' (with .npy)
@@ -235,13 +243,21 @@ class ReferenceLinesPage(QWidget):
         self.btn_cancel.setVisible(active)
         
         # Enable editing in details table
-        flags = Qt.ItemIsEnabled | Qt.ItemIsSelectable
-        if active:
-            flags |= Qt.ItemIsEditable
-            
-        # Name, Board, Min, Max are editable
-        for i in range(4):
-            self.table_details.item(i, 1).setFlags(flags)
+        # Only Name (0), Lock Region Min (2), and Lock Region Max (3) are editable
+        # Board (1) and Polarity (4) are always read-only
+        editable_rows = [0, 2, 3]
+        for i in range(self.table_details.rowCount()):
+            item = self.table_details.item(i, 1)
+            if item:
+                if i in editable_rows:
+                    # These fields are always editable when in modify mode
+                    if active:
+                        item.setFlags(Qt.ItemIsEnabled | Qt.ItemIsSelectable | Qt.ItemIsEditable)
+                    else:
+                        item.setFlags(Qt.ItemIsEnabled | Qt.ItemIsSelectable | Qt.ItemIsEditable)
+                else:
+                    # Board and Polarity are always read-only
+                    item.setFlags(Qt.ItemIsEnabled | Qt.ItemIsSelectable)
             
         # Lock Region movable
         self.lock_region.setMovable(active)
