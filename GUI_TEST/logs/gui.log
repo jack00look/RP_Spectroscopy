@@ -149,3 +149,153 @@
 2026-01-30 10:42:57 - GUI - INFO - ReferenceLinesPage initialized.
 2026-01-30 10:43:00 - GUI - INFO - Reference Lines button clicked.
 2026-01-30 10:44:03 - GUI - INFO - Back button clicked in ReferenceLinesPage.
+2026-02-02 09:11:31 - GUI - INFO - GUI MainWindow initialized.
+2026-02-02 09:11:31 - GUI - INFO - InitialPage initialized.
+2026-02-02 09:11:31 - GUI - INFO - ConnectionPage initialized.
+2026-02-02 09:11:31 - GUI - INFO - AddBoardPage initialized.
+2026-02-02 09:11:31 - GUI - INFO - ReferenceLinesPage initialized.
+2026-02-02 09:11:31 - GUI - INFO - Updating reference lines table with 0 items.
+2026-02-02 09:12:45 - GUI - INFO - GUI MainWindow initialized.
+2026-02-02 09:12:45 - GUI - INFO - InitialPage initialized.
+2026-02-02 09:12:45 - GUI - INFO - ConnectionPage initialized.
+2026-02-02 09:12:45 - GUI - INFO - AddBoardPage initialized.
+2026-02-02 09:12:45 - GUI - INFO - ReferenceLinesPage initialized.
+2026-02-02 09:12:45 - GUI - INFO - Updating reference lines table with 1 items.
+2026-02-02 09:14:33 - GUI - INFO - GUI MainWindow initialized.
+2026-02-02 09:14:33 - GUI - INFO - InitialPage initialized.
+2026-02-02 09:14:33 - GUI - INFO - ConnectionPage initialized.
+2026-02-02 09:14:33 - GUI - INFO - AddBoardPage initialized.
+2026-02-02 09:14:33 - GUI - INFO - ReferenceLinesPage initialized.
+2026-02-02 09:14:33 - GUI - INFO - Updating reference lines table with 1 items.
+2026-02-02 09:14:36 - GUI - INFO - Connection button clicked. Starting transition...
+2026-02-02 09:14:37 - GUI - INFO - Transition complete. Requesting Connection Page.
+2026-02-02 09:14:39 - GUI - INFO - Reference Lines button clicked.
+2026-02-02 09:17:52 - GUI - INFO - GUI MainWindow initialized.
+2026-02-02 09:17:52 - GUI - INFO - InitialPage initialized.
+2026-02-02 09:17:52 - GUI - INFO - ConnectionPage initialized.
+2026-02-02 09:17:52 - GUI - INFO - AddBoardPage initialized.
+2026-02-02 09:17:52 - GUI - INFO - ReferenceLinesPage initialized.
+2026-02-02 09:17:52 - GUI - INFO - Updating reference lines table with 1 items.
+2026-02-02 09:17:54 - GUI - INFO - Reference Lines button clicked.
+2026-02-02 09:21:27 - GUI - INFO - GUI MainWindow initialized.
+2026-02-02 09:21:27 - GUI - INFO - InitialPage initialized.
+2026-02-02 09:21:27 - GUI - INFO - ConnectionPage initialized.
+2026-02-02 09:21:27 - GUI - INFO - AddBoardPage initialized.
+2026-02-02 09:21:27 - GUI - INFO - ReferenceLinesPage initialized.
+2026-02-02 09:21:27 - GUI - INFO - Updating reference lines table with 0 items.
+2026-02-02 09:23:01 - GUI - INFO - GUI MainWindow initialized.
+2026-02-02 09:23:01 - GUI - INFO - InitialPage initialized.
+2026-02-02 09:23:01 - GUI - INFO - ConnectionPage initialized.
+2026-02-02 09:23:01 - GUI - INFO - AddBoardPage initialized.
+2026-02-02 09:23:01 - GUI - INFO - ReferenceLinesPage initialized.
+2026-02-02 09:23:01 - GUI - INFO - Updating reference lines table with 0 items.
+2026-02-02 09:23:03 - GUI - INFO - Reference Lines button clicked.
+2026-02-02 09:27:06 - GUI - INFO - GUI MainWindow initialized.
+2026-02-02 09:27:06 - GUI - INFO - InitialPage initialized.
+2026-02-02 09:27:06 - GUI - INFO - ConnectionPage initialized.
+2026-02-02 09:27:06 - GUI - INFO - AddBoardPage initialized.
+2026-02-02 09:27:06 - GUI - INFO - ReferenceLinesPage initialized.
+2026-02-02 09:27:06 - GUI - INFO - Updating reference lines table with 2 items.
+2026-02-02 09:28:57 - GUI - INFO - GUI MainWindow initialized.
+2026-02-02 09:28:57 - GUI - INFO - InitialPage initialized.
+2026-02-02 09:28:57 - GUI - INFO - ConnectionPage initialized.
+2026-02-02 09:28:57 - GUI - INFO - AddBoardPage initialized.
+2026-02-02 09:28:57 - GUI - INFO - ReferenceLinesPage initialized.
+2026-02-02 09:28:57 - GUI - INFO - Updating reference lines table with 2 items.
+2026-02-02 09:29:10 - GUI - INFO - Reference Lines button clicked.
+2026-02-02 09:41:16 - GUI - INFO - GUI MainWindow initialized.
+2026-02-02 09:41:16 - GUI - INFO - InitialPage initialized.
+2026-02-02 09:41:16 - GUI - INFO - ConnectionPage initialized.
+2026-02-02 09:41:16 - GUI - INFO - AddBoardPage initialized.
+2026-02-02 09:41:17 - GUI - INFO - ReferenceLinesPage initialized.
+2026-02-02 09:41:17 - GUI - INFO - Updating reference lines table with 2 items.
+2026-02-02 09:41:23 - GUI - INFO - Reference Lines button clicked.
+2026-02-02 09:42:32 - GUI - INFO - GUI MainWindow initialized.
+2026-02-02 09:42:32 - GUI - INFO - InitialPage initialized.
+2026-02-02 09:42:32 - GUI - INFO - ConnectionPage initialized.
+2026-02-02 09:42:32 - GUI - INFO - AddBoardPage initialized.
+2026-02-02 09:42:32 - GUI - INFO - ReferenceLinesPage initialized.
+2026-02-02 09:42:32 - GUI - INFO - Updating reference lines table with 2 items.
+2026-02-02 09:42:34 - GUI - INFO - Reference Lines button clicked.
+2026-02-02 09:43:40 - GUI - INFO - Updating reference lines table with 3 items.
+2026-02-02 09:44:27 - GUI - INFO - Updating reference lines table with 3 items.
+2026-02-02 10:57:38 - GUI - INFO - GUI MainWindow initialized.
+2026-02-02 10:57:38 - GUI - INFO - InitialPage initialized.
+2026-02-02 10:57:38 - GUI - INFO - ConnectionPage initialized.
+2026-02-02 10:57:38 - GUI - INFO - AddBoardPage initialized.
+2026-02-02 10:57:38 - GUI - INFO - ReferenceLinesPage initialized.
+2026-02-02 10:57:38 - GUI - INFO - Updating reference lines table with 3 items.
+2026-02-02 10:57:40 - GUI - INFO - Reference Lines button clicked.
+2026-02-02 10:58:02 - GUI - INFO - Updating reference lines table with 2 items.
+2026-02-02 10:58:12 - GUI - INFO - Updating reference lines table with 3 items.
+2026-02-02 10:58:49 - GUI - INFO - Updating reference lines table with 3 items.
+2026-02-02 11:00:06 - GUI - INFO - Updating reference lines table with 2 items.
+2026-02-02 11:00:09 - GUI - INFO - Updating reference lines table with 3 items.
+2026-02-02 11:16:09 - GUI - INFO - GUI MainWindow initialized.
+2026-02-02 11:16:09 - GUI - INFO - InitialPage initialized.
+2026-02-02 11:16:09 - GUI - INFO - ConnectionPage initialized.
+2026-02-02 11:16:09 - GUI - INFO - AddBoardPage initialized.
+2026-02-02 11:16:09 - GUI - INFO - ReferenceLinesPage initialized.
+2026-02-02 11:16:09 - GUI - INFO - Updating reference lines table with 3 items.
+2026-02-02 11:16:11 - GUI - INFO - Reference Lines button clicked.
+2026-02-02 11:16:21 - GUI - INFO - Updating reference lines table with 2 items.
+2026-02-02 11:16:38 - GUI - INFO - Updating reference lines table with 3 items.
+2026-02-02 11:17:12 - GUI - INFO - Updating reference lines table with 3 items.
+2026-02-02 11:23:17 - GUI - INFO - GUI MainWindow initialized.
+2026-02-02 11:23:17 - GUI - INFO - InitialPage initialized.
+2026-02-02 11:23:17 - GUI - INFO - ConnectionPage initialized.
+2026-02-02 11:23:17 - GUI - INFO - AddBoardPage initialized.
+2026-02-02 11:23:17 - GUI - INFO - ReferenceLinesPage initialized.
+2026-02-02 11:23:17 - GUI - INFO - Updating reference lines table with 3 items.
+2026-02-02 11:23:19 - GUI - INFO - Reference Lines button clicked.
+2026-02-02 11:23:42 - GUI - INFO - Updating reference lines table with 2 items.
+2026-02-02 11:24:18 - GUI - INFO - Updating reference lines table with 3 items.
+2026-02-02 11:24:39 - GUI - INFO - Updating reference lines table with 3 items.
+2026-02-02 11:34:30 - GUI - INFO - GUI MainWindow initialized.
+2026-02-02 11:34:30 - GUI - INFO - InitialPage initialized.
+2026-02-02 11:34:30 - GUI - INFO - ConnectionPage initialized.
+2026-02-02 11:34:30 - GUI - INFO - AddBoardPage initialized.
+2026-02-02 11:34:30 - GUI - INFO - ReferenceLinesPage initialized.
+2026-02-02 11:34:30 - GUI - INFO - Updating reference lines table with 3 items.
+2026-02-02 11:34:31 - GUI - INFO - Reference Lines button clicked.
+2026-02-02 11:35:29 - GUI - INFO - GUI MainWindow initialized.
+2026-02-02 11:35:29 - GUI - INFO - InitialPage initialized.
+2026-02-02 11:35:29 - GUI - INFO - ConnectionPage initialized.
+2026-02-02 11:35:29 - GUI - INFO - AddBoardPage initialized.
+2026-02-02 11:35:29 - GUI - INFO - ReferenceLinesPage initialized.
+2026-02-02 11:35:29 - GUI - INFO - Updating reference lines table with 3 items.
+2026-02-02 11:35:30 - GUI - INFO - Reference Lines button clicked.
+2026-02-02 11:39:10 - GUI - INFO - GUI MainWindow initialized.
+2026-02-02 11:39:10 - GUI - INFO - InitialPage initialized.
+2026-02-02 11:39:11 - GUI - INFO - ConnectionPage initialized.
+2026-02-02 11:39:11 - GUI - INFO - AddBoardPage initialized.
+2026-02-02 11:39:11 - GUI - INFO - ReferenceLinesPage initialized.
+2026-02-02 11:39:11 - GUI - INFO - Updating reference lines table with 3 items.
+2026-02-02 11:39:12 - GUI - INFO - Reference Lines button clicked.
+2026-02-02 11:39:43 - GUI - INFO - Reference Lines button clicked.
+2026-02-02 11:39:47 - GUI - INFO - Connection button clicked. Starting transition...
+2026-02-02 11:39:47 - GUI - INFO - Transition complete. Requesting Connection Page.
+2026-02-02 11:39:53 - GUI - INFO - Reference Lines button clicked.
+2026-02-02 11:40:12 - GUI - INFO - Reference Lines button clicked.
+2026-02-02 11:40:20 - GUI - INFO - GUI MainWindow initialized.
+2026-02-02 11:40:20 - GUI - INFO - InitialPage initialized.
+2026-02-02 11:40:20 - GUI - INFO - ConnectionPage initialized.
+2026-02-02 11:40:20 - GUI - INFO - AddBoardPage initialized.
+2026-02-02 11:40:20 - GUI - INFO - ReferenceLinesPage initialized.
+2026-02-02 11:40:20 - GUI - INFO - Updating reference lines table with 3 items.
+2026-02-02 11:40:21 - GUI - INFO - Reference Lines button clicked.
+2026-02-02 11:40:23 - GUI - INFO - Connection button clicked. Starting transition...
+2026-02-02 11:40:24 - GUI - INFO - Transition complete. Requesting Connection Page.
+2026-02-02 11:40:25 - GUI - INFO - Reference Lines button clicked.
+2026-02-02 11:41:30 - GUI - INFO - Connection button clicked. Starting transition...
+2026-02-02 11:41:31 - GUI - INFO - Transition complete. Requesting Connection Page.
+2026-02-02 11:41:44 - GUI - INFO - Reference Lines button clicked.
+2026-02-02 11:44:47 - GUI - INFO - GUI MainWindow initialized.
+2026-02-02 11:44:47 - GUI - INFO - InitialPage initialized.
+2026-02-02 11:44:47 - GUI - INFO - ConnectionPage initialized.
+2026-02-02 11:44:47 - GUI - INFO - AddBoardPage initialized.
+2026-02-02 11:44:48 - GUI - INFO - ReferenceLinesPage initialized.
+2026-02-02 11:44:48 - GUI - INFO - Updating reference lines table with 3 items.
+2026-02-02 11:44:49 - GUI - INFO - Reference Lines button clicked.
+2026-02-02 11:44:58 - GUI - INFO - Reference Lines button clicked.
+2026-02-02 11:45:00 - GUI - INFO - Reference Lines button clicked.

@@ -42,7 +42,11 @@ class GeneralManager:
         self.window.page_initial.sig_request_reference_lines.connect(self.window.go_to_reference_lines)
         self.window.page_initial.sig_request_connection.connect(self.window.go_to_connection)
         self.window.page_reflines.sig_request_back.connect(self.window.go_to_initial_page)
+
         self.window.page_connect.sig_request_back.connect(self.window.go_to_initial_page)
+        
+        # Inject ServiceManager into ReferenceLinesPage
+        self.window.page_reflines.set_service_manager(self.services)
 
         self.svc_thread.start()
         

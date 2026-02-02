@@ -106,3 +106,158 @@
 2026-01-30 10:42:57 - ServiceManager - INFO - ServiceManager looking for board list at: /home/bec3/Desktop/Simone_Damian/Serafini/GUI_TEST/boards/board_list.yaml
 2026-01-30 10:42:57 - ServiceManager - INFO - Loading boards...
 2026-01-30 10:42:57 - ServiceManager - INFO - Found 3 devices.
+2026-02-02 09:11:31 - ServiceManager - INFO - ServiceManager initialized.
+2026-02-02 09:11:31 - ServiceManager - INFO - ServiceManager looking for board list at: /home/bec3/Desktop/Simone_Damian/Serafini/GUI_TEST/boards/board_list.yaml
+2026-02-02 09:11:31 - ServiceManager - INFO - ServiceManager looking for reference lines at: /home/bec3/Desktop/Simone_Damian/Serafini/GUI_TEST/boards/reference_lines_inventory.yaml
+2026-02-02 09:11:31 - ServiceManager - INFO - reference_lines_inventory.yaml not found at /home/bec3/Desktop/Simone_Damian/Serafini/GUI_TEST/boards/reference_lines_inventory.yaml
+2026-02-02 09:11:31 - ServiceManager - INFO - Loading boards...
+2026-02-02 09:11:31 - ServiceManager - INFO - Found 3 devices.
+2026-02-02 09:12:45 - ServiceManager - INFO - ServiceManager initialized.
+2026-02-02 09:12:45 - ServiceManager - INFO - ServiceManager looking for board list at: /home/bec3/Desktop/Simone_Damian/Serafini/GUI_TEST/boards/board_list.yaml
+2026-02-02 09:12:45 - ServiceManager - INFO - ServiceManager looking for reference lines at: /home/bec3/Desktop/Simone_Damian/Serafini/GUI_TEST/boards/reference_lines_inventory.yaml
+2026-02-02 09:12:45 - ServiceManager - INFO - Loading boards...
+2026-02-02 09:12:45 - ServiceManager - INFO - Found 3 devices.
+2026-02-02 09:14:33 - ServiceManager - INFO - ServiceManager initialized.
+2026-02-02 09:14:33 - ServiceManager - INFO - ServiceManager looking for board list at: /home/bec3/Desktop/Simone_Damian/Serafini/GUI_TEST/boards/board_list.yaml
+2026-02-02 09:14:33 - ServiceManager - INFO - ServiceManager looking for reference lines at: /home/bec3/Desktop/Simone_Damian/Serafini/GUI_TEST/boards/reference_lines_inventory.yaml
+2026-02-02 09:14:33 - ServiceManager - INFO - Loading boards...
+2026-02-02 09:14:33 - ServiceManager - INFO - Found 3 devices.
+2026-02-02 09:17:52 - ServiceManager - INFO - ServiceManager initialized.
+2026-02-02 09:17:52 - ServiceManager - INFO - ServiceManager looking for board list at: /home/bec3/Desktop/Simone_Damian/Serafini/GUI_TEST/boards/board_list.yaml
+2026-02-02 09:17:52 - ServiceManager - INFO - ServiceManager looking for reference lines at: /home/bec3/Desktop/Simone_Damian/Serafini/GUI_TEST/boards/reference_lines_inventory.yaml
+2026-02-02 09:17:52 - ServiceManager - INFO - Loading boards...
+2026-02-02 09:17:52 - ServiceManager - INFO - Found 3 devices.
+2026-02-02 09:21:27 - ServiceManager - INFO - ServiceManager initialized.
+2026-02-02 09:21:27 - ServiceManager - INFO - ServiceManager looking for board list at: /home/bec3/Desktop/Simone_Damian/Serafini/GUI_TEST/boards/board_list.yaml
+2026-02-02 09:21:27 - ServiceManager - INFO - ServiceManager looking for reference lines at: /home/bec3/Desktop/Simone_Damian/Serafini/GUI_TEST/reference_lines/reference_lines_inventory.yaml
+2026-02-02 09:21:27 - ServiceManager - INFO - Loading boards...
+2026-02-02 09:21:27 - ServiceManager - INFO - Found 3 devices.
+2026-02-02 09:23:01 - ServiceManager - INFO - ServiceManager initialized.
+2026-02-02 09:23:01 - ServiceManager - INFO - ServiceManager looking for board list at: /home/bec3/Desktop/Simone_Damian/Serafini/GUI_TEST/boards/board_list.yaml
+2026-02-02 09:23:01 - ServiceManager - INFO - ServiceManager looking for reference lines at: /home/bec3/Desktop/Simone_Damian/Serafini/GUI_TEST/reference_lines/reference_lines_inventory.yaml
+2026-02-02 09:23:01 - ServiceManager - INFO - Loading boards...
+2026-02-02 09:23:01 - ServiceManager - INFO - Found 3 devices.
+2026-02-02 09:27:06 - ServiceManager - INFO - ServiceManager initialized.
+2026-02-02 09:27:06 - ServiceManager - INFO - ServiceManager looking for board list at: /home/bec3/Desktop/Simone_Damian/Serafini/GUI_TEST/boards/board_list.yaml
+2026-02-02 09:27:06 - ServiceManager - INFO - ServiceManager looking for reference lines at: /home/bec3/Desktop/Simone_Damian/Serafini/GUI_TEST/reference_lines/reference_lines_inventory.yaml
+2026-02-02 09:27:06 - ServiceManager - INFO - Loading boards...
+2026-02-02 09:27:06 - ServiceManager - INFO - Found 3 devices.
+2026-02-02 09:28:57 - ServiceManager - INFO - ServiceManager initialized.
+2026-02-02 09:28:57 - ServiceManager - INFO - ServiceManager looking for board list at: /home/bec3/Desktop/Simone_Damian/Serafini/GUI_TEST/boards/board_list.yaml
+2026-02-02 09:28:57 - ServiceManager - INFO - ServiceManager looking for reference lines at: /home/bec3/Desktop/Simone_Damian/Serafini/GUI_TEST/reference_lines/reference_lines_inventory.yaml
+2026-02-02 09:28:57 - ServiceManager - INFO - Loading boards...
+2026-02-02 09:28:57 - ServiceManager - INFO - Found 3 devices.
+2026-02-02 09:29:11 - ServiceManager - ERROR - Failed to load .npy: This file contains pickled (object) data. If you trust the file you can load it unsafely using the `allow_pickle=` keyword argument or `pickle.load()`.
+2026-02-02 09:29:12 - ServiceManager - ERROR - Failed to load .npy: This file contains pickled (object) data. If you trust the file you can load it unsafely using the `allow_pickle=` keyword argument or `pickle.load()`.
+2026-02-02 09:29:13 - ServiceManager - ERROR - Failed to load .npy: This file contains pickled (object) data. If you trust the file you can load it unsafely using the `allow_pickle=` keyword argument or `pickle.load()`.
+2026-02-02 09:29:13 - ServiceManager - ERROR - Failed to load .npy: This file contains pickled (object) data. If you trust the file you can load it unsafely using the `allow_pickle=` keyword argument or `pickle.load()`.
+2026-02-02 09:29:14 - ServiceManager - ERROR - Failed to load .npy: This file contains pickled (object) data. If you trust the file you can load it unsafely using the `allow_pickle=` keyword argument or `pickle.load()`.
+2026-02-02 09:29:14 - ServiceManager - ERROR - Failed to load .npy: This file contains pickled (object) data. If you trust the file you can load it unsafely using the `allow_pickle=` keyword argument or `pickle.load()`.
+2026-02-02 09:29:15 - ServiceManager - ERROR - Failed to load .npy: This file contains pickled (object) data. If you trust the file you can load it unsafely using the `allow_pickle=` keyword argument or `pickle.load()`.
+2026-02-02 09:29:16 - ServiceManager - ERROR - Failed to load .npy: This file contains pickled (object) data. If you trust the file you can load it unsafely using the `allow_pickle=` keyword argument or `pickle.load()`.
+2026-02-02 09:29:24 - ServiceManager - ERROR - Failed to load .npy: This file contains pickled (object) data. If you trust the file you can load it unsafely using the `allow_pickle=` keyword argument or `pickle.load()`.
+2026-02-02 09:29:25 - ServiceManager - ERROR - Failed to load .npy: This file contains pickled (object) data. If you trust the file you can load it unsafely using the `allow_pickle=` keyword argument or `pickle.load()`.
+2026-02-02 09:29:26 - ServiceManager - ERROR - Failed to load .npy: This file contains pickled (object) data. If you trust the file you can load it unsafely using the `allow_pickle=` keyword argument or `pickle.load()`.
+2026-02-02 09:29:27 - ServiceManager - ERROR - Failed to load .npy: This file contains pickled (object) data. If you trust the file you can load it unsafely using the `allow_pickle=` keyword argument or `pickle.load()`.
+2026-02-02 09:31:24 - ServiceManager - ERROR - Failed to load .npy: This file contains pickled (object) data. If you trust the file you can load it unsafely using the `allow_pickle=` keyword argument or `pickle.load()`.
+2026-02-02 09:31:46 - ServiceManager - ERROR - Failed to load .npy: This file contains pickled (object) data. If you trust the file you can load it unsafely using the `allow_pickle=` keyword argument or `pickle.load()`.
+2026-02-02 09:31:47 - ServiceManager - ERROR - Failed to load .npy: This file contains pickled (object) data. If you trust the file you can load it unsafely using the `allow_pickle=` keyword argument or `pickle.load()`.
+2026-02-02 09:31:48 - ServiceManager - ERROR - Failed to load .npy: This file contains pickled (object) data. If you trust the file you can load it unsafely using the `allow_pickle=` keyword argument or `pickle.load()`.
+2026-02-02 09:31:48 - ServiceManager - ERROR - Failed to load .npy: This file contains pickled (object) data. If you trust the file you can load it unsafely using the `allow_pickle=` keyword argument or `pickle.load()`.
+2026-02-02 09:31:49 - ServiceManager - ERROR - Failed to load .npy: This file contains pickled (object) data. If you trust the file you can load it unsafely using the `allow_pickle=` keyword argument or `pickle.load()`.
+2026-02-02 09:31:50 - ServiceManager - ERROR - Failed to load .npy: This file contains pickled (object) data. If you trust the file you can load it unsafely using the `allow_pickle=` keyword argument or `pickle.load()`.
+2026-02-02 09:31:50 - ServiceManager - ERROR - Failed to load .npy: This file contains pickled (object) data. If you trust the file you can load it unsafely using the `allow_pickle=` keyword argument or `pickle.load()`.
+2026-02-02 09:31:50 - ServiceManager - ERROR - Failed to load .npy: This file contains pickled (object) data. If you trust the file you can load it unsafely using the `allow_pickle=` keyword argument or `pickle.load()`.
+2026-02-02 09:31:51 - ServiceManager - ERROR - Failed to load .npy: This file contains pickled (object) data. If you trust the file you can load it unsafely using the `allow_pickle=` keyword argument or `pickle.load()`.
+2026-02-02 09:31:51 - ServiceManager - ERROR - Failed to load .npy: This file contains pickled (object) data. If you trust the file you can load it unsafely using the `allow_pickle=` keyword argument or `pickle.load()`.
+2026-02-02 09:35:42 - ServiceManager - ERROR - Failed to load .npy: This file contains pickled (object) data. If you trust the file you can load it unsafely using the `allow_pickle=` keyword argument or `pickle.load()`.
+2026-02-02 09:35:44 - ServiceManager - ERROR - Failed to load .npy: This file contains pickled (object) data. If you trust the file you can load it unsafely using the `allow_pickle=` keyword argument or `pickle.load()`.
+2026-02-02 09:41:16 - ServiceManager - INFO - ServiceManager initialized.
+2026-02-02 09:41:16 - ServiceManager - INFO - ServiceManager looking for board list at: /home/bec3/Desktop/Simone_Damian/Serafini/GUI_TEST/boards/board_list.yaml
+2026-02-02 09:41:16 - ServiceManager - INFO - ServiceManager looking for reference lines at: /home/bec3/Desktop/Simone_Damian/Serafini/GUI_TEST/reference_lines/reference_lines_inventory.yaml
+2026-02-02 09:41:17 - ServiceManager - INFO - Loading boards...
+2026-02-02 09:41:17 - ServiceManager - INFO - Found 3 devices.
+2026-02-02 09:42:32 - ServiceManager - INFO - ServiceManager initialized.
+2026-02-02 09:42:32 - ServiceManager - INFO - ServiceManager looking for board list at: /home/bec3/Desktop/Simone_Damian/Serafini/GUI_TEST/boards/board_list.yaml
+2026-02-02 09:42:32 - ServiceManager - INFO - ServiceManager looking for reference lines at: /home/bec3/Desktop/Simone_Damian/Serafini/GUI_TEST/reference_lines/reference_lines_inventory.yaml
+2026-02-02 09:42:32 - ServiceManager - INFO - Loading boards...
+2026-02-02 09:42:32 - ServiceManager - INFO - Found 3 devices.
+2026-02-02 09:43:40 - ServiceManager - INFO - Duplicating reference line 'K_D2_FALSE'...
+2026-02-02 09:43:40 - ServiceManager - INFO - Copied /home/bec3/Desktop/Simone_Damian/Serafini/GUI_TEST/reference_lines/K_D2_FALSE_RedPitaya_K_20260129_143100.npy to /home/bec3/Desktop/Simone_Damian/Serafini/GUI_TEST/reference_lines/K_D2_FALSE_COPY_copy_20260202_094340.npy
+2026-02-02 09:43:40 - ServiceManager - INFO - reference_lines_inventory.yaml saved.
+2026-02-02 09:44:27 - ServiceManager - INFO - Modifying reference line 'K_D2_FALSE_COPY'...
+2026-02-02 09:44:27 - ServiceManager - INFO - Renamed /home/bec3/Desktop/Simone_Damian/Serafini/GUI_TEST/reference_lines/K_D2_FALSE_COPY_copy_20260202_094340.npy to /home/bec3/Desktop/Simone_Damian/Serafini/GUI_TEST/reference_lines/K_D2_FALSE_PROVA.npy
+2026-02-02 09:44:27 - ServiceManager - INFO - reference_lines_inventory.yaml saved.
+2026-02-02 10:57:38 - ServiceManager - INFO - ServiceManager initialized.
+2026-02-02 10:57:38 - ServiceManager - INFO - ServiceManager looking for board list at: /home/bec3/Desktop/Simone_Damian/Serafini/GUI_TEST/boards/board_list.yaml
+2026-02-02 10:57:38 - ServiceManager - INFO - ServiceManager looking for reference lines at: /home/bec3/Desktop/Simone_Damian/Serafini/GUI_TEST/reference_lines/reference_lines_inventory.yaml
+2026-02-02 10:57:38 - ServiceManager - INFO - Loading boards...
+2026-02-02 10:57:38 - ServiceManager - INFO - Found 3 devices.
+2026-02-02 10:58:02 - ServiceManager - INFO - Deleting reference line 'K_D2_FALSE_PROVA'...
+2026-02-02 10:58:02 - ServiceManager - INFO - reference_lines_inventory.yaml saved.
+2026-02-02 10:58:02 - ServiceManager - INFO - Deleted file /home/bec3/Desktop/Simone_Damian/Serafini/GUI_TEST/reference_lines/K_D2_FALSE_PROVA.npy
+2026-02-02 10:58:12 - ServiceManager - INFO - Duplicating reference line 'K_D2_FALSE'...
+2026-02-02 10:58:12 - ServiceManager - INFO - Copied /home/bec3/Desktop/Simone_Damian/Serafini/GUI_TEST/reference_lines/K_D2_FALSE_RedPitaya_K_20260129_143100.npy to /home/bec3/Desktop/Simone_Damian/Serafini/GUI_TEST/reference_lines/K_D2_FALSE_COPY_copy_20260202_105812.npy
+2026-02-02 10:58:12 - ServiceManager - INFO - reference_lines_inventory.yaml saved.
+2026-02-02 10:58:49 - ServiceManager - INFO - Modifying reference line 'K_D2_FALSE_COPY'...
+2026-02-02 10:58:49 - ServiceManager - INFO - Renamed /home/bec3/Desktop/Simone_Damian/Serafini/GUI_TEST/reference_lines/K_D2_FALSE_COPY_copy_20260202_105812.npy to /home/bec3/Desktop/Simone_Damian/Serafini/GUI_TEST/reference_lines/K_D2_FALSE_PROVA.npy
+2026-02-02 10:58:49 - ServiceManager - INFO - reference_lines_inventory.yaml saved.
+2026-02-02 11:00:06 - ServiceManager - INFO - Deleting reference line 'K_D2_FALSE_PROVA'...
+2026-02-02 11:00:06 - ServiceManager - INFO - reference_lines_inventory.yaml saved.
+2026-02-02 11:00:06 - ServiceManager - INFO - Deleted file /home/bec3/Desktop/Simone_Damian/Serafini/GUI_TEST/reference_lines/K_D2_FALSE_PROVA.npy
+2026-02-02 11:00:09 - ServiceManager - INFO - Duplicating reference line 'K_D2_FALSE'...
+2026-02-02 11:00:09 - ServiceManager - INFO - Copied /home/bec3/Desktop/Simone_Damian/Serafini/GUI_TEST/reference_lines/K_D2_FALSE_RedPitaya_K_20260129_143100.npy to /home/bec3/Desktop/Simone_Damian/Serafini/GUI_TEST/reference_lines/K_D2_FALSE_COPY_copy_20260202_110009.npy
+2026-02-02 11:00:09 - ServiceManager - INFO - reference_lines_inventory.yaml saved.
+2026-02-02 11:16:09 - ServiceManager - INFO - ServiceManager initialized.
+2026-02-02 11:16:09 - ServiceManager - INFO - ServiceManager looking for board list at: /home/bec3/Desktop/Simone_Damian/Serafini/GUI_TEST/boards/board_list.yaml
+2026-02-02 11:16:09 - ServiceManager - INFO - ServiceManager looking for reference lines at: /home/bec3/Desktop/Simone_Damian/Serafini/GUI_TEST/reference_lines/reference_lines_inventory.yaml
+2026-02-02 11:16:09 - ServiceManager - INFO - Loading boards...
+2026-02-02 11:16:09 - ServiceManager - INFO - Found 3 devices.
+2026-02-02 11:16:21 - ServiceManager - INFO - Deleting reference line 'K_D2_FALSE_COPY'...
+2026-02-02 11:16:21 - ServiceManager - INFO - reference_lines_inventory.yaml saved.
+2026-02-02 11:16:21 - ServiceManager - INFO - Deleted file /home/bec3/Desktop/Simone_Damian/Serafini/GUI_TEST/reference_lines/K_D2_FALSE_COPY_copy_20260202_110009.npy
+2026-02-02 11:16:38 - ServiceManager - INFO - Duplicating reference line 'K_D2_FALSE'...
+2026-02-02 11:16:38 - ServiceManager - INFO - Copied /home/bec3/Desktop/Simone_Damian/Serafini/GUI_TEST/reference_lines/K_D2_FALSE_RedPitaya_K_20260129_143100.npy to /home/bec3/Desktop/Simone_Damian/Serafini/GUI_TEST/reference_lines/K_D2_FALSE_COPY_RedPitaya_K_20260129_143100.npy
+2026-02-02 11:16:38 - ServiceManager - INFO - reference_lines_inventory.yaml saved.
+2026-02-02 11:17:12 - ServiceManager - INFO - Modifying reference line 'K_D2_FALSE_COPY'...
+2026-02-02 11:17:12 - ServiceManager - INFO - Renamed /home/bec3/Desktop/Simone_Damian/Serafini/GUI_TEST/reference_lines/K_D2_FALSE_COPY_RedPitaya_K_20260129_143100.npy to /home/bec3/Desktop/Simone_Damian/Serafini/GUI_TEST/reference_lines/K_D2_FALSE_PROVA.npy
+2026-02-02 11:17:12 - ServiceManager - INFO - reference_lines_inventory.yaml saved.
+2026-02-02 11:23:17 - ServiceManager - INFO - ServiceManager initialized.
+2026-02-02 11:23:17 - ServiceManager - INFO - ServiceManager looking for board list at: /home/bec3/Desktop/Simone_Damian/Serafini/GUI_TEST/boards/board_list.yaml
+2026-02-02 11:23:17 - ServiceManager - INFO - ServiceManager looking for reference lines at: /home/bec3/Desktop/Simone_Damian/Serafini/GUI_TEST/reference_lines/reference_lines_inventory.yaml
+2026-02-02 11:23:17 - ServiceManager - INFO - Loading boards...
+2026-02-02 11:23:17 - ServiceManager - INFO - Found 3 devices.
+2026-02-02 11:23:42 - ServiceManager - INFO - Deleting reference line 'K_D2_FALSE_PROVA'...
+2026-02-02 11:23:42 - ServiceManager - INFO - reference_lines_inventory.yaml saved.
+2026-02-02 11:23:42 - ServiceManager - INFO - Deleted file /home/bec3/Desktop/Simone_Damian/Serafini/GUI_TEST/reference_lines/K_D2_FALSE_PROVA.npy
+2026-02-02 11:24:18 - ServiceManager - INFO - Duplicating reference line 'K_D2_FALSE'...
+2026-02-02 11:24:18 - ServiceManager - INFO - Copied /home/bec3/Desktop/Simone_Damian/Serafini/GUI_TEST/reference_lines/K_D2_FALSE_RedPitaya_K_20260129_143100.npy to /home/bec3/Desktop/Simone_Damian/Serafini/GUI_TEST/reference_lines/K_D2_FALSE_COPY_RedPitaya_K_20260129_143100.npy
+2026-02-02 11:24:18 - ServiceManager - INFO - reference_lines_inventory.yaml saved.
+2026-02-02 11:24:39 - ServiceManager - INFO - Modifying reference line 'K_D2_FALSE_COPY'...
+2026-02-02 11:24:39 - ServiceManager - INFO - Renamed /home/bec3/Desktop/Simone_Damian/Serafini/GUI_TEST/reference_lines/K_D2_FALSE_COPY_RedPitaya_K_20260129_143100.npy to /home/bec3/Desktop/Simone_Damian/Serafini/GUI_TEST/reference_lines/K_D2_FALSE_PROVA_RedPitaya_K_20260129_143100.npy
+2026-02-02 11:24:39 - ServiceManager - INFO - reference_lines_inventory.yaml saved.
+2026-02-02 11:34:30 - ServiceManager - INFO - ServiceManager initialized.
+2026-02-02 11:34:30 - ServiceManager - INFO - ServiceManager looking for board list at: /home/bec3/Desktop/Simone_Damian/Serafini/GUI_TEST/boards/board_list.yaml
+2026-02-02 11:34:30 - ServiceManager - INFO - ServiceManager looking for reference lines at: /home/bec3/Desktop/Simone_Damian/Serafini/GUI_TEST/reference_lines/reference_lines_inventory.yaml
+2026-02-02 11:34:30 - ServiceManager - INFO - Loading boards...
+2026-02-02 11:34:30 - ServiceManager - INFO - Found 3 devices.
+2026-02-02 11:35:29 - ServiceManager - INFO - ServiceManager initialized.
+2026-02-02 11:35:29 - ServiceManager - INFO - ServiceManager looking for board list at: /home/bec3/Desktop/Simone_Damian/Serafini/GUI_TEST/boards/board_list.yaml
+2026-02-02 11:35:29 - ServiceManager - INFO - ServiceManager looking for reference lines at: /home/bec3/Desktop/Simone_Damian/Serafini/GUI_TEST/reference_lines/reference_lines_inventory.yaml
+2026-02-02 11:35:29 - ServiceManager - INFO - Loading boards...
+2026-02-02 11:35:29 - ServiceManager - INFO - Found 3 devices.
+2026-02-02 11:39:10 - ServiceManager - INFO - ServiceManager initialized.
+2026-02-02 11:39:10 - ServiceManager - INFO - ServiceManager looking for board list at: /home/bec3/Desktop/Simone_Damian/Serafini/GUI_TEST/boards/board_list.yaml
+2026-02-02 11:39:10 - ServiceManager - INFO - ServiceManager looking for reference lines at: /home/bec3/Desktop/Simone_Damian/Serafini/GUI_TEST/reference_lines/reference_lines_inventory.yaml
+2026-02-02 11:39:11 - ServiceManager - INFO - Loading boards...
+2026-02-02 11:39:11 - ServiceManager - INFO - Found 3 devices.
+2026-02-02 11:40:20 - ServiceManager - INFO - ServiceManager initialized.
+2026-02-02 11:40:20 - ServiceManager - INFO - ServiceManager looking for board list at: /home/bec3/Desktop/Simone_Damian/Serafini/GUI_TEST/boards/board_list.yaml
+2026-02-02 11:40:20 - ServiceManager - INFO - ServiceManager looking for reference lines at: /home/bec3/Desktop/Simone_Damian/Serafini/GUI_TEST/reference_lines/reference_lines_inventory.yaml
+2026-02-02 11:40:20 - ServiceManager - INFO - Loading boards...
+2026-02-02 11:40:20 - ServiceManager - INFO - Found 3 devices.
+2026-02-02 11:44:47 - ServiceManager - INFO - ServiceManager initialized.
+2026-02-02 11:44:47 - ServiceManager - INFO - ServiceManager looking for board list at: /home/bec3/Desktop/Simone_Damian/Serafini/GUI_TEST/boards/board_list.yaml
+2026-02-02 11:44:47 - ServiceManager - INFO - ServiceManager looking for reference lines at: /home/bec3/Desktop/Simone_Damian/Serafini/GUI_TEST/reference_lines/reference_lines_inventory.yaml
+2026-02-02 11:44:48 - ServiceManager - INFO - Loading boards...
+2026-02-02 11:44:48 - ServiceManager - INFO - Found 3 devices.

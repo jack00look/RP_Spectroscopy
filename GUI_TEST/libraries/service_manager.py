@@ -2,10 +2,13 @@ from PySide6.QtCore import QObject, Signal, Slot
 import os
 import yaml
 import logging
+import numpy as np
+
 from .logging_config import setup_logging
 
 class ServiceManager(QObject):
     sig_board_list_updated = Signal(list) 
+    sig_reflines_updated = Signal(list)
     sig_error = Signal(str)
 
     def __init__(self, config):
@@ -30,7 +33,16 @@ class ServiceManager(QObject):
 
         self.board_list_path = os.path.join(hardware_path, "board_list.yaml")
         
+        # Reference Lines Path from Config
+        reflines_dir = self.config.get('paths', {}).get('reference_lines', hardware_path)
+        if not os.path.isabs(reflines_dir):
+             base_dir = os.path.dirname(os.path.abspath(__file__))
+             reflines_dir = os.path.join(base_dir, reflines_dir)
+             
+        self.reflines_list_path = os.path.join(reflines_dir, "reference_lines_inventory.yaml")
+        
         self.logger.info(f"ServiceManager looking for board list at: {self.board_list_path}")
+        self.logger.info(f"ServiceManager looking for reference lines at: {self.reflines_list_path}")
 
     # -------------------------------------------------------------------------
     # YAML FILES METHODS
@@ -107,6 +119,218 @@ class ServiceManager(QObject):
         self.sig_board_list_updated.emit(new_list)
 
     # ---- Reference lines ----
+
+    def _read_reflines_yaml(self):
+        if not os.path.exists(self.reflines_list_path):
+            self.logger.info(f"reference_lines_inventory.yaml not found at {self.reflines_list_path}")
+            return {'lines': []}
+        
+        try:
+            with open(self.reflines_list_path, 'r') as f:
+                data = yaml.safe_load(f)
+                if data is None: return {'lines': []}
+                return data
+        except Exception as e:
+            err = f"Failed to read reference lines list: {e}"
+            self.logger.error(f"{err}")
+            self.sig_error.emit(err)
+            return {'lines': []}
+
+    def _save_reflines_yaml(self, data):
+        try:
+            os.makedirs(os.path.dirname(self.reflines_list_path), exist_ok=True)
+            with open(self.reflines_list_path, 'w') as f:
+                yaml.safe_dump(data, f, default_flow_style=False)
+            self.logger.info("reference_lines_inventory.yaml saved.")
+        except Exception as e:
+            err = f"Failed to save reference lines list: {e}"
+            self.logger.error(f"{err}")
+            self.sig_error.emit(err)
+
+    @Slot()
+    def get_reference_lines(self):
+        """Triggered to get list or refresh."""
+        data = self._read_reflines_yaml()
+        lines_list = data.get('lines', [])
+        # Emit signal so GUI can update
+        self.sig_reflines_updated.emit(lines_list)
+        return lines_list
+
+    @Slot(str)
+    def delete_reference_line(self, name):
+        self.logger.info(f"Deleting reference line '{name}'...")
+        data = self._read_reflines_yaml()
+        current_list = data.get('lines', [])
+        
+        # Find entry to get filename
+        to_delete = next((item for item in current_list if item["name"] == name), None)
+        
+        # Remove from YAML list
+        new_list = [d for d in current_list if d.get('name') != name]
+        data['lines'] = new_list
+        self._save_reflines_yaml(data)
+        
+        # Delete the .npy file
+        if to_delete:
+            file_name = to_delete.get('file_name', to_delete.get('file', name))
+            if not file_name.endswith('.npy'):
+                file_name += '.npy'
+            npy_path = os.path.join(os.path.dirname(self.reflines_list_path), file_name)
+            if os.path.exists(npy_path):
+                try:
+                    os.remove(npy_path)
+                    self.logger.info(f"Deleted file {npy_path}")
+                except Exception as e:
+                     self.logger.error(f"Failed to delete {npy_path}: {e}")
+
+        # Update GUI
+        self.sig_reflines_updated.emit(new_list)
+
+    @Slot(str, dict)
+    def modify_reference_line(self, old_name, new_data):
+        self.logger.info(f"Modifying reference line '{old_name}'...")
+        data = self._read_reflines_yaml()
+        current_list = data.get('lines', [])
+        
+        found = False
+        for item in current_list:
+            if item.get('name') == old_name:
+                # If name changed, rename .npy file
+                if old_name != new_data['name']:
+                    from datetime import datetime
+                    import time
+                    
+                    old_file_name = item.get('file_name', item.get('file', old_name))
+                    if not old_file_name.endswith('.npy'):
+                        old_file_name += '.npy'
+                    
+                    # Generate new filename following pattern: name_board_YYYYMMDD_HHMMSS
+                    # Use the CREATION date (not modification date)
+                    created_date = item.get('created', time.strftime("%Y-%m-%d %H:%M:%S"))
+                    try:
+                        created_dt = datetime.strptime(created_date, "%Y-%m-%d %H:%M:%S")
+                        timestamp = created_dt.strftime("%Y%m%d_%H%M%S")
+                    except:
+                        timestamp = time.strftime("%Y%m%d_%H%M%S")
+                    
+                    board = new_data.get('board', item.get('board', 'Unknown'))
+                    new_file_name_base = f"{new_data['name']}_{board}_{timestamp}"
+                    new_file_name = new_file_name_base + '.npy'
+                    
+                    old_path = os.path.join(os.path.dirname(self.reflines_list_path), old_file_name)
+                    new_path = os.path.join(os.path.dirname(self.reflines_list_path), new_file_name)
+                    
+                    if os.path.exists(old_path):
+                        try:
+                            os.rename(old_path, new_path)
+                            self.logger.info(f"Renamed {old_path} to {new_path}")
+                            item['file_name'] = new_file_name_base.replace('.npy', '')
+                        except Exception as e:
+                            self.logger.error(f"Failed to rename {old_path}: {e}")
+                
+                # Update other fields
+                item['name'] = new_data['name']
+                item['board'] = new_data['board']
+                item['lock_region'] = new_data['lock_region'] 
+                item['modified'] = new_data['modified']
+                
+                found = True
+                break
+        
+        if found:
+            self._save_reflines_yaml(data)
+            self.sig_reflines_updated.emit(current_list)
+        else:
+            self.logger.warning(f"Reference line '{old_name}' not found for modification.")
+
+    @Slot(str)
+    def duplicate_reference_line(self, name_to_copy):
+        self.logger.info(f"Duplicating reference line '{name_to_copy}'...")
+        data = self._read_reflines_yaml()
+        current_list = data.get('lines', [])
+        
+        original_item = next((item for item in current_list if item["name"] == name_to_copy), None)
+        if not original_item:
+            self.logger.error(f"Cannot duplicate: '{name_to_copy}' not found.")
+            return
+
+        import time
+        from copy import deepcopy
+        from datetime import datetime
+        
+        new_item = deepcopy(original_item)
+        new_name = original_item['name'] + "_COPY"
+        new_item['name'] = new_name
+        # Keep the original created date (same experimental data)
+        # Only update the modified date to current time
+        new_item['modified'] = time.strftime("%Y-%m-%d %H:%M:%S")
+        
+        # Copy file
+        old_file_name = original_item.get('file_name', original_item.get('file', name_to_copy))
+        if not old_file_name.endswith('.npy'):
+            old_file_name += '.npy'
+        
+        # Generate new filename following pattern: name_board_YYYYMMDD_HHMMSS
+        # Use the CREATION date (same as original since it's the same experimental data)
+        created_date = original_item.get('created', time.strftime("%Y-%m-%d %H:%M:%S"))
+        # Parse and format the creation date
+        try:
+            created_dt = datetime.strptime(created_date, "%Y-%m-%d %H:%M:%S")
+            timestamp = created_dt.strftime("%Y%m%d_%H%M%S")
+        except:
+            timestamp = time.strftime("%Y%m%d_%H%M%S")
+        
+        board = original_item.get('board', 'Unknown')
+        new_file_name_base = f"{new_name}_{board}_{timestamp}"
+        new_file_name = new_file_name_base + '.npy'
+        
+        old_path = os.path.join(os.path.dirname(self.reflines_list_path), old_file_name)
+        new_path = os.path.join(os.path.dirname(self.reflines_list_path), new_file_name)
+        
+        if os.path.exists(old_path):
+             try:
+                import shutil
+                shutil.copy2(old_path, new_path)
+                new_item['file_name'] = new_file_name_base
+                self.logger.info(f"Copied {old_path} to {new_path}")
+             except Exception as e:
+                self.logger.error(f"Failed to copy file: {e}")
+                pass
+        else:
+            self.logger.warning(f"Original file {old_path} not found.")
+
+        current_list.append(new_item)
+        data['lines'] = current_list
+        self._save_reflines_yaml(data)
+        self.sig_reflines_updated.emit(current_list)
+
+    @Slot(str)
+    def get_reference_line_data(self, filename):
+        """Loads .npy file returning (x, y) arrays."""
+        # Handle both 'file_name' (without .npy) and 'file' (with .npy)
+        if not filename.endswith('.npy'):
+            filename += '.npy'
+        path = os.path.join(os.path.dirname(self.reflines_list_path), filename)
+        if not os.path.exists(path):
+             self.logger.error(f"File not found: {path}")
+             return None, None
+        try:
+            # The .npy files are actually ASCII text files with x, y columns
+            data = np.loadtxt(path)
+            # Data should be shape (N, 2) where N is number of points
+            if len(data.shape) == 2 and data.shape[1] == 2:
+                # Return x and y as separate arrays
+                return data[:, 0], data[:, 1]
+            elif len(data.shape) == 1 and len(data) == 2:
+                # Single point case
+                return np.array([data[0]]), np.array([data[1]])
+            else:
+                # Unexpected format
+                self.logger.warning(f"Unexpected data shape: {data.shape}")
+                return None, None
+        except Exception as e:
+             self.logger.error(f"Failed to load .npy: {e}")
+             return None, None
 
     # ---- Red Pitaya parameters ----
 
