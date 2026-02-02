@@ -128,7 +128,7 @@ class ReferenceLinesPage(QWidget):
         # self.btn_add.clicked.connect(...) # Future implementation
 
     def setup_details_table(self):
-        rows = ["Name", "Board", "Lock Region Min", "Lock Region Max"]
+        rows = ["Name", "Board", "Polarity", "Lock Region Min", "Lock Region Max"]
         self.table_details.setRowCount(len(rows))
         for i, row_name in enumerate(rows):
             item = QTableWidgetItem(row_name)
@@ -190,10 +190,12 @@ class ReferenceLinesPage(QWidget):
         self.table_details.item(0, 1).setText(data.get('name', ''))
         # Board
         self.table_details.item(1, 1).setText(data.get('board', ''))
+        # Polarity
+        self.table_details.item(2, 1).setText(data.get('polarity', ''))
         # Lock Region
         region = data.get('lock_region', [0, 0])
-        self.table_details.item(2, 1).setText(str(region[0]))
-        self.table_details.item(3, 1).setText(str(region[1]))
+        self.table_details.item(3, 1).setText(str(region[0]))
+        self.table_details.item(4, 1).setText(str(region[1]))
 
     def load_plot_data(self, data):
         # Support both 'file_name' (without .npy) and 'file' (with .npy)

@@ -261,3 +261,18 @@
 2026-02-02 11:44:47 - ServiceManager - INFO - ServiceManager looking for reference lines at: /home/bec3/Desktop/Simone_Damian/Serafini/GUI_TEST/reference_lines/reference_lines_inventory.yaml
 2026-02-02 11:44:48 - ServiceManager - INFO - Loading boards...
 2026-02-02 11:44:48 - ServiceManager - INFO - Found 3 devices.
+2026-02-02 11:49:07 - ServiceManager - INFO - ServiceManager initialized.
+2026-02-02 11:49:07 - ServiceManager - INFO - ServiceManager looking for board list at: /home/bec3/Desktop/Simone_Damian/Serafini/GUI_TEST/boards/board_list.yaml
+2026-02-02 11:49:07 - ServiceManager - INFO - ServiceManager looking for reference lines at: /home/bec3/Desktop/Simone_Damian/Serafini/GUI_TEST/reference_lines/reference_lines_inventory.yaml
+2026-02-02 11:49:07 - ServiceManager - INFO - Loading boards...
+2026-02-02 11:49:07 - ServiceManager - INFO - Found 3 devices.
+2026-02-02 12:03:50 - ServiceManager - INFO - ServiceManager initialized.
+2026-02-02 12:03:50 - ServiceManager - INFO - ServiceManager looking for board list at: /home/bec3/Desktop/Simone_Damian/Serafini/GUI_TEST/boards/board_list.yaml
+2026-02-02 12:03:50 - ServiceManager - INFO - ServiceManager looking for reference lines at: /home/bec3/Desktop/Simone_Damian/Serafini/GUI_TEST/reference_lines/reference_lines_inventory.yaml
+2026-02-02 12:03:50 - ServiceManager - INFO - Loading boards...
+2026-02-02 12:03:50 - ServiceManager - INFO - Found 3 devices.
+2026-02-02 12:07:34 - ServiceManager - INFO - ServiceManager initialized.
+2026-02-02 12:07:34 - ServiceManager - INFO - ServiceManager looking for board list at: /home/bec3/Desktop/Simone_Damian/Serafini/GUI_TEST/boards/board_list.yaml
+2026-02-02 12:07:34 - ServiceManager - INFO - ServiceManager looking for reference lines at: /home/bec3/Desktop/Simone_Damian/Serafini/GUI_TEST/reference_lines/reference_lines_inventory.yaml
+2026-02-02 12:07:35 - ServiceManager - INFO - Loading boards...
+2026-02-02 12:07:35 - ServiceManager - INFO - Found 3 devices.
