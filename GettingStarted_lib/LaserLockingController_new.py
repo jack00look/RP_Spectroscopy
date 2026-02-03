@@ -114,7 +114,7 @@ class LaserLockingController():
         ax1.axvline(x1, color="g")
         ax2.axvline(x0, color="g")
         ax2.axvline(x1, color="g", label = 'Selected lock region')
-        
+
         ax2.legend()
 
         plt.title(f'Sweep Signal (centered at {(self.hardware_interface.writeable_params["big_offset"].get_remote_value() * ANALOG_OUT_V * self.hardware_interface.writeable_params["big_offset"].scaling):.2g} V)')

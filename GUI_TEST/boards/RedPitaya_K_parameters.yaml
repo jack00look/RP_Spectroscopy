@@ -248,83 +248,100 @@ readable_parameters:
 # be modified through the GUI
 
 advanced_settings:
-  detect_unlock_event:
-    initial_value: True # True if unlock event detection is enabled
 
-  automatic_relock:
-    initial_value: True # True if automatic relock is enabled
-
-  fast_control_fluctuations:
-    initial_value: True # True if fast control fluctuations detection to be used to detect unlock
-  
-  slow_control_fluctuations:
-    initial_value: True # True if slow control fluctuations detection to be used to detect unlock
-
-  fast_control_saturation:
-    initial_value: True # True if fast control saturation detection to be used to detect unlock
-
-  slow_control_saturation:
-    initial_value: True # True if slow control saturation detection to be used to detect unlock
-
-  monitor_signal_drift:
-    initial_value: True # True if monitor signal drift detection to be used to detect unlock
-  
-  monitor_signal_num_points:
-    initial_value: 100 # Number of points to be used to calculate the monitor signal drift
+  # --- UNLOCK DETECTION LOGIC ---
+  unlock_detection:
+    ui_label: "Unlock Detection Logic"
     
-  fast_control_fluctuations_threshold:
-    initial_value: 0.1 # Threshold for fast control fluctuations detection
-    range: [0.05, 0.5]
+    events:
+      detect_unlock: true
+      automatic_relock: true
+      
+    fast_control:
+      fluctuations:
+        enabled: true
+        threshold: 0.1
+        range: [0.05, 0.5]
+      saturation:
+        enabled: true
+    
+    slow_control:
+      fluctuations:
+        enabled: true
+        threshold: 0.1
+        range: [0.05, 0.5]
+      saturation:
+        enabled: true
 
-  slow_control_fluctuations_threshold:
-    initial_value: 0.1 # Threshold for slow control fluctuations detection
-    range: [0.05, 0.5]
+    monitor_signal:
+      drift:
+        enabled: true
+        num_points: 100
+        range: [10, 200]
 
-  live_refresh_interval:
-    initial_value: 0.25 #s Time interval for live refresh of the plot (history or live sweep)
-    range: [0.1, 5]
+  # --- GUI SETTINGS ---
+  gui_visualization:
+    ui_label: "Plotting & Refresh"
 
-  autolock_mode:
-    initial_value: ROBUST
-    possible_values: [SIMPLE, ROBUST]
+    refresh_interval: 
+      value: 0.25
+      unit: "s"
+      range: [0.1, 5]
 
-  autolock_determine_offset:
-    initial_value: False
+    history_length:
+      fast: 5
+      slow: 3600
+      unit: "s"
 
+    fast_control_signal_derivative:
+      show: true
+
+    slow_control_signal_derivative:
+      show: true
+
+  # --- AUTOLOCK SETTINGS ---
+  autolock_settings:
+    ui_label: "Autolock Settings"
+
+    mode:
+      value: "ROBUST"
+      options: ["SIMPLE", "ROBUST"]
+    determine_offset:
+      value: false
+    
+
+  # --- DEBUG SETTINGS ---
   debug_mode:
-    initial_value: False
+    ui_label: "Debug Mode"
+    value: false
 
-  fast_controls_lenght_view:
-    initial_value: 5 #s
-    range: [1, 10]
+  # --- AUTOMATIC CENTERING SETTINGS ---
+  autocenter_settings:
+    ui_label: "Autocenter Settings"
 
-  slow_controls_lenght_view:
-    initial_value: 3600 #s
-    range: [60, 7200]
+    jitter_threshold:
+      value: 0.05 # Threshold for jitter detection
 
-  jitter_threshold:
-    initial_value: 0.05 # Threshold for jitter detection
-  
-  threshold_count:
-    initial_value: 5
+    threshold_count:
+      value: 5
 
-  offset_big_jump:
-    initial_value: 0.04
+    offset_big_jump:
+      value: 0.04
 
-  offset_small_jump:
-    initial_value: 0.01
+    offset_small_jump:
+      value: 0.01
 
-  offset_try_list:
-    initial_value: [0.,1.,-1.,2.,-2.,3.,-3.]
+    offset_try_list:
+      value: [0.,1.,-1.,2.,-2.,3.,-3.]
 
-  correlation_minimum:
-    initial_value: 0.5
+    correlation_minimum:
+      value: 0.5
 
-  length_match_minimum:
-    initial_value: 0.5
+    length_match_minimum:
+      value: 0.5
 
-  proportion_free_space_left:
-    initial_value: 0.5
+    proportion_free_space_left:
+      value: 0.5
 
 ##########################################
 ########## HARDWARE INFORMATION ##########

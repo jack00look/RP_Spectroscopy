@@ -368,3 +368,40 @@
 2026-02-03 10:20:48 - ServiceManager - INFO - Found 3 devices.
 2026-02-03 10:21:06 - ServiceManager - INFO - Modifying reference line 'K_D2_FALSE_COPY'...
 2026-02-03 10:21:06 - ServiceManager - INFO - reference_lines_inventory.yaml saved.
+2026-02-03 15:45:09 - ServiceManager - INFO - ServiceManager initialized.
+2026-02-03 15:45:09 - ServiceManager - INFO - ServiceManager looking for board list at: /home/bec3/Desktop/Simone_Damian/Serafini/GUI_TEST/boards/board_list.yaml
+2026-02-03 15:45:09 - ServiceManager - INFO - ServiceManager looking for reference lines at: /home/bec3/Desktop/Simone_Damian/Serafini/GUI_TEST/reference_lines/reference_lines_inventory.yaml
+2026-02-03 15:45:09 - ServiceManager - INFO - Loading boards...
+2026-02-03 15:45:09 - ServiceManager - INFO - Found 3 devices.
+2026-02-03 15:45:40 - ServiceManager - INFO - Deleting reference line 'K_D2_FALSE_COPY'...
+2026-02-03 15:45:40 - ServiceManager - INFO - reference_lines_inventory.yaml saved.
+2026-02-03 15:45:40 - ServiceManager - INFO - Deleted file /home/bec3/Desktop/Simone_Damian/Serafini/GUI_TEST/reference_lines/K_D2_FALSE_COPY_RedPitaya_K_20260129_143100.npy
+2026-02-03 15:45:42 - ServiceManager - INFO - Duplicating reference line 'K_D2_FALSE'...
+2026-02-03 15:45:42 - ServiceManager - INFO - Copied /home/bec3/Desktop/Simone_Damian/Serafini/GUI_TEST/reference_lines/K_D2_FALSE_RedPitaya_K_20260129_143100.npy to /home/bec3/Desktop/Simone_Damian/Serafini/GUI_TEST/reference_lines/K_D2_FALSE_COPY_RedPitaya_K_20260129_143100.npy
+2026-02-03 15:45:42 - ServiceManager - INFO - reference_lines_inventory.yaml saved.
+2026-02-03 15:45:54 - ServiceManager - INFO - Modifying reference line 'K_D2_FALSE_COPY'...
+2026-02-03 15:45:54 - ServiceManager - INFO - reference_lines_inventory.yaml saved.
+2026-02-03 15:46:14 - ServiceManager - INFO - Modifying reference line 'K_D2_FALSE_COPY'...
+2026-02-03 15:46:14 - ServiceManager - INFO - reference_lines_inventory.yaml saved.
+2026-02-03 15:46:28 - ServiceManager - INFO - Modifying reference line 'K_D2_FALSE_COPY'...
+2026-02-03 15:46:28 - ServiceManager - INFO - reference_lines_inventory.yaml saved.
+2026-02-03 16:14:15 - ServiceManager - INFO - ServiceManager initialized.
+2026-02-03 16:14:15 - ServiceManager - INFO - ServiceManager looking for board list at: /home/bec3/Desktop/Simone_Damian/Serafini/GUI_TEST/boards/board_list.yaml
+2026-02-03 16:14:15 - ServiceManager - INFO - ServiceManager looking for reference lines at: /home/bec3/Desktop/Simone_Damian/Serafini/GUI_TEST/reference_lines/reference_lines_inventory.yaml
+2026-02-03 16:14:15 - ServiceManager - INFO - Loading boards...
+2026-02-03 16:14:15 - ServiceManager - INFO - Found 3 devices.
+2026-02-03 16:14:59 - ServiceManager - INFO - ServiceManager initialized.
+2026-02-03 16:14:59 - ServiceManager - INFO - ServiceManager looking for board list at: /home/bec3/Desktop/Simone_Damian/Serafini/GUI_TEST/boards/board_list.yaml
+2026-02-03 16:14:59 - ServiceManager - INFO - ServiceManager looking for reference lines at: /home/bec3/Desktop/Simone_Damian/Serafini/GUI_TEST/reference_lines/reference_lines_inventory.yaml
+2026-02-03 16:19:42 - ServiceManager - INFO - ServiceManager initialized.
+2026-02-03 16:19:42 - ServiceManager - INFO - ServiceManager looking for board list at: /home/bec3/Desktop/Simone_Damian/Serafini/GUI_TEST/boards/board_list.yaml
+2026-02-03 16:19:42 - ServiceManager - INFO - ServiceManager looking for reference lines at: /home/bec3/Desktop/Simone_Damian/Serafini/GUI_TEST/reference_lines/reference_lines_inventory.yaml
+2026-02-03 16:19:42 - ServiceManager - INFO - Loading boards...
+2026-02-03 16:19:42 - ServiceManager - INFO - Found 3 devices.
+2026-02-03 16:55:10 - ServiceManager - INFO - ServiceManager initializing...
+2026-02-03 16:55:10 - ServiceManager - INFO - ServiceManager looking for board list at: /home/bec3/Desktop/Simone_Damian/Serafini/GUI_TEST/boards/board_list.yaml
+2026-02-03 16:55:10 - ServiceManager - INFO - ServiceManager looking for reference lines at: /home/bec3/Desktop/Simone_Damian/Serafini/GUI_TEST/reference_lines/reference_lines_inventory.yaml
+2026-02-03 16:55:10 - ServiceManager - INFO - Grafana client initialized.
+2026-02-03 16:55:10 - ServiceManager - INFO - ServiceManager initialization completed.
+2026-02-03 16:55:10 - ServiceManager - INFO - Loading boards...
+2026-02-03 16:55:10 - ServiceManager - INFO - Found 3 devices.

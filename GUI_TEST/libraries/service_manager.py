@@ -3,6 +3,10 @@ import os
 import yaml
 import logging
 import numpy as np
+import influxdb_client
+from influxdb_client import Point, WritePrecision
+from influxdb_client.client.write_api import SYNCHRONOUS
+import time
 
 from .logging_config import setup_logging
 
@@ -20,7 +24,7 @@ class ServiceManager(QObject):
         log_file = os.path.join(log_path, 'service_manager.log')
         self.logger = logging.getLogger('ServiceManager')
         setup_logging(self.logger, log_file)
-        self.logger.info("ServiceManager initialized.")
+        self.logger.info("ServiceManager initializing...")
         
         # --- PATH LOGIC ---
         # 1. Try the path defined in config.yaml
@@ -32,6 +36,8 @@ class ServiceManager(QObject):
             hardware_path = os.path.join(base_dir, hardware_path)
 
         self.board_list_path = os.path.join(hardware_path, "board_list.yaml")
+
+        self.logger.info(f"ServiceManager looking for board list at: {self.board_list_path}")
         
         # Reference Lines Path from Config
         reflines_dir = self.config.get('paths', {}).get('reference_lines', hardware_path)
@@ -41,8 +47,22 @@ class ServiceManager(QObject):
              
         self.reflines_list_path = os.path.join(reflines_dir, "reference_lines_inventory.yaml")
         
-        self.logger.info(f"ServiceManager looking for board list at: {self.board_list_path}")
         self.logger.info(f"ServiceManager looking for reference lines at: {self.reflines_list_path}")
+
+        # Grafana configuration
+        self.grafana_config = self.config['services']['grafana']
+        self.grafana_client = influxdb_client.InfluxDBClient(
+            url=self.grafana_config['url'],
+            token=self.grafana_config['token'],
+            org=self.grafana_config['org']
+        )
+
+        self.write_grafana_api = self.grafana_client.write_api(write_options=SYNCHRONOUS)
+
+        self.logger.info(f"Grafana client initialized.")
+
+        self.logger.info("ServiceManager initialization completed.")
+
 
     # -------------------------------------------------------------------------
     # YAML FILES METHODS
@@ -345,3 +365,23 @@ class ServiceManager(QObject):
     # GRAFANA METHODS
     # -------------------------------------------------------------------------
 
+    def send_point_to_grafana(self, board_name, line_name, lock_status, param_a, param_b, big_offset):
+        
+        p = Point("laser_lock_monitor") \
+            .tag("board", board_name) \
+            .tag("line", line_name) \
+            .field("lock_status", lock_status)\
+            .time(time.time_ns(), WritePrecision.NS)
+
+        if lock_status == 1:
+            p.field("param_a", param_a)
+            p.field("param_b", param_b)
+            p.field("big_offset", big_offset)
+
+        self.write_grafana_api.write(bucket=self.grafana_config['bucket'], org=self.grafana_config['org'], record=p)
+
+        self.logger.info(f"Point sent to Grafana.")
+
+    def close_grafana_client(self):
+        self.grafana_client.close()
+        self.logger.info("Grafana client closed.")
