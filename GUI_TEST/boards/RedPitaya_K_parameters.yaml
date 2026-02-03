@@ -235,6 +235,12 @@ readable_parameters:
     hardware_name: monitor_signal_history
 
 advanced_settings:
+  detect_unlock_event:
+    initial_value: True # True if unlock event detection is enabled
+
+  automatic_relock:
+    initial_value: True # True if automatic relock is enabled
+
   fast_control_fluctuations:
     initial_value: True # True if fast control fluctuations detection to be used to detect unlock
   
@@ -249,12 +255,66 @@ advanced_settings:
 
   monitor_signal_drift:
     initial_value: True # True if monitor signal drift detection to be used to detect unlock
-
+  
+  monitor_signal_num_points:
+    initial_value: 100 # Number of points to be used to calculate the monitor signal drift
+    
   fast_control_fluctuations_threshold:
     initial_value: 0.1 # Threshold for fast control fluctuations detection
+    range: [0.05, 0.5]
 
   slow_control_fluctuations_threshold:
     initial_value: 0.1 # Threshold for slow control fluctuations detection
+    range: [0.05, 0.5]
 
   live_refresh_interval:
     initial_value: 0.25 #s Time interval for live refresh of the plot (history or live sweep)
+    range: [0.1, 5]
+
+  autolock_mode:
+    initial_value: ROBUST
+    possible_values: [SIMPLE, ROBUST]
+
+  autolock_determine_offset:
+    initial_value: False
+
+  debug_mode:
+    initial_value: False
+
+  fast_controls_lenght_view:
+    initial_value: 5 #s
+    range: [1, 10]
+
+  slow_controls_lenght_view:
+    initial_value: 3600 #s
+    range: [60, 7200]
+  
+
+
+#Informations about the hardware (circuits)
+# - divided in circuits
+# - in each circuit is shown
+#   - hardware_name: the name of the port in the datasheet of the circuit
+#   - RedPitaya_connected_output: the name of the RedPitaya output that is connected to this port
+#   - RedPitaya_connected_parameter: the name of the RedPitaya parameter that is connected to this port. If
+#     None it means that there is no writeable parameter connected to this port, that is when the parameter is entirely
+#     controlled by the RP or if it has multiple parameters that control it that are not listed here.
+
+summator_circuit:
+  slow_in_1:
+    hardware_name: slow_in_1
+    RedPitaya_connected_output: analog_out_0
+    RedPitaya_connected_parameter: None
+    gain: 1.0
+
+  slow_in_2:
+    hardware_name: slow_in_2
+    RedPitaya_connected_output: analog_out_1
+    RedPitaya_connected_parameter: big_offset
+    gain: 2.0
+
+  fast_in:
+    hardware_name: fast_in
+    RedPitaya_connected_output: fast_out_1
+    RedPitaya_connected_parameter: None
+    gain: 1.0
