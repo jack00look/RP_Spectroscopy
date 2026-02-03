@@ -21,21 +21,11 @@ lines:
   scan_center: 0.93
 - board: RedPitaya_K
   created: '2026-01-29 14:31:00'
-  file_name: K_D2_FALSE_PROVA_RedPitaya_K_20260129_143100
+  file_name: K_D2_FALSE_COPY_RedPitaya_K_20260129_143100
   lock_region:
-  - 0.1
-  - 0.2
-  modified: '2026-02-02 16:58:53'
-  name: K_D2_FALSE_PROVA
-  polarity: '-'
-  scan_center: 0.93
-- board: RedPitaya_K
-  created: '2026-01-29 14:31:00'
-  file_name: K_D2_FALSE_PROVA_COPY_RedPitaya_K_20260129_143100
-  lock_region:
-  - 0.2
-  - 0.3
-  modified: '2026-02-02 16:45:18'
-  name: K_D2_FALSE_PROVA_COPY
+  - 0.35
+  - 0.5
+  modified: '2026-02-03 10:03:39'
+  name: K_D2_FALSE_COPY
   polarity: '-'
   scan_center: 0.93

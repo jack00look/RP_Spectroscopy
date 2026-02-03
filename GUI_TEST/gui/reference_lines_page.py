@@ -128,9 +128,9 @@ class ReferenceLinesPage(QWidget):
         # self.btn_add.clicked.connect(...) # Future implementation
 
     def setup_details_table(self):
-        # Rows: Name (editable), Board (read-only), Lock Region Min (editable), Lock Region Max (editable), Polarity (read-only)
-        rows = ["Name", "Board", "Lock Region Min", "Lock Region Max", "Polarity"]
-        editable_rows = [0, 2, 3]  # Name, Lock Region Min, Lock Region Max
+        # Rows: Name (editable), Board (read-only), Scan Center (read-only), Lock Region Min (editable), Lock Region Max (editable), Polarity (read-only)
+        rows = ["Name", "Board", "Scan Center", "Lock Region Min", "Lock Region Max", "Polarity"]
+        editable_rows = [0, 3, 4]  # Name, Lock Region Min, Lock Region Max
         
         self.table_details.setRowCount(len(rows))
         for i, row_name in enumerate(rows):
@@ -198,12 +198,14 @@ class ReferenceLinesPage(QWidget):
         self.table_details.item(0, 1).setText(data.get('name', ''))
         # Board
         self.table_details.item(1, 1).setText(data.get('board', ''))
+        # Scan Center
+        self.table_details.item(2, 1).setText(str(data.get('scan_center', '')))
         # Lock Region
         region = data.get('lock_region', [0, 0])
-        self.table_details.item(2, 1).setText(str(region[0]))
-        self.table_details.item(3, 1).setText(str(region[1]))
+        self.table_details.item(3, 1).setText(str(region[0]))
+        self.table_details.item(4, 1).setText(str(region[1]))
         # Polarity
-        self.table_details.item(4, 1).setText(data.get('polarity', ''))
+        self.table_details.item(5, 1).setText(data.get('polarity', ''))
 
     def load_plot_data(self, data):
         # Support both 'file_name' (without .npy) and 'file' (with .npy)
@@ -242,10 +244,11 @@ class ReferenceLinesPage(QWidget):
         self.btn_save.setVisible(active)
         self.btn_cancel.setVisible(active)
         
+        
         # Enable editing in details table
-        # Only Name (0), Lock Region Min (2), and Lock Region Max (3) are editable
-        # Board (1) and Polarity (4) are always read-only
-        editable_rows = [0, 2, 3]
+        # Only Name (0), Lock Region Min (3), and Lock Region Max (4) are editable
+        # Board (1), Scan Center (2), and Polarity (5) are always read-only
+        editable_rows = [0, 3, 4]
         for i in range(self.table_details.rowCount()):
             item = self.table_details.item(i, 1)
             if item:
@@ -256,7 +259,7 @@ class ReferenceLinesPage(QWidget):
                     else:
                         item.setFlags(Qt.ItemIsEnabled | Qt.ItemIsSelectable | Qt.ItemIsEditable)
                 else:
-                    # Board and Polarity are always read-only
+                    # Board, Scan Center, and Polarity are always read-only
                     item.setFlags(Qt.ItemIsEnabled | Qt.ItemIsSelectable)
             
         # Lock Region movable

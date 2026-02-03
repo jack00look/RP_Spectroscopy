@@ -336,3 +336,17 @@
 2026-02-03 09:59:55 - ServiceManager - INFO - ServiceManager looking for reference lines at: /home/bec3/Desktop/Simone_Damian/Serafini/GUI_TEST/reference_lines/reference_lines_inventory.yaml
 2026-02-03 09:59:55 - ServiceManager - INFO - Loading boards...
 2026-02-03 09:59:55 - ServiceManager - INFO - Found 3 devices.
+2026-02-03 10:02:52 - ServiceManager - INFO - ServiceManager initialized.
+2026-02-03 10:02:52 - ServiceManager - INFO - ServiceManager looking for board list at: /home/bec3/Desktop/Simone_Damian/Serafini/GUI_TEST/boards/board_list.yaml
+2026-02-03 10:02:52 - ServiceManager - INFO - ServiceManager looking for reference lines at: /home/bec3/Desktop/Simone_Damian/Serafini/GUI_TEST/reference_lines/reference_lines_inventory.yaml
+2026-02-03 10:02:52 - ServiceManager - INFO - Loading boards...
+2026-02-03 10:02:52 - ServiceManager - INFO - Found 3 devices.
+2026-02-03 10:03:26 - ServiceManager - INFO - Deleting reference line 'K_D2_FALSE_PROVA_COPY'...
+2026-02-03 10:03:26 - ServiceManager - INFO - reference_lines_inventory.yaml saved.
+2026-02-03 10:03:26 - ServiceManager - INFO - Deleted file /home/bec3/Desktop/Simone_Damian/Serafini/GUI_TEST/reference_lines/K_D2_FALSE_PROVA_COPY_RedPitaya_K_20260129_143100.npy
+2026-02-03 10:03:36 - ServiceManager - INFO - Deleting reference line 'K_D2_FALSE_PROVA'...
+2026-02-03 10:03:36 - ServiceManager - INFO - reference_lines_inventory.yaml saved.
+2026-02-03 10:03:36 - ServiceManager - INFO - Deleted file /home/bec3/Desktop/Simone_Damian/Serafini/GUI_TEST/reference_lines/K_D2_FALSE_PROVA_RedPitaya_K_20260129_143100.npy
+2026-02-03 10:03:39 - ServiceManager - INFO - Duplicating reference line 'K_D2_FALSE'...
+2026-02-03 10:03:39 - ServiceManager - INFO - Copied /home/bec3/Desktop/Simone_Damian/Serafini/GUI_TEST/reference_lines/K_D2_FALSE_RedPitaya_K_20260129_143100.npy to /home/bec3/Desktop/Simone_Damian/Serafini/GUI_TEST/reference_lines/K_D2_FALSE_COPY_RedPitaya_K_20260129_143100.npy
+2026-02-03 10:03:39 - ServiceManager - INFO - reference_lines_inventory.yaml saved.
