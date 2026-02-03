@@ -1,3 +1,10 @@
+##########################################
+########## REDPITAYA PARAMETERS ##########
+##########################################
+# Divided into:
+#    writeable: user can change them through the interface
+#    readable: user can only read them through the interface
+
 writeable_parameters:
 
   ### INPUT CHANNELS SETUP ###
@@ -234,6 +241,12 @@ readable_parameters:
   monitor_signal_history:
     hardware_name: monitor_signal_history
 
+#######################################
+########## ADVANCED SETTINGS ##########
+#######################################
+# Settings used for both the GUI and the algorithms that can
+# be modified through the GUI
+
 advanced_settings:
   detect_unlock_event:
     initial_value: True # True if unlock event detection is enabled
@@ -288,12 +301,36 @@ advanced_settings:
   slow_controls_lenght_view:
     initial_value: 3600 #s
     range: [60, 7200]
+
+  jitter_threshold:
+    initial_value: 0.05 # Threshold for jitter detection
   
+  threshold_count:
+    initial_value: 5
 
+  offset_big_jump:
+    initial_value: 0.04
 
-#Informations about the hardware (circuits)
-# - divided in circuits
-# - in each circuit is shown
+  offset_small_jump:
+    initial_value: 0.01
+
+  offset_try_list:
+    initial_value: [0.,1.,-1.,2.,-2.,3.,-3.]
+
+  correlation_minimum:
+    initial_value: 0.5
+
+  length_match_minimum:
+    initial_value: 0.5
+
+  proportion_free_space_left:
+    initial_value: 0.5
+
+##########################################
+########## HARDWARE INFORMATION ##########
+##########################################
+# Informations about the hardware (circuits) divided in circuits.
+# In each circuit is shown:
 #   - hardware_name: the name of the port in the datasheet of the circuit
 #   - RedPitaya_connected_output: the name of the RedPitaya output that is connected to this port
 #   - RedPitaya_connected_parameter: the name of the RedPitaya parameter that is connected to this port. If
