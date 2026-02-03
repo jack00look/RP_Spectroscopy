@@ -275,8 +275,9 @@ class ReferenceLinesPage(QWidget):
         new_name = self.table_details.item(0, 1).text()
         new_board = self.table_details.item(1, 1).text()
         try:
-            min_val = float(self.table_details.item(2, 1).text())
-            max_val = float(self.table_details.item(3, 1).text())
+            # Lock Region Min is now at row 3, Max at row 4 (scan_center is at row 2)
+            min_val = float(self.table_details.item(3, 1).text())
+            max_val = float(self.table_details.item(4, 1).text())
         except ValueError:
             QMessageBox.warning(self, "Invalid Input", "Lock region values must be numbers.")
             return
