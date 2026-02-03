@@ -23,10 +23,13 @@ class GeneralManager:
         self.logger.info("GeneralManager starting up...")
 
         self.services = ServiceManager(self.cfg)
+        self.logger.info("ServiceManager initialized.")
         self.svc_thread = QThread()
         self.services.moveToThread(self.svc_thread)
+        self.logger.info("ServiceManager moved to thread.")
 
         self.window = MainWindow()
+        self.logger.info("MainWindow initialized.")
 
         # Wiring
         self.window.page_connect.sig_request_add_page.connect(self.window.go_to_add)
@@ -47,8 +50,10 @@ class GeneralManager:
         
         # Inject ServiceManager into ReferenceLinesPage
         self.window.page_reflines.set_service_manager(self.services)
+        self.logger.info("ServiceManager injected into ReferenceLinesPage.")
 
         self.svc_thread.start()
+        self.logger.info("ServiceManager thread started.")
         
         # Trigger initial load via signal (Thread safe practice)
         # We need a temporary signal or just call it directly since loop hasn't started yet
@@ -60,6 +65,7 @@ class GeneralManager:
         print(f"MANAGER: Connecting to {board_name}...", flush=True)
 
     def cleanup(self):
-        self.logger.info("GeneralManager shutting down.")
+        self.logger.info("GeneralManager shutting down...")
         self.svc_thread.quit()
         self.svc_thread.wait()
+        self.logger.info("GeneralManager shut down.")

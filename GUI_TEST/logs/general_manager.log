@@ -123,3 +123,19 @@
 2026-02-03 16:20:31 - GeneralManager - INFO - GeneralManager shutting down.
 2026-02-03 16:55:10 - GeneralManager - INFO - GeneralManager starting up...
 2026-02-03 16:55:15 - GeneralManager - INFO - GeneralManager shutting down.
+2026-02-03 17:08:20 - GeneralManager - INFO - GeneralManager starting up...
+2026-02-03 17:08:20 - GeneralManager - INFO - ServiceManager initialized.
+2026-02-03 17:08:20 - GeneralManager - INFO - ServiceManager moved to thread.
+2026-02-03 17:08:20 - GeneralManager - INFO - MainWindow initialized.
+2026-02-03 17:08:20 - GeneralManager - INFO - ServiceManager injected into ReferenceLinesPage.
+2026-02-03 17:08:20 - GeneralManager - INFO - ServiceManager thread started.
+2026-02-03 17:08:27 - GeneralManager - INFO - GeneralManager shutting down...
+2026-02-03 17:08:27 - GeneralManager - INFO - GeneralManager shut down.
+2026-02-03 17:12:33 - GeneralManager - INFO - GeneralManager starting up...
+2026-02-03 17:12:33 - GeneralManager - INFO - ServiceManager initialized.
+2026-02-03 17:12:33 - GeneralManager - INFO - ServiceManager moved to thread.
+2026-02-03 17:12:33 - GeneralManager - INFO - MainWindow initialized.
+2026-02-03 17:12:33 - GeneralManager - INFO - ServiceManager injected into ReferenceLinesPage.
+2026-02-03 17:12:33 - GeneralManager - INFO - ServiceManager thread started.
+2026-02-03 17:12:41 - GeneralManager - INFO - GeneralManager shutting down...
+2026-02-03 17:12:41 - GeneralManager - INFO - GeneralManager shut down.

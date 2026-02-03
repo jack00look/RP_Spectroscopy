@@ -127,6 +127,7 @@ class ServiceManager(QObject):
         data['devices'].append(new_device)
         self._save_boards_yaml(data)
         self.sig_board_list_updated.emit(data['devices'])
+        self.logger.info(f"Board '{name}' added.")
 
     @Slot(str)
     def remove_board(self, board_name):
@@ -137,6 +138,7 @@ class ServiceManager(QObject):
         data['devices'] = new_list
         self._save_boards_yaml(data)
         self.sig_board_list_updated.emit(new_list)
+        self.logger.info(f"Board '{board_name}' removed.")
 
     # ---- Reference lines ----
 
