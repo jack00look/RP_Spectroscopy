@@ -1,4 +1,4 @@
-Now I want to modify the @laser_controller_page.py. I want the page to be a QSplitter. On the right, for the moment, there is nothing. On the left I want a Stack of pages. The starting one is the Menu one, in which I want to have a set of 6 buttons organized in a column, equidistant one with each other. From the top to the bottom the buttons are: "Parameters", "Advanced settings", "Reference lines", "Line centering", "Manual lock", "Auto-lock". Each one of them has to open its dedicated page in the stack apart from the "Reference lines" button that, for the moment, does nothing. In each of the pages different from the main one I want, centered on the bottom, a back button that returns to the main one.
+
 
 
 
