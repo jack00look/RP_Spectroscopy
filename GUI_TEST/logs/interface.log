@@ -1,3 +1,6 @@
 2026-02-04 15:04:46 - HardwareInterface - INFO - Attempting connection via RedPitaya_K address (192.168.1.159:18862)
 2026-02-04 15:05:16 - HardwareInterface - INFO - Connected to device RedPitaya_K
 2026-02-04 15:05:16 - HardwareInterface - INFO - HardwareInterface initialized.
+2026-02-04 15:13:11 - HardwareInterface - INFO - Attempting connection via RedPitaya_K address (192.168.1.159:18862)
+2026-02-04 15:13:14 - HardwareInterface - INFO - Connected to device RedPitaya_K
+2026-02-04 15:13:14 - HardwareInterface - INFO - HardwareInterface initialized.

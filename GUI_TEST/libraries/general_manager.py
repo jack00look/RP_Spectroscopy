@@ -87,6 +87,11 @@ class GeneralManager:
         self.svc_thread.wait()
         
         if hasattr(self, 'lsr_thread') and self.lsr_thread.isRunning():
+            # Stop the timer before quitting the thread
+            # We use QMetaObject.invokeMethod to call the slot in the thread context
+            from PySide6.QtCore import QMetaObject, Qt, Q_ARG
+            QMetaObject.invokeMethod(self.laser, "stop", Qt.BlockingQueuedConnection)
+            
             self.lsr_thread.quit()
             self.lsr_thread.wait()
             

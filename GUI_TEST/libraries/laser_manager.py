@@ -25,6 +25,15 @@ class LaserManager(QObject):
         self.logger.info("LaserManager initialized.")
 
     @Slot()
+    def stop(self):
+        """
+        Stops the control loop timer
+        """
+        if self.timer and self.timer.isActive():
+            self.timer.stop()
+            self.logger.info("Control loop timer stopped.")
+
+    @Slot()
     def setup(self):
         """
         Sets up the HardwareInterface and the Controller
