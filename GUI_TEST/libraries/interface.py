@@ -1,4 +1,6 @@
 from .logging_config import setup_logging
+import os
+import logging
 
 from linien_client.device import Device
 from linien_client.connection import LinienClient

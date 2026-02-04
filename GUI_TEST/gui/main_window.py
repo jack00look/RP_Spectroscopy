@@ -3,6 +3,7 @@ from .connection_page import ConnectionPage
 from .add_board_page import AddBoardPage
 from .initial_page import InitialPage
 from .reference_lines_page import ReferenceLinesPage
+from .laser_controller_page import LaserControllerPage
 import logging
 import os
 from libraries.logging_config import setup_logging
@@ -31,11 +32,13 @@ class MainWindow(QMainWindow):
         self.page_connect = ConnectionPage(self.logger)
         self.page_add = AddBoardPage(self.logger)
         self.page_reflines = ReferenceLinesPage(self.logger)
+        self.page_laser = LaserControllerPage(self.logger)
 
         self.stack.addWidget(self.page_initial)
         self.stack.addWidget(self.page_connect)
         self.stack.addWidget(self.page_add)
         self.stack.addWidget(self.page_reflines)
+        self.stack.addWidget(self.page_laser)
         
         # Set initial page
         self.stack.setCurrentWidget(self.page_initial)
@@ -52,3 +55,6 @@ class MainWindow(QMainWindow):
 
     def go_to_reference_lines(self):
         self.stack.setCurrentWidget(self.page_reflines)
+
+    def go_to_laser_controller(self):
+        self.stack.setCurrentWidget(self.page_laser)

@@ -515,3 +515,28 @@
 2026-02-03 17:18:18 - GUI - INFO - Updating reference lines table with 3 items.
 2026-02-03 17:18:20 - GUI - INFO - Connection button clicked. Starting transition...
 2026-02-03 17:18:20 - GUI - INFO - Transition complete. Requesting Connection Page.
+2026-02-04 15:01:20 - GUI - INFO - GUI MainWindow initialized.
+2026-02-04 15:01:20 - GUI - INFO - InitialPage initialized.
+2026-02-04 15:01:20 - GUI - INFO - ConnectionPage initialized.
+2026-02-04 15:01:20 - GUI - INFO - AddBoardPage initialized.
+2026-02-04 15:01:20 - GUI - INFO - ReferenceLinesPage initialized.
+2026-02-04 15:01:20 - GUI - INFO - Updating reference lines table with 3 items.
+2026-02-04 15:01:28 - GUI - INFO - Connection button clicked. Starting transition...
+2026-02-04 15:01:28 - GUI - INFO - Transition complete. Requesting Connection Page.
+2026-02-04 15:03:36 - GUI - INFO - GUI MainWindow initialized.
+2026-02-04 15:03:36 - GUI - INFO - InitialPage initialized.
+2026-02-04 15:03:36 - GUI - INFO - ConnectionPage initialized.
+2026-02-04 15:03:36 - GUI - INFO - AddBoardPage initialized.
+2026-02-04 15:03:36 - GUI - INFO - ReferenceLinesPage initialized.
+2026-02-04 15:03:36 - GUI - INFO - Updating reference lines table with 3 items.
+2026-02-04 15:03:37 - GUI - INFO - Reference Lines button clicked.
+2026-02-04 15:03:39 - GUI - INFO - Connection button clicked. Starting transition...
+2026-02-04 15:03:40 - GUI - INFO - Transition complete. Requesting Connection Page.
+2026-02-04 15:04:39 - GUI - INFO - GUI MainWindow initialized.
+2026-02-04 15:04:39 - GUI - INFO - InitialPage initialized.
+2026-02-04 15:04:39 - GUI - INFO - ConnectionPage initialized.
+2026-02-04 15:04:39 - GUI - INFO - AddBoardPage initialized.
+2026-02-04 15:04:39 - GUI - INFO - ReferenceLinesPage initialized.
+2026-02-04 15:04:39 - GUI - INFO - Updating reference lines table with 3 items.
+2026-02-04 15:04:43 - GUI - INFO - Connection button clicked. Starting transition...
+2026-02-04 15:04:44 - GUI - INFO - Transition complete. Requesting Connection Page.

@@ -1,4 +1,6 @@
 from .logging_config import setup_logging
+import logging
+import os
 
 class LockController():
     """
@@ -7,6 +9,8 @@ class LockController():
 
     def __init__(self, interface):
         self.interface = interface
+        # Access config via interface if not passed directly
+        self.config = self.interface.config
 
         # Setup Logging
         log_path = self.config.get('paths', {}).get('logs', './logs')

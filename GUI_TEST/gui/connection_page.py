@@ -4,7 +4,7 @@ from PySide6.QtWidgets import (QWidget, QVBoxLayout, QHBoxLayout, QTableWidget,
 from PySide6.QtCore import Qt, Signal, Slot
 
 class ConnectionPage(QWidget):
-    sig_request_connect = Signal(str)
+    sig_request_connect = Signal(dict)
     sig_request_remove = Signal(str)
     sig_request_add_page = Signal()
     sig_request_refresh = Signal()
@@ -14,6 +14,8 @@ class ConnectionPage(QWidget):
         super().__init__()
         self.logger = logger
         self.logger.info("ConnectionPage initialized.")
+        self.board_map = {} # Store board dicts by name
+
         layout = QVBoxLayout(self)
 
         title = QLabel("Red Pitaya connection")
@@ -57,7 +59,11 @@ class ConnectionPage(QWidget):
         row = self.table.currentRow()
         if row >= 0:
             name = self.table.item(row, 0).text()
-            self.sig_request_connect.emit(name)
+            board = self.board_map.get(name)
+            if board:
+                self.sig_request_connect.emit(board)
+            else:
+                self.logger.error(f"Board {name} not found in map.")
 
     def on_remove_clicked(self):
         row = self.table.currentRow()
@@ -68,10 +74,14 @@ class ConnectionPage(QWidget):
     @Slot(list)
     def update_table(self, board_list):
         self.table.setRowCount(0)
+        self.board_map.clear()
         for board in board_list:
+            name = str(board.get('name', 'Unknown'))
+            self.board_map[name] = board
+            
             row_idx = self.table.rowCount()
             self.table.insertRow(row_idx)
-            self.table.setItem(row_idx, 0, QTableWidgetItem(str(board.get('name', 'Unknown'))))
+            self.table.setItem(row_idx, 0, QTableWidgetItem(name))
             self.table.setItem(row_idx, 1, QTableWidgetItem(str(board.get('ip', ''))))
             self.table.setItem(row_idx, 2, QTableWidgetItem(str(board.get('linien_port', ''))))
             self.table.setItem(row_idx, 3, QTableWidgetItem(str(board.get('ssh_port', ''))))

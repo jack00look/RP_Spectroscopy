@@ -1,7 +1,9 @@
 from .logging_config import setup_logging
-
-from PySide6.QtCore import QObject, Signal, Slot
+from .interface import HardwareInterface
+from .controller import LockController
+from PySide6.QtCore import QObject, Signal, Slot, QTimer
 import os
+import logging
 
 class LaserManager(QObject):
     def __init__(self, config, board):
@@ -29,12 +31,14 @@ class LaserManager(QObject):
         """
         try:
             self.interface = HardwareInterface(self.cfg, self.board)
-            self.controller = Controller(self.interface)
+            self.controller = LockController(self.interface)
 
             #Setup internal Timer for the control loop
             self.timer = QTimer()
-            self.timer.timeout.connect(self.run_control_loop)
+            self.timer.timeout.connect(self.control_loop)
             self.timer.start(self.cfg['app']['update_interval_ms'])
+            
+            self.logger.info("LaserManager setup complete. Control loop started.")
 
         except Exception as e:
             self.logger.error(f"Failed to initialize HardwareInterface and Controller: {e}")

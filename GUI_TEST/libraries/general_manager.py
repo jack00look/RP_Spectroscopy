@@ -1,4 +1,5 @@
 from .service_manager import ServiceManager
+from .laser_manager import LaserManager
 from PySide6.QtCore import QThread
 from gui.main_window import MainWindow
 import logging
@@ -62,6 +63,7 @@ class GeneralManager:
         self.window.show()
 
     def connect_to_board(self, board):
+        board_name = board.get('name', 'Unknown')
         self.logger.info(f"Connecting to {board_name}...")
 
         self.laser = LaserManager(self.cfg, board)
@@ -69,11 +71,23 @@ class GeneralManager:
         self.lsr_thread = QThread()
         self.laser.moveToThread(self.lsr_thread)
         self.logger.info("LaserManager moved to thread.")
+        
+        # Connect started signal to setup method to ensure it runs in the thread
+        self.lsr_thread.started.connect(self.laser.setup)
+        
         self.lsr_thread.start()
         self.logger.info("LaserManager thread started.")
+        
+        # Switch to Laser Controller Page
+        self.window.go_to_laser_controller()
 
     def cleanup(self):
         self.logger.info("GeneralManager shutting down...")
         self.svc_thread.quit()
         self.svc_thread.wait()
+        
+        if hasattr(self, 'lsr_thread') and self.lsr_thread.isRunning():
+            self.lsr_thread.quit()
+            self.lsr_thread.wait()
+            
         self.logger.info("GeneralManager shut down.")

@@ -147,3 +147,31 @@
 2026-02-03 17:18:18 - GeneralManager - INFO - ServiceManager thread started.
 2026-02-03 17:18:24 - GeneralManager - INFO - GeneralManager shutting down...
 2026-02-03 17:18:24 - GeneralManager - INFO - GeneralManager shut down.
+2026-02-04 15:01:20 - GeneralManager - INFO - GeneralManager starting up...
+2026-02-04 15:01:20 - GeneralManager - INFO - ServiceManager initialized.
+2026-02-04 15:01:20 - GeneralManager - INFO - ServiceManager moved to thread.
+2026-02-04 15:01:20 - GeneralManager - INFO - MainWindow initialized.
+2026-02-04 15:01:20 - GeneralManager - INFO - ServiceManager injected into ReferenceLinesPage.
+2026-02-04 15:01:20 - GeneralManager - INFO - ServiceManager thread started.
+2026-02-04 15:03:29 - GeneralManager - INFO - GeneralManager shutting down...
+2026-02-04 15:03:29 - GeneralManager - INFO - GeneralManager shut down.
+2026-02-04 15:03:36 - GeneralManager - INFO - GeneralManager starting up...
+2026-02-04 15:03:36 - GeneralManager - INFO - ServiceManager initialized.
+2026-02-04 15:03:36 - GeneralManager - INFO - ServiceManager moved to thread.
+2026-02-04 15:03:36 - GeneralManager - INFO - MainWindow initialized.
+2026-02-04 15:03:36 - GeneralManager - INFO - ServiceManager injected into ReferenceLinesPage.
+2026-02-04 15:03:36 - GeneralManager - INFO - ServiceManager thread started.
+2026-02-04 15:03:47 - GeneralManager - INFO - GeneralManager shutting down...
+2026-02-04 15:03:47 - GeneralManager - INFO - GeneralManager shut down.
+2026-02-04 15:04:39 - GeneralManager - INFO - GeneralManager starting up...
+2026-02-04 15:04:39 - GeneralManager - INFO - ServiceManager initialized.
+2026-02-04 15:04:39 - GeneralManager - INFO - ServiceManager moved to thread.
+2026-02-04 15:04:39 - GeneralManager - INFO - MainWindow initialized.
+2026-02-04 15:04:39 - GeneralManager - INFO - ServiceManager injected into ReferenceLinesPage.
+2026-02-04 15:04:39 - GeneralManager - INFO - ServiceManager thread started.
+2026-02-04 15:04:46 - GeneralManager - INFO - Connecting to RedPitaya_K...
+2026-02-04 15:04:46 - GeneralManager - INFO - LaserManager initialized.
+2026-02-04 15:04:46 - GeneralManager - INFO - LaserManager moved to thread.
+2026-02-04 15:04:46 - GeneralManager - INFO - LaserManager thread started.
+2026-02-04 15:05:44 - GeneralManager - INFO - GeneralManager shutting down...
+2026-02-04 15:05:44 - GeneralManager - INFO - GeneralManager shut down.
