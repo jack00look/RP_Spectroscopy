@@ -507,3 +507,11 @@
 2026-02-03 17:12:33 - GUI - INFO - ReferenceLinesPage initialized.
 2026-02-03 17:12:33 - GUI - INFO - Updating reference lines table with 3 items.
 2026-02-03 17:12:34 - GUI - INFO - Reference Lines button clicked.
+2026-02-03 17:18:18 - GUI - INFO - GUI MainWindow initialized.
+2026-02-03 17:18:18 - GUI - INFO - InitialPage initialized.
+2026-02-03 17:18:18 - GUI - INFO - ConnectionPage initialized.
+2026-02-03 17:18:18 - GUI - INFO - AddBoardPage initialized.
+2026-02-03 17:18:18 - GUI - INFO - ReferenceLinesPage initialized.
+2026-02-03 17:18:18 - GUI - INFO - Updating reference lines table with 3 items.
+2026-02-03 17:18:20 - GUI - INFO - Connection button clicked. Starting transition...
+2026-02-03 17:18:20 - GUI - INFO - Transition complete. Requesting Connection Page.

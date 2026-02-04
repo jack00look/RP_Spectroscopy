@@ -1,0 +1,151 @@
+Now I want to add a new page to the GUI. From the ConnectionPage defined in @connection_page.py, the user select a board from the list and clicks the connect button. This triggers the creation of a new manager, the LaserManager, using the connect_to_board method inside the GeneralManager (@general_manager.py). This manager has to be moved in a separate thread. I already built the structure but I want you to connect the last things: when the button is pressed the connect_to_board method must be called with as input the board informations that are present in the specific row of the table that has been selected. 
+
+
+QUESTION:
+Not at all, considering the kind of GUI I want. When the board has been connected it start sweeping and the GUI shows a window divided (using QSplit) in 2 parts. On the right side I want the plot of the sweep, refreshed every, say, 0.1s. On the left I want a stack of pages, the main one with a set of buttons that open different elements of the stack. For example, I can open the parameters page that allows me to change the parameters (and then allows me to see the sweep change in live on the right). But I also want the possibility to press the autolock button that opens a page of the stack that can start a process that is potentially long (more than 2 minutes) and then on the right, during the process the plots will be different and, after the locking procedure succeeded, the plot will be the monitor one. When the unlock button is pressed, the board will start sweeping and the plot on the right will return to be the initial one.
+ANSWER:
+This is a fantastic UX design. It is cleaner, more modular, and "professional." It effectively separates **Control** (Left Stack) from **Visualization** (Right Plot).
+
+To make this work smoothly—especially with that 2-minute autolock process—you should conceptualize your Right-Side Plot not as a "Sweep Plotter" but as a **"Live Data Viewer"**. It is a "dumb" screen that simply visualizes whatever packet the Worker Thread sends it.
+
+Here is the robust implementation strategy to achieve exactly that workflow.
+
+### 1. The Architecture: The "State-Driven" Data Pipe
+
+The key is that your **Worker Thread** (`LaserManager`) decides what kind of data to send based on its internal state. The **GUI** just reacts.
+
+* **State A (SWEEPING):** Worker sends `(x_volts, y_photodiode)` arrays. GUI plots a line.
+* **State B (AUTOLOCKING):** Worker generator yields `(step_name, current_value, target_value)`. GUI plots a progress curve or "Searching..." animation.
+* **State C (LOCKED):** Worker sends `(error_signal, output_voltage)` arrays. GUI plots the scrolling monitor trace (strip chart).
+
+### 2. Implementation: The "Generator" Powering the View
+
+Using the **Generator** pattern we discussed is critical here. It allows the Autolock process to "drive" the plot on the right side *frame-by-frame* during those 2 minutes.
+
+Here is how the code looks to support your specific "Page Stack" and "Split Window" requirement.
+
+#### The Worker (LaserManager)
+
+Notice how `run_control_loop` simply grabs data from *whoever is in charge* (the Sweep logic or the Autolock Generator) and emits it.
+
+```python
+class LaserManager(QObject):
+    sig_data_ready = Signal(dict)  # The universal data pipe
+
+    def __init__(self):
+        super().__init__()
+        self.state = "SWEEP" # Initial state
+        self.autolock_gen = None
+
+    @Slot()
+    def run_control_loop(self):
+        # 1. SWEEP MODE (Standard)
+        if self.state == "SWEEP":
+            x, y = self.interface.perform_sweep_step()
+            self.sig_data_ready.emit({
+                "mode": "sweep", 
+                "x": x, 
+                "y": y
+            })
+
+        # 2. AUTOLOCK MODE (The 2-minute process)
+        elif self.state == "AUTOLOCK":
+            try:
+                # Resume the procedure for one "frame"
+                # This 'data_packet' contains the LIVE plot data for the right panel
+                data_packet = next(self.autolock_gen)
+                self.sig_data_ready.emit(data_packet)
+                
+            except StopIteration:
+                # Procedure finished successfully!
+                self.state = "LOCKED"
+                self.sig_data_ready.emit({"mode": "info", "msg": "Locked!"})
+            except Exception as e:
+                self.state = "SWEEP" # Fail safely back to sweep
+                self.sig_data_ready.emit({"mode": "error", "msg": str(e)})
+
+        # 3. LOCKED MODE (Monitor)
+        elif self.state == "LOCKED":
+            err, out = self.interface.get_monitor_data()
+            self.sig_data_ready.emit({
+                "mode": "monitor", 
+                "error": err, 
+                "output": out
+            })
+
+    # --- THE LONG FUNCTION ---
+    def create_autolock_generator(self):
+        # PHASE 1: Coarse Search
+        for i in range(100):
+            # Move hardware
+            val = self.interface.move_piezo(i)
+            # YIELD data so the user sees the search happening on the right plot
+            yield {
+                "mode": "autolock_search",
+                "x": i,
+                "y": val,
+                "status": "Coarse Search..."
+            }
+        
+        # PHASE 2: Optimization
+        # ... logic ...
+        yield {"mode": "autolock_optimizing", "val": 0.5}
+
+```
+
+### 3. The GUI (Main Window)
+
+On the receiving end, your GUI switches the "Right Panel" visualization based on the `mode` tag in the data.
+
+```python
+class MainWindow(QMainWindow):
+    def update_plots(self, data):
+        """Called every time Worker emits sig_data_ready"""
+        mode = data['mode']
+
+        if mode == "sweep":
+            # Ensure the Sweep Plot Widget is visible
+            self.right_stack.setCurrentWidget(self.plot_sweep)
+            self.plot_sweep.setData(data['x'], data['y'])
+            
+        elif mode.startswith("autolock"):
+            # Show a specific visualization for the process
+            self.right_stack.setCurrentWidget(self.plot_autolock)
+            self.plot_autolock.update_progress(data)
+            
+        elif mode == "monitor":
+            # Switch to the Scrolling Strip Chart
+            self.right_stack.setCurrentWidget(self.plot_monitor)
+            self.plot_monitor.add_point(data['error'])
+
+```
+
+### 4. Handling the "Left Stack" Buttons
+
+The buttons on the left simply trigger the state change in the worker.
+
+* **"Parameters" Button:** Just changes the visible page on the left (GUI only). The worker stays in `SWEEP` mode, but now you can tweak `sweep_amplitude`.
+* **"Autolock" Button:**
+1. GUI: Shows "Autolock Status" page on the left.
+2. Logic: Calls `worker.start_autolock()`.
+3. Worker: Creates the generator, sets state to `AUTOLOCK`.
+4. Loop: Starts yielding "Autolock" frames.
+5. Right Plot: Shows the search animation.
+
+
+* **"Unlock" Button:**
+1. GUI: Shows "Sweep Controls" page on the left.
+2. Logic: Calls `worker.stop_lock()`.
+3. Worker: Sets state to `SWEEP`.
+4. Loop: Starts emitting sweep arrays.
+5. Right Plot: Instantly snaps back to the sweep scope.
+
+
+
+### Summary
+
+Your "Stack + Splitter" design is robust because **the GUI View and the Worker State are synchronized.**
+
+* **Left Side:** Controls the *inputs* (State transitions).
+* **Right Side:** Visualizes the *outputs* (Current State data).
+* **The Glue:** The `run_control_loop` + Generator pattern ensures the right side never freezes, even during the 2-minute wait.

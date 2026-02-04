@@ -61,8 +61,16 @@ class GeneralManager:
         
         self.window.show()
 
-    def connect_to_board(self, board_name):
-        print(f"MANAGER: Connecting to {board_name}...", flush=True)
+    def connect_to_board(self, board):
+        self.logger.info(f"Connecting to {board_name}...")
+
+        self.laser = LaserManager(self.cfg, board)
+        self.logger.info("LaserManager initialized.")
+        self.lsr_thread = QThread()
+        self.laser.moveToThread(self.lsr_thread)
+        self.logger.info("LaserManager moved to thread.")
+        self.lsr_thread.start()
+        self.logger.info("LaserManager thread started.")
 
     def cleanup(self):
         self.logger.info("GeneralManager shutting down...")
