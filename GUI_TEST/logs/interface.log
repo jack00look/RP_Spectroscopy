@@ -63,3 +63,7 @@
 2026-02-05 16:05:59 - HardwareInterface - INFO - Connected to device RedPitaya_K
 2026-02-05 16:05:59 - HardwareInterface - INFO - Loading RedPitaya initial configurationparameters...
 2026-02-05 16:06:00 - HardwareInterface - INFO - HardwareInterface initialized.
+2026-02-05 16:12:31 - HardwareInterface - INFO - Attempting connection via RedPitaya_K address (192.168.1.159:18862)
+2026-02-05 16:12:33 - HardwareInterface - INFO - Connected to device RedPitaya_K
+2026-02-05 16:12:33 - HardwareInterface - INFO - Loading RedPitaya initial configurationparameters...
+2026-02-05 16:12:34 - HardwareInterface - INFO - HardwareInterface initialized.

@@ -108,29 +108,26 @@ class ParametersPage(SubPageContainer):
         
         # Add to layout (insert before the back button/stretch)
         # Access the layout from SubPageContainer
+        # Custom Layout Management
+        # SubPageContainer calculates layout: Title(0), Stretch(1), ButtonLayout(2).
+        # We want to replace the default Stretch with our expanding content.
         layout = self.layout()
-        # The last item is the button container, we want to insert before it
-        # But SubPageContainer logic puts content in middle.
         
-        # Hack: SubPageContainer creates layout, adds title (0), stretch (1) or content, then buttons (2).
-        # We want to replace the "Stretch" or "Content" with our Table + Button
-        
-        # Simpler approach: Create a widget holding Table + Default Button and pass that to super/init?
-        # But SubPageContainer takes content_widget in init.
-        # Let's refactor init slightly or just add widgets since we are subclassing.
-        
-        # Clear the stretch added by super if any (it adds stretch if content is None)
-        # Actually, let's just make a container widget for our content
+        # Remove the default stretch item at index 1
+        item = layout.takeAt(1)
+        if item:
+            del item
+
+        # Create container for Table + Defaults Button
         content_widget = QWidget()
         content_layout = QVBoxLayout(content_widget)
-        content_layout.setContentsMargins(0,0,0,0)
+        content_layout.setContentsMargins(0, 0, 0, 0)
         content_layout.addWidget(self.table)
         content_layout.addWidget(self.btn_defaults)
         
-        # We need to insert this into the parent layout. 
-        # SubPageContainer layout: Title, [Stretch/Content], ButtonLayout.
-        # We will insert at index 1.
-        layout.insertWidget(1, content_widget)
+        # Insert our content at index 1 with a stretch factor of 1
+        # This ensures the table expands to fill available space
+        layout.insertWidget(1, content_widget, 1)
         
     def load_parameters(self, writeable_params):
         """
