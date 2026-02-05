@@ -118,9 +118,9 @@ class LaserControllerPage(QWidget):
         right_panel = QFrame()
         right_panel.setFrameShape(QFrame.StyledPanel)
         right_layout = QVBoxLayout(right_panel)
-        lbl_right = QLabel("Right Content Area")
-        lbl_right.setAlignment(Qt.AlignCenter)
-        right_layout.addWidget(lbl_right)
+        self.lbl_status = QLabel("Right Content Area")
+        self.lbl_status.setAlignment(Qt.AlignCenter)
+        right_layout.addWidget(self.lbl_status)
         
         splitter.addWidget(right_panel)
         
@@ -145,11 +145,32 @@ class LaserControllerPage(QWidget):
         # Set Splitter Ratios (Left smaller, Right larger)
         splitter.setStretchFactor(0, 1)
         splitter.setStretchFactor(1, 3)
+        
+        # Initial State
+        self.set_connecting_state()
 
-    Slot()
+    @Slot()
+    def set_connecting_state(self):
+        self.lbl_status.setText("Connecting...")
+        self.set_menu_enabled(False)
+
+    @Slot()
+    def set_connected_state(self):
+        self.lbl_status.setText("Connected")
+        self.set_menu_enabled(True)
+
+    def set_menu_enabled(self, enabled):
+        self.menu_page.btn_params.setEnabled(enabled)
+        self.menu_page.btn_advanced.setEnabled(enabled)
+        self.menu_page.btn_reflines.setEnabled(enabled)
+        self.menu_page.btn_centering.setEnabled(enabled)
+        self.menu_page.btn_manual.setEnabled(enabled)
+        self.menu_page.btn_auto.setEnabled(enabled)
+
+    @Slot()
     def go_to_menu(self):
         self.left_stack.setCurrentWidget(self.menu_page)
         
-    Slot()
+    @Slot()
     def on_reflines_clicked(self):
         self.logger.info("Reference Lines button clicked - (No Action implemented)")

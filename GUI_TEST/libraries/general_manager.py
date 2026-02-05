@@ -75,10 +75,16 @@ class GeneralManager:
         # Connect started signal to setup method to ensure it runs in the thread
         self.lsr_thread.started.connect(self.laser.setup)
         
+        # Connect connection signal to GUI update
+        # We need Qt.QueuedConnection because signal is from thread, slot is in GUI thread
+        # In PySide/Qt, default connection type is AutoConnection which handles this automatically
+        self.laser.sig_connected.connect(self.window.page_laser.set_connected_state)
+        
         self.lsr_thread.start()
         self.logger.info("LaserManager thread started.")
         
-        # Switch to Laser Controller Page
+        # Switch to Laser Controller Page and set to connecting state
+        self.window.page_laser.set_connecting_state()
         self.window.go_to_laser_controller()
 
     def cleanup(self):

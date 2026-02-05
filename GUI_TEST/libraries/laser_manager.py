@@ -6,6 +6,8 @@ import os
 import logging
 
 class LaserManager(QObject):
+    sig_connected = Signal()
+
     def __init__(self, config, board):
         super().__init__()
 
@@ -48,6 +50,7 @@ class LaserManager(QObject):
             self.timer.start(self.cfg['app']['update_interval_ms'])
             
             self.logger.info("LaserManager setup complete. Control loop started.")
+            self.sig_connected.emit()
 
         except Exception as e:
             self.logger.error(f"Failed to initialize HardwareInterface and Controller: {e}")
