@@ -6401,3 +6401,16 @@
 2026-02-05 08:41:37 - LaserManager - INFO - Control loop running...
 2026-02-05 08:41:38 - LaserManager - INFO - Control loop running...
 2026-02-05 08:41:38 - LaserManager - INFO - Control loop timer stopped.
+2026-02-05 11:24:37 - LaserManager - INFO - LaserManager initialized.
+2026-02-05 11:24:40 - LaserManager - ERROR - Failed to initialize HardwareInterface and Controller: 'str' object has no attribute 'exists'
+2026-02-05 11:37:41 - LaserManager - INFO - LaserManager initialized.
+2026-02-05 11:37:44 - LaserManager - ERROR - Failed to initialize HardwareInterface and Controller: 'str' object has no attribute 'exists'
+2026-02-05 11:44:07 - LaserManager - INFO - LaserManager initialized.
+2026-02-05 11:44:10 - LaserManager - INFO - LaserManager setup complete. Control loop started.
+2026-02-05 11:44:57 - LaserManager - INFO - Control loop timer stopped.
+2026-02-05 11:49:55 - LaserManager - INFO - LaserManager initialized.
+2026-02-05 11:49:59 - LaserManager - INFO - LaserManager setup complete. Control loop started.
+2026-02-05 11:50:10 - LaserManager - INFO - Control loop timer stopped.
+2026-02-05 11:51:17 - LaserManager - INFO - LaserManager initialized.
+2026-02-05 11:51:48 - LaserManager - INFO - LaserManager setup complete. Control loop started.
+2026-02-05 11:52:48 - LaserManager - INFO - Control loop timer stopped.

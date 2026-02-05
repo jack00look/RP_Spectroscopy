@@ -524,3 +524,52 @@
 2026-02-05 08:41:27 - ServiceManager - INFO - ServiceManager initialization completed.
 2026-02-05 08:41:27 - ServiceManager - INFO - Loading boards...
 2026-02-05 08:41:27 - ServiceManager - INFO - Found 3 devices.
+2026-02-05 09:35:55 - ServiceManager - INFO - ServiceManager initializing...
+2026-02-05 09:35:55 - ServiceManager - INFO - ServiceManager looking for board list at: /home/bec3/Desktop/Simone_Damian/Serafini/GUI_TEST/boards/board_list.yaml
+2026-02-05 09:35:55 - ServiceManager - INFO - ServiceManager looking for reference lines at: /home/bec3/Desktop/Simone_Damian/Serafini/GUI_TEST/reference_lines/reference_lines_inventory.yaml
+2026-02-05 09:35:55 - ServiceManager - INFO - Grafana client initialized.
+2026-02-05 09:35:55 - ServiceManager - INFO - ServiceManager initialization completed.
+2026-02-05 09:35:56 - ServiceManager - INFO - Loading boards...
+2026-02-05 09:35:56 - ServiceManager - INFO - Found 3 devices.
+2026-02-05 09:36:08 - ServiceManager - INFO - ServiceManager initializing...
+2026-02-05 09:36:08 - ServiceManager - INFO - ServiceManager looking for board list at: /home/bec3/Desktop/Simone_Damian/Serafini/GUI_TEST/boards/board_list.yaml
+2026-02-05 09:36:08 - ServiceManager - INFO - ServiceManager looking for reference lines at: /home/bec3/Desktop/Simone_Damian/Serafini/GUI_TEST/reference_lines/reference_lines_inventory.yaml
+2026-02-05 09:36:08 - ServiceManager - INFO - Grafana client initialized.
+2026-02-05 09:36:08 - ServiceManager - INFO - ServiceManager initialization completed.
+2026-02-05 09:36:08 - ServiceManager - INFO - Loading boards...
+2026-02-05 09:36:08 - ServiceManager - INFO - Found 3 devices.
+2026-02-05 11:24:29 - ServiceManager - INFO - ServiceManager initializing...
+2026-02-05 11:24:29 - ServiceManager - INFO - ServiceManager looking for board list at: /home/bec3/Desktop/Simone_Damian/Serafini/GUI_TEST/boards/board_list.yaml
+2026-02-05 11:24:29 - ServiceManager - INFO - ServiceManager looking for reference lines at: /home/bec3/Desktop/Simone_Damian/Serafini/GUI_TEST/reference_lines/reference_lines_inventory.yaml
+2026-02-05 11:24:29 - ServiceManager - INFO - Grafana client initialized.
+2026-02-05 11:24:29 - ServiceManager - INFO - ServiceManager initialization completed.
+2026-02-05 11:24:29 - ServiceManager - INFO - Loading boards...
+2026-02-05 11:24:29 - ServiceManager - INFO - Found 3 devices.
+2026-02-05 11:37:38 - ServiceManager - INFO - ServiceManager initializing...
+2026-02-05 11:37:38 - ServiceManager - INFO - ServiceManager looking for board list at: /home/bec3/Desktop/Simone_Damian/Serafini/GUI_TEST/boards/board_list.yaml
+2026-02-05 11:37:38 - ServiceManager - INFO - ServiceManager looking for reference lines at: /home/bec3/Desktop/Simone_Damian/Serafini/GUI_TEST/reference_lines/reference_lines_inventory.yaml
+2026-02-05 11:37:38 - ServiceManager - INFO - Grafana client initialized.
+2026-02-05 11:37:38 - ServiceManager - INFO - ServiceManager initialization completed.
+2026-02-05 11:37:38 - ServiceManager - INFO - Loading boards...
+2026-02-05 11:37:38 - ServiceManager - INFO - Found 3 devices.
+2026-02-05 11:44:03 - ServiceManager - INFO - ServiceManager initializing...
+2026-02-05 11:44:03 - ServiceManager - INFO - ServiceManager looking for board list at: /home/bec3/Desktop/Simone_Damian/Serafini/GUI_TEST/boards/board_list.yaml
+2026-02-05 11:44:03 - ServiceManager - INFO - ServiceManager looking for reference lines at: /home/bec3/Desktop/Simone_Damian/Serafini/GUI_TEST/reference_lines/reference_lines_inventory.yaml
+2026-02-05 11:44:03 - ServiceManager - INFO - Grafana client initialized.
+2026-02-05 11:44:03 - ServiceManager - INFO - ServiceManager initialization completed.
+2026-02-05 11:44:03 - ServiceManager - INFO - Loading boards...
+2026-02-05 11:44:03 - ServiceManager - INFO - Found 3 devices.
+2026-02-05 11:49:27 - ServiceManager - INFO - ServiceManager initializing...
+2026-02-05 11:49:27 - ServiceManager - INFO - ServiceManager looking for board list at: /home/bec3/Desktop/Simone_Damian/Serafini/GUI_TEST/boards/board_list.yaml
+2026-02-05 11:49:27 - ServiceManager - INFO - ServiceManager looking for reference lines at: /home/bec3/Desktop/Simone_Damian/Serafini/GUI_TEST/reference_lines/reference_lines_inventory.yaml
+2026-02-05 11:49:27 - ServiceManager - INFO - Grafana client initialized.
+2026-02-05 11:49:27 - ServiceManager - INFO - ServiceManager initialization completed.
+2026-02-05 11:49:27 - ServiceManager - INFO - Loading boards...
+2026-02-05 11:49:27 - ServiceManager - INFO - Found 3 devices.
+2026-02-05 11:51:11 - ServiceManager - INFO - ServiceManager initializing...
+2026-02-05 11:51:11 - ServiceManager - INFO - ServiceManager looking for board list at: /home/bec3/Desktop/Simone_Damian/Serafini/GUI_TEST/boards/board_list.yaml
+2026-02-05 11:51:11 - ServiceManager - INFO - ServiceManager looking for reference lines at: /home/bec3/Desktop/Simone_Damian/Serafini/GUI_TEST/reference_lines/reference_lines_inventory.yaml
+2026-02-05 11:51:11 - ServiceManager - INFO - Grafana client initialized.
+2026-02-05 11:51:11 - ServiceManager - INFO - ServiceManager initialization completed.
+2026-02-05 11:51:11 - ServiceManager - INFO - Loading boards...
+2026-02-05 11:51:11 - ServiceManager - INFO - Found 3 devices.

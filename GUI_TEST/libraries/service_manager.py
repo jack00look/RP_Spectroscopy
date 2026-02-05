@@ -354,6 +354,8 @@ class ServiceManager(QObject):
              self.logger.error(f"Failed to load .npy: {e}")
              return None, None
 
+    # ---- Redpitaya parameters configuration ----
+
     # ---- Red Pitaya parameters ----
 
     # ---- Circuits parameters ----

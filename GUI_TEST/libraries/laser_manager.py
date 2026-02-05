@@ -17,6 +17,8 @@ class LaserManager(QObject):
         self.interface = None 
         self.controller = None 
         self.timer = None
+
+        self.state = "IDLE"
         
         # Setup Logging
         log_path = self.cfg.get('paths', {}).get('logs', './logs')
@@ -61,8 +63,14 @@ class LaserManager(QObject):
         Runs every x seconds and decides what to do
         based on the current state of the Finite State Machine.
         """
+        if self.state == "IDLE":
+            self.interface.start_sweep()
+            self.state = "SWEEP"
+        elif self.state == "SWEEP":
+            self.get_and_send_sweep()
+        else:
+            self.logger.warning(f"Unknown state: {self.state}")
 
-        self.logger.info("Control loop running...")
-
-
-        
+    @Slot()
+    def get_and_send_sweep(self):
+        pass
