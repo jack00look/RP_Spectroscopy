@@ -1,6 +1,10 @@
 from PySide6.QtWidgets import (QWidget, QVBoxLayout, QLabel, QSplitter, QStackedWidget, 
-                               QPushButton, QFrame, QHBoxLayout, QSizePolicy)
+                               QPushButton, QFrame, QHBoxLayout, QSizePolicy, QTableWidget, 
+                               QTableWidgetItem, QHeaderView)
 from PySide6.QtCore import Qt, Slot, Signal
+
+
+
 
 class MenuButton(QPushButton):
     def __init__(self, text, on_click_callback=None):
@@ -80,6 +84,126 @@ class SubPageContainer(QWidget):
         
         layout.addLayout(btn_container)
 
+class ParametersPage(SubPageContainer):
+    def __init__(self, title="Parameters"):
+        super().__init__(title)
+        
+        # --- Table Setup ---
+        self.table = QTableWidget()
+        self.table.setColumnCount(4)
+        self.table.setHorizontalHeaderLabels(["Variable Name", "Hardware Name", "Value", "Scaling"])
+        self.table.horizontalHeader().setSectionResizeMode(QHeaderView.Stretch)
+        self.table.setAlternatingRowColors(True)
+        
+        # Connect cell changed signal (for edits)
+        self.table.cellChanged.connect(self.on_cell_changed)
+        
+        # Parameters Dictionary Reference
+        self.params = {} 
+        self._is_populating = False # Flag to prevent signal loops during population
+
+        # --- Default Settings Button ---
+        self.btn_defaults = QPushButton("Default settings")
+        # connect to nothing for now as per request
+        
+        # Add to layout (insert before the back button/stretch)
+        # Access the layout from SubPageContainer
+        layout = self.layout()
+        # The last item is the button container, we want to insert before it
+        # But SubPageContainer logic puts content in middle.
+        
+        # Hack: SubPageContainer creates layout, adds title (0), stretch (1) or content, then buttons (2).
+        # We want to replace the "Stretch" or "Content" with our Table + Button
+        
+        # Simpler approach: Create a widget holding Table + Default Button and pass that to super/init?
+        # But SubPageContainer takes content_widget in init.
+        # Let's refactor init slightly or just add widgets since we are subclassing.
+        
+        # Clear the stretch added by super if any (it adds stretch if content is None)
+        # Actually, let's just make a container widget for our content
+        content_widget = QWidget()
+        content_layout = QVBoxLayout(content_widget)
+        content_layout.setContentsMargins(0,0,0,0)
+        content_layout.addWidget(self.table)
+        content_layout.addWidget(self.btn_defaults)
+        
+        # We need to insert this into the parent layout. 
+        # SubPageContainer layout: Title, [Stretch/Content], ButtonLayout.
+        # We will insert at index 1.
+        layout.insertWidget(1, content_widget)
+        
+    def load_parameters(self, writeable_params):
+        """
+        Populate the table with WriteableParameter objects.
+        writeable_params: dict of name -> WriteableParameter
+        """
+        self.params = writeable_params
+        self._is_populating = True
+        self.table.setRowCount(0)
+        
+        for name, param in self.params.items():
+            row = self.table.rowCount()
+            self.table.insertRow(row)
+            
+            # 0: Variable Name (Key in dict)
+            item_name = QTableWidgetItem(name)
+            item_name.setFlags(item_name.flags() & ~Qt.ItemIsEditable) # Read Only
+            self.table.setItem(row, 0, item_name)
+            
+            # 1: Hardware Name
+            item_hw = QTableWidgetItem(str(param.name))
+            item_hw.setFlags(item_hw.flags() & ~Qt.ItemIsEditable) # Read Only
+            self.table.setItem(row, 1, item_hw)
+            
+            # 2: Value
+            # We assume value is float/int, display as string using 3 decimal places if float
+            val = param.value
+            if isinstance(val, float):
+                val_str = f"{val:.6g}" # Use general format
+            else:
+                val_str = str(val)
+                
+            item_val = QTableWidgetItem(val_str)
+            item_val.setData(Qt.UserRole, name) # Store key for lookup
+            self.table.setItem(row, 2, item_val)
+            
+            # 3: Scaling
+            scaling = param.scaling if param.scaling is not None else "None"
+            item_scale = QTableWidgetItem(str(scaling))
+            item_scale.setFlags(item_scale.flags() & ~Qt.ItemIsEditable)
+            self.table.setItem(row, 3, item_scale)
+            
+        self._is_populating = False
+
+    def on_cell_changed(self, row, column):
+        if self._is_populating:
+            return
+            
+        # Only care about Value column (index 2)
+        if column != 2:
+            return
+            
+        item = self.table.item(row, column)
+        param_name = item.data(Qt.UserRole)
+        new_val_str = item.text()
+        
+        if param_name in self.params:
+            param = self.params[param_name]
+            try:
+                # Convert string back to float/int
+                # We try float first
+                new_val = float(new_val_str)
+                
+                # Check if it was originally int? Maybe not needed for RP parameters usually floats
+                # Update the parameter object
+                param.set_value(new_val)
+                # print(f"Updated {param_name} to {new_val}") 
+                
+            except ValueError:
+                # Handle invalid input? Reset to old value?
+                # For now just print error or ignore
+                pass
+                
 class LaserControllerPage(QWidget):
     def __init__(self, logger):
         super().__init__()
@@ -93,14 +217,14 @@ class LaserControllerPage(QWidget):
         
         # --- LEFT PANEL: Navigation Stack ---
         self.left_stack = QStackedWidget()
-        self.left_stack.setMinimumWidth(250)
+        self.left_stack.setMinimumWidth(350) # Increased width for Table
         
         # 1. Main Menu
         self.menu_page = MenuPage()
         self.left_stack.addWidget(self.menu_page)
         
-        # 2. Sub Pages (Placeholders)
-        self.page_parameters = SubPageContainer("Parameters")
+        # 2. Sub Pages
+        self.page_parameters = ParametersPage() # REAL PAGE
         self.page_advanced = SubPageContainer("Advanced Settings")
         self.page_centering = SubPageContainer("Line Centering")
         self.page_manual = SubPageContainer("Manual Lock")

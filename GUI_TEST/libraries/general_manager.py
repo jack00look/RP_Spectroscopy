@@ -1,6 +1,6 @@
 from .service_manager import ServiceManager
 from .laser_manager import LaserManager
-from PySide6.QtCore import QThread
+from PySide6.QtCore import QThread, Slot
 from gui.main_window import MainWindow
 import logging
 import os
@@ -79,6 +79,7 @@ class GeneralManager:
         # We need Qt.QueuedConnection because signal is from thread, slot is in GUI thread
         # In PySide/Qt, default connection type is AutoConnection which handles this automatically
         self.laser.sig_connected.connect(self.window.page_laser.set_connected_state)
+        self.laser.sig_connected.connect(self.on_laser_connected)
         
         self.lsr_thread.start()
         self.logger.info("LaserManager thread started.")
@@ -86,6 +87,23 @@ class GeneralManager:
         # Switch to Laser Controller Page and set to connecting state
         self.window.page_laser.set_connecting_state()
         self.window.go_to_laser_controller()
+
+    @Slot()
+    def on_laser_connected(self):
+        """
+        Called when laser manager is fully connected.
+        Populate the parameters table.
+        """
+        # We access the interface params. 
+        # Note: self.laser.interface might be in use by the thread.
+        # But reading the dict of params structure is likely fine once setup is done.
+        
+        if self.laser.interface and hasattr(self.laser.interface, 'writeable_params'):
+            params = self.laser.interface.writeable_params
+            self.window.page_laser.page_parameters.load_parameters(params)
+            self.logger.info("Parameters loaded into GUI.")
+        else:
+            self.logger.warning("Could not load parameters: Interface not ready or no params.")
 
     def cleanup(self):
         self.logger.info("GeneralManager shutting down...")
