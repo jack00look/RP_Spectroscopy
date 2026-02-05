@@ -7,9 +7,12 @@ import logging
 
 class LaserManager(QObject):
     sig_connected = Signal()
+    sig_parameters_updated = Signal()
 
     def __init__(self, config, board):
         super().__init__()
+        # ... (rest of init)
+
 
         self.cfg = config
         self.board = board
@@ -74,3 +77,16 @@ class LaserManager(QObject):
     @Slot()
     def get_and_send_sweep(self):
         pass
+
+    @Slot()
+    def restore_default_parameters(self):
+        """
+        Reloads the default parameters from the config file and updates the interface.
+        """
+        if self.interface:
+            try:
+                self.interface.load_default_RedPitaya_parameters()
+                self.logger.info("Default parameters restored.")
+                self.sig_parameters_updated.emit()
+            except Exception as e:
+                self.logger.error(f"Failed to restore default parameters: {e}")

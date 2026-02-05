@@ -81,6 +81,16 @@ class GeneralManager:
         self.laser.sig_connected.connect(self.window.page_laser.set_connected_state)
         self.laser.sig_connected.connect(self.on_laser_connected)
         
+        # Connection for Default Settings Button
+        # Disconnect previous connections to avoid duplicates (safeguard)
+        try:
+            self.window.page_laser.page_parameters.btn_defaults.clicked.disconnect()
+        except Exception:
+            pass # No connections to disconnect
+            
+        self.window.page_laser.page_parameters.btn_defaults.clicked.connect(self.laser.restore_default_parameters)
+        self.laser.sig_parameters_updated.connect(self.on_parameters_updated)
+        
         self.lsr_thread.start()
         self.logger.info("LaserManager thread started.")
         
@@ -104,6 +114,19 @@ class GeneralManager:
             self.logger.info("Parameters loaded into GUI.")
         else:
             self.logger.warning("Could not load parameters: Interface not ready or no params.")
+
+    @Slot()
+    def on_parameters_updated(self):
+        """
+        Called when parameters are updated (e.g. defaults restored).
+        Refreshes the GUI table.
+        """
+        if self.laser.interface and hasattr(self.laser.interface, 'writeable_params'):
+            params = self.laser.interface.writeable_params
+            self.window.page_laser.page_parameters.load_parameters(params)
+            self.logger.info("Parameters refreshed from defaults.")
+        else:
+            self.logger.warning("Could not refresh parameters: Interface not ready.")
 
     def cleanup(self):
         self.logger.info("GeneralManager shutting down...")
