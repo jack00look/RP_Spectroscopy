@@ -1,6 +1,6 @@
 from PySide6.QtWidgets import (QWidget, QVBoxLayout, QLabel, QSplitter, QStackedWidget, 
                                QPushButton, QFrame, QHBoxLayout, QSizePolicy, QTableWidget, 
-                               QTableWidgetItem, QHeaderView)
+                               QTableWidgetItem, QHeaderView, QMessageBox)
 from PySide6.QtCore import Qt, Slot, Signal
 
 
@@ -85,6 +85,8 @@ class SubPageContainer(QWidget):
         layout.addLayout(btn_container)
 
 class ParametersPage(SubPageContainer):
+    sig_restore_defaults = Signal()
+
     def __init__(self, title="Parameters"):
         super().__init__(title)
         
@@ -104,7 +106,7 @@ class ParametersPage(SubPageContainer):
 
         # --- Default Settings Button ---
         self.btn_defaults = QPushButton("Default settings")
-        # connect to nothing for now as per request
+        self.btn_defaults.clicked.connect(self.on_defaults_clicked)
         
         # Add to layout (insert before the back button/stretch)
         # Access the layout from SubPageContainer
@@ -208,6 +210,18 @@ class ParametersPage(SubPageContainer):
                 # Handle invalid input? Reset to old value?
                 # For now just print error or ignore
                 pass
+
+    @Slot()
+    def on_defaults_clicked(self):
+        """
+        Shows a confirmation dialog before emitting the restore defaults signal.
+        """
+        reply = QMessageBox.question(self, 'Confirm Restore Defaults', 
+                                     "Are you sure you want to restore default parameters? This will overwrite all current settings.",
+                                     QMessageBox.Yes | QMessageBox.No, QMessageBox.No)
+
+        if reply == QMessageBox.Yes:
+            self.sig_restore_defaults.emit()
                 
 class LaserControllerPage(QWidget):
     def __init__(self, logger):

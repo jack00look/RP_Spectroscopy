@@ -82,13 +82,13 @@ class GeneralManager:
         self.laser.sig_connected.connect(self.on_laser_connected)
         
         # Connection for Default Settings Button
-        # Disconnect previous connections to avoid duplicates (safeguard)
+        # Disconnect previous backend connections to avoid duplicates (safeguard)
         try:
-            self.window.page_laser.page_parameters.btn_defaults.clicked.disconnect()
+            self.window.page_laser.page_parameters.sig_restore_defaults.disconnect()
         except Exception:
             pass # No connections to disconnect
             
-        self.window.page_laser.page_parameters.btn_defaults.clicked.connect(self.laser.restore_default_parameters)
+        self.window.page_laser.page_parameters.sig_restore_defaults.connect(self.laser.restore_default_parameters)
         self.laser.sig_parameters_updated.connect(self.on_parameters_updated)
         
         self.lsr_thread.start()

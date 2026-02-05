@@ -6449,3 +6449,13 @@
 2026-02-05 17:00:24 - LaserManager - INFO - Default parameters restored.
 2026-02-05 17:00:53 - LaserManager - INFO - Default parameters restored.
 2026-02-05 17:01:42 - LaserManager - INFO - Control loop timer stopped.
+2026-02-05 17:16:55 - LaserManager - INFO - LaserManager initialized.
+2026-02-05 17:16:58 - LaserManager - INFO - LaserManager setup complete. Control loop started.
+2026-02-05 17:19:03 - LaserManager - INFO - Control loop timer stopped.
+2026-02-05 17:19:14 - LaserManager - INFO - LaserManager initialized.
+2026-02-05 17:19:18 - LaserManager - INFO - LaserManager setup complete. Control loop started.
+2026-02-05 17:21:48 - LaserManager - INFO - Control loop timer stopped.
+2026-02-05 17:23:19 - LaserManager - INFO - LaserManager initialized.
+2026-02-05 17:23:23 - LaserManager - INFO - LaserManager setup complete. Control loop started.
+2026-02-05 17:23:43 - LaserManager - INFO - Default parameters restored.
+2026-02-05 17:24:02 - LaserManager - INFO - Control loop timer stopped.
