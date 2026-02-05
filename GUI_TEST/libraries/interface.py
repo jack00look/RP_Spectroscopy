@@ -99,6 +99,40 @@ class HardwareInterface():
 
         self.write_registers()
 
+    def load_default_RedPitaya_parameters(self):
+        """
+        Load writeable and readable parameters from a YAML config file and create corresponding parameter objects. It also
+        writes the initial values of the writeable parameters to the device only once at the end of the loading procedure.   
+        """
+        
+        board_config_file_path = self.config.get('paths', {}).get('hardware', './boards')
+        board_config_file = os.path.join(board_config_file_path, f"{self.board['name']}_parameters_default.yaml")
+
+        if not os.path.exists(board_config_file):
+            raise FileNotFoundError(f"Parameter config file not found: {board_config_file}")
+
+        with open(board_config_file, 'r') as f:
+            config = yaml.safe_load(f)
+
+        self.writeable_params = {}
+        for name, entry in config.get("writeable_parameters", {}).items():
+            self.logger.debug(f"Loading writeable parameter {name} with hardware name {entry['hardware_name']}, initial value {entry['initial_value']}, scaling {entry['scaling']}")
+            self.writeable_params[name] = WriteableParameter(
+                name=entry["hardware_name"],
+                initial_value=entry["initial_value"],
+                scaling=entry["scaling"],
+                client = self.client
+            )
+
+        self.readable_params = {}
+        for name,entry in config.get("readable_parameters", {}).items():
+            self.readable_params[name] = ReadableParameter(
+                name=entry['hardware_name'],
+                client = self.client
+            )
+
+        self.write_registers()
+
     def write_registers(self):
         self.client.connection.root.write_registers()
 

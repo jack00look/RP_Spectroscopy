@@ -356,6 +356,8 @@ class ServiceManager(QObject):
 
     # ---- Redpitaya parameters configuration ----
 
+    
+
     # ---- Red Pitaya parameters ----
 
     # ---- Circuits parameters ----

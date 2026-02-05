@@ -283,11 +283,6 @@ advanced_settings:
   gui_visualization:
     ui_label: "Plotting & Refresh"
 
-    refresh_interval: 
-      value: 0.25
-      unit: "s"
-      range: [0.1, 5]
-
     history_length:
       fast: 5
       slow: 3600
@@ -308,12 +303,6 @@ advanced_settings:
       options: ["SIMPLE", "ROBUST"]
     determine_offset:
       value: false
-    
-
-  # --- DEBUG SETTINGS ---
-  debug_mode:
-    ui_label: "Debug Mode"
-    value: false
 
   # --- AUTOMATIC CENTERING SETTINGS ---
   autocenter_settings:
