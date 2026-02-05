@@ -1,5 +1,4 @@
-
-
+The connection to the board may take some time. I want, in the right part of the QSplitter in @laser_controller_page.py, a temporary text message that says "Connecting..." up to when the Interface and the Controller have been configured, then it switches to "Connected" when this action is completed succesfully. In addition I want all the buttons in the @laser_control_page.py initial page to be unset while connectiong, in order not to allow the user to press them until the board is connected.
 
 
 that has to open the ReferenceLine page contained in @reference_lines_page.py. Notice that now that the board has been connected, a signal has to be sent to the reference_lines_page.py in order to re-activate the "Add" button. For now the button does not activate anything. Notice that is 
