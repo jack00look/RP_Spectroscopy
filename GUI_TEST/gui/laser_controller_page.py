@@ -191,10 +191,18 @@ class ParametersPage(SubPageContainer):
             param = self.params[param_name]
             try:
                 # Convert string back to float/int
-                # We try float first
-                new_val = float(new_val_str)
+                # We try float first because it handles "2.0" correctly
+                val_float = float(new_val_str)
                 
-                # Check if it was originally int? Maybe not needed for RP parameters usually floats
+                # Check if we should convert to int
+                # If scaling is None, it implies it might be an index or boolean-like int
+                # If scaling is defined, it usually implies a continuous physical value (float)
+                # We also check if the float value is effectively an integer
+                if param.scaling is None and val_float.is_integer():
+                     new_val = int(val_float)
+                else:
+                     new_val = val_float
+
                 # Update the parameter object
                 param.set_value(new_val)
                 # print(f"Updated {param_name} to {new_val}") 
