@@ -6459,3 +6459,30 @@
 2026-02-05 17:23:23 - LaserManager - INFO - LaserManager setup complete. Control loop started.
 2026-02-05 17:23:43 - LaserManager - INFO - Default parameters restored.
 2026-02-05 17:24:02 - LaserManager - INFO - Control loop timer stopped.
+2026-02-06 10:27:50 - LaserManager - INFO - LaserManager initialized.
+2026-02-06 10:28:21 - LaserManager - INFO - LaserManager setup complete. Control loop started.
+2026-02-06 10:29:02 - LaserManager - INFO - Control loop timer stopped.
+2026-02-06 10:29:59 - LaserManager - INFO - LaserManager initialized.
+2026-02-06 10:30:02 - LaserManager - INFO - LaserManager setup complete. Control loop started.
+2026-02-06 10:30:24 - LaserManager - INFO - Default parameters restored.
+2026-02-06 10:31:08 - LaserManager - INFO - Control loop timer stopped.
+2026-02-06 10:37:24 - LaserManager - INFO - LaserManager initialized.
+2026-02-06 10:37:28 - LaserManager - INFO - LaserManager setup complete. Control loop started.
+2026-02-06 10:37:50 - LaserManager - ERROR - Failed to save parameters: 'YAML' object has no attribute 'safe_load'
+2026-02-06 10:37:50 - LaserManager - INFO - Control loop timer stopped.
+2026-02-06 10:53:16 - LaserManager - INFO - LaserManager initialized.
+2026-02-06 10:53:19 - LaserManager - INFO - LaserManager setup complete. Control loop started.
+2026-02-06 10:53:38 - LaserManager - INFO - Control loop timer stopped.
+2026-02-06 10:54:07 - LaserManager - INFO - LaserManager initialized.
+2026-02-06 10:54:11 - LaserManager - INFO - LaserManager setup complete. Control loop started.
+2026-02-06 10:54:27 - LaserManager - INFO - Control loop timer stopped.
+2026-02-06 10:54:46 - LaserManager - INFO - LaserManager initialized.
+2026-02-06 10:54:49 - LaserManager - INFO - LaserManager setup complete. Control loop started.
+2026-02-06 10:55:18 - LaserManager - INFO - Control loop timer stopped.
+2026-02-06 10:55:34 - LaserManager - INFO - LaserManager initialized.
+2026-02-06 10:55:38 - LaserManager - INFO - LaserManager setup complete. Control loop started.
+2026-02-06 10:55:57 - LaserManager - INFO - Default parameters restored.
+2026-02-06 10:56:16 - LaserManager - INFO - Control loop timer stopped.
+2026-02-06 10:56:31 - LaserManager - INFO - LaserManager initialized.
+2026-02-06 10:56:35 - LaserManager - INFO - LaserManager setup complete. Control loop started.
+2026-02-06 10:56:46 - LaserManager - INFO - Control loop timer stopped.

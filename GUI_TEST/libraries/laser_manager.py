@@ -90,3 +90,14 @@ class LaserManager(QObject):
                 self.sig_parameters_updated.emit()
             except Exception as e:
                 self.logger.error(f"Failed to restore default parameters: {e}")
+
+    @Slot()
+    def save_parameters(self):
+        """
+        Saves current parameters back to the YAML file.
+        """
+        if self.interface:
+            try:
+                self.interface.save_RedPitaya_parameters_before_closing()
+            except Exception as e:
+                self.logger.error(f"Failed to save parameters: {e}")

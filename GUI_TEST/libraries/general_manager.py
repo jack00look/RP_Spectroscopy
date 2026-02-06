@@ -83,9 +83,10 @@ class GeneralManager:
         
         # Connection for Default Settings Button
         # Disconnect previous backend connections to avoid duplicates (safeguard)
+        # Avoid RuntimeWarning by catching error or only disconnecting if connected
         try:
             self.window.page_laser.page_parameters.sig_restore_defaults.disconnect()
-        except Exception:
+        except (TypeError, RuntimeError):
             pass # No connections to disconnect
             
         self.window.page_laser.page_parameters.sig_restore_defaults.connect(self.laser.restore_default_parameters)
@@ -137,6 +138,11 @@ class GeneralManager:
             # Stop the timer before quitting the thread
             # We use QMetaObject.invokeMethod to call the slot in the thread context
             from PySide6.QtCore import QMetaObject, Qt, Q_ARG
+            
+            # 1. Save parameters to YAML
+            QMetaObject.invokeMethod(self.laser, "save_parameters", Qt.BlockingQueuedConnection)
+            
+            # 2. Stop the control loop timer
             QMetaObject.invokeMethod(self.laser, "stop", Qt.BlockingQueuedConnection)
             
             self.lsr_thread.quit()

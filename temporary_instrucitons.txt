@@ -1,4 +1,5 @@
-If the "Default settings" button is clicked, I want a message box to appear asking for a confirm. If the reply is positive the load_default_RedPitaya_parameters method of the @interface.py has to be called (already implemented) and the values on the table have to be updated.
+I want that when the app is closed (so when the cleanup method inside the GeneralManager in @beautifulMentionis triggered), the method save_RedPitaya_parameters_before_closing inside @beautifulMentionis triggered.
+
 When the program closes I want the parameters to be saved in the same board_name_parameters.yaml used to initialize the board. This is a task for the ServiceManager. Pay attention that in this file there are also other type of informations that must remain untouched, the complete file is @RedPitaya_K_parameters.yaml for the board I am using now. Look at how I read it and use only the peaces I need in load_RedPitaya_parameters method in @interface.py. Remember that only the LaserManager is a QObject, interface and the controller are not and thus can't communicate with the other threads.
 
 

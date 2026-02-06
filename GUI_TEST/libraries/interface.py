@@ -2,6 +2,8 @@ from .logging_config import setup_logging
 import os
 import logging
 import yaml
+from ruamel.yaml import YAML
+import sys
 
 from linien_client.device import Device
 from linien_client.connection import LinienClient
@@ -138,6 +140,48 @@ class HardwareInterface():
 
     def start_sweep(self):
         self.client.connection.root.start_sweep()
+
+    def save_RedPitaya_parameters_before_closing(self):
+        """
+        Reads the original YAML, updates the writeable parameters 
+        with their current values, and saves it back preserving comments
+        and other parameters.
+        """
+
+        yaml = YAML()
+        yaml.preserve_quotes = True
+        
+        # 1. Read the full existing file structure
+        # We read the file again to ensure we have the full tree with comments
+        board_config_file_path = self.config.get('paths', {}).get('hardware', './boards')
+        board_config_file = os.path.join(board_config_file_path, f"{self.board['name']}_parameters.yaml")
+
+        if not os.path.exists(board_config_file):
+            raise FileNotFoundError(f"Parameter config file not found: {board_config_file}")
+
+        with open(board_config_file, 'r') as f:
+            full_config = yaml.load(f)
+
+        # 2. Update ONLY the writeable parameters
+        # We iterate through your active python objects and update the YAML structure
+        if 'writeable_parameters' in full_config:
+            for name, param_obj in self.writeable_params.items():
+                
+                # Check if this parameter exists in the file structure
+                if name in full_config['writeable_parameters']:
+                    
+                    # Update the 'initial_value' in the YAML to match the current state
+                    current_val = self.writeable_params[name].value 
+                    
+                    full_config['writeable_parameters'][name]['initial_value'] = current_val
+                    
+                    self.logger.info(f"Updated {name} to {current_val} in config.")
+
+        # 3. Write everything back to the file
+        with open(board_config_file, 'w') as f:
+            yaml.dump(full_config, f)
+            
+        self.logger.info(f"Configuration saved successfully to {board_config_file}")
 
 class ReadableParameter:
     def __init__(self, name, client):
