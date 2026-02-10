@@ -2,6 +2,7 @@ from PySide6.QtWidgets import (QWidget, QVBoxLayout, QLabel, QSplitter, QStacked
                                QPushButton, QFrame, QHBoxLayout, QSizePolicy, QTableWidget, 
                                QTableWidgetItem, QHeaderView, QMessageBox)
 from PySide6.QtCore import Qt, Slot, Signal
+from gui.plot_panel import PlotPanel
 
 
 
@@ -257,15 +258,9 @@ class LaserControllerPage(QWidget):
         
         splitter.addWidget(self.left_stack)
         
-        # --- RIGHT PANEL: Content Placeholder ---
-        right_panel = QFrame()
-        right_panel.setFrameShape(QFrame.StyledPanel)
-        right_layout = QVBoxLayout(right_panel)
-        self.lbl_status = QLabel("Right Content Area")
-        self.lbl_status.setAlignment(Qt.AlignCenter)
-        right_layout.addWidget(self.lbl_status)
-        
-        splitter.addWidget(right_panel)
+        # --- RIGHT PANEL: Live Plot Panel ---
+        self.plot_panel = PlotPanel()
+        splitter.addWidget(self.plot_panel)
         
         # --- WIRING ---
         # Menu -> Pages
@@ -294,12 +289,10 @@ class LaserControllerPage(QWidget):
 
     @Slot()
     def set_connecting_state(self):
-        self.lbl_status.setText("Connecting...")
         self.set_menu_enabled(False)
 
     @Slot()
     def set_connected_state(self):
-        self.lbl_status.setText("Connected")
         self.set_menu_enabled(True)
 
     def set_menu_enabled(self, enabled):

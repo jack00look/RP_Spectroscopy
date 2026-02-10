@@ -4,9 +4,14 @@ import logging
 import yaml
 from ruamel.yaml import YAML
 import sys
+import pickle
+import numpy as np
+from time import sleep
 
 from linien_client.device import Device
 from linien_client.connection import LinienClient
+
+from linien_common.common import ANALOG_OUT_V, Vpp
 
 
 class HardwareInterface():
@@ -141,6 +146,9 @@ class HardwareInterface():
     def start_sweep(self):
         self.client.connection.root.start_sweep()
 
+    def check_for_changed_parameters(self):
+        self.client.parameters.check_for_changed_parameters()
+        
     def save_RedPitaya_parameters_before_closing(self):
         """
         Reads the original YAML, updates the writeable parameters 
@@ -182,6 +190,26 @@ class HardwareInterface():
             yaml.dump(full_config, f)
             
         self.logger.info(f"Configuration saved successfully to {board_config_file}")
+
+    def get_sweep(self):
+        """
+        Neglectiing the mixing channel for simplicity.
+        """
+        self.start_sweep()
+        #print("Sweep_speed ", self.writeable_params["sweep_speed"].get_remote_value())
+        sleep(5.0 * ((2.0**self.writeable_params["sweep_speed"].get_remote_value())/(3.8e3))) #wait 3 sweep periods
+        self.check_for_changed_parameters()
+        to_plot = pickle.loads(self.readable_params["sweep_signal"].get_remote_value())
+        error_signal = np.array(to_plot["error_signal_1"]/(2*Vpp))
+        monitor_signal = np.array(to_plot["monitor_signal"]/(2*Vpp))
+        sweep_signal = {}
+        sweep_center = self.writeable_params["sweep_center"].get_remote_value()
+        sweep_range = self.writeable_params["sweep_amplitude"].get_remote_value()
+        sweep_scan = np.linspace(sweep_center - sweep_range, sweep_center + sweep_range, len(error_signal))
+        sweep_signal['x'] = sweep_scan
+        sweep_signal['error_signal'] = error_signal
+        sweep_signal['monitor_signal'] = monitor_signal
+        return sweep_signal
 
 class ReadableParameter:
     def __init__(self, name, client):

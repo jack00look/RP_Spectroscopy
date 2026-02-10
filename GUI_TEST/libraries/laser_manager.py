@@ -8,6 +8,7 @@ import logging
 class LaserManager(QObject):
     sig_connected = Signal()
     sig_parameters_updated = Signal()
+    sig_data_ready = Signal(dict)
 
     def __init__(self, config, board):
         super().__init__()
@@ -76,7 +77,17 @@ class LaserManager(QObject):
 
     @Slot()
     def get_and_send_sweep(self):
-        pass
+
+        sweep_signal = self.interface.get_sweep()
+
+        packet = {
+            "mode": "SWEEP",
+            "x": sweep_signal["x"],
+            "error_signal": sweep_signal["error_signal"],
+            "monitor_signal": sweep_signal["monitor_signal"]
+        }
+
+        self.sig_data_ready.emit(packet)
 
     @Slot()
     def restore_default_parameters(self):

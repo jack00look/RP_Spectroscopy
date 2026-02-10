@@ -1,6 +1,9 @@
-I want that when the app is closed (so when the cleanup method inside the GeneralManager in @beautifulMentionis triggered), the method save_RedPitaya_parameters_before_closing inside @beautifulMentionis triggered.
+I want to implement the live visualization of the sweep data. When the board has been connected, inside the LaserManager, a control_loop starts (@laser_manager.py). Depending on the sate of the Finite State Machine I implemented, the loop sends a signal_data_ready containing a packet labeled by a "mode". Depending on the mode, I want on the right side of the @laser_controller_page.py to have different kind of plots with the data that are contained within the packet itself. By default the state is "SWEEP", the packet contains "x", "error_signal" and "monitor_signal". I want to have two plots with shared x axis ("x"), and in one plot I want the error signal and in the other the monitor one. In the future I will implement new states of the FSM, I want the logic of the system to be easily upgradable with new states and therefore, different kind of plots.
 
-When the program closes I want the parameters to be saved in the same board_name_parameters.yaml used to initialize the board. This is a task for the ServiceManager. Pay attention that in this file there are also other type of informations that must remain untouched, the complete file is @RedPitaya_K_parameters.yaml for the board I am using now. Look at how I read it and use only the peaces I need in load_RedPitaya_parameters method in @interface.py. Remember that only the LaserManager is a QObject, interface and the controller are not and thus can't communicate with the other threads.
+
+
+
+
 
 
 

@@ -91,6 +91,9 @@ class GeneralManager:
             
         self.window.page_laser.page_parameters.sig_restore_defaults.connect(self.laser.restore_default_parameters)
         self.laser.sig_parameters_updated.connect(self.on_parameters_updated)
+
+        # Connection for live data plotting
+        self.laser.sig_data_ready.connect(self.window.page_laser.plot_panel.update_plot)
         
         self.lsr_thread.start()
         self.logger.info("LaserManager thread started.")
