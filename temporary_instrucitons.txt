@@ -1,10 +1,14 @@
-I want to implement the live visualization of the sweep data. When the board has been connected, inside the LaserManager, a control_loop starts (@laser_manager.py). Depending on the sate of the Finite State Machine I implemented, the loop sends a signal_data_ready containing a packet labeled by a "mode". Depending on the mode, I want on the right side of the @laser_controller_page.py to have different kind of plots with the data that are contained within the packet itself. By default the state is "SWEEP", the packet contains "x", "error_signal" and "monitor_signal". I want to have two plots with shared x axis ("x"), and in one plot I want the error signal and in the other the monitor one. In the future I will implement new states of the FSM, I want the logic of the system to be easily upgradable with new states and therefore, different kind of plots.
+Now I want to implement the Advanced Parameters settings. Due to the fact that these settings are for both algorithm and GUI purposes I want to store them in the GeneralManager that will send to the LaserManager in @laser_manager.py using a signal and a package of data with a well known structure.
+When the board is selected, the GeneralManager sends a signal to the ServiceManager that reads the correct file (the one named by boardname_parameters.yaml), it creates a dictionary that is sent with a signal to the GeneralManager that stores this dicitonary. At the end of the method that saves this dictionary in the GeneralManager, this dictionary has to be passed to the LaserManager and it has to save it. Pay attention at the structure of the yaml file, you can find an example in the @RedPitaya_K_parameters.yaml. As you can see, the advanced settings are only a part of the file.
+In addition, the GeneralManager has to send these parameters also to the GUI, which has to show these parameters in order to let the user edit them. The page is the Advanced Settings page in the stack of the left part of the page in @laser_controller_page.py.
+I want a scrollable vertical stack of "Group Boxes" using QGroupBox. I want a distinct Group Box for every ui_label entry that is present in the database. I also want the back button to return to the MenuPage.
+When the user modify a parameter, it has to change the parameter in the class of the GeneralManager and the GeneralManager has to send the new set of parameters to the LaserManager in order for it to have the updated list.
+When the program closes, as it is done for the parameters that the user can edit in the parameters page, I want also these advanced settings parameters to be saved in the same file preserving its structure and the comments, thus using ruamel.
 
 
 
 
-
-
+For the moment let us implement the first one: I want to have the ui_label as title of the box, then I want a separation between the others main separators: events, fast_control, slow_control, monitor_signal. Inside the "events" section I want two checkboxes, one for the detection_unlock and one for the automatic_relock. In the "fast_control" section I want in one row the name of the setting "fluctuation", a checkbox for the activation and a textbox for the threshold. In another row I want the "saturation" with a checkbox. The same thing has to be done with the "slow_control" section. For the "monitor_signal" section I want a row with a "drift detection", a checkbox and a textbox for the num_points.
 
 
 

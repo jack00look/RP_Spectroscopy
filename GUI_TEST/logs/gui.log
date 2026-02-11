@@ -945,3 +945,19 @@
 2026-02-10 13:49:09 - GUI - INFO - Updating reference lines table with 3 items.
 2026-02-10 13:49:11 - GUI - INFO - Connection button clicked. Starting transition...
 2026-02-10 13:49:11 - GUI - INFO - Transition complete. Requesting Connection Page.
+2026-02-10 13:50:38 - GUI - INFO - GUI MainWindow initialized.
+2026-02-10 13:50:38 - GUI - INFO - InitialPage initialized.
+2026-02-10 13:50:38 - GUI - INFO - ConnectionPage initialized.
+2026-02-10 13:50:38 - GUI - INFO - AddBoardPage initialized.
+2026-02-10 13:50:38 - GUI - INFO - ReferenceLinesPage initialized.
+2026-02-10 13:50:38 - GUI - INFO - Updating reference lines table with 3 items.
+2026-02-10 13:50:43 - GUI - INFO - Connection button clicked. Starting transition...
+2026-02-10 13:50:44 - GUI - INFO - Transition complete. Requesting Connection Page.
+2026-02-11 16:02:14 - GUI - INFO - GUI MainWindow initialized.
+2026-02-11 16:02:14 - GUI - INFO - InitialPage initialized.
+2026-02-11 16:02:14 - GUI - INFO - ConnectionPage initialized.
+2026-02-11 16:02:14 - GUI - INFO - AddBoardPage initialized.
+2026-02-11 16:02:14 - GUI - INFO - ReferenceLinesPage initialized.
+2026-02-11 16:02:14 - GUI - INFO - Updating reference lines table with 3 items.
+2026-02-11 16:02:21 - GUI - INFO - Connection button clicked. Starting transition...
+2026-02-11 16:02:21 - GUI - INFO - Transition complete. Requesting Connection Page.

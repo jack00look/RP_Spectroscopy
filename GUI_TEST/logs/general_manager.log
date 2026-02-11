@@ -768,3 +768,29 @@
 2026-02-10 13:49:16 - GeneralManager - INFO - Parameters loaded into GUI.
 2026-02-10 13:49:34 - GeneralManager - INFO - GeneralManager shutting down...
 2026-02-10 13:49:36 - GeneralManager - INFO - GeneralManager shut down.
+2026-02-10 13:50:38 - GeneralManager - INFO - GeneralManager starting up...
+2026-02-10 13:50:38 - GeneralManager - INFO - ServiceManager initialized.
+2026-02-10 13:50:38 - GeneralManager - INFO - ServiceManager moved to thread.
+2026-02-10 13:50:38 - GeneralManager - INFO - MainWindow initialized.
+2026-02-10 13:50:38 - GeneralManager - INFO - ServiceManager injected into ReferenceLinesPage.
+2026-02-10 13:50:38 - GeneralManager - INFO - ServiceManager thread started.
+2026-02-10 13:50:46 - GeneralManager - INFO - Connecting to RedPitaya_K...
+2026-02-10 13:50:46 - GeneralManager - INFO - LaserManager initialized.
+2026-02-10 13:50:46 - GeneralManager - INFO - LaserManager moved to thread.
+2026-02-10 13:50:46 - GeneralManager - INFO - LaserManager thread started.
+2026-02-10 13:50:49 - GeneralManager - INFO - Parameters loaded into GUI.
+2026-02-11 12:58:06 - GeneralManager - INFO - GeneralManager shutting down...
+2026-02-11 12:58:06 - GeneralManager - INFO - GeneralManager shut down.
+2026-02-11 16:02:14 - GeneralManager - INFO - GeneralManager starting up...
+2026-02-11 16:02:14 - GeneralManager - INFO - ServiceManager initialized.
+2026-02-11 16:02:14 - GeneralManager - INFO - ServiceManager moved to thread.
+2026-02-11 16:02:14 - GeneralManager - INFO - MainWindow initialized.
+2026-02-11 16:02:14 - GeneralManager - INFO - ServiceManager injected into ReferenceLinesPage.
+2026-02-11 16:02:14 - GeneralManager - INFO - ServiceManager thread started.
+2026-02-11 16:02:24 - GeneralManager - INFO - Connecting to RedPitaya_K...
+2026-02-11 16:02:24 - GeneralManager - INFO - LaserManager initialized.
+2026-02-11 16:02:24 - GeneralManager - INFO - LaserManager moved to thread.
+2026-02-11 16:02:24 - GeneralManager - INFO - LaserManager thread started.
+2026-02-11 16:02:54 - GeneralManager - INFO - Parameters loaded into GUI.
+2026-02-11 16:12:45 - GeneralManager - INFO - GeneralManager shutting down...
+2026-02-11 16:12:47 - GeneralManager - INFO - GeneralManager shut down.

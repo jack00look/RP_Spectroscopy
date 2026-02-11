@@ -27,7 +27,7 @@ writeable_parameters:
 
   offset_a:
     hardware_name: offset_a
-    initial_value: -0.005 # This is the offset for the CH1 input, 0.0 means no offset correction
+    initial_value: -0.0035 # This is the offset for the CH1 input, 0.0 means no offset correction
     scaling: 8191.0
 
   invert_a:
@@ -258,7 +258,6 @@ advanced_settings:
       fluctuations:
         enabled: true
         threshold: 0.1
-        range: [0.05, 0.5]
       saturation:
         enabled: true
 
@@ -266,7 +265,6 @@ advanced_settings:
       fluctuations:
         enabled: true
         threshold: 0.1
-        range: [0.05, 0.5]
       saturation:
         enabled: true
 
@@ -274,7 +272,6 @@ advanced_settings:
       drift:
         enabled: true
         num_points: 100
-        range: [10, 200]
 
   # --- GUI SETTINGS ---
   gui_visualization:
