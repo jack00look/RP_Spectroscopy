@@ -3,6 +3,7 @@ from PySide6.QtWidgets import (QWidget, QVBoxLayout, QLabel, QSplitter, QStacked
                                QTableWidgetItem, QHeaderView, QMessageBox)
 from PySide6.QtCore import Qt, Slot, Signal
 from gui.plot_panel import PlotPanel
+from gui.advanced_settings_page import AdvancedSettingsPage
 
 
 
@@ -245,7 +246,7 @@ class LaserControllerPage(QWidget):
         
         # 2. Sub Pages
         self.page_parameters = ParametersPage() # REAL PAGE
-        self.page_advanced = SubPageContainer("Advanced Settings")
+        self.page_advanced = AdvancedSettingsPage()
         self.page_centering = SubPageContainer("Line Centering")
         self.page_manual = SubPageContainer("Manual Lock")
         self.page_auto = SubPageContainer("Auto-lock")

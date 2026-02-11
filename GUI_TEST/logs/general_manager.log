@@ -794,3 +794,72 @@
 2026-02-11 16:02:54 - GeneralManager - INFO - Parameters loaded into GUI.
 2026-02-11 16:12:45 - GeneralManager - INFO - GeneralManager shutting down...
 2026-02-11 16:12:47 - GeneralManager - INFO - GeneralManager shut down.
+2026-02-11 16:20:35 - GeneralManager - INFO - GeneralManager starting up...
+2026-02-11 16:20:35 - GeneralManager - INFO - ServiceManager initialized.
+2026-02-11 16:20:35 - GeneralManager - INFO - ServiceManager moved to thread.
+2026-02-11 16:20:35 - GeneralManager - INFO - MainWindow initialized.
+2026-02-11 16:20:35 - GeneralManager - INFO - ServiceManager injected into ReferenceLinesPage.
+2026-02-11 16:20:35 - GeneralManager - INFO - ServiceManager thread started.
+2026-02-11 16:20:43 - GeneralManager - INFO - Connecting to RedPitaya_K...
+2026-02-11 16:20:43 - GeneralManager - INFO - LaserManager initialized.
+2026-02-11 16:20:43 - GeneralManager - INFO - LaserManager moved to thread.
+2026-02-11 16:20:43 - GeneralManager - INFO - LaserManager thread started.
+2026-02-11 16:20:43 - GeneralManager - INFO - Advanced settings stored in GeneralManager.
+2026-02-11 16:20:46 - GeneralManager - INFO - Parameters loaded into GUI.
+2026-02-11 16:23:01 - GeneralManager - INFO - GeneralManager shutting down...
+2026-02-11 16:23:03 - GeneralManager - INFO - Advanced settings saved to /home/bec3/Desktop/Simone_Damian/Serafini/GUI_TEST/boards/RedPitaya_K_parameters.yaml
+2026-02-11 16:23:03 - GeneralManager - INFO - GeneralManager shut down.
+2026-02-11 16:43:19 - GeneralManager - INFO - GeneralManager starting up...
+2026-02-11 16:43:19 - GeneralManager - INFO - ServiceManager initialized.
+2026-02-11 16:43:19 - GeneralManager - INFO - ServiceManager moved to thread.
+2026-02-11 16:43:19 - GeneralManager - INFO - MainWindow initialized.
+2026-02-11 16:43:19 - GeneralManager - INFO - ServiceManager injected into ReferenceLinesPage.
+2026-02-11 16:43:19 - GeneralManager - INFO - ServiceManager thread started.
+2026-02-11 16:43:23 - GeneralManager - INFO - Connecting to RedPitaya_K...
+2026-02-11 16:43:23 - GeneralManager - INFO - LaserManager initialized.
+2026-02-11 16:43:23 - GeneralManager - INFO - LaserManager moved to thread.
+2026-02-11 16:43:23 - GeneralManager - INFO - LaserManager thread started.
+2026-02-11 16:43:23 - GeneralManager - INFO - Advanced settings stored in GeneralManager.
+2026-02-11 16:43:27 - GeneralManager - INFO - Parameters loaded into GUI.
+2026-02-11 16:45:04 - GeneralManager - INFO - GeneralManager shutting down...
+2026-02-11 16:45:07 - GeneralManager - INFO - Advanced settings saved to /home/bec3/Desktop/Simone_Damian/Serafini/GUI_TEST/boards/RedPitaya_K_parameters.yaml
+2026-02-11 16:45:07 - GeneralManager - INFO - GeneralManager shut down.
+2026-02-11 16:50:05 - GeneralManager - INFO - GeneralManager starting up...
+2026-02-11 16:50:05 - GeneralManager - INFO - ServiceManager initialized.
+2026-02-11 16:50:05 - GeneralManager - INFO - ServiceManager moved to thread.
+2026-02-11 16:50:06 - GeneralManager - INFO - MainWindow initialized.
+2026-02-11 16:50:06 - GeneralManager - INFO - ServiceManager injected into ReferenceLinesPage.
+2026-02-11 16:50:06 - GeneralManager - INFO - ServiceManager thread started.
+2026-02-11 16:50:14 - GeneralManager - INFO - Connecting to RedPitaya_K...
+2026-02-11 16:50:14 - GeneralManager - INFO - LaserManager initialized.
+2026-02-11 16:50:14 - GeneralManager - INFO - LaserManager moved to thread.
+2026-02-11 16:50:14 - GeneralManager - INFO - LaserManager thread started.
+2026-02-11 16:50:14 - GeneralManager - INFO - Advanced settings stored in GeneralManager.
+2026-02-11 16:50:17 - GeneralManager - INFO - Parameters loaded into GUI.
+2026-02-11 16:51:39 - GeneralManager - INFO - Advanced settings updated from GUI.
+2026-02-11 16:51:46 - GeneralManager - INFO - GeneralManager shutting down...
+2026-02-11 16:51:48 - GeneralManager - INFO - Advanced settings saved to /home/bec3/Desktop/Simone_Damian/Serafini/GUI_TEST/boards/RedPitaya_K_parameters.yaml
+2026-02-11 16:51:48 - GeneralManager - INFO - GeneralManager shut down.
+2026-02-11 16:51:54 - GeneralManager - INFO - GeneralManager starting up...
+2026-02-11 16:51:54 - GeneralManager - INFO - ServiceManager initialized.
+2026-02-11 16:51:54 - GeneralManager - INFO - ServiceManager moved to thread.
+2026-02-11 16:51:54 - GeneralManager - INFO - MainWindow initialized.
+2026-02-11 16:51:54 - GeneralManager - INFO - ServiceManager injected into ReferenceLinesPage.
+2026-02-11 16:51:54 - GeneralManager - INFO - ServiceManager thread started.
+2026-02-11 16:51:58 - GeneralManager - INFO - Connecting to RedPitaya_K...
+2026-02-11 16:51:58 - GeneralManager - INFO - LaserManager initialized.
+2026-02-11 16:51:58 - GeneralManager - INFO - LaserManager moved to thread.
+2026-02-11 16:51:58 - GeneralManager - INFO - LaserManager thread started.
+2026-02-11 16:51:58 - GeneralManager - INFO - Advanced settings stored in GeneralManager.
+2026-02-11 16:52:02 - GeneralManager - INFO - Parameters loaded into GUI.
+2026-02-11 17:56:20 - GeneralManager - INFO - GeneralManager shutting down...
+2026-02-11 17:56:59 - GeneralManager - INFO - Advanced settings saved to /home/bec3/Desktop/Simone_Damian/Serafini/GUI_TEST/boards/RedPitaya_K_parameters.yaml
+2026-02-11 17:56:59 - GeneralManager - INFO - GeneralManager shut down.
+2026-02-11 17:57:24 - GeneralManager - INFO - GeneralManager starting up...
+2026-02-11 17:57:24 - GeneralManager - INFO - ServiceManager initialized.
+2026-02-11 17:57:24 - GeneralManager - INFO - ServiceManager moved to thread.
+2026-02-11 17:57:24 - GeneralManager - INFO - MainWindow initialized.
+2026-02-11 17:57:24 - GeneralManager - INFO - ServiceManager injected into ReferenceLinesPage.
+2026-02-11 17:57:24 - GeneralManager - INFO - ServiceManager thread started.
+2026-02-11 17:57:26 - GeneralManager - INFO - GeneralManager shutting down...
+2026-02-11 17:57:26 - GeneralManager - INFO - GeneralManager shut down.

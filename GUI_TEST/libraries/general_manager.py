@@ -5,6 +5,7 @@ from gui.main_window import MainWindow
 import logging
 import os
 from .logging_config import setup_logging
+from ruamel.yaml import YAML
 
 
 class GeneralManager:
@@ -22,6 +23,9 @@ class GeneralManager:
         self.logger = logging.getLogger('GeneralManager')
         setup_logging(self.logger, log_file)
         self.logger.info("GeneralManager starting up...")
+
+        self.advanced_settings = {}
+        self.current_board = None
 
         self.services = ServiceManager(self.cfg)
         self.logger.info("ServiceManager initialized.")
@@ -94,6 +98,23 @@ class GeneralManager:
 
         # Connection for live data plotting
         self.laser.sig_data_ready.connect(self.window.page_laser.plot_panel.update_plot)
+
+        # Connection for advanced settings
+        #  - Direct to QWidget slot for GUI (auto-connection ensures GUI thread)
+        self.services.sig_advanced_settings_loaded.connect(
+            self.window.page_laser.page_advanced.load_advanced_settings
+        )
+        #  - Direct to LaserManager slot (auto-connection ensures laser thread)
+        self.services.sig_advanced_settings_loaded.connect(self.laser.set_advanced_settings)
+        #  - Non-QObject storage (runs in emitter's thread, but only stores a dict)
+        self.services.sig_advanced_settings_loaded.connect(self.on_advanced_settings_loaded)
+        #  - GUI edits → forward to laser + local storage
+        self.window.page_laser.page_advanced.sig_advanced_setting_changed.connect(
+            self.on_advanced_setting_changed
+        )
+        self.window.page_laser.page_advanced.sig_advanced_setting_changed.connect(
+            self.laser.set_advanced_settings
+        )
         
         self.lsr_thread.start()
         self.logger.info("LaserManager thread started.")
@@ -101,6 +122,10 @@ class GeneralManager:
         # Switch to Laser Controller Page and set to connecting state
         self.window.page_laser.set_connecting_state()
         self.window.go_to_laser_controller()
+
+        # Trigger loading advanced settings from YAML (via ServiceManager)
+        self.current_board = board
+        self.services.load_advanced_settings(board)
 
     @Slot()
     def on_laser_connected(self):
@@ -132,6 +157,71 @@ class GeneralManager:
         else:
             self.logger.warning("Could not refresh parameters: Interface not ready.")
 
+    @Slot(dict)
+    def on_advanced_settings_loaded(self, settings):
+        """
+        Stores the advanced settings dict locally.
+        GUI population and LaserManager delivery are handled by
+        direct signal connections (thread-safe via Qt auto-connection).
+        """
+        self.advanced_settings = settings
+        self.logger.info("Advanced settings stored in GeneralManager.")
+
+    @Slot(dict)
+    def on_advanced_setting_changed(self, settings):
+        """
+        Called when the user edits a value in the AdvancedSettingsPage.
+        Updates the stored copy. LaserManager receives settings via
+        a direct signal connection.
+        """
+        self.advanced_settings = settings
+        self.logger.info("Advanced settings updated from GUI.")
+
+    def save_advanced_settings(self):
+        """
+        Saves the current advanced_settings back into the board YAML file,
+        preserving comments and structure using ruamel.yaml.
+        """
+        if not self.current_board or not self.advanced_settings:
+            return
+
+        board_name = self.current_board.get('name', '')
+        hardware_path = self.cfg.get('paths', {}).get('hardware', './boards')
+        param_file = os.path.join(hardware_path, f"{board_name}_parameters.yaml")
+
+        if not os.path.exists(param_file):
+            self.logger.error(f"Cannot save advanced settings: {param_file} not found.")
+            return
+
+        try:
+            yml = YAML()
+            yml.preserve_quotes = True
+
+            with open(param_file, 'r') as f:
+                full_config = yml.load(f)
+
+            # Deep-update the advanced_settings section
+            self._deep_update(full_config['advanced_settings'], self.advanced_settings)
+
+            with open(param_file, 'w') as f:
+                yml.dump(full_config, f)
+
+            self.logger.info(f"Advanced settings saved to {param_file}")
+        except Exception as e:
+            self.logger.error(f"Failed to save advanced settings: {e}")
+
+    @staticmethod
+    def _deep_update(target, source):
+        """
+        Recursively update `target` dict with values from `source`,
+        preserving ruamel.yaml comment structure.
+        """
+        for key, val in source.items():
+            if isinstance(val, dict) and key in target and isinstance(target[key], dict):
+                GeneralManager._deep_update(target[key], val)
+            else:
+                target[key] = val
+
     def cleanup(self):
         self.logger.info("GeneralManager shutting down...")
         self.svc_thread.quit()
@@ -150,5 +240,8 @@ class GeneralManager:
             
             self.lsr_thread.quit()
             self.lsr_thread.wait()
+
+        # 3. Save advanced settings (runs in GUI thread, no thread issues)
+        self.save_advanced_settings()
             
         self.logger.info("GeneralManager shut down.")

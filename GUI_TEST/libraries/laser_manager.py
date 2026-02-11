@@ -23,6 +23,7 @@ class LaserManager(QObject):
         self.timer = None
 
         self.state = "IDLE"
+        self.advanced_settings = {}
         
         # Setup Logging
         log_path = self.cfg.get('paths', {}).get('logs', './logs')
@@ -112,3 +113,11 @@ class LaserManager(QObject):
                 self.interface.save_RedPitaya_parameters_before_closing()
             except Exception as e:
                 self.logger.error(f"Failed to save parameters: {e}")
+
+    @Slot(dict)
+    def set_advanced_settings(self, settings):
+        """
+        Receives and stores the advanced settings dictionary.
+        """
+        self.advanced_settings = settings
+        self.logger.info("Advanced settings updated.")

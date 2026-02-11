@@ -13,6 +13,7 @@ from .logging_config import setup_logging
 class ServiceManager(QObject):
     sig_board_list_updated = Signal(list) 
     sig_reflines_updated = Signal(list)
+    sig_advanced_settings_loaded = Signal(dict)
     sig_error = Signal(str)
 
     def __init__(self, config):
@@ -356,9 +357,29 @@ class ServiceManager(QObject):
 
     # ---- Redpitaya parameters configuration ----
 
-    
+    @Slot(dict)
+    def load_advanced_settings(self, board):
+        """Read the advanced_settings section from the board's parameter YAML."""
+        board_name = board.get('name', '')
+        hardware_path = self.config.get('paths', {}).get('hardware', './boards')
+        if not os.path.isabs(hardware_path):
+            base_dir = os.path.dirname(os.path.abspath(__file__))
+            hardware_path = os.path.join(base_dir, hardware_path)
 
-    # ---- Red Pitaya parameters ----
+        param_file = os.path.join(hardware_path, f"{board_name}_parameters.yaml")
+        if not os.path.exists(param_file):
+            self.logger.error(f"Parameter file not found: {param_file}")
+            return
+
+        try:
+            with open(param_file, 'r') as f:
+                data = yaml.safe_load(f)
+            advanced = data.get('advanced_settings', {})
+            self.logger.info(f"Loaded advanced settings for '{board_name}' ({len(advanced)} groups).")
+            self.sig_advanced_settings_loaded.emit(advanced)
+        except Exception as e:
+            self.logger.error(f"Failed to load advanced settings: {e}")
+
 
     # ---- Circuits parameters ----
 

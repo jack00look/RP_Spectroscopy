@@ -278,7 +278,7 @@ advanced_settings:
     ui_label: "Plotting & Refresh"
 
     history_length:
-      fast: 5
+      fast: 10
       slow: 3600
       unit: "s"
 
@@ -294,7 +294,9 @@ advanced_settings:
 
     mode:
       value: "ROBUST"
-      options: ["SIMPLE", "ROBUST"]
+      options:
+      - SIMPLE
+      - ROBUST
     determine_offset:
       value: false
 
@@ -315,8 +317,14 @@ advanced_settings:
       value: 0.01
 
     offset_try_list:
-      value: [0., 1., -1., 2., -2., 3., -3.]
-
+      value:
+      - 0.0
+      - 1.0
+      - -1.0
+      - 2.0
+      - -2.0
+      - 3.0
+      - -3.0
     correlation_minimum:
       value: 0.5
 
