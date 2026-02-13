@@ -6,6 +6,7 @@ import logging
 import os
 from .logging_config import setup_logging
 from ruamel.yaml import YAML
+import warnings
 
 
 class GeneralManager:
@@ -66,6 +67,14 @@ class GeneralManager:
         
         self.window.show()
 
+    def _safe_disconnect(self, signal):
+        try:
+            with warnings.catch_warnings():
+                warnings.simplefilter("ignore")
+                signal.disconnect()
+        except (TypeError, RuntimeError):
+            pass
+
     def connect_to_board(self, board):
         board_name = board.get('name', 'Unknown')
         self.logger.info(f"Connecting to {board_name}...")
@@ -87,11 +96,7 @@ class GeneralManager:
         
         # Connection for Default Settings Button
         # Disconnect previous backend connections to avoid duplicates (safeguard)
-        # Avoid RuntimeWarning by catching error or only disconnecting if connected
-        try:
-            self.window.page_laser.page_parameters.sig_restore_defaults.disconnect()
-        except (TypeError, RuntimeError):
-            pass # No connections to disconnect
+        self._safe_disconnect(self.window.page_laser.page_parameters.sig_restore_defaults)
             
         self.window.page_laser.page_parameters.sig_restore_defaults.connect(self.laser.restore_default_parameters)
         self.laser.sig_parameters_updated.connect(self.on_parameters_updated)
@@ -108,7 +113,7 @@ class GeneralManager:
         self.services.sig_advanced_settings_loaded.connect(self.laser.set_advanced_settings)
         #  - Non-QObject storage (runs in emitter's thread, but only stores a dict)
         self.services.sig_advanced_settings_loaded.connect(self.on_advanced_settings_loaded)
-        #  - GUI edits → forward to laser + local storage
+        #  - GUI edits -> forward to laser + local storage
         self.window.page_laser.page_advanced.sig_advanced_setting_changed.connect(
             self.on_advanced_setting_changed
         )
@@ -116,11 +121,8 @@ class GeneralManager:
             self.laser.set_advanced_settings
         )
         
-        self.window.page_laser.page_advanced.sig_advanced_setting_changed.connect(
-            self.laser.set_advanced_settings
-        )
-        
         # Connection for Default Advanced Settings Button
+        self._safe_disconnect(self.window.page_laser.page_advanced.sig_restore_defaults)
         self.window.page_laser.page_advanced.sig_restore_defaults.connect(
             lambda: self.services.load_default_advanced_settings(self.current_board)
         )

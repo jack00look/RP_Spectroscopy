@@ -278,7 +278,7 @@ advanced_settings:
     ui_label: "Plotting & Refresh"
 
     history_length:
-      fast: 8
+      fast: 5
       slow: 3600
       unit: "s"
 
