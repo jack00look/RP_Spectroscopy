@@ -1,5 +1,6 @@
 I want to populate the "Scan" page inside the @laser_controller_page.py left stack. From the top to the bottom of the page. A row with three textboxes for the user to insert the "Start voltage", "End voltage" and the "Number of points". Below these I want, in the same row, the "Start scan" and the "Stop scan" buttons. At the bottom of the page, as for the other pages in the stack, I want the "Back" button.
 The user fills the three textboxes and presses the "Start scan" button. This triggers the start_scan method (already implemented) of the LaserManager in @laser_manager.py. This changes the state of the Finite State Machine (already implemented) that sends a packet labeled with the "mode":"SCAN".
+When the GUI recieves the signal with the package with the "mode":"SCAN", the visualization of the plotpanel (details in @plot_panel.py and implementation in th epage in @laser_controller_page.py) has to look like this: At the top
 
 
 
