@@ -1,0 +1,11 @@
+    @Slot()
+    def on_defaults_clicked(self):
+        """
+        Shows a confirmation dialog before emitting the restore defaults signal.
+        """
+        reply = QMessageBox.question(self, 'Confirm Restore Defaults',
+                                     "Are you sure you want to restore default advanced settings? This will overwrite all current settings.",
+                                     QMessageBox.Yes | QMessageBox.No, QMessageBox.No)
+
+        if reply == QMessageBox.Yes:
+            self.sig_restore_defaults.emit()

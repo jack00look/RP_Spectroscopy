@@ -27,7 +27,7 @@ writeable_parameters:
 
   offset_a:
     hardware_name: offset_a
-    initial_value: -0.0035 # This is the offset for the CH1 input, 0.0 means no offset correction
+    initial_value: 0.0     # This is the offset for the CH1 input, 0.0 means no offset correction
     scaling: 8191.0
 
   invert_a:
@@ -278,7 +278,7 @@ advanced_settings:
     ui_label: "Plotting & Refresh"
 
     history_length:
-      fast: 10
+      fast: 8
       slow: 3600
       unit: "s"
 

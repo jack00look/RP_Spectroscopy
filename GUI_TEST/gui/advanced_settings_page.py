@@ -1,6 +1,6 @@
 from PySide6.QtWidgets import (QWidget, QVBoxLayout, QHBoxLayout, QLabel,
                                 QGroupBox, QScrollArea, QPushButton,
-                                QTableWidget, QTableWidgetItem, QHeaderView)
+                                QTableWidget, QTableWidgetItem, QHeaderView, QMessageBox)
 from PySide6.QtCore import Qt, Signal, Slot
 from copy import deepcopy
 
@@ -16,6 +16,7 @@ class AdvancedSettingsPage(QWidget):
     """
     sig_back = Signal()
     sig_advanced_setting_changed = Signal(dict)
+    sig_restore_defaults = Signal()
 
     def __init__(self):
         super().__init__()
@@ -40,12 +41,18 @@ class AdvancedSettingsPage(QWidget):
         self._scroll.setWidget(self._scroll_content)
         outer.addWidget(self._scroll, 1)
 
+        # Default Settings button
+        self.btn_defaults = QPushButton("Default settings")
+        self.btn_defaults.clicked.connect(self.on_defaults_clicked)
+
         # Back button
         btn_back = QPushButton("Back")
         btn_back.setFixedWidth(120)
         btn_back.clicked.connect(self.sig_back.emit)
+
         btn_container = QHBoxLayout()
         btn_container.addStretch()
+        btn_container.addWidget(self.btn_defaults)
         btn_container.addWidget(btn_back)
         btn_container.addStretch()
         outer.addLayout(btn_container)
@@ -205,3 +212,15 @@ class AdvancedSettingsPage(QWidget):
             d[keys[-1]]["value"] = value
         else:
             d[keys[-1]] = value
+
+    @Slot()
+    def on_defaults_clicked(self):
+        """
+        Shows a confirmation dialog before emitting the restore defaults signal.
+        """
+        reply = QMessageBox.question(self, 'Confirm Restore Defaults',
+                                     "Are you sure you want to restore default advanced settings? This will overwrite all current settings.",
+                                     QMessageBox.Yes | QMessageBox.No, QMessageBox.No)
+
+        if reply == QMessageBox.Yes:
+            self.sig_restore_defaults.emit()

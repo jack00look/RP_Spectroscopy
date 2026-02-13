@@ -116,6 +116,15 @@ class GeneralManager:
             self.laser.set_advanced_settings
         )
         
+        self.window.page_laser.page_advanced.sig_advanced_setting_changed.connect(
+            self.laser.set_advanced_settings
+        )
+        
+        # Connection for Default Advanced Settings Button
+        self.window.page_laser.page_advanced.sig_restore_defaults.connect(
+            lambda: self.services.load_default_advanced_settings(self.current_board)
+        )
+        
         self.lsr_thread.start()
         self.logger.info("LaserManager thread started.")
         
