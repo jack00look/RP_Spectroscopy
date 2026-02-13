@@ -6524,3 +6524,7 @@
 2026-02-12 17:12:52 - LaserManager - INFO - LaserManager setup complete. Control loop started.
 2026-02-12 17:12:52 - LaserManager - INFO - Advanced settings updated.
 2026-02-12 17:58:44 - LaserManager - INFO - Control loop timer stopped.
+2026-02-13 08:23:12 - LaserManager - INFO - LaserManager initialized.
+2026-02-13 08:23:42 - LaserManager - INFO - LaserManager setup complete. Control loop started.
+2026-02-13 08:23:42 - LaserManager - INFO - Advanced settings updated.
+2026-02-13 08:27:41 - LaserManager - INFO - Control loop timer stopped.
