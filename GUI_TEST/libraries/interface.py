@@ -211,6 +211,18 @@ class HardwareInterface():
         sweep_signal['monitor_signal'] = monitor_signal
         return sweep_signal
 
+    def set_value(self, param_name, value):
+        """
+        Sets the value of a writeable parameter.
+        """
+        if param_name in self.writeable_params:
+            self.writeable_params[param_name].set_value(value)
+            self.write_registers() #actually it already does this in the other set_value
+            self.logger.debug(f"Set parameter {param_name} to value {value}")
+        else:
+            self.logger.error(f"Parameter {param_name} not found among writeable parameters.")
+            raise KeyError(f"Parameter {param_name} not found among writeable parameters.")
+
 class ReadableParameter:
     def __init__(self, name, client):
         self.name = name

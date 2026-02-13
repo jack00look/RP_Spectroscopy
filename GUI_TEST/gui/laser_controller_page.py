@@ -27,6 +27,7 @@ class MenuPage(QWidget):
     sig_go_parameters = Signal()
     sig_go_advanced = Signal()
     sig_go_reflines = Signal()
+    sig_go_scan = Signal()
     sig_go_centering = Signal()
     sig_go_manual = Signal()
     sig_go_auto = Signal()
@@ -41,6 +42,7 @@ class MenuPage(QWidget):
         self.btn_params = MenuButton("Parameters", self.sig_go_parameters.emit)
         self.btn_advanced = MenuButton("Advanced settings", self.sig_go_advanced.emit)
         self.btn_reflines = MenuButton("Reference lines", self.sig_go_reflines.emit)
+        self.btn_scan = MenuButton("Scan", self.sig_go_scan.emit)
         self.btn_centering = MenuButton("Line centering", self.sig_go_centering.emit)
         self.btn_manual = MenuButton("Manual lock", self.sig_go_manual.emit)
         self.btn_auto = MenuButton("Auto-lock", self.sig_go_auto.emit)
@@ -48,6 +50,7 @@ class MenuPage(QWidget):
         layout.addWidget(self.btn_params)
         layout.addWidget(self.btn_advanced)
         layout.addWidget(self.btn_reflines)
+        layout.addWidget(self.btn_scan)
         layout.addWidget(self.btn_centering)
         layout.addWidget(self.btn_manual)
         layout.addWidget(self.btn_auto)
@@ -247,12 +250,14 @@ class LaserControllerPage(QWidget):
         # 2. Sub Pages
         self.page_parameters = ParametersPage() # REAL PAGE
         self.page_advanced = AdvancedSettingsPage()
+        self.page_scan = SubPageContainer("Scan")
         self.page_centering = SubPageContainer("Line Centering")
         self.page_manual = SubPageContainer("Manual Lock")
         self.page_auto = SubPageContainer("Auto-lock")
         
         self.left_stack.addWidget(self.page_parameters)
         self.left_stack.addWidget(self.page_advanced)
+        self.left_stack.addWidget(self.page_scan)
         self.left_stack.addWidget(self.page_centering)
         self.left_stack.addWidget(self.page_manual)
         self.left_stack.addWidget(self.page_auto)
@@ -267,6 +272,7 @@ class LaserControllerPage(QWidget):
         # Menu -> Pages
         self.menu_page.sig_go_parameters.connect(lambda: self.left_stack.setCurrentWidget(self.page_parameters))
         self.menu_page.sig_go_advanced.connect(lambda: self.left_stack.setCurrentWidget(self.page_advanced))
+        self.menu_page.sig_go_scan.connect(lambda: self.left_stack.setCurrentWidget(self.page_scan))
         self.menu_page.sig_go_centering.connect(lambda: self.left_stack.setCurrentWidget(self.page_centering))
         self.menu_page.sig_go_manual.connect(lambda: self.left_stack.setCurrentWidget(self.page_manual))
         self.menu_page.sig_go_auto.connect(lambda: self.left_stack.setCurrentWidget(self.page_auto))
@@ -277,6 +283,7 @@ class LaserControllerPage(QWidget):
         # Back Buttons -> Menu
         self.page_parameters.sig_back.connect(self.go_to_menu)
         self.page_advanced.sig_back.connect(self.go_to_menu)
+        self.page_scan.sig_back.connect(self.go_to_menu)
         self.page_centering.sig_back.connect(self.go_to_menu)
         self.page_manual.sig_back.connect(self.go_to_menu)
         self.page_auto.sig_back.connect(self.go_to_menu)
@@ -300,6 +307,7 @@ class LaserControllerPage(QWidget):
         self.menu_page.btn_params.setEnabled(enabled)
         self.menu_page.btn_advanced.setEnabled(enabled)
         self.menu_page.btn_reflines.setEnabled(enabled)
+        self.menu_page.btn_scan.setEnabled(enabled)
         self.menu_page.btn_centering.setEnabled(enabled)
         self.menu_page.btn_manual.setEnabled(enabled)
         self.menu_page.btn_auto.setEnabled(enabled)

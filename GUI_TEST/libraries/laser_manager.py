@@ -22,7 +22,7 @@ class LaserManager(QObject):
         self.controller = None 
         self.timer = None
 
-        self.state = "IDLE"
+        self.state = "SWEEP"
         self.advanced_settings = {}
         
         # Setup Logging
@@ -69,10 +69,11 @@ class LaserManager(QObject):
         based on the current state of the Finite State Machine.
         """
         if self.state == "IDLE":
-            self.interface.start_sweep()
-            self.state = "SWEEP"
+            pass
         elif self.state == "SWEEP":
             self.get_and_send_sweep()
+        elif self.state == "SCAN":
+            self.handle_scan_step()
         else:
             self.logger.warning(f"Unknown state: {self.state}")
 
@@ -89,6 +90,70 @@ class LaserManager(QObject):
         }
 
         self.sig_data_ready.emit(packet)
+
+    @Slot(float, float, int)
+    def start_scan(self, start_voltage=0.05, stop_voltage=1.75, num_points=40):
+        """
+        Initializes the scan variables and enters the SCAN state.
+        This function returns immediately (Non-blocking).
+        """
+        self.logger.info(f"Initiating scan: {start_voltage}V -> {stop_voltage}V ({num_points} pts)")
+        
+        # 1. Pre-calculate the voltage array
+        self.scan_voltages = np.linspace(start_voltage, stop_voltage, num_points)
+        self.scan_index = 0
+        self.scan_results = [] # Buffer to store accumulated results
+        
+        # 2. Change State -> The control_loop will take over from here
+        self.state = "SCAN"
+
+    def handle_scan_step(self):
+        """
+        Performs exactly ONE step of the scan.
+        """
+        # 1. Check if we are done
+        if self.scan_index >= len(self.scan_voltages):
+            self.logger.info("Scan completed successfully.")
+            self.state = "SWEEP"
+            return
+
+        # 2. Get the target voltage for this step
+        target_v = self.scan_voltages[self.scan_index]
+        
+        # 3. Hardware Interaction (Blocking only for this small step)
+        # self.logger.debug(f"Scanning point {self.scan_index}: {target_v:.3f}V")
+        self.interface.set_value('big_offset', target_v)
+        
+        current_sweep = self.interface.get_sweep()
+        
+        # 4. Store Data
+        self.scan_results.append(current_sweep)
+        
+        # 5. Emit Partial Result (The "Old + New" requirement)
+        # We send the specific index so the GUI knows where to plot it
+        packet = {
+            "mode": "SCAN",
+            "step_index": self.scan_index,
+            "total_steps": len(self.scan_voltages),
+            "current_voltage": target_v,
+            "scan_data": self.scan_results, # Sends all accumulated data
+            "latest_sweep": current_sweep   # Sends just the newest trace
+        }
+        self.sig_data_ready.emit(packet)
+
+        # 6. Increment for the next loop tick
+        self.scan_index += 1
+
+    @Slot()
+    def stop_scan(self):
+        if self.state == "SCAN":
+            self.state = "IDLE"
+            self.logger.info("Scan aborted by user.")
+
+    @Slot()
+    def start_sweep(self):
+        self.state = "SWEEP"
+        self.logger.info("Sweep started by user.")
 
     @Slot()
     def restore_default_parameters(self):
